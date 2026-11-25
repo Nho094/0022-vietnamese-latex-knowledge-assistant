@@ -1,0 +1,7 @@
+{
+  "name": "vietnamese-knowledge-assistant-webview",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": { "build": "vite build" }
+}

@@ -1,0 +1,968 @@
+﻿text,label,category
+"mình cần cách viết Tạo tài liệu LaTeX tối thiểu có documentclass, document body và kết thúc.. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.",LATEX_TAI_LIEU_TOI_GIAN,tex_struct
+"làm thế nào để tạo Tạo tài liệu LaTeX tối thiểu có documentclass, document body và kết thúc.. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.",LATEX_TAI_LIEU_TOI_GIAN,tex_struct
+"hãy cho ví dụ về Tạo tài liệu LaTeX tối thiểu có documentclass, document body và kết thúc.. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.",LATEX_TAI_LIEU_TOI_GIAN,tex_struct
+"cú pháp dùng để Tạo tài liệu LaTeX tối thiểu có documentclass, document body và kết thúc.. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.",LATEX_TAI_LIEU_TOI_GIAN,tex_struct
+"muốn biểu diễn Tạo tài liệu LaTeX tối thiểu có documentclass, document body và kết thúc.. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.",LATEX_TAI_LIEU_TOI_GIAN,tex_struct
+mình cần cách viết Khai báo lớp article thường dùng cho bài báo và tài liệu ngắn.. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.,LATEX_LOP_TAI_LIEU_ARTICLE,tex_doc
+làm thế nào để tạo Khai báo lớp article thường dùng cho bài báo và tài liệu ngắn.. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.,LATEX_LOP_TAI_LIEU_ARTICLE,tex_doc
+hãy cho ví dụ về Khai báo lớp article thường dùng cho bài báo và tài liệu ngắn.. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.,LATEX_LOP_TAI_LIEU_ARTICLE,tex_doc
+cú pháp dùng để Khai báo lớp article thường dùng cho bài báo và tài liệu ngắn.. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.,LATEX_LOP_TAI_LIEU_ARTICLE,tex_doc
+muốn biểu diễn Khai báo lớp article thường dùng cho bài báo và tài liệu ngắn.. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.,LATEX_LOP_TAI_LIEU_ARTICLE,tex_doc
+mình cần cách viết Khai báo lớp book phù hợp tài liệu dài có chương.. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.,LATEX_LOP_TAI_LIEU_BOOK,tex_doc
+làm thế nào để tạo Khai báo lớp book phù hợp tài liệu dài có chương.. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.,LATEX_LOP_TAI_LIEU_BOOK,tex_doc
+hãy cho ví dụ về Khai báo lớp book phù hợp tài liệu dài có chương.. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.,LATEX_LOP_TAI_LIEU_BOOK,tex_doc
+cú pháp dùng để Khai báo lớp book phù hợp tài liệu dài có chương.. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.,LATEX_LOP_TAI_LIEU_BOOK,tex_doc
+muốn biểu diễn Khai báo lớp book phù hợp tài liệu dài có chương.. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.,LATEX_LOP_TAI_LIEU_BOOK,tex_doc
+mình cần cách viết Khai báo lớp report cho báo cáo dài có chương.. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.,LATEX_LOP_TAI_LIEU_REPORT,tex_doc
+làm thế nào để tạo Khai báo lớp report cho báo cáo dài có chương.. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.,LATEX_LOP_TAI_LIEU_REPORT,tex_doc
+hãy cho ví dụ về Khai báo lớp report cho báo cáo dài có chương.. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.,LATEX_LOP_TAI_LIEU_REPORT,tex_doc
+cú pháp dùng để Khai báo lớp report cho báo cáo dài có chương.. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.,LATEX_LOP_TAI_LIEU_REPORT,tex_doc
+muốn biểu diễn Khai báo lớp report cho báo cáo dài có chương.. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.,LATEX_LOP_TAI_LIEU_REPORT,tex_doc
+"mình cần cách viết Tạo phần khai báo trước begin document, nơi đặt lớp tài liệu, package và cấu hình.. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.",LATEX_PREAMBLE_TAI_LIEU,tex_doc
+"làm thế nào để tạo Tạo phần khai báo trước begin document, nơi đặt lớp tài liệu, package và cấu hình.. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.",LATEX_PREAMBLE_TAI_LIEU,tex_doc
+"hãy cho ví dụ về Tạo phần khai báo trước begin document, nơi đặt lớp tài liệu, package và cấu hình.. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.",LATEX_PREAMBLE_TAI_LIEU,tex_doc
+"cú pháp dùng để Tạo phần khai báo trước begin document, nơi đặt lớp tài liệu, package và cấu hình.. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.",LATEX_PREAMBLE_TAI_LIEU,tex_doc
+"muốn biểu diễn Tạo phần khai báo trước begin document, nơi đặt lớp tài liệu, package và cấu hình.. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.",LATEX_PREAMBLE_TAI_LIEU,tex_doc
+"mình cần cách viết Nạp gói LaTeX trong preamble, có thể kèm tùy chọn trong ngoặc vuông.; package_name là phần cần điền. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.",LATEX_NAP_PACKAGE,tex_doc
+"làm thế nào để tạo Nạp gói LaTeX trong preamble, có thể kèm tùy chọn trong ngoặc vuông.; package_name là nội dung mẫu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.",LATEX_NAP_PACKAGE,tex_doc
+"hãy cho ví dụ về Nạp gói LaTeX trong preamble, có thể kèm tùy chọn trong ngoặc vuông.; package_name là giá trị mẫu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.",LATEX_NAP_PACKAGE,tex_doc
+"cú pháp dùng để Nạp gói LaTeX trong preamble, có thể kèm tùy chọn trong ngoặc vuông.; package_name là phần cần điền. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.",LATEX_NAP_PACKAGE,tex_doc
+"muốn biểu diễn Nạp gói LaTeX trong preamble, có thể kèm tùy chọn trong ngoặc vuông.; package_name là nội dung mẫu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.",LATEX_NAP_PACKAGE,tex_doc
+"mình cần cách viết Nạp package với các tùy chọn phân tách bằng dấu phẩy.; options là phần cần điền, package_name là phần cần điền. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.",LATEX_NAP_PACKAGE_CO_TUY_CHON,tex_doc
+"làm thế nào để tạo Nạp package với các tùy chọn phân tách bằng dấu phẩy.; options là nội dung mẫu, package_name là nội dung mẫu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.",LATEX_NAP_PACKAGE_CO_TUY_CHON,tex_doc
+"hãy cho ví dụ về Nạp package với các tùy chọn phân tách bằng dấu phẩy.; options là giá trị mẫu, package_name là giá trị mẫu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.",LATEX_NAP_PACKAGE_CO_TUY_CHON,tex_doc
+"cú pháp dùng để Nạp package với các tùy chọn phân tách bằng dấu phẩy.; options là phần cần điền, package_name là phần cần điền. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.",LATEX_NAP_PACKAGE_CO_TUY_CHON,tex_doc
+"muốn biểu diễn Nạp package với các tùy chọn phân tách bằng dấu phẩy.; options là nội dung mẫu, package_name là nội dung mẫu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.",LATEX_NAP_PACKAGE_CO_TUY_CHON,tex_doc
+"mình cần cách viết Khai báo title, author, date trong preamble và hiển thị bằng maketitle.; title là Lưu ý quan trọng, author là phần cần điền. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.",LATEX_TIEU_E_TAC_GIA_NGAY_THANG,tex_struct
+"làm thế nào để tạo Khai báo title, author, date trong preamble và hiển thị bằng maketitle.; title là Lưu ý quan trọng, author là nội dung mẫu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.",LATEX_TIEU_E_TAC_GIA_NGAY_THANG,tex_struct
+"hãy cho ví dụ về Khai báo title, author, date trong preamble và hiển thị bằng maketitle.; title là Lưu ý quan trọng, author là giá trị mẫu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.",LATEX_TIEU_E_TAC_GIA_NGAY_THANG,tex_struct
+"cú pháp dùng để Khai báo title, author, date trong preamble và hiển thị bằng maketitle.; title là Lưu ý quan trọng, author là phần cần điền. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.",LATEX_TIEU_E_TAC_GIA_NGAY_THANG,tex_struct
+"muốn biểu diễn Khai báo title, author, date trong preamble và hiển thị bằng maketitle.; title là Lưu ý quan trọng, author là nội dung mẫu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.",LATEX_TIEU_E_TAC_GIA_NGAY_THANG,tex_struct
+"mình cần cách viết Thêm ghi chú cảm ơn bằng thanks trong trường author.; author là phần cần điền, thanks là phần cần điền. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.",LATEX_LOI_CAM_ON_TAC_GIA,tex_struct
+"làm thế nào để tạo Thêm ghi chú cảm ơn bằng thanks trong trường author.; author là nội dung mẫu, thanks là nội dung mẫu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.",LATEX_LOI_CAM_ON_TAC_GIA,tex_struct
+"hãy cho ví dụ về Thêm ghi chú cảm ơn bằng thanks trong trường author.; author là giá trị mẫu, thanks là giá trị mẫu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.",LATEX_LOI_CAM_ON_TAC_GIA,tex_struct
+"cú pháp dùng để Thêm ghi chú cảm ơn bằng thanks trong trường author.; author là phần cần điền, thanks là phần cần điền. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.",LATEX_LOI_CAM_ON_TAC_GIA,tex_struct
+"muốn biểu diễn Thêm ghi chú cảm ơn bằng thanks trong trường author.; author là nội dung mẫu, thanks là nội dung mẫu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.",LATEX_LOI_CAM_ON_TAC_GIA,tex_struct
+mình cần cách viết Tạo comment bằng dấu phần trăm; nội dung sau % trên cùng dòng không được typeset.. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.,LATEX_CHU_THICH_MA_LATEX,tex_text
+làm thế nào để tạo Tạo comment bằng dấu phần trăm; nội dung sau % trên cùng dòng không được typeset.. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.,LATEX_CHU_THICH_MA_LATEX,tex_text
+hãy cho ví dụ về Tạo comment bằng dấu phần trăm; nội dung sau % trên cùng dòng không được typeset.. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.,LATEX_CHU_THICH_MA_LATEX,tex_text
+cú pháp dùng để Tạo comment bằng dấu phần trăm; nội dung sau % trên cùng dòng không được typeset.. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.,LATEX_CHU_THICH_MA_LATEX,tex_text
+muốn biểu diễn Tạo comment bằng dấu phần trăm; nội dung sau % trên cùng dòng không được typeset.. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.,LATEX_CHU_THICH_MA_LATEX,tex_text
+mình cần cách viết In đậm văn bản bằng textbf.; text là ghi chú quan trọng. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.,LATEX_CHU_AM,tex_text
+làm thế nào để tạo In đậm văn bản bằng textbf.; text là tiêu đề tài liệu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.,LATEX_CHU_AM,tex_text
+hãy cho ví dụ về In đậm văn bản bằng textbf.; text là một đoạn văn bản. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.,LATEX_CHU_AM,tex_text
+cú pháp dùng để In đậm văn bản bằng textbf.; text là nội dung mẫu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.,LATEX_CHU_AM,tex_text
+muốn biểu diễn In đậm văn bản bằng textbf.; text là ghi chú quan trọng. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.,LATEX_CHU_AM,tex_text
+mình cần cách viết In nghiêng văn bản bằng textit.; text là ghi chú quan trọng. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.,LATEX_CHU_NGHIENG,tex_text
+làm thế nào để tạo In nghiêng văn bản bằng textit.; text là tiêu đề tài liệu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.,LATEX_CHU_NGHIENG,tex_text
+hãy cho ví dụ về In nghiêng văn bản bằng textit.; text là một đoạn văn bản. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.,LATEX_CHU_NGHIENG,tex_text
+cú pháp dùng để In nghiêng văn bản bằng textit.; text là nội dung mẫu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.,LATEX_CHU_NGHIENG,tex_text
+muốn biểu diễn In nghiêng văn bản bằng textit.; text là ghi chú quan trọng. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.,LATEX_CHU_NGHIENG,tex_text
+mình cần cách viết Gạch chân văn bản bằng underline.; text là ghi chú quan trọng. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.,LATEX_GACH_CHAN,tex_text
+làm thế nào để tạo Gạch chân văn bản bằng underline.; text là tiêu đề tài liệu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.,LATEX_GACH_CHAN,tex_text
+hãy cho ví dụ về Gạch chân văn bản bằng underline.; text là một đoạn văn bản. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.,LATEX_GACH_CHAN,tex_text
+cú pháp dùng để Gạch chân văn bản bằng underline.; text là nội dung mẫu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.,LATEX_GACH_CHAN,tex_text
+muốn biểu diễn Gạch chân văn bản bằng underline.; text là ghi chú quan trọng. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.,LATEX_GACH_CHAN,tex_text
+mình cần cách viết Nhấn mạnh văn bản theo ngữ cảnh bằng emph.; text là ghi chú quan trọng. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.,LATEX_NHAN_MANH,tex_text
+làm thế nào để tạo Nhấn mạnh văn bản theo ngữ cảnh bằng emph.; text là tiêu đề tài liệu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.,LATEX_NHAN_MANH,tex_text
+hãy cho ví dụ về Nhấn mạnh văn bản theo ngữ cảnh bằng emph.; text là một đoạn văn bản. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.,LATEX_NHAN_MANH,tex_text
+cú pháp dùng để Nhấn mạnh văn bản theo ngữ cảnh bằng emph.; text là nội dung mẫu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.,LATEX_NHAN_MANH,tex_text
+muốn biểu diễn Nhấn mạnh văn bản theo ngữ cảnh bằng emph.; text là ghi chú quan trọng. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.,LATEX_NHAN_MANH,tex_text
+"mình cần cách viết Chèn ảnh bằng includegraphics; cần graphicx và file ảnh trong project.; filename là phần cần điền, width là phần cần điền. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.",LATEX_CHEN_HINH_ANH,tex_figures
+"làm thế nào để tạo Chèn ảnh bằng includegraphics; cần graphicx và file ảnh trong project.; filename là nội dung mẫu, width là nội dung mẫu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.",LATEX_CHEN_HINH_ANH,tex_figures
+"hãy cho ví dụ về Chèn ảnh bằng includegraphics; cần graphicx và file ảnh trong project.; filename là giá trị mẫu, width là giá trị mẫu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.",LATEX_CHEN_HINH_ANH,tex_figures
+"cú pháp dùng để Chèn ảnh bằng includegraphics; cần graphicx và file ảnh trong project.; filename là phần cần điền, width là phần cần điền. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.",LATEX_CHEN_HINH_ANH,tex_figures
+"muốn biểu diễn Chèn ảnh bằng includegraphics; cần graphicx và file ảnh trong project.; filename là nội dung mẫu, width là nội dung mẫu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.",LATEX_CHEN_HINH_ANH,tex_figures
+mình cần cách viết Khai báo thư mục chứa ảnh bằng graphicspath.. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.,LATEX_UONG_DAN_THU_MUC_HINH,tex_figures
+làm thế nào để tạo Khai báo thư mục chứa ảnh bằng graphicspath.. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.,LATEX_UONG_DAN_THU_MUC_HINH,tex_figures
+hãy cho ví dụ về Khai báo thư mục chứa ảnh bằng graphicspath.. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.,LATEX_UONG_DAN_THU_MUC_HINH,tex_figures
+cú pháp dùng để Khai báo thư mục chứa ảnh bằng graphicspath.. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.,LATEX_UONG_DAN_THU_MUC_HINH,tex_figures
+muốn biểu diễn Khai báo thư mục chứa ảnh bằng graphicspath.. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.,LATEX_UONG_DAN_THU_MUC_HINH,tex_figures
+"mình cần cách viết Tạo figure float, căn giữa ảnh, caption, label và vị trí gợi ý.; file là phần cần điền, caption là phần cần điền, label là Tài liệu tham khảo, width là phần cần điền. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.",LATEX_FIGURE,tex_figures
+"làm thế nào để tạo Tạo figure float, căn giữa ảnh, caption, label và vị trí gợi ý.; file là nội dung mẫu, caption là nội dung mẫu, label là Tài liệu tham khảo, width là nội dung mẫu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.",LATEX_FIGURE,tex_figures
+"hãy cho ví dụ về Tạo figure float, căn giữa ảnh, caption, label và vị trí gợi ý.; file là giá trị mẫu, caption là giá trị mẫu, label là Tài liệu tham khảo, width là giá trị mẫu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.",LATEX_FIGURE,tex_figures
+"cú pháp dùng để Tạo figure float, căn giữa ảnh, caption, label và vị trí gợi ý.; file là phần cần điền, caption là phần cần điền, label là Tài liệu tham khảo, width là phần cần điền. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.",LATEX_FIGURE,tex_figures
+"muốn biểu diễn Tạo figure float, căn giữa ảnh, caption, label và vị trí gợi ý.; file là nội dung mẫu, caption là nội dung mẫu, label là Tài liệu tham khảo, width là nội dung mẫu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.",LATEX_FIGURE,tex_figures
+mình cần cách viết Thêm caption cho hình hoặc bảng.; caption là phần cần điền. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.,LATEX_CHU_THICH_HINH,tex_figures
+làm thế nào để tạo Thêm caption cho hình hoặc bảng.; caption là nội dung mẫu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.,LATEX_CHU_THICH_HINH,tex_figures
+hãy cho ví dụ về Thêm caption cho hình hoặc bảng.; caption là giá trị mẫu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.,LATEX_CHU_THICH_HINH,tex_figures
+cú pháp dùng để Thêm caption cho hình hoặc bảng.; caption là phần cần điền. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.,LATEX_CHU_THICH_HINH,tex_figures
+muốn biểu diễn Thêm caption cho hình hoặc bảng.; caption là nội dung mẫu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.,LATEX_CHU_THICH_HINH,tex_figures
+mình cần cách viết Gắn nhãn bằng label và tham chiếu số bằng ref hoặc số trang bằng pageref.; label là Tài liệu tham khảo. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.,LATEX_THAM_CHIEU_NHAN,tex_refs
+làm thế nào để tạo Gắn nhãn bằng label và tham chiếu số bằng ref hoặc số trang bằng pageref.; label là Tài liệu tham khảo. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.,LATEX_THAM_CHIEU_NHAN,tex_refs
+hãy cho ví dụ về Gắn nhãn bằng label và tham chiếu số bằng ref hoặc số trang bằng pageref.; label là Tài liệu tham khảo. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.,LATEX_THAM_CHIEU_NHAN,tex_refs
+cú pháp dùng để Gắn nhãn bằng label và tham chiếu số bằng ref hoặc số trang bằng pageref.; label là Tài liệu tham khảo. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.,LATEX_THAM_CHIEU_NHAN,tex_refs
+muốn biểu diễn Gắn nhãn bằng label và tham chiếu số bằng ref hoặc số trang bằng pageref.; label là Tài liệu tham khảo. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.,LATEX_THAM_CHIEU_NHAN,tex_refs
+"mình cần cách viết Tạo danh sách dấu đầu dòng bằng itemize, mỗi mục bắt đầu bằng item.. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.",LATEX_DANH_SACH_KHONG_THU_TU,tex_lists
+"làm thế nào để tạo Tạo danh sách dấu đầu dòng bằng itemize, mỗi mục bắt đầu bằng item.. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.",LATEX_DANH_SACH_KHONG_THU_TU,tex_lists
+"hãy cho ví dụ về Tạo danh sách dấu đầu dòng bằng itemize, mỗi mục bắt đầu bằng item.. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.",LATEX_DANH_SACH_KHONG_THU_TU,tex_lists
+"cú pháp dùng để Tạo danh sách dấu đầu dòng bằng itemize, mỗi mục bắt đầu bằng item.. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.",LATEX_DANH_SACH_KHONG_THU_TU,tex_lists
+"muốn biểu diễn Tạo danh sách dấu đầu dòng bằng itemize, mỗi mục bắt đầu bằng item.. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.",LATEX_DANH_SACH_KHONG_THU_TU,tex_lists
+"mình cần cách viết Tạo danh sách tự đánh số bằng enumerate, mỗi mục bắt đầu bằng item.. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.",LATEX_DANH_SACH_CO_THU_TU,tex_lists
+"làm thế nào để tạo Tạo danh sách tự đánh số bằng enumerate, mỗi mục bắt đầu bằng item.. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.",LATEX_DANH_SACH_CO_THU_TU,tex_lists
+"hãy cho ví dụ về Tạo danh sách tự đánh số bằng enumerate, mỗi mục bắt đầu bằng item.. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.",LATEX_DANH_SACH_CO_THU_TU,tex_lists
+"cú pháp dùng để Tạo danh sách tự đánh số bằng enumerate, mỗi mục bắt đầu bằng item.. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.",LATEX_DANH_SACH_CO_THU_TU,tex_lists
+"muốn biểu diễn Tạo danh sách tự đánh số bằng enumerate, mỗi mục bắt đầu bằng item.. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.",LATEX_DANH_SACH_CO_THU_TU,tex_lists
+"mình cần cách viết Viết công thức toán nằm trong dòng bằng $, \(...\) hoặc math environment.. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.",LATEX_TOAN_INLINE_LATEX,tex_math
+"làm thế nào để tạo Viết công thức toán nằm trong dòng bằng $, \(...\) hoặc math environment.. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.",LATEX_TOAN_INLINE_LATEX,tex_math
+"hãy cho ví dụ về Viết công thức toán nằm trong dòng bằng $, \(...\) hoặc math environment.. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.",LATEX_TOAN_INLINE_LATEX,tex_math
+"cú pháp dùng để Viết công thức toán nằm trong dòng bằng $, \(...\) hoặc math environment.. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.",LATEX_TOAN_INLINE_LATEX,tex_math
+"muốn biểu diễn Viết công thức toán nằm trong dòng bằng $, \(...\) hoặc math environment.. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.",LATEX_TOAN_INLINE_LATEX,tex_math
+mình cần cách viết Hiển thị công thức riêng dòng không đánh số; ưu tiên \[...\].. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.,LATEX_TOAN_DISPLAY_KHONG_ANH_SO,tex_math
+làm thế nào để tạo Hiển thị công thức riêng dòng không đánh số; ưu tiên \[...\].. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.,LATEX_TOAN_DISPLAY_KHONG_ANH_SO,tex_math
+hãy cho ví dụ về Hiển thị công thức riêng dòng không đánh số; ưu tiên \[...\].. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.,LATEX_TOAN_DISPLAY_KHONG_ANH_SO,tex_math
+cú pháp dùng để Hiển thị công thức riêng dòng không đánh số; ưu tiên \[...\].. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.,LATEX_TOAN_DISPLAY_KHONG_ANH_SO,tex_math
+muốn biểu diễn Hiển thị công thức riêng dòng không đánh số; ưu tiên \[...\].. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.,LATEX_TOAN_DISPLAY_KHONG_ANH_SO,tex_math
+mình cần cách viết Hiển thị công thức riêng dòng có số thứ tự bằng equation.. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.,LATEX_PHUONG_TRINH_ANH_SO,tex_math
+làm thế nào để tạo Hiển thị công thức riêng dòng có số thứ tự bằng equation.. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.,LATEX_PHUONG_TRINH_ANH_SO,tex_math
+hãy cho ví dụ về Hiển thị công thức riêng dòng có số thứ tự bằng equation.. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.,LATEX_PHUONG_TRINH_ANH_SO,tex_math
+cú pháp dùng để Hiển thị công thức riêng dòng có số thứ tự bằng equation.. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.,LATEX_PHUONG_TRINH_ANH_SO,tex_math
+muốn biểu diễn Hiển thị công thức riêng dòng có số thứ tự bằng equation.. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.,LATEX_PHUONG_TRINH_ANH_SO,tex_math
+mình cần cách viết Dùng equation* từ amsmath để tạo công thức display không đánh số.. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.,LATEX_PHUONG_TRINH_KHONG_ANH_SO_AMSMATH,tex_math
+làm thế nào để tạo Dùng equation* từ amsmath để tạo công thức display không đánh số.. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.,LATEX_PHUONG_TRINH_KHONG_ANH_SO_AMSMATH,tex_math
+hãy cho ví dụ về Dùng equation* từ amsmath để tạo công thức display không đánh số.. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.,LATEX_PHUONG_TRINH_KHONG_ANH_SO_AMSMATH,tex_math
+cú pháp dùng để Dùng equation* từ amsmath để tạo công thức display không đánh số.. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.,LATEX_PHUONG_TRINH_KHONG_ANH_SO_AMSMATH,tex_math
+muốn biểu diễn Dùng equation* từ amsmath để tạo công thức display không đánh số.. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.,LATEX_PHUONG_TRINH_KHONG_ANH_SO_AMSMATH,tex_math
+mình cần cách viết Viết công thức inline bằng môi trường math.. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.,LATEX_MOI_TRUONG_MATH,tex_math
+làm thế nào để tạo Viết công thức inline bằng môi trường math.. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.,LATEX_MOI_TRUONG_MATH,tex_math
+hãy cho ví dụ về Viết công thức inline bằng môi trường math.. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.,LATEX_MOI_TRUONG_MATH,tex_math
+cú pháp dùng để Viết công thức inline bằng môi trường math.. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.,LATEX_MOI_TRUONG_MATH,tex_math
+muốn biểu diễn Viết công thức inline bằng môi trường math.. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.,LATEX_MOI_TRUONG_MATH,tex_math
+mình cần cách viết Viết công thức display không đánh số bằng displaymath.. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.,LATEX_MOI_TRUONG_DISPLAYMATH,tex_math
+làm thế nào để tạo Viết công thức display không đánh số bằng displaymath.. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.,LATEX_MOI_TRUONG_DISPLAYMATH,tex_math
+hãy cho ví dụ về Viết công thức display không đánh số bằng displaymath.. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.,LATEX_MOI_TRUONG_DISPLAYMATH,tex_math
+cú pháp dùng để Viết công thức display không đánh số bằng displaymath.. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.,LATEX_MOI_TRUONG_DISPLAYMATH,tex_math
+muốn biểu diễn Viết công thức display không đánh số bằng displaymath.. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.,LATEX_MOI_TRUONG_DISPLAYMATH,tex_math
+mình cần cách viết Dùng _ tạo subscript và ^ tạo superscript; có thể kết hợp và lồng nhau.. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.,LATEX_CHI_SO_DUOI_VA_SO_MU,tex_math
+làm thế nào để tạo Dùng _ tạo subscript và ^ tạo superscript; có thể kết hợp và lồng nhau.. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.,LATEX_CHI_SO_DUOI_VA_SO_MU,tex_math
+hãy cho ví dụ về Dùng _ tạo subscript và ^ tạo superscript; có thể kết hợp và lồng nhau.. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.,LATEX_CHI_SO_DUOI_VA_SO_MU,tex_math
+cú pháp dùng để Dùng _ tạo subscript và ^ tạo superscript; có thể kết hợp và lồng nhau.. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.,LATEX_CHI_SO_DUOI_VA_SO_MU,tex_math
+muốn biểu diễn Dùng _ tạo subscript và ^ tạo superscript; có thể kết hợp và lồng nhau.. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.,LATEX_CHI_SO_DUOI_VA_SO_MU,tex_math
+"mình cần cách viết Viết các toán tử toán học như sin, cos, log bằng lệnh có dấu gạch chéo.. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.",LATEX_TOAN_TU_LUONG_GIAC_VA_LOG,tex_math
+"làm thế nào để tạo Viết các toán tử toán học như sin, cos, log bằng lệnh có dấu gạch chéo.. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.",LATEX_TOAN_TU_LUONG_GIAC_VA_LOG,tex_math
+"hãy cho ví dụ về Viết các toán tử toán học như sin, cos, log bằng lệnh có dấu gạch chéo.. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.",LATEX_TOAN_TU_LUONG_GIAC_VA_LOG,tex_math
+"cú pháp dùng để Viết các toán tử toán học như sin, cos, log bằng lệnh có dấu gạch chéo.. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.",LATEX_TOAN_TU_LUONG_GIAC_VA_LOG,tex_math
+"muốn biểu diễn Viết các toán tử toán học như sin, cos, log bằng lệnh có dấu gạch chéo.. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.",LATEX_TOAN_TU_LUONG_GIAC_VA_LOG,tex_math
+mình cần cách viết Tạo phần tóm tắt bài báo bằng abstract.. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.,LATEX_MOI_TRUONG_ABSTRACT,tex_struct
+làm thế nào để tạo Tạo phần tóm tắt bài báo bằng abstract.. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.,LATEX_MOI_TRUONG_ABSTRACT,tex_struct
+hãy cho ví dụ về Tạo phần tóm tắt bài báo bằng abstract.. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.,LATEX_MOI_TRUONG_ABSTRACT,tex_struct
+cú pháp dùng để Tạo phần tóm tắt bài báo bằng abstract.. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.,LATEX_MOI_TRUONG_ABSTRACT,tex_struct
+muốn biểu diễn Tạo phần tóm tắt bài báo bằng abstract.. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.,LATEX_MOI_TRUONG_ABSTRACT,tex_struct
+mình cần cách viết Ngắt dòng nhưng vẫn ở cùng đoạn bằng \\ hoặc newline.. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.,LATEX_NGAT_DONG_THU_CONG,tex_text
+làm thế nào để tạo Ngắt dòng nhưng vẫn ở cùng đoạn bằng \\ hoặc newline.. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.,LATEX_NGAT_DONG_THU_CONG,tex_text
+hãy cho ví dụ về Ngắt dòng nhưng vẫn ở cùng đoạn bằng \\ hoặc newline.. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.,LATEX_NGAT_DONG_THU_CONG,tex_text
+cú pháp dùng để Ngắt dòng nhưng vẫn ở cùng đoạn bằng \\ hoặc newline.. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.,LATEX_NGAT_DONG_THU_CONG,tex_text
+muốn biểu diễn Ngắt dòng nhưng vẫn ở cùng đoạn bằng \\ hoặc newline.. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.,LATEX_NGAT_DONG_THU_CONG,tex_text
+mình cần cách viết Bắt đầu dòng mới trong cùng đoạn bằng newline.. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.,LATEX_LENH_NEWLINE,tex_text
+làm thế nào để tạo Bắt đầu dòng mới trong cùng đoạn bằng newline.. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.,LATEX_LENH_NEWLINE,tex_text
+hãy cho ví dụ về Bắt đầu dòng mới trong cùng đoạn bằng newline.. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.,LATEX_LENH_NEWLINE,tex_text
+cú pháp dùng để Bắt đầu dòng mới trong cùng đoạn bằng newline.. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.,LATEX_LENH_NEWLINE,tex_text
+muốn biểu diễn Bắt đầu dòng mới trong cùng đoạn bằng newline.. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.,LATEX_LENH_NEWLINE,tex_text
+mình cần cách viết Nạp parskip để thay đổi cách trình bày khoảng cách đoạn.. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.,LATEX_GIAN_CACH_OAN_PARSKIP,tex_text
+làm thế nào để tạo Nạp parskip để thay đổi cách trình bày khoảng cách đoạn.. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.,LATEX_GIAN_CACH_OAN_PARSKIP,tex_text
+hãy cho ví dụ về Nạp parskip để thay đổi cách trình bày khoảng cách đoạn.. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.,LATEX_GIAN_CACH_OAN_PARSKIP,tex_text
+cú pháp dùng để Nạp parskip để thay đổi cách trình bày khoảng cách đoạn.. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.,LATEX_GIAN_CACH_OAN_PARSKIP,tex_text
+muốn biểu diễn Nạp parskip để thay đổi cách trình bày khoảng cách đoạn.. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.,LATEX_GIAN_CACH_OAN_PARSKIP,tex_text
+"mình cần cách viết Tạo cấu trúc phân cấp part, chapter, section, subsection, subsubsection, paragraph và subparagraph.. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.",LATEX_CHUONG_VA_MUC,tex_struct
+"làm thế nào để tạo Tạo cấu trúc phân cấp part, chapter, section, subsection, subsubsection, paragraph và subparagraph.. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.",LATEX_CHUONG_VA_MUC,tex_struct
+"hãy cho ví dụ về Tạo cấu trúc phân cấp part, chapter, section, subsection, subsubsection, paragraph và subparagraph.. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.",LATEX_CHUONG_VA_MUC,tex_struct
+"cú pháp dùng để Tạo cấu trúc phân cấp part, chapter, section, subsection, subsubsection, paragraph và subparagraph.. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.",LATEX_CHUONG_VA_MUC,tex_struct
+"muốn biểu diễn Tạo cấu trúc phân cấp part, chapter, section, subsection, subsubsection, paragraph và subparagraph.. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.",LATEX_CHUONG_VA_MUC,tex_struct
+mình cần cách viết Dùng phiên bản có dấu sao như section* để tạo mục không đánh số.. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.,LATEX_MUC_KHONG_ANH_SO,tex_struct
+làm thế nào để tạo Dùng phiên bản có dấu sao như section* để tạo mục không đánh số.. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.,LATEX_MUC_KHONG_ANH_SO,tex_struct
+hãy cho ví dụ về Dùng phiên bản có dấu sao như section* để tạo mục không đánh số.. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.,LATEX_MUC_KHONG_ANH_SO,tex_struct
+cú pháp dùng để Dùng phiên bản có dấu sao như section* để tạo mục không đánh số.. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.,LATEX_MUC_KHONG_ANH_SO,tex_struct
+muốn biểu diễn Dùng phiên bản có dấu sao như section* để tạo mục không đánh số.. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.,LATEX_MUC_KHONG_ANH_SO,tex_struct
+mình cần cách viết Tạo mục lục tự động bằng tableofcontents; các mục có cấu trúc tự được thêm vào.. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.,LATEX_MUC_LUC,tex_struct
+làm thế nào để tạo Tạo mục lục tự động bằng tableofcontents; các mục có cấu trúc tự được thêm vào.. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.,LATEX_MUC_LUC,tex_struct
+hãy cho ví dụ về Tạo mục lục tự động bằng tableofcontents; các mục có cấu trúc tự được thêm vào.. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.,LATEX_MUC_LUC,tex_struct
+cú pháp dùng để Tạo mục lục tự động bằng tableofcontents; các mục có cấu trúc tự được thêm vào.. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.,LATEX_MUC_LUC,tex_struct
+muốn biểu diễn Tạo mục lục tự động bằng tableofcontents; các mục có cấu trúc tự được thêm vào.. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.,LATEX_MUC_LUC,tex_struct
+mình cần cách viết Thêm thủ công mục không đánh số vào mục lục bằng addcontentsline.. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.,LATEX_THEM_MUC_KHONG_ANH_SO_VAO_MUC_LUC,tex_struct
+làm thế nào để tạo Thêm thủ công mục không đánh số vào mục lục bằng addcontentsline.. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.,LATEX_THEM_MUC_KHONG_ANH_SO_VAO_MUC_LUC,tex_struct
+hãy cho ví dụ về Thêm thủ công mục không đánh số vào mục lục bằng addcontentsline.. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.,LATEX_THEM_MUC_KHONG_ANH_SO_VAO_MUC_LUC,tex_struct
+cú pháp dùng để Thêm thủ công mục không đánh số vào mục lục bằng addcontentsline.. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.,LATEX_THEM_MUC_KHONG_ANH_SO_VAO_MUC_LUC,tex_struct
+muốn biểu diễn Thêm thủ công mục không đánh số vào mục lục bằng addcontentsline.. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.,LATEX_THEM_MUC_KHONG_ANH_SO_VAO_MUC_LUC,tex_struct
+"mình cần cách viết Tạo bảng bằng tabular; c l r xác định căn giữa, trái, phải; & ngăn ô và \\ kết thúc hàng.. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.",LATEX_BANG_TABULAR_CO_BAN,tex_tables
+"làm thế nào để tạo Tạo bảng bằng tabular; c l r xác định căn giữa, trái, phải; & ngăn ô và \\ kết thúc hàng.. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.",LATEX_BANG_TABULAR_CO_BAN,tex_tables
+"hãy cho ví dụ về Tạo bảng bằng tabular; c l r xác định căn giữa, trái, phải; & ngăn ô và \\ kết thúc hàng.. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.",LATEX_BANG_TABULAR_CO_BAN,tex_tables
+"cú pháp dùng để Tạo bảng bằng tabular; c l r xác định căn giữa, trái, phải; & ngăn ô và \\ kết thúc hàng.. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.",LATEX_BANG_TABULAR_CO_BAN,tex_tables
+"muốn biểu diễn Tạo bảng bằng tabular; c l r xác định căn giữa, trái, phải; & ngăn ô và \\ kết thúc hàng.. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.",LATEX_BANG_TABULAR_CO_BAN,tex_tables
+mình cần cách viết Tạo đường kẻ ngang bằng hline và đường kẻ dọc bằng dấu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.,LATEX_BANG_CO_UONG_KE,tex_tables
+làm thế nào để tạo Tạo đường kẻ ngang bằng hline và đường kẻ dọc bằng dấu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.,LATEX_BANG_CO_UONG_KE,tex_tables
+hãy cho ví dụ về Tạo đường kẻ ngang bằng hline và đường kẻ dọc bằng dấu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.,LATEX_BANG_CO_UONG_KE,tex_tables
+cú pháp dùng để Tạo đường kẻ ngang bằng hline và đường kẻ dọc bằng dấu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.,LATEX_BANG_CO_UONG_KE,tex_tables
+muốn biểu diễn Tạo đường kẻ ngang bằng hline và đường kẻ dọc bằng dấu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.,LATEX_BANG_CO_UONG_KE,tex_tables
+"mình cần cách viết Tạo bảng dạng float có căn giữa, tabular, caption và label.. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.",LATEX_MOI_TRUONG_TABLE,tex_tables
+"làm thế nào để tạo Tạo bảng dạng float có căn giữa, tabular, caption và label.. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.",LATEX_MOI_TRUONG_TABLE,tex_tables
+"hãy cho ví dụ về Tạo bảng dạng float có căn giữa, tabular, caption và label.. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.",LATEX_MOI_TRUONG_TABLE,tex_tables
+"cú pháp dùng để Tạo bảng dạng float có căn giữa, tabular, caption và label.. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.",LATEX_MOI_TRUONG_TABLE,tex_tables
+"muốn biểu diễn Tạo bảng dạng float có căn giữa, tabular, caption và label.. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.",LATEX_MOI_TRUONG_TABLE,tex_tables
+mình cần cách viết Căn giữa một khối nội dung bằng center.. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.,LATEX_CAN_GIUA_NOI_DUNG,tex_layout
+làm thế nào để tạo Căn giữa một khối nội dung bằng center.. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.,LATEX_CAN_GIUA_NOI_DUNG,tex_layout
+hãy cho ví dụ về Căn giữa một khối nội dung bằng center.. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.,LATEX_CAN_GIUA_NOI_DUNG,tex_layout
+cú pháp dùng để Căn giữa một khối nội dung bằng center.. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.,LATEX_CAN_GIUA_NOI_DUNG,tex_layout
+muốn biểu diễn Căn giữa một khối nội dung bằng center.. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.,LATEX_CAN_GIUA_NOI_DUNG,tex_layout
+"mình cần cách viết Tạo phương trình bậc hai; a là phần cần điền, b là phần cần điền, c là phần cần điền. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.",QUADRATIC_EQUATION,tex_math
+"làm thế nào để tạo Tạo phương trình bậc hai; a là nội dung mẫu, b là nội dung mẫu, c là nội dung mẫu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.",QUADRATIC_EQUATION,tex_math
+"hãy cho ví dụ về Tạo phương trình bậc hai; a là giá trị mẫu, b là giá trị mẫu, c là giá trị mẫu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.",QUADRATIC_EQUATION,tex_math
+"cú pháp dùng để Tạo phương trình bậc hai; a là phần cần điền, b là phần cần điền, c là phần cần điền. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.",QUADRATIC_EQUATION,tex_math
+"muốn biểu diễn Tạo phương trình bậc hai; a là nội dung mẫu, b là nội dung mẫu, c là nội dung mẫu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Đầu ra cần dùng được trong LaTeX.",QUADRATIC_EQUATION,tex_math
+mình cần cách viết tiêu đề 1; text là ghi chú quan trọng. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.,OBSIDIAN_OBSIDIAN_BASIC_TIEU_E_1,obsidian
+làm thế nào để tạo tiêu đề 1; text là tiêu đề tài liệu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.,OBSIDIAN_OBSIDIAN_BASIC_TIEU_E_1,obsidian
+hãy cho ví dụ về tiêu đề 1; text là một đoạn văn bản. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.,OBSIDIAN_OBSIDIAN_BASIC_TIEU_E_1,obsidian
+cú pháp dùng để tiêu đề 1; text là nội dung mẫu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.,OBSIDIAN_OBSIDIAN_BASIC_TIEU_E_1,obsidian
+muốn biểu diễn tiêu đề 1; text là ghi chú quan trọng. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.,OBSIDIAN_OBSIDIAN_BASIC_TIEU_E_1,obsidian
+mình cần cách viết tiêu đề 2; text là ghi chú quan trọng. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.,OBSIDIAN_OBSIDIAN_BASIC_TIEU_E_2,obsidian
+làm thế nào để tạo tiêu đề 2; text là tiêu đề tài liệu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.,OBSIDIAN_OBSIDIAN_BASIC_TIEU_E_2,obsidian
+hãy cho ví dụ về tiêu đề 2; text là một đoạn văn bản. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.,OBSIDIAN_OBSIDIAN_BASIC_TIEU_E_2,obsidian
+cú pháp dùng để tiêu đề 2; text là nội dung mẫu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.,OBSIDIAN_OBSIDIAN_BASIC_TIEU_E_2,obsidian
+muốn biểu diễn tiêu đề 2; text là ghi chú quan trọng. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.,OBSIDIAN_OBSIDIAN_BASIC_TIEU_E_2,obsidian
+mình cần cách viết tiêu đề 3; text là ghi chú quan trọng. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.,OBSIDIAN_OBSIDIAN_BASIC_TIEU_E_3,obsidian
+làm thế nào để tạo tiêu đề 3; text là tiêu đề tài liệu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.,OBSIDIAN_OBSIDIAN_BASIC_TIEU_E_3,obsidian
+hãy cho ví dụ về tiêu đề 3; text là một đoạn văn bản. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.,OBSIDIAN_OBSIDIAN_BASIC_TIEU_E_3,obsidian
+cú pháp dùng để tiêu đề 3; text là nội dung mẫu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.,OBSIDIAN_OBSIDIAN_BASIC_TIEU_E_3,obsidian
+muốn biểu diễn tiêu đề 3; text là ghi chú quan trọng. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.,OBSIDIAN_OBSIDIAN_BASIC_TIEU_E_3,obsidian
+mình cần cách viết chữ đậm; text là ghi chú quan trọng. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.,OBSIDIAN_OBSIDIAN_BASIC_CHU_AM,obsidian
+làm thế nào để tạo chữ đậm; text là tiêu đề tài liệu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.,OBSIDIAN_OBSIDIAN_BASIC_CHU_AM,obsidian
+hãy cho ví dụ về chữ đậm; text là một đoạn văn bản. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.,OBSIDIAN_OBSIDIAN_BASIC_CHU_AM,obsidian
+cú pháp dùng để chữ đậm; text là nội dung mẫu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.,OBSIDIAN_OBSIDIAN_BASIC_CHU_AM,obsidian
+muốn biểu diễn chữ đậm; text là ghi chú quan trọng. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.,OBSIDIAN_OBSIDIAN_BASIC_CHU_AM,obsidian
+mình cần cách viết chữ nghiêng; text là ghi chú quan trọng. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.,OBSIDIAN_OBSIDIAN_BASIC_CHU_NGHIENG,obsidian
+làm thế nào để tạo chữ nghiêng; text là tiêu đề tài liệu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.,OBSIDIAN_OBSIDIAN_BASIC_CHU_NGHIENG,obsidian
+hãy cho ví dụ về chữ nghiêng; text là một đoạn văn bản. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.,OBSIDIAN_OBSIDIAN_BASIC_CHU_NGHIENG,obsidian
+cú pháp dùng để chữ nghiêng; text là nội dung mẫu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.,OBSIDIAN_OBSIDIAN_BASIC_CHU_NGHIENG,obsidian
+muốn biểu diễn chữ nghiêng; text là ghi chú quan trọng. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.,OBSIDIAN_OBSIDIAN_BASIC_CHU_NGHIENG,obsidian
+mình cần cách viết gạch ngang; text là ghi chú quan trọng. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.,OBSIDIAN_OBSIDIAN_BASIC_GACH_NGANG,obsidian
+làm thế nào để tạo gạch ngang; text là tiêu đề tài liệu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.,OBSIDIAN_OBSIDIAN_BASIC_GACH_NGANG,obsidian
+hãy cho ví dụ về gạch ngang; text là một đoạn văn bản. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.,OBSIDIAN_OBSIDIAN_BASIC_GACH_NGANG,obsidian
+cú pháp dùng để gạch ngang; text là nội dung mẫu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.,OBSIDIAN_OBSIDIAN_BASIC_GACH_NGANG,obsidian
+muốn biểu diễn gạch ngang; text là ghi chú quan trọng. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.,OBSIDIAN_OBSIDIAN_BASIC_GACH_NGANG,obsidian
+mình cần cách viết highlight; text là ghi chú quan trọng. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.,OBSIDIAN_OBSIDIAN_BASIC_HIGHLIGHT,obsidian
+làm thế nào để tạo highlight; text là tiêu đề tài liệu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.,OBSIDIAN_OBSIDIAN_BASIC_HIGHLIGHT,obsidian
+hãy cho ví dụ về highlight; text là một đoạn văn bản. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.,OBSIDIAN_OBSIDIAN_BASIC_HIGHLIGHT,obsidian
+cú pháp dùng để highlight; text là nội dung mẫu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.,OBSIDIAN_OBSIDIAN_BASIC_HIGHLIGHT,obsidian
+muốn biểu diễn highlight; text là ghi chú quan trọng. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.,OBSIDIAN_OBSIDIAN_BASIC_HIGHLIGHT,obsidian
+mình cần cách viết link nội bộ; note là Ghi chú. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.,OBSIDIAN_OBSIDIAN_BASIC_LINK_NOI_BO,obsidian
+làm thế nào để tạo link nội bộ; note là Ghi chú. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.,OBSIDIAN_OBSIDIAN_BASIC_LINK_NOI_BO,obsidian
+hãy cho ví dụ về link nội bộ; note là Ghi chú. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.,OBSIDIAN_OBSIDIAN_BASIC_LINK_NOI_BO,obsidian
+cú pháp dùng để link nội bộ; note là Ghi chú. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.,OBSIDIAN_OBSIDIAN_BASIC_LINK_NOI_BO,obsidian
+muốn biểu diễn link nội bộ; note là Ghi chú. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.,OBSIDIAN_OBSIDIAN_BASIC_LINK_NOI_BO,obsidian
+"mình cần cách viết link nội bộ có tên; note là Ghi chú, label là Tài liệu tham khảo. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.",OBSIDIAN_OBSIDIAN_BASIC_LINK_NOI_BO_CO_TEN,obsidian
+"làm thế nào để tạo link nội bộ có tên; note là Ghi chú, label là Tài liệu tham khảo. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.",OBSIDIAN_OBSIDIAN_BASIC_LINK_NOI_BO_CO_TEN,obsidian
+"hãy cho ví dụ về link nội bộ có tên; note là Ghi chú, label là Tài liệu tham khảo. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.",OBSIDIAN_OBSIDIAN_BASIC_LINK_NOI_BO_CO_TEN,obsidian
+"cú pháp dùng để link nội bộ có tên; note là Ghi chú, label là Tài liệu tham khảo. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.",OBSIDIAN_OBSIDIAN_BASIC_LINK_NOI_BO_CO_TEN,obsidian
+"muốn biểu diễn link nội bộ có tên; note là Ghi chú, label là Tài liệu tham khảo. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.",OBSIDIAN_OBSIDIAN_BASIC_LINK_NOI_BO_CO_TEN,obsidian
+"mình cần cách viết link web; label là Tài liệu tham khảo, url là https://example.com. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.",OBSIDIAN_OBSIDIAN_BASIC_LINK_WEB,obsidian
+"làm thế nào để tạo link web; label là Tài liệu tham khảo, url là https://example.com. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.",OBSIDIAN_OBSIDIAN_BASIC_LINK_WEB,obsidian
+"hãy cho ví dụ về link web; label là Tài liệu tham khảo, url là https://example.com. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.",OBSIDIAN_OBSIDIAN_BASIC_LINK_WEB,obsidian
+"cú pháp dùng để link web; label là Tài liệu tham khảo, url là https://example.com. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.",OBSIDIAN_OBSIDIAN_BASIC_LINK_WEB,obsidian
+"muốn biểu diễn link web; label là Tài liệu tham khảo, url là https://example.com. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.",OBSIDIAN_OBSIDIAN_BASIC_LINK_WEB,obsidian
+"mình cần cách viết ảnh; alt là hình minh họa, url là https://example.com. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.",OBSIDIAN_OBSIDIAN_BASIC_ANH,obsidian
+"làm thế nào để tạo ảnh; alt là hình minh họa, url là https://example.com. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.",OBSIDIAN_OBSIDIAN_BASIC_ANH,obsidian
+"hãy cho ví dụ về ảnh; alt là hình minh họa, url là https://example.com. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.",OBSIDIAN_OBSIDIAN_BASIC_ANH,obsidian
+"cú pháp dùng để ảnh; alt là hình minh họa, url là https://example.com. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.",OBSIDIAN_OBSIDIAN_BASIC_ANH,obsidian
+"muốn biểu diễn ảnh; alt là hình minh họa, url là https://example.com. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.",OBSIDIAN_OBSIDIAN_BASIC_ANH,obsidian
+mình cần cách viết trích dẫn; text là ghi chú quan trọng. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.,OBSIDIAN_OBSIDIAN_BASIC_TRICH_DAN,obsidian
+làm thế nào để tạo trích dẫn; text là tiêu đề tài liệu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.,OBSIDIAN_OBSIDIAN_BASIC_TRICH_DAN,obsidian
+hãy cho ví dụ về trích dẫn; text là một đoạn văn bản. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.,OBSIDIAN_OBSIDIAN_BASIC_TRICH_DAN,obsidian
+cú pháp dùng để trích dẫn; text là nội dung mẫu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.,OBSIDIAN_OBSIDIAN_BASIC_TRICH_DAN,obsidian
+muốn biểu diễn trích dẫn; text là ghi chú quan trọng. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.,OBSIDIAN_OBSIDIAN_BASIC_TRICH_DAN,obsidian
+mình cần cách viết danh sách; item là mục đầu tiên. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.,OBSIDIAN_OBSIDIAN_BASIC_DANH_SACH,obsidian
+làm thế nào để tạo danh sách; item là việc cần làm. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.,OBSIDIAN_OBSIDIAN_BASIC_DANH_SACH,obsidian
+hãy cho ví dụ về danh sách; item là mục đầu tiên. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.,OBSIDIAN_OBSIDIAN_BASIC_DANH_SACH,obsidian
+cú pháp dùng để danh sách; item là việc cần làm. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.,OBSIDIAN_OBSIDIAN_BASIC_DANH_SACH,obsidian
+muốn biểu diễn danh sách; item là mục đầu tiên. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.,OBSIDIAN_OBSIDIAN_BASIC_DANH_SACH,obsidian
+"mình cần cách viết danh sách đánh số; item1 là việc thứ nhất, item2 là việc thứ hai. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.",OBSIDIAN_OBSIDIAN_BASIC_DANH_SACH_ANH_SO,obsidian
+"làm thế nào để tạo danh sách đánh số; item1 là việc thứ nhất, item2 là việc thứ hai. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.",OBSIDIAN_OBSIDIAN_BASIC_DANH_SACH_ANH_SO,obsidian
+"hãy cho ví dụ về danh sách đánh số; item1 là việc thứ nhất, item2 là việc thứ hai. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.",OBSIDIAN_OBSIDIAN_BASIC_DANH_SACH_ANH_SO,obsidian
+"cú pháp dùng để danh sách đánh số; item1 là việc thứ nhất, item2 là việc thứ hai. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.",OBSIDIAN_OBSIDIAN_BASIC_DANH_SACH_ANH_SO,obsidian
+"muốn biểu diễn danh sách đánh số; item1 là việc thứ nhất, item2 là việc thứ hai. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.",OBSIDIAN_OBSIDIAN_BASIC_DANH_SACH_ANH_SO,obsidian
+mình cần cách viết checkbox; task là phần cần điền. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.,OBSIDIAN_OBSIDIAN_BASIC_CHECKBOX,obsidian
+làm thế nào để tạo checkbox; task là nội dung mẫu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.,OBSIDIAN_OBSIDIAN_BASIC_CHECKBOX,obsidian
+hãy cho ví dụ về checkbox; task là giá trị mẫu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.,OBSIDIAN_OBSIDIAN_BASIC_CHECKBOX,obsidian
+cú pháp dùng để checkbox; task là phần cần điền. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.,OBSIDIAN_OBSIDIAN_BASIC_CHECKBOX,obsidian
+muốn biểu diễn checkbox; task là nội dung mẫu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.,OBSIDIAN_OBSIDIAN_BASIC_CHECKBOX,obsidian
+mình cần cách viết checkbox hoàn thành; task là phần cần điền. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.,OBSIDIAN_OBSIDIAN_BASIC_CHECKBOX_HOAN_THANH,obsidian
+làm thế nào để tạo checkbox hoàn thành; task là nội dung mẫu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.,OBSIDIAN_OBSIDIAN_BASIC_CHECKBOX_HOAN_THANH,obsidian
+hãy cho ví dụ về checkbox hoàn thành; task là giá trị mẫu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.,OBSIDIAN_OBSIDIAN_BASIC_CHECKBOX_HOAN_THANH,obsidian
+cú pháp dùng để checkbox hoàn thành; task là phần cần điền. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.,OBSIDIAN_OBSIDIAN_BASIC_CHECKBOX_HOAN_THANH,obsidian
+muốn biểu diễn checkbox hoàn thành; task là nội dung mẫu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.,OBSIDIAN_OBSIDIAN_BASIC_CHECKBOX_HOAN_THANH,obsidian
+mình cần cách viết đường ngang. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.,OBSIDIAN_OBSIDIAN_BASIC_UONG_NGANG,obsidian
+làm thế nào để tạo đường ngang. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.,OBSIDIAN_OBSIDIAN_BASIC_UONG_NGANG,obsidian
+hãy cho ví dụ về đường ngang. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.,OBSIDIAN_OBSIDIAN_BASIC_UONG_NGANG,obsidian
+cú pháp dùng để đường ngang. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.,OBSIDIAN_OBSIDIAN_BASIC_UONG_NGANG,obsidian
+muốn biểu diễn đường ngang. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.,OBSIDIAN_OBSIDIAN_BASIC_UONG_NGANG,obsidian
+mình cần cách viết code inline; code là print hello. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.,OBSIDIAN_OBSIDIAN_BASIC_CODE_INLINE,obsidian
+làm thế nào để tạo code inline; code là print hello. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.,OBSIDIAN_OBSIDIAN_BASIC_CODE_INLINE,obsidian
+hãy cho ví dụ về code inline; code là print hello. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.,OBSIDIAN_OBSIDIAN_BASIC_CODE_INLINE,obsidian
+cú pháp dùng để code inline; code là print hello. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.,OBSIDIAN_OBSIDIAN_BASIC_CODE_INLINE,obsidian
+muốn biểu diễn code inline; code là print hello. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.,OBSIDIAN_OBSIDIAN_BASIC_CODE_INLINE,obsidian
+"mình cần cách viết code block; language là python, code là print hello. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.",OBSIDIAN_OBSIDIAN_BASIC_CODE_BLOCK,obsidian
+"làm thế nào để tạo code block; language là python, code là print hello. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.",OBSIDIAN_OBSIDIAN_BASIC_CODE_BLOCK,obsidian
+"hãy cho ví dụ về code block; language là python, code là print hello. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.",OBSIDIAN_OBSIDIAN_BASIC_CODE_BLOCK,obsidian
+"cú pháp dùng để code block; language là python, code là print hello. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.",OBSIDIAN_OBSIDIAN_BASIC_CODE_BLOCK,obsidian
+"muốn biểu diễn code block; language là python, code là print hello. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.",OBSIDIAN_OBSIDIAN_BASIC_CODE_BLOCK,obsidian
+"mình cần cách viết bảng; c1 là Tên, c2 là Giá trị, v1 là Alpha, v2 là Beta. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.",OBSIDIAN_TABLE_BANG,obsidian
+"làm thế nào để tạo bảng; c1 là Tên, c2 là Giá trị, v1 là Alpha, v2 là Beta. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.",OBSIDIAN_TABLE_BANG,obsidian
+"hãy cho ví dụ về bảng; c1 là Tên, c2 là Giá trị, v1 là Alpha, v2 là Beta. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.",OBSIDIAN_TABLE_BANG,obsidian
+"cú pháp dùng để bảng; c1 là Tên, c2 là Giá trị, v1 là Alpha, v2 là Beta. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.",OBSIDIAN_TABLE_BANG,obsidian
+"muốn biểu diễn bảng; c1 là Tên, c2 là Giá trị, v1 là Alpha, v2 là Beta. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.",OBSIDIAN_TABLE_BANG,obsidian
+"mình cần cách viết bảng căn trái; c1 là Tên, c2 là Giá trị, v1 là Alpha, v2 là Beta. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.",OBSIDIAN_TABLE_BANG_CAN_TRAI,obsidian
+"làm thế nào để tạo bảng căn trái; c1 là Tên, c2 là Giá trị, v1 là Alpha, v2 là Beta. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.",OBSIDIAN_TABLE_BANG_CAN_TRAI,obsidian
+"hãy cho ví dụ về bảng căn trái; c1 là Tên, c2 là Giá trị, v1 là Alpha, v2 là Beta. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.",OBSIDIAN_TABLE_BANG_CAN_TRAI,obsidian
+"cú pháp dùng để bảng căn trái; c1 là Tên, c2 là Giá trị, v1 là Alpha, v2 là Beta. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.",OBSIDIAN_TABLE_BANG_CAN_TRAI,obsidian
+"muốn biểu diễn bảng căn trái; c1 là Tên, c2 là Giá trị, v1 là Alpha, v2 là Beta. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.",OBSIDIAN_TABLE_BANG_CAN_TRAI,obsidian
+"mình cần cách viết bảng căn giữa; c1 là Tên, c2 là Giá trị, v1 là Alpha, v2 là Beta. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.",OBSIDIAN_TABLE_BANG_CAN_GIUA,obsidian
+"làm thế nào để tạo bảng căn giữa; c1 là Tên, c2 là Giá trị, v1 là Alpha, v2 là Beta. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.",OBSIDIAN_TABLE_BANG_CAN_GIUA,obsidian
+"hãy cho ví dụ về bảng căn giữa; c1 là Tên, c2 là Giá trị, v1 là Alpha, v2 là Beta. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.",OBSIDIAN_TABLE_BANG_CAN_GIUA,obsidian
+"cú pháp dùng để bảng căn giữa; c1 là Tên, c2 là Giá trị, v1 là Alpha, v2 là Beta. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.",OBSIDIAN_TABLE_BANG_CAN_GIUA,obsidian
+"muốn biểu diễn bảng căn giữa; c1 là Tên, c2 là Giá trị, v1 là Alpha, v2 là Beta. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.",OBSIDIAN_TABLE_BANG_CAN_GIUA,obsidian
+mình cần cách viết sơ đồ luồng; diagram là A --> B. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.,OBSIDIAN_MERMAID_SO_O_LUONG,obsidian
+làm thế nào để tạo sơ đồ luồng; diagram là A --> B. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.,OBSIDIAN_MERMAID_SO_O_LUONG,obsidian
+hãy cho ví dụ về sơ đồ luồng; diagram là A --> B. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.,OBSIDIAN_MERMAID_SO_O_LUONG,obsidian
+cú pháp dùng để sơ đồ luồng; diagram là A --> B. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.,OBSIDIAN_MERMAID_SO_O_LUONG,obsidian
+muốn biểu diễn sơ đồ luồng; diagram là A --> B. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.,OBSIDIAN_MERMAID_SO_O_LUONG,obsidian
+mình cần cách viết công thức inline; formula là \sum_{i=1}^{n} i. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_MATH_BASIC_CONG_THUC_INLINE,math_shared
+làm thế nào để tạo công thức inline; formula là x^2 + y^2 = z^2. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_MATH_BASIC_CONG_THUC_INLINE,math_shared
+hãy cho ví dụ về công thức inline; formula là \frac{a}{b}. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_MATH_BASIC_CONG_THUC_INLINE,math_shared
+cú pháp dùng để công thức inline; formula là \sum_{i=1}^{n} i. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_MATH_BASIC_CONG_THUC_INLINE,math_shared
+muốn biểu diễn công thức inline; formula là x^2 + y^2 = z^2. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_MATH_BASIC_CONG_THUC_INLINE,math_shared
+mình cần cách viết công thức lớn; formula là \sum_{i=1}^{n} i. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_MATH_BASIC_CONG_THUC_LON,math_shared
+làm thế nào để tạo công thức lớn; formula là x^2 + y^2 = z^2. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_MATH_BASIC_CONG_THUC_LON,math_shared
+hãy cho ví dụ về công thức lớn; formula là \frac{a}{b}. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_MATH_BASIC_CONG_THUC_LON,math_shared
+cú pháp dùng để công thức lớn; formula là \sum_{i=1}^{n} i. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_MATH_BASIC_CONG_THUC_LON,math_shared
+muốn biểu diễn công thức lớn; formula là x^2 + y^2 = z^2. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_MATH_BASIC_CONG_THUC_LON,math_shared
+"mình cần cách viết phân số; num là a, den là b. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.",MATH_MATH_BASIC_PHAN_SO,math_shared
+"làm thế nào để tạo phân số; num là a, den là b. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.",MATH_MATH_BASIC_PHAN_SO,math_shared
+"hãy cho ví dụ về phân số; num là a, den là b. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.",MATH_MATH_BASIC_PHAN_SO,math_shared
+"cú pháp dùng để phân số; num là a, den là b. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.",MATH_MATH_BASIC_PHAN_SO,math_shared
+"muốn biểu diễn phân số; num là a, den là b. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.",MATH_MATH_BASIC_PHAN_SO,math_shared
+mình cần cách viết căn; expr là x+1. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_MATH_BASIC_CAN,math_shared
+làm thế nào để tạo căn; expr là x+1. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_MATH_BASIC_CAN,math_shared
+hãy cho ví dụ về căn; expr là x+1. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_MATH_BASIC_CAN,math_shared
+cú pháp dùng để căn; expr là x+1. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_MATH_BASIC_CAN,math_shared
+muốn biểu diễn căn; expr là x+1. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_MATH_BASIC_CAN,math_shared
+"mình cần cách viết căn bậc n; n là 3, expr là x+1. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.",MATH_MATH_BASIC_CAN_BAC_N,math_shared
+"làm thế nào để tạo căn bậc n; n là 3, expr là x+1. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.",MATH_MATH_BASIC_CAN_BAC_N,math_shared
+"hãy cho ví dụ về căn bậc n; n là 3, expr là x+1. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.",MATH_MATH_BASIC_CAN_BAC_N,math_shared
+"cú pháp dùng để căn bậc n; n là 3, expr là x+1. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.",MATH_MATH_BASIC_CAN_BAC_N,math_shared
+"muốn biểu diễn căn bậc n; n là 3, expr là x+1. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.",MATH_MATH_BASIC_CAN_BAC_N,math_shared
+"mình cần cách viết mũ; base là a, exp là n. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.",MATH_MATH_BASIC_MU,math_shared
+"làm thế nào để tạo mũ; base là x, exp là 2. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.",MATH_MATH_BASIC_MU,math_shared
+"hãy cho ví dụ về mũ; base là a, exp là n. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.",MATH_MATH_BASIC_MU,math_shared
+"cú pháp dùng để mũ; base là x, exp là 2. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.",MATH_MATH_BASIC_MU,math_shared
+"muốn biểu diễn mũ; base là a, exp là n. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.",MATH_MATH_BASIC_MU,math_shared
+"mình cần cách viết chỉ số; base là a, sub là 0. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.",MATH_MATH_BASIC_CHI_SO,math_shared
+"làm thế nào để tạo chỉ số; base là x, sub là i. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.",MATH_MATH_BASIC_CHI_SO,math_shared
+"hãy cho ví dụ về chỉ số; base là a, sub là 0. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.",MATH_MATH_BASIC_CHI_SO,math_shared
+"cú pháp dùng để chỉ số; base là x, sub là i. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.",MATH_MATH_BASIC_CHI_SO,math_shared
+"muốn biểu diễn chỉ số; base là a, sub là 0. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.",MATH_MATH_BASIC_CHI_SO,math_shared
+"mình cần cách viết mũ và chỉ số; base là a, sub là 0, exp là n. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.",MATH_MATH_BASIC_MU_VA_CHI_SO,math_shared
+"làm thế nào để tạo mũ và chỉ số; base là x, sub là i, exp là 2. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.",MATH_MATH_BASIC_MU_VA_CHI_SO,math_shared
+"hãy cho ví dụ về mũ và chỉ số; base là a, sub là 0, exp là n. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.",MATH_MATH_BASIC_MU_VA_CHI_SO,math_shared
+"cú pháp dùng để mũ và chỉ số; base là x, sub là i, exp là 2. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.",MATH_MATH_BASIC_MU_VA_CHI_SO,math_shared
+"muốn biểu diễn mũ và chỉ số; base là a, sub là 0, exp là n. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.",MATH_MATH_BASIC_MU_VA_CHI_SO,math_shared
+"mình cần cách viết tổng; from là phần cần điền, to là phần cần điền, expr là x+1. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.",MATH_MATH_BASIC_TONG,math_shared
+"làm thế nào để tạo tổng; from là nội dung mẫu, to là nội dung mẫu, expr là x+1. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.",MATH_MATH_BASIC_TONG,math_shared
+"hãy cho ví dụ về tổng; from là giá trị mẫu, to là giá trị mẫu, expr là x+1. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.",MATH_MATH_BASIC_TONG,math_shared
+"cú pháp dùng để tổng; from là phần cần điền, to là phần cần điền, expr là x+1. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.",MATH_MATH_BASIC_TONG,math_shared
+"muốn biểu diễn tổng; from là nội dung mẫu, to là nội dung mẫu, expr là x+1. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.",MATH_MATH_BASIC_TONG,math_shared
+"mình cần cách viết tích; from là phần cần điền, to là phần cần điền, expr là x+1. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.",MATH_MATH_BASIC_TICH,math_shared
+"làm thế nào để tạo tích; from là nội dung mẫu, to là nội dung mẫu, expr là x+1. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.",MATH_MATH_BASIC_TICH,math_shared
+"hãy cho ví dụ về tích; from là giá trị mẫu, to là giá trị mẫu, expr là x+1. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.",MATH_MATH_BASIC_TICH,math_shared
+"cú pháp dùng để tích; from là phần cần điền, to là phần cần điền, expr là x+1. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.",MATH_MATH_BASIC_TICH,math_shared
+"muốn biểu diễn tích; from là nội dung mẫu, to là nội dung mẫu, expr là x+1. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.",MATH_MATH_BASIC_TICH,math_shared
+"mình cần cách viết tích phân; from là phần cần điền, to là phần cần điền, expr là x+1. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.",MATH_MATH_BASIC_TICH_PHAN,math_shared
+"làm thế nào để tạo tích phân; from là nội dung mẫu, to là nội dung mẫu, expr là x+1. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.",MATH_MATH_BASIC_TICH_PHAN,math_shared
+"hãy cho ví dụ về tích phân; from là giá trị mẫu, to là giá trị mẫu, expr là x+1. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.",MATH_MATH_BASIC_TICH_PHAN,math_shared
+"cú pháp dùng để tích phân; from là phần cần điền, to là phần cần điền, expr là x+1. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.",MATH_MATH_BASIC_TICH_PHAN,math_shared
+"muốn biểu diễn tích phân; from là nội dung mẫu, to là nội dung mẫu, expr là x+1. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.",MATH_MATH_BASIC_TICH_PHAN,math_shared
+"mình cần cách viết giới hạn; condition là phần cần điền, expr là x+1. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.",MATH_MATH_BASIC_GIOI_HAN,math_shared
+"làm thế nào để tạo giới hạn; condition là nội dung mẫu, expr là x+1. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.",MATH_MATH_BASIC_GIOI_HAN,math_shared
+"hãy cho ví dụ về giới hạn; condition là giá trị mẫu, expr là x+1. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.",MATH_MATH_BASIC_GIOI_HAN,math_shared
+"cú pháp dùng để giới hạn; condition là phần cần điền, expr là x+1. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.",MATH_MATH_BASIC_GIOI_HAN,math_shared
+"muốn biểu diễn giới hạn; condition là nội dung mẫu, expr là x+1. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.",MATH_MATH_BASIC_GIOI_HAN,math_shared
+mình cần cách viết đạo hàm; x là phần cần điền. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_MATH_BASIC_AO_HAM,math_shared
+làm thế nào để tạo đạo hàm; x là nội dung mẫu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_MATH_BASIC_AO_HAM,math_shared
+hãy cho ví dụ về đạo hàm; x là giá trị mẫu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_MATH_BASIC_AO_HAM,math_shared
+cú pháp dùng để đạo hàm; x là phần cần điền. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_MATH_BASIC_AO_HAM,math_shared
+muốn biểu diễn đạo hàm; x là nội dung mẫu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_MATH_BASIC_AO_HAM,math_shared
+"mình cần cách viết ma trận; matrix là phần cần điền, rows là phần cần điền. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.",MATH_MATRIX_MA_TRAN,math_shared
+"làm thế nào để tạo ma trận; matrix là nội dung mẫu, rows là nội dung mẫu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.",MATH_MATRIX_MA_TRAN,math_shared
+"hãy cho ví dụ về ma trận; matrix là giá trị mẫu, rows là giá trị mẫu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.",MATH_MATRIX_MA_TRAN,math_shared
+"cú pháp dùng để ma trận; matrix là phần cần điền, rows là phần cần điền. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.",MATH_MATRIX_MA_TRAN,math_shared
+"muốn biểu diễn ma trận; matrix là nội dung mẫu, rows là nội dung mẫu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.",MATH_MATRIX_MA_TRAN,math_shared
+"mình cần cách viết ma trận 2x2; matrix là phần cần điền, a là phần cần điền, b là phần cần điền, c là phần cần điền, d là phần cần điền. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.",MATH_MATRIX_MA_TRAN_2X2,math_shared
+"làm thế nào để tạo ma trận 2x2; matrix là nội dung mẫu, a là nội dung mẫu, b là nội dung mẫu, c là nội dung mẫu, d là nội dung mẫu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.",MATH_MATRIX_MA_TRAN_2X2,math_shared
+"hãy cho ví dụ về ma trận 2x2; matrix là giá trị mẫu, a là giá trị mẫu, b là giá trị mẫu, c là giá trị mẫu, d là giá trị mẫu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.",MATH_MATRIX_MA_TRAN_2X2,math_shared
+"cú pháp dùng để ma trận 2x2; matrix là phần cần điền, a là phần cần điền, b là phần cần điền, c là phần cần điền, d là phần cần điền. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.",MATH_MATRIX_MA_TRAN_2X2,math_shared
+"muốn biểu diễn ma trận 2x2; matrix là nội dung mẫu, a là nội dung mẫu, b là nội dung mẫu, c là nội dung mẫu, d là nội dung mẫu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.",MATH_MATRIX_MA_TRAN_2X2,math_shared
+"mình cần cách viết ma trận ngoặc tròn; pmatrix là phần cần điền, rows là phần cần điền. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.",MATH_MATRIX_MA_TRAN_NGOAC_TRON,math_shared
+"làm thế nào để tạo ma trận ngoặc tròn; pmatrix là nội dung mẫu, rows là nội dung mẫu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.",MATH_MATRIX_MA_TRAN_NGOAC_TRON,math_shared
+"hãy cho ví dụ về ma trận ngoặc tròn; pmatrix là giá trị mẫu, rows là giá trị mẫu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.",MATH_MATRIX_MA_TRAN_NGOAC_TRON,math_shared
+"cú pháp dùng để ma trận ngoặc tròn; pmatrix là phần cần điền, rows là phần cần điền. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.",MATH_MATRIX_MA_TRAN_NGOAC_TRON,math_shared
+"muốn biểu diễn ma trận ngoặc tròn; pmatrix là nội dung mẫu, rows là nội dung mẫu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.",MATH_MATRIX_MA_TRAN_NGOAC_TRON,math_shared
+"mình cần cách viết ma trận ngoặc vuông; bmatrix là phần cần điền, rows là phần cần điền. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.",MATH_MATRIX_MA_TRAN_NGOAC_VUONG,math_shared
+"làm thế nào để tạo ma trận ngoặc vuông; bmatrix là nội dung mẫu, rows là nội dung mẫu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.",MATH_MATRIX_MA_TRAN_NGOAC_VUONG,math_shared
+"hãy cho ví dụ về ma trận ngoặc vuông; bmatrix là giá trị mẫu, rows là giá trị mẫu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.",MATH_MATRIX_MA_TRAN_NGOAC_VUONG,math_shared
+"cú pháp dùng để ma trận ngoặc vuông; bmatrix là phần cần điền, rows là phần cần điền. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.",MATH_MATRIX_MA_TRAN_NGOAC_VUONG,math_shared
+"muốn biểu diễn ma trận ngoặc vuông; bmatrix là nội dung mẫu, rows là nội dung mẫu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.",MATH_MATRIX_MA_TRAN_NGOAC_VUONG,math_shared
+"mình cần cách viết ma trận ngoặc nhọn; Bmatrix là phần cần điền, rows là phần cần điền. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.",MATH_MATRIX_MA_TRAN_NGOAC_NHON,math_shared
+"làm thế nào để tạo ma trận ngoặc nhọn; Bmatrix là nội dung mẫu, rows là nội dung mẫu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.",MATH_MATRIX_MA_TRAN_NGOAC_NHON,math_shared
+"hãy cho ví dụ về ma trận ngoặc nhọn; Bmatrix là giá trị mẫu, rows là giá trị mẫu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.",MATH_MATRIX_MA_TRAN_NGOAC_NHON,math_shared
+"cú pháp dùng để ma trận ngoặc nhọn; Bmatrix là phần cần điền, rows là phần cần điền. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.",MATH_MATRIX_MA_TRAN_NGOAC_NHON,math_shared
+"muốn biểu diễn ma trận ngoặc nhọn; Bmatrix là nội dung mẫu, rows là nội dung mẫu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.",MATH_MATRIX_MA_TRAN_NGOAC_NHON,math_shared
+"mình cần cách viết định thức; vmatrix là phần cần điền, rows là phần cần điền. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.",MATH_MATRIX_INH_THUC,math_shared
+"làm thế nào để tạo định thức; vmatrix là nội dung mẫu, rows là nội dung mẫu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.",MATH_MATRIX_INH_THUC,math_shared
+"hãy cho ví dụ về định thức; vmatrix là giá trị mẫu, rows là giá trị mẫu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.",MATH_MATRIX_INH_THUC,math_shared
+"cú pháp dùng để định thức; vmatrix là phần cần điền, rows là phần cần điền. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.",MATH_MATRIX_INH_THUC,math_shared
+"muốn biểu diễn định thức; vmatrix là nội dung mẫu, rows là nội dung mẫu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.",MATH_MATRIX_INH_THUC,math_shared
+"mình cần cách viết chuẩn ma trận; Vmatrix là phần cần điền, rows là phần cần điền. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.",MATH_MATRIX_CHUAN_MA_TRAN,math_shared
+"làm thế nào để tạo chuẩn ma trận; Vmatrix là nội dung mẫu, rows là nội dung mẫu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.",MATH_MATRIX_CHUAN_MA_TRAN,math_shared
+"hãy cho ví dụ về chuẩn ma trận; Vmatrix là giá trị mẫu, rows là giá trị mẫu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.",MATH_MATRIX_CHUAN_MA_TRAN,math_shared
+"cú pháp dùng để chuẩn ma trận; Vmatrix là phần cần điền, rows là phần cần điền. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.",MATH_MATRIX_CHUAN_MA_TRAN,math_shared
+"muốn biểu diễn chuẩn ma trận; Vmatrix là nội dung mẫu, rows là nội dung mẫu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.",MATH_MATRIX_CHUAN_MA_TRAN,math_shared
+"mình cần cách viết hàm từng đoạn; cases là phần cần điền, expr1 là phần cần điền, condition1 là phần cần điền, expr2 là phần cần điền, condition2 là phần cần điền. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.",MATH_CASES_SYSTEMS_HAM_TUNG_OAN,math_shared
+"làm thế nào để tạo hàm từng đoạn; cases là nội dung mẫu, expr1 là nội dung mẫu, condition1 là nội dung mẫu, expr2 là nội dung mẫu, condition2 là nội dung mẫu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.",MATH_CASES_SYSTEMS_HAM_TUNG_OAN,math_shared
+"hãy cho ví dụ về hàm từng đoạn; cases là giá trị mẫu, expr1 là giá trị mẫu, condition1 là giá trị mẫu, expr2 là giá trị mẫu, condition2 là giá trị mẫu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.",MATH_CASES_SYSTEMS_HAM_TUNG_OAN,math_shared
+"cú pháp dùng để hàm từng đoạn; cases là phần cần điền, expr1 là phần cần điền, condition1 là phần cần điền, expr2 là phần cần điền, condition2 là phần cần điền. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.",MATH_CASES_SYSTEMS_HAM_TUNG_OAN,math_shared
+"muốn biểu diễn hàm từng đoạn; cases là nội dung mẫu, expr1 là nội dung mẫu, condition1 là nội dung mẫu, expr2 là nội dung mẫu, condition2 là nội dung mẫu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.",MATH_CASES_SYSTEMS_HAM_TUNG_OAN,math_shared
+"mình cần cách viết hệ phương trình; aligned là phần cần điền, eq1 là phần cần điền, rhs1 là phần cần điền, eq2 là phần cần điền, rhs2 là phần cần điền. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.",MATH_CASES_SYSTEMS_HE_PHUONG_TRINH,math_shared
+"làm thế nào để tạo hệ phương trình; aligned là nội dung mẫu, eq1 là nội dung mẫu, rhs1 là nội dung mẫu, eq2 là nội dung mẫu, rhs2 là nội dung mẫu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.",MATH_CASES_SYSTEMS_HE_PHUONG_TRINH,math_shared
+"hãy cho ví dụ về hệ phương trình; aligned là giá trị mẫu, eq1 là giá trị mẫu, rhs1 là giá trị mẫu, eq2 là giá trị mẫu, rhs2 là giá trị mẫu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.",MATH_CASES_SYSTEMS_HE_PHUONG_TRINH,math_shared
+"cú pháp dùng để hệ phương trình; aligned là phần cần điền, eq1 là phần cần điền, rhs1 là phần cần điền, eq2 là phần cần điền, rhs2 là phần cần điền. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.",MATH_CASES_SYSTEMS_HE_PHUONG_TRINH,math_shared
+"muốn biểu diễn hệ phương trình; aligned là nội dung mẫu, eq1 là nội dung mẫu, rhs1 là nội dung mẫu, eq2 là nội dung mẫu, rhs2 là nội dung mẫu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.",MATH_CASES_SYSTEMS_HE_PHUONG_TRINH,math_shared
+"mình cần cách viết căn chỉnh phương trình; aligned là phần cần điền, left1 là phần cần điền, right1 là phần cần điền, left2 là phần cần điền, right2 là phần cần điền. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.",MATH_ALIGN_ARRAY_CAN_CHINH_PHUONG_TRINH,math_shared
+"làm thế nào để tạo căn chỉnh phương trình; aligned là nội dung mẫu, left1 là nội dung mẫu, right1 là nội dung mẫu, left2 là nội dung mẫu, right2 là nội dung mẫu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.",MATH_ALIGN_ARRAY_CAN_CHINH_PHUONG_TRINH,math_shared
+"hãy cho ví dụ về căn chỉnh phương trình; aligned là giá trị mẫu, left1 là giá trị mẫu, right1 là giá trị mẫu, left2 là giá trị mẫu, right2 là giá trị mẫu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.",MATH_ALIGN_ARRAY_CAN_CHINH_PHUONG_TRINH,math_shared
+"cú pháp dùng để căn chỉnh phương trình; aligned là phần cần điền, left1 là phần cần điền, right1 là phần cần điền, left2 là phần cần điền, right2 là phần cần điền. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.",MATH_ALIGN_ARRAY_CAN_CHINH_PHUONG_TRINH,math_shared
+"muốn biểu diễn căn chỉnh phương trình; aligned là nội dung mẫu, left1 là nội dung mẫu, right1 là nội dung mẫu, left2 là nội dung mẫu, right2 là nội dung mẫu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.",MATH_ALIGN_ARRAY_CAN_CHINH_PHUONG_TRINH,math_shared
+"mình cần cách viết bảng toán học; array là phần cần điền, cc là phần cần điền, a là phần cần điền, b là phần cần điền, c là phần cần điền, d là phần cần điền. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.",MATH_ALIGN_ARRAY_BANG_TOAN_HOC,math_shared
+"làm thế nào để tạo bảng toán học; array là nội dung mẫu, cc là nội dung mẫu, a là nội dung mẫu, b là nội dung mẫu, c là nội dung mẫu, d là nội dung mẫu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.",MATH_ALIGN_ARRAY_BANG_TOAN_HOC,math_shared
+"hãy cho ví dụ về bảng toán học; array là giá trị mẫu, cc là giá trị mẫu, a là giá trị mẫu, b là giá trị mẫu, c là giá trị mẫu, d là giá trị mẫu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.",MATH_ALIGN_ARRAY_BANG_TOAN_HOC,math_shared
+"cú pháp dùng để bảng toán học; array là phần cần điền, cc là phần cần điền, a là phần cần điền, b là phần cần điền, c là phần cần điền, d là phần cần điền. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.",MATH_ALIGN_ARRAY_BANG_TOAN_HOC,math_shared
+"muốn biểu diễn bảng toán học; array là nội dung mẫu, cc là nội dung mẫu, a là nội dung mẫu, b là nội dung mẫu, c là nội dung mẫu, d là nội dung mẫu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.",MATH_ALIGN_ARRAY_BANG_TOAN_HOC,math_shared
+"mình cần cách viết bảng toán học căn trái; array là phần cần điền, l là phần cần điền, items là phần cần điền. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.",MATH_ALIGN_ARRAY_BANG_TOAN_HOC_CAN_TRAI,math_shared
+"làm thế nào để tạo bảng toán học căn trái; array là nội dung mẫu, l là nội dung mẫu, items là nội dung mẫu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.",MATH_ALIGN_ARRAY_BANG_TOAN_HOC_CAN_TRAI,math_shared
+"hãy cho ví dụ về bảng toán học căn trái; array là giá trị mẫu, l là giá trị mẫu, items là giá trị mẫu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.",MATH_ALIGN_ARRAY_BANG_TOAN_HOC_CAN_TRAI,math_shared
+"cú pháp dùng để bảng toán học căn trái; array là phần cần điền, l là phần cần điền, items là phần cần điền. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.",MATH_ALIGN_ARRAY_BANG_TOAN_HOC_CAN_TRAI,math_shared
+"muốn biểu diễn bảng toán học căn trái; array là nội dung mẫu, l là nội dung mẫu, items là nội dung mẫu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.",MATH_ALIGN_ARRAY_BANG_TOAN_HOC_CAN_TRAI,math_shared
+"mình cần cách viết bảng toán học căn giữa; array là phần cần điền, c là phần cần điền, items là phần cần điền. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.",MATH_ALIGN_ARRAY_BANG_TOAN_HOC_CAN_GIUA,math_shared
+"làm thế nào để tạo bảng toán học căn giữa; array là nội dung mẫu, c là nội dung mẫu, items là nội dung mẫu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.",MATH_ALIGN_ARRAY_BANG_TOAN_HOC_CAN_GIUA,math_shared
+"hãy cho ví dụ về bảng toán học căn giữa; array là giá trị mẫu, c là giá trị mẫu, items là giá trị mẫu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.",MATH_ALIGN_ARRAY_BANG_TOAN_HOC_CAN_GIUA,math_shared
+"cú pháp dùng để bảng toán học căn giữa; array là phần cần điền, c là phần cần điền, items là phần cần điền. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.",MATH_ALIGN_ARRAY_BANG_TOAN_HOC_CAN_GIUA,math_shared
+"muốn biểu diễn bảng toán học căn giữa; array là nội dung mẫu, c là nội dung mẫu, items là nội dung mẫu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.",MATH_ALIGN_ARRAY_BANG_TOAN_HOC_CAN_GIUA,math_shared
+mình cần cách viết alpha. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_ALPHA,math_shared
+làm thế nào để tạo alpha. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_ALPHA,math_shared
+hãy cho ví dụ về alpha. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_ALPHA,math_shared
+cú pháp dùng để alpha. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_ALPHA,math_shared
+muốn biểu diễn alpha. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_ALPHA,math_shared
+mình cần cách viết beta. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_BETA,math_shared
+làm thế nào để tạo beta. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_BETA,math_shared
+hãy cho ví dụ về beta. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_BETA,math_shared
+cú pháp dùng để beta. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_BETA,math_shared
+muốn biểu diễn beta. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_BETA,math_shared
+mình cần cách viết gamma. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_GAMMA,math_shared
+làm thế nào để tạo gamma. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_GAMMA,math_shared
+hãy cho ví dụ về gamma. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_GAMMA,math_shared
+cú pháp dùng để gamma. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_GAMMA,math_shared
+muốn biểu diễn gamma. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_GAMMA,math_shared
+mình cần cách viết delta. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_DELTA,math_shared
+làm thế nào để tạo delta. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_DELTA,math_shared
+hãy cho ví dụ về delta. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_DELTA,math_shared
+cú pháp dùng để delta. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_DELTA,math_shared
+muốn biểu diễn delta. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_DELTA,math_shared
+mình cần cách viết theta. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_THETA,math_shared
+làm thế nào để tạo theta. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_THETA,math_shared
+hãy cho ví dụ về theta. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_THETA,math_shared
+cú pháp dùng để theta. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_THETA,math_shared
+muốn biểu diễn theta. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_THETA,math_shared
+mình cần cách viết lambda. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_LAMBDA,math_shared
+làm thế nào để tạo lambda. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_LAMBDA,math_shared
+hãy cho ví dụ về lambda. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_LAMBDA,math_shared
+cú pháp dùng để lambda. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_LAMBDA,math_shared
+muốn biểu diễn lambda. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_LAMBDA,math_shared
+mình cần cách viết pi. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_PI,math_shared
+làm thế nào để tạo pi. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_PI,math_shared
+hãy cho ví dụ về pi. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_PI,math_shared
+cú pháp dùng để pi. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_PI,math_shared
+muốn biểu diễn pi. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_PI,math_shared
+mình cần cách viết sigma. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_SIGMA,math_shared
+làm thế nào để tạo sigma. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_SIGMA,math_shared
+hãy cho ví dụ về sigma. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_SIGMA,math_shared
+cú pháp dùng để sigma. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_SIGMA,math_shared
+muốn biểu diễn sigma. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_SIGMA,math_shared
+mình cần cách viết omega. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_OMEGA,math_shared
+làm thế nào để tạo omega. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_OMEGA,math_shared
+hãy cho ví dụ về omega. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_OMEGA,math_shared
+cú pháp dùng để omega. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_OMEGA,math_shared
+muốn biểu diễn omega. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_OMEGA,math_shared
+mình cần cách viết vô cùng. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_VO_CUNG,math_shared
+làm thế nào để tạo vô cùng. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_VO_CUNG,math_shared
+hãy cho ví dụ về vô cùng. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_VO_CUNG,math_shared
+cú pháp dùng để vô cùng. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_VO_CUNG,math_shared
+muốn biểu diễn vô cùng. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_VO_CUNG,math_shared
+mình cần cách viết nabla. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_NABLA,math_shared
+làm thế nào để tạo nabla. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_NABLA,math_shared
+hãy cho ví dụ về nabla. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_NABLA,math_shared
+cú pháp dùng để nabla. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_NABLA,math_shared
+muốn biểu diễn nabla. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_NABLA,math_shared
+mình cần cách viết phần riêng. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_PHAN_RIENG,math_shared
+làm thế nào để tạo phần riêng. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_PHAN_RIENG,math_shared
+hãy cho ví dụ về phần riêng. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_PHAN_RIENG,math_shared
+cú pháp dùng để phần riêng. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_PHAN_RIENG,math_shared
+muốn biểu diễn phần riêng. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_PHAN_RIENG,math_shared
+mình cần cách viết số thực; R là phần cần điền. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_SO_THUC,math_shared
+làm thế nào để tạo số thực; R là nội dung mẫu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_SO_THUC,math_shared
+hãy cho ví dụ về số thực; R là giá trị mẫu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_SO_THUC,math_shared
+cú pháp dùng để số thực; R là phần cần điền. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_SO_THUC,math_shared
+muốn biểu diễn số thực; R là nội dung mẫu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_SO_THUC,math_shared
+mình cần cách viết số tự nhiên; N là phần cần điền. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_SO_TU_NHIEN,math_shared
+làm thế nào để tạo số tự nhiên; N là nội dung mẫu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_SO_TU_NHIEN,math_shared
+hãy cho ví dụ về số tự nhiên; N là giá trị mẫu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_SO_TU_NHIEN,math_shared
+cú pháp dùng để số tự nhiên; N là phần cần điền. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_SO_TU_NHIEN,math_shared
+muốn biểu diễn số tự nhiên; N là nội dung mẫu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_SO_TU_NHIEN,math_shared
+mình cần cách viết số nguyên; Z là phần cần điền. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_SO_NGUYEN,math_shared
+làm thế nào để tạo số nguyên; Z là nội dung mẫu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_SO_NGUYEN,math_shared
+hãy cho ví dụ về số nguyên; Z là giá trị mẫu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_SO_NGUYEN,math_shared
+cú pháp dùng để số nguyên; Z là phần cần điền. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_SO_NGUYEN,math_shared
+muốn biểu diễn số nguyên; Z là nội dung mẫu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_SO_NGUYEN,math_shared
+mình cần cách viết thuộc. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_THUOC,math_shared
+làm thế nào để tạo thuộc. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_THUOC,math_shared
+hãy cho ví dụ về thuộc. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_THUOC,math_shared
+cú pháp dùng để thuộc. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_THUOC,math_shared
+muốn biểu diễn thuộc. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_THUOC,math_shared
+mình cần cách viết không thuộc. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_KHONG_THUOC,math_shared
+làm thế nào để tạo không thuộc. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_KHONG_THUOC,math_shared
+hãy cho ví dụ về không thuộc. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_KHONG_THUOC,math_shared
+cú pháp dùng để không thuộc. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_KHONG_THUOC,math_shared
+muốn biểu diễn không thuộc. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_KHONG_THUOC,math_shared
+mình cần cách viết tập rỗng. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_TAP_RONG,math_shared
+làm thế nào để tạo tập rỗng. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_TAP_RONG,math_shared
+hãy cho ví dụ về tập rỗng. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_TAP_RONG,math_shared
+cú pháp dùng để tập rỗng. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_TAP_RONG,math_shared
+muốn biểu diễn tập rỗng. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_TAP_RONG,math_shared
+mình cần cách viết hợp. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_HOP,math_shared
+làm thế nào để tạo hợp. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_HOP,math_shared
+hãy cho ví dụ về hợp. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_HOP,math_shared
+cú pháp dùng để hợp. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_HOP,math_shared
+muốn biểu diễn hợp. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_HOP,math_shared
+mình cần cách viết giao. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_GIAO,math_shared
+làm thế nào để tạo giao. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_GIAO,math_shared
+hãy cho ví dụ về giao. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_GIAO,math_shared
+cú pháp dùng để giao. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_GIAO,math_shared
+muốn biểu diễn giao. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_GIAO,math_shared
+mình cần cách viết tập con. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_TAP_CON,math_shared
+làm thế nào để tạo tập con. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_TAP_CON,math_shared
+hãy cho ví dụ về tập con. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_TAP_CON,math_shared
+cú pháp dùng để tập con. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_TAP_CON,math_shared
+muốn biểu diễn tập con. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_TAP_CON,math_shared
+mình cần cách viết khác. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_KHAC,math_shared
+làm thế nào để tạo khác. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_KHAC,math_shared
+hãy cho ví dụ về khác. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_KHAC,math_shared
+cú pháp dùng để khác. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_KHAC,math_shared
+muốn biểu diễn khác. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_KHAC,math_shared
+mình cần cách viết nhỏ hơn hoặc bằng. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_NHO_HON_HOAC_BANG,math_shared
+làm thế nào để tạo nhỏ hơn hoặc bằng. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_NHO_HON_HOAC_BANG,math_shared
+hãy cho ví dụ về nhỏ hơn hoặc bằng. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_NHO_HON_HOAC_BANG,math_shared
+cú pháp dùng để nhỏ hơn hoặc bằng. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_NHO_HON_HOAC_BANG,math_shared
+muốn biểu diễn nhỏ hơn hoặc bằng. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_NHO_HON_HOAC_BANG,math_shared
+mình cần cách viết lớn hơn hoặc bằng. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_LON_HON_HOAC_BANG,math_shared
+làm thế nào để tạo lớn hơn hoặc bằng. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_LON_HON_HOAC_BANG,math_shared
+hãy cho ví dụ về lớn hơn hoặc bằng. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_LON_HON_HOAC_BANG,math_shared
+cú pháp dùng để lớn hơn hoặc bằng. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_LON_HON_HOAC_BANG,math_shared
+muốn biểu diễn lớn hơn hoặc bằng. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_LON_HON_HOAC_BANG,math_shared
+mình cần cách viết xấp xỉ. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_XAP_XI,math_shared
+làm thế nào để tạo xấp xỉ. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_XAP_XI,math_shared
+hãy cho ví dụ về xấp xỉ. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_XAP_XI,math_shared
+cú pháp dùng để xấp xỉ. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_XAP_XI,math_shared
+muốn biểu diễn xấp xỉ. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_XAP_XI,math_shared
+mình cần cách viết tương đương. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_TUONG_UONG,math_shared
+làm thế nào để tạo tương đương. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_TUONG_UONG,math_shared
+hãy cho ví dụ về tương đương. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_TUONG_UONG,math_shared
+cú pháp dùng để tương đương. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_TUONG_UONG,math_shared
+muốn biểu diễn tương đương. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_TUONG_UONG,math_shared
+mình cần cách viết nhân. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_NHAN,math_shared
+làm thế nào để tạo nhân. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_NHAN,math_shared
+hãy cho ví dụ về nhân. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_NHAN,math_shared
+cú pháp dùng để nhân. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_NHAN,math_shared
+muốn biểu diễn nhân. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_NHAN,math_shared
+mình cần cách viết chia. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_CHIA,math_shared
+làm thế nào để tạo chia. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_CHIA,math_shared
+hãy cho ví dụ về chia. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_CHIA,math_shared
+cú pháp dùng để chia. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_CHIA,math_shared
+muốn biểu diễn chia. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_CHIA,math_shared
+mình cần cách viết cộng trừ. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_CONG_TRU,math_shared
+làm thế nào để tạo cộng trừ. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_CONG_TRU,math_shared
+hãy cho ví dụ về cộng trừ. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_CONG_TRU,math_shared
+cú pháp dùng để cộng trừ. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_CONG_TRU,math_shared
+muốn biểu diễn cộng trừ. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_CONG_TRU,math_shared
+mình cần cách viết kéo theo. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_KEO_THEO,math_shared
+làm thế nào để tạo kéo theo. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_KEO_THEO,math_shared
+hãy cho ví dụ về kéo theo. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_KEO_THEO,math_shared
+cú pháp dùng để kéo theo. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_KEO_THEO,math_shared
+muốn biểu diễn kéo theo. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_KEO_THEO,math_shared
+mình cần cách viết khi và chỉ khi. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_KHI_VA_CHI_KHI,math_shared
+làm thế nào để tạo khi và chỉ khi. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_KHI_VA_CHI_KHI,math_shared
+hãy cho ví dụ về khi và chỉ khi. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_KHI_VA_CHI_KHI,math_shared
+cú pháp dùng để khi và chỉ khi. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_KHI_VA_CHI_KHI,math_shared
+muốn biểu diễn khi và chỉ khi. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_KHI_VA_CHI_KHI,math_shared
+mình cần cách viết với mọi. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_VOI_MOI,math_shared
+làm thế nào để tạo với mọi. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_VOI_MOI,math_shared
+hãy cho ví dụ về với mọi. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_VOI_MOI,math_shared
+cú pháp dùng để với mọi. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_VOI_MOI,math_shared
+muốn biểu diễn với mọi. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_VOI_MOI,math_shared
+mình cần cách viết tồn tại. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_TON_TAI,math_shared
+làm thế nào để tạo tồn tại. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_TON_TAI,math_shared
+hãy cho ví dụ về tồn tại. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_TON_TAI,math_shared
+cú pháp dùng để tồn tại. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_TON_TAI,math_shared
+muốn biểu diễn tồn tại. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_TON_TAI,math_shared
+mình cần cách viết mũi tên phải. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_MUI_TEN_PHAI,math_shared
+làm thế nào để tạo mũi tên phải. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_MUI_TEN_PHAI,math_shared
+hãy cho ví dụ về mũi tên phải. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_MUI_TEN_PHAI,math_shared
+cú pháp dùng để mũi tên phải. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_MUI_TEN_PHAI,math_shared
+muốn biểu diễn mũi tên phải. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SYMBOLS_MUI_TEN_PHAI,math_shared
+mình cần cách viết và logic. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SETS_LOGIC_VA_LOGIC,math_shared
+làm thế nào để tạo và logic. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SETS_LOGIC_VA_LOGIC,math_shared
+hãy cho ví dụ về và logic. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SETS_LOGIC_VA_LOGIC,math_shared
+cú pháp dùng để và logic. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SETS_LOGIC_VA_LOGIC,math_shared
+muốn biểu diễn và logic. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SETS_LOGIC_VA_LOGIC,math_shared
+mình cần cách viết hoặc logic. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SETS_LOGIC_HOAC_LOGIC,math_shared
+làm thế nào để tạo hoặc logic. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SETS_LOGIC_HOAC_LOGIC,math_shared
+hãy cho ví dụ về hoặc logic. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SETS_LOGIC_HOAC_LOGIC,math_shared
+cú pháp dùng để hoặc logic. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SETS_LOGIC_HOAC_LOGIC,math_shared
+muốn biểu diễn hoặc logic. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SETS_LOGIC_HOAC_LOGIC,math_shared
+mình cần cách viết phủ định. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SETS_LOGIC_PHU_INH,math_shared
+làm thế nào để tạo phủ định. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SETS_LOGIC_PHU_INH,math_shared
+hãy cho ví dụ về phủ định. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SETS_LOGIC_PHU_INH,math_shared
+cú pháp dùng để phủ định. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SETS_LOGIC_PHU_INH,math_shared
+muốn biểu diễn phủ định. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SETS_LOGIC_PHU_INH,math_shared
+mình cần cách viết chứng minh được. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SETS_LOGIC_CHUNG_MINH_UOC,math_shared
+làm thế nào để tạo chứng minh được. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SETS_LOGIC_CHUNG_MINH_UOC,math_shared
+hãy cho ví dụ về chứng minh được. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SETS_LOGIC_CHUNG_MINH_UOC,math_shared
+cú pháp dùng để chứng minh được. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SETS_LOGIC_CHUNG_MINH_UOC,math_shared
+muốn biểu diễn chứng minh được. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SETS_LOGIC_CHUNG_MINH_UOC,math_shared
+mình cần cách viết thỏa mãn. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SETS_LOGIC_THOA_MAN,math_shared
+làm thế nào để tạo thỏa mãn. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SETS_LOGIC_THOA_MAN,math_shared
+hãy cho ví dụ về thỏa mãn. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SETS_LOGIC_THOA_MAN,math_shared
+cú pháp dùng để thỏa mãn. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SETS_LOGIC_THOA_MAN,math_shared
+muốn biểu diễn thỏa mãn. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SETS_LOGIC_THOA_MAN,math_shared
+mình cần cách viết vector; x là phần cần điền. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_ACCENTS_DECORATIONS_VECTOR,math_shared
+làm thế nào để tạo vector; x là nội dung mẫu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_ACCENTS_DECORATIONS_VECTOR,math_shared
+hãy cho ví dụ về vector; x là giá trị mẫu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_ACCENTS_DECORATIONS_VECTOR,math_shared
+cú pháp dùng để vector; x là phần cần điền. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_ACCENTS_DECORATIONS_VECTOR,math_shared
+muốn biểu diễn vector; x là nội dung mẫu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_ACCENTS_DECORATIONS_VECTOR,math_shared
+mình cần cách viết vector dài; AB là phần cần điền. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_ACCENTS_DECORATIONS_VECTOR_DAI,math_shared
+làm thế nào để tạo vector dài; AB là nội dung mẫu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_ACCENTS_DECORATIONS_VECTOR_DAI,math_shared
+hãy cho ví dụ về vector dài; AB là giá trị mẫu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_ACCENTS_DECORATIONS_VECTOR_DAI,math_shared
+cú pháp dùng để vector dài; AB là phần cần điền. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_ACCENTS_DECORATIONS_VECTOR_DAI,math_shared
+muốn biểu diễn vector dài; AB là nội dung mẫu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_ACCENTS_DECORATIONS_VECTOR_DAI,math_shared
+mình cần cách viết gạch trên; x là phần cần điền. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_ACCENTS_DECORATIONS_GACH_TREN,math_shared
+làm thế nào để tạo gạch trên; x là nội dung mẫu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_ACCENTS_DECORATIONS_GACH_TREN,math_shared
+hãy cho ví dụ về gạch trên; x là giá trị mẫu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_ACCENTS_DECORATIONS_GACH_TREN,math_shared
+cú pháp dùng để gạch trên; x là phần cần điền. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_ACCENTS_DECORATIONS_GACH_TREN,math_shared
+muốn biểu diễn gạch trên; x là nội dung mẫu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_ACCENTS_DECORATIONS_GACH_TREN,math_shared
+mình cần cách viết gạch dưới; x là phần cần điền. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_ACCENTS_DECORATIONS_GACH_DUOI,math_shared
+làm thế nào để tạo gạch dưới; x là nội dung mẫu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_ACCENTS_DECORATIONS_GACH_DUOI,math_shared
+hãy cho ví dụ về gạch dưới; x là giá trị mẫu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_ACCENTS_DECORATIONS_GACH_DUOI,math_shared
+cú pháp dùng để gạch dưới; x là phần cần điền. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_ACCENTS_DECORATIONS_GACH_DUOI,math_shared
+muốn biểu diễn gạch dưới; x là nội dung mẫu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_ACCENTS_DECORATIONS_GACH_DUOI,math_shared
+mình cần cách viết dấu ngã; x là phần cần điền. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_ACCENTS_DECORATIONS_DAU_NGA,math_shared
+làm thế nào để tạo dấu ngã; x là nội dung mẫu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_ACCENTS_DECORATIONS_DAU_NGA,math_shared
+hãy cho ví dụ về dấu ngã; x là giá trị mẫu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_ACCENTS_DECORATIONS_DAU_NGA,math_shared
+cú pháp dùng để dấu ngã; x là phần cần điền. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_ACCENTS_DECORATIONS_DAU_NGA,math_shared
+muốn biểu diễn dấu ngã; x là nội dung mẫu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_ACCENTS_DECORATIONS_DAU_NGA,math_shared
+mình cần cách viết dấu mũ; x là phần cần điền. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_ACCENTS_DECORATIONS_DAU_MU,math_shared
+làm thế nào để tạo dấu mũ; x là nội dung mẫu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_ACCENTS_DECORATIONS_DAU_MU,math_shared
+hãy cho ví dụ về dấu mũ; x là giá trị mẫu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_ACCENTS_DECORATIONS_DAU_MU,math_shared
+cú pháp dùng để dấu mũ; x là phần cần điền. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_ACCENTS_DECORATIONS_DAU_MU,math_shared
+muốn biểu diễn dấu mũ; x là nội dung mẫu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_ACCENTS_DECORATIONS_DAU_MU,math_shared
+mình cần cách viết đạo hàm chấm; x là phần cần điền. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_ACCENTS_DECORATIONS_AO_HAM_CHAM,math_shared
+làm thế nào để tạo đạo hàm chấm; x là nội dung mẫu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_ACCENTS_DECORATIONS_AO_HAM_CHAM,math_shared
+hãy cho ví dụ về đạo hàm chấm; x là giá trị mẫu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_ACCENTS_DECORATIONS_AO_HAM_CHAM,math_shared
+cú pháp dùng để đạo hàm chấm; x là phần cần điền. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_ACCENTS_DECORATIONS_AO_HAM_CHAM,math_shared
+muốn biểu diễn đạo hàm chấm; x là nội dung mẫu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_ACCENTS_DECORATIONS_AO_HAM_CHAM,math_shared
+mình cần cách viết đóng khung; expr là x+1. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_ACCENTS_DECORATIONS_ONG_KHUNG,math_shared
+làm thế nào để tạo đóng khung; expr là x+1. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_ACCENTS_DECORATIONS_ONG_KHUNG,math_shared
+hãy cho ví dụ về đóng khung; expr là x+1. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_ACCENTS_DECORATIONS_ONG_KHUNG,math_shared
+cú pháp dùng để đóng khung; expr là x+1. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_ACCENTS_DECORATIONS_ONG_KHUNG,math_shared
+muốn biểu diễn đóng khung; expr là x+1. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_ACCENTS_DECORATIONS_ONG_KHUNG,math_shared
+"mình cần cách viết overbrace; expr là x+1, label là Tài liệu tham khảo. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.",MATH_ACCENTS_DECORATIONS_OVERBRACE,math_shared
+"làm thế nào để tạo overbrace; expr là x+1, label là Tài liệu tham khảo. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.",MATH_ACCENTS_DECORATIONS_OVERBRACE,math_shared
+"hãy cho ví dụ về overbrace; expr là x+1, label là Tài liệu tham khảo. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.",MATH_ACCENTS_DECORATIONS_OVERBRACE,math_shared
+"cú pháp dùng để overbrace; expr là x+1, label là Tài liệu tham khảo. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.",MATH_ACCENTS_DECORATIONS_OVERBRACE,math_shared
+"muốn biểu diễn overbrace; expr là x+1, label là Tài liệu tham khảo. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.",MATH_ACCENTS_DECORATIONS_OVERBRACE,math_shared
+"mình cần cách viết underbrace; expr là x+1, label là Tài liệu tham khảo. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.",MATH_ACCENTS_DECORATIONS_UNDERBRACE,math_shared
+"làm thế nào để tạo underbrace; expr là x+1, label là Tài liệu tham khảo. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.",MATH_ACCENTS_DECORATIONS_UNDERBRACE,math_shared
+"hãy cho ví dụ về underbrace; expr là x+1, label là Tài liệu tham khảo. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.",MATH_ACCENTS_DECORATIONS_UNDERBRACE,math_shared
+"cú pháp dùng để underbrace; expr là x+1, label là Tài liệu tham khảo. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.",MATH_ACCENTS_DECORATIONS_UNDERBRACE,math_shared
+"muốn biểu diễn underbrace; expr là x+1, label là Tài liệu tham khảo. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.",MATH_ACCENTS_DECORATIONS_UNDERBRACE,math_shared
+"mình cần cách viết chữ phía trên; label là Tài liệu tham khảo, expr là x+1. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.",MATH_ACCENTS_DECORATIONS_CHU_PHIA_TREN,math_shared
+"làm thế nào để tạo chữ phía trên; label là Tài liệu tham khảo, expr là x+1. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.",MATH_ACCENTS_DECORATIONS_CHU_PHIA_TREN,math_shared
+"hãy cho ví dụ về chữ phía trên; label là Tài liệu tham khảo, expr là x+1. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.",MATH_ACCENTS_DECORATIONS_CHU_PHIA_TREN,math_shared
+"cú pháp dùng để chữ phía trên; label là Tài liệu tham khảo, expr là x+1. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.",MATH_ACCENTS_DECORATIONS_CHU_PHIA_TREN,math_shared
+"muốn biểu diễn chữ phía trên; label là Tài liệu tham khảo, expr là x+1. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.",MATH_ACCENTS_DECORATIONS_CHU_PHIA_TREN,math_shared
+mình cần cách viết ngoặc tự co; expr là x+1. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_BRACKETS_SPACING_TEXT_NGOAC_TU_CO,math_shared
+làm thế nào để tạo ngoặc tự co; expr là x+1. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_BRACKETS_SPACING_TEXT_NGOAC_TU_CO,math_shared
+hãy cho ví dụ về ngoặc tự co; expr là x+1. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_BRACKETS_SPACING_TEXT_NGOAC_TU_CO,math_shared
+cú pháp dùng để ngoặc tự co; expr là x+1. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_BRACKETS_SPACING_TEXT_NGOAC_TU_CO,math_shared
+muốn biểu diễn ngoặc tự co; expr là x+1. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_BRACKETS_SPACING_TEXT_NGOAC_TU_CO,math_shared
+mình cần cách viết ngoặc vuông tự co; expr là x+1. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_BRACKETS_SPACING_TEXT_NGOAC_VUONG_TU_CO,math_shared
+làm thế nào để tạo ngoặc vuông tự co; expr là x+1. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_BRACKETS_SPACING_TEXT_NGOAC_VUONG_TU_CO,math_shared
+hãy cho ví dụ về ngoặc vuông tự co; expr là x+1. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_BRACKETS_SPACING_TEXT_NGOAC_VUONG_TU_CO,math_shared
+cú pháp dùng để ngoặc vuông tự co; expr là x+1. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_BRACKETS_SPACING_TEXT_NGOAC_VUONG_TU_CO,math_shared
+muốn biểu diễn ngoặc vuông tự co; expr là x+1. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_BRACKETS_SPACING_TEXT_NGOAC_VUONG_TU_CO,math_shared
+mình cần cách viết ngoặc nhọn tự co; expr là x+1. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_BRACKETS_SPACING_TEXT_NGOAC_NHON_TU_CO,math_shared
+làm thế nào để tạo ngoặc nhọn tự co; expr là x+1. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_BRACKETS_SPACING_TEXT_NGOAC_NHON_TU_CO,math_shared
+hãy cho ví dụ về ngoặc nhọn tự co; expr là x+1. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_BRACKETS_SPACING_TEXT_NGOAC_NHON_TU_CO,math_shared
+cú pháp dùng để ngoặc nhọn tự co; expr là x+1. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_BRACKETS_SPACING_TEXT_NGOAC_NHON_TU_CO,math_shared
+muốn biểu diễn ngoặc nhọn tự co; expr là x+1. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_BRACKETS_SPACING_TEXT_NGOAC_NHON_TU_CO,math_shared
+mình cần cách viết trị tuyệt đối; expr là x+1. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_BRACKETS_SPACING_TEXT_TRI_TUYET_OI,math_shared
+làm thế nào để tạo trị tuyệt đối; expr là x+1. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_BRACKETS_SPACING_TEXT_TRI_TUYET_OI,math_shared
+hãy cho ví dụ về trị tuyệt đối; expr là x+1. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_BRACKETS_SPACING_TEXT_TRI_TUYET_OI,math_shared
+cú pháp dùng để trị tuyệt đối; expr là x+1. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_BRACKETS_SPACING_TEXT_TRI_TUYET_OI,math_shared
+muốn biểu diễn trị tuyệt đối; expr là x+1. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_BRACKETS_SPACING_TEXT_TRI_TUYET_OI,math_shared
+mình cần cách viết chuẩn vector; expr là x+1. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_BRACKETS_SPACING_TEXT_CHUAN_VECTOR,math_shared
+làm thế nào để tạo chuẩn vector; expr là x+1. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_BRACKETS_SPACING_TEXT_CHUAN_VECTOR,math_shared
+hãy cho ví dụ về chuẩn vector; expr là x+1. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_BRACKETS_SPACING_TEXT_CHUAN_VECTOR,math_shared
+cú pháp dùng để chuẩn vector; expr là x+1. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_BRACKETS_SPACING_TEXT_CHUAN_VECTOR,math_shared
+muốn biểu diễn chuẩn vector; expr là x+1. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_BRACKETS_SPACING_TEXT_CHUAN_VECTOR,math_shared
+mình cần cách viết khoảng cách nhỏ. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_BRACKETS_SPACING_TEXT_KHOANG_CACH_NHO,math_shared
+làm thế nào để tạo khoảng cách nhỏ. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_BRACKETS_SPACING_TEXT_KHOANG_CACH_NHO,math_shared
+hãy cho ví dụ về khoảng cách nhỏ. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_BRACKETS_SPACING_TEXT_KHOANG_CACH_NHO,math_shared
+cú pháp dùng để khoảng cách nhỏ. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_BRACKETS_SPACING_TEXT_KHOANG_CACH_NHO,math_shared
+muốn biểu diễn khoảng cách nhỏ. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_BRACKETS_SPACING_TEXT_KHOANG_CACH_NHO,math_shared
+mình cần cách viết khoảng cách vừa. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_BRACKETS_SPACING_TEXT_KHOANG_CACH_VUA,math_shared
+làm thế nào để tạo khoảng cách vừa. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_BRACKETS_SPACING_TEXT_KHOANG_CACH_VUA,math_shared
+hãy cho ví dụ về khoảng cách vừa. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_BRACKETS_SPACING_TEXT_KHOANG_CACH_VUA,math_shared
+cú pháp dùng để khoảng cách vừa. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_BRACKETS_SPACING_TEXT_KHOANG_CACH_VUA,math_shared
+muốn biểu diễn khoảng cách vừa. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_BRACKETS_SPACING_TEXT_KHOANG_CACH_VUA,math_shared
+mình cần cách viết khoảng cách lớn. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_BRACKETS_SPACING_TEXT_KHOANG_CACH_LON,math_shared
+làm thế nào để tạo khoảng cách lớn. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_BRACKETS_SPACING_TEXT_KHOANG_CACH_LON,math_shared
+hãy cho ví dụ về khoảng cách lớn. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_BRACKETS_SPACING_TEXT_KHOANG_CACH_LON,math_shared
+cú pháp dùng để khoảng cách lớn. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_BRACKETS_SPACING_TEXT_KHOANG_CACH_LON,math_shared
+muốn biểu diễn khoảng cách lớn. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_BRACKETS_SPACING_TEXT_KHOANG_CACH_LON,math_shared
+mình cần cách viết khoảng cách rất lớn. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_BRACKETS_SPACING_TEXT_KHOANG_CACH_RAT_LON,math_shared
+làm thế nào để tạo khoảng cách rất lớn. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_BRACKETS_SPACING_TEXT_KHOANG_CACH_RAT_LON,math_shared
+hãy cho ví dụ về khoảng cách rất lớn. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_BRACKETS_SPACING_TEXT_KHOANG_CACH_RAT_LON,math_shared
+cú pháp dùng để khoảng cách rất lớn. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_BRACKETS_SPACING_TEXT_KHOANG_CACH_RAT_LON,math_shared
+muốn biểu diễn khoảng cách rất lớn. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_BRACKETS_SPACING_TEXT_KHOANG_CACH_RAT_LON,math_shared
+mình cần cách viết khoảng cách âm. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_BRACKETS_SPACING_TEXT_KHOANG_CACH_AM,math_shared
+làm thế nào để tạo khoảng cách âm. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_BRACKETS_SPACING_TEXT_KHOANG_CACH_AM,math_shared
+hãy cho ví dụ về khoảng cách âm. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_BRACKETS_SPACING_TEXT_KHOANG_CACH_AM,math_shared
+cú pháp dùng để khoảng cách âm. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_BRACKETS_SPACING_TEXT_KHOANG_CACH_AM,math_shared
+muốn biểu diễn khoảng cách âm. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_BRACKETS_SPACING_TEXT_KHOANG_CACH_AM,math_shared
+mình cần cách viết chữ blackboard; R là phần cần điền. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_FONT_CHU_BLACKBOARD,math_shared
+làm thế nào để tạo chữ blackboard; R là nội dung mẫu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_FONT_CHU_BLACKBOARD,math_shared
+hãy cho ví dụ về chữ blackboard; R là giá trị mẫu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_FONT_CHU_BLACKBOARD,math_shared
+cú pháp dùng để chữ blackboard; R là phần cần điền. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_FONT_CHU_BLACKBOARD,math_shared
+muốn biểu diễn chữ blackboard; R là nội dung mẫu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_FONT_CHU_BLACKBOARD,math_shared
+mình cần cách viết chữ đậm toán; ABC là phần cần điền. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_FONT_CHU_AM_TOAN,math_shared
+làm thế nào để tạo chữ đậm toán; ABC là nội dung mẫu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_FONT_CHU_AM_TOAN,math_shared
+hãy cho ví dụ về chữ đậm toán; ABC là giá trị mẫu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_FONT_CHU_AM_TOAN,math_shared
+cú pháp dùng để chữ đậm toán; ABC là phần cần điền. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_FONT_CHU_AM_TOAN,math_shared
+muốn biểu diễn chữ đậm toán; ABC là nội dung mẫu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_FONT_CHU_AM_TOAN,math_shared
+mình cần cách viết vector đậm. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_FONT_VECTOR_AM,math_shared
+làm thế nào để tạo vector đậm. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_FONT_VECTOR_AM,math_shared
+hãy cho ví dụ về vector đậm. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_FONT_VECTOR_AM,math_shared
+cú pháp dùng để vector đậm. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_FONT_VECTOR_AM,math_shared
+muốn biểu diễn vector đậm. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_FONT_VECTOR_AM,math_shared
+mình cần cách viết chữ La Mã; ABC là phần cần điền. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_FONT_CHU_LA_MA,math_shared
+làm thế nào để tạo chữ La Mã; ABC là nội dung mẫu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_FONT_CHU_LA_MA,math_shared
+hãy cho ví dụ về chữ La Mã; ABC là giá trị mẫu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_FONT_CHU_LA_MA,math_shared
+cú pháp dùng để chữ La Mã; ABC là phần cần điền. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_FONT_CHU_LA_MA,math_shared
+muốn biểu diễn chữ La Mã; ABC là nội dung mẫu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_FONT_CHU_LA_MA,math_shared
+mình cần cách viết chữ typewriter; ABC là phần cần điền. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_FONT_CHU_TYPEWRITER,math_shared
+làm thế nào để tạo chữ typewriter; ABC là nội dung mẫu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_FONT_CHU_TYPEWRITER,math_shared
+hãy cho ví dụ về chữ typewriter; ABC là giá trị mẫu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_FONT_CHU_TYPEWRITER,math_shared
+cú pháp dùng để chữ typewriter; ABC là phần cần điền. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_FONT_CHU_TYPEWRITER,math_shared
+muốn biểu diễn chữ typewriter; ABC là nội dung mẫu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_FONT_CHU_TYPEWRITER,math_shared
+mình cần cách viết chữ sans serif; ABC là phần cần điền. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_FONT_CHU_SANS_SERIF,math_shared
+làm thế nào để tạo chữ sans serif; ABC là nội dung mẫu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_FONT_CHU_SANS_SERIF,math_shared
+hãy cho ví dụ về chữ sans serif; ABC là giá trị mẫu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_FONT_CHU_SANS_SERIF,math_shared
+cú pháp dùng để chữ sans serif; ABC là phần cần điền. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_FONT_CHU_SANS_SERIF,math_shared
+muốn biểu diễn chữ sans serif; ABC là nội dung mẫu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_FONT_CHU_SANS_SERIF,math_shared
+mình cần cách viết chữ calligraphic; ABC là phần cần điền. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_FONT_CHU_CALLIGRAPHIC,math_shared
+làm thế nào để tạo chữ calligraphic; ABC là nội dung mẫu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_FONT_CHU_CALLIGRAPHIC,math_shared
+hãy cho ví dụ về chữ calligraphic; ABC là giá trị mẫu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_FONT_CHU_CALLIGRAPHIC,math_shared
+cú pháp dùng để chữ calligraphic; ABC là phần cần điền. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_FONT_CHU_CALLIGRAPHIC,math_shared
+muốn biểu diễn chữ calligraphic; ABC là nội dung mẫu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_FONT_CHU_CALLIGRAPHIC,math_shared
+mình cần cách viết chữ script; ABC là phần cần điền. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_FONT_CHU_SCRIPT,math_shared
+làm thế nào để tạo chữ script; ABC là nội dung mẫu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_FONT_CHU_SCRIPT,math_shared
+hãy cho ví dụ về chữ script; ABC là giá trị mẫu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_FONT_CHU_SCRIPT,math_shared
+cú pháp dùng để chữ script; ABC là phần cần điền. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_FONT_CHU_SCRIPT,math_shared
+muốn biểu diễn chữ script; ABC là nội dung mẫu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_FONT_CHU_SCRIPT,math_shared
+mình cần cách viết độ. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SPACING_DEGREE_UNITS_O,math_shared
+làm thế nào để tạo độ. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SPACING_DEGREE_UNITS_O,math_shared
+hãy cho ví dụ về độ. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SPACING_DEGREE_UNITS_O,math_shared
+cú pháp dùng để độ. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SPACING_DEGREE_UNITS_O,math_shared
+muốn biểu diễn độ. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SPACING_DEGREE_UNITS_O,math_shared
+mình cần cách viết mét; m là phần cần điền. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SPACING_DEGREE_UNITS_MET,math_shared
+làm thế nào để tạo mét; m là nội dung mẫu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SPACING_DEGREE_UNITS_MET,math_shared
+hãy cho ví dụ về mét; m là giá trị mẫu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SPACING_DEGREE_UNITS_MET,math_shared
+cú pháp dùng để mét; m là phần cần điền. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SPACING_DEGREE_UNITS_MET,math_shared
+muốn biểu diễn mét; m là nội dung mẫu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SPACING_DEGREE_UNITS_MET,math_shared
+mình cần cách viết mét vuông; m là phần cần điền. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SPACING_DEGREE_UNITS_MET_VUONG,math_shared
+làm thế nào để tạo mét vuông; m là nội dung mẫu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SPACING_DEGREE_UNITS_MET_VUONG,math_shared
+hãy cho ví dụ về mét vuông; m là giá trị mẫu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SPACING_DEGREE_UNITS_MET_VUONG,math_shared
+cú pháp dùng để mét vuông; m là phần cần điền. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SPACING_DEGREE_UNITS_MET_VUONG,math_shared
+muốn biểu diễn mét vuông; m là nội dung mẫu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SPACING_DEGREE_UNITS_MET_VUONG,math_shared
+"mình cần cách viết mét trên giây; m là phần cần điền, s là phần cần điền. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.",MATH_SPACING_DEGREE_UNITS_MET_TREN_GIAY,math_shared
+"làm thế nào để tạo mét trên giây; m là nội dung mẫu, s là nội dung mẫu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.",MATH_SPACING_DEGREE_UNITS_MET_TREN_GIAY,math_shared
+"hãy cho ví dụ về mét trên giây; m là giá trị mẫu, s là giá trị mẫu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.",MATH_SPACING_DEGREE_UNITS_MET_TREN_GIAY,math_shared
+"cú pháp dùng để mét trên giây; m là phần cần điền, s là phần cần điền. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.",MATH_SPACING_DEGREE_UNITS_MET_TREN_GIAY,math_shared
+"muốn biểu diễn mét trên giây; m là nội dung mẫu, s là nội dung mẫu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.",MATH_SPACING_DEGREE_UNITS_MET_TREN_GIAY,math_shared
+"mình cần cách viết mét trên giây bình phương; m là phần cần điền, s là phần cần điền. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.",MATH_SPACING_DEGREE_UNITS_MET_TREN_GIAY_BINH_PHUONG,math_shared
+"làm thế nào để tạo mét trên giây bình phương; m là nội dung mẫu, s là nội dung mẫu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.",MATH_SPACING_DEGREE_UNITS_MET_TREN_GIAY_BINH_PHUONG,math_shared
+"hãy cho ví dụ về mét trên giây bình phương; m là giá trị mẫu, s là giá trị mẫu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.",MATH_SPACING_DEGREE_UNITS_MET_TREN_GIAY_BINH_PHUONG,math_shared
+"cú pháp dùng để mét trên giây bình phương; m là phần cần điền, s là phần cần điền. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.",MATH_SPACING_DEGREE_UNITS_MET_TREN_GIAY_BINH_PHUONG,math_shared
+"muốn biểu diễn mét trên giây bình phương; m là nội dung mẫu, s là nội dung mẫu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.",MATH_SPACING_DEGREE_UNITS_MET_TREN_GIAY_BINH_PHUONG,math_shared
+mình cần cách viết mol; mol là phần cần điền. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SPACING_DEGREE_UNITS_MOL,math_shared
+làm thế nào để tạo mol; mol là nội dung mẫu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SPACING_DEGREE_UNITS_MOL,math_shared
+hãy cho ví dụ về mol; mol là giá trị mẫu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SPACING_DEGREE_UNITS_MOL,math_shared
+cú pháp dùng để mol; mol là phần cần điền. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SPACING_DEGREE_UNITS_MOL,math_shared
+muốn biểu diễn mol; mol là nội dung mẫu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_SPACING_DEGREE_UNITS_MOL,math_shared
+"mình cần cách viết đơn vị nhân; kg là phần cần điền, m là phần cần điền. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.",MATH_SPACING_DEGREE_UNITS_ON_VI_NHAN,math_shared
+"làm thế nào để tạo đơn vị nhân; kg là nội dung mẫu, m là nội dung mẫu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.",MATH_SPACING_DEGREE_UNITS_ON_VI_NHAN,math_shared
+"hãy cho ví dụ về đơn vị nhân; kg là giá trị mẫu, m là giá trị mẫu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.",MATH_SPACING_DEGREE_UNITS_ON_VI_NHAN,math_shared
+"cú pháp dùng để đơn vị nhân; kg là phần cần điền, m là phần cần điền. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.",MATH_SPACING_DEGREE_UNITS_ON_VI_NHAN,math_shared
+"muốn biểu diễn đơn vị nhân; kg là nội dung mẫu, m là nội dung mẫu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.",MATH_SPACING_DEGREE_UNITS_ON_VI_NHAN,math_shared
+"mình cần cách viết màu đỏ; red là phần cần điền, expr là x+1. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.",MATH_COLOR_HIGHLIGHT_MAU_O,math_shared
+"làm thế nào để tạo màu đỏ; red là nội dung mẫu, expr là x+1. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.",MATH_COLOR_HIGHLIGHT_MAU_O,math_shared
+"hãy cho ví dụ về màu đỏ; red là giá trị mẫu, expr là x+1. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.",MATH_COLOR_HIGHLIGHT_MAU_O,math_shared
+"cú pháp dùng để màu đỏ; red là phần cần điền, expr là x+1. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.",MATH_COLOR_HIGHLIGHT_MAU_O,math_shared
+"muốn biểu diễn màu đỏ; red là nội dung mẫu, expr là x+1. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.",MATH_COLOR_HIGHLIGHT_MAU_O,math_shared
+"mình cần cách viết màu xanh; blue là phần cần điền, expr là x+1. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.",MATH_COLOR_HIGHLIGHT_MAU_XANH,math_shared
+"làm thế nào để tạo màu xanh; blue là nội dung mẫu, expr là x+1. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.",MATH_COLOR_HIGHLIGHT_MAU_XANH,math_shared
+"hãy cho ví dụ về màu xanh; blue là giá trị mẫu, expr là x+1. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.",MATH_COLOR_HIGHLIGHT_MAU_XANH,math_shared
+"cú pháp dùng để màu xanh; blue là phần cần điền, expr là x+1. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.",MATH_COLOR_HIGHLIGHT_MAU_XANH,math_shared
+"muốn biểu diễn màu xanh; blue là nội dung mẫu, expr là x+1. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.",MATH_COLOR_HIGHLIGHT_MAU_XANH,math_shared
+"mình cần cách viết phương trình có số; equation là phần cần điền, formula là \sum_{i=1}^{n} i. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.",MATH_NUMBERING_REFERENCES_PHUONG_TRINH_CO_SO,math_shared
+"làm thế nào để tạo phương trình có số; equation là nội dung mẫu, formula là x^2 + y^2 = z^2. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.",MATH_NUMBERING_REFERENCES_PHUONG_TRINH_CO_SO,math_shared
+"hãy cho ví dụ về phương trình có số; equation là giá trị mẫu, formula là \frac{a}{b}. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.",MATH_NUMBERING_REFERENCES_PHUONG_TRINH_CO_SO,math_shared
+"cú pháp dùng để phương trình có số; equation là phần cần điền, formula là \sum_{i=1}^{n} i. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.",MATH_NUMBERING_REFERENCES_PHUONG_TRINH_CO_SO,math_shared
+"muốn biểu diễn phương trình có số; equation là nội dung mẫu, formula là x^2 + y^2 = z^2. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.",MATH_NUMBERING_REFERENCES_PHUONG_TRINH_CO_SO,math_shared
+mình cần cách viết gắn nhãn phương trình; label là Tài liệu tham khảo. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_NUMBERING_REFERENCES_GAN_NHAN_PHUONG_TRINH,math_shared
+làm thế nào để tạo gắn nhãn phương trình; label là Tài liệu tham khảo. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_NUMBERING_REFERENCES_GAN_NHAN_PHUONG_TRINH,math_shared
+hãy cho ví dụ về gắn nhãn phương trình; label là Tài liệu tham khảo. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_NUMBERING_REFERENCES_GAN_NHAN_PHUONG_TRINH,math_shared
+cú pháp dùng để gắn nhãn phương trình; label là Tài liệu tham khảo. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_NUMBERING_REFERENCES_GAN_NHAN_PHUONG_TRINH,math_shared
+muốn biểu diễn gắn nhãn phương trình; label là Tài liệu tham khảo. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Biểu thức cần hiển thị bằng MathJax.,MATH_NUMBERING_REFERENCES_GAN_NHAN_PHUONG_TRINH,math_shared
+mình cần cách viết ghi chú; text là ghi chú quan trọng. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.,OBSIDIAN_CALLOUTS_GHI_CHU,obsidian
+làm thế nào để tạo ghi chú; text là tiêu đề tài liệu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.,OBSIDIAN_CALLOUTS_GHI_CHU,obsidian
+hãy cho ví dụ về ghi chú; text là một đoạn văn bản. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.,OBSIDIAN_CALLOUTS_GHI_CHU,obsidian
+cú pháp dùng để ghi chú; text là nội dung mẫu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.,OBSIDIAN_CALLOUTS_GHI_CHU,obsidian
+muốn biểu diễn ghi chú; text là ghi chú quan trọng. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.,OBSIDIAN_CALLOUTS_GHI_CHU,obsidian
+mình cần cách viết thông tin; text là ghi chú quan trọng. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.,OBSIDIAN_CALLOUTS_THONG_TIN,obsidian
+làm thế nào để tạo thông tin; text là tiêu đề tài liệu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.,OBSIDIAN_CALLOUTS_THONG_TIN,obsidian
+hãy cho ví dụ về thông tin; text là một đoạn văn bản. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.,OBSIDIAN_CALLOUTS_THONG_TIN,obsidian
+cú pháp dùng để thông tin; text là nội dung mẫu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.,OBSIDIAN_CALLOUTS_THONG_TIN,obsidian
+muốn biểu diễn thông tin; text là ghi chú quan trọng. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.,OBSIDIAN_CALLOUTS_THONG_TIN,obsidian
+mình cần cách viết mẹo; text là ghi chú quan trọng. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.,OBSIDIAN_CALLOUTS_MEO,obsidian
+làm thế nào để tạo mẹo; text là tiêu đề tài liệu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.,OBSIDIAN_CALLOUTS_MEO,obsidian
+hãy cho ví dụ về mẹo; text là một đoạn văn bản. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.,OBSIDIAN_CALLOUTS_MEO,obsidian
+cú pháp dùng để mẹo; text là nội dung mẫu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.,OBSIDIAN_CALLOUTS_MEO,obsidian
+muốn biểu diễn mẹo; text là ghi chú quan trọng. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.,OBSIDIAN_CALLOUTS_MEO,obsidian
+mình cần cách viết cảnh báo; text là ghi chú quan trọng. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.,OBSIDIAN_CALLOUTS_CANH_BAO,obsidian
+làm thế nào để tạo cảnh báo; text là tiêu đề tài liệu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.,OBSIDIAN_CALLOUTS_CANH_BAO,obsidian
+hãy cho ví dụ về cảnh báo; text là một đoạn văn bản. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.,OBSIDIAN_CALLOUTS_CANH_BAO,obsidian
+cú pháp dùng để cảnh báo; text là nội dung mẫu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.,OBSIDIAN_CALLOUTS_CANH_BAO,obsidian
+muốn biểu diễn cảnh báo; text là ghi chú quan trọng. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.,OBSIDIAN_CALLOUTS_CANH_BAO,obsidian
+mình cần cách viết câu hỏi; text là ghi chú quan trọng. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.,OBSIDIAN_CALLOUTS_CAU_HOI,obsidian
+làm thế nào để tạo câu hỏi; text là tiêu đề tài liệu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.,OBSIDIAN_CALLOUTS_CAU_HOI,obsidian
+hãy cho ví dụ về câu hỏi; text là một đoạn văn bản. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.,OBSIDIAN_CALLOUTS_CAU_HOI,obsidian
+cú pháp dùng để câu hỏi; text là nội dung mẫu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.,OBSIDIAN_CALLOUTS_CAU_HOI,obsidian
+muốn biểu diễn câu hỏi; text là ghi chú quan trọng. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.,OBSIDIAN_CALLOUTS_CAU_HOI,obsidian
+mình cần cách viết thành công; text là ghi chú quan trọng. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.,OBSIDIAN_CALLOUTS_THANH_CONG,obsidian
+làm thế nào để tạo thành công; text là tiêu đề tài liệu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.,OBSIDIAN_CALLOUTS_THANH_CONG,obsidian
+hãy cho ví dụ về thành công; text là một đoạn văn bản. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.,OBSIDIAN_CALLOUTS_THANH_CONG,obsidian
+cú pháp dùng để thành công; text là nội dung mẫu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.,OBSIDIAN_CALLOUTS_THANH_CONG,obsidian
+muốn biểu diễn thành công; text là ghi chú quan trọng. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.,OBSIDIAN_CALLOUTS_THANH_CONG,obsidian
+mình cần cách viết lỗi; text là ghi chú quan trọng. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.,OBSIDIAN_CALLOUTS_LOI,obsidian
+làm thế nào để tạo lỗi; text là tiêu đề tài liệu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.,OBSIDIAN_CALLOUTS_LOI,obsidian
+hãy cho ví dụ về lỗi; text là một đoạn văn bản. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.,OBSIDIAN_CALLOUTS_LOI,obsidian
+cú pháp dùng để lỗi; text là nội dung mẫu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.,OBSIDIAN_CALLOUTS_LOI,obsidian
+muốn biểu diễn lỗi; text là ghi chú quan trọng. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.,OBSIDIAN_CALLOUTS_LOI,obsidian
+mình cần cách viết nguy hiểm; text là ghi chú quan trọng. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.,OBSIDIAN_CALLOUTS_NGUY_HIEM,obsidian
+làm thế nào để tạo nguy hiểm; text là tiêu đề tài liệu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.,OBSIDIAN_CALLOUTS_NGUY_HIEM,obsidian
+hãy cho ví dụ về nguy hiểm; text là một đoạn văn bản. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.,OBSIDIAN_CALLOUTS_NGUY_HIEM,obsidian
+cú pháp dùng để nguy hiểm; text là nội dung mẫu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.,OBSIDIAN_CALLOUTS_NGUY_HIEM,obsidian
+muốn biểu diễn nguy hiểm; text là ghi chú quan trọng. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.,OBSIDIAN_CALLOUTS_NGUY_HIEM,obsidian
+mình cần cách viết bug; text là ghi chú quan trọng. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.,OBSIDIAN_CALLOUTS_BUG,obsidian
+làm thế nào để tạo bug; text là tiêu đề tài liệu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.,OBSIDIAN_CALLOUTS_BUG,obsidian
+hãy cho ví dụ về bug; text là một đoạn văn bản. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.,OBSIDIAN_CALLOUTS_BUG,obsidian
+cú pháp dùng để bug; text là nội dung mẫu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.,OBSIDIAN_CALLOUTS_BUG,obsidian
+muốn biểu diễn bug; text là ghi chú quan trọng. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.,OBSIDIAN_CALLOUTS_BUG,obsidian
+"mình cần cách viết callout thu gọn; title là Lưu ý quan trọng, text là ghi chú quan trọng. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.",OBSIDIAN_CALLOUTS_CALLOUT_THU_GON,obsidian
+"làm thế nào để tạo callout thu gọn; title là Lưu ý quan trọng, text là tiêu đề tài liệu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.",OBSIDIAN_CALLOUTS_CALLOUT_THU_GON,obsidian
+"hãy cho ví dụ về callout thu gọn; title là Lưu ý quan trọng, text là một đoạn văn bản. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.",OBSIDIAN_CALLOUTS_CALLOUT_THU_GON,obsidian
+"cú pháp dùng để callout thu gọn; title là Lưu ý quan trọng, text là nội dung mẫu. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.",OBSIDIAN_CALLOUTS_CALLOUT_THU_GON,obsidian
+"muốn biểu diễn callout thu gọn; title là Lưu ý quan trọng, text là ghi chú quan trọng. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.",OBSIDIAN_CALLOUTS_CALLOUT_THU_GON,obsidian
+mình cần cách viết tag; tag là hoc_tap. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.,OBSIDIAN_TAGS_TAG,obsidian
+làm thế nào để tạo tag; tag là hoc_tap. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.,OBSIDIAN_TAGS_TAG,obsidian
+hãy cho ví dụ về tag; tag là hoc_tap. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.,OBSIDIAN_TAGS_TAG,obsidian
+cú pháp dùng để tag; tag là hoc_tap. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.,OBSIDIAN_TAGS_TAG,obsidian
+muốn biểu diễn tag; tag là hoc_tap. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.,OBSIDIAN_TAGS_TAG,obsidian
+"mình cần cách viết chú thích cuối trang; text là ghi chú quan trọng, id là note, note là Ghi chú. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.",OBSIDIAN_FOOTNOTES_CHU_THICH_CUOI_TRANG,obsidian
+"làm thế nào để tạo chú thích cuối trang; text là tiêu đề tài liệu, id là note, note là Ghi chú. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.",OBSIDIAN_FOOTNOTES_CHU_THICH_CUOI_TRANG,obsidian
+"hãy cho ví dụ về chú thích cuối trang; text là một đoạn văn bản, id là note, note là Ghi chú. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.",OBSIDIAN_FOOTNOTES_CHU_THICH_CUOI_TRANG,obsidian
+"cú pháp dùng để chú thích cuối trang; text là nội dung mẫu, id là note, note là Ghi chú. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.",OBSIDIAN_FOOTNOTES_CHU_THICH_CUOI_TRANG,obsidian
+"muốn biểu diễn chú thích cuối trang; text là ghi chú quan trọng, id là note, note là Ghi chú. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.",OBSIDIAN_FOOTNOTES_CHU_THICH_CUOI_TRANG,obsidian
+mình cần cách viết escape dấu sao. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.,OBSIDIAN_ESCAPE_ESCAPE_DAU_SAO,obsidian
+làm thế nào để tạo escape dấu sao. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.,OBSIDIAN_ESCAPE_ESCAPE_DAU_SAO,obsidian
+hãy cho ví dụ về escape dấu sao. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.,OBSIDIAN_ESCAPE_ESCAPE_DAU_SAO,obsidian
+cú pháp dùng để escape dấu sao. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.,OBSIDIAN_ESCAPE_ESCAPE_DAU_SAO,obsidian
+muốn biểu diễn escape dấu sao. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.,OBSIDIAN_ESCAPE_ESCAPE_DAU_SAO,obsidian
+mình cần cách viết escape gạch dưới. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.,OBSIDIAN_ESCAPE_ESCAPE_GACH_DUOI,obsidian
+làm thế nào để tạo escape gạch dưới. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.,OBSIDIAN_ESCAPE_ESCAPE_GACH_DUOI,obsidian
+hãy cho ví dụ về escape gạch dưới. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.,OBSIDIAN_ESCAPE_ESCAPE_GACH_DUOI,obsidian
+cú pháp dùng để escape gạch dưới. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.,OBSIDIAN_ESCAPE_ESCAPE_GACH_DUOI,obsidian
+muốn biểu diễn escape gạch dưới. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.,OBSIDIAN_ESCAPE_ESCAPE_GACH_DUOI,obsidian
+mình cần cách viết escape hashtag. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.,OBSIDIAN_ESCAPE_ESCAPE_HASHTAG,obsidian
+làm thế nào để tạo escape hashtag. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.,OBSIDIAN_ESCAPE_ESCAPE_HASHTAG,obsidian
+hãy cho ví dụ về escape hashtag. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.,OBSIDIAN_ESCAPE_ESCAPE_HASHTAG,obsidian
+cú pháp dùng để escape hashtag. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.,OBSIDIAN_ESCAPE_ESCAPE_HASHTAG,obsidian
+muốn biểu diễn escape hashtag. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.,OBSIDIAN_ESCAPE_ESCAPE_HASHTAG,obsidian
+mình cần cách viết escape backtick. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.,OBSIDIAN_ESCAPE_ESCAPE_BACKTICK,obsidian
+làm thế nào để tạo escape backtick. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.,OBSIDIAN_ESCAPE_ESCAPE_BACKTICK,obsidian
+hãy cho ví dụ về escape backtick. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.,OBSIDIAN_ESCAPE_ESCAPE_BACKTICK,obsidian
+cú pháp dùng để escape backtick. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.,OBSIDIAN_ESCAPE_ESCAPE_BACKTICK,obsidian
+muốn biểu diễn escape backtick. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.,OBSIDIAN_ESCAPE_ESCAPE_BACKTICK,obsidian
+mình cần cách viết escape pipe. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.,OBSIDIAN_ESCAPE_ESCAPE_PIPE,obsidian
+làm thế nào để tạo escape pipe. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.,OBSIDIAN_ESCAPE_ESCAPE_PIPE,obsidian
+hãy cho ví dụ về escape pipe. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.,OBSIDIAN_ESCAPE_ESCAPE_PIPE,obsidian
+cú pháp dùng để escape pipe. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.,OBSIDIAN_ESCAPE_ESCAPE_PIPE,obsidian
+muốn biểu diễn escape pipe. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.,OBSIDIAN_ESCAPE_ESCAPE_PIPE,obsidian
+mình cần cách viết escape tilde. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.,OBSIDIAN_ESCAPE_ESCAPE_TILDE,obsidian
+làm thế nào để tạo escape tilde. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.,OBSIDIAN_ESCAPE_ESCAPE_TILDE,obsidian
+hãy cho ví dụ về escape tilde. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.,OBSIDIAN_ESCAPE_ESCAPE_TILDE,obsidian
+cú pháp dùng để escape tilde. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.,OBSIDIAN_ESCAPE_ESCAPE_TILDE,obsidian
+muốn biểu diễn escape tilde. Cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn. Kết quả dùng trong ghi chú Obsidian.,OBSIDIAN_ESCAPE_ESCAPE_TILDE,obsidian
+cho tôi biết có những phương tiện giao thông đường bộ nào giữa sân bay cát bi và trung tâm thành phố hải phòng,OUT_OF_SCOPE,tex_misc
+"chắc chắn rồi , tôi muốn xác định xem máy bay nào sẽ khởi hành vào ngày 7 tháng 7 tại hải phòng và đến thành phố hồ chí minh vào ngày 7 tháng 7",OUT_OF_SCOPE,tex_misc
+cho tôi biết các loại phương tiện giao thông đường bộ ở cam ranh,OUT_OF_SCOPE,tex_misc
+cho tôi các chuyến bay khởi hành vào thứ bảy hoặc chủ nhật từ thanh hóa đến đồng hới,OUT_OF_SCOPE,tex_misc
+có bao nhiêu chuyến bay của bamboo airways khởi hành từ hà nội,OUT_OF_SCOPE,tex_misc
+quy nhơn đến phú quốc,OUT_OF_SCOPE,tex_misc
+tôi muốn thuê một chiếc xe hơi ở cần thơ,OUT_OF_SCOPE,tex_misc
+hiển thị giá vé hạng thương gia trên máy bay của vietnam airlines từ hải phòng đến toronto,OUT_OF_SCOPE,tex_misc
+vui lòng liệt kê tất cả các chuyến bay từ cà mau đến hà nội vào thứ tư và thứ năm,OUT_OF_SCOPE,tex_misc
+chỉ cho tôi các chuyến bay từ rạch giá đến hải phòng,OUT_OF_SCOPE,tex_misc
+cho tôi xem tất cả các chuyến bay từ cần thơ đến hà nội vào ngày mai có phục vụ bữa ăn,OUT_OF_SCOPE,tex_misc
+doha đến hà nội vào thứ hai,OUT_OF_SCOPE,tex_misc
+cho tôi xem giá vé của các chuyến bay từ hà nội đến đà lạt,OUT_OF_SCOPE,tex_misc
+tôi muốn đi từ cà mau đến huế vào thứ ba,OUT_OF_SCOPE,tex_misc
+"vào thứ năm , tôi muốn một chuyến bay từ buôn ma thuột đến hà nội",OUT_OF_SCOPE,tex_misc
+"Chào bạn, ngày mới tràn đầy năng lượng nhé.",OUT_OF_SCOPE,tex_misc
+Nhiệt độ hiện tại ở Thành phố Hồ Chí Minh là bao nhiêu?,OUT_OF_SCOPE,tex_misc
+Tìm giúp tôi quán cà phê yên tĩnh để đọc sách.,OUT_OF_SCOPE,tex_misc
+Tỷ giá đồng đô la Mỹ hôm nay so với tiền Việt ra sao?,OUT_OF_SCOPE,tex_misc
+Bật bình nóng lạnh trong phòng tắm lên giúp tôi.,OUT_OF_SCOPE,tex_misc
+Bao nhiêu ngày nữa là đến kỳ nghỉ Tết Nguyên Đán?,OUT_OF_SCOPE,tex_misc
+Tác giả của cuốn tiểu thuyết Tắt đèn là ai?,OUT_OF_SCOPE,tex_misc
+Giá vé xem phim tại rạp CGV cuối tuần này bao nhiêu?,OUT_OF_SCOPE,tex_misc
+Đoạn đường cao tốc Pháp Vân Cầu Giẽ dài bao nhiêu km?,OUT_OF_SCOPE,tex_misc
+Mấy giờ chuyến tàu hỏa Thống Nhất Bắc Nam khởi hành?,OUT_OF_SCOPE,tex_misc
+Gợi ý thực đơn ăn kiêng lành mạnh cho cả tuần.,OUT_OF_SCOPE,tex_misc
+Bật bài hát nhạc không lời để tập trung làm việc.,OUT_OF_SCOPE,tex_misc

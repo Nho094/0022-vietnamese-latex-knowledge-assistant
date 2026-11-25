@@ -1,0 +1,489 @@
+﻿text,label,category
+chèn công thức toán trong dòng,MATHJAX_CONG_THUC_INLINE,math_expression
+viết biểu thức ngay trong câu,MATHJAX_CONG_THUC_INLINE,math_expression
+tạo math inline,MATHJAX_CONG_THUC_INLINE,math_expression
+hiển thị công thức riêng dòng,MATHJAX_CONG_THUC_LON,math_expression
+tạo display math,MATHJAX_CONG_THUC_LON,math_expression
+đưa công thức ra giữa,MATHJAX_CONG_THUC_LON,math_expression
+tạo phân số với tử và mẫu,MATHJAX_PHAN_SO,math_expression
+viết a chia b dạng phân số,MATHJAX_PHAN_SO,math_expression
+chèn frac,MATHJAX_PHAN_SO,math_expression
+tạo căn bậc hai của x,MATHJAX_CAN,math_expression
+viết sqrt x,MATHJAX_CAN,math_expression
+chèn dấu căn,MATHJAX_CAN,math_expression
+tạo căn bậc n của x,MATHJAX_CAN_BAC_N,math_expression
+căn có chỉ số n,MATHJAX_CAN_BAC_N,math_expression
+viết căn bậc bất kỳ,MATHJAX_CAN_BAC_N,math_expression
+đặt x mũ hai,MATHJAX_MU,math_expression
+tạo số mũ cho biến,MATHJAX_MU,math_expression
+viết lũy thừa,MATHJAX_MU,math_expression
+đặt chỉ số dưới cho x,MATHJAX_CHI_SO,math_expression
+viết x sub i,MATHJAX_CHI_SO,math_expression
+thêm subscript,MATHJAX_CHI_SO,math_expression
+x có chỉ số i và mũ hai,MATHJAX_MU_VA_CHI_SO,math_expression
+kết hợp chỉ số dưới với mũ,MATHJAX_MU_VA_CHI_SO,math_expression
+tạo superscript và subscript,MATHJAX_MU_VA_CHI_SO,math_expression
+tổng từ i bằng một đến n,MATHJAX_TONG,math_expression
+chèn ký hiệu sigma,MATHJAX_TONG,math_expression
+viết phép tổng,MATHJAX_TONG,math_expression
+tích từ i bằng một đến n,MATHJAX_TICH,math_expression
+chèn ký hiệu product,MATHJAX_TICH,math_expression
+viết tích liên tiếp,MATHJAX_TICH,math_expression
+tích phân từ a đến b,MATHJAX_TICH_PHAN,math_expression
+chèn integral,MATHJAX_TICH_PHAN,math_expression
+viết tích phân dx,MATHJAX_TICH_PHAN,math_expression
+giới hạn khi x tiến tới không,MATHJAX_GIOI_HAN,math_expression
+chèn lim,MATHJAX_GIOI_HAN,math_expression
+viết limit,MATHJAX_GIOI_HAN,math_expression
+ký hiệu f phẩy x,MATHJAX_AO_HAM,math_expression
+đạo hàm cấp một,MATHJAX_AO_HAM,math_expression
+chèn đạo hàm,MATHJAX_AO_HAM,math_expression
+ký hiệu f hai phẩy x,MATHJAX_AO_HAM_CAP_2,math_expression
+đạo hàm bậc hai,MATHJAX_AO_HAM_CAP_2,math_expression
+chèn đạo hàm cấp hai,MATHJAX_AO_HAM_CAP_2,math_expression
+tạo ma trận thường,MATHJAX_MA_TRAN,math_matrix
+matrix không ngoặc,MATHJAX_MA_TRAN,math_matrix
+ma trận không có dấu bao,MATHJAX_MA_TRAN,math_matrix
+tạo pmatrix,MATHJAX_MA_TRAN_NGOAC_TRON,math_matrix
+ma trận trong ngoặc tròn,MATHJAX_MA_TRAN_NGOAC_TRON,math_matrix
+ma trận ngoặc đơn,MATHJAX_MA_TRAN_NGOAC_TRON,math_matrix
+tạo bmatrix,MATHJAX_MA_TRAN_NGOAC_VUONG,math_matrix
+ma trận vuông có ngoặc vuông,MATHJAX_MA_TRAN_NGOAC_VUONG,math_matrix
+matrix bracket,MATHJAX_MA_TRAN_NGOAC_VUONG,math_matrix
+tạo Bmatrix,MATHJAX_MA_TRAN_NGOAC_NHON,math_matrix
+ma trận ngoặc nhọn,MATHJAX_MA_TRAN_NGOAC_NHON,math_matrix
+matrix curly brackets,MATHJAX_MA_TRAN_NGOAC_NHON,math_matrix
+tạo determinant,MATHJAX_INH_THUC,math_matrix
+ma trận định thức,MATHJAX_INH_THUC,math_matrix
+ma trận có hai vạch đứng,MATHJAX_INH_THUC,math_matrix
+tạo norm ma trận,MATHJAX_CHUAN_MA_TRAN,math_matrix
+ma trận có hai cặp vạch,MATHJAX_CHUAN_MA_TRAN,math_matrix
+ký hiệu chuẩn,MATHJAX_CHUAN_MA_TRAN,math_matrix
+ma trận có dấu ba chấm,MATHJAX_MA_TRAN_CO_DAU_CHAM,math_matrix
+thêm cdots vdots ddots,MATHJAX_MA_TRAN_CO_DAU_CHAM,math_matrix
+ma trận ellipsis,MATHJAX_MA_TRAN_CO_DAU_CHAM,math_matrix
+smallmatrix trong dòng,MATHJAX_MA_TRAN_NHO_INLINE,math_matrix
+ma trận nhỏ inline,MATHJAX_MA_TRAN_NHO_INLINE,math_matrix
+matrix nhỏ trong công thức,MATHJAX_MA_TRAN_NHO_INLINE,math_matrix
+tạo hệ hai phương trình,MATHJAX_HE_PHUONG_TRINH,math_cases_systems
+hệ tuyến tính có ngoặc nhọn,MATHJAX_HE_PHUONG_TRINH,math_cases_systems
+viết hệ phương trình nhiều dòng,MATHJAX_HE_PHUONG_TRINH,math_cases_systems
+tạo hàm từng trường hợp,MATHJAX_HAM_TUNG_OAN,math_cases_systems
+hàm số chia theo điều kiện,MATHJAX_HAM_TUNG_OAN,math_cases_systems
+piecewise function,MATHJAX_HAM_TUNG_OAN,math_cases_systems
+căn thẳng dấu bằng,MATHJAX_CAN_CHINH_PHUONG_TRINH,math_alignment_array
+aligned nhiều phương trình,MATHJAX_CAN_CHINH_PHUONG_TRINH,math_alignment_array
+căn chỉnh các dòng toán,MATHJAX_CAN_CHINH_PHUONG_TRINH,math_alignment_array
+tạo array hai cột,MATHJAX_BANG_TOAN_HOC,math_alignment_array
+mảng toán học,MATHJAX_BANG_TOAN_HOC,math_alignment_array
+bảng trong math mode,MATHJAX_BANG_TOAN_HOC,math_alignment_array
+chèn ký hiệu bảng toán học căn trái,MATHJAX_BANG_TOAN_HOC_CAN_TRAI,math_alignment_array
+viết bảng toán học căn trái trong công thức,MATHJAX_BANG_TOAN_HOC_CAN_TRAI,math_alignment_array
+tạo bảng toán học căn trái bằng MathJax,MATHJAX_BANG_TOAN_HOC_CAN_TRAI,math_alignment_array
+chèn ký hiệu bảng toán học căn giữa,MATHJAX_BANG_TOAN_HOC_CAN_GIUA,math_alignment_array
+viết bảng toán học căn giữa trong công thức,MATHJAX_BANG_TOAN_HOC_CAN_GIUA,math_alignment_array
+tạo bảng toán học căn giữa bằng MathJax,MATHJAX_BANG_TOAN_HOC_CAN_GIUA,math_alignment_array
+chèn ký hiệu bảng toán học căn phải,MATHJAX_BANG_TOAN_HOC_CAN_PHAI,math_alignment_array
+viết bảng toán học căn phải trong công thức,MATHJAX_BANG_TOAN_HOC_CAN_PHAI,math_alignment_array
+tạo bảng toán học căn phải bằng MathJax,MATHJAX_BANG_TOAN_HOC_CAN_PHAI,math_alignment_array
+chèn ký hiệu alpha,MATHJAX_ALPHA,math_symbols
+viết alpha trong công thức,MATHJAX_ALPHA,math_symbols
+tạo alpha bằng MathJax,MATHJAX_ALPHA,math_symbols
+chèn ký hiệu beta,MATHJAX_BETA,math_symbols
+viết beta trong công thức,MATHJAX_BETA,math_symbols
+tạo beta bằng MathJax,MATHJAX_BETA,math_symbols
+chèn ký hiệu gamma,MATHJAX_GAMMA,math_symbols
+viết gamma trong công thức,MATHJAX_GAMMA,math_symbols
+tạo gamma bằng MathJax,MATHJAX_GAMMA,math_symbols
+chèn ký hiệu delta,MATHJAX_DELTA,math_symbols
+viết delta trong công thức,MATHJAX_DELTA,math_symbols
+tạo delta bằng MathJax,MATHJAX_DELTA,math_symbols
+chèn ký hiệu theta,MATHJAX_THETA,math_symbols
+viết theta trong công thức,MATHJAX_THETA,math_symbols
+tạo theta bằng MathJax,MATHJAX_THETA,math_symbols
+chèn ký hiệu lambda,MATHJAX_LAMBDA,math_symbols
+viết lambda trong công thức,MATHJAX_LAMBDA,math_symbols
+tạo lambda bằng MathJax,MATHJAX_LAMBDA,math_symbols
+chèn ký hiệu pi,MATHJAX_PI,math_symbols
+viết pi trong công thức,MATHJAX_PI,math_symbols
+tạo pi bằng MathJax,MATHJAX_PI,math_symbols
+chèn ký hiệu sigma,MATHJAX_SIGMA,math_symbols
+viết sigma trong công thức,MATHJAX_SIGMA,math_symbols
+tạo sigma bằng MathJax,MATHJAX_SIGMA,math_symbols
+chèn ký hiệu omega,MATHJAX_OMEGA,math_symbols
+viết omega trong công thức,MATHJAX_OMEGA,math_symbols
+tạo omega bằng MathJax,MATHJAX_OMEGA,math_symbols
+chèn ký hiệu vô cùng,MATHJAX_VO_CUNG,math_symbols
+viết vô cùng trong công thức,MATHJAX_VO_CUNG,math_symbols
+tạo vô cùng bằng MathJax,MATHJAX_VO_CUNG,math_symbols
+chèn ký hiệu nabla,MATHJAX_NABLA,math_symbols
+viết nabla trong công thức,MATHJAX_NABLA,math_symbols
+tạo nabla bằng MathJax,MATHJAX_NABLA,math_symbols
+chèn ký hiệu phần riêng,MATHJAX_PHAN_RIENG,math_symbols
+viết phần riêng trong công thức,MATHJAX_PHAN_RIENG,math_symbols
+tạo phần riêng bằng MathJax,MATHJAX_PHAN_RIENG,math_symbols
+chèn ký hiệu số thực,MATHJAX_SO_THUC,math_symbols
+viết số thực trong công thức,MATHJAX_SO_THUC,math_symbols
+tạo số thực bằng MathJax,MATHJAX_SO_THUC,math_symbols
+chèn ký hiệu số tự nhiên,MATHJAX_SO_TU_NHIEN,math_symbols
+viết số tự nhiên trong công thức,MATHJAX_SO_TU_NHIEN,math_symbols
+tạo số tự nhiên bằng MathJax,MATHJAX_SO_TU_NHIEN,math_symbols
+chèn ký hiệu số nguyên,MATHJAX_SO_NGUYEN,math_symbols
+viết số nguyên trong công thức,MATHJAX_SO_NGUYEN,math_symbols
+tạo số nguyên bằng MathJax,MATHJAX_SO_NGUYEN,math_symbols
+chèn ký hiệu thuộc,MATHJAX_THUOC,math_symbols
+viết thuộc trong công thức,MATHJAX_THUOC,math_symbols
+tạo thuộc bằng MathJax,MATHJAX_THUOC,math_symbols
+chèn ký hiệu không thuộc,MATHJAX_KHONG_THUOC,math_symbols
+viết không thuộc trong công thức,MATHJAX_KHONG_THUOC,math_symbols
+tạo không thuộc bằng MathJax,MATHJAX_KHONG_THUOC,math_symbols
+chèn ký hiệu tập rỗng,MATHJAX_TAP_RONG,math_symbols
+viết tập rỗng trong công thức,MATHJAX_TAP_RONG,math_symbols
+tạo tập rỗng bằng MathJax,MATHJAX_TAP_RONG,math_symbols
+chèn ký hiệu hợp,MATHJAX_HOP,math_symbols
+viết hợp trong công thức,MATHJAX_HOP,math_symbols
+tạo hợp bằng MathJax,MATHJAX_HOP,math_symbols
+chèn ký hiệu giao,MATHJAX_GIAO,math_symbols
+viết giao trong công thức,MATHJAX_GIAO,math_symbols
+tạo giao bằng MathJax,MATHJAX_GIAO,math_symbols
+chèn ký hiệu tập con,MATHJAX_TAP_CON,math_symbols
+viết tập con trong công thức,MATHJAX_TAP_CON,math_symbols
+tạo tập con bằng MathJax,MATHJAX_TAP_CON,math_symbols
+chèn ký hiệu khác,MATHJAX_KHAC,math_symbols
+viết khác trong công thức,MATHJAX_KHAC,math_symbols
+tạo khác bằng MathJax,MATHJAX_KHAC,math_symbols
+chèn ký hiệu nhỏ hơn hoặc bằng,MATHJAX_NHO_HON_HOAC_BANG,math_symbols
+viết nhỏ hơn hoặc bằng trong công thức,MATHJAX_NHO_HON_HOAC_BANG,math_symbols
+tạo nhỏ hơn hoặc bằng bằng MathJax,MATHJAX_NHO_HON_HOAC_BANG,math_symbols
+chèn ký hiệu lớn hơn hoặc bằng,MATHJAX_LON_HON_HOAC_BANG,math_symbols
+viết lớn hơn hoặc bằng trong công thức,MATHJAX_LON_HON_HOAC_BANG,math_symbols
+tạo lớn hơn hoặc bằng bằng MathJax,MATHJAX_LON_HON_HOAC_BANG,math_symbols
+chèn ký hiệu xấp xỉ,MATHJAX_XAP_XI,math_symbols
+viết xấp xỉ trong công thức,MATHJAX_XAP_XI,math_symbols
+tạo xấp xỉ bằng MathJax,MATHJAX_XAP_XI,math_symbols
+chèn ký hiệu tương đương,MATHJAX_TUONG_UONG,math_symbols
+viết tương đương trong công thức,MATHJAX_TUONG_UONG,math_symbols
+tạo tương đương bằng MathJax,MATHJAX_TUONG_UONG,math_symbols
+chèn ký hiệu nhân,MATHJAX_NHAN,math_symbols
+viết nhân trong công thức,MATHJAX_NHAN,math_symbols
+tạo nhân bằng MathJax,MATHJAX_NHAN,math_symbols
+chèn ký hiệu chia,MATHJAX_CHIA,math_symbols
+viết chia trong công thức,MATHJAX_CHIA,math_symbols
+tạo chia bằng MathJax,MATHJAX_CHIA,math_symbols
+chèn ký hiệu cộng trừ,MATHJAX_CONG_TRU,math_symbols
+viết cộng trừ trong công thức,MATHJAX_CONG_TRU,math_symbols
+tạo cộng trừ bằng MathJax,MATHJAX_CONG_TRU,math_symbols
+chèn ký hiệu kéo theo,MATHJAX_KEO_THEO,math_symbols
+viết kéo theo trong công thức,MATHJAX_KEO_THEO,math_symbols
+tạo kéo theo bằng MathJax,MATHJAX_KEO_THEO,math_symbols
+chèn ký hiệu khi và chỉ khi,MATHJAX_KHI_VA_CHI_KHI,math_symbols
+viết khi và chỉ khi trong công thức,MATHJAX_KHI_VA_CHI_KHI,math_symbols
+tạo khi và chỉ khi bằng MathJax,MATHJAX_KHI_VA_CHI_KHI,math_symbols
+chèn ký hiệu với mọi,MATHJAX_VOI_MOI,math_symbols
+viết với mọi trong công thức,MATHJAX_VOI_MOI,math_symbols
+tạo với mọi bằng MathJax,MATHJAX_VOI_MOI,math_symbols
+chèn ký hiệu tồn tại,MATHJAX_TON_TAI,math_symbols
+viết tồn tại trong công thức,MATHJAX_TON_TAI,math_symbols
+tạo tồn tại bằng MathJax,MATHJAX_TON_TAI,math_symbols
+chèn ký hiệu mũi tên phải,MATHJAX_MUI_TEN_PHAI,math_symbols
+viết mũi tên phải trong công thức,MATHJAX_MUI_TEN_PHAI,math_symbols
+tạo mũi tên phải bằng MathJax,MATHJAX_MUI_TEN_PHAI,math_symbols
+chèn ký hiệu ánh xạ,MATHJAX_ANH_XA,math_symbols
+viết ánh xạ trong công thức,MATHJAX_ANH_XA,math_symbols
+tạo ánh xạ bằng MathJax,MATHJAX_ANH_XA,math_symbols
+chèn ký hiệu và logic,MATHJAX_VA_LOGIC,math_logic_sets
+viết và logic trong công thức,MATHJAX_VA_LOGIC,math_logic_sets
+tạo và logic bằng MathJax,MATHJAX_VA_LOGIC,math_logic_sets
+chèn ký hiệu hoặc logic,MATHJAX_HOAC_LOGIC,math_logic_sets
+viết hoặc logic trong công thức,MATHJAX_HOAC_LOGIC,math_logic_sets
+tạo hoặc logic bằng MathJax,MATHJAX_HOAC_LOGIC,math_logic_sets
+chèn ký hiệu phủ định,MATHJAX_PHU_INH,math_logic_sets
+viết phủ định trong công thức,MATHJAX_PHU_INH,math_logic_sets
+tạo phủ định bằng MathJax,MATHJAX_PHU_INH,math_logic_sets
+chèn ký hiệu chứng minh được,MATHJAX_CHUNG_MINH_UOC,math_logic_sets
+viết chứng minh được trong công thức,MATHJAX_CHUNG_MINH_UOC,math_logic_sets
+tạo chứng minh được bằng MathJax,MATHJAX_CHUNG_MINH_UOC,math_logic_sets
+chèn ký hiệu thỏa mãn,MATHJAX_THOA_MAN,math_logic_sets
+viết thỏa mãn trong công thức,MATHJAX_THOA_MAN,math_logic_sets
+tạo thỏa mãn bằng MathJax,MATHJAX_THOA_MAN,math_logic_sets
+chèn ký hiệu modulo,MATHJAX_MODULO,math_logic_sets
+viết modulo trong công thức,MATHJAX_MODULO,math_logic_sets
+tạo modulo bằng MathJax,MATHJAX_MODULO,math_logic_sets
+chèn ký hiệu vector,MATHJAX_VECTOR,math_accents
+viết vector trong công thức,MATHJAX_VECTOR,math_accents
+tạo vector bằng MathJax,MATHJAX_VECTOR,math_accents
+chèn ký hiệu vector dài,MATHJAX_VECTOR_DAI,math_accents
+viết vector dài trong công thức,MATHJAX_VECTOR_DAI,math_accents
+tạo vector dài bằng MathJax,MATHJAX_VECTOR_DAI,math_accents
+chèn ký hiệu gạch trên,MATHJAX_GACH_TREN,math_accents
+viết gạch trên trong công thức,MATHJAX_GACH_TREN,math_accents
+tạo gạch trên bằng MathJax,MATHJAX_GACH_TREN,math_accents
+chèn ký hiệu gạch dưới,MATHJAX_GACH_DUOI,math_accents
+viết gạch dưới trong công thức,MATHJAX_GACH_DUOI,math_accents
+tạo gạch dưới bằng MathJax,MATHJAX_GACH_DUOI,math_accents
+chèn ký hiệu dấu ngã,MATHJAX_DAU_NGA,math_accents
+viết dấu ngã trong công thức,MATHJAX_DAU_NGA,math_accents
+tạo dấu ngã bằng MathJax,MATHJAX_DAU_NGA,math_accents
+chèn ký hiệu dấu mũ,MATHJAX_DAU_MU,math_accents
+viết dấu mũ trong công thức,MATHJAX_DAU_MU,math_accents
+tạo dấu mũ bằng MathJax,MATHJAX_DAU_MU,math_accents
+chèn ký hiệu đạo hàm chấm,MATHJAX_AO_HAM_CHAM,math_accents
+viết đạo hàm chấm trong công thức,MATHJAX_AO_HAM_CHAM,math_accents
+tạo đạo hàm chấm bằng MathJax,MATHJAX_AO_HAM_CHAM,math_accents
+chèn ký hiệu đóng khung,MATHJAX_ONG_KHUNG,math_accents
+viết đóng khung trong công thức,MATHJAX_ONG_KHUNG,math_accents
+tạo đóng khung bằng MathJax,MATHJAX_ONG_KHUNG,math_accents
+chèn ký hiệu overbrace,MATHJAX_OVERBRACE,math_accents
+viết overbrace trong công thức,MATHJAX_OVERBRACE,math_accents
+tạo overbrace bằng MathJax,MATHJAX_OVERBRACE,math_accents
+chèn ký hiệu underbrace,MATHJAX_UNDERBRACE,math_accents
+viết underbrace trong công thức,MATHJAX_UNDERBRACE,math_accents
+tạo underbrace bằng MathJax,MATHJAX_UNDERBRACE,math_accents
+chèn ký hiệu chữ phía trên,MATHJAX_CHU_PHIA_TREN,math_accents
+viết chữ phía trên trong công thức,MATHJAX_CHU_PHIA_TREN,math_accents
+tạo chữ phía trên bằng MathJax,MATHJAX_CHU_PHIA_TREN,math_accents
+chèn ký hiệu chữ phía dưới,MATHJAX_CHU_PHIA_DUOI,math_accents
+viết chữ phía dưới trong công thức,MATHJAX_CHU_PHIA_DUOI,math_accents
+tạo chữ phía dưới bằng MathJax,MATHJAX_CHU_PHIA_DUOI,math_accents
+chèn ký hiệu ngoặc tự co,MATHJAX_NGOAC_TU_CO,math_brackets_spacing
+viết ngoặc tự co trong công thức,MATHJAX_NGOAC_TU_CO,math_brackets_spacing
+tạo ngoặc tự co bằng MathJax,MATHJAX_NGOAC_TU_CO,math_brackets_spacing
+chèn ký hiệu ngoặc vuông tự co,MATHJAX_NGOAC_VUONG_TU_CO,math_brackets_spacing
+viết ngoặc vuông tự co trong công thức,MATHJAX_NGOAC_VUONG_TU_CO,math_brackets_spacing
+tạo ngoặc vuông tự co bằng MathJax,MATHJAX_NGOAC_VUONG_TU_CO,math_brackets_spacing
+chèn ký hiệu ngoặc nhọn tự co,MATHJAX_NGOAC_NHON_TU_CO,math_brackets_spacing
+viết ngoặc nhọn tự co trong công thức,MATHJAX_NGOAC_NHON_TU_CO,math_brackets_spacing
+tạo ngoặc nhọn tự co bằng MathJax,MATHJAX_NGOAC_NHON_TU_CO,math_brackets_spacing
+chèn ký hiệu trị tuyệt đối,MATHJAX_TRI_TUYET_OI,math_brackets_spacing
+viết trị tuyệt đối trong công thức,MATHJAX_TRI_TUYET_OI,math_brackets_spacing
+tạo trị tuyệt đối bằng MathJax,MATHJAX_TRI_TUYET_OI,math_brackets_spacing
+chèn ký hiệu chuẩn vector,MATHJAX_CHUAN_VECTOR,math_brackets_spacing
+viết chuẩn vector trong công thức,MATHJAX_CHUAN_VECTOR,math_brackets_spacing
+tạo chuẩn vector bằng MathJax,MATHJAX_CHUAN_VECTOR,math_brackets_spacing
+chèn ký hiệu khoảng cách nhỏ,MATHJAX_KHOANG_CACH_NHO,math_brackets_spacing
+viết khoảng cách nhỏ trong công thức,MATHJAX_KHOANG_CACH_NHO,math_brackets_spacing
+tạo khoảng cách nhỏ bằng MathJax,MATHJAX_KHOANG_CACH_NHO,math_brackets_spacing
+chèn ký hiệu khoảng cách vừa,MATHJAX_KHOANG_CACH_VUA,math_brackets_spacing
+viết khoảng cách vừa trong công thức,MATHJAX_KHOANG_CACH_VUA,math_brackets_spacing
+tạo khoảng cách vừa bằng MathJax,MATHJAX_KHOANG_CACH_VUA,math_brackets_spacing
+chèn ký hiệu khoảng cách lớn,MATHJAX_KHOANG_CACH_LON,math_brackets_spacing
+viết khoảng cách lớn trong công thức,MATHJAX_KHOANG_CACH_LON,math_brackets_spacing
+tạo khoảng cách lớn bằng MathJax,MATHJAX_KHOANG_CACH_LON,math_brackets_spacing
+chèn ký hiệu khoảng cách rất lớn,MATHJAX_KHOANG_CACH_RAT_LON,math_brackets_spacing
+viết khoảng cách rất lớn trong công thức,MATHJAX_KHOANG_CACH_RAT_LON,math_brackets_spacing
+tạo khoảng cách rất lớn bằng MathJax,MATHJAX_KHOANG_CACH_RAT_LON,math_brackets_spacing
+chèn ký hiệu khoảng cách âm,MATHJAX_KHOANG_CACH_AM,math_brackets_spacing
+viết khoảng cách âm trong công thức,MATHJAX_KHOANG_CACH_AM,math_brackets_spacing
+tạo khoảng cách âm bằng MathJax,MATHJAX_KHOANG_CACH_AM,math_brackets_spacing
+chèn ký hiệu chữ trong công thức,MATHJAX_CHU_TRONG_CONG_THUC,math_brackets_spacing
+viết chữ trong công thức trong công thức,MATHJAX_CHU_TRONG_CONG_THUC,math_brackets_spacing
+tạo chữ trong công thức bằng MathJax,MATHJAX_CHU_TRONG_CONG_THUC,math_brackets_spacing
+chèn ký hiệu chữ blackboard,MATHJAX_CHU_BLACKBOARD,math_fonts
+viết chữ blackboard trong công thức,MATHJAX_CHU_BLACKBOARD,math_fonts
+tạo chữ blackboard bằng MathJax,MATHJAX_CHU_BLACKBOARD,math_fonts
+chèn ký hiệu chữ đậm toán,MATHJAX_CHU_AM_TOAN,math_fonts
+viết chữ đậm toán trong công thức,MATHJAX_CHU_AM_TOAN,math_fonts
+tạo chữ đậm toán bằng MathJax,MATHJAX_CHU_AM_TOAN,math_fonts
+chèn ký hiệu vector đậm,MATHJAX_VECTOR_AM,math_fonts
+viết vector đậm trong công thức,MATHJAX_VECTOR_AM,math_fonts
+tạo vector đậm bằng MathJax,MATHJAX_VECTOR_AM,math_fonts
+chèn ký hiệu chữ La Mã,MATHJAX_CHU_LA_MA,math_fonts
+viết chữ La Mã trong công thức,MATHJAX_CHU_LA_MA,math_fonts
+tạo chữ La Mã bằng MathJax,MATHJAX_CHU_LA_MA,math_fonts
+chèn ký hiệu chữ typewriter,MATHJAX_CHU_TYPEWRITER,math_fonts
+viết chữ typewriter trong công thức,MATHJAX_CHU_TYPEWRITER,math_fonts
+tạo chữ typewriter bằng MathJax,MATHJAX_CHU_TYPEWRITER,math_fonts
+chèn ký hiệu chữ sans serif,MATHJAX_CHU_SANS_SERIF,math_fonts
+viết chữ sans serif trong công thức,MATHJAX_CHU_SANS_SERIF,math_fonts
+tạo chữ sans serif bằng MathJax,MATHJAX_CHU_SANS_SERIF,math_fonts
+chèn ký hiệu chữ calligraphic,MATHJAX_CHU_CALLIGRAPHIC,math_fonts
+viết chữ calligraphic trong công thức,MATHJAX_CHU_CALLIGRAPHIC,math_fonts
+tạo chữ calligraphic bằng MathJax,MATHJAX_CHU_CALLIGRAPHIC,math_fonts
+chèn ký hiệu chữ script,MATHJAX_CHU_SCRIPT,math_fonts
+viết chữ script trong công thức,MATHJAX_CHU_SCRIPT,math_fonts
+tạo chữ script bằng MathJax,MATHJAX_CHU_SCRIPT,math_fonts
+chèn ký hiệu chữ Fraktur,MATHJAX_CHU_FRAKTUR,math_fonts
+viết chữ Fraktur trong công thức,MATHJAX_CHU_FRAKTUR,math_fonts
+tạo chữ Fraktur bằng MathJax,MATHJAX_CHU_FRAKTUR,math_fonts
+chèn ký hiệu độ,MATHJAX_O,math_units_color_numbering
+viết độ trong công thức,MATHJAX_O,math_units_color_numbering
+tạo độ bằng MathJax,MATHJAX_O,math_units_color_numbering
+chèn ký hiệu mét,MATHJAX_MET,math_units_color_numbering
+viết mét trong công thức,MATHJAX_MET,math_units_color_numbering
+tạo mét bằng MathJax,MATHJAX_MET,math_units_color_numbering
+chèn ký hiệu mét vuông,MATHJAX_MET_VUONG,math_units_color_numbering
+viết mét vuông trong công thức,MATHJAX_MET_VUONG,math_units_color_numbering
+tạo mét vuông bằng MathJax,MATHJAX_MET_VUONG,math_units_color_numbering
+chèn ký hiệu mét trên giây,MATHJAX_MET_TREN_GIAY,math_units_color_numbering
+viết mét trên giây trong công thức,MATHJAX_MET_TREN_GIAY,math_units_color_numbering
+tạo mét trên giây bằng MathJax,MATHJAX_MET_TREN_GIAY,math_units_color_numbering
+chèn ký hiệu mét trên giây bình phương,MATHJAX_MET_TREN_GIAY_BINH_PHUONG,math_units_color_numbering
+viết mét trên giây bình phương trong công thức,MATHJAX_MET_TREN_GIAY_BINH_PHUONG,math_units_color_numbering
+tạo mét trên giây bình phương bằng MathJax,MATHJAX_MET_TREN_GIAY_BINH_PHUONG,math_units_color_numbering
+chèn ký hiệu mol,MATHJAX_MOL,math_units_color_numbering
+viết mol trong công thức,MATHJAX_MOL,math_units_color_numbering
+tạo mol bằng MathJax,MATHJAX_MOL,math_units_color_numbering
+chèn ký hiệu đơn vị nhân,MATHJAX_ON_VI_NHAN,math_units_color_numbering
+viết đơn vị nhân trong công thức,MATHJAX_ON_VI_NHAN,math_units_color_numbering
+tạo đơn vị nhân bằng MathJax,MATHJAX_ON_VI_NHAN,math_units_color_numbering
+chèn ký hiệu đơn vị số mũ âm,MATHJAX_ON_VI_SO_MU_AM,math_units_color_numbering
+viết đơn vị số mũ âm trong công thức,MATHJAX_ON_VI_SO_MU_AM,math_units_color_numbering
+tạo đơn vị số mũ âm bằng MathJax,MATHJAX_ON_VI_SO_MU_AM,math_units_color_numbering
+chèn ký hiệu màu đỏ,MATHJAX_MAU_O,math_units_color_numbering
+viết màu đỏ trong công thức,MATHJAX_MAU_O,math_units_color_numbering
+tạo màu đỏ bằng MathJax,MATHJAX_MAU_O,math_units_color_numbering
+chèn ký hiệu màu xanh,MATHJAX_MAU_XANH,math_units_color_numbering
+viết màu xanh trong công thức,MATHJAX_MAU_XANH,math_units_color_numbering
+tạo màu xanh bằng MathJax,MATHJAX_MAU_XANH,math_units_color_numbering
+chèn ký hiệu highlight công thức,MATHJAX_HIGHLIGHT_CONG_THUC,math_units_color_numbering
+viết highlight công thức trong công thức,MATHJAX_HIGHLIGHT_CONG_THUC,math_units_color_numbering
+tạo highlight công thức bằng MathJax,MATHJAX_HIGHLIGHT_CONG_THUC,math_units_color_numbering
+chèn ký hiệu phương trình có số,MATHJAX_PHUONG_TRINH_CO_SO,math_units_color_numbering
+viết phương trình có số trong công thức,MATHJAX_PHUONG_TRINH_CO_SO,math_units_color_numbering
+tạo phương trình có số bằng MathJax,MATHJAX_PHUONG_TRINH_CO_SO,math_units_color_numbering
+chèn ký hiệu gắn nhãn phương trình,MATHJAX_GAN_NHAN_PHUONG_TRINH,math_units_color_numbering
+viết gắn nhãn phương trình trong công thức,MATHJAX_GAN_NHAN_PHUONG_TRINH,math_units_color_numbering
+tạo gắn nhãn phương trình bằng MathJax,MATHJAX_GAN_NHAN_PHUONG_TRINH,math_units_color_numbering
+chèn ký hiệu tham chiếu phương trình,MATHJAX_THAM_CHIEU_PHUONG_TRINH,math_units_color_numbering
+viết tham chiếu phương trình trong công thức,MATHJAX_THAM_CHIEU_PHUONG_TRINH,math_units_color_numbering
+tạo tham chiếu phương trình bằng MathJax,MATHJAX_THAM_CHIEU_PHUONG_TRINH,math_units_color_numbering
+tạo file latex tối giản,LATEX_TAI_LIEU_TOI_GIAN,document_structure
+cho mình khung tex cơ bản,LATEX_TAI_LIEU_TOI_GIAN,document_structure
+bắt đầu một tài liệu latex mới,LATEX_TAI_LIEU_TOI_GIAN,document_structure
+mẫu document đơn giản,LATEX_TAI_LIEU_TOI_GIAN,document_structure
+tạo article 12pt a4,LATEX_LOP_TAI_LIEU_ARTICLE,document_classes
+khai báo documentclass article,LATEX_LOP_TAI_LIEU_ARTICLE,document_classes
+mình cần lớp bài báo,LATEX_LOP_TAI_LIEU_ARTICLE,document_classes
+dùng article làm tài liệu,LATEX_LOP_TAI_LIEU_ARTICLE,document_classes
+tạo tài liệu dạng book,LATEX_LOP_TAI_LIEU_BOOK,document_classes
+khai báo lớp book,LATEX_LOP_TAI_LIEU_BOOK,document_classes
+làm khung sách latex,LATEX_LOP_TAI_LIEU_BOOK,document_classes
+dùng book cho tài liệu nhiều chương,LATEX_LOP_TAI_LIEU_BOOK,document_classes
+tạo lớp report,LATEX_LOP_TAI_LIEU_REPORT,document_classes
+mẫu báo cáo latex,LATEX_LOP_TAI_LIEU_REPORT,document_classes
+dùng report cho báo cáo dài,LATEX_LOP_TAI_LIEU_REPORT,document_classes
+khai báo documentclass report,LATEX_LOP_TAI_LIEU_REPORT,document_classes
+tạo phần preamble,LATEX_PREAMBLE_TAI_LIEU,preamble_packages
+khai báo phần đầu tài liệu,LATEX_PREAMBLE_TAI_LIEU,preamble_packages
+thêm cấu hình trước begin document,LATEX_PREAMBLE_TAI_LIEU,preamble_packages
+tạo document setup,LATEX_PREAMBLE_TAI_LIEU,preamble_packages
+thêm package graphicx,LATEX_NAP_PACKAGE,preamble_packages
+nạp gói latex,LATEX_NAP_PACKAGE,preamble_packages
+dùng usepackage,LATEX_NAP_PACKAGE,preamble_packages
+thêm thư viện vào preamble,LATEX_NAP_PACKAGE,preamble_packages
+nạp package có options,LATEX_NAP_PACKAGE_CO_TUY_CHON,preamble_packages
+thêm gói geometry với tùy chọn,LATEX_NAP_PACKAGE_CO_TUY_CHON,preamble_packages
+usepackage có tham số,LATEX_NAP_PACKAGE_CO_TUY_CHON,preamble_packages
+khai báo package kèm options,LATEX_NAP_PACKAGE_CO_TUY_CHON,preamble_packages
+thêm lời cảm ơn dưới tên tác giả,LATEX_LOI_CAM_ON_TAC_GIA,title_author_date
+dùng thanks trong author,LATEX_LOI_CAM_ON_TAC_GIA,title_author_date
+ghi chú tài trợ ở tác giả,LATEX_LOI_CAM_ON_TAC_GIA,title_author_date
+thêm footnote cho tác giả,LATEX_LOI_CAM_ON_TAC_GIA,title_author_date
+thêm comment latex,LATEX_CHU_THICH_MA_LATEX,comments_text_formatting
+ghi chú dòng mã này,LATEX_CHU_THICH_MA_LATEX,comments_text_formatting
+comment dòng hiện tại,LATEX_CHU_THICH_MA_LATEX,comments_text_formatting
+tạo chú thích không in ra PDF,LATEX_CHU_THICH_MA_LATEX,comments_text_formatting
+in nghiêng đoạn này,LATEX_CHU_NGHIENG,comments_text_formatting
+dùng textit,LATEX_CHU_NGHIENG,comments_text_formatting
+tạo italic text,LATEX_CHU_NGHIENG,comments_text_formatting
+nghiêng chữ latex,LATEX_CHU_NGHIENG,comments_text_formatting
+gạch chân đoạn này,LATEX_GACH_CHAN,comments_text_formatting
+dùng underline,LATEX_GACH_CHAN,comments_text_formatting
+tạo chữ có gạch dưới,LATEX_GACH_CHAN,comments_text_formatting
+underline văn bản,LATEX_GACH_CHAN,comments_text_formatting
+nhấn mạnh cụm từ này,LATEX_NHAN_MANH,comments_text_formatting
+dùng emph,LATEX_NHAN_MANH,comments_text_formatting
+tạo emphasis latex,LATEX_NHAN_MANH,comments_text_formatting
+làm nổi bật văn bản theo ngữ cảnh,LATEX_NHAN_MANH,comments_text_formatting
+chèn ảnh vào tài liệu,LATEX_CHEN_HINH_ANH,graphics_figures
+dùng includegraphics,LATEX_CHEN_HINH_ANH,graphics_figures
+thêm hình minh họa,LATEX_CHEN_HINH_ANH,graphics_figures
+đưa file ảnh vào latex,LATEX_CHEN_HINH_ANH,graphics_figures
+tạo figure có caption,LATEX_MOI_TRUONG_FIGURE,graphics_figures
+chèn hình có label,LATEX_MOI_TRUONG_FIGURE,graphics_figures
+tạo khung ảnh căn giữa,LATEX_MOI_TRUONG_FIGURE,graphics_figures
+thêm figure float,LATEX_MOI_TRUONG_FIGURE,graphics_figures
+thêm caption cho hình,LATEX_CHU_THICH_HINH,graphics_figures
+tạo chú thích bảng,LATEX_CHU_THICH_HINH,graphics_figures
+mô tả ảnh trong latex,LATEX_CHU_THICH_HINH,graphics_figures
+thêm caption,LATEX_CHU_THICH_HINH,graphics_figures
+gắn label cho hình,LATEX_THAM_CHIEU_NHAN,cross_references
+tham chiếu bằng ref,LATEX_THAM_CHIEU_NHAN,cross_references
+lấy số trang bằng pageref,LATEX_THAM_CHIEU_NHAN,cross_references
+tạo tham chiếu chéo,LATEX_THAM_CHIEU_NHAN,cross_references
+tạo itemize,LATEX_DANH_SACH_KHONG_THU_TU,lists
+danh sách gạch đầu dòng latex,LATEX_DANH_SACH_KHONG_THU_TU,lists
+liệt kê không đánh số,LATEX_DANH_SACH_KHONG_THU_TU,lists
+tạo bullet list,LATEX_DANH_SACH_KHONG_THU_TU,lists
+tạo enumerate,LATEX_DANH_SACH_CO_THU_TU,lists
+danh sách đánh số latex,LATEX_DANH_SACH_CO_THU_TU,lists
+liệt kê theo thứ tự,LATEX_DANH_SACH_CO_THU_TU,lists
+tạo numbered list,LATEX_DANH_SACH_CO_THU_TU,lists
+chèn công thức trong dòng,LATEX_TOAN_INLINE_LATEX,math_modes
+viết toán inline,LATEX_TOAN_INLINE_LATEX,math_modes
+đưa E bằng mc bình phương vào câu,LATEX_TOAN_INLINE_LATEX,math_modes
+dùng ngoặc toán inline,LATEX_TOAN_INLINE_LATEX,math_modes
+dùng môi trường math,LATEX_MOI_TRUONG_MATH,math_modes
+chèn begin math,LATEX_MOI_TRUONG_MATH,math_modes
+viết biểu thức trong math environment,LATEX_MOI_TRUONG_MATH,math_modes
+công thức inline bằng math,LATEX_MOI_TRUONG_MATH,math_modes
+dùng displaymath,LATEX_MOI_TRUONG_DISPLAYMATH,math_modes
+chèn begin displaymath,LATEX_MOI_TRUONG_DISPLAYMATH,math_modes
+công thức display không số bằng môi trường,LATEX_MOI_TRUONG_DISPLAYMATH,math_modes
+môi trường toán display,LATEX_MOI_TRUONG_DISPLAYMATH,math_modes
+tạo chỉ số trên dưới,LATEX_CHI_SO_DUOI_VA_SO_MU,math_expressions
+viết tensor có chỉ số,LATEX_CHI_SO_DUOI_VA_SO_MU,math_expressions
+kết hợp mũ và subscript,LATEX_CHI_SO_DUOI_VA_SO_MU,math_expressions
+thêm số mũ và chỉ số dưới,LATEX_CHI_SO_DUOI_VA_SO_MU,math_expressions
+viết sin cos log,LATEX_TOAN_TU_LUONG_GIAC_VA_LOG,math_expressions
+toán tử lượng giác latex,LATEX_TOAN_TU_LUONG_GIAC_VA_LOG,math_expressions
+dùng log trong biểu thức,LATEX_TOAN_TU_LUONG_GIAC_VA_LOG,math_expressions
+hiển thị hàm sin alpha,LATEX_TOAN_TU_LUONG_GIAC_VA_LOG,math_expressions
+tạo abstract,LATEX_MOI_TRUONG_ABSTRACT,document_structure
+thêm phần tóm tắt,LATEX_MOI_TRUONG_ABSTRACT,document_structure
+môi trường abstract latex,LATEX_MOI_TRUONG_ABSTRACT,document_structure
+viết tóm tắt bài báo,LATEX_MOI_TRUONG_ABSTRACT,document_structure
+ngắt dòng bằng hai gạch chéo,LATEX_NGAT_DONG_THU_CONG,paragraphs_linebreaks
+xuống dòng nhưng không tạo đoạn mới,LATEX_NGAT_DONG_THU_CONG,paragraphs_linebreaks
+dùng line break latex,LATEX_NGAT_DONG_THU_CONG,paragraphs_linebreaks
+chèn lệnh xuống dòng,LATEX_NGAT_DONG_THU_CONG,paragraphs_linebreaks
+dùng lệnh newline,LATEX_LENH_NEWLINE,paragraphs_linebreaks
+xuống dòng với newline,LATEX_LENH_NEWLINE,paragraphs_linebreaks
+thêm newline latex,LATEX_LENH_NEWLINE,paragraphs_linebreaks
+bắt đầu dòng mới trong đoạn,LATEX_LENH_NEWLINE,paragraphs_linebreaks
+tạo chapter section subsection,LATEX_CHUONG_VA_MUC,sectioning
+chia tài liệu thành chương mục,LATEX_CHUONG_VA_MUC,sectioning
+thêm subsubsection,LATEX_CHUONG_VA_MUC,sectioning
+tạo cấu trúc phân cấp,LATEX_CHUONG_VA_MUC,sectioning
+tạo mục lục tự động,LATEX_MUC_LUC,table_of_contents
+chèn tableofcontents,LATEX_MUC_LUC,table_of_contents
+thêm bảng mục lục,LATEX_MUC_LUC,table_of_contents
+hiển thị danh sách chương mục,LATEX_MUC_LUC,table_of_contents
+tạo bảng tabular ba cột,LATEX_BANG_TABULAR_CO_BAN,tables
+dựng bảng latex căn giữa,LATEX_BANG_TABULAR_CO_BAN,tables
+tạo bảng hàng cột,LATEX_BANG_TABULAR_CO_BAN,tables
+chèn tabular cơ bản,LATEX_BANG_TABULAR_CO_BAN,tables
+tạo table có caption,LATEX_MOI_TRUONG_TABLE,tables
+bảng float có label,LATEX_MOI_TRUONG_TABLE,tables
+tạo bảng tham chiếu được,LATEX_MOI_TRUONG_TABLE,tables
+môi trường table latex,LATEX_MOI_TRUONG_TABLE,tables
+căn giữa nội dung,LATEX_CAN_GIUA_NOI_DUNG,text_layout
+dùng center environment,LATEX_CAN_GIUA_NOI_DUNG,text_layout
+đưa đoạn văn vào giữa,LATEX_CAN_GIUA_NOI_DUNG,text_layout
+căn giữa bảng,LATEX_CAN_GIUA_NOI_DUNG,text_layout
+tải PDF từ Overleaf,LATEX_XUAT_TAI_LIEU_OVERLEAF,overleaf_workflow
+xuất mã nguồn dự án,LATEX_XUAT_TAI_LIEU_OVERLEAF,overleaf_workflow
+download file tex,LATEX_XUAT_TAI_LIEU_OVERLEAF,overleaf_workflow
+tải project latex,LATEX_XUAT_TAI_LIEU_OVERLEAF,overleaf_workflow
+tìm package trên CTAN,LATEX_TRA_CUU_PACKAGE_CTAN,packages_ecosystem
+tra cứu thư viện latex,LATEX_TRA_CUU_PACKAGE_CTAN,packages_ecosystem
+tìm gói theo tên,LATEX_TRA_CUU_PACKAGE_CTAN,packages_ecosystem
+mở CTAN tìm package,LATEX_TRA_CUU_PACKAGE_CTAN,packages_ecosystem
+TeX Live là gì,LATEX_HE_THONG_TEX_LIVE,packages_ecosystem
+cài môi trường latex local,LATEX_HE_THONG_TEX_LIVE,packages_ecosystem
+bộ phân phối TeX Live,LATEX_HE_THONG_TEX_LIVE,packages_ecosystem
+package có trong TeX Live,LATEX_HE_THONG_TEX_LIVE,packages_ecosystem
+lỗi không tìm thấy package,LATEX_KIEM_TRA_PACKAGE_BI_THIEU,packages_ecosystem
+thiếu file sty,LATEX_KIEM_TRA_PACKAGE_BI_THIEU,packages_ecosystem
+package chưa cài,LATEX_KIEM_TRA_PACKAGE_BI_THIEU,packages_ecosystem
+LaTeX báo package not found,LATEX_KIEM_TRA_PACKAGE_BI_THIEU,packages_ecosystem

@@ -1,0 +1,29 @@
+{
+  "status": "passed",
+  "intent_count": 189,
+  "alias_count": 1192,
+  "aliases_unique": true,
+  "slot_regex_valid": true,
+  "category_schema_valid": true,
+  "template_placeholders_declared": true,
+  "split_rows": {
+    "train": 1880,
+    "val": 940,
+    "test": 940
+  },
+  "examples_per_intent": {
+    "train": 10,
+    "val": 5,
+    "test": 5
+  },
+  "exact_duplicate_counts": {
+    "train_val": 0,
+    "train_test": 0,
+    "val_test": 0
+  },
+  "out_of_scope_has_examples": false,
+  "blockers": [
+    "PhoATIS chưa được cung cấp cho OUT_OF_SCOPE.",
+    "TEST do AI soạn theo yêu cầu mới; cần chủ sở hữu duyệt và không dùng đánh giá cuối cùng trước khi duyệt."
+  ]
+}

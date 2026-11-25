@@ -1,0 +1,34 @@
+{
+  "catalog_version": "1.0",
+  "description": "Danh mục các kho tri thức hiện có. Các corpus giữ nguyên định dạng và vai trò retrieval; không trộn vào Intent definitions.",
+  "corpora": [
+    {
+      "file": "knowledge_base.json",
+      "path": "data/knowledge/knowledge_base.json",
+      "role": "retrieval_corpus",
+      "schema": "../standards/knowledge-base.schema.json",
+      "record_path": "records"
+    },
+    {
+      "file": "latex_tutorial.json",
+      "path": "data/knowledge/latex_tutorial.json",
+      "role": "tutorial_sections",
+      "schema": "../standards/latex-tutorial.schema.json",
+      "record_path": "sections"
+    },
+    {
+      "file": "latex_tutorial_pages.json",
+      "path": "data/knowledge/latex_tutorial_pages.json",
+      "role": "page_level_source_text",
+      "schema": "../standards/latex-tutorial-pages.schema.json",
+      "record_path": "pages"
+    },
+    {
+      "file": "obsidian_knowledge.json",
+      "path": "data/knowledge/obsidian_knowledge.json",
+      "role": "retrieval_and_syntax_reference",
+      "schema": "../standards/obsidian-knowledge.schema.json",
+      "record_path": "records"
+    }
+  ]
+}

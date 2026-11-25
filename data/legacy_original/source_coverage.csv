@@ -1,0 +1,163 @@
+﻿intent,category,render_target,source_file,source_section_or_pages,aliases_count,template_nonempty,train_examples
+MATHJAX_CONG_THUC_INLINE,math_expression,mathjax,knowledge_base(1).txt,MATH_BASIC,5,True,3
+MATHJAX_CONG_THUC_LON,math_expression,mathjax,knowledge_base(1).txt,MATH_BASIC,6,True,3
+MATHJAX_PHAN_SO,math_expression,mathjax,knowledge_base(1).txt,MATH_BASIC,6,True,3
+MATHJAX_CAN,math_expression,mathjax,knowledge_base(1).txt,MATH_BASIC,5,True,3
+MATHJAX_CAN_BAC_N,math_expression,mathjax,knowledge_base(1).txt,MATH_BASIC,5,True,3
+MATHJAX_MU,math_expression,mathjax,knowledge_base(1).txt,MATH_BASIC,4,True,3
+MATHJAX_CHI_SO,math_expression,mathjax,knowledge_base(1).txt,MATH_BASIC,4,True,3
+MATHJAX_MU_VA_CHI_SO,math_expression,mathjax,knowledge_base(1).txt,MATH_BASIC,4,True,3
+MATHJAX_TONG,math_expression,mathjax,knowledge_base(1).txt,MATH_BASIC,6,True,3
+MATHJAX_TICH,math_expression,mathjax,knowledge_base(1).txt,MATH_BASIC,5,True,3
+MATHJAX_TICH_PHAN,math_expression,mathjax,knowledge_base(1).txt,MATH_BASIC,4,True,3
+MATHJAX_GIOI_HAN,math_expression,mathjax,knowledge_base(1).txt,MATH_BASIC,5,True,3
+MATHJAX_AO_HAM,math_expression,mathjax,knowledge_base(1).txt,MATH_BASIC,4,True,3
+MATHJAX_AO_HAM_CAP_2,math_expression,mathjax,knowledge_base(1).txt,MATH_BASIC,4,True,3
+MATHJAX_MA_TRAN,math_matrix,mathjax,knowledge_base(1).txt,MATRIX,5,True,3
+MATHJAX_MA_TRAN_NGOAC_TRON,math_matrix,mathjax,knowledge_base(1).txt,MATRIX,5,True,3
+MATHJAX_MA_TRAN_NGOAC_VUONG,math_matrix,mathjax,knowledge_base(1).txt,MATRIX,5,True,3
+MATHJAX_MA_TRAN_NGOAC_NHON,math_matrix,mathjax,knowledge_base(1).txt,MATRIX,3,True,3
+MATHJAX_INH_THUC,math_matrix,mathjax,knowledge_base(1).txt,MATRIX,5,True,3
+MATHJAX_CHUAN_MA_TRAN,math_matrix,mathjax,knowledge_base(1).txt,MATRIX,5,True,3
+MATHJAX_MA_TRAN_CO_DAU_CHAM,math_matrix,mathjax,knowledge_base(1).txt,MATRIX,5,True,3
+MATHJAX_MA_TRAN_NHO_INLINE,math_matrix,mathjax,knowledge_base(1).txt,MATRIX,4,True,3
+MATHJAX_HE_PHUONG_TRINH,math_cases_systems,mathjax,knowledge_base(1).txt,CASES_SYSTEMS,6,True,3
+MATHJAX_HAM_TUNG_OAN,math_cases_systems,mathjax,knowledge_base(1).txt,CASES_SYSTEMS,6,True,3
+MATHJAX_CAN_CHINH_PHUONG_TRINH,math_alignment_array,mathjax,knowledge_base(1).txt,ALIGN_ARRAY,5,True,3
+MATHJAX_BANG_TOAN_HOC,math_alignment_array,mathjax,knowledge_base(1).txt,ALIGN_ARRAY,4,True,3
+MATHJAX_BANG_TOAN_HOC_CAN_TRAI,math_alignment_array,mathjax,knowledge_base(1).txt,ALIGN_ARRAY,2,True,3
+MATHJAX_BANG_TOAN_HOC_CAN_GIUA,math_alignment_array,mathjax,knowledge_base(1).txt,ALIGN_ARRAY,2,True,3
+MATHJAX_BANG_TOAN_HOC_CAN_PHAI,math_alignment_array,mathjax,knowledge_base(1).txt,ALIGN_ARRAY,2,True,3
+MATHJAX_ALPHA,math_symbols,mathjax,knowledge_base(1).txt,SYMBOLS,1,True,3
+MATHJAX_BETA,math_symbols,mathjax,knowledge_base(1).txt,SYMBOLS,1,True,3
+MATHJAX_GAMMA,math_symbols,mathjax,knowledge_base(1).txt,SYMBOLS,1,True,3
+MATHJAX_DELTA,math_symbols,mathjax,knowledge_base(1).txt,SYMBOLS,1,True,3
+MATHJAX_THETA,math_symbols,mathjax,knowledge_base(1).txt,SYMBOLS,1,True,3
+MATHJAX_LAMBDA,math_symbols,mathjax,knowledge_base(1).txt,SYMBOLS,1,True,3
+MATHJAX_PI,math_symbols,mathjax,knowledge_base(1).txt,SYMBOLS,1,True,3
+MATHJAX_SIGMA,math_symbols,mathjax,knowledge_base(1).txt,SYMBOLS,1,True,3
+MATHJAX_OMEGA,math_symbols,mathjax,knowledge_base(1).txt,SYMBOLS,1,True,3
+MATHJAX_VO_CUNG,math_symbols,mathjax,knowledge_base(1).txt,SYMBOLS,3,True,3
+MATHJAX_NABLA,math_symbols,mathjax,knowledge_base(1).txt,SYMBOLS,1,True,3
+MATHJAX_PHAN_RIENG,math_symbols,mathjax,knowledge_base(1).txt,SYMBOLS,4,True,3
+MATHJAX_SO_THUC,math_symbols,mathjax,knowledge_base(1).txt,SYMBOLS,4,True,3
+MATHJAX_SO_TU_NHIEN,math_symbols,mathjax,knowledge_base(1).txt,SYMBOLS,4,True,3
+MATHJAX_SO_NGUYEN,math_symbols,mathjax,knowledge_base(1).txt,SYMBOLS,4,True,3
+MATHJAX_THUOC,math_symbols,mathjax,knowledge_base(1).txt,SYMBOLS,3,True,3
+MATHJAX_KHONG_THUOC,math_symbols,mathjax,knowledge_base(1).txt,SYMBOLS,3,True,3
+MATHJAX_TAP_RONG,math_symbols,mathjax,knowledge_base(1).txt,SYMBOLS,2,True,3
+MATHJAX_HOP,math_symbols,mathjax,knowledge_base(1).txt,SYMBOLS,3,True,3
+MATHJAX_GIAO,math_symbols,mathjax,knowledge_base(1).txt,SYMBOLS,3,True,3
+MATHJAX_TAP_CON,math_symbols,mathjax,knowledge_base(1).txt,SYMBOLS,3,True,3
+MATHJAX_KHAC,math_symbols,mathjax,knowledge_base(1).txt,SYMBOLS,3,True,3
+MATHJAX_NHO_HON_HOAC_BANG,math_symbols,mathjax,knowledge_base(1).txt,SYMBOLS,3,True,3
+MATHJAX_LON_HON_HOAC_BANG,math_symbols,mathjax,knowledge_base(1).txt,SYMBOLS,3,True,3
+MATHJAX_XAP_XI,math_symbols,mathjax,knowledge_base(1).txt,SYMBOLS,3,True,3
+MATHJAX_TUONG_UONG,math_symbols,mathjax,knowledge_base(1).txt,SYMBOLS,3,True,3
+MATHJAX_NHAN,math_symbols,mathjax,knowledge_base(1).txt,SYMBOLS,3,True,3
+MATHJAX_CHIA,math_symbols,mathjax,knowledge_base(1).txt,SYMBOLS,3,True,3
+MATHJAX_CONG_TRU,math_symbols,mathjax,knowledge_base(1).txt,SYMBOLS,3,True,3
+MATHJAX_KEO_THEO,math_symbols,mathjax,knowledge_base(1).txt,SYMBOLS,3,True,3
+MATHJAX_KHI_VA_CHI_KHI,math_symbols,mathjax,knowledge_base(1).txt,SYMBOLS,3,True,3
+MATHJAX_VOI_MOI,math_symbols,mathjax,knowledge_base(1).txt,SYMBOLS,3,True,3
+MATHJAX_TON_TAI,math_symbols,mathjax,knowledge_base(1).txt,SYMBOLS,3,True,3
+MATHJAX_MUI_TEN_PHAI,math_symbols,mathjax,knowledge_base(1).txt,SYMBOLS,3,True,3
+MATHJAX_ANH_XA,math_symbols,mathjax,knowledge_base(1).txt,SYMBOLS,3,True,3
+MATHJAX_VA_LOGIC,math_logic_sets,mathjax,knowledge_base(1).txt,SETS_LOGIC,3,True,3
+MATHJAX_HOAC_LOGIC,math_logic_sets,mathjax,knowledge_base(1).txt,SETS_LOGIC,3,True,3
+MATHJAX_PHU_INH,math_logic_sets,mathjax,knowledge_base(1).txt,SETS_LOGIC,3,True,3
+MATHJAX_CHUNG_MINH_UOC,math_logic_sets,mathjax,knowledge_base(1).txt,SETS_LOGIC,3,True,3
+MATHJAX_THOA_MAN,math_logic_sets,mathjax,knowledge_base(1).txt,SETS_LOGIC,3,True,3
+MATHJAX_MODULO,math_logic_sets,mathjax,knowledge_base(1).txt,SETS_LOGIC,3,True,3
+MATHJAX_VECTOR,math_accents,mathjax,knowledge_base(1).txt,ACCENTS_DECORATIONS,3,True,3
+MATHJAX_VECTOR_DAI,math_accents,mathjax,knowledge_base(1).txt,ACCENTS_DECORATIONS,3,True,3
+MATHJAX_GACH_TREN,math_accents,mathjax,knowledge_base(1).txt,ACCENTS_DECORATIONS,3,True,3
+MATHJAX_GACH_DUOI,math_accents,mathjax,knowledge_base(1).txt,ACCENTS_DECORATIONS,2,True,3
+MATHJAX_DAU_NGA,math_accents,mathjax,knowledge_base(1).txt,ACCENTS_DECORATIONS,2,True,3
+MATHJAX_DAU_MU,math_accents,mathjax,knowledge_base(1).txt,ACCENTS_DECORATIONS,2,True,3
+MATHJAX_AO_HAM_CHAM,math_accents,mathjax,knowledge_base(1).txt,ACCENTS_DECORATIONS,3,True,3
+MATHJAX_ONG_KHUNG,math_accents,mathjax,knowledge_base(1).txt,ACCENTS_DECORATIONS,3,True,3
+MATHJAX_OVERBRACE,math_accents,mathjax,knowledge_base(1).txt,ACCENTS_DECORATIONS,3,True,3
+MATHJAX_UNDERBRACE,math_accents,mathjax,knowledge_base(1).txt,ACCENTS_DECORATIONS,3,True,3
+MATHJAX_CHU_PHIA_TREN,math_accents,mathjax,knowledge_base(1).txt,ACCENTS_DECORATIONS,3,True,3
+MATHJAX_CHU_PHIA_DUOI,math_accents,mathjax,knowledge_base(1).txt,ACCENTS_DECORATIONS,3,True,3
+MATHJAX_NGOAC_TU_CO,math_brackets_spacing,mathjax,knowledge_base(1).txt,BRACKETS_SPACING_TEXT,3,True,3
+MATHJAX_NGOAC_VUONG_TU_CO,math_brackets_spacing,mathjax,knowledge_base(1).txt,BRACKETS_SPACING_TEXT,2,True,3
+MATHJAX_NGOAC_NHON_TU_CO,math_brackets_spacing,mathjax,knowledge_base(1).txt,BRACKETS_SPACING_TEXT,2,True,3
+MATHJAX_TRI_TUYET_OI,math_brackets_spacing,mathjax,knowledge_base(1).txt,BRACKETS_SPACING_TEXT,3,True,3
+MATHJAX_CHUAN_VECTOR,math_brackets_spacing,mathjax,knowledge_base(1).txt,BRACKETS_SPACING_TEXT,3,True,3
+MATHJAX_KHOANG_CACH_NHO,math_brackets_spacing,mathjax,knowledge_base(1).txt,BRACKETS_SPACING_TEXT,3,True,3
+MATHJAX_KHOANG_CACH_VUA,math_brackets_spacing,mathjax,knowledge_base(1).txt,BRACKETS_SPACING_TEXT,3,True,3
+MATHJAX_KHOANG_CACH_LON,math_brackets_spacing,mathjax,knowledge_base(1).txt,BRACKETS_SPACING_TEXT,3,True,3
+MATHJAX_KHOANG_CACH_RAT_LON,math_brackets_spacing,mathjax,knowledge_base(1).txt,BRACKETS_SPACING_TEXT,3,True,3
+MATHJAX_KHOANG_CACH_AM,math_brackets_spacing,mathjax,knowledge_base(1).txt,BRACKETS_SPACING_TEXT,3,True,3
+MATHJAX_CHU_TRONG_CONG_THUC,math_brackets_spacing,mathjax,knowledge_base(1).txt,BRACKETS_SPACING_TEXT,3,True,3
+MATHJAX_CHU_BLACKBOARD,math_fonts,mathjax,knowledge_base(1).txt,FONT,3,True,3
+MATHJAX_CHU_AM_TOAN,math_fonts,mathjax,knowledge_base(1).txt,FONT,3,True,3
+MATHJAX_VECTOR_AM,math_fonts,mathjax,knowledge_base(1).txt,FONT,3,True,3
+MATHJAX_CHU_LA_MA,math_fonts,mathjax,knowledge_base(1).txt,FONT,3,True,3
+MATHJAX_CHU_TYPEWRITER,math_fonts,mathjax,knowledge_base(1).txt,FONT,3,True,3
+MATHJAX_CHU_SANS_SERIF,math_fonts,mathjax,knowledge_base(1).txt,FONT,3,True,3
+MATHJAX_CHU_CALLIGRAPHIC,math_fonts,mathjax,knowledge_base(1).txt,FONT,3,True,3
+MATHJAX_CHU_SCRIPT,math_fonts,mathjax,knowledge_base(1).txt,FONT,3,True,3
+MATHJAX_CHU_FRAKTUR,math_fonts,mathjax,knowledge_base(1).txt,FONT,3,True,3
+MATHJAX_O,math_units_color_numbering,mathjax,knowledge_base(1).txt,UNITS_COLOR_NUMBERING,3,True,3
+MATHJAX_MET,math_units_color_numbering,mathjax,knowledge_base(1).txt,UNITS_COLOR_NUMBERING,3,True,3
+MATHJAX_MET_VUONG,math_units_color_numbering,mathjax,knowledge_base(1).txt,UNITS_COLOR_NUMBERING,3,True,3
+MATHJAX_MET_TREN_GIAY,math_units_color_numbering,mathjax,knowledge_base(1).txt,UNITS_COLOR_NUMBERING,3,True,3
+MATHJAX_MET_TREN_GIAY_BINH_PHUONG,math_units_color_numbering,mathjax,knowledge_base(1).txt,UNITS_COLOR_NUMBERING,3,True,3
+MATHJAX_MOL,math_units_color_numbering,mathjax,knowledge_base(1).txt,UNITS_COLOR_NUMBERING,2,True,3
+MATHJAX_ON_VI_NHAN,math_units_color_numbering,mathjax,knowledge_base(1).txt,UNITS_COLOR_NUMBERING,3,True,3
+MATHJAX_ON_VI_SO_MU_AM,math_units_color_numbering,mathjax,knowledge_base(1).txt,UNITS_COLOR_NUMBERING,3,True,3
+MATHJAX_MAU_O,math_units_color_numbering,mathjax,knowledge_base(1).txt,UNITS_COLOR_NUMBERING,3,True,3
+MATHJAX_MAU_XANH,math_units_color_numbering,mathjax,knowledge_base(1).txt,UNITS_COLOR_NUMBERING,3,True,3
+MATHJAX_HIGHLIGHT_CONG_THUC,math_units_color_numbering,mathjax,knowledge_base(1).txt,UNITS_COLOR_NUMBERING,3,True,3
+MATHJAX_PHUONG_TRINH_CO_SO,math_units_color_numbering,mathjax,knowledge_base(1).txt,UNITS_COLOR_NUMBERING,3,True,3
+MATHJAX_GAN_NHAN_PHUONG_TRINH,math_units_color_numbering,mathjax,knowledge_base(1).txt,UNITS_COLOR_NUMBERING,3,True,3
+MATHJAX_THAM_CHIEU_PHUONG_TRINH,math_units_color_numbering,mathjax,knowledge_base(1).txt,UNITS_COLOR_NUMBERING,3,True,3
+LATEX_TAI_LIEU_TOI_GIAN,document_structure,latex_source,Learn LaTeX in 30 minutes - Overleaf.pdf,4,5,True,4
+LATEX_LOP_TAI_LIEU_ARTICLE,document_classes,latex_source,Learn LaTeX in 30 minutes - Overleaf.pdf,"4,6",5,True,4
+LATEX_LOP_TAI_LIEU_BOOK,document_classes,latex_source,Learn LaTeX in 30 minutes - Overleaf.pdf,"4,25,27",4,True,4
+LATEX_LOP_TAI_LIEU_REPORT,document_classes,latex_source,Learn LaTeX in 30 minutes - Overleaf.pdf,"4,27",4,True,4
+LATEX_PREAMBLE_TAI_LIEU,preamble_packages,latex_source,Learn LaTeX in 30 minutes - Overleaf.pdf,"5,6",5,True,4
+LATEX_NAP_PACKAGE,preamble_packages,latex_source,Learn LaTeX in 30 minutes - Overleaf.pdf,"6,33,34",5,True,4
+LATEX_NAP_PACKAGE_CO_TUY_CHON,preamble_packages,latex_source,Learn LaTeX in 30 minutes - Overleaf.pdf,34,4,True,4
+LATEX_TIEU_E_TAC_GIA_NGAY_THANG,title_author_date,latex_source,Learn LaTeX in 30 minutes - Overleaf.pdf,"7,8",5,True,0
+LATEX_LOI_CAM_ON_TAC_GIA,title_author_date,latex_source,Learn LaTeX in 30 minutes - Overleaf.pdf,7,4,True,4
+LATEX_CHU_THICH_MA_LATEX,comments_text_formatting,latex_source,Learn LaTeX in 30 minutes - Overleaf.pdf,9,5,True,4
+LATEX_CHU_AM,comments_text_formatting,latex_source,Learn LaTeX in 30 minutes - Overleaf.pdf,"9,10",5,True,0
+LATEX_CHU_NGHIENG,comments_text_formatting,latex_source,Learn LaTeX in 30 minutes - Overleaf.pdf,"9,10",5,True,4
+LATEX_GACH_CHAN,comments_text_formatting,latex_source,Learn LaTeX in 30 minutes - Overleaf.pdf,"9,10",4,True,4
+LATEX_NHAN_MANH,comments_text_formatting,latex_source,Learn LaTeX in 30 minutes - Overleaf.pdf,10,5,True,4
+LATEX_CHEN_HINH_ANH,graphics_figures,latex_source,Learn LaTeX in 30 minutes - Overleaf.pdf,"11,12,13",5,True,4
+LATEX_UONG_DAN_THU_MUC_HINH,graphics_figures,latex_source,Learn LaTeX in 30 minutes - Overleaf.pdf,"11,12",4,True,0
+LATEX_MOI_TRUONG_FIGURE,graphics_figures,latex_source,Learn LaTeX in 30 minutes - Overleaf.pdf,"13,14",5,True,4
+LATEX_CHU_THICH_HINH,graphics_figures,latex_source,Learn LaTeX in 30 minutes - Overleaf.pdf,"13,14,30",5,True,4
+LATEX_THAM_CHIEU_NHAN,cross_references,latex_source,Learn LaTeX in 30 minutes - Overleaf.pdf,"13,14,30",6,True,4
+LATEX_DANH_SACH_KHONG_THU_TU,lists,latex_source,Learn LaTeX in 30 minutes - Overleaf.pdf,15,5,True,4
+LATEX_DANH_SACH_CO_THU_TU,lists,latex_source,Learn LaTeX in 30 minutes - Overleaf.pdf,16,5,True,4
+LATEX_TOAN_INLINE_LATEX,math_modes,latex_source,Learn LaTeX in 30 minutes - Overleaf.pdf,17,5,True,4
+LATEX_TOAN_DISPLAY_KHONG_ANH_SO,math_modes,latex_source,Learn LaTeX in 30 minutes - Overleaf.pdf,"18,20,21",5,True,0
+LATEX_PHUONG_TRINH_ANH_SO,math_modes,latex_source,Learn LaTeX in 30 minutes - Overleaf.pdf,"18,20",4,True,0
+LATEX_PHUONG_TRINH_KHONG_ANH_SO_AMSMATH,math_modes,latex_source,Learn LaTeX in 30 minutes - Overleaf.pdf,"20,21",4,True,0
+LATEX_MOI_TRUONG_MATH,math_modes,latex_source,Learn LaTeX in 30 minutes - Overleaf.pdf,"17,20",4,True,4
+LATEX_MOI_TRUONG_DISPLAYMATH,math_modes,latex_source,Learn LaTeX in 30 minutes - Overleaf.pdf,"18,20,21",4,True,4
+LATEX_CHI_SO_DUOI_VA_SO_MU,math_expressions,latex_source,Learn LaTeX in 30 minutes - Overleaf.pdf,19,4,True,4
+LATEX_TOAN_TU_LUONG_GIAC_VA_LOG,math_expressions,latex_source,Learn LaTeX in 30 minutes - Overleaf.pdf,19,5,True,4
+LATEX_MOI_TRUONG_ABSTRACT,document_structure,latex_source,Learn LaTeX in 30 minutes - Overleaf.pdf,22,5,True,4
+LATEX_OAN_VAN_MOI,paragraphs_linebreaks,latex_source,Learn LaTeX in 30 minutes - Overleaf.pdf,"22,23,24",5,True,0
+LATEX_NGAT_DONG_THU_CONG,paragraphs_linebreaks,latex_source,Learn LaTeX in 30 minutes - Overleaf.pdf,"22,23,24",5,True,4
+LATEX_LENH_NEWLINE,paragraphs_linebreaks,latex_source,Learn LaTeX in 30 minutes - Overleaf.pdf,"23,24",3,True,4
+LATEX_GIAN_CACH_OAN_PARSKIP,paragraphs_linebreaks,latex_source,Learn LaTeX in 30 minutes - Overleaf.pdf,24,4,True,0
+LATEX_CHUONG_VA_MUC,sectioning,latex_source,Learn LaTeX in 30 minutes - Overleaf.pdf,"25,26,27",5,True,4
+LATEX_MUC_KHONG_ANH_SO,sectioning,latex_source,Learn LaTeX in 30 minutes - Overleaf.pdf,"25,26",5,True,0
+LATEX_MUC_LUC,table_of_contents,latex_source,Learn LaTeX in 30 minutes - Overleaf.pdf,"31,32,33",5,True,4
+LATEX_THEM_MUC_KHONG_ANH_SO_VAO_MUC_LUC,table_of_contents,latex_source,Learn LaTeX in 30 minutes - Overleaf.pdf,"31,32,33",4,True,0
+LATEX_BANG_TABULAR_CO_BAN,tables,latex_source,Learn LaTeX in 30 minutes - Overleaf.pdf,"27,28",5,True,4
+LATEX_BANG_CO_UONG_KE,tables,latex_source,Learn LaTeX in 30 minutes - Overleaf.pdf,"28,29",5,True,0
+LATEX_MOI_TRUONG_TABLE,tables,latex_source,Learn LaTeX in 30 minutes - Overleaf.pdf,30,5,True,4
+LATEX_CAN_GIUA_NOI_DUNG,text_layout,latex_source,Learn LaTeX in 30 minutes - Overleaf.pdf,"27,28",4,True,4
+LATEX_XUAT_TAI_LIEU_OVERLEAF,overleaf_workflow,latex_source,Learn LaTeX in 30 minutes - Overleaf.pdf,33,5,True,4
+LATEX_TRA_CUU_PACKAGE_CTAN,packages_ecosystem,latex_source,Learn LaTeX in 30 minutes - Overleaf.pdf,35,5,True,4
+LATEX_HE_THONG_TEX_LIVE,packages_ecosystem,latex_source,Learn LaTeX in 30 minutes - Overleaf.pdf,"35,36",5,True,4
+LATEX_KIEM_TRA_PACKAGE_BI_THIEU,packages_ecosystem,latex_source,Learn LaTeX in 30 minutes - Overleaf.pdf,"34,35",5,True,4

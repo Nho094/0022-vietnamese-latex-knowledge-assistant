@@ -1,0 +1,11 @@
+{
+  "data_contract_version": "2.0",
+  "json_schema_draft": "2020-12",
+  "transform_engine": "JSONata",
+  "render_engine": "Jinja2",
+  "intent_definitions": "data/intents.json",
+  "intent_schema": "data/standards/intent-definition.schema.json",
+  "knowledge_catalog": "data/knowledge/catalog.json",
+  "migration_report": "data/standards/migration-report.json",
+  "compatibility": "Legacy fields are preserved; new fields are additive."
+}

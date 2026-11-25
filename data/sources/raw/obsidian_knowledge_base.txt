@@ -1,0 +1,294 @@
+# KNOWLEDGE BASE — LATEX + MATHJAX
+# Phiên bản tái cấu trúc từ 2 tài liệu người dùng cung cấp.
+# Đã loại các cú pháp chỉ dành cho Obsidian/Markdown không thuộc LaTeX.
+# Không chứa code Python. Dùng để tra cứu/giải thích; intents.json dùng để chọn template.
+
+## 1. Phạm vi và nguồn
+Nguồn A: `Learn LaTeX in 30 minutes - Overleaf, Online LaTeX Editor.pdf` (40 trang).
+Nguồn B: `knowledge_base(1).txt`, chỉ giữ các nhóm có cú pháp toán LaTeX/MathJax:
+MATH_BASIC, MATRIX, CASES_SYSTEMS, ALIGN_ARRAY, SYMBOLS, SETS_LOGIC,
+ACCENTS_DECORATIONS, BRACKETS_SPACING_TEXT, FONT, UNITS_COLOR_NUMBERING.
+
+Đã loại khỏi nguồn B các phần chỉ thuộc Obsidian hoặc Markdown không phải LaTeX:
+OBSIDIAN_BASIC, TABLE (Markdown table), MERMAID, CALLOUTS,
+TAGS_FOOTNOTES_ESCAPE. Không chuyển các cú pháp `[[wikilink]]`, `==highlight==`,
+callout `[!note]`, tag Obsidian, Mermaid, Markdown table, comment `%%...%%`
+thành lệnh LaTeX.
+
+`intents.json` chứa intent/template; tệp này là kiến thức diễn giải và hướng dẫn dùng.
+Câu trong `train.csv` là câu tiếng Việt tổng hợp mới, không phải câu chép từ PDF.
+
+## 2. LaTeX là gì và quy trình biên dịch
+LaTeX là hệ thống dàn trang tài liệu. Tệp nguồn thường là văn bản thuần có phần nội dung
+và lệnh LaTeX. TeX engine đọc tệp nguồn, thực hiện dàn trang và tạo PDF.
+Khác với trình soạn thảo WYSIWYG, người viết tập trung vào nội dung/cấu trúc; lệnh và
+engine quyết định cách trình bày. Một ưu điểm quan trọng là tách nội dung khỏi kiểu dáng,
+giúp đổi định dạng tài liệu mà không phải viết lại nội dung.
+
+LaTeX phù hợp tài liệu khoa học, toán phức tạp, bảng, tài liệu kỹ thuật, chú thích,
+tham chiếu chéo, thư mục tài liệu, mục lục, chỉ mục và bảng thuật ngữ. Có thể mở rộng
+bằng package. Với bố cục trang tự do kiểu tạp chí, LaTeX có thể không phải lựa chọn thuận tiện nhất.
+
+Quy trình cơ bản:
+1. Tạo tệp `.tex` hoặc dự án Overleaf.
+2. Khai báo lớp tài liệu và package ở preamble.
+3. Viết nội dung giữa `\begin{document}` và `\end{document}`.
+4. Biên dịch/recompile bằng TeX engine để tạo PDF.
+5. Khi thay đổi nội dung, biên dịch lại; Overleaf có thể bật Auto Compile.
+
+## 3. Khung tài liệu, lớp và preamble
+Tài liệu tối thiểu:
+```latex
+\documentclass{article}
+\begin{document}
+Nội dung tài liệu.
+\end{document}
+```
+`\documentclass{...}` chọn lớp và ảnh hưởng cấu trúc/kiểu trình bày. Ví dụ trong nguồn:
+- `article`: bài báo/tài liệu ngắn.
+- `book`: sách/tài liệu dài có chương.
+- `report`: báo cáo dài có chương.
+Lớp khác có thể phục vụ CV, resume hoặc dạng tài liệu chuyên biệt.
+
+Preamble là mọi nội dung trước `\begin{document}`. Đây là vùng thiết lập:
+- khai báo `\documentclass`;
+- đặt tùy chọn lớp như cỡ chữ, khổ giấy;
+- nạp package;
+- cấu hình ngôn ngữ và thiết lập khác.
+
+Ví dụ:
+```latex
+\documentclass[12pt,a4paper]{article}
+\usepackage{graphicx}
+\usepackage{amsmath,amssymb}
+\begin{document}
+...
+\end{document}
+```
+Tùy chọn của lớp đặt trong `[...]`, phân cách bằng dấu phẩy. Ví dụ cỡ chữ `9pt`, `11pt`, `12pt` (mặc định thường là `10pt`); khổ giấy có `a4paper`, `letterpaper`, `legalpaper`.
+
+## 4. Package và hệ sinh thái
+Package mở rộng chức năng LaTeX. Nạp package trong preamble:
+```latex
+\usepackage{graphicx}
+\usepackage[options]{geometry}
+```
+Tùy chọn package đặt trong `[...]`, có thể gồm nhiều giá trị phân cách bằng dấu phẩy. Nếu package không có tùy chọn hoặc muốn dùng mặc định:
+`\usepackage{somepackage}`.
+
+LaTeX tìm tệp `.sty` tương ứng. Nếu không tìm thấy, quá trình biên dịch dừng với lỗi. Khi gặp lỗi package:
+- kiểm tra chính tả tên package;
+- kiểm tra cú pháp `\usepackage`;
+- kiểm tra package có trong bản phân phối TeX đang dùng hay chưa.
+
+`graphicx` cung cấp `\includegraphics` và `\graphicspath`.
+`amsmath` cung cấp nhiều môi trường toán mở rộng, trong đó có `equation*` và các môi trường
+ma trận/cases thường dùng trong template MathJax/LaTeX.
+`geometry` là ví dụ package cấu hình bố cục trang.
+
+CTAN (Comprehensive TeX Archive Network) là kho phân phối/tìm kiếm package, có thể duyệt theo
+chủ đề, theo alphabet hoặc tìm theo tên. TeX Live là bộ phân phối LaTeX gồm nhiều package,
+font và công cụ từ hệ sinh thái TeX. TeX Live được cập nhật theo chu kỳ; một số package có trên
+CTAN có thể không nằm trong TeX Live vì lỗi thời, vấn đề giấy phép, mới phát hành hoặc phụ thuộc nền tảng.
+Vì vậy, package có trên CTAN không đồng nghĩa chắc chắn có sẵn trên mọi máy/Overleaf.
+
+## 5. Tiêu đề, tác giả, ngày và trang đầu
+Khai báo ở preamble:
+```latex
+\title{Tiêu đề tài liệu}
+\author{Tên tác giả}
+\date{\today}
+```
+` \date{...}` có thể là ngày cố định hoặc `\today` để lấy ngày lúc biên dịch.
+`\thanks{...}` có thể đặt bên trong `\author{...}` để thêm dấu chú thích và nội dung cảm ơn.
+Trong phần body, dùng `\maketitle` để in tiêu đề, tác giả và ngày.
+
+## 6. Comment và định dạng văn bản
+Comment bắt đầu bằng `%`. Phần còn lại của dòng không được typeset và không ảnh hưởng PDF.
+Dùng comment cho ghi chú TODO, giải thích mã, hoặc tạm vô hiệu hóa một dòng.
+
+Các lệnh định dạng văn bản:
+- `\textbf{...}`: chữ đậm.
+- `\textit{...}`: chữ nghiêng.
+- `\underline{...}`: gạch chân.
+- `\emph{...}`: nhấn mạnh theo ngữ cảnh; trong văn bản thường thường là nghiêng,
+  nhưng hiệu ứng có thể đảo khi nằm trong đoạn đã nghiêng. Một số class/package như Beamer
+  có thể thay đổi cách `\emph` hoạt động.
+
+## 7. Hình ảnh, figure, caption và tham chiếu
+Để chèn hình, nạp `\usepackage{graphicx}` rồi dùng:
+```latex
+\includegraphics[width=0.75\textwidth]{mesh}
+```
+`width=...` đặt chiều rộng; `\textwidth` là chiều rộng vùng văn bản. Có thể khai báo thư mục:
+```latex
+\graphicspath{{images/}}
+```
+Khi đó LaTeX tìm ảnh trong thư mục `images`. Tên file trong ví dụ không có phần mở rộng.
+Có thể ghi phần mở rộng trong `\includegraphics`, nhưng nguồn khuyến nghị thường bỏ phần mở rộng
+để LaTeX dò các định dạng được hỗ trợ. Nên tránh tên file có khoảng trắng hoặc nhiều dấu chấm;
+dùng phần mở rộng viết thường.
+
+Nên đặt ảnh trong `figure` hoặc môi trường float tương tự để LaTeX tự chọn vị trí phù hợp:
+```latex
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.75\textwidth]{mesh}
+  \caption{Mô tả hình}
+  \label{fig:mesh}
+\end{figure}
+```
+`\centering` căn giữa; `\caption{...}` tạo chú thích (có thể xuất hiện trong danh sách hình);
+`\label{...}` tạo nhãn; `\ref{...}` in số tham chiếu; `\pageref{...}` in số trang.
+Có thể đặt vị trí gợi ý như `[h]`, `[htbp]`; đây là gợi ý bố trí, không phải cam kết vị trí tuyệt đối.
+
+## 8. Danh sách
+Môi trường bắt đầu bằng `\begin{...}` và kết thúc bằng `\end{...}`; tên phải khớp.
+Mỗi mục danh sách được mở bằng `\item`.
+- `itemize`: danh sách không thứ tự, thường có bullet.
+- `enumerate`: danh sách có thứ tự, tự đánh số bắt đầu từ 1.
+
+```latex
+\begin{itemize}
+  \item Mục thứ nhất
+  \item Mục thứ hai
+\end{itemize}
+```
+```latex
+\begin{enumerate}
+  \item Bước thứ nhất
+  \item Bước thứ hai
+\end{enumerate}
+```
+
+## 9. Chế độ toán
+LaTeX có hai chế độ toán:
+- Inline: công thức nằm trong dòng văn bản.
+- Display: công thức tách thành dòng riêng.
+
+Các cách viết inline trong tài liệu:
+- `$ ... $`
+- `\( ... \)`
+- `\begin{math} ... \end{math}`
+
+Các cách viết display:
+- `\[ ... \]` (được khuyến nghị)
+- `\begin{displaymath} ... \end{displaymath}`
+- `\begin{equation} ... \end{equation}` (có đánh số)
+- `\begin{equation*} ... \end{equation*}` (không đánh số, cần `amsmath`)
+
+Tài liệu khuyến nghị dùng `\[...\]` thay cho `$$...$$` trong mã LaTeX.
+Trong Obsidian/MathJax, `$...$` và `$$...$$` thường được dùng để mở/đóng vùng toán;
+bộ dữ liệu chuẩn hóa template MathJax sang `\(...\)` và `\[...\]` để phân biệt rõ inline/display.
+Khi chèn vào tệp `.tex`, dùng cú pháp toán LaTeX tương ứng, không thêm cú pháp Obsidian khác.
+
+Ví dụ:
+```latex
+Trong vật lý, hệ thức khối lượng-năng lượng là \(E=mc^2\).
+\[
+  E=mc^2
+\]
+\begin{equation}
+  E=mc^2
+\end{equation}
+```
+
+## 10. Biểu thức và ký hiệu toán trong knowledge_base
+Các template được giữ lại từ các nhóm MathJax của nguồn B, với cú pháp Obsidian không liên quan đã loại bỏ.
+`{...}` trong template là placeholder do ứng dụng thay thế; không phải phần literal cần in nguyên.
+
+### 10.1 Biểu thức cơ bản
+- Phân số: `\frac{num}{den}`.
+- Căn bậc hai: `\sqrt{expr}`.
+- Căn bậc n: `\sqrt[n]{expr}`.
+- Số mũ: `base^{exp}`.
+- Chỉ số dưới: `base_{sub}`.
+- Kết hợp mũ/chỉ số: `base_{sub}^{exp}`.
+- Tổng: `\sum_{from}^{to} expr`.
+- Tích: `\prod_{from}^{to} expr`.
+- Tích phân: `\int_{from}^{to} expr\,dx`.
+- Giới hạn: `\lim_{condition} expr`.
+- Đạo hàm cấp một/cấp hai: `f'(x)`, `f''(x)`.
+- Toán tử hàm: `\sin`, `\cos`, `\log`.
+
+### 10.2 Ma trận
+Trong ma trận, `&` ngăn cột, `\\` ngăn hàng.
+- `matrix`: không có ngoặc bao ngoài.
+- `pmatrix`: ngoặc tròn.
+- `bmatrix`: ngoặc vuông.
+- `Bmatrix`: ngoặc nhọn.
+- `vmatrix`: dấu định thức.
+- `Vmatrix`: dấu chuẩn.
+- `smallmatrix`: ma trận nhỏ trong dòng.
+Dùng `\cdots`, `\vdots`, `\ddots` để biểu diễn phần tử bị lược theo chiều ngang, dọc, chéo.
+Các môi trường ma trận/cases mở rộng thường cần `amsmath` trong LaTeX. MathJax hỗ trợ nhiều môi trường AMS,
+nhưng khi dùng trong nền tảng khác nhau cần xác nhận extension và renderer đang bật.
+
+### 10.3 Hệ phương trình và hàm từng đoạn
+- Hệ phương trình: kết hợp `\left\{`, `aligned`, các dòng phương trình.
+- Hàm từng đoạn: `cases`, mỗi dòng có biểu thức và điều kiện, phân cách bằng `&`.
+- Căn chỉnh nhiều phương trình: `aligned`, đặt `&` tại vị trí cần thẳng hàng (thường là dấu `=`).
+- Bảng toán học: `array` với khai báo căn lề `l`, `c`, `r`.
+
+### 10.4 Ký hiệu Hy Lạp và ký hiệu toán
+Nguồn B có các ký hiệu: `\alpha`, `\beta`, `\gamma`, `\delta`, `\theta`, `\lambda`,
+`\pi`, `\sigma`, `\omega`, `\nabla`, `\partial`, `\infty`.
+Các tập hợp: `\mathbb{R}`, `\mathbb{N}`, `\mathbb{Z}`, `\emptyset`.
+Quan hệ/tập hợp: `\in`, `\notin`, `\cup`, `\cap`, `\subseteq`.
+So sánh và phép toán: `\neq`, `\leq`, `\geq`, `\approx`, `\equiv`, `\times`, `\div`, `\pm`.
+Logic/suy luận: `\implies`, `\iff`, `\forall`, `\exists`, `\land`, `\lor`, `\lnot`,
+`\vdash`, `\vDash`, `\mapsto`, `\rightarrow`.
+Modulo: `a\equiv b\pmod n`.
+
+### 10.5 Trang trí biểu thức
+- Vector: `\vec{x}`, vector dài `\overrightarrow{AB}`.
+- Gạch trên/dưới: `\bar{x}`, `\underline{x}`.
+- Dấu ngã/mũ: `\widetilde{x}`, `\widehat{x}`.
+- Đạo hàm chấm: `\dot{x}`.
+- Đóng khung: `\boxed{expr}`.
+- Ngoặc giải thích: `\overbrace{expr}^{label}`, `\underbrace{expr}_{label}`.
+- Đặt ký hiệu trên/dưới: `\overset{label}{expr}`, `\underset{label}{expr}`.
+
+### 10.6 Ngoặc, khoảng cách và chữ trong công thức
+- Ngoặc tự co: `\left( expr \right)`, `\left[ expr \right]`, `\left\{ expr \right\}`.
+- Trị tuyệt đối: `\lvert expr \rvert`; chuẩn: `\lVert expr \rVert`.
+- Khoảng cách: `\,` nhỏ, `\;` vừa, `\quad` lớn, `\qquad` rất lớn, `\!` âm.
+- Chữ trong toán: `\text{text}` (cần môi trường/package phù hợp trong LaTeX; MathJax thường hỗ trợ với AMS).
+
+### 10.7 Font toán
+Các lệnh được giữ lại:
+- Blackboard bold: `\mathbb{R}`.
+- Đậm: `\mathbf{ABC}`, ký hiệu đậm `\boldsymbol{\alpha}`.
+- La Mã: `\mathrm{ABC}`.
+- Typewriter: `\mathtt{ABC}`.
+- Sans serif: `\mathsf{ABC}`.
+- Calligraphic: `\mathcal{ABC}`.
+- Script: `\mathscr{ABC}` (có thể cần extension/package tương ứng).
+- Fraktur: `\mathfrak{ABC}`.
+
+### 10.8 Đơn vị, màu và đánh số
+Các mẫu trong nguồn B:
+- Độ: `45^\circ`.
+- Mét: `\mathrm{m}`; mét vuông: `\mathrm{m}^2`.
+- Mét/giây và mét/giây bình phương: dùng chữ đơn vị upright.
+- Mol: `\mathrm{mol}`.
+- Đơn vị tích: `\mathrm{kg}\!\cdot\!\mathrm{m}^2`.
+- Số mũ âm: `\mathrm{m}\,\mathrm{s}^{-2}`.
+- Màu đỏ/xanh: `\color{red}{expr}`, `\color{blue}{expr}`.
+- Nền highlight: `\bbox[yellow]{expr}`.
+- Số phương trình: môi trường `equation`.
+- Số tùy chỉnh: `\tag{label}`; tham chiếu số: `\eqref{label}`.
+Lưu ý: màu và bbox phụ thuộc extension/renderer. `\tag` và `\eqref` có thể khác nhau giữa MathJax, LaTeX và plugin; kiểm tra nơi chạy thực tế.
+
+## 11. Quy tắc dữ liệu và chèn template
+- `intents.json` là nguồn dữ liệu runtime: phân loại câu -> intent -> template -> thay placeholder -> chèn tại con trỏ.
+- `knowledge_base.txt` là tài liệu tra cứu; không dùng thay cho template đã xác minh.
+- `train.csv` chỉ chứa câu huấn luyện tổng hợp để phát triển ban đầu.
+- `val.csv` và `test.csv` để trống có chủ đích, chờ câu do chủ dự án viết/duyệt. Không tự sinh test.
+- Placeholder trong JSON phải được thay bằng bộ render có kiểm soát. Không dùng `.format()` trực tiếp với toàn bộ chuỗi LaTeX vì LaTeX có nhiều dấu `{}`.
+- Với ma trận, ứng dụng phải render `rows` theo đúng quy tắc: `&` ngăn cột, `\\` ngăn hàng.
+- `requires` ghi package cần thiết trong LaTeX thuần; MathJax có thể có bộ extension khác nên không suy ra rằng package LaTeX và MathJax extension là một.
+- Các template MathJax có `render_target=mathjax`; các template cho tệp `.tex` có `render_target=latex_source`.
+
+## 12. Phạm vi chưa bao gồm
+Nguồn PDF có phần liên kết đến nhiều bài Overleaf khác (font, Beamer, bibliography nâng cao, TikZ, geometry, v.v.); các liên kết đó chỉ là danh mục chủ đề, không phải toàn bộ nội dung hướng dẫn trong PDF này. Không tự biến các trang liên kết thành kiến thức chi tiết nếu nội dung không có trong hai file.

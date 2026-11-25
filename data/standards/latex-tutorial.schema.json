@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "LaTeX tutorial sections",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "source_file",
+    "page_count",
+    "section_count",
+    "sections"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string"
+    },
+    "source_file": {
+      "type": "string"
+    },
+    "page_count": {
+      "type": "integer"
+    },
+    "section_count": {
+      "type": "integer"
+    },
+    "sections": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "domain": {
+            "type": "string"
+          },
+          "topic": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "content": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id"
+        ],
+        "additionalProperties": true
+      }
+    }
+  },
+  "additionalProperties": true
+}

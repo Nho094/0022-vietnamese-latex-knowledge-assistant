@@ -1,0 +1,70 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Obsidian knowledge records",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "source_file",
+    "records"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string"
+    },
+    "source_file": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "section_notes": {
+      "type": "object"
+    },
+    "records": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "domain",
+          "topic",
+          "title"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "domain": {
+            "type": "string"
+          },
+          "topic": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "trigger_phrases": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "syntax_template": {
+            "type": "string"
+          },
+          "explanation": {
+            "type": "string"
+          },
+          "notes": {
+            "type": "array"
+          },
+          "source": {
+            "type": "object"
+          }
+        },
+        "additionalProperties": true
+      }
+    }
+  },
+  "additionalProperties": true
+}

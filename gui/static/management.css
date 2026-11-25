@@ -1,0 +1,123 @@
+.management-actions,
+.execute-controls,
+.dialog-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  padding: 0 22px 18px;
+}
+
+.button-danger {
+  color: #a43d51;
+  background: #fff8f8;
+  border-color: #f2dce0;
+}
+
+.execute-controls input {
+  flex: 1;
+  min-width: 220px;
+  height: 38px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 0 11px;
+  font-size: 11px;
+}
+
+.execute-result {
+  max-height: 280px;
+  overflow: auto;
+  margin: 0 22px 18px;
+  padding: 13px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fafaff;
+  color: #3d4961;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  font: 10px/1.55 ui-monospace, SFMono-Regular, Consolas, monospace;
+}
+
+.code-input,
+#import-json {
+  width: 100%;
+  min-height: 100px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 11px;
+  resize: vertical;
+  font: 10px/1.55 ui-monospace, SFMono-Regular, Consolas, monospace;
+}
+
+#definition-preview {
+  min-height: 250px;
+  margin-top: 9px;
+}
+
+.definition-details {
+  margin-top: 15px;
+  color: #6356bc;
+  font-size: 11px;
+}
+
+.success-text {
+  color: #18845c;
+  white-space: pre-wrap;
+}
+
+.error-text {
+  color: #b33e54;
+  white-space: pre-wrap;
+}
+
+.import-dialog {
+  width: min(680px, calc(100vw - 28px));
+  max-height: 90vh;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 20px;
+  color: var(--ink);
+  box-shadow: 0 20px 70px #151d3533;
+}
+
+.import-dialog::backdrop {
+  background: #161d3180;
+  backdrop-filter: blur(2px);
+}
+
+.import-dialog h2 {
+  margin: 0 0 7px;
+  font: 750 17px Manrope, sans-serif;
+}
+
+.import-dialog > .muted {
+  margin-bottom: 14px;
+}
+
+.import-dialog #import-json {
+  min-height: 280px;
+  margin: 13px 0 7px;
+}
+
+.dialog-close-row {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.dialog-actions {
+  justify-content: flex-end;
+  padding: 13px 0 0;
+}
+
+@media (max-width: 640px) {
+  .management-actions,
+  .execute-controls,
+  .dialog-actions {
+    padding-right: 13px;
+    padding-left: 13px;
+  }
+
+  .execute-result {
+    margin-right: 13px;
+    margin-left: 13px;
+  }
+}

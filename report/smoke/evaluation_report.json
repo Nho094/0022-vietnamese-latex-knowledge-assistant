@@ -1,0 +1,194 @@
+{
+  "timestamp": "2026-11-19 10:31:21 UTC",
+  "seed": 42,
+  "device": "cpu",
+  "hf_model_loaded": false,
+  "sbert_model_loaded": false,
+  "test_csv_sha256": "637f54fdae2d1be7d39ca960ce91003adb2f50a09ee446b87fbb092b1b9c6066",
+  "test_csv_sha256_verified": true,
+  "test_csv_rows": 0,
+  "train_csv_rows": 488,
+  "total_scenarios": 162,
+  "classification_metrics": {
+    "total_samples": 488,
+    "top1_accuracy": 0.9959,
+    "top3_accuracy": 1.0,
+    "top5_accuracy": 1.0,
+    "direct_accept_count": 488,
+    "direct_accept_rate": 1.0,
+    "direct_accept_accuracy": 0.9959,
+    "category_accuracy": {
+      "math_expression": {
+        "total": 42,
+        "correct": 42,
+        "accuracy": 1.0
+      },
+      "math_matrix": {
+        "total": 24,
+        "correct": 23,
+        "accuracy": 0.9583
+      },
+      "math_cases_systems": {
+        "total": 6,
+        "correct": 6,
+        "accuracy": 1.0
+      },
+      "math_alignment_array": {
+        "total": 15,
+        "correct": 15,
+        "accuracy": 1.0
+      },
+      "math_symbols": {
+        "total": 105,
+        "correct": 104,
+        "accuracy": 0.9905
+      },
+      "math_logic_sets": {
+        "total": 18,
+        "correct": 18,
+        "accuracy": 1.0
+      },
+      "math_accents": {
+        "total": 36,
+        "correct": 36,
+        "accuracy": 1.0
+      },
+      "math_brackets_spacing": {
+        "total": 33,
+        "correct": 33,
+        "accuracy": 1.0
+      },
+      "math_fonts": {
+        "total": 27,
+        "correct": 27,
+        "accuracy": 1.0
+      },
+      "math_units_color_numbering": {
+        "total": 42,
+        "correct": 42,
+        "accuracy": 1.0
+      },
+      "document_structure": {
+        "total": 8,
+        "correct": 8,
+        "accuracy": 1.0
+      },
+      "document_classes": {
+        "total": 12,
+        "correct": 12,
+        "accuracy": 1.0
+      },
+      "preamble_packages": {
+        "total": 12,
+        "correct": 12,
+        "accuracy": 1.0
+      },
+      "title_author_date": {
+        "total": 4,
+        "correct": 4,
+        "accuracy": 1.0
+      },
+      "comments_text_formatting": {
+        "total": 16,
+        "correct": 16,
+        "accuracy": 1.0
+      },
+      "graphics_figures": {
+        "total": 12,
+        "correct": 12,
+        "accuracy": 1.0
+      },
+      "cross_references": {
+        "total": 4,
+        "correct": 4,
+        "accuracy": 1.0
+      },
+      "lists": {
+        "total": 8,
+        "correct": 8,
+        "accuracy": 1.0
+      },
+      "math_modes": {
+        "total": 12,
+        "correct": 12,
+        "accuracy": 1.0
+      },
+      "math_expressions": {
+        "total": 8,
+        "correct": 8,
+        "accuracy": 1.0
+      },
+      "paragraphs_linebreaks": {
+        "total": 8,
+        "correct": 8,
+        "accuracy": 1.0
+      },
+      "sectioning": {
+        "total": 4,
+        "correct": 4,
+        "accuracy": 1.0
+      },
+      "table_of_contents": {
+        "total": 4,
+        "correct": 4,
+        "accuracy": 1.0
+      },
+      "tables": {
+        "total": 8,
+        "correct": 8,
+        "accuracy": 1.0
+      },
+      "text_layout": {
+        "total": 4,
+        "correct": 4,
+        "accuracy": 1.0
+      },
+      "overleaf_workflow": {
+        "total": 4,
+        "correct": 4,
+        "accuracy": 1.0
+      },
+      "packages_ecosystem": {
+        "total": 12,
+        "correct": 12,
+        "accuracy": 1.0
+      }
+    }
+  },
+  "latency_metrics": {
+    "device": "cpu",
+    "num_runs": 3,
+    "total_samples_timed": 1464,
+    "mean_latency_ms": 1.921,
+    "std_latency_ms": 0.27,
+    "median_latency_ms": 1.894,
+    "p90_latency_ms": 1.977,
+    "p95_latency_ms": 2.041,
+    "p99_latency_ms": 3.47,
+    "min_latency_ms": 1.686,
+    "max_latency_ms": 3.775,
+    "throughput_qps": 520.48
+  },
+  "fallback_metrics": {
+    "threshold_tau": 0.8,
+    "threshold_theta": 0.3,
+    "total_evaluated": 488,
+    "fallback_triggered_count": 0,
+    "fallback_trigger_rate": 0.0,
+    "fallback_understood_count": 0,
+    "fallback_understood_rate": 0.0,
+    "fallback_recall_at_1": 0.0,
+    "fallback_recall_at_3": 0.0,
+    "combined_system_recall_at_1": 0.9959,
+    "combined_system_recall_at_3": 0.9959,
+    "ood_total": 10,
+    "ood_rejected_count": 9,
+    "ood_rejection_rate": 0.9
+  },
+  "template_metrics": {
+    "total_checked": 488,
+    "render_success_count": 488,
+    "render_success_rate": 1.0,
+    "verification_mode": "static check only"
+  }
+}

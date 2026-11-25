@@ -1,0 +1,74 @@
+{
+  "timestamp": "2026-11-23 08:36:08 UTC",
+  "target": "category",
+  "num_classes": 2,
+  "test_csv_sha256": "ef8781ba7d231aceaf9043b394acd343a23e6beac8454d168bfe4a19ad3886fd",
+  "preprocessing_fingerprint": "96814692cbabd63b2623e1a052d0cd71cbeb1d5d367d98a40ab009bb467ce444",
+  "smoke_mode": true,
+  "candidate_learning_rates": [
+    2e-05
+  ],
+  "best_learning_rate": 2e-05,
+  "lr_search_results": {
+    "2.0e-05": 0.38461538461538464
+  },
+  "seeds": [
+    42
+  ],
+  "early_stopping_patience": 5,
+  "multi_seed_results": [
+    {
+      "seed": 42,
+      "best_epoch": 1,
+      "epochs_trained": 1,
+      "val_macro_f1": 0.38461538461538464,
+      "test_accuracy": 0.625,
+      "test_macro_f1": 0.38461538461538464,
+      "test_weighted_f1": 0.4807692307692308,
+      "test_ece": 0.08474646508693695,
+      "test_loss": 0.6762899160385132
+    }
+  ],
+  "aggregate_test_metrics": {
+    "accuracy_mean": 0.625,
+    "accuracy_std": 0.0,
+    "macro_f1_mean": 0.38461538461538464,
+    "macro_f1_std": 0.0,
+    "ece_mean": 0.08474646508693695,
+    "ece_std": 0.0
+  },
+  "best_seed": 42,
+  "best_model_test_metrics": {
+    "accuracy": 0.625,
+    "macro_f1": 0.38461538461538464,
+    "weighted_f1": 0.4807692307692308,
+    "ece": 0.08474646508693695,
+    "loss": 0.6762899160385132,
+    "confusion_matrix": [
+      [
+        0,
+        3
+      ],
+      [
+        0,
+        5
+      ]
+    ],
+    "per_class": {
+      "tex_doc": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 3.0
+      },
+      "tex_struct": {
+        "precision": 0.625,
+        "recall": 1.0,
+        "f1": 0.7692307692307693,
+        "support": 5.0
+      }
+    }
+  },
+  "saved_checkpoint_dir": "/KINGSTON/Github/AI_Agent/projects/0022-vietnamese-latex-knowledge-assistant/models/checkpoints/phobert_classifier",
+  "confusion_matrix_figure": "/KINGSTON/Github/AI_Agent/projects/0022-vietnamese-latex-knowledge-assistant/report/figures/phobert_category_confusion_matrix.png"
+}

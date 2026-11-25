@@ -1,0 +1,2491 @@
+{
+  "schema_version": "1.0",
+  "source_file": "obsidian_knowledge_base.txt",
+  "description": "Các cặp INTENT/OUTPUT/NOTES được phân tích từ knowledge_base Obsidian; raw_text giữ nguyên bản nguồn để đối chiếu.",
+  "section_notes": {},
+  "records": [
+    {
+      "id": "OBS_0001",
+      "domain": "obsidian_mathjax",
+      "topic": "obsidian_basic",
+      "title": "tiêu đề 1",
+      "trigger_phrases": [
+        "tiêu đề 1"
+      ],
+      "syntax_template": "# {text}",
+      "explanation": "",
+      "notes": [],
+      "source": {
+        "file": "obsidian_knowledge_base.txt",
+        "section": "OBSIDIAN_BASIC",
+        "line": 18
+      }
+    },
+    {
+      "id": "OBS_0002",
+      "domain": "obsidian_mathjax",
+      "topic": "obsidian_basic",
+      "title": "tiêu đề 2",
+      "trigger_phrases": [
+        "tiêu đề 2"
+      ],
+      "syntax_template": "## {text}",
+      "explanation": "",
+      "notes": [],
+      "source": {
+        "file": "obsidian_knowledge_base.txt",
+        "section": "OBSIDIAN_BASIC",
+        "line": 20
+      }
+    },
+    {
+      "id": "OBS_0003",
+      "domain": "obsidian_mathjax",
+      "topic": "obsidian_basic",
+      "title": "tiêu đề 3",
+      "trigger_phrases": [
+        "tiêu đề 3"
+      ],
+      "syntax_template": "### {text}",
+      "explanation": "",
+      "notes": [],
+      "source": {
+        "file": "obsidian_knowledge_base.txt",
+        "section": "OBSIDIAN_BASIC",
+        "line": 22
+      }
+    },
+    {
+      "id": "OBS_0004",
+      "domain": "obsidian_mathjax",
+      "topic": "obsidian_basic",
+      "title": "chữ đậm",
+      "trigger_phrases": [
+        "chữ đậm"
+      ],
+      "syntax_template": "**{text}**",
+      "explanation": "",
+      "notes": [],
+      "source": {
+        "file": "obsidian_knowledge_base.txt",
+        "section": "OBSIDIAN_BASIC",
+        "line": 24
+      }
+    },
+    {
+      "id": "OBS_0005",
+      "domain": "obsidian_mathjax",
+      "topic": "obsidian_basic",
+      "title": "chữ nghiêng",
+      "trigger_phrases": [
+        "chữ nghiêng"
+      ],
+      "syntax_template": "*{text}*",
+      "explanation": "",
+      "notes": [],
+      "source": {
+        "file": "obsidian_knowledge_base.txt",
+        "section": "OBSIDIAN_BASIC",
+        "line": 26
+      }
+    },
+    {
+      "id": "OBS_0006",
+      "domain": "obsidian_mathjax",
+      "topic": "obsidian_basic",
+      "title": "gạch ngang",
+      "trigger_phrases": [
+        "gạch ngang"
+      ],
+      "syntax_template": "~~{text}~~",
+      "explanation": "",
+      "notes": [],
+      "source": {
+        "file": "obsidian_knowledge_base.txt",
+        "section": "OBSIDIAN_BASIC",
+        "line": 28
+      }
+    },
+    {
+      "id": "OBS_0007",
+      "domain": "obsidian_mathjax",
+      "topic": "obsidian_basic",
+      "title": "highlight",
+      "trigger_phrases": [
+        "highlight"
+      ],
+      "syntax_template": "=={text}==",
+      "explanation": "",
+      "notes": [],
+      "source": {
+        "file": "obsidian_knowledge_base.txt",
+        "section": "OBSIDIAN_BASIC",
+        "line": 30
+      }
+    },
+    {
+      "id": "OBS_0008",
+      "domain": "obsidian_mathjax",
+      "topic": "obsidian_basic",
+      "title": "link nội bộ",
+      "trigger_phrases": [
+        "link nội bộ"
+      ],
+      "syntax_template": "[[{note}]]",
+      "explanation": "",
+      "notes": [],
+      "source": {
+        "file": "obsidian_knowledge_base.txt",
+        "section": "OBSIDIAN_BASIC",
+        "line": 32
+      }
+    },
+    {
+      "id": "OBS_0009",
+      "domain": "obsidian_mathjax",
+      "topic": "obsidian_basic",
+      "title": "link nội bộ có tên",
+      "trigger_phrases": [
+        "link nội bộ có tên"
+      ],
+      "syntax_template": "[[{note}|{label}]]",
+      "explanation": "",
+      "notes": [],
+      "source": {
+        "file": "obsidian_knowledge_base.txt",
+        "section": "OBSIDIAN_BASIC",
+        "line": 34
+      }
+    },
+    {
+      "id": "OBS_0010",
+      "domain": "obsidian_mathjax",
+      "topic": "obsidian_basic",
+      "title": "link web",
+      "trigger_phrases": [
+        "link web"
+      ],
+      "syntax_template": "[{label}]({url})",
+      "explanation": "",
+      "notes": [],
+      "source": {
+        "file": "obsidian_knowledge_base.txt",
+        "section": "OBSIDIAN_BASIC",
+        "line": 36
+      }
+    },
+    {
+      "id": "OBS_0011",
+      "domain": "obsidian_mathjax",
+      "topic": "obsidian_basic",
+      "title": "ảnh",
+      "trigger_phrases": [
+        "ảnh"
+      ],
+      "syntax_template": "![{alt}]({url})",
+      "explanation": "",
+      "notes": [],
+      "source": {
+        "file": "obsidian_knowledge_base.txt",
+        "section": "OBSIDIAN_BASIC",
+        "line": 38
+      }
+    },
+    {
+      "id": "OBS_0012",
+      "domain": "obsidian_mathjax",
+      "topic": "obsidian_basic",
+      "title": "trích dẫn",
+      "trigger_phrases": [
+        "trích dẫn"
+      ],
+      "syntax_template": "> {text}",
+      "explanation": "",
+      "notes": [],
+      "source": {
+        "file": "obsidian_knowledge_base.txt",
+        "section": "OBSIDIAN_BASIC",
+        "line": 40
+      }
+    },
+    {
+      "id": "OBS_0013",
+      "domain": "obsidian_mathjax",
+      "topic": "obsidian_basic",
+      "title": "danh sách",
+      "trigger_phrases": [
+        "danh sách"
+      ],
+      "syntax_template": "- {item}",
+      "explanation": "",
+      "notes": [],
+      "source": {
+        "file": "obsidian_knowledge_base.txt",
+        "section": "OBSIDIAN_BASIC",
+        "line": 42
+      }
+    },
+    {
+      "id": "OBS_0014",
+      "domain": "obsidian_mathjax",
+      "topic": "obsidian_basic",
+      "title": "danh sách đánh số",
+      "trigger_phrases": [
+        "danh sách đánh số"
+      ],
+      "syntax_template": "1. {item1}\\n2. {item2}",
+      "explanation": "",
+      "notes": [],
+      "source": {
+        "file": "obsidian_knowledge_base.txt",
+        "section": "OBSIDIAN_BASIC",
+        "line": 44
+      }
+    },
+    {
+      "id": "OBS_0015",
+      "domain": "obsidian_mathjax",
+      "topic": "obsidian_basic",
+      "title": "checkbox",
+      "trigger_phrases": [
+        "checkbox"
+      ],
+      "syntax_template": "- [ ] {task}",
+      "explanation": "",
+      "notes": [],
+      "source": {
+        "file": "obsidian_knowledge_base.txt",
+        "section": "OBSIDIAN_BASIC",
+        "line": 46
+      }
+    },
+    {
+      "id": "OBS_0016",
+      "domain": "obsidian_mathjax",
+      "topic": "obsidian_basic",
+      "title": "checkbox hoàn thành",
+      "trigger_phrases": [
+        "checkbox hoàn thành"
+      ],
+      "syntax_template": "- [x] {task}",
+      "explanation": "",
+      "notes": [],
+      "source": {
+        "file": "obsidian_knowledge_base.txt",
+        "section": "OBSIDIAN_BASIC",
+        "line": 48
+      }
+    },
+    {
+      "id": "OBS_0017",
+      "domain": "obsidian_mathjax",
+      "topic": "obsidian_basic",
+      "title": "đường ngang",
+      "trigger_phrases": [
+        "đường ngang"
+      ],
+      "syntax_template": "---",
+      "explanation": "",
+      "notes": [],
+      "source": {
+        "file": "obsidian_knowledge_base.txt",
+        "section": "OBSIDIAN_BASIC",
+        "line": 50
+      }
+    },
+    {
+      "id": "OBS_0018",
+      "domain": "obsidian_mathjax",
+      "topic": "obsidian_basic",
+      "title": "code inline",
+      "trigger_phrases": [
+        "code inline"
+      ],
+      "syntax_template": "`{code}`",
+      "explanation": "",
+      "notes": [],
+      "source": {
+        "file": "obsidian_knowledge_base.txt",
+        "section": "OBSIDIAN_BASIC",
+        "line": 52
+      }
+    },
+    {
+      "id": "OBS_0019",
+      "domain": "obsidian_mathjax",
+      "topic": "obsidian_basic",
+      "title": "code block",
+      "trigger_phrases": [
+        "code block"
+      ],
+      "syntax_template": "```{language}\\n{code}\\n```",
+      "explanation": "",
+      "notes": [],
+      "source": {
+        "file": "obsidian_knowledge_base.txt",
+        "section": "OBSIDIAN_BASIC",
+        "line": 54
+      }
+    },
+    {
+      "id": "OBS_0020",
+      "domain": "obsidian_mathjax",
+      "topic": "table",
+      "title": "bảng",
+      "trigger_phrases": [
+        "bảng"
+      ],
+      "syntax_template": "| {c1} | {c2} |\\n| --- | --- |\\n| {v1} | {v2} |",
+      "explanation": "",
+      "notes": [],
+      "source": {
+        "file": "obsidian_knowledge_base.txt",
+        "section": "TABLE",
+        "line": 60
+      }
+    },
+    {
+      "id": "OBS_0021",
+      "domain": "obsidian_mathjax",
+      "topic": "table",
+      "title": "bảng căn trái",
+      "trigger_phrases": [
+        "bảng căn trái"
+      ],
+      "syntax_template": "| {c1} | {c2} |\\n| :--- | :--- |\\n| {v1} | {v2} |",
+      "explanation": "",
+      "notes": [],
+      "source": {
+        "file": "obsidian_knowledge_base.txt",
+        "section": "TABLE",
+        "line": 62
+      }
+    },
+    {
+      "id": "OBS_0022",
+      "domain": "obsidian_mathjax",
+      "topic": "table",
+      "title": "bảng căn giữa",
+      "trigger_phrases": [
+        "bảng căn giữa"
+      ],
+      "syntax_template": "| {c1} | {c2} |\\n| :---: | :---: |\\n| {v1} | {v2} |",
+      "explanation": "",
+      "notes": [],
+      "source": {
+        "file": "obsidian_knowledge_base.txt",
+        "section": "TABLE",
+        "line": 64
+      }
+    },
+    {
+      "id": "OBS_0023",
+      "domain": "obsidian_mathjax",
+      "topic": "mermaid",
+      "title": "sơ đồ luồng",
+      "trigger_phrases": [
+        "sơ đồ luồng"
+      ],
+      "syntax_template": "```mermaid\\ngraph TD\\n{diagram}\\n```",
+      "explanation": "",
+      "notes": [],
+      "source": {
+        "file": "obsidian_knowledge_base.txt",
+        "section": "MERMAID",
+        "line": 71
+      }
+    },
+    {
+      "id": "OBS_0024",
+      "domain": "obsidian_mathjax",
+      "topic": "math_basic",
+      "title": "công thức inline",
+      "trigger_phrases": [
+        "công thức inline"
+      ],
+      "syntax_template": "${formula}$",
+      "explanation": "",
+      "notes": [],
+      "source": {
+        "file": "obsidian_knowledge_base.txt",
+        "section": "MATH_BASIC",
+        "line": 78
+      }
+    },
+    {
+      "id": "OBS_0025",
+      "domain": "obsidian_mathjax",
+      "topic": "math_basic",
+      "title": "công thức lớn",
+      "trigger_phrases": [
+        "công thức lớn"
+      ],
+      "syntax_template": "$$\\n{formula}\\n$$",
+      "explanation": "",
+      "notes": [],
+      "source": {
+        "file": "obsidian_knowledge_base.txt",
+        "section": "MATH_BASIC",
+        "line": 80
+      }
+    },
+    {
+      "id": "OBS_0026",
+      "domain": "obsidian_mathjax",
+      "topic": "math_basic",
+      "title": "phân số",
+      "trigger_phrases": [
+        "phân số"
+      ],
+      "syntax_template": "$$\\frac{{{num}}}{{{den}}}$$",
+      "explanation": "",
+      "notes": [],
+      "source": {
+        "file": "obsidian_knowledge_base.txt",
+        "section": "MATH_BASIC",
+        "line": 82
+      }
+    },
+    {
+      "id": "OBS_0027",
+      "domain": "obsidian_mathjax",
+      "topic": "math_basic",
+      "title": "căn",
+      "trigger_phrases": [
+        "căn"
+      ],
+      "syntax_template": "$$\\sqrt{{{expr}}}$$",
+      "explanation": "",
+      "notes": [],
+      "source": {
+        "file": "obsidian_knowledge_base.txt",
+        "section": "MATH_BASIC",
+        "line": 84
+      }
+    },
+    {
+      "id": "OBS_0028",
+      "domain": "obsidian_mathjax",
+      "topic": "math_basic",
+      "title": "căn bậc n",
+      "trigger_phrases": [
+        "căn bậc n"
+      ],
+      "syntax_template": "$$\\sqrt[{n}]{{{expr}}}$$",
+      "explanation": "",
+      "notes": [],
+      "source": {
+        "file": "obsidian_knowledge_base.txt",
+        "section": "MATH_BASIC",
+        "line": 86
+      }
+    },
+    {
+      "id": "OBS_0029",
+      "domain": "obsidian_mathjax",
+      "topic": "math_basic",
+      "title": "mũ",
+      "trigger_phrases": [
+        "mũ"
+      ],
+      "syntax_template": "${{base}}^{{{exp}}}$",
+      "explanation": "",
+      "notes": [],
+      "source": {
+        "file": "obsidian_knowledge_base.txt",
+        "section": "MATH_BASIC",
+        "line": 88
+      }
+    },
+    {
+      "id": "OBS_0030",
+      "domain": "obsidian_mathjax",
+      "topic": "math_basic",
+      "title": "chỉ số",
+      "trigger_phrases": [
+        "chỉ số"
+      ],
+      "syntax_template": "${{base}}_{{{sub}}}$",
+      "explanation": "",
+      "notes": [],
+      "source": {
+        "file": "obsidian_knowledge_base.txt",
+        "section": "MATH_BASIC",
+        "line": 90
+      }
+    },
+    {
+      "id": "OBS_0031",
+      "domain": "obsidian_mathjax",
+      "topic": "math_basic",
+      "title": "mũ và chỉ số",
+      "trigger_phrases": [
+        "mũ và chỉ số"
+      ],
+      "syntax_template": "${{base}}_{{{sub}}}^{{{exp}}}$",
+      "explanation": "",
+      "notes": [],
+      "source": {
+        "file": "obsidian_knowledge_base.txt",
+        "section": "MATH_BASIC",
+        "line": 92
+      }
+    },
+    {
+      "id": "OBS_0032",
+      "domain": "obsidian_mathjax",
+      "topic": "math_basic",
+      "title": "tổng",
+      "trigger_phrases": [
+        "tổng"
+      ],
+      "syntax_template": "$$\\sum_{{{from}}}^{{{to}}} {expr}$$",
+      "explanation": "",
+      "notes": [],
+      "source": {
+        "file": "obsidian_knowledge_base.txt",
+        "section": "MATH_BASIC",
+        "line": 94
+      }
+    },
+    {
+      "id": "OBS_0033",
+      "domain": "obsidian_mathjax",
+      "topic": "math_basic",
+      "title": "tích",
+      "trigger_phrases": [
+        "tích"
+      ],
+      "syntax_template": "$$\\prod_{{{from}}}^{{{to}}} {expr}$$",
+      "explanation": "",
+      "notes": [],
+      "source": {
+        "file": "obsidian_knowledge_base.txt",
+        "section": "MATH_BASIC",
+        "line": 96
+      }
+    },
+    {
+      "id": "OBS_0034",
+      "domain": "obsidian_mathjax",
+      "topic": "math_basic",
+      "title": "tích phân",
+      "trigger_phrases": [
+        "tích phân"
+      ],
+      "syntax_template": "$$\\int_{{{from}}}^{{{to}}} {expr}\\,dx$$",
+      "explanation": "",
+      "notes": [],
+      "source": {
+        "file": "obsidian_knowledge_base.txt",
+        "section": "MATH_BASIC",
+        "line": 98
+      }
+    },
+    {
+      "id": "OBS_0035",
+      "domain": "obsidian_mathjax",
+      "topic": "math_basic",
+      "title": "giới hạn",
+      "trigger_phrases": [
+        "giới hạn"
+      ],
+      "syntax_template": "$$\\lim_{{{condition}}} {expr}$$",
+      "explanation": "",
+      "notes": [],
+      "source": {
+        "file": "obsidian_knowledge_base.txt",
+        "section": "MATH_BASIC",
+        "line": 100
+      }
+    },
+    {
+      "id": "OBS_0036",
+      "domain": "obsidian_mathjax",
+      "topic": "math_basic",
+      "title": "đạo hàm",
+      "trigger_phrases": [
+        "đạo hàm"
+      ],
+      "syntax_template": "$$f'({x})$$",
+      "explanation": "",
+      "notes": [],
+      "source": {
+        "file": "obsidian_knowledge_base.txt",
+        "section": "MATH_BASIC",
+        "line": 102
+      }
+    },
+    {
+      "id": "OBS_0037",
+      "domain": "obsidian_mathjax",
+      "topic": "matrix",
+      "title": "ma trận",
+      "trigger_phrases": [
+        "ma trận"
+      ],
+      "syntax_template": "$$\\begin{matrix}\\n{rows}\\n\\end{matrix}$$",
+      "explanation": "",
+      "notes": [],
+      "source": {
+        "file": "obsidian_knowledge_base.txt",
+        "section": "MATRIX",
+        "line": 108
+      }
+    },
+    {
+      "id": "OBS_0038",
+      "domain": "obsidian_mathjax",
+      "topic": "matrix",
+      "title": "ma trận 2x2",
+      "trigger_phrases": [
+        "ma trận 2x2"
+      ],
+      "syntax_template": "$$\\begin{matrix}\\n{a} & {b} \\\\\\\\\\n{c} & {d}\\n\\end{matrix}$$",
+      "explanation": "",
+      "notes": [],
+      "source": {
+        "file": "obsidian_knowledge_base.txt",
+        "section": "MATRIX",
+        "line": 110
+      }
+    },
+    {
+      "id": "OBS_0039",
+      "domain": "obsidian_mathjax",
+      "topic": "matrix",
+      "title": "ma trận ngoặc tròn",
+      "trigger_phrases": [
+        "ma trận ngoặc tròn"
+      ],
+      "syntax_template": "$$\\begin{pmatrix}\\n{rows}\\n\\end{pmatrix}$$",
+      "explanation": "",
+      "notes": [],
+      "source": {
+        "file": "obsidian_knowledge_base.txt",
+        "section": "MATRIX",
+        "line": 112
+      }
+    },
+    {
+      "id": "OBS_0040",
+      "domain": "obsidian_mathjax",
+      "topic": "matrix",
+      "title": "ma trận ngoặc vuông",
+      "trigger_phrases": [
+        "ma trận ngoặc vuông"
+      ],
+      "syntax_template": "$$\\begin{bmatrix}\\n{rows}\\n\\end{bmatrix}$$",
+      "explanation": "",
+      "notes": [],
+      "source": {
+        "file": "obsidian_knowledge_base.txt",
+        "section": "MATRIX",
+        "line": 114
+      }
+    },
+    {
+      "id": "OBS_0041",
+      "domain": "obsidian_mathjax",
+      "topic": "matrix",
+      "title": "ma trận ngoặc nhọn",
+      "trigger_phrases": [
+        "ma trận ngoặc nhọn"
+      ],
+      "syntax_template": "$$\\begin{Bmatrix}\\n{rows}\\n\\end{Bmatrix}$$",
+      "explanation": "",
+      "notes": [],
+      "source": {
+        "file": "obsidian_knowledge_base.txt",
+        "section": "MATRIX",
+        "line": 116
+      }
+    },
+    {
+      "id": "OBS_0042",
+      "domain": "obsidian_mathjax",
+      "topic": "matrix",
+      "title": "định thức",
+      "trigger_phrases": [
+        "định thức"
+      ],
+      "syntax_template": "$$\\begin{vmatrix}\\n{rows}\\n\\end{vmatrix}$$",
+      "explanation": "",
+      "notes": [],
+      "source": {
+        "file": "obsidian_knowledge_base.txt",
+        "section": "MATRIX",
+        "line": 118
+      }
+    },
+    {
+      "id": "OBS_0043",
+      "domain": "obsidian_mathjax",
+      "topic": "matrix",
+      "title": "chuẩn ma trận",
+      "trigger_phrases": [
+        "chuẩn ma trận"
+      ],
+      "syntax_template": "$$\\begin{Vmatrix}\\n{rows}\\n\\end{Vmatrix}$$",
+      "explanation": "",
+      "notes": [],
+      "source": {
+        "file": "obsidian_knowledge_base.txt",
+        "section": "MATRIX",
+        "line": 120
+      }
+    },
+    {
+      "id": "OBS_0044",
+      "domain": "obsidian_mathjax",
+      "topic": "cases_systems",
+      "title": "hàm từng đoạn",
+      "trigger_phrases": [
+        "hàm từng đoạn"
+      ],
+      "syntax_template": "$$f(x)=\\begin{cases}\\n{expr1} & {condition1} \\\\\\\\\\n{expr2} & {condition2}\\n\\end{cases}$$",
+      "explanation": "",
+      "notes": [],
+      "source": {
+        "file": "obsidian_knowledge_base.txt",
+        "section": "CASES_SYSTEMS",
+        "line": 127
+      }
+    },
+    {
+      "id": "OBS_0045",
+      "domain": "obsidian_mathjax",
+      "topic": "cases_systems",
+      "title": "hệ phương trình",
+      "trigger_phrases": [
+        "hệ phương trình"
+      ],
+      "syntax_template": "$$\\left\\{\\begin{aligned}\\n{eq1} &= {rhs1} \\\\\\\\\\n{eq2} &= {rhs2}\\n\\end{aligned}\\right.$$",
+      "explanation": "",
+      "notes": [],
+      "source": {
+        "file": "obsidian_knowledge_base.txt",
+        "section": "CASES_SYSTEMS",
+        "line": 129
+      }
+    },
+    {
+      "id": "OBS_0046",
+      "domain": "obsidian_mathjax",
+      "topic": "align_array",
+      "title": "căn chỉnh phương trình",
+      "trigger_phrases": [
+        "căn chỉnh phương trình"
+      ],
+      "syntax_template": "$$\\begin{aligned}\\n{left1} &= {right1} \\\\\\\\\\n{left2} &= {right2}\\n\\end{aligned}$$",
+      "explanation": "",
+      "notes": [],
+      "source": {
+        "file": "obsidian_knowledge_base.txt",
+        "section": "ALIGN_ARRAY",
+        "line": 135
+      }
+    },
+    {
+      "id": "OBS_0047",
+      "domain": "obsidian_mathjax",
+      "topic": "align_array",
+      "title": "bảng toán học",
+      "trigger_phrases": [
+        "bảng toán học"
+      ],
+      "syntax_template": "$$\\begin{array}{cc}\\n{a} & {b} \\\\\\\\\\n{c} & {d}\\n\\end{array}$$",
+      "explanation": "",
+      "notes": [],
+      "source": {
+        "file": "obsidian_knowledge_base.txt",
+        "section": "ALIGN_ARRAY",
+        "line": 137
+      }
+    },
+    {
+      "id": "OBS_0048",
+      "domain": "obsidian_mathjax",
+      "topic": "align_array",
+      "title": "bảng toán học căn trái",
+      "trigger_phrases": [
+        "bảng toán học căn trái"
+      ],
+      "syntax_template": "$$\\begin{array}{l}\\n{items}\\n\\end{array}$$",
+      "explanation": "",
+      "notes": [],
+      "source": {
+        "file": "obsidian_knowledge_base.txt",
+        "section": "ALIGN_ARRAY",
+        "line": 139
+      }
+    },
+    {
+      "id": "OBS_0049",
+      "domain": "obsidian_mathjax",
+      "topic": "align_array",
+      "title": "bảng toán học căn giữa",
+      "trigger_phrases": [
+        "bảng toán học căn giữa"
+      ],
+      "syntax_template": "$$\\begin{array}{c}\\n{items}\\n\\end{array}$$",
+      "explanation": "",
+      "notes": [],
+      "source": {
+        "file": "obsidian_knowledge_base.txt",
+        "section": "ALIGN_ARRAY",
+        "line": 141
+      }
+    },
+    {
+      "id": "OBS_0050",
+      "domain": "obsidian_mathjax",
+      "topic": "symbols",
+      "title": "alpha",
+      "trigger_phrases": [
+        "alpha"
+      ],
+      "syntax_template": "$\\alpha$",
+      "explanation": "",
+      "notes": [],
+      "source": {
+        "file": "obsidian_knowledge_base.txt",
+        "section": "SYMBOLS",
+        "line": 147
+      }
+    },
+    {
+      "id": "OBS_0051",
+      "domain": "obsidian_mathjax",
+      "topic": "symbols",
+      "title": "beta",
+      "trigger_phrases": [
+        "beta"
+      ],
+      "syntax_template": "$\\beta$",
+      "explanation": "",
+      "notes": [],
+      "source": {
+        "file": "obsidian_knowledge_base.txt",
+        "section": "SYMBOLS",
+        "line": 149
+      }
+    },
+    {
+      "id": "OBS_0052",
+      "domain": "obsidian_mathjax",
+      "topic": "symbols",
+      "title": "gamma",
+      "trigger_phrases": [
+        "gamma"
+      ],
+      "syntax_template": "$\\gamma$",
+      "explanation": "",
+      "notes": [],
+      "source": {
+        "file": "obsidian_knowledge_base.txt",
+        "section": "SYMBOLS",
+        "line": 151
+      }
+    },
+    {
+      "id": "OBS_0053",
+      "domain": "obsidian_mathjax",
+      "topic": "symbols",
+      "title": "delta",
+      "trigger_phrases": [
+        "delta"
+      ],
+      "syntax_template": "$\\delta$",
+      "explanation": "",
+      "notes": [],
+      "source": {
+        "file": "obsidian_knowledge_base.txt",
+        "section": "SYMBOLS",
+        "line": 153
+      }
+    },
+    {
+      "id": "OBS_0054",
+      "domain": "obsidian_mathjax",
+      "topic": "symbols",
+      "title": "theta",
+      "trigger_phrases": [
+        "theta"
+      ],
+      "syntax_template": "$\\theta$",
+      "explanation": "",
+      "notes": [],
+      "source": {
+        "file": "obsidian_knowledge_base.txt",
+        "section": "SYMBOLS",
+        "line": 155
+      }
+    },
+    {
+      "id": "OBS_0055",
+      "domain": "obsidian_mathjax",
+      "topic": "symbols",
+      "title": "lambda",
+      "trigger_phrases": [
+        "lambda"
+      ],
+      "syntax_template": "$\\lambda$",
+      "explanation": "",
+      "notes": [],
+      "source": {
+        "file": "obsidian_knowledge_base.txt",
+        "section": "SYMBOLS",
+        "line": 157
+      }
+    },
+    {
+      "id": "OBS_0056",
+      "domain": "obsidian_mathjax",
+      "topic": "symbols",
+      "title": "pi",
+      "trigger_phrases": [
+        "pi"
+      ],
+      "syntax_template": "$\\pi$",
+      "explanation": "",
+      "notes": [],
+      "source": {
+        "file": "obsidian_knowledge_base.txt",
+        "section": "SYMBOLS",
+        "line": 159
+      }
+    },
+    {
+      "id": "OBS_0057",
+      "domain": "obsidian_mathjax",
+      "topic": "symbols",
+      "title": "sigma",
+      "trigger_phrases": [
+        "sigma"
+      ],
+      "syntax_template": "$\\sigma$",
+      "explanation": "",
+      "notes": [],
+      "source": {
+        "file": "obsidian_knowledge_base.txt",
+        "section": "SYMBOLS",
+        "line": 161
+      }
+    },
+    {
+      "id": "OBS_0058",
+      "domain": "obsidian_mathjax",
+      "topic": "symbols",
+      "title": "omega",
+      "trigger_phrases": [
+        "omega"
+      ],
+      "syntax_template": "$\\omega$",
+      "explanation": "",
+      "notes": [],
+      "source": {
+        "file": "obsidian_knowledge_base.txt",
+        "section": "SYMBOLS",
+        "line": 163
+      }
+    },
+    {
+      "id": "OBS_0059",
+      "domain": "obsidian_mathjax",
+      "topic": "symbols",
+      "title": "vô cùng",
+      "trigger_phrases": [
+        "vô cùng"
+      ],
+      "syntax_template": "$\\infty$",
+      "explanation": "",
+      "notes": [],
+      "source": {
+        "file": "obsidian_knowledge_base.txt",
+        "section": "SYMBOLS",
+        "line": 165
+      }
+    },
+    {
+      "id": "OBS_0060",
+      "domain": "obsidian_mathjax",
+      "topic": "symbols",
+      "title": "nabla",
+      "trigger_phrases": [
+        "nabla"
+      ],
+      "syntax_template": "$\\nabla$",
+      "explanation": "",
+      "notes": [],
+      "source": {
+        "file": "obsidian_knowledge_base.txt",
+        "section": "SYMBOLS",
+        "line": 167
+      }
+    },
+    {
+      "id": "OBS_0061",
+      "domain": "obsidian_mathjax",
+      "topic": "symbols",
+      "title": "phần riêng",
+      "trigger_phrases": [
+        "phần riêng"
+      ],
+      "syntax_template": "$\\partial$",
+      "explanation": "",
+      "notes": [],
+      "source": {
+        "file": "obsidian_knowledge_base.txt",
+        "section": "SYMBOLS",
+        "line": 169
+      }
+    },
+    {
+      "id": "OBS_0062",
+      "domain": "obsidian_mathjax",
+      "topic": "symbols",
+      "title": "số thực",
+      "trigger_phrases": [
+        "số thực"
+      ],
+      "syntax_template": "$\\mathbb{R}$",
+      "explanation": "",
+      "notes": [],
+      "source": {
+        "file": "obsidian_knowledge_base.txt",
+        "section": "SYMBOLS",
+        "line": 171
+      }
+    },
+    {
+      "id": "OBS_0063",
+      "domain": "obsidian_mathjax",
+      "topic": "symbols",
+      "title": "số tự nhiên",
+      "trigger_phrases": [
+        "số tự nhiên"
+      ],
+      "syntax_template": "$\\mathbb{N}$",
+      "explanation": "",
+      "notes": [],
+      "source": {
+        "file": "obsidian_knowledge_base.txt",
+        "section": "SYMBOLS",
+        "line": 173
+      }
+    },
+    {
+      "id": "OBS_0064",
+      "domain": "obsidian_mathjax",
+      "topic": "symbols",
+      "title": "số nguyên",
+      "trigger_phrases": [
+        "số nguyên"
+      ],
+      "syntax_template": "$\\mathbb{Z}$",
+      "explanation": "",
+      "notes": [],
+      "source": {
+        "file": "obsidian_knowledge_base.txt",
+        "section": "SYMBOLS",
+        "line": 175
+      }
+    },
+    {
+      "id": "OBS_0065",
+      "domain": "obsidian_mathjax",
+      "topic": "symbols",
+      "title": "thuộc",
+      "trigger_phrases": [
+        "thuộc"
+      ],
+      "syntax_template": "$\\in$",
+      "explanation": "",
+      "notes": [],
+      "source": {
+        "file": "obsidian_knowledge_base.txt",
+        "section": "SYMBOLS",
+        "line": 177
+      }
+    },
+    {
+      "id": "OBS_0066",
+      "domain": "obsidian_mathjax",
+      "topic": "symbols",
+      "title": "không thuộc",
+      "trigger_phrases": [
+        "không thuộc"
+      ],
+      "syntax_template": "$\\notin$",
+      "explanation": "",
+      "notes": [],
+      "source": {
+        "file": "obsidian_knowledge_base.txt",
+        "section": "SYMBOLS",
+        "line": 179
+      }
+    },
+    {
+      "id": "OBS_0067",
+      "domain": "obsidian_mathjax",
+      "topic": "symbols",
+      "title": "tập rỗng",
+      "trigger_phrases": [
+        "tập rỗng"
+      ],
+      "syntax_template": "$\\emptyset$",
+      "explanation": "",
+      "notes": [],
+      "source": {
+        "file": "obsidian_knowledge_base.txt",
+        "section": "SYMBOLS",
+        "line": 181
+      }
+    },
+    {
+      "id": "OBS_0068",
+      "domain": "obsidian_mathjax",
+      "topic": "symbols",
+      "title": "hợp",
+      "trigger_phrases": [
+        "hợp"
+      ],
+      "syntax_template": "$\\cup$",
+      "explanation": "",
+      "notes": [],
+      "source": {
+        "file": "obsidian_knowledge_base.txt",
+        "section": "SYMBOLS",
+        "line": 183
+      }
+    },
+    {
+      "id": "OBS_0069",
+      "domain": "obsidian_mathjax",
+      "topic": "symbols",
+      "title": "giao",
+      "trigger_phrases": [
+        "giao"
+      ],
+      "syntax_template": "$\\cap$",
+      "explanation": "",
+      "notes": [],
+      "source": {
+        "file": "obsidian_knowledge_base.txt",
+        "section": "SYMBOLS",
+        "line": 185
+      }
+    },
+    {
+      "id": "OBS_0070",
+      "domain": "obsidian_mathjax",
+      "topic": "symbols",
+      "title": "tập con",
+      "trigger_phrases": [
+        "tập con"
+      ],
+      "syntax_template": "$\\subseteq$",
+      "explanation": "",
+      "notes": [],
+      "source": {
+        "file": "obsidian_knowledge_base.txt",
+        "section": "SYMBOLS",
+        "line": 187
+      }
+    },
+    {
+      "id": "OBS_0071",
+      "domain": "obsidian_mathjax",
+      "topic": "symbols",
+      "title": "khác",
+      "trigger_phrases": [
+        "khác"
+      ],
+      "syntax_template": "$\\neq$",
+      "explanation": "",
+      "notes": [],
+      "source": {
+        "file": "obsidian_knowledge_base.txt",
+        "section": "SYMBOLS",
+        "line": 189
+      }
+    },
+    {
+      "id": "OBS_0072",
+      "domain": "obsidian_mathjax",
+      "topic": "symbols",
+      "title": "nhỏ hơn hoặc bằng",
+      "trigger_phrases": [
+        "nhỏ hơn hoặc bằng"
+      ],
+      "syntax_template": "$\\leq$",
+      "explanation": "",
+      "notes": [],
+      "source": {
+        "file": "obsidian_knowledge_base.txt",
+        "section": "SYMBOLS",
+        "line": 191
+      }
+    },
+    {
+      "id": "OBS_0073",
+      "domain": "obsidian_mathjax",
+      "topic": "symbols",
+      "title": "lớn hơn hoặc bằng",
+      "trigger_phrases": [
+        "lớn hơn hoặc bằng"
+      ],
+      "syntax_template": "$\\geq$",
+      "explanation": "",
+      "notes": [],
+      "source": {
+        "file": "obsidian_knowledge_base.txt",
+        "section": "SYMBOLS",
+        "line": 193
+      }
+    },
+    {
+      "id": "OBS_0074",
+      "domain": "obsidian_mathjax",
+      "topic": "symbols",
+      "title": "xấp xỉ",
+      "trigger_phrases": [
+        "xấp xỉ"
+      ],
+      "syntax_template": "$\\approx$",
+      "explanation": "",
+      "notes": [],
+      "source": {
+        "file": "obsidian_knowledge_base.txt",
+        "section": "SYMBOLS",
+        "line": 195
+      }
+    },
+    {
+      "id": "OBS_0075",
+      "domain": "obsidian_mathjax",
+      "topic": "symbols",
+      "title": "tương đương",
+      "trigger_phrases": [
+        "tương đương"
+      ],
+      "syntax_template": "$\\equiv$",
+      "explanation": "",
+      "notes": [],
+      "source": {
+        "file": "obsidian_knowledge_base.txt",
+        "section": "SYMBOLS",
+        "line": 197
+      }
+    },
+    {
+      "id": "OBS_0076",
+      "domain": "obsidian_mathjax",
+      "topic": "symbols",
+      "title": "nhân",
+      "trigger_phrases": [
+        "nhân"
+      ],
+      "syntax_template": "$\\times$",
+      "explanation": "",
+      "notes": [],
+      "source": {
+        "file": "obsidian_knowledge_base.txt",
+        "section": "SYMBOLS",
+        "line": 199
+      }
+    },
+    {
+      "id": "OBS_0077",
+      "domain": "obsidian_mathjax",
+      "topic": "symbols",
+      "title": "chia",
+      "trigger_phrases": [
+        "chia"
+      ],
+      "syntax_template": "$\\div$",
+      "explanation": "",
+      "notes": [],
+      "source": {
+        "file": "obsidian_knowledge_base.txt",
+        "section": "SYMBOLS",
+        "line": 201
+      }
+    },
+    {
+      "id": "OBS_0078",
+      "domain": "obsidian_mathjax",
+      "topic": "symbols",
+      "title": "cộng trừ",
+      "trigger_phrases": [
+        "cộng trừ"
+      ],
+      "syntax_template": "$\\pm$",
+      "explanation": "",
+      "notes": [],
+      "source": {
+        "file": "obsidian_knowledge_base.txt",
+        "section": "SYMBOLS",
+        "line": 203
+      }
+    },
+    {
+      "id": "OBS_0079",
+      "domain": "obsidian_mathjax",
+      "topic": "symbols",
+      "title": "kéo theo",
+      "trigger_phrases": [
+        "kéo theo"
+      ],
+      "syntax_template": "$\\implies$",
+      "explanation": "",
+      "notes": [],
+      "source": {
+        "file": "obsidian_knowledge_base.txt",
+        "section": "SYMBOLS",
+        "line": 205
+      }
+    },
+    {
+      "id": "OBS_0080",
+      "domain": "obsidian_mathjax",
+      "topic": "symbols",
+      "title": "khi và chỉ khi",
+      "trigger_phrases": [
+        "khi và chỉ khi"
+      ],
+      "syntax_template": "$\\iff$",
+      "explanation": "",
+      "notes": [],
+      "source": {
+        "file": "obsidian_knowledge_base.txt",
+        "section": "SYMBOLS",
+        "line": 207
+      }
+    },
+    {
+      "id": "OBS_0081",
+      "domain": "obsidian_mathjax",
+      "topic": "symbols",
+      "title": "với mọi",
+      "trigger_phrases": [
+        "với mọi"
+      ],
+      "syntax_template": "$\\forall$",
+      "explanation": "",
+      "notes": [],
+      "source": {
+        "file": "obsidian_knowledge_base.txt",
+        "section": "SYMBOLS",
+        "line": 209
+      }
+    },
+    {
+      "id": "OBS_0082",
+      "domain": "obsidian_mathjax",
+      "topic": "symbols",
+      "title": "tồn tại",
+      "trigger_phrases": [
+        "tồn tại"
+      ],
+      "syntax_template": "$\\exists$",
+      "explanation": "",
+      "notes": [],
+      "source": {
+        "file": "obsidian_knowledge_base.txt",
+        "section": "SYMBOLS",
+        "line": 211
+      }
+    },
+    {
+      "id": "OBS_0083",
+      "domain": "obsidian_mathjax",
+      "topic": "symbols",
+      "title": "mũi tên phải",
+      "trigger_phrases": [
+        "mũi tên phải"
+      ],
+      "syntax_template": "$\\rightarrow$",
+      "explanation": "",
+      "notes": [],
+      "source": {
+        "file": "obsidian_knowledge_base.txt",
+        "section": "SYMBOLS",
+        "line": 213
+      }
+    },
+    {
+      "id": "OBS_0084",
+      "domain": "obsidian_mathjax",
+      "topic": "sets_logic",
+      "title": "và logic",
+      "trigger_phrases": [
+        "và logic"
+      ],
+      "syntax_template": "$\\land$",
+      "explanation": "",
+      "notes": [],
+      "source": {
+        "file": "obsidian_knowledge_base.txt",
+        "section": "SETS_LOGIC",
+        "line": 219
+      }
+    },
+    {
+      "id": "OBS_0085",
+      "domain": "obsidian_mathjax",
+      "topic": "sets_logic",
+      "title": "hoặc logic",
+      "trigger_phrases": [
+        "hoặc logic"
+      ],
+      "syntax_template": "$\\lor$",
+      "explanation": "",
+      "notes": [],
+      "source": {
+        "file": "obsidian_knowledge_base.txt",
+        "section": "SETS_LOGIC",
+        "line": 221
+      }
+    },
+    {
+      "id": "OBS_0086",
+      "domain": "obsidian_mathjax",
+      "topic": "sets_logic",
+      "title": "phủ định",
+      "trigger_phrases": [
+        "phủ định"
+      ],
+      "syntax_template": "$\\lnot P$",
+      "explanation": "",
+      "notes": [],
+      "source": {
+        "file": "obsidian_knowledge_base.txt",
+        "section": "SETS_LOGIC",
+        "line": 223
+      }
+    },
+    {
+      "id": "OBS_0087",
+      "domain": "obsidian_mathjax",
+      "topic": "sets_logic",
+      "title": "chứng minh được",
+      "trigger_phrases": [
+        "chứng minh được"
+      ],
+      "syntax_template": "$\\vdash$",
+      "explanation": "",
+      "notes": [],
+      "source": {
+        "file": "obsidian_knowledge_base.txt",
+        "section": "SETS_LOGIC",
+        "line": 225
+      }
+    },
+    {
+      "id": "OBS_0088",
+      "domain": "obsidian_mathjax",
+      "topic": "sets_logic",
+      "title": "thỏa mãn",
+      "trigger_phrases": [
+        "thỏa mãn"
+      ],
+      "syntax_template": "$\\vDash$",
+      "explanation": "",
+      "notes": [],
+      "source": {
+        "file": "obsidian_knowledge_base.txt",
+        "section": "SETS_LOGIC",
+        "line": 227
+      }
+    },
+    {
+      "id": "OBS_0089",
+      "domain": "obsidian_mathjax",
+      "topic": "accents_decorations",
+      "title": "vector",
+      "trigger_phrases": [
+        "vector"
+      ],
+      "syntax_template": "$\\vec{x}$",
+      "explanation": "",
+      "notes": [],
+      "source": {
+        "file": "obsidian_knowledge_base.txt",
+        "section": "ACCENTS_DECORATIONS",
+        "line": 233
+      }
+    },
+    {
+      "id": "OBS_0090",
+      "domain": "obsidian_mathjax",
+      "topic": "accents_decorations",
+      "title": "vector dài",
+      "trigger_phrases": [
+        "vector dài"
+      ],
+      "syntax_template": "$\\overrightarrow{AB}$",
+      "explanation": "",
+      "notes": [],
+      "source": {
+        "file": "obsidian_knowledge_base.txt",
+        "section": "ACCENTS_DECORATIONS",
+        "line": 235
+      }
+    },
+    {
+      "id": "OBS_0091",
+      "domain": "obsidian_mathjax",
+      "topic": "accents_decorations",
+      "title": "gạch trên",
+      "trigger_phrases": [
+        "gạch trên"
+      ],
+      "syntax_template": "$\\bar{x}$",
+      "explanation": "",
+      "notes": [],
+      "source": {
+        "file": "obsidian_knowledge_base.txt",
+        "section": "ACCENTS_DECORATIONS",
+        "line": 237
+      }
+    },
+    {
+      "id": "OBS_0092",
+      "domain": "obsidian_mathjax",
+      "topic": "accents_decorations",
+      "title": "gạch dưới",
+      "trigger_phrases": [
+        "gạch dưới"
+      ],
+      "syntax_template": "$\\underline{x}$",
+      "explanation": "",
+      "notes": [],
+      "source": {
+        "file": "obsidian_knowledge_base.txt",
+        "section": "ACCENTS_DECORATIONS",
+        "line": 239
+      }
+    },
+    {
+      "id": "OBS_0093",
+      "domain": "obsidian_mathjax",
+      "topic": "accents_decorations",
+      "title": "dấu ngã",
+      "trigger_phrases": [
+        "dấu ngã"
+      ],
+      "syntax_template": "$\\widetilde{x}$",
+      "explanation": "",
+      "notes": [],
+      "source": {
+        "file": "obsidian_knowledge_base.txt",
+        "section": "ACCENTS_DECORATIONS",
+        "line": 241
+      }
+    },
+    {
+      "id": "OBS_0094",
+      "domain": "obsidian_mathjax",
+      "topic": "accents_decorations",
+      "title": "dấu mũ",
+      "trigger_phrases": [
+        "dấu mũ"
+      ],
+      "syntax_template": "$\\widehat{x}$",
+      "explanation": "",
+      "notes": [],
+      "source": {
+        "file": "obsidian_knowledge_base.txt",
+        "section": "ACCENTS_DECORATIONS",
+        "line": 243
+      }
+    },
+    {
+      "id": "OBS_0095",
+      "domain": "obsidian_mathjax",
+      "topic": "accents_decorations",
+      "title": "đạo hàm chấm",
+      "trigger_phrases": [
+        "đạo hàm chấm"
+      ],
+      "syntax_template": "$\\dot{x}$",
+      "explanation": "",
+      "notes": [],
+      "source": {
+        "file": "obsidian_knowledge_base.txt",
+        "section": "ACCENTS_DECORATIONS",
+        "line": 245
+      }
+    },
+    {
+      "id": "OBS_0096",
+      "domain": "obsidian_mathjax",
+      "topic": "accents_decorations",
+      "title": "đóng khung",
+      "trigger_phrases": [
+        "đóng khung"
+      ],
+      "syntax_template": "$$\\boxed{{expr}}$$",
+      "explanation": "",
+      "notes": [],
+      "source": {
+        "file": "obsidian_knowledge_base.txt",
+        "section": "ACCENTS_DECORATIONS",
+        "line": 247
+      }
+    },
+    {
+      "id": "OBS_0097",
+      "domain": "obsidian_mathjax",
+      "topic": "accents_decorations",
+      "title": "overbrace",
+      "trigger_phrases": [
+        "overbrace"
+      ],
+      "syntax_template": "$$\\overbrace{{expr}}^{{label}}$$",
+      "explanation": "",
+      "notes": [],
+      "source": {
+        "file": "obsidian_knowledge_base.txt",
+        "section": "ACCENTS_DECORATIONS",
+        "line": 249
+      }
+    },
+    {
+      "id": "OBS_0098",
+      "domain": "obsidian_mathjax",
+      "topic": "accents_decorations",
+      "title": "underbrace",
+      "trigger_phrases": [
+        "underbrace"
+      ],
+      "syntax_template": "$$\\underbrace{{expr}}_{{label}}$$",
+      "explanation": "",
+      "notes": [],
+      "source": {
+        "file": "obsidian_knowledge_base.txt",
+        "section": "ACCENTS_DECORATIONS",
+        "line": 251
+      }
+    },
+    {
+      "id": "OBS_0099",
+      "domain": "obsidian_mathjax",
+      "topic": "accents_decorations",
+      "title": "chữ phía trên",
+      "trigger_phrases": [
+        "chữ phía trên"
+      ],
+      "syntax_template": "$$\\overset{{label}}{{expr}}$$",
+      "explanation": "",
+      "notes": [],
+      "source": {
+        "file": "obsidian_knowledge_base.txt",
+        "section": "ACCENTS_DECORATIONS",
+        "line": 253
+      }
+    },
+    {
+      "id": "OBS_0100",
+      "domain": "obsidian_mathjax",
+      "topic": "brackets_spacing_text",
+      "title": "ngoặc tự co",
+      "trigger_phrases": [
+        "ngoặc tự co"
+      ],
+      "syntax_template": "$$\\left({expr}\\right)$$",
+      "explanation": "",
+      "notes": [],
+      "source": {
+        "file": "obsidian_knowledge_base.txt",
+        "section": "BRACKETS_SPACING_TEXT",
+        "line": 259
+      }
+    },
+    {
+      "id": "OBS_0101",
+      "domain": "obsidian_mathjax",
+      "topic": "brackets_spacing_text",
+      "title": "ngoặc vuông tự co",
+      "trigger_phrases": [
+        "ngoặc vuông tự co"
+      ],
+      "syntax_template": "$$\\left[{expr}\\right]$$",
+      "explanation": "",
+      "notes": [],
+      "source": {
+        "file": "obsidian_knowledge_base.txt",
+        "section": "BRACKETS_SPACING_TEXT",
+        "line": 261
+      }
+    },
+    {
+      "id": "OBS_0102",
+      "domain": "obsidian_mathjax",
+      "topic": "brackets_spacing_text",
+      "title": "ngoặc nhọn tự co",
+      "trigger_phrases": [
+        "ngoặc nhọn tự co"
+      ],
+      "syntax_template": "$$\\left\\{{expr}\\right\\}$$",
+      "explanation": "",
+      "notes": [],
+      "source": {
+        "file": "obsidian_knowledge_base.txt",
+        "section": "BRACKETS_SPACING_TEXT",
+        "line": 263
+      }
+    },
+    {
+      "id": "OBS_0103",
+      "domain": "obsidian_mathjax",
+      "topic": "brackets_spacing_text",
+      "title": "trị tuyệt đối",
+      "trigger_phrases": [
+        "trị tuyệt đối"
+      ],
+      "syntax_template": "$$\\lvert {expr}\\rvert$$",
+      "explanation": "",
+      "notes": [],
+      "source": {
+        "file": "obsidian_knowledge_base.txt",
+        "section": "BRACKETS_SPACING_TEXT",
+        "line": 265
+      }
+    },
+    {
+      "id": "OBS_0104",
+      "domain": "obsidian_mathjax",
+      "topic": "brackets_spacing_text",
+      "title": "chuẩn vector",
+      "trigger_phrases": [
+        "chuẩn vector"
+      ],
+      "syntax_template": "$$\\lVert {expr}\\rVert$$",
+      "explanation": "",
+      "notes": [],
+      "source": {
+        "file": "obsidian_knowledge_base.txt",
+        "section": "BRACKETS_SPACING_TEXT",
+        "line": 267
+      }
+    },
+    {
+      "id": "OBS_0105",
+      "domain": "obsidian_mathjax",
+      "topic": "brackets_spacing_text",
+      "title": "khoảng cách nhỏ",
+      "trigger_phrases": [
+        "khoảng cách nhỏ"
+      ],
+      "syntax_template": "$a\\,b$",
+      "explanation": "",
+      "notes": [],
+      "source": {
+        "file": "obsidian_knowledge_base.txt",
+        "section": "BRACKETS_SPACING_TEXT",
+        "line": 269
+      }
+    },
+    {
+      "id": "OBS_0106",
+      "domain": "obsidian_mathjax",
+      "topic": "brackets_spacing_text",
+      "title": "khoảng cách vừa",
+      "trigger_phrases": [
+        "khoảng cách vừa"
+      ],
+      "syntax_template": "$a\\;b$",
+      "explanation": "",
+      "notes": [],
+      "source": {
+        "file": "obsidian_knowledge_base.txt",
+        "section": "BRACKETS_SPACING_TEXT",
+        "line": 271
+      }
+    },
+    {
+      "id": "OBS_0107",
+      "domain": "obsidian_mathjax",
+      "topic": "brackets_spacing_text",
+      "title": "khoảng cách lớn",
+      "trigger_phrases": [
+        "khoảng cách lớn"
+      ],
+      "syntax_template": "$a\\quad b$",
+      "explanation": "",
+      "notes": [],
+      "source": {
+        "file": "obsidian_knowledge_base.txt",
+        "section": "BRACKETS_SPACING_TEXT",
+        "line": 273
+      }
+    },
+    {
+      "id": "OBS_0108",
+      "domain": "obsidian_mathjax",
+      "topic": "brackets_spacing_text",
+      "title": "khoảng cách rất lớn",
+      "trigger_phrases": [
+        "khoảng cách rất lớn"
+      ],
+      "syntax_template": "$a\\qquad b$",
+      "explanation": "",
+      "notes": [],
+      "source": {
+        "file": "obsidian_knowledge_base.txt",
+        "section": "BRACKETS_SPACING_TEXT",
+        "line": 275
+      }
+    },
+    {
+      "id": "OBS_0109",
+      "domain": "obsidian_mathjax",
+      "topic": "brackets_spacing_text",
+      "title": "khoảng cách âm",
+      "trigger_phrases": [
+        "khoảng cách âm"
+      ],
+      "syntax_template": "$a\\!b$",
+      "explanation": "",
+      "notes": [],
+      "source": {
+        "file": "obsidian_knowledge_base.txt",
+        "section": "BRACKETS_SPACING_TEXT",
+        "line": 277
+      }
+    },
+    {
+      "id": "OBS_0110",
+      "domain": "obsidian_mathjax",
+      "topic": "font",
+      "title": "chữ blackboard",
+      "trigger_phrases": [
+        "chữ blackboard"
+      ],
+      "syntax_template": "$\\mathbb{R}$",
+      "explanation": "",
+      "notes": [],
+      "source": {
+        "file": "obsidian_knowledge_base.txt",
+        "section": "FONT",
+        "line": 283
+      }
+    },
+    {
+      "id": "OBS_0111",
+      "domain": "obsidian_mathjax",
+      "topic": "font",
+      "title": "chữ đậm toán",
+      "trigger_phrases": [
+        "chữ đậm toán"
+      ],
+      "syntax_template": "$\\mathbf{ABC}$",
+      "explanation": "",
+      "notes": [],
+      "source": {
+        "file": "obsidian_knowledge_base.txt",
+        "section": "FONT",
+        "line": 285
+      }
+    },
+    {
+      "id": "OBS_0112",
+      "domain": "obsidian_mathjax",
+      "topic": "font",
+      "title": "vector đậm",
+      "trigger_phrases": [
+        "vector đậm"
+      ],
+      "syntax_template": "$\\boldsymbol{\\alpha}$",
+      "explanation": "",
+      "notes": [],
+      "source": {
+        "file": "obsidian_knowledge_base.txt",
+        "section": "FONT",
+        "line": 287
+      }
+    },
+    {
+      "id": "OBS_0113",
+      "domain": "obsidian_mathjax",
+      "topic": "font",
+      "title": "chữ La Mã",
+      "trigger_phrases": [
+        "chữ La Mã"
+      ],
+      "syntax_template": "$\\mathrm{ABC}$",
+      "explanation": "",
+      "notes": [],
+      "source": {
+        "file": "obsidian_knowledge_base.txt",
+        "section": "FONT",
+        "line": 289
+      }
+    },
+    {
+      "id": "OBS_0114",
+      "domain": "obsidian_mathjax",
+      "topic": "font",
+      "title": "chữ typewriter",
+      "trigger_phrases": [
+        "chữ typewriter"
+      ],
+      "syntax_template": "$\\mathtt{ABC}$",
+      "explanation": "",
+      "notes": [],
+      "source": {
+        "file": "obsidian_knowledge_base.txt",
+        "section": "FONT",
+        "line": 291
+      }
+    },
+    {
+      "id": "OBS_0115",
+      "domain": "obsidian_mathjax",
+      "topic": "font",
+      "title": "chữ sans serif",
+      "trigger_phrases": [
+        "chữ sans serif"
+      ],
+      "syntax_template": "$\\mathsf{ABC}$",
+      "explanation": "",
+      "notes": [],
+      "source": {
+        "file": "obsidian_knowledge_base.txt",
+        "section": "FONT",
+        "line": 293
+      }
+    },
+    {
+      "id": "OBS_0116",
+      "domain": "obsidian_mathjax",
+      "topic": "font",
+      "title": "chữ calligraphic",
+      "trigger_phrases": [
+        "chữ calligraphic"
+      ],
+      "syntax_template": "$\\mathcal{ABC}$",
+      "explanation": "",
+      "notes": [],
+      "source": {
+        "file": "obsidian_knowledge_base.txt",
+        "section": "FONT",
+        "line": 295
+      }
+    },
+    {
+      "id": "OBS_0117",
+      "domain": "obsidian_mathjax",
+      "topic": "font",
+      "title": "chữ script",
+      "trigger_phrases": [
+        "chữ script"
+      ],
+      "syntax_template": "$\\mathscr{ABC}$",
+      "explanation": "",
+      "notes": [],
+      "source": {
+        "file": "obsidian_knowledge_base.txt",
+        "section": "FONT",
+        "line": 297
+      }
+    },
+    {
+      "id": "OBS_0118",
+      "domain": "obsidian_mathjax",
+      "topic": "spacing_degree_units",
+      "title": "độ",
+      "trigger_phrases": [
+        "độ"
+      ],
+      "syntax_template": "$45^\\circ$",
+      "explanation": "",
+      "notes": [],
+      "source": {
+        "file": "obsidian_knowledge_base.txt",
+        "section": "SPACING_DEGREE_UNITS",
+        "line": 303
+      }
+    },
+    {
+      "id": "OBS_0119",
+      "domain": "obsidian_mathjax",
+      "topic": "spacing_degree_units",
+      "title": "mét",
+      "trigger_phrases": [
+        "mét"
+      ],
+      "syntax_template": "$\\mathrm{m}$",
+      "explanation": "",
+      "notes": [],
+      "source": {
+        "file": "obsidian_knowledge_base.txt",
+        "section": "SPACING_DEGREE_UNITS",
+        "line": 305
+      }
+    },
+    {
+      "id": "OBS_0120",
+      "domain": "obsidian_mathjax",
+      "topic": "spacing_degree_units",
+      "title": "mét vuông",
+      "trigger_phrases": [
+        "mét vuông"
+      ],
+      "syntax_template": "$\\mathrm{m}^2$",
+      "explanation": "",
+      "notes": [],
+      "source": {
+        "file": "obsidian_knowledge_base.txt",
+        "section": "SPACING_DEGREE_UNITS",
+        "line": 307
+      }
+    },
+    {
+      "id": "OBS_0121",
+      "domain": "obsidian_mathjax",
+      "topic": "spacing_degree_units",
+      "title": "mét trên giây",
+      "trigger_phrases": [
+        "mét trên giây"
+      ],
+      "syntax_template": "$\\mathrm{m}\\middle/\\mathrm{s}$",
+      "explanation": "",
+      "notes": [],
+      "source": {
+        "file": "obsidian_knowledge_base.txt",
+        "section": "SPACING_DEGREE_UNITS",
+        "line": 309
+      }
+    },
+    {
+      "id": "OBS_0122",
+      "domain": "obsidian_mathjax",
+      "topic": "spacing_degree_units",
+      "title": "mét trên giây bình phương",
+      "trigger_phrases": [
+        "mét trên giây bình phương"
+      ],
+      "syntax_template": "$\\mathrm{m}\\middle/\\mathrm{s}^2$",
+      "explanation": "",
+      "notes": [],
+      "source": {
+        "file": "obsidian_knowledge_base.txt",
+        "section": "SPACING_DEGREE_UNITS",
+        "line": 311
+      }
+    },
+    {
+      "id": "OBS_0123",
+      "domain": "obsidian_mathjax",
+      "topic": "spacing_degree_units",
+      "title": "mol",
+      "trigger_phrases": [
+        "mol"
+      ],
+      "syntax_template": "$\\mathrm{mol}$",
+      "explanation": "",
+      "notes": [],
+      "source": {
+        "file": "obsidian_knowledge_base.txt",
+        "section": "SPACING_DEGREE_UNITS",
+        "line": 313
+      }
+    },
+    {
+      "id": "OBS_0124",
+      "domain": "obsidian_mathjax",
+      "topic": "spacing_degree_units",
+      "title": "đơn vị nhân",
+      "trigger_phrases": [
+        "đơn vị nhân"
+      ],
+      "syntax_template": "$\\mathrm{kg}\\!\\cdot\\!\\mathrm{m}^2$",
+      "explanation": "",
+      "notes": [],
+      "source": {
+        "file": "obsidian_knowledge_base.txt",
+        "section": "SPACING_DEGREE_UNITS",
+        "line": 315
+      }
+    },
+    {
+      "id": "OBS_0125",
+      "domain": "obsidian_mathjax",
+      "topic": "color_highlight",
+      "title": "màu đỏ",
+      "trigger_phrases": [
+        "màu đỏ"
+      ],
+      "syntax_template": "$$\\color{red}{{expr}}$$",
+      "explanation": "",
+      "notes": [],
+      "source": {
+        "file": "obsidian_knowledge_base.txt",
+        "section": "COLOR_HIGHLIGHT",
+        "line": 321
+      }
+    },
+    {
+      "id": "OBS_0126",
+      "domain": "obsidian_mathjax",
+      "topic": "color_highlight",
+      "title": "màu xanh",
+      "trigger_phrases": [
+        "màu xanh"
+      ],
+      "syntax_template": "$$\\color{blue}{{expr}}$$",
+      "explanation": "",
+      "notes": [],
+      "source": {
+        "file": "obsidian_knowledge_base.txt",
+        "section": "COLOR_HIGHLIGHT",
+        "line": 323
+      }
+    },
+    {
+      "id": "OBS_0127",
+      "domain": "obsidian_mathjax",
+      "topic": "numbering_references",
+      "title": "phương trình có số",
+      "trigger_phrases": [
+        "phương trình có số"
+      ],
+      "syntax_template": "\\begin{equation}\\n{formula}\\n\\end{equation}",
+      "explanation": "",
+      "notes": [],
+      "source": {
+        "file": "obsidian_knowledge_base.txt",
+        "section": "NUMBERING_REFERENCES",
+        "line": 329
+      }
+    },
+    {
+      "id": "OBS_0128",
+      "domain": "obsidian_mathjax",
+      "topic": "numbering_references",
+      "title": "gắn nhãn phương trình",
+      "trigger_phrases": [
+        "gắn nhãn phương trình"
+      ],
+      "syntax_template": "\\tag{{label}}",
+      "explanation": "",
+      "notes": [],
+      "source": {
+        "file": "obsidian_knowledge_base.txt",
+        "section": "NUMBERING_REFERENCES",
+        "line": 331
+      }
+    },
+    {
+      "id": "OBS_0129",
+      "domain": "obsidian_mathjax",
+      "topic": "callouts",
+      "title": "ghi chú",
+      "trigger_phrases": [
+        "ghi chú"
+      ],
+      "syntax_template": "> [!note]\\n> {text}",
+      "explanation": "",
+      "notes": [],
+      "source": {
+        "file": "obsidian_knowledge_base.txt",
+        "section": "CALLOUTS",
+        "line": 337
+      }
+    },
+    {
+      "id": "OBS_0130",
+      "domain": "obsidian_mathjax",
+      "topic": "callouts",
+      "title": "thông tin",
+      "trigger_phrases": [
+        "thông tin"
+      ],
+      "syntax_template": "> [!info]\\n> {text}",
+      "explanation": "",
+      "notes": [],
+      "source": {
+        "file": "obsidian_knowledge_base.txt",
+        "section": "CALLOUTS",
+        "line": 339
+      }
+    },
+    {
+      "id": "OBS_0131",
+      "domain": "obsidian_mathjax",
+      "topic": "callouts",
+      "title": "mẹo",
+      "trigger_phrases": [
+        "mẹo"
+      ],
+      "syntax_template": "> [!tip]\\n> {text}",
+      "explanation": "",
+      "notes": [],
+      "source": {
+        "file": "obsidian_knowledge_base.txt",
+        "section": "CALLOUTS",
+        "line": 341
+      }
+    },
+    {
+      "id": "OBS_0132",
+      "domain": "obsidian_mathjax",
+      "topic": "callouts",
+      "title": "cảnh báo",
+      "trigger_phrases": [
+        "cảnh báo"
+      ],
+      "syntax_template": "> [!warning]\\n> {text}",
+      "explanation": "",
+      "notes": [],
+      "source": {
+        "file": "obsidian_knowledge_base.txt",
+        "section": "CALLOUTS",
+        "line": 343
+      }
+    },
+    {
+      "id": "OBS_0133",
+      "domain": "obsidian_mathjax",
+      "topic": "callouts",
+      "title": "câu hỏi",
+      "trigger_phrases": [
+        "câu hỏi"
+      ],
+      "syntax_template": "> [!question]\\n> {text}",
+      "explanation": "",
+      "notes": [],
+      "source": {
+        "file": "obsidian_knowledge_base.txt",
+        "section": "CALLOUTS",
+        "line": 345
+      }
+    },
+    {
+      "id": "OBS_0134",
+      "domain": "obsidian_mathjax",
+      "topic": "callouts",
+      "title": "thành công",
+      "trigger_phrases": [
+        "thành công"
+      ],
+      "syntax_template": "> [!success]\\n> {text}",
+      "explanation": "",
+      "notes": [],
+      "source": {
+        "file": "obsidian_knowledge_base.txt",
+        "section": "CALLOUTS",
+        "line": 347
+      }
+    },
+    {
+      "id": "OBS_0135",
+      "domain": "obsidian_mathjax",
+      "topic": "callouts",
+      "title": "lỗi",
+      "trigger_phrases": [
+        "lỗi"
+      ],
+      "syntax_template": "> [!failure]\\n> {text}",
+      "explanation": "",
+      "notes": [],
+      "source": {
+        "file": "obsidian_knowledge_base.txt",
+        "section": "CALLOUTS",
+        "line": 349
+      }
+    },
+    {
+      "id": "OBS_0136",
+      "domain": "obsidian_mathjax",
+      "topic": "callouts",
+      "title": "nguy hiểm",
+      "trigger_phrases": [
+        "nguy hiểm"
+      ],
+      "syntax_template": "> [!danger]\\n> {text}",
+      "explanation": "",
+      "notes": [],
+      "source": {
+        "file": "obsidian_knowledge_base.txt",
+        "section": "CALLOUTS",
+        "line": 351
+      }
+    },
+    {
+      "id": "OBS_0137",
+      "domain": "obsidian_mathjax",
+      "topic": "callouts",
+      "title": "bug",
+      "trigger_phrases": [
+        "bug"
+      ],
+      "syntax_template": "> [!bug]\\n> {text}",
+      "explanation": "",
+      "notes": [],
+      "source": {
+        "file": "obsidian_knowledge_base.txt",
+        "section": "CALLOUTS",
+        "line": 353
+      }
+    },
+    {
+      "id": "OBS_0138",
+      "domain": "obsidian_mathjax",
+      "topic": "callouts",
+      "title": "callout thu gọn",
+      "trigger_phrases": [
+        "callout thu gọn"
+      ],
+      "syntax_template": "> [!tip]- {title}\\n> {text}",
+      "explanation": "",
+      "notes": [],
+      "source": {
+        "file": "obsidian_knowledge_base.txt",
+        "section": "CALLOUTS",
+        "line": 355
+      }
+    },
+    {
+      "id": "OBS_0139",
+      "domain": "obsidian_mathjax",
+      "topic": "tags",
+      "title": "tag",
+      "trigger_phrases": [
+        "tag"
+      ],
+      "syntax_template": "#{tag}",
+      "explanation": "",
+      "notes": [],
+      "source": {
+        "file": "obsidian_knowledge_base.txt",
+        "section": "TAGS",
+        "line": 361
+      }
+    },
+    {
+      "id": "OBS_0140",
+      "domain": "obsidian_mathjax",
+      "topic": "footnotes",
+      "title": "chú thích cuối trang",
+      "trigger_phrases": [
+        "chú thích cuối trang"
+      ],
+      "syntax_template": "{text}[^{id}]\\n\\n[^{id}]: {note}",
+      "explanation": "",
+      "notes": [],
+      "source": {
+        "file": "obsidian_knowledge_base.txt",
+        "section": "FOOTNOTES",
+        "line": 368
+      }
+    },
+    {
+      "id": "OBS_0141",
+      "domain": "obsidian_mathjax",
+      "topic": "escape",
+      "title": "escape dấu sao",
+      "trigger_phrases": [
+        "escape dấu sao"
+      ],
+      "syntax_template": "\\*",
+      "explanation": "",
+      "notes": [],
+      "source": {
+        "file": "obsidian_knowledge_base.txt",
+        "section": "ESCAPE",
+        "line": 374
+      }
+    },
+    {
+      "id": "OBS_0142",
+      "domain": "obsidian_mathjax",
+      "topic": "escape",
+      "title": "escape gạch dưới",
+      "trigger_phrases": [
+        "escape gạch dưới"
+      ],
+      "syntax_template": "\\_",
+      "explanation": "",
+      "notes": [],
+      "source": {
+        "file": "obsidian_knowledge_base.txt",
+        "section": "ESCAPE",
+        "line": 376
+      }
+    },
+    {
+      "id": "OBS_0143",
+      "domain": "obsidian_mathjax",
+      "topic": "escape",
+      "title": "escape hashtag",
+      "trigger_phrases": [
+        "escape hashtag"
+      ],
+      "syntax_template": "\\#",
+      "explanation": "",
+      "notes": [],
+      "source": {
+        "file": "obsidian_knowledge_base.txt",
+        "section": "ESCAPE",
+        "line": 378
+      }
+    },
+    {
+      "id": "OBS_0144",
+      "domain": "obsidian_mathjax",
+      "topic": "escape",
+      "title": "escape backtick",
+      "trigger_phrases": [
+        "escape backtick"
+      ],
+      "syntax_template": "\\`",
+      "explanation": "",
+      "notes": [],
+      "source": {
+        "file": "obsidian_knowledge_base.txt",
+        "section": "ESCAPE",
+        "line": 380
+      }
+    },
+    {
+      "id": "OBS_0145",
+      "domain": "obsidian_mathjax",
+      "topic": "escape",
+      "title": "escape pipe",
+      "trigger_phrases": [
+        "escape pipe"
+      ],
+      "syntax_template": "\\|",
+      "explanation": "",
+      "notes": [],
+      "source": {
+        "file": "obsidian_knowledge_base.txt",
+        "section": "ESCAPE",
+        "line": 382
+      }
+    },
+    {
+      "id": "OBS_0146",
+      "domain": "obsidian_mathjax",
+      "topic": "escape",
+      "title": "escape tilde",
+      "trigger_phrases": [
+        "escape tilde"
+      ],
+      "syntax_template": "\\~",
+      "explanation": "",
+      "notes": [],
+      "source": {
+        "file": "obsidian_knowledge_base.txt",
+        "section": "ESCAPE",
+        "line": 384
+      }
+    }
+  ],
+  "raw_text": "# NATURAL LANGUAGE -> OBSIDIAN/MATHJAX KNOWLEDGE BASE\n# Version: 1\n# Mục tiêu:\n# - Người dùng nói tiếng Việt bình dân.\n# - Hệ thống chọn intent/template phù hợp.\n# - Hệ thống điền biến người dùng cung cấp.\n# - Output cuối ưu tiên là cú pháp Obsidian/MathJax có thể copy trực tiếp.\n# - Không bịa cú pháp nếu knowledge base không có bằng chứng.\n#\n# FORMAT MỖI MỤC:\n# INTENT | từ khóa tự nhiên\n# OUTPUT | template\n# NOTES | quy tắc/biến cần hỏi\n#\n# Đây là lớp runtime gọn. knowledge_source_full.txt là nguồn tham chiếu đầy đủ.\n\n[OBSIDIAN_BASIC]\nINTENT | tiêu đề 1\nOUTPUT | # {text}\nINTENT | tiêu đề 2\nOUTPUT | ## {text}\nINTENT | tiêu đề 3\nOUTPUT | ### {text}\nINTENT | chữ đậm\nOUTPUT | **{text}**\nINTENT | chữ nghiêng\nOUTPUT | *{text}*\nINTENT | gạch ngang\nOUTPUT | ~~{text}~~\nINTENT | highlight\nOUTPUT | =={text}==\nINTENT | link nội bộ\nOUTPUT | [[{note}]]\nINTENT | link nội bộ có tên\nOUTPUT | [[{note}|{label}]]\nINTENT | link web\nOUTPUT | [{label}]({url})\nINTENT | ảnh\nOUTPUT | ![{alt}]({url})\nINTENT | trích dẫn\nOUTPUT | > {text}\nINTENT | danh sách\nOUTPUT | - {item}\nINTENT | danh sách đánh số\nOUTPUT | 1. {item1}\\n2. {item2}\nINTENT | checkbox\nOUTPUT | - [ ] {task}\nINTENT | checkbox hoàn thành\nOUTPUT | - [x] {task}\nINTENT | đường ngang\nOUTPUT | ---\nINTENT | code inline\nOUTPUT | `{code}`\nINTENT | code block\nOUTPUT | ```{language}\\n{code}\\n```\nINTENT | chú thích\nOUTPUT | %% {text} %%\n\n[TABLE]\nINTENT | bảng\nOUTPUT | | {c1} | {c2} |\\n| --- | --- |\\n| {v1} | {v2} |\nINTENT | bảng căn trái\nOUTPUT | | {c1} | {c2} |\\n| :--- | :--- |\\n| {v1} | {v2} |\nINTENT | bảng căn giữa\nOUTPUT | | {c1} | {c2} |\\n| :---: | :---: |\\n| {v1} | {v2} |\nINTENT | bảng căn phải\nOUTPUT | | {c1} | {c2} |\\n| ---: | ---: |\\n| {v1} | {v2} |\nNOTES | Dấu | trong nội dung bảng phải được escape khi cần.\n\n[MERMAID]\nINTENT | sơ đồ luồng\nOUTPUT | ```mermaid\\ngraph TD\\n{diagram}\\n```\nINTENT | sơ đồ tuần tự\nOUTPUT | ```mermaid\\nsequenceDiagram\\n{diagram}\\n```\nNOTES | Mermaid là code block riêng, không trộn với MathJax.\n\n[MATH_BASIC]\nINTENT | công thức inline\nOUTPUT | ${formula}$\nINTENT | công thức lớn\nOUTPUT | $$\\n{formula}\\n$$\nINTENT | phân số\nOUTPUT | $$\\frac{{{num}}}{{{den}}}$$\nINTENT | căn\nOUTPUT | $$\\sqrt{{{expr}}}$$\nINTENT | căn bậc n\nOUTPUT | $$\\sqrt[{n}]{{{expr}}}$$\nINTENT | mũ\nOUTPUT | ${{base}}^{{{exp}}}$\nINTENT | chỉ số\nOUTPUT | ${{base}}_{{{sub}}}$\nINTENT | mũ và chỉ số\nOUTPUT | ${{base}}_{{{sub}}}^{{{exp}}}$\nINTENT | tổng\nOUTPUT | $$\\sum_{{{from}}}^{{{to}}} {expr}$$\nINTENT | tích\nOUTPUT | $$\\prod_{{{from}}}^{{{to}}} {expr}$$\nINTENT | tích phân\nOUTPUT | $$\\int_{{{from}}}^{{{to}}} {expr}\\,dx$$\nINTENT | giới hạn\nOUTPUT | $$\\lim_{{{condition}}} {expr}$$\nINTENT | đạo hàm\nOUTPUT | $$f'({x})$$\nINTENT | đạo hàm cấp 2\nOUTPUT | $$f''({x})$$\n\n[MATRIX]\nINTENT | ma trận\nOUTPUT | $$\\begin{matrix}\\n{rows}\\n\\end{matrix}$$\nINTENT | ma trận 2x2\nOUTPUT | $$\\begin{matrix}\\n{a} & {b} \\\\\\\\\\n{c} & {d}\\n\\end{matrix}$$\nINTENT | ma trận ngoặc tròn\nOUTPUT | $$\\begin{pmatrix}\\n{rows}\\n\\end{pmatrix}$$\nINTENT | ma trận ngoặc vuông\nOUTPUT | $$\\begin{bmatrix}\\n{rows}\\n\\end{bmatrix}$$\nINTENT | ma trận ngoặc nhọn\nOUTPUT | $$\\begin{Bmatrix}\\n{rows}\\n\\end{Bmatrix}$$\nINTENT | định thức\nOUTPUT | $$\\begin{vmatrix}\\n{rows}\\n\\end{vmatrix}$$\nINTENT | chuẩn ma trận\nOUTPUT | $$\\begin{Vmatrix}\\n{rows}\\n\\end{Vmatrix}$$\nINTENT | ma trận có dấu chấm\nOUTPUT | $$\\begin{pmatrix}\\n{rows_with_dots}\\n\\end{pmatrix}$$\nNOTES | Trong matrix: cột ngăn bởi &, hàng ngăn bởi \\\\.\n\n[CASES_SYSTEMS]\nINTENT | hàm từng đoạn\nOUTPUT | $$f(x)=\\begin{cases}\\n{expr1} & {condition1} \\\\\\\\\\n{expr2} & {condition2}\\n\\end{cases}$$\nINTENT | hệ phương trình\nOUTPUT | $$\\left\\{\\begin{aligned}\\n{eq1} &= {rhs1} \\\\\\\\\\n{eq2} &= {rhs2}\\n\\end{aligned}\\right.$$\nINTENT | hệ phương trình bằng array\nOUTPUT | $$\\left\\{\\begin{array}{ll}\\n{eq1} &= {rhs1} \\\\\\\\\\n{eq2} &= {rhs2}\\n\\end{array}\\right.$$\n\n[ALIGN_ARRAY]\nINTENT | căn chỉnh phương trình\nOUTPUT | $$\\begin{aligned}\\n{left1} &= {right1} \\\\\\\\\\n{left2} &= {right2}\\n\\end{aligned}$$\nINTENT | bảng toán học\nOUTPUT | $$\\begin{array}{cc}\\n{a} & {b} \\\\\\\\\\n{c} & {d}\\n\\end{array}$$\nINTENT | bảng toán học căn trái\nOUTPUT | $$\\begin{array}{l}\\n{items}\\n\\end{array}$$\nINTENT | bảng toán học căn giữa\nOUTPUT | $$\\begin{array}{c}\\n{items}\\n\\end{array}$$\nINTENT | bảng toán học căn phải\nOUTPUT | $$\\begin{array}{r}\\n{items}\\n\\end{array}$$\n\n[SYMBOLS]\nINTENT | alpha\nOUTPUT | $\\alpha$\nINTENT | beta\nOUTPUT | $\\beta$\nINTENT | gamma\nOUTPUT | $\\gamma$\nINTENT | delta\nOUTPUT | $\\delta$\nINTENT | theta\nOUTPUT | $\\theta$\nINTENT | lambda\nOUTPUT | $\\lambda$\nINTENT | pi\nOUTPUT | $\\pi$\nINTENT | sigma\nOUTPUT | $\\sigma$\nINTENT | omega\nOUTPUT | $\\omega$\nINTENT | vô cùng\nOUTPUT | $\\infty$\nINTENT | nabla\nOUTPUT | $\\nabla$\nINTENT | phần riêng\nOUTPUT | $\\partial$\nINTENT | số thực\nOUTPUT | $\\mathbb{R}$\nINTENT | số tự nhiên\nOUTPUT | $\\mathbb{N}$\nINTENT | số nguyên\nOUTPUT | $\\mathbb{Z}$\nINTENT | thuộc\nOUTPUT | $\\in$\nINTENT | không thuộc\nOUTPUT | $\\notin$\nINTENT | tập rỗng\nOUTPUT | $\\emptyset$\nINTENT | hợp\nOUTPUT | $\\cup$\nINTENT | giao\nOUTPUT | $\\cap$\nINTENT | tập con\nOUTPUT | $\\subseteq$\nINTENT | khác\nOUTPUT | $\\neq$\nINTENT | nhỏ hơn hoặc bằng\nOUTPUT | $\\leq$\nINTENT | lớn hơn hoặc bằng\nOUTPUT | $\\geq$\nINTENT | xấp xỉ\nOUTPUT | $\\approx$\nINTENT | tương đương\nOUTPUT | $\\equiv$\nINTENT | nhân\nOUTPUT | $\\times$\nINTENT | chia\nOUTPUT | $\\div$\nINTENT | cộng trừ\nOUTPUT | $\\pm$\nINTENT | kéo theo\nOUTPUT | $\\implies$\nINTENT | khi và chỉ khi\nOUTPUT | $\\iff$\nINTENT | với mọi\nOUTPUT | $\\forall$\nINTENT | tồn tại\nOUTPUT | $\\exists$\nINTENT | mũi tên phải\nOUTPUT | $\\rightarrow$\nINTENT | ánh xạ\nOUTPUT | $\\mapsto$\n\n[SETS_LOGIC]\nINTENT | và logic\nOUTPUT | $\\land$\nINTENT | hoặc logic\nOUTPUT | $\\lor$\nINTENT | phủ định\nOUTPUT | $\\lnot P$\nINTENT | chứng minh được\nOUTPUT | $\\vdash$\nINTENT | thỏa mãn\nOUTPUT | $\\vDash$\nINTENT | modulo\nOUTPUT | $$a\\equiv b\\pmod n$$\n\n[ACCENTS_DECORATIONS]\nINTENT | vector\nOUTPUT | $\\vec{x}$\nINTENT | vector dài\nOUTPUT | $\\overrightarrow{AB}$\nINTENT | gạch trên\nOUTPUT | $\\bar{x}$\nINTENT | gạch dưới\nOUTPUT | $\\underline{x}$\nINTENT | dấu ngã\nOUTPUT | $\\widetilde{x}$\nINTENT | dấu mũ\nOUTPUT | $\\widehat{x}$\nINTENT | đạo hàm chấm\nOUTPUT | $\\dot{x}$\nINTENT | đóng khung\nOUTPUT | $$\\boxed{{expr}}$$\nINTENT | overbrace\nOUTPUT | $$\\overbrace{{expr}}^{{label}}$$\nINTENT | underbrace\nOUTPUT | $$\\underbrace{{expr}}_{{label}}$$\nINTENT | chữ phía trên\nOUTPUT | $$\\overset{{label}}{{expr}}$$\nINTENT | chữ phía dưới\nOUTPUT | $$\\underset{{label}}{{expr}}$$\n\n[BRACKETS_SPACING_TEXT]\nINTENT | ngoặc tự co\nOUTPUT | $$\\left({expr}\\right)$$\nINTENT | ngoặc vuông tự co\nOUTPUT | $$\\left[{expr}\\right]$$\nINTENT | ngoặc nhọn tự co\nOUTPUT | $$\\left\\{{expr}\\right\\}$$\nINTENT | trị tuyệt đối\nOUTPUT | $$\\lvert {expr}\\rvert$$\nINTENT | chuẩn vector\nOUTPUT | $$\\lVert {expr}\\rVert$$\nINTENT | khoảng cách nhỏ\nOUTPUT | $a\\,b$\nINTENT | khoảng cách vừa\nOUTPUT | $a\\;b$\nINTENT | khoảng cách lớn\nOUTPUT | $a\\quad b$\nINTENT | khoảng cách rất lớn\nOUTPUT | $a\\qquad b$\nINTENT | khoảng cách âm\nOUTPUT | $a\\!b$\nINTENT | chữ trong công thức\nOUTPUT | $$\\text{{text}}$$\n\n[FONT]\nINTENT | chữ blackboard\nOUTPUT | $\\mathbb{R}$\nINTENT | chữ đậm toán\nOUTPUT | $\\mathbf{ABC}$\nINTENT | vector đậm\nOUTPUT | $\\boldsymbol{\\alpha}$\nINTENT | chữ La Mã\nOUTPUT | $\\mathrm{ABC}$\nINTENT | chữ typewriter\nOUTPUT | $\\mathtt{ABC}$\nINTENT | chữ sans serif\nOUTPUT | $\\mathsf{ABC}$\nINTENT | chữ calligraphic\nOUTPUT | $\\mathcal{ABC}$\nINTENT | chữ script\nOUTPUT | $\\mathscr{ABC}$\nINTENT | chữ Fraktur\nOUTPUT | $\\mathfrak{ABC}$\n\n[SPACING_DEGREE_UNITS]\nINTENT | độ\nOUTPUT | $45^\\circ$\nINTENT | mét\nOUTPUT | $\\mathrm{m}$\nINTENT | mét vuông\nOUTPUT | $\\mathrm{m}^2$\nINTENT | mét trên giây\nOUTPUT | $\\mathrm{m}\\middle/\\mathrm{s}$\nINTENT | mét trên giây bình phương\nOUTPUT | $\\mathrm{m}\\middle/\\mathrm{s}^2$\nINTENT | mol\nOUTPUT | $\\mathrm{mol}$\nINTENT | đơn vị nhân\nOUTPUT | $\\mathrm{kg}\\!\\cdot\\!\\mathrm{m}^2$\nINTENT | đơn vị số mũ âm\nOUTPUT | $\\mathrm{m}\\,\\mathrm{s}^{-2}$\n\n[COLOR_HIGHLIGHT]\nINTENT | màu đỏ\nOUTPUT | $$\\color{red}{{expr}}$$\nINTENT | màu xanh\nOUTPUT | $$\\color{blue}{{expr}}$$\nINTENT | highlight công thức\nOUTPUT | $$\\bbox[yellow]{{expr}}$$\n\n[NUMBERING_REFERENCES]\nINTENT | phương trình có số\nOUTPUT | \\begin{equation}\\n{formula}\\n\\end{equation}\nINTENT | gắn nhãn phương trình\nOUTPUT | \\tag{{label}}\nINTENT | tham chiếu phương trình\nOUTPUT | \\eqref{{label}}\n\n[CALLOUTS]\nINTENT | ghi chú\nOUTPUT | > [!note]\\n> {text}\nINTENT | thông tin\nOUTPUT | > [!info]\\n> {text}\nINTENT | mẹo\nOUTPUT | > [!tip]\\n> {text}\nINTENT | cảnh báo\nOUTPUT | > [!warning]\\n> {text}\nINTENT | câu hỏi\nOUTPUT | > [!question]\\n> {text}\nINTENT | thành công\nOUTPUT | > [!success]\\n> {text}\nINTENT | lỗi\nOUTPUT | > [!failure]\\n> {text}\nINTENT | nguy hiểm\nOUTPUT | > [!danger]\\n> {text}\nINTENT | bug\nOUTPUT | > [!bug]\\n> {text}\nINTENT | callout thu gọn\nOUTPUT | > [!tip]- {title}\\n> {text}\nINTENT | callout mở sẵn\nOUTPUT | > [!tip]+ {title}\\n> {text}\n\n[TAGS]\nINTENT | tag\nOUTPUT | #{tag}\nINTENT | tag lồng nhau\nOUTPUT | #{parent}/{child}\nNOTES | Tag không chứa khoảng trắng; nested tag dùng /.\n\n[FOOTNOTES]\nINTENT | chú thích cuối trang\nOUTPUT | {text}[^{id}]\\n\\n[^{id}]: {note}\nINTENT | chú thích inline\nOUTPUT | {text} ^[{note}]\n\n[ESCAPE]\nINTENT | escape dấu sao\nOUTPUT | \\*\nINTENT | escape gạch dưới\nOUTPUT | \\_\nINTENT | escape hashtag\nOUTPUT | \\#\nINTENT | escape backtick\nOUTPUT | \\`\nINTENT | escape pipe\nOUTPUT | \\|\nINTENT | escape tilde\nOUTPUT | \\~\n"
+}

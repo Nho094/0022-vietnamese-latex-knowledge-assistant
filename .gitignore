@@ -1,0 +1,49 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Caches and test artifacts
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.cache/
+
+# Virtual environments
+.venv/
+.venv*/
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+node_modules/
+
+# External data
+data/external/
+
+# Models and Hugging Face cache
+models/
+models/hf_cache/
+
+# Model weights and checkpoints
+*.pt
+*.pth
+*.bin
+*.safetensors
+*.ckpt
+*.weights
+*.h5
+weights/
+checkpoints/
+
+# OS and Editor files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+.idea/
+.vscode/

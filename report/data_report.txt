@@ -1,0 +1,96 @@
+================================================================================
+       VIETNAMESE LATEX KNOWLEDGE ASSISTANT - DATASET LEAKAGE REPORT
+     BÁO CÁO PHÂN PHỐI DỮ LIỆU VÀ ĐÁNH GIÁ RÒ RỈ THÔNG TIN (KA-12)
+================================================================================
+
+1. PHÂN PHỐI MẪU VÀ TỶ LỆ PHÂN VÙNG (SPLIT SAMPLE DISTRIBUTIONS)
+--------------------------------------------------------------------------------
+Phân vùng  | Số mẫu   | Tỷ lệ    | Số Intents   | Số Categories 
+--------------------------------------------------------------------------------
+train      | 3825     |  66.73% | 189          | 12            
+val        | 967      |  16.87% | 189          | 12            
+test       | 940      |  16.40% | 188          | 11            
+--------------------------------------------------------------------------------
+TỔNG CỘNG: 5732 mẫu dữ liệu.
+
+Phân phối theo danh mục (Category Breakdown):
+Danh mục         | Train    | Val      | Test     | Tổng    
+------------------------------------------------------------
+math_shared      | 2100     | 525      | 525      | 3150    
+obsidian         | 820      | 205      | 205      | 1230    
+tex_doc          | 120      | 30       | 30       | 180     
+tex_figures      | 80       | 20       | 20       | 120     
+tex_layout       | 20       | 5        | 5        | 30      
+tex_lists        | 40       | 10       | 10       | 60      
+tex_math         | 180      | 45       | 45       | 270     
+tex_misc         | 65       | 27       | 0        | 92      
+tex_refs         | 20       | 5        | 5        | 30      
+tex_struct       | 160      | 40       | 40       | 240     
+tex_tables       | 60       | 15       | 15       | 90      
+tex_text         | 160      | 40       | 40       | 240     
+------------------------------------------------------------
+
+2. THỐNG KÊ ĐỘ DÀI CHUỖI VĂN BẢN (SEQUENCE LENGTH AVERAGES & DISPERSION)
+--------------------------------------------------------------------------------
+A. Độ dài theo ký tự (Character Length):
+Phân vùng  | Min    | Max    | Mean (Trung bình)  | Median   | Std Dev 
+------------------------------------------------------------------------
+train      | 11     | 255    |            72.55   |   66.0 |   35.78
+val        | 21     | 284    |           158.38   |  154.0 |   34.71
+test       | 140    | 323    |           193.05   |  192.0 |   35.30
+------------------------------------------------------------------------
+TỔNG THỂ   | 11     | 323    |           106.79   |   91.0 |   60.94
+
+B. Độ dài theo từ (Word Count):
+Phân vùng  | Min    | Max    | Mean (Trung bình)  | Median   | Std Dev 
+------------------------------------------------------------------------
+train      | 3      | 52     |            15.54   |   14.0 |    7.62
+val        | 5      | 62     |            35.59   |   35.0 |    7.48
+test       | 30     | 68     |            40.92   |   41.0 |    7.55
+------------------------------------------------------------------------
+TỔNG THỂ   | 3      | 68     |            23.09   |   19.0 |   13.19
+
+3. KIỂM THỰC TRÙNG LẶP TUYỆT ĐỐI XUYÊN PHÂN VÙNG (EXACT DUPLICATE VERIFICATION)
+   (Quy chuẩn: Chuẩn hóa Unicode NFC, chữ thường, gom khoảng trắng thừa - Honesty Rule #4)
+--------------------------------------------------------------------------------
+- Trùng lặp nội bộ trong tập Train : 0 câu
+- Trùng lặp nội bộ trong tập Val   : 0 câu
+- Trùng lặp nội bộ trong tập Test  : 0 câu
+- Trùng lặp chéo giữa Train và Val : 0 câu
+- Trùng lặp chéo giữa Train và Test: 0 câu
+- Trùng lặp chéo giữa Val và Test  : 0 câu
+-> KẾT LUẬN TOÀN VẸN: [ĐẠT CHUẨN] KHÔNG PHÁT HIỆN TRÙNG LẶP TUYỆT ĐỐI
+
+4. ĐÁNH GIÁ ĐỘ TƯƠNG ĐỒNG CHARACTER TRIGRAM VÀ RÒ RỈ DỮ LIỆU (TRIGRAM SIMILARITY & LEAKAGE)
+   (Công thức: J(T, S) = |T(T) ∩ T(S)| / |T(T) ∪ T(S)| với trigram độ dài 3 ký tự)
+--------------------------------------------------------------------------------
+- Tổng số mẫu kiểm thử phân tích   : 940 câu
+- Không gian câu huấn luyện đối chiếu: 3825 câu
+- Tổng số cặp so khớp tính toán      : 3,595,500 cặp
+- Ngưỡng cảnh báo near-duplicate     : > 0.8
+
+Phổ giá trị tương đồng cực đại (Max Similarity Distribution per test sample):
+  * Giá trị tương đồng lớn nhất (Max)    : 0.7069
+  * Giá trị tương đồng nhỏ nhất (Min)    : 0.3694
+  * Trung bình tương đồng cực đại (Mean) : 0.4793
+  * Trung vị tương đồng cực đại (Median) : 0.4610
+  * Độ lệch chuẩn tương đồng (Std Dev)   : 0.0704
+
+Phân bố tần suất theo khoảng giá trị tương đồng:
+  [0.0, 0.2)   :     0 câu (  0.0%) | 
+  [0.2, 0.4)   :    79 câu (  8.4%) | ####
+  [0.4, 0.6)   :   783 câu ( 83.3%) | #########################################
+  [0.6, 0.8)   :    78 câu (  8.3%) | ####
+  [0.8, 1.0]   :     0 câu (  0.0%) | 
+
+Danh sách các câu kiểm thử bị cảnh báo gần trùng lặp (Similarity > 0.8):
+  [AN TOÀN] Không có câu kiểm thử nào có độ tương đồng vượt ngưỡng 0.8.
+  Tập kiểm thử (Test set) độc lập tốt, không có nguy cơ rò rỉ dữ liệu nghiêm trọng.
+
+================================================================================
+5. ĐÁNH GIÁ TỔNG QUAN VÀ KẾT LUẬN CUỐI CÙNG
+================================================================================
+- Trùng lặp tuyệt đối (Honesty Rule #4)     : PASS
+- Rò rỉ thông tin n-gram (Threshold 0.8)      : PASS
+- Kết luận: Dữ liệu đạt tính toàn vẹn cao, phân chia độc lập giữa tập huấn luyện và tập kiểm thử.
+================================================================================

@@ -1,0 +1,5060 @@
+[
+  {
+    "intent": "MATHJAX_CONG_THUC_INLINE",
+    "category": "math_expression",
+    "subcategory": "cong_thuc_inline",
+    "describe": "Chèn ký hiệu hoặc cấu trúc toán học MathJax: công thức inline.",
+    "aliases": [
+      "công thức inline",
+      "công thức toán inline",
+      "toán trong dòng",
+      "công thức nằm trong câu",
+      "inline math"
+    ],
+    "slots": {
+      "formula": {
+        "required": false,
+        "default": ""
+      }
+    },
+    "templates": {
+      "latex": "\\({formula}\\)",
+      "mathjax": "\\({formula}\\)",
+      "python": "",
+      "cpp": ""
+    },
+    "requires": [],
+    "render_target": "mathjax",
+    "source": {
+      "file": "knowledge_base(1).txt",
+      "section": "MATH_BASIC",
+      "original_intent": "công thức inline"
+    },
+    "notes": ""
+  },
+  {
+    "intent": "MATHJAX_CONG_THUC_LON",
+    "category": "math_expression",
+    "subcategory": "cong_thuc_lon",
+    "describe": "Chèn ký hiệu hoặc cấu trúc toán học MathJax: công thức lớn.",
+    "aliases": [
+      "công thức lớn",
+      "công thức toán",
+      "display math",
+      "công thức hiển thị",
+      "công thức xuống dòng",
+      "display equation"
+    ],
+    "slots": {
+      "formula": {
+        "required": false,
+        "default": ""
+      }
+    },
+    "templates": {
+      "latex": "\\[\n{formula}\n\\]",
+      "mathjax": "\\[\n{formula}\n\\]",
+      "python": "",
+      "cpp": ""
+    },
+    "requires": [],
+    "render_target": "mathjax",
+    "source": {
+      "file": "knowledge_base(1).txt",
+      "section": "MATH_BASIC",
+      "original_intent": "công thức lớn"
+    },
+    "notes": ""
+  },
+  {
+    "intent": "MATHJAX_PHAN_SO",
+    "category": "math_expression",
+    "subcategory": "phan_so",
+    "describe": "Chèn ký hiệu hoặc cấu trúc toán học MathJax: phân số.",
+    "aliases": [
+      "phân số",
+      "phân thức",
+      "a trên b",
+      "phân số latex",
+      "tạo phân thức",
+      "tử trên mẫu"
+    ],
+    "slots": {
+      "den": {
+        "required": false,
+        "default": ""
+      },
+      "num": {
+        "required": false,
+        "default": ""
+      }
+    },
+    "templates": {
+      "latex": "\\[\n\\frac{{num}}{{den}}\n\\]",
+      "mathjax": "\\[\n\\frac{{num}}{{den}}\n\\]",
+      "python": "",
+      "cpp": ""
+    },
+    "requires": [],
+    "render_target": "mathjax",
+    "source": {
+      "file": "knowledge_base(1).txt",
+      "section": "MATH_BASIC",
+      "original_intent": "phân số"
+    },
+    "notes": ""
+  },
+  {
+    "intent": "MATHJAX_CAN",
+    "category": "math_expression",
+    "subcategory": "can",
+    "describe": "Chèn ký hiệu hoặc cấu trúc toán học MathJax: căn.",
+    "aliases": [
+      "căn",
+      "căn bậc hai",
+      "căn thức",
+      "căn x",
+      "sqrt"
+    ],
+    "slots": {
+      "expr": {
+        "required": false,
+        "default": ""
+      }
+    },
+    "templates": {
+      "latex": "\\[\n\\sqrt{{expr}}\n\\]",
+      "mathjax": "\\[\n\\sqrt{{expr}}\n\\]",
+      "python": "",
+      "cpp": ""
+    },
+    "requires": [],
+    "render_target": "mathjax",
+    "source": {
+      "file": "knowledge_base(1).txt",
+      "section": "MATH_BASIC",
+      "original_intent": "căn"
+    },
+    "notes": ""
+  },
+  {
+    "intent": "MATHJAX_CAN_BAC_N",
+    "category": "math_expression",
+    "subcategory": "can_bac_n",
+    "describe": "Chèn ký hiệu hoặc cấu trúc toán học MathJax: căn bậc n.",
+    "aliases": [
+      "căn bậc n",
+      "căn bậc",
+      "căn n",
+      "căn bậc bất kỳ",
+      "căn chỉ số n"
+    ],
+    "slots": {
+      "expr": {
+        "required": false,
+        "default": ""
+      },
+      "n": {
+        "required": false,
+        "default": ""
+      }
+    },
+    "templates": {
+      "latex": "\\[\n\\sqrt[{n}]{{expr}}\n\\]",
+      "mathjax": "\\[\n\\sqrt[{n}]{{expr}}\n\\]",
+      "python": "",
+      "cpp": ""
+    },
+    "requires": [],
+    "render_target": "mathjax",
+    "source": {
+      "file": "knowledge_base(1).txt",
+      "section": "MATH_BASIC",
+      "original_intent": "căn bậc n"
+    },
+    "notes": ""
+  },
+  {
+    "intent": "MATHJAX_MU",
+    "category": "math_expression",
+    "subcategory": "mu",
+    "describe": "Chèn ký hiệu hoặc cấu trúc toán học MathJax: mũ.",
+    "aliases": [
+      "mũ",
+      "số mũ",
+      "số mũ trên",
+      "lũy thừa"
+    ],
+    "slots": {
+      "base": {
+        "required": false,
+        "default": ""
+      },
+      "exp": {
+        "required": false,
+        "default": ""
+      }
+    },
+    "templates": {
+      "latex": "\\({base}^{exp}\\)",
+      "mathjax": "\\({base}^{exp}\\)",
+      "python": "",
+      "cpp": ""
+    },
+    "requires": [],
+    "render_target": "mathjax",
+    "source": {
+      "file": "knowledge_base(1).txt",
+      "section": "MATH_BASIC",
+      "original_intent": "mũ"
+    },
+    "notes": ""
+  },
+  {
+    "intent": "MATHJAX_CHI_SO",
+    "category": "math_expression",
+    "subcategory": "chi_so",
+    "describe": "Chèn ký hiệu hoặc cấu trúc toán học MathJax: chỉ số.",
+    "aliases": [
+      "chỉ số",
+      "chỉ số dưới",
+      "chỉ số dưới latex",
+      "subscript"
+    ],
+    "slots": {
+      "base": {
+        "required": false,
+        "default": ""
+      },
+      "sub": {
+        "required": false,
+        "default": ""
+      }
+    },
+    "templates": {
+      "latex": "\\({base}_{sub}\\)",
+      "mathjax": "\\({base}_{sub}\\)",
+      "python": "",
+      "cpp": ""
+    },
+    "requires": [],
+    "render_target": "mathjax",
+    "source": {
+      "file": "knowledge_base(1).txt",
+      "section": "MATH_BASIC",
+      "original_intent": "chỉ số"
+    },
+    "notes": ""
+  },
+  {
+    "intent": "MATHJAX_MU_VA_CHI_SO",
+    "category": "math_expression",
+    "subcategory": "mu_va_chi_so",
+    "describe": "Chèn ký hiệu hoặc cấu trúc toán học MathJax: mũ và chỉ số.",
+    "aliases": [
+      "mũ và chỉ số",
+      "số mũ và chỉ số",
+      "chỉ số dưới kèm số mũ",
+      "subscript superscript"
+    ],
+    "slots": {
+      "base": {
+        "required": false,
+        "default": ""
+      },
+      "exp": {
+        "required": false,
+        "default": ""
+      },
+      "sub": {
+        "required": false,
+        "default": ""
+      }
+    },
+    "templates": {
+      "latex": "\\({base}_{sub}^{exp}\\)",
+      "mathjax": "\\({base}_{sub}^{exp}\\)",
+      "python": "",
+      "cpp": ""
+    },
+    "requires": [],
+    "render_target": "mathjax",
+    "source": {
+      "file": "knowledge_base(1).txt",
+      "section": "MATH_BASIC",
+      "original_intent": "mũ và chỉ số"
+    },
+    "notes": ""
+  },
+  {
+    "intent": "MATHJAX_TONG",
+    "category": "math_expression",
+    "subcategory": "tong",
+    "describe": "Chèn ký hiệu hoặc cấu trúc toán học MathJax: tổng.",
+    "aliases": [
+      "tổng",
+      "tổng từ",
+      "tổng i",
+      "ký hiệu tổng sigma",
+      "phép tổng",
+      "ký hiệu tổng sigma"
+    ],
+    "slots": {
+      "expr": {
+        "required": false,
+        "default": ""
+      },
+      "from": {
+        "required": false,
+        "default": ""
+      },
+      "to": {
+        "required": false,
+        "default": ""
+      }
+    },
+    "templates": {
+      "latex": "\\[\n\\sum_{from}^{to} {expr}\n\\]",
+      "mathjax": "\\[\n\\sum_{from}^{to} {expr}\n\\]",
+      "python": "",
+      "cpp": ""
+    },
+    "requires": [],
+    "render_target": "mathjax",
+    "source": {
+      "file": "knowledge_base(1).txt",
+      "section": "MATH_BASIC",
+      "original_intent": "tổng"
+    },
+    "notes": ""
+  },
+  {
+    "intent": "MATHJAX_TICH",
+    "category": "math_expression",
+    "subcategory": "tich",
+    "describe": "Chèn ký hiệu hoặc cấu trúc toán học MathJax: tích.",
+    "aliases": [
+      "tích",
+      "product",
+      "tích từ",
+      "ký hiệu tích pi",
+      "phép nhân liên tiếp"
+    ],
+    "slots": {
+      "expr": {
+        "required": false,
+        "default": ""
+      },
+      "from": {
+        "required": false,
+        "default": ""
+      },
+      "to": {
+        "required": false,
+        "default": ""
+      }
+    },
+    "templates": {
+      "latex": "\\[\n\\prod_{from}^{to} {expr}\n\\]",
+      "mathjax": "\\[\n\\prod_{from}^{to} {expr}\n\\]",
+      "python": "",
+      "cpp": ""
+    },
+    "requires": [],
+    "render_target": "mathjax",
+    "source": {
+      "file": "knowledge_base(1).txt",
+      "section": "MATH_BASIC",
+      "original_intent": "tích"
+    },
+    "notes": ""
+  },
+  {
+    "intent": "MATHJAX_TICH_PHAN",
+    "category": "math_expression",
+    "subcategory": "tich_phan",
+    "describe": "Chèn ký hiệu hoặc cấu trúc toán học MathJax: tích phân.",
+    "aliases": [
+      "tích phân",
+      "integral",
+      "ký hiệu tích phân",
+      "integral latex"
+    ],
+    "slots": {
+      "expr": {
+        "required": false,
+        "default": ""
+      },
+      "from": {
+        "required": false,
+        "default": ""
+      },
+      "to": {
+        "required": false,
+        "default": ""
+      }
+    },
+    "templates": {
+      "latex": "\\[\n\\int_{from}^{to} {expr}\\,dx\n\\]",
+      "mathjax": "\\[\n\\int_{from}^{to} {expr}\\,dx\n\\]",
+      "python": "",
+      "cpp": ""
+    },
+    "requires": [],
+    "render_target": "mathjax",
+    "source": {
+      "file": "knowledge_base(1).txt",
+      "section": "MATH_BASIC",
+      "original_intent": "tích phân"
+    },
+    "notes": ""
+  },
+  {
+    "intent": "MATHJAX_GIOI_HAN",
+    "category": "math_expression",
+    "subcategory": "gioi_han",
+    "describe": "Chèn ký hiệu hoặc cấu trúc toán học MathJax: giới hạn.",
+    "aliases": [
+      "giới hạn",
+      "limit",
+      "giới hạn khi",
+      "lim",
+      "limit toán học"
+    ],
+    "slots": {
+      "condition": {
+        "required": false,
+        "default": ""
+      },
+      "expr": {
+        "required": false,
+        "default": ""
+      }
+    },
+    "templates": {
+      "latex": "\\[\n\\lim_{condition} {expr}\n\\]",
+      "mathjax": "\\[\n\\lim_{condition} {expr}\n\\]",
+      "python": "",
+      "cpp": ""
+    },
+    "requires": [],
+    "render_target": "mathjax",
+    "source": {
+      "file": "knowledge_base(1).txt",
+      "section": "MATH_BASIC",
+      "original_intent": "giới hạn"
+    },
+    "notes": ""
+  },
+  {
+    "intent": "MATHJAX_AO_HAM",
+    "category": "math_expression",
+    "subcategory": "ao_ham",
+    "describe": "Chèn ký hiệu hoặc cấu trúc toán học MathJax: đạo hàm.",
+    "aliases": [
+      "đạo hàm",
+      "đạo hàm cấp 1",
+      "đạo hàm một",
+      "f phẩy x"
+    ],
+    "slots": {},
+    "templates": {
+      "latex": "\\[\nf'(x)\n\\]",
+      "mathjax": "\\[\nf'(x)\n\\]",
+      "python": "",
+      "cpp": ""
+    },
+    "requires": [],
+    "render_target": "mathjax",
+    "source": {
+      "file": "knowledge_base(1).txt",
+      "section": "MATH_BASIC",
+      "original_intent": "đạo hàm"
+    },
+    "notes": ""
+  },
+  {
+    "intent": "MATHJAX_AO_HAM_CAP_2",
+    "category": "math_expression",
+    "subcategory": "ao_ham_cap_2",
+    "describe": "Chèn ký hiệu hoặc cấu trúc toán học MathJax: đạo hàm cấp 2.",
+    "aliases": [
+      "đạo hàm cấp 2",
+      "đạo hàm bậc hai",
+      "đạo hàm hai",
+      "f hai phẩy x"
+    ],
+    "slots": {},
+    "templates": {
+      "latex": "\\[\nf''(x)\n\\]",
+      "mathjax": "\\[\nf''(x)\n\\]",
+      "python": "",
+      "cpp": ""
+    },
+    "requires": [],
+    "render_target": "mathjax",
+    "source": {
+      "file": "knowledge_base(1).txt",
+      "section": "MATH_BASIC",
+      "original_intent": "đạo hàm cấp 2"
+    },
+    "notes": ""
+  },
+  {
+    "intent": "MATHJAX_MA_TRAN",
+    "category": "math_matrix",
+    "subcategory": "ma_tran",
+    "describe": "Ma trận không có ngoặc bao ngoài.",
+    "aliases": [
+      "ma trận",
+      "matrix",
+      "ma trận thường",
+      "matrix không ngoặc",
+      "ma trận không bao ngoặc"
+    ],
+    "slots": {
+      "matrix": {
+        "required": false,
+        "default": ""
+      },
+      "rows": {
+        "required": false,
+        "default": ""
+      }
+    },
+    "templates": {
+      "latex": "\\[\n\\begin{matrix}\n{rows}\n\\end{matrix}\n\\]",
+      "mathjax": "\\[\n\\begin{matrix}\n{rows}\n\\end{matrix}\n\\]",
+      "python": "",
+      "cpp": ""
+    },
+    "requires": [],
+    "render_target": "mathjax",
+    "source": {
+      "file": "knowledge_base(1).txt",
+      "section": "MATRIX",
+      "original_intent": "ma trận"
+    },
+    "notes": ""
+  },
+  {
+    "intent": "MATHJAX_MA_TRAN_NGOAC_TRON",
+    "category": "math_matrix",
+    "subcategory": "ma_tran_ngoac_tron",
+    "describe": "Chèn ký hiệu hoặc cấu trúc toán học MathJax: ma trận ngoặc tròn.",
+    "aliases": [
+      "ma trận ngoặc tròn",
+      "ma trận tròn",
+      "matrix ngoặc tròn",
+      "pmatrix",
+      "ma trận trong ngoặc đơn"
+    ],
+    "slots": {
+      "pmatrix": {
+        "required": false,
+        "default": ""
+      },
+      "rows": {
+        "required": false,
+        "default": ""
+      }
+    },
+    "templates": {
+      "latex": "\\[\n\\begin{pmatrix}\n{rows}\n\\end{pmatrix}\n\\]",
+      "mathjax": "\\[\n\\begin{pmatrix}\n{rows}\n\\end{pmatrix}\n\\]",
+      "python": "",
+      "cpp": ""
+    },
+    "requires": [],
+    "render_target": "mathjax",
+    "source": {
+      "file": "knowledge_base(1).txt",
+      "section": "MATRIX",
+      "original_intent": "ma trận ngoặc tròn"
+    },
+    "notes": ""
+  },
+  {
+    "intent": "MATHJAX_MA_TRAN_NGOAC_VUONG",
+    "category": "math_matrix",
+    "subcategory": "ma_tran_ngoac_vuong",
+    "describe": "Chèn ký hiệu hoặc cấu trúc toán học MathJax: ma trận ngoặc vuông.",
+    "aliases": [
+      "ma trận ngoặc vuông",
+      "ma trận vuông",
+      "matrix ngoặc vuông",
+      "bmatrix",
+      "ma trận dấu ngoặc vuông"
+    ],
+    "slots": {
+      "bmatrix": {
+        "required": false,
+        "default": ""
+      },
+      "rows": {
+        "required": false,
+        "default": ""
+      }
+    },
+    "templates": {
+      "latex": "\\[\n\\begin{bmatrix}\n{rows}\n\\end{bmatrix}\n\\]",
+      "mathjax": "\\[\n\\begin{bmatrix}\n{rows}\n\\end{bmatrix}\n\\]",
+      "python": "",
+      "cpp": ""
+    },
+    "requires": [],
+    "render_target": "mathjax",
+    "source": {
+      "file": "knowledge_base(1).txt",
+      "section": "MATRIX",
+      "original_intent": "ma trận ngoặc vuông"
+    },
+    "notes": ""
+  },
+  {
+    "intent": "MATHJAX_MA_TRAN_NGOAC_NHON",
+    "category": "math_matrix",
+    "subcategory": "ma_tran_ngoac_nhon",
+    "describe": "Chèn ký hiệu hoặc cấu trúc toán học MathJax: ma trận ngoặc nhọn.",
+    "aliases": [
+      "ma trận ngoặc nhọn",
+      "matrix ngoặc nhọn",
+      "ma trận dấu ngoặc nhọn"
+    ],
+    "slots": {
+      "Bmatrix": {
+        "required": false,
+        "default": ""
+      },
+      "rows": {
+        "required": false,
+        "default": ""
+      }
+    },
+    "templates": {
+      "latex": "\\[\n\\begin{Bmatrix}\n{rows}\n\\end{Bmatrix}\n\\]",
+      "mathjax": "\\[\n\\begin{Bmatrix}\n{rows}\n\\end{Bmatrix}\n\\]",
+      "python": "",
+      "cpp": ""
+    },
+    "requires": [],
+    "render_target": "mathjax",
+    "source": {
+      "file": "knowledge_base(1).txt",
+      "section": "MATRIX",
+      "original_intent": "ma trận ngoặc nhọn"
+    },
+    "notes": ""
+  },
+  {
+    "intent": "MATHJAX_INH_THUC",
+    "category": "math_matrix",
+    "subcategory": "inh_thuc",
+    "describe": "Chèn ký hiệu hoặc cấu trúc toán học MathJax: định thức.",
+    "aliases": [
+      "định thức",
+      "determinant",
+      "ma trận định thức",
+      "ma trận có vạch đứng",
+      "determinant latex"
+    ],
+    "slots": {
+      "rows": {
+        "required": false,
+        "default": ""
+      },
+      "vmatrix": {
+        "required": false,
+        "default": ""
+      }
+    },
+    "templates": {
+      "latex": "\\[\n\\begin{vmatrix}\n{rows}\n\\end{vmatrix}\n\\]",
+      "mathjax": "\\[\n\\begin{vmatrix}\n{rows}\n\\end{vmatrix}\n\\]",
+      "python": "",
+      "cpp": ""
+    },
+    "requires": [],
+    "render_target": "mathjax",
+    "source": {
+      "file": "knowledge_base(1).txt",
+      "section": "MATRIX",
+      "original_intent": "định thức"
+    },
+    "notes": ""
+  },
+  {
+    "intent": "MATHJAX_CHUAN_MA_TRAN",
+    "category": "math_matrix",
+    "subcategory": "chuan_ma_tran",
+    "describe": "Chèn ký hiệu hoặc cấu trúc toán học MathJax: chuẩn ma trận.",
+    "aliases": [
+      "chuẩn ma trận",
+      "norm",
+      "chuẩn",
+      "ma trận chuẩn hai vạch",
+      "norm ma trận"
+    ],
+    "slots": {
+      "Vmatrix": {
+        "required": false,
+        "default": ""
+      },
+      "rows": {
+        "required": false,
+        "default": ""
+      }
+    },
+    "templates": {
+      "latex": "\\[\n\\begin{Vmatrix}\n{rows}\n\\end{Vmatrix}\n\\]",
+      "mathjax": "\\[\n\\begin{Vmatrix}\n{rows}\n\\end{Vmatrix}\n\\]",
+      "python": "",
+      "cpp": ""
+    },
+    "requires": [],
+    "render_target": "mathjax",
+    "source": {
+      "file": "knowledge_base(1).txt",
+      "section": "MATRIX",
+      "original_intent": "chuẩn ma trận"
+    },
+    "notes": ""
+  },
+  {
+    "intent": "MATHJAX_MA_TRAN_CO_DAU_CHAM",
+    "category": "math_matrix",
+    "subcategory": "ma_tran_co_dau_cham",
+    "describe": "Chèn ký hiệu hoặc cấu trúc toán học MathJax: ma trận có dấu chấm.",
+    "aliases": [
+      "ma trận có dấu chấm",
+      "ma trận ellipsis",
+      "ma trận có dấu ba chấm",
+      "ma trận có chấm lửng",
+      "ma trận rút gọn bằng dấu ba chấm"
+    ],
+    "slots": {
+      "pmatrix": {
+        "required": false,
+        "default": ""
+      },
+      "rows": {
+        "required": false,
+        "default": ""
+      }
+    },
+    "templates": {
+      "latex": "\\[\n\\begin{pmatrix}\n{rows}\n\\end{pmatrix}\n\\]",
+      "mathjax": "\\[\n\\begin{pmatrix}\n{rows}\n\\end{pmatrix}\n\\]",
+      "python": "",
+      "cpp": ""
+    },
+    "requires": [],
+    "render_target": "mathjax",
+    "source": {
+      "file": "knowledge_base(1).txt",
+      "section": "MATRIX",
+      "original_intent": "ma trận có dấu chấm"
+    },
+    "notes": "Dùng \\cdots, \\vdots hoặc \\ddots khi biểu diễn phần tử không liệt kê hết."
+  },
+  {
+    "intent": "MATHJAX_MA_TRAN_NHO_INLINE",
+    "category": "math_matrix",
+    "subcategory": "ma_tran_nho_inline",
+    "describe": "Chèn ký hiệu hoặc cấu trúc toán học MathJax: ma trận nhỏ inline.",
+    "aliases": [
+      "ma trận nhỏ inline",
+      "small matrix",
+      "smallmatrix",
+      "ma trận nhỏ trong dòng"
+    ],
+    "slots": {
+      "rows": {
+        "required": false,
+        "default": ""
+      },
+      "smallmatrix": {
+        "required": false,
+        "default": ""
+      }
+    },
+    "templates": {
+      "latex": "\\(\\bigl(\\begin{smallmatrix}{rows}\\end{smallmatrix}\\bigr)\\)",
+      "mathjax": "\\(\\bigl(\\begin{smallmatrix}{rows}\\end{smallmatrix}\\bigr)\\)",
+      "python": "",
+      "cpp": ""
+    },
+    "requires": [],
+    "render_target": "mathjax",
+    "source": {
+      "file": "knowledge_base(1).txt",
+      "section": "MATRIX",
+      "original_intent": "ma trận nhỏ inline"
+    },
+    "notes": ""
+  },
+  {
+    "intent": "MATHJAX_HE_PHUONG_TRINH",
+    "category": "math_cases_systems",
+    "subcategory": "he_phuong_trinh",
+    "describe": "Chèn ký hiệu hoặc cấu trúc toán học MathJax: hệ phương trình.",
+    "aliases": [
+      "hệ phương trình",
+      "hệ 2 phương trình",
+      "hệ 3 phương trình",
+      "hệ phương trình tuyến tính",
+      "hệ phương trình nhiều dòng",
+      "hệ phương trình có ngoặc nhọn"
+    ],
+    "slots": {
+      "aligned": {
+        "required": false,
+        "default": ""
+      },
+      "eq1": {
+        "required": false,
+        "default": ""
+      },
+      "eq2": {
+        "required": false,
+        "default": ""
+      },
+      "rhs1": {
+        "required": false,
+        "default": ""
+      },
+      "rhs2": {
+        "required": false,
+        "default": ""
+      }
+    },
+    "templates": {
+      "latex": "\\[\n\\left\\{\n\\begin{aligned}\n{eq1} &= {rhs1} \\\\\n{eq2} &= {rhs2}\n\\end{aligned}\n\\right.\n\\]",
+      "mathjax": "\\[\n\\left\\{\n\\begin{aligned}\n{eq1} &= {rhs1} \\\\\n{eq2} &= {rhs2}\n\\end{aligned}\n\\right.\n\\]",
+      "python": "",
+      "cpp": ""
+    },
+    "requires": [],
+    "render_target": "mathjax",
+    "source": {
+      "file": "knowledge_base(1).txt",
+      "section": "CASES_SYSTEMS",
+      "original_intent": "hệ phương trình"
+    },
+    "notes": ""
+  },
+  {
+    "intent": "MATHJAX_HAM_TUNG_OAN",
+    "category": "math_cases_systems",
+    "subcategory": "ham_tung_oan",
+    "describe": "Chèn ký hiệu hoặc cấu trúc toán học MathJax: hàm từng đoạn.",
+    "aliases": [
+      "hàm từng đoạn",
+      "hàm từng trường hợp",
+      "piecewise",
+      "cases",
+      "hàm từng khúc",
+      "hàm số từng trường hợp"
+    ],
+    "slots": {
+      "cases": {
+        "required": false,
+        "default": ""
+      },
+      "condition1": {
+        "required": false,
+        "default": ""
+      },
+      "condition2": {
+        "required": false,
+        "default": ""
+      },
+      "expr1": {
+        "required": false,
+        "default": ""
+      },
+      "expr2": {
+        "required": false,
+        "default": ""
+      }
+    },
+    "templates": {
+      "latex": "\\[\nf(x)=\n\\begin{cases}\n{expr1} & {condition1} \\\\\n{expr2} & {condition2}\n\\end{cases}\n\\]",
+      "mathjax": "\\[\nf(x)=\n\\begin{cases}\n{expr1} & {condition1} \\\\\n{expr2} & {condition2}\n\\end{cases}\n\\]",
+      "python": "",
+      "cpp": ""
+    },
+    "requires": [],
+    "render_target": "mathjax",
+    "source": {
+      "file": "knowledge_base(1).txt",
+      "section": "CASES_SYSTEMS",
+      "original_intent": "hàm từng đoạn"
+    },
+    "notes": ""
+  },
+  {
+    "intent": "MATHJAX_CAN_CHINH_PHUONG_TRINH",
+    "category": "math_alignment_array",
+    "subcategory": "can_chinh_phuong_trinh",
+    "describe": "Chèn ký hiệu hoặc cấu trúc toán học MathJax: căn chỉnh phương trình.",
+    "aliases": [
+      "căn chỉnh phương trình",
+      "aligned",
+      "align equations",
+      "căn dấu bằng nhiều dòng",
+      "aligned equations"
+    ],
+    "slots": {
+      "aligned": {
+        "required": false,
+        "default": ""
+      },
+      "left1": {
+        "required": false,
+        "default": ""
+      },
+      "left2": {
+        "required": false,
+        "default": ""
+      },
+      "right1": {
+        "required": false,
+        "default": ""
+      },
+      "right2": {
+        "required": false,
+        "default": ""
+      }
+    },
+    "templates": {
+      "latex": "\\[\n\\begin{aligned}\n{left1} &= {right1} \\\\\n{left2} &= {right2}\n\\end{aligned}\n\\]",
+      "mathjax": "\\[\n\\begin{aligned}\n{left1} &= {right1} \\\\\n{left2} &= {right2}\n\\end{aligned}\n\\]",
+      "python": "",
+      "cpp": ""
+    },
+    "requires": [],
+    "render_target": "mathjax",
+    "source": {
+      "file": "knowledge_base(1).txt",
+      "section": "ALIGN_ARRAY",
+      "original_intent": "căn chỉnh phương trình"
+    },
+    "notes": ""
+  },
+  {
+    "intent": "MATHJAX_BANG_TOAN_HOC",
+    "category": "math_alignment_array",
+    "subcategory": "bang_toan_hoc",
+    "describe": "Chèn ký hiệu hoặc cấu trúc toán học MathJax: bảng toán học.",
+    "aliases": [
+      "bảng toán học",
+      "array toán học",
+      "mảng toán học",
+      "array hai cột"
+    ],
+    "slots": {
+      "a": {
+        "required": false,
+        "default": ""
+      },
+      "array": {
+        "required": false,
+        "default": ""
+      },
+      "b": {
+        "required": false,
+        "default": ""
+      },
+      "c": {
+        "required": false,
+        "default": ""
+      },
+      "cc": {
+        "required": false,
+        "default": ""
+      },
+      "d": {
+        "required": false,
+        "default": ""
+      }
+    },
+    "templates": {
+      "latex": "\\[\n\\begin{array}{cc}\n{a} & {b} \\\\\n{c} & {d}\n\\end{array}\n\\]",
+      "mathjax": "\\[\n\\begin{array}{cc}\n{a} & {b} \\\\\n{c} & {d}\n\\end{array}\n\\]",
+      "python": "",
+      "cpp": ""
+    },
+    "requires": [],
+    "render_target": "mathjax",
+    "source": {
+      "file": "knowledge_base(1).txt",
+      "section": "ALIGN_ARRAY",
+      "original_intent": "bảng toán học"
+    },
+    "notes": ""
+  },
+  {
+    "intent": "MATHJAX_BANG_TOAN_HOC_CAN_TRAI",
+    "category": "math_alignment_array",
+    "subcategory": "bang_toan_hoc_can_trai",
+    "describe": "Chèn ký hiệu hoặc cấu trúc toán học MathJax: bảng toán học căn trái.",
+    "aliases": [
+      "bảng toán học căn trái",
+      "array căn trái"
+    ],
+    "slots": {
+      "array": {
+        "required": false,
+        "default": ""
+      },
+      "items": {
+        "required": false,
+        "default": ""
+      },
+      "l": {
+        "required": false,
+        "default": ""
+      }
+    },
+    "templates": {
+      "latex": "\\[\n\\begin{array}{l}\n{items}\n\\end{array}\n\\]",
+      "mathjax": "\\[\n\\begin{array}{l}\n{items}\n\\end{array}\n\\]",
+      "python": "",
+      "cpp": ""
+    },
+    "requires": [],
+    "render_target": "mathjax",
+    "source": {
+      "file": "knowledge_base(1).txt",
+      "section": "ALIGN_ARRAY",
+      "original_intent": "bảng toán học căn trái"
+    },
+    "notes": ""
+  },
+  {
+    "intent": "MATHJAX_BANG_TOAN_HOC_CAN_GIUA",
+    "category": "math_alignment_array",
+    "subcategory": "bang_toan_hoc_can_giua",
+    "describe": "Chèn ký hiệu hoặc cấu trúc toán học MathJax: bảng toán học căn giữa.",
+    "aliases": [
+      "bảng toán học căn giữa",
+      "array căn giữa"
+    ],
+    "slots": {
+      "array": {
+        "required": false,
+        "default": ""
+      },
+      "c": {
+        "required": false,
+        "default": ""
+      },
+      "items": {
+        "required": false,
+        "default": ""
+      }
+    },
+    "templates": {
+      "latex": "\\[\n\\begin{array}{c}\n{items}\n\\end{array}\n\\]",
+      "mathjax": "\\[\n\\begin{array}{c}\n{items}\n\\end{array}\n\\]",
+      "python": "",
+      "cpp": ""
+    },
+    "requires": [],
+    "render_target": "mathjax",
+    "source": {
+      "file": "knowledge_base(1).txt",
+      "section": "ALIGN_ARRAY",
+      "original_intent": "bảng toán học căn giữa"
+    },
+    "notes": ""
+  },
+  {
+    "intent": "MATHJAX_BANG_TOAN_HOC_CAN_PHAI",
+    "category": "math_alignment_array",
+    "subcategory": "bang_toan_hoc_can_phai",
+    "describe": "Chèn ký hiệu hoặc cấu trúc toán học MathJax: bảng toán học căn phải.",
+    "aliases": [
+      "bảng toán học căn phải",
+      "array căn phải"
+    ],
+    "slots": {
+      "array": {
+        "required": false,
+        "default": ""
+      },
+      "items": {
+        "required": false,
+        "default": ""
+      },
+      "r": {
+        "required": false,
+        "default": ""
+      }
+    },
+    "templates": {
+      "latex": "\\[\n\\begin{array}{r}\n{items}\n\\end{array}\n\\]",
+      "mathjax": "\\[\n\\begin{array}{r}\n{items}\n\\end{array}\n\\]",
+      "python": "",
+      "cpp": ""
+    },
+    "requires": [],
+    "render_target": "mathjax",
+    "source": {
+      "file": "knowledge_base(1).txt",
+      "section": "ALIGN_ARRAY",
+      "original_intent": "bảng toán học căn phải"
+    },
+    "notes": ""
+  },
+  {
+    "intent": "MATHJAX_ALPHA",
+    "category": "math_symbols",
+    "subcategory": "alpha",
+    "describe": "Chèn ký hiệu hoặc cấu trúc toán học MathJax: alpha.",
+    "aliases": [
+      "alpha"
+    ],
+    "slots": {},
+    "templates": {
+      "latex": "\\(\\alpha\\)",
+      "mathjax": "\\(\\alpha\\)",
+      "python": "",
+      "cpp": ""
+    },
+    "requires": [],
+    "render_target": "mathjax",
+    "source": {
+      "file": "knowledge_base(1).txt",
+      "section": "SYMBOLS",
+      "original_intent": "alpha"
+    },
+    "notes": ""
+  },
+  {
+    "intent": "MATHJAX_BETA",
+    "category": "math_symbols",
+    "subcategory": "beta",
+    "describe": "Chèn ký hiệu hoặc cấu trúc toán học MathJax: beta.",
+    "aliases": [
+      "beta"
+    ],
+    "slots": {},
+    "templates": {
+      "latex": "\\(\\beta\\)",
+      "mathjax": "\\(\\beta\\)",
+      "python": "",
+      "cpp": ""
+    },
+    "requires": [],
+    "render_target": "mathjax",
+    "source": {
+      "file": "knowledge_base(1).txt",
+      "section": "SYMBOLS",
+      "original_intent": "beta"
+    },
+    "notes": ""
+  },
+  {
+    "intent": "MATHJAX_GAMMA",
+    "category": "math_symbols",
+    "subcategory": "gamma",
+    "describe": "Chèn ký hiệu hoặc cấu trúc toán học MathJax: gamma.",
+    "aliases": [
+      "gamma"
+    ],
+    "slots": {},
+    "templates": {
+      "latex": "\\(\\gamma\\)",
+      "mathjax": "\\(\\gamma\\)",
+      "python": "",
+      "cpp": ""
+    },
+    "requires": [],
+    "render_target": "mathjax",
+    "source": {
+      "file": "knowledge_base(1).txt",
+      "section": "SYMBOLS",
+      "original_intent": "gamma"
+    },
+    "notes": ""
+  },
+  {
+    "intent": "MATHJAX_DELTA",
+    "category": "math_symbols",
+    "subcategory": "delta",
+    "describe": "Chèn ký hiệu hoặc cấu trúc toán học MathJax: delta.",
+    "aliases": [
+      "delta"
+    ],
+    "slots": {},
+    "templates": {
+      "latex": "\\(\\delta\\)",
+      "mathjax": "\\(\\delta\\)",
+      "python": "",
+      "cpp": ""
+    },
+    "requires": [],
+    "render_target": "mathjax",
+    "source": {
+      "file": "knowledge_base(1).txt",
+      "section": "SYMBOLS",
+      "original_intent": "delta"
+    },
+    "notes": ""
+  },
+  {
+    "intent": "MATHJAX_THETA",
+    "category": "math_symbols",
+    "subcategory": "theta",
+    "describe": "Chèn ký hiệu hoặc cấu trúc toán học MathJax: theta.",
+    "aliases": [
+      "theta"
+    ],
+    "slots": {},
+    "templates": {
+      "latex": "\\(\\theta\\)",
+      "mathjax": "\\(\\theta\\)",
+      "python": "",
+      "cpp": ""
+    },
+    "requires": [],
+    "render_target": "mathjax",
+    "source": {
+      "file": "knowledge_base(1).txt",
+      "section": "SYMBOLS",
+      "original_intent": "theta"
+    },
+    "notes": ""
+  },
+  {
+    "intent": "MATHJAX_LAMBDA",
+    "category": "math_symbols",
+    "subcategory": "lambda",
+    "describe": "Chèn ký hiệu hoặc cấu trúc toán học MathJax: lambda.",
+    "aliases": [
+      "lambda"
+    ],
+    "slots": {},
+    "templates": {
+      "latex": "\\(\\lambda\\)",
+      "mathjax": "\\(\\lambda\\)",
+      "python": "",
+      "cpp": ""
+    },
+    "requires": [],
+    "render_target": "mathjax",
+    "source": {
+      "file": "knowledge_base(1).txt",
+      "section": "SYMBOLS",
+      "original_intent": "lambda"
+    },
+    "notes": ""
+  },
+  {
+    "intent": "MATHJAX_PI",
+    "category": "math_symbols",
+    "subcategory": "pi",
+    "describe": "Chèn ký hiệu hoặc cấu trúc toán học MathJax: pi.",
+    "aliases": [
+      "pi"
+    ],
+    "slots": {},
+    "templates": {
+      "latex": "\\(\\pi\\)",
+      "mathjax": "\\(\\pi\\)",
+      "python": "",
+      "cpp": ""
+    },
+    "requires": [],
+    "render_target": "mathjax",
+    "source": {
+      "file": "knowledge_base(1).txt",
+      "section": "SYMBOLS",
+      "original_intent": "pi"
+    },
+    "notes": ""
+  },
+  {
+    "intent": "MATHJAX_SIGMA",
+    "category": "math_symbols",
+    "subcategory": "sigma",
+    "describe": "Chèn ký hiệu hoặc cấu trúc toán học MathJax: sigma.",
+    "aliases": [
+      "sigma"
+    ],
+    "slots": {},
+    "templates": {
+      "latex": "\\(\\sigma\\)",
+      "mathjax": "\\(\\sigma\\)",
+      "python": "",
+      "cpp": ""
+    },
+    "requires": [],
+    "render_target": "mathjax",
+    "source": {
+      "file": "knowledge_base(1).txt",
+      "section": "SYMBOLS",
+      "original_intent": "sigma"
+    },
+    "notes": ""
+  },
+  {
+    "intent": "MATHJAX_OMEGA",
+    "category": "math_symbols",
+    "subcategory": "omega",
+    "describe": "Chèn ký hiệu hoặc cấu trúc toán học MathJax: omega.",
+    "aliases": [
+      "omega"
+    ],
+    "slots": {},
+    "templates": {
+      "latex": "\\(\\omega\\)",
+      "mathjax": "\\(\\omega\\)",
+      "python": "",
+      "cpp": ""
+    },
+    "requires": [],
+    "render_target": "mathjax",
+    "source": {
+      "file": "knowledge_base(1).txt",
+      "section": "SYMBOLS",
+      "original_intent": "omega"
+    },
+    "notes": ""
+  },
+  {
+    "intent": "MATHJAX_VO_CUNG",
+    "category": "math_symbols",
+    "subcategory": "vo_cung",
+    "describe": "Chèn ký hiệu hoặc cấu trúc toán học MathJax: vô cùng.",
+    "aliases": [
+      "vô cùng",
+      "infinity",
+      "ký hiệu vô hạn"
+    ],
+    "slots": {},
+    "templates": {
+      "latex": "\\(\\infty\\)",
+      "mathjax": "\\(\\infty\\)",
+      "python": "",
+      "cpp": ""
+    },
+    "requires": [],
+    "render_target": "mathjax",
+    "source": {
+      "file": "knowledge_base(1).txt",
+      "section": "SYMBOLS",
+      "original_intent": "vô cùng"
+    },
+    "notes": ""
+  },
+  {
+    "intent": "MATHJAX_NABLA",
+    "category": "math_symbols",
+    "subcategory": "nabla",
+    "describe": "Chèn ký hiệu hoặc cấu trúc toán học MathJax: nabla.",
+    "aliases": [
+      "nabla"
+    ],
+    "slots": {},
+    "templates": {
+      "latex": "\\(\\nabla\\)",
+      "mathjax": "\\(\\nabla\\)",
+      "python": "",
+      "cpp": ""
+    },
+    "requires": [],
+    "render_target": "mathjax",
+    "source": {
+      "file": "knowledge_base(1).txt",
+      "section": "SYMBOLS",
+      "original_intent": "nabla"
+    },
+    "notes": ""
+  },
+  {
+    "intent": "MATHJAX_PHAN_RIENG",
+    "category": "math_symbols",
+    "subcategory": "phan_rieng",
+    "describe": "Chèn ký hiệu hoặc cấu trúc toán học MathJax: phần riêng.",
+    "aliases": [
+      "phần riêng",
+      "partial",
+      "đạo hàm riêng",
+      "partial derivative symbol"
+    ],
+    "slots": {},
+    "templates": {
+      "latex": "\\(\\partial\\)",
+      "mathjax": "\\(\\partial\\)",
+      "python": "",
+      "cpp": ""
+    },
+    "requires": [],
+    "render_target": "mathjax",
+    "source": {
+      "file": "knowledge_base(1).txt",
+      "section": "SYMBOLS",
+      "original_intent": "phần riêng"
+    },
+    "notes": ""
+  },
+  {
+    "intent": "MATHJAX_SO_THUC",
+    "category": "math_symbols",
+    "subcategory": "so_thuc",
+    "describe": "Chèn ký hiệu hoặc cấu trúc toán học MathJax: số thực.",
+    "aliases": [
+      "số thực",
+      "tập số thực",
+      "tập R",
+      "real numbers"
+    ],
+    "slots": {
+      "R": {
+        "required": false,
+        "default": ""
+      }
+    },
+    "templates": {
+      "latex": "\\(\\mathbb{R}\\)",
+      "mathjax": "\\(\\mathbb{R}\\)",
+      "python": "",
+      "cpp": ""
+    },
+    "requires": [],
+    "render_target": "mathjax",
+    "source": {
+      "file": "knowledge_base(1).txt",
+      "section": "SYMBOLS",
+      "original_intent": "số thực"
+    },
+    "notes": ""
+  },
+  {
+    "intent": "MATHJAX_SO_TU_NHIEN",
+    "category": "math_symbols",
+    "subcategory": "so_tu_nhien",
+    "describe": "Chèn ký hiệu hoặc cấu trúc toán học MathJax: số tự nhiên.",
+    "aliases": [
+      "số tự nhiên",
+      "tập số tự nhiên",
+      "tập N",
+      "natural numbers"
+    ],
+    "slots": {
+      "N": {
+        "required": false,
+        "default": ""
+      }
+    },
+    "templates": {
+      "latex": "\\(\\mathbb{N}\\)",
+      "mathjax": "\\(\\mathbb{N}\\)",
+      "python": "",
+      "cpp": ""
+    },
+    "requires": [],
+    "render_target": "mathjax",
+    "source": {
+      "file": "knowledge_base(1).txt",
+      "section": "SYMBOLS",
+      "original_intent": "số tự nhiên"
+    },
+    "notes": ""
+  },
+  {
+    "intent": "MATHJAX_SO_NGUYEN",
+    "category": "math_symbols",
+    "subcategory": "so_nguyen",
+    "describe": "Chèn ký hiệu hoặc cấu trúc toán học MathJax: số nguyên.",
+    "aliases": [
+      "số nguyên",
+      "tập số nguyên",
+      "tập Z",
+      "integer numbers"
+    ],
+    "slots": {
+      "Z": {
+        "required": false,
+        "default": ""
+      }
+    },
+    "templates": {
+      "latex": "\\(\\mathbb{Z}\\)",
+      "mathjax": "\\(\\mathbb{Z}\\)",
+      "python": "",
+      "cpp": ""
+    },
+    "requires": [],
+    "render_target": "mathjax",
+    "source": {
+      "file": "knowledge_base(1).txt",
+      "section": "SYMBOLS",
+      "original_intent": "số nguyên"
+    },
+    "notes": ""
+  },
+  {
+    "intent": "MATHJAX_THUOC",
+    "category": "math_symbols",
+    "subcategory": "thuoc",
+    "describe": "Chèn ký hiệu hoặc cấu trúc toán học MathJax: thuộc.",
+    "aliases": [
+      "thuộc",
+      "phần tử thuộc tập",
+      "element of"
+    ],
+    "slots": {},
+    "templates": {
+      "latex": "\\(\\in\\)",
+      "mathjax": "\\(\\in\\)",
+      "python": "",
+      "cpp": ""
+    },
+    "requires": [],
+    "render_target": "mathjax",
+    "source": {
+      "file": "knowledge_base(1).txt",
+      "section": "SYMBOLS",
+      "original_intent": "thuộc"
+    },
+    "notes": ""
+  },
+  {
+    "intent": "MATHJAX_KHONG_THUOC",
+    "category": "math_symbols",
+    "subcategory": "khong_thuoc",
+    "describe": "Chèn ký hiệu hoặc cấu trúc toán học MathJax: không thuộc.",
+    "aliases": [
+      "không thuộc",
+      "không là phần tử",
+      "not an element of"
+    ],
+    "slots": {},
+    "templates": {
+      "latex": "\\(\\notin\\)",
+      "mathjax": "\\(\\notin\\)",
+      "python": "",
+      "cpp": ""
+    },
+    "requires": [],
+    "render_target": "mathjax",
+    "source": {
+      "file": "knowledge_base(1).txt",
+      "section": "SYMBOLS",
+      "original_intent": "không thuộc"
+    },
+    "notes": ""
+  },
+  {
+    "intent": "MATHJAX_TAP_RONG",
+    "category": "math_symbols",
+    "subcategory": "tap_rong",
+    "describe": "Chèn ký hiệu hoặc cấu trúc toán học MathJax: tập rỗng.",
+    "aliases": [
+      "tập rỗng",
+      "empty set"
+    ],
+    "slots": {},
+    "templates": {
+      "latex": "\\(\\emptyset\\)",
+      "mathjax": "\\(\\emptyset\\)",
+      "python": "",
+      "cpp": ""
+    },
+    "requires": [],
+    "render_target": "mathjax",
+    "source": {
+      "file": "knowledge_base(1).txt",
+      "section": "SYMBOLS",
+      "original_intent": "tập rỗng"
+    },
+    "notes": ""
+  },
+  {
+    "intent": "MATHJAX_HOP",
+    "category": "math_symbols",
+    "subcategory": "hop",
+    "describe": "Chèn ký hiệu hoặc cấu trúc toán học MathJax: hợp.",
+    "aliases": [
+      "hợp",
+      "phép hợp tập hợp",
+      "union"
+    ],
+    "slots": {},
+    "templates": {
+      "latex": "\\(\\cup\\)",
+      "mathjax": "\\(\\cup\\)",
+      "python": "",
+      "cpp": ""
+    },
+    "requires": [],
+    "render_target": "mathjax",
+    "source": {
+      "file": "knowledge_base(1).txt",
+      "section": "SYMBOLS",
+      "original_intent": "hợp"
+    },
+    "notes": ""
+  },
+  {
+    "intent": "MATHJAX_GIAO",
+    "category": "math_symbols",
+    "subcategory": "giao",
+    "describe": "Chèn ký hiệu hoặc cấu trúc toán học MathJax: giao.",
+    "aliases": [
+      "giao",
+      "phép giao tập hợp",
+      "intersection"
+    ],
+    "slots": {},
+    "templates": {
+      "latex": "\\(\\cap\\)",
+      "mathjax": "\\(\\cap\\)",
+      "python": "",
+      "cpp": ""
+    },
+    "requires": [],
+    "render_target": "mathjax",
+    "source": {
+      "file": "knowledge_base(1).txt",
+      "section": "SYMBOLS",
+      "original_intent": "giao"
+    },
+    "notes": ""
+  },
+  {
+    "intent": "MATHJAX_TAP_CON",
+    "category": "math_symbols",
+    "subcategory": "tap_con",
+    "describe": "Chèn ký hiệu hoặc cấu trúc toán học MathJax: tập con.",
+    "aliases": [
+      "tập con",
+      "tập con hoặc bằng",
+      "subseteq"
+    ],
+    "slots": {},
+    "templates": {
+      "latex": "\\(\\subseteq\\)",
+      "mathjax": "\\(\\subseteq\\)",
+      "python": "",
+      "cpp": ""
+    },
+    "requires": [],
+    "render_target": "mathjax",
+    "source": {
+      "file": "knowledge_base(1).txt",
+      "section": "SYMBOLS",
+      "original_intent": "tập con"
+    },
+    "notes": ""
+  },
+  {
+    "intent": "MATHJAX_KHAC",
+    "category": "math_symbols",
+    "subcategory": "khac",
+    "describe": "Chèn ký hiệu hoặc cấu trúc toán học MathJax: khác.",
+    "aliases": [
+      "khác",
+      "không bằng",
+      "not equal"
+    ],
+    "slots": {},
+    "templates": {
+      "latex": "\\(\\neq\\)",
+      "mathjax": "\\(\\neq\\)",
+      "python": "",
+      "cpp": ""
+    },
+    "requires": [],
+    "render_target": "mathjax",
+    "source": {
+      "file": "knowledge_base(1).txt",
+      "section": "SYMBOLS",
+      "original_intent": "khác"
+    },
+    "notes": ""
+  },
+  {
+    "intent": "MATHJAX_NHO_HON_HOAC_BANG",
+    "category": "math_symbols",
+    "subcategory": "nho_hon_hoac_bang",
+    "describe": "Chèn ký hiệu hoặc cấu trúc toán học MathJax: nhỏ hơn hoặc bằng.",
+    "aliases": [
+      "nhỏ hơn hoặc bằng",
+      "bé hơn bằng",
+      "less than or equal"
+    ],
+    "slots": {},
+    "templates": {
+      "latex": "\\(\\leq\\)",
+      "mathjax": "\\(\\leq\\)",
+      "python": "",
+      "cpp": ""
+    },
+    "requires": [],
+    "render_target": "mathjax",
+    "source": {
+      "file": "knowledge_base(1).txt",
+      "section": "SYMBOLS",
+      "original_intent": "nhỏ hơn hoặc bằng"
+    },
+    "notes": ""
+  },
+  {
+    "intent": "MATHJAX_LON_HON_HOAC_BANG",
+    "category": "math_symbols",
+    "subcategory": "lon_hon_hoac_bang",
+    "describe": "Chèn ký hiệu hoặc cấu trúc toán học MathJax: lớn hơn hoặc bằng.",
+    "aliases": [
+      "lớn hơn hoặc bằng",
+      "lớn hơn bằng",
+      "greater than or equal"
+    ],
+    "slots": {},
+    "templates": {
+      "latex": "\\(\\geq\\)",
+      "mathjax": "\\(\\geq\\)",
+      "python": "",
+      "cpp": ""
+    },
+    "requires": [],
+    "render_target": "mathjax",
+    "source": {
+      "file": "knowledge_base(1).txt",
+      "section": "SYMBOLS",
+      "original_intent": "lớn hơn hoặc bằng"
+    },
+    "notes": ""
+  },
+  {
+    "intent": "MATHJAX_XAP_XI",
+    "category": "math_symbols",
+    "subcategory": "xap_xi",
+    "describe": "Chèn ký hiệu hoặc cấu trúc toán học MathJax: xấp xỉ.",
+    "aliases": [
+      "xấp xỉ",
+      "gần bằng",
+      "approximately equal"
+    ],
+    "slots": {},
+    "templates": {
+      "latex": "\\(\\approx\\)",
+      "mathjax": "\\(\\approx\\)",
+      "python": "",
+      "cpp": ""
+    },
+    "requires": [],
+    "render_target": "mathjax",
+    "source": {
+      "file": "knowledge_base(1).txt",
+      "section": "SYMBOLS",
+      "original_intent": "xấp xỉ"
+    },
+    "notes": ""
+  },
+  {
+    "intent": "MATHJAX_TUONG_UONG",
+    "category": "math_symbols",
+    "subcategory": "tuong_uong",
+    "describe": "Chèn ký hiệu hoặc cấu trúc toán học MathJax: tương đương.",
+    "aliases": [
+      "tương đương",
+      "đồng nhất",
+      "equivalent"
+    ],
+    "slots": {},
+    "templates": {
+      "latex": "\\(\\equiv\\)",
+      "mathjax": "\\(\\equiv\\)",
+      "python": "",
+      "cpp": ""
+    },
+    "requires": [],
+    "render_target": "mathjax",
+    "source": {
+      "file": "knowledge_base(1).txt",
+      "section": "SYMBOLS",
+      "original_intent": "tương đương"
+    },
+    "notes": ""
+  },
+  {
+    "intent": "MATHJAX_NHAN",
+    "category": "math_symbols",
+    "subcategory": "nhan",
+    "describe": "Chèn ký hiệu hoặc cấu trúc toán học MathJax: nhân.",
+    "aliases": [
+      "nhân",
+      "phép nhân chéo",
+      "dấu nhân"
+    ],
+    "slots": {},
+    "templates": {
+      "latex": "\\(\\times\\)",
+      "mathjax": "\\(\\times\\)",
+      "python": "",
+      "cpp": ""
+    },
+    "requires": [],
+    "render_target": "mathjax",
+    "source": {
+      "file": "knowledge_base(1).txt",
+      "section": "SYMBOLS",
+      "original_intent": "nhân"
+    },
+    "notes": ""
+  },
+  {
+    "intent": "MATHJAX_CHIA",
+    "category": "math_symbols",
+    "subcategory": "chia",
+    "describe": "Chèn ký hiệu hoặc cấu trúc toán học MathJax: chia.",
+    "aliases": [
+      "chia",
+      "dấu chia",
+      "division"
+    ],
+    "slots": {},
+    "templates": {
+      "latex": "\\(\\div\\)",
+      "mathjax": "\\(\\div\\)",
+      "python": "",
+      "cpp": ""
+    },
+    "requires": [],
+    "render_target": "mathjax",
+    "source": {
+      "file": "knowledge_base(1).txt",
+      "section": "SYMBOLS",
+      "original_intent": "chia"
+    },
+    "notes": ""
+  },
+  {
+    "intent": "MATHJAX_CONG_TRU",
+    "category": "math_symbols",
+    "subcategory": "cong_tru",
+    "describe": "Chèn ký hiệu hoặc cấu trúc toán học MathJax: cộng trừ.",
+    "aliases": [
+      "cộng trừ",
+      "cộng hoặc trừ",
+      "plus minus"
+    ],
+    "slots": {},
+    "templates": {
+      "latex": "\\(\\pm\\)",
+      "mathjax": "\\(\\pm\\)",
+      "python": "",
+      "cpp": ""
+    },
+    "requires": [],
+    "render_target": "mathjax",
+    "source": {
+      "file": "knowledge_base(1).txt",
+      "section": "SYMBOLS",
+      "original_intent": "cộng trừ"
+    },
+    "notes": ""
+  },
+  {
+    "intent": "MATHJAX_KEO_THEO",
+    "category": "math_symbols",
+    "subcategory": "keo_theo",
+    "describe": "Chèn ký hiệu hoặc cấu trúc toán học MathJax: kéo theo.",
+    "aliases": [
+      "kéo theo",
+      "suy ra",
+      "implies"
+    ],
+    "slots": {},
+    "templates": {
+      "latex": "\\(\\implies\\)",
+      "mathjax": "\\(\\implies\\)",
+      "python": "",
+      "cpp": ""
+    },
+    "requires": [],
+    "render_target": "mathjax",
+    "source": {
+      "file": "knowledge_base(1).txt",
+      "section": "SYMBOLS",
+      "original_intent": "kéo theo"
+    },
+    "notes": ""
+  },
+  {
+    "intent": "MATHJAX_KHI_VA_CHI_KHI",
+    "category": "math_symbols",
+    "subcategory": "khi_va_chi_khi",
+    "describe": "Chèn ký hiệu hoặc cấu trúc toán học MathJax: khi và chỉ khi.",
+    "aliases": [
+      "khi và chỉ khi",
+      "tương đương logic",
+      "iff"
+    ],
+    "slots": {},
+    "templates": {
+      "latex": "\\(\\iff\\)",
+      "mathjax": "\\(\\iff\\)",
+      "python": "",
+      "cpp": ""
+    },
+    "requires": [],
+    "render_target": "mathjax",
+    "source": {
+      "file": "knowledge_base(1).txt",
+      "section": "SYMBOLS",
+      "original_intent": "khi và chỉ khi"
+    },
+    "notes": ""
+  },
+  {
+    "intent": "MATHJAX_VOI_MOI",
+    "category": "math_symbols",
+    "subcategory": "voi_moi",
+    "describe": "Chèn ký hiệu hoặc cấu trúc toán học MathJax: với mọi.",
+    "aliases": [
+      "với mọi",
+      "ký hiệu với mọi",
+      "forall"
+    ],
+    "slots": {},
+    "templates": {
+      "latex": "\\(\\forall\\)",
+      "mathjax": "\\(\\forall\\)",
+      "python": "",
+      "cpp": ""
+    },
+    "requires": [],
+    "render_target": "mathjax",
+    "source": {
+      "file": "knowledge_base(1).txt",
+      "section": "SYMBOLS",
+      "original_intent": "với mọi"
+    },
+    "notes": ""
+  },
+  {
+    "intent": "MATHJAX_TON_TAI",
+    "category": "math_symbols",
+    "subcategory": "ton_tai",
+    "describe": "Chèn ký hiệu hoặc cấu trúc toán học MathJax: tồn tại.",
+    "aliases": [
+      "tồn tại",
+      "ký hiệu tồn tại",
+      "exists"
+    ],
+    "slots": {},
+    "templates": {
+      "latex": "\\(\\exists\\)",
+      "mathjax": "\\(\\exists\\)",
+      "python": "",
+      "cpp": ""
+    },
+    "requires": [],
+    "render_target": "mathjax",
+    "source": {
+      "file": "knowledge_base(1).txt",
+      "section": "SYMBOLS",
+      "original_intent": "tồn tại"
+    },
+    "notes": ""
+  },
+  {
+    "intent": "MATHJAX_MUI_TEN_PHAI",
+    "category": "math_symbols",
+    "subcategory": "mui_ten_phai",
+    "describe": "Chèn ký hiệu hoặc cấu trúc toán học MathJax: mũi tên phải.",
+    "aliases": [
+      "mũi tên phải",
+      "mũi tên sang phải",
+      "rightarrow"
+    ],
+    "slots": {},
+    "templates": {
+      "latex": "\\(\\rightarrow\\)",
+      "mathjax": "\\(\\rightarrow\\)",
+      "python": "",
+      "cpp": ""
+    },
+    "requires": [],
+    "render_target": "mathjax",
+    "source": {
+      "file": "knowledge_base(1).txt",
+      "section": "SYMBOLS",
+      "original_intent": "mũi tên phải"
+    },
+    "notes": ""
+  },
+  {
+    "intent": "MATHJAX_ANH_XA",
+    "category": "math_symbols",
+    "subcategory": "anh_xa",
+    "describe": "Chèn ký hiệu hoặc cấu trúc toán học MathJax: ánh xạ.",
+    "aliases": [
+      "ánh xạ",
+      "ánh xạ tới",
+      "mapsto"
+    ],
+    "slots": {},
+    "templates": {
+      "latex": "\\(\\mapsto\\)",
+      "mathjax": "\\(\\mapsto\\)",
+      "python": "",
+      "cpp": ""
+    },
+    "requires": [],
+    "render_target": "mathjax",
+    "source": {
+      "file": "knowledge_base(1).txt",
+      "section": "SYMBOLS",
+      "original_intent": "ánh xạ"
+    },
+    "notes": ""
+  },
+  {
+    "intent": "MATHJAX_VA_LOGIC",
+    "category": "math_logic_sets",
+    "subcategory": "va_logic",
+    "describe": "Chèn ký hiệu hoặc cấu trúc toán học MathJax: và logic.",
+    "aliases": [
+      "và logic",
+      "phép và",
+      "logical and"
+    ],
+    "slots": {},
+    "templates": {
+      "latex": "\\(\\land\\)",
+      "mathjax": "\\(\\land\\)",
+      "python": "",
+      "cpp": ""
+    },
+    "requires": [],
+    "render_target": "mathjax",
+    "source": {
+      "file": "knowledge_base(1).txt",
+      "section": "SETS_LOGIC",
+      "original_intent": "và logic"
+    },
+    "notes": ""
+  },
+  {
+    "intent": "MATHJAX_HOAC_LOGIC",
+    "category": "math_logic_sets",
+    "subcategory": "hoac_logic",
+    "describe": "Chèn ký hiệu hoặc cấu trúc toán học MathJax: hoặc logic.",
+    "aliases": [
+      "hoặc logic",
+      "phép hoặc",
+      "logical or"
+    ],
+    "slots": {},
+    "templates": {
+      "latex": "\\(\\lor\\)",
+      "mathjax": "\\(\\lor\\)",
+      "python": "",
+      "cpp": ""
+    },
+    "requires": [],
+    "render_target": "mathjax",
+    "source": {
+      "file": "knowledge_base(1).txt",
+      "section": "SETS_LOGIC",
+      "original_intent": "hoặc logic"
+    },
+    "notes": ""
+  },
+  {
+    "intent": "MATHJAX_PHU_INH",
+    "category": "math_logic_sets",
+    "subcategory": "phu_inh",
+    "describe": "Chèn ký hiệu hoặc cấu trúc toán học MathJax: phủ định.",
+    "aliases": [
+      "phủ định",
+      "not logic",
+      "phủ định mệnh đề"
+    ],
+    "slots": {},
+    "templates": {
+      "latex": "\\(\\lnot P\\)",
+      "mathjax": "\\(\\lnot P\\)",
+      "python": "",
+      "cpp": ""
+    },
+    "requires": [],
+    "render_target": "mathjax",
+    "source": {
+      "file": "knowledge_base(1).txt",
+      "section": "SETS_LOGIC",
+      "original_intent": "phủ định"
+    },
+    "notes": ""
+  },
+  {
+    "intent": "MATHJAX_CHUNG_MINH_UOC",
+    "category": "math_logic_sets",
+    "subcategory": "chung_minh_uoc",
+    "describe": "Chèn ký hiệu hoặc cấu trúc toán học MathJax: chứng minh được.",
+    "aliases": [
+      "chứng minh được",
+      "suy diễn được",
+      "turnstile"
+    ],
+    "slots": {},
+    "templates": {
+      "latex": "\\(\\vdash\\)",
+      "mathjax": "\\(\\vdash\\)",
+      "python": "",
+      "cpp": ""
+    },
+    "requires": [],
+    "render_target": "mathjax",
+    "source": {
+      "file": "knowledge_base(1).txt",
+      "section": "SETS_LOGIC",
+      "original_intent": "chứng minh được"
+    },
+    "notes": ""
+  },
+  {
+    "intent": "MATHJAX_THOA_MAN",
+    "category": "math_logic_sets",
+    "subcategory": "thoa_man",
+    "describe": "Chèn ký hiệu hoặc cấu trúc toán học MathJax: thỏa mãn.",
+    "aliases": [
+      "thỏa mãn",
+      "hệ quả ngữ nghĩa",
+      "models"
+    ],
+    "slots": {},
+    "templates": {
+      "latex": "\\(\\vDash\\)",
+      "mathjax": "\\(\\vDash\\)",
+      "python": "",
+      "cpp": ""
+    },
+    "requires": [],
+    "render_target": "mathjax",
+    "source": {
+      "file": "knowledge_base(1).txt",
+      "section": "SETS_LOGIC",
+      "original_intent": "thỏa mãn"
+    },
+    "notes": ""
+  },
+  {
+    "intent": "MATHJAX_MODULO",
+    "category": "math_logic_sets",
+    "subcategory": "modulo",
+    "describe": "Chèn ký hiệu hoặc cấu trúc toán học MathJax: modulo.",
+    "aliases": [
+      "modulo",
+      "đồng dư modulo",
+      "phép modulo"
+    ],
+    "slots": {},
+    "templates": {
+      "latex": "\\[\na\\equiv b\\pmod n\n\\]",
+      "mathjax": "\\[\na\\equiv b\\pmod n\n\\]",
+      "python": "",
+      "cpp": ""
+    },
+    "requires": [],
+    "render_target": "mathjax",
+    "source": {
+      "file": "knowledge_base(1).txt",
+      "section": "SETS_LOGIC",
+      "original_intent": "modulo"
+    },
+    "notes": ""
+  },
+  {
+    "intent": "MATHJAX_VECTOR",
+    "category": "math_accents",
+    "subcategory": "vector",
+    "describe": "Chèn ký hiệu hoặc cấu trúc toán học MathJax: vector.",
+    "aliases": [
+      "vector",
+      "véc tơ",
+      "ký hiệu vector"
+    ],
+    "slots": {
+      "x": {
+        "required": false,
+        "default": ""
+      }
+    },
+    "templates": {
+      "latex": "\\(\\vec{x}\\)",
+      "mathjax": "\\(\\vec{x}\\)",
+      "python": "",
+      "cpp": ""
+    },
+    "requires": [],
+    "render_target": "mathjax",
+    "source": {
+      "file": "knowledge_base(1).txt",
+      "section": "ACCENTS_DECORATIONS",
+      "original_intent": "vector"
+    },
+    "notes": ""
+  },
+  {
+    "intent": "MATHJAX_VECTOR_DAI",
+    "category": "math_accents",
+    "subcategory": "vector_dai",
+    "describe": "Chèn ký hiệu hoặc cấu trúc toán học MathJax: vector dài.",
+    "aliases": [
+      "vector dài",
+      "mũi tên vector dài",
+      "vector từ A đến B"
+    ],
+    "slots": {
+      "AB": {
+        "required": false,
+        "default": ""
+      }
+    },
+    "templates": {
+      "latex": "\\(\\overrightarrow{AB}\\)",
+      "mathjax": "\\(\\overrightarrow{AB}\\)",
+      "python": "",
+      "cpp": ""
+    },
+    "requires": [],
+    "render_target": "mathjax",
+    "source": {
+      "file": "knowledge_base(1).txt",
+      "section": "ACCENTS_DECORATIONS",
+      "original_intent": "vector dài"
+    },
+    "notes": ""
+  },
+  {
+    "intent": "MATHJAX_GACH_TREN",
+    "category": "math_accents",
+    "subcategory": "gach_tren",
+    "describe": "Chèn ký hiệu hoặc cấu trúc toán học MathJax: gạch trên.",
+    "aliases": [
+      "gạch trên",
+      "bar trên biến",
+      "overline ngắn"
+    ],
+    "slots": {
+      "x": {
+        "required": false,
+        "default": ""
+      }
+    },
+    "templates": {
+      "latex": "\\(\\bar{x}\\)",
+      "mathjax": "\\(\\bar{x}\\)",
+      "python": "",
+      "cpp": ""
+    },
+    "requires": [],
+    "render_target": "mathjax",
+    "source": {
+      "file": "knowledge_base(1).txt",
+      "section": "ACCENTS_DECORATIONS",
+      "original_intent": "gạch trên"
+    },
+    "notes": ""
+  },
+  {
+    "intent": "MATHJAX_GACH_DUOI",
+    "category": "math_accents",
+    "subcategory": "gach_duoi",
+    "describe": "Chèn ký hiệu hoặc cấu trúc toán học MathJax: gạch dưới.",
+    "aliases": [
+      "gạch dưới",
+      "underline biến"
+    ],
+    "slots": {
+      "x": {
+        "required": false,
+        "default": ""
+      }
+    },
+    "templates": {
+      "latex": "\\(\\underline{x}\\)",
+      "mathjax": "\\(\\underline{x}\\)",
+      "python": "",
+      "cpp": ""
+    },
+    "requires": [],
+    "render_target": "mathjax",
+    "source": {
+      "file": "knowledge_base(1).txt",
+      "section": "ACCENTS_DECORATIONS",
+      "original_intent": "gạch dưới"
+    },
+    "notes": ""
+  },
+  {
+    "intent": "MATHJAX_DAU_NGA",
+    "category": "math_accents",
+    "subcategory": "dau_nga",
+    "describe": "Chèn ký hiệu hoặc cấu trúc toán học MathJax: dấu ngã.",
+    "aliases": [
+      "dấu ngã",
+      "tilde trên biến"
+    ],
+    "slots": {
+      "x": {
+        "required": false,
+        "default": ""
+      }
+    },
+    "templates": {
+      "latex": "\\(\\widetilde{x}\\)",
+      "mathjax": "\\(\\widetilde{x}\\)",
+      "python": "",
+      "cpp": ""
+    },
+    "requires": [],
+    "render_target": "mathjax",
+    "source": {
+      "file": "knowledge_base(1).txt",
+      "section": "ACCENTS_DECORATIONS",
+      "original_intent": "dấu ngã"
+    },
+    "notes": ""
+  },
+  {
+    "intent": "MATHJAX_DAU_MU",
+    "category": "math_accents",
+    "subcategory": "dau_mu",
+    "describe": "Chèn ký hiệu hoặc cấu trúc toán học MathJax: dấu mũ.",
+    "aliases": [
+      "dấu mũ",
+      "hat trên biến"
+    ],
+    "slots": {
+      "x": {
+        "required": false,
+        "default": ""
+      }
+    },
+    "templates": {
+      "latex": "\\(\\widehat{x}\\)",
+      "mathjax": "\\(\\widehat{x}\\)",
+      "python": "",
+      "cpp": ""
+    },
+    "requires": [],
+    "render_target": "mathjax",
+    "source": {
+      "file": "knowledge_base(1).txt",
+      "section": "ACCENTS_DECORATIONS",
+      "original_intent": "dấu mũ"
+    },
+    "notes": ""
+  },
+  {
+    "intent": "MATHJAX_AO_HAM_CHAM",
+    "category": "math_accents",
+    "subcategory": "ao_ham_cham",
+    "describe": "Chèn ký hiệu hoặc cấu trúc toán học MathJax: đạo hàm chấm.",
+    "aliases": [
+      "đạo hàm chấm",
+      "dot trên biến",
+      "đạo hàm theo thời gian"
+    ],
+    "slots": {
+      "x": {
+        "required": false,
+        "default": ""
+      }
+    },
+    "templates": {
+      "latex": "\\(\\dot{x}\\)",
+      "mathjax": "\\(\\dot{x}\\)",
+      "python": "",
+      "cpp": ""
+    },
+    "requires": [],
+    "render_target": "mathjax",
+    "source": {
+      "file": "knowledge_base(1).txt",
+      "section": "ACCENTS_DECORATIONS",
+      "original_intent": "đạo hàm chấm"
+    },
+    "notes": ""
+  },
+  {
+    "intent": "MATHJAX_ONG_KHUNG",
+    "category": "math_accents",
+    "subcategory": "ong_khung",
+    "describe": "Chèn ký hiệu hoặc cấu trúc toán học MathJax: đóng khung.",
+    "aliases": [
+      "đóng khung",
+      "khung quanh công thức",
+      "boxed formula"
+    ],
+    "slots": {
+      "expr": {
+        "required": false,
+        "default": ""
+      }
+    },
+    "templates": {
+      "latex": "\\[\n\\boxed{{expr}}\n\\]",
+      "mathjax": "\\[\n\\boxed{{expr}}\n\\]",
+      "python": "",
+      "cpp": ""
+    },
+    "requires": [],
+    "render_target": "mathjax",
+    "source": {
+      "file": "knowledge_base(1).txt",
+      "section": "ACCENTS_DECORATIONS",
+      "original_intent": "đóng khung"
+    },
+    "notes": ""
+  },
+  {
+    "intent": "MATHJAX_OVERBRACE",
+    "category": "math_accents",
+    "subcategory": "overbrace",
+    "describe": "Chèn ký hiệu hoặc cấu trúc toán học MathJax: overbrace.",
+    "aliases": [
+      "overbrace",
+      "ngoặc nhọn phía trên",
+      "dấu ngoặc trên biểu thức"
+    ],
+    "slots": {
+      "expr": {
+        "required": false,
+        "default": ""
+      },
+      "label": {
+        "required": false,
+        "default": ""
+      }
+    },
+    "templates": {
+      "latex": "\\[\n\\overbrace{{expr}}^{{label}}\n\\]",
+      "mathjax": "\\[\n\\overbrace{{expr}}^{{label}}\n\\]",
+      "python": "",
+      "cpp": ""
+    },
+    "requires": [],
+    "render_target": "mathjax",
+    "source": {
+      "file": "knowledge_base(1).txt",
+      "section": "ACCENTS_DECORATIONS",
+      "original_intent": "overbrace"
+    },
+    "notes": ""
+  },
+  {
+    "intent": "MATHJAX_UNDERBRACE",
+    "category": "math_accents",
+    "subcategory": "underbrace",
+    "describe": "Chèn ký hiệu hoặc cấu trúc toán học MathJax: underbrace.",
+    "aliases": [
+      "underbrace",
+      "ngoặc nhọn phía dưới",
+      "dấu ngoặc dưới biểu thức"
+    ],
+    "slots": {
+      "expr": {
+        "required": false,
+        "default": ""
+      },
+      "label": {
+        "required": false,
+        "default": ""
+      }
+    },
+    "templates": {
+      "latex": "\\[\n\\underbrace{{expr}}_{{label}}\n\\]",
+      "mathjax": "\\[\n\\underbrace{{expr}}_{{label}}\n\\]",
+      "python": "",
+      "cpp": ""
+    },
+    "requires": [],
+    "render_target": "mathjax",
+    "source": {
+      "file": "knowledge_base(1).txt",
+      "section": "ACCENTS_DECORATIONS",
+      "original_intent": "underbrace"
+    },
+    "notes": ""
+  },
+  {
+    "intent": "MATHJAX_CHU_PHIA_TREN",
+    "category": "math_accents",
+    "subcategory": "chu_phia_tren",
+    "describe": "Chèn ký hiệu hoặc cấu trúc toán học MathJax: chữ phía trên.",
+    "aliases": [
+      "chữ phía trên",
+      "overset",
+      "ký hiệu trên biểu thức"
+    ],
+    "slots": {
+      "expr": {
+        "required": false,
+        "default": ""
+      },
+      "label": {
+        "required": false,
+        "default": ""
+      }
+    },
+    "templates": {
+      "latex": "\\[\n\\overset{{label}}{{expr}}\n\\]",
+      "mathjax": "\\[\n\\overset{{label}}{{expr}}\n\\]",
+      "python": "",
+      "cpp": ""
+    },
+    "requires": [],
+    "render_target": "mathjax",
+    "source": {
+      "file": "knowledge_base(1).txt",
+      "section": "ACCENTS_DECORATIONS",
+      "original_intent": "chữ phía trên"
+    },
+    "notes": ""
+  },
+  {
+    "intent": "MATHJAX_CHU_PHIA_DUOI",
+    "category": "math_accents",
+    "subcategory": "chu_phia_duoi",
+    "describe": "Chèn ký hiệu hoặc cấu trúc toán học MathJax: chữ phía dưới.",
+    "aliases": [
+      "chữ phía dưới",
+      "underset",
+      "ký hiệu dưới biểu thức"
+    ],
+    "slots": {
+      "expr": {
+        "required": false,
+        "default": ""
+      },
+      "label": {
+        "required": false,
+        "default": ""
+      }
+    },
+    "templates": {
+      "latex": "\\[\n\\underset{{label}}{{expr}}\n\\]",
+      "mathjax": "\\[\n\\underset{{label}}{{expr}}\n\\]",
+      "python": "",
+      "cpp": ""
+    },
+    "requires": [],
+    "render_target": "mathjax",
+    "source": {
+      "file": "knowledge_base(1).txt",
+      "section": "ACCENTS_DECORATIONS",
+      "original_intent": "chữ phía dưới"
+    },
+    "notes": ""
+  },
+  {
+    "intent": "MATHJAX_NGOAC_TU_CO",
+    "category": "math_brackets_spacing",
+    "subcategory": "ngoac_tu_co",
+    "describe": "Chèn ký hiệu hoặc cấu trúc toán học MathJax: ngoặc tự co.",
+    "aliases": [
+      "ngoặc tự co",
+      "ngoặc tròn co giãn",
+      "left right parentheses"
+    ],
+    "slots": {
+      "expr": {
+        "required": false,
+        "default": ""
+      }
+    },
+    "templates": {
+      "latex": "\\[\n\\left({expr}\\right)\n\\]",
+      "mathjax": "\\[\n\\left({expr}\\right)\n\\]",
+      "python": "",
+      "cpp": ""
+    },
+    "requires": [],
+    "render_target": "mathjax",
+    "source": {
+      "file": "knowledge_base(1).txt",
+      "section": "BRACKETS_SPACING_TEXT",
+      "original_intent": "ngoặc tự co"
+    },
+    "notes": ""
+  },
+  {
+    "intent": "MATHJAX_NGOAC_VUONG_TU_CO",
+    "category": "math_brackets_spacing",
+    "subcategory": "ngoac_vuong_tu_co",
+    "describe": "Chèn ký hiệu hoặc cấu trúc toán học MathJax: ngoặc vuông tự co.",
+    "aliases": [
+      "ngoặc vuông tự co",
+      "ngoặc vuông co giãn"
+    ],
+    "slots": {
+      "expr": {
+        "required": false,
+        "default": ""
+      }
+    },
+    "templates": {
+      "latex": "\\[\n\\left[{expr}\\right]\n\\]",
+      "mathjax": "\\[\n\\left[{expr}\\right]\n\\]",
+      "python": "",
+      "cpp": ""
+    },
+    "requires": [],
+    "render_target": "mathjax",
+    "source": {
+      "file": "knowledge_base(1).txt",
+      "section": "BRACKETS_SPACING_TEXT",
+      "original_intent": "ngoặc vuông tự co"
+    },
+    "notes": ""
+  },
+  {
+    "intent": "MATHJAX_NGOAC_NHON_TU_CO",
+    "category": "math_brackets_spacing",
+    "subcategory": "ngoac_nhon_tu_co",
+    "describe": "Chèn ký hiệu hoặc cấu trúc toán học MathJax: ngoặc nhọn tự co.",
+    "aliases": [
+      "ngoặc nhọn tự co",
+      "ngoặc nhọn co giãn"
+    ],
+    "slots": {
+      "expr": {
+        "required": false,
+        "default": ""
+      }
+    },
+    "templates": {
+      "latex": "\\[\n\\left\\{{expr}\\right\\}\n\\]",
+      "mathjax": "\\[\n\\left\\{{expr}\\right\\}\n\\]",
+      "python": "",
+      "cpp": ""
+    },
+    "requires": [],
+    "render_target": "mathjax",
+    "source": {
+      "file": "knowledge_base(1).txt",
+      "section": "BRACKETS_SPACING_TEXT",
+      "original_intent": "ngoặc nhọn tự co"
+    },
+    "notes": ""
+  },
+  {
+    "intent": "MATHJAX_TRI_TUYET_OI",
+    "category": "math_brackets_spacing",
+    "subcategory": "tri_tuyet_oi",
+    "describe": "Chèn ký hiệu hoặc cấu trúc toán học MathJax: trị tuyệt đối.",
+    "aliases": [
+      "trị tuyệt đối",
+      "giá trị tuyệt đối",
+      "absolute value"
+    ],
+    "slots": {
+      "expr": {
+        "required": false,
+        "default": ""
+      }
+    },
+    "templates": {
+      "latex": "\\[\n\\lvert {expr}\\rvert\n\\]",
+      "mathjax": "\\[\n\\lvert {expr}\\rvert\n\\]",
+      "python": "",
+      "cpp": ""
+    },
+    "requires": [],
+    "render_target": "mathjax",
+    "source": {
+      "file": "knowledge_base(1).txt",
+      "section": "BRACKETS_SPACING_TEXT",
+      "original_intent": "trị tuyệt đối"
+    },
+    "notes": ""
+  },
+  {
+    "intent": "MATHJAX_CHUAN_VECTOR",
+    "category": "math_brackets_spacing",
+    "subcategory": "chuan_vector",
+    "describe": "Chèn ký hiệu hoặc cấu trúc toán học MathJax: chuẩn vector.",
+    "aliases": [
+      "chuẩn vector",
+      "norm vector",
+      "độ dài vector"
+    ],
+    "slots": {
+      "expr": {
+        "required": false,
+        "default": ""
+      }
+    },
+    "templates": {
+      "latex": "\\[\n\\lVert {expr}\\rVert\n\\]",
+      "mathjax": "\\[\n\\lVert {expr}\\rVert\n\\]",
+      "python": "",
+      "cpp": ""
+    },
+    "requires": [],
+    "render_target": "mathjax",
+    "source": {
+      "file": "knowledge_base(1).txt",
+      "section": "BRACKETS_SPACING_TEXT",
+      "original_intent": "chuẩn vector"
+    },
+    "notes": ""
+  },
+  {
+    "intent": "MATHJAX_KHOANG_CACH_NHO",
+    "category": "math_brackets_spacing",
+    "subcategory": "khoang_cach_nho",
+    "describe": "Chèn ký hiệu hoặc cấu trúc toán học MathJax: khoảng cách nhỏ.",
+    "aliases": [
+      "khoảng cách nhỏ",
+      "thin space math",
+      "khoảng trắng toán nhỏ"
+    ],
+    "slots": {},
+    "templates": {
+      "latex": "\\(a\\,b\\)",
+      "mathjax": "\\(a\\,b\\)",
+      "python": "",
+      "cpp": ""
+    },
+    "requires": [],
+    "render_target": "mathjax",
+    "source": {
+      "file": "knowledge_base(1).txt",
+      "section": "BRACKETS_SPACING_TEXT",
+      "original_intent": "khoảng cách nhỏ"
+    },
+    "notes": ""
+  },
+  {
+    "intent": "MATHJAX_KHOANG_CACH_VUA",
+    "category": "math_brackets_spacing",
+    "subcategory": "khoang_cach_vua",
+    "describe": "Chèn ký hiệu hoặc cấu trúc toán học MathJax: khoảng cách vừa.",
+    "aliases": [
+      "khoảng cách vừa",
+      "medium space math",
+      "khoảng trắng toán vừa"
+    ],
+    "slots": {},
+    "templates": {
+      "latex": "\\(a\\;b\\)",
+      "mathjax": "\\(a\\;b\\)",
+      "python": "",
+      "cpp": ""
+    },
+    "requires": [],
+    "render_target": "mathjax",
+    "source": {
+      "file": "knowledge_base(1).txt",
+      "section": "BRACKETS_SPACING_TEXT",
+      "original_intent": "khoảng cách vừa"
+    },
+    "notes": ""
+  },
+  {
+    "intent": "MATHJAX_KHOANG_CACH_LON",
+    "category": "math_brackets_spacing",
+    "subcategory": "khoang_cach_lon",
+    "describe": "Chèn ký hiệu hoặc cấu trúc toán học MathJax: khoảng cách lớn.",
+    "aliases": [
+      "khoảng cách lớn",
+      "quad space",
+      "khoảng trắng quad"
+    ],
+    "slots": {},
+    "templates": {
+      "latex": "\\(a\\quad b\\)",
+      "mathjax": "\\(a\\quad b\\)",
+      "python": "",
+      "cpp": ""
+    },
+    "requires": [],
+    "render_target": "mathjax",
+    "source": {
+      "file": "knowledge_base(1).txt",
+      "section": "BRACKETS_SPACING_TEXT",
+      "original_intent": "khoảng cách lớn"
+    },
+    "notes": ""
+  },
+  {
+    "intent": "MATHJAX_KHOANG_CACH_RAT_LON",
+    "category": "math_brackets_spacing",
+    "subcategory": "khoang_cach_rat_lon",
+    "describe": "Chèn ký hiệu hoặc cấu trúc toán học MathJax: khoảng cách rất lớn.",
+    "aliases": [
+      "khoảng cách rất lớn",
+      "qquad space",
+      "khoảng trắng qquad"
+    ],
+    "slots": {},
+    "templates": {
+      "latex": "\\(a\\qquad b\\)",
+      "mathjax": "\\(a\\qquad b\\)",
+      "python": "",
+      "cpp": ""
+    },
+    "requires": [],
+    "render_target": "mathjax",
+    "source": {
+      "file": "knowledge_base(1).txt",
+      "section": "BRACKETS_SPACING_TEXT",
+      "original_intent": "khoảng cách rất lớn"
+    },
+    "notes": ""
+  },
+  {
+    "intent": "MATHJAX_KHOANG_CACH_AM",
+    "category": "math_brackets_spacing",
+    "subcategory": "khoang_cach_am",
+    "describe": "Chèn ký hiệu hoặc cấu trúc toán học MathJax: khoảng cách âm.",
+    "aliases": [
+      "khoảng cách âm",
+      "negative math space",
+      "thu hẹp khoảng cách toán"
+    ],
+    "slots": {},
+    "templates": {
+      "latex": "\\(a\\!b\\)",
+      "mathjax": "\\(a\\!b\\)",
+      "python": "",
+      "cpp": ""
+    },
+    "requires": [],
+    "render_target": "mathjax",
+    "source": {
+      "file": "knowledge_base(1).txt",
+      "section": "BRACKETS_SPACING_TEXT",
+      "original_intent": "khoảng cách âm"
+    },
+    "notes": ""
+  },
+  {
+    "intent": "MATHJAX_CHU_TRONG_CONG_THUC",
+    "category": "math_brackets_spacing",
+    "subcategory": "chu_trong_cong_thuc",
+    "describe": "Chèn ký hiệu hoặc cấu trúc toán học MathJax: chữ trong công thức.",
+    "aliases": [
+      "chữ trong công thức",
+      "text trong math mode",
+      "văn bản trong biểu thức"
+    ],
+    "slots": {
+      "text": {
+        "required": false,
+        "default": ""
+      }
+    },
+    "templates": {
+      "latex": "\\[\n\\text{{text}}\n\\]",
+      "mathjax": "\\[\n\\text{{text}}\n\\]",
+      "python": "",
+      "cpp": ""
+    },
+    "requires": [],
+    "render_target": "mathjax",
+    "source": {
+      "file": "knowledge_base(1).txt",
+      "section": "BRACKETS_SPACING_TEXT",
+      "original_intent": "chữ trong công thức"
+    },
+    "notes": ""
+  },
+  {
+    "intent": "MATHJAX_CHU_BLACKBOARD",
+    "category": "math_fonts",
+    "subcategory": "chu_blackboard",
+    "describe": "Chèn ký hiệu hoặc cấu trúc toán học MathJax: chữ blackboard.",
+    "aliases": [
+      "chữ blackboard",
+      "blackboard bold",
+      "ký hiệu R hai nét"
+    ],
+    "slots": {
+      "R": {
+        "required": false,
+        "default": ""
+      }
+    },
+    "templates": {
+      "latex": "\\(\\mathbb{R}\\)",
+      "mathjax": "\\(\\mathbb{R}\\)",
+      "python": "",
+      "cpp": ""
+    },
+    "requires": [],
+    "render_target": "mathjax",
+    "source": {
+      "file": "knowledge_base(1).txt",
+      "section": "FONT",
+      "original_intent": "chữ blackboard"
+    },
+    "notes": ""
+  },
+  {
+    "intent": "MATHJAX_CHU_AM_TOAN",
+    "category": "math_fonts",
+    "subcategory": "chu_am_toan",
+    "describe": "Chèn ký hiệu hoặc cấu trúc toán học MathJax: chữ đậm toán.",
+    "aliases": [
+      "chữ đậm toán",
+      "math bold",
+      "boldsymbol chữ thường"
+    ],
+    "slots": {
+      "ABC": {
+        "required": false,
+        "default": ""
+      }
+    },
+    "templates": {
+      "latex": "\\(\\mathbf{ABC}\\)",
+      "mathjax": "\\(\\mathbf{ABC}\\)",
+      "python": "",
+      "cpp": ""
+    },
+    "requires": [],
+    "render_target": "mathjax",
+    "source": {
+      "file": "knowledge_base(1).txt",
+      "section": "FONT",
+      "original_intent": "chữ đậm toán"
+    },
+    "notes": ""
+  },
+  {
+    "intent": "MATHJAX_VECTOR_AM",
+    "category": "math_fonts",
+    "subcategory": "vector_am",
+    "describe": "Chèn ký hiệu hoặc cấu trúc toán học MathJax: vector đậm.",
+    "aliases": [
+      "vector đậm",
+      "ký hiệu vector đậm",
+      "bold math symbol"
+    ],
+    "slots": {},
+    "templates": {
+      "latex": "\\(\\boldsymbol{\\alpha}\\)",
+      "mathjax": "\\(\\boldsymbol{\\alpha}\\)",
+      "python": "",
+      "cpp": ""
+    },
+    "requires": [],
+    "render_target": "mathjax",
+    "source": {
+      "file": "knowledge_base(1).txt",
+      "section": "FONT",
+      "original_intent": "vector đậm"
+    },
+    "notes": ""
+  },
+  {
+    "intent": "MATHJAX_CHU_LA_MA",
+    "category": "math_fonts",
+    "subcategory": "chu_la_ma",
+    "describe": "Chèn ký hiệu hoặc cấu trúc toán học MathJax: chữ La Mã.",
+    "aliases": [
+      "chữ La Mã",
+      "roman math font",
+      "mathrm"
+    ],
+    "slots": {
+      "ABC": {
+        "required": false,
+        "default": ""
+      }
+    },
+    "templates": {
+      "latex": "\\(\\mathrm{ABC}\\)",
+      "mathjax": "\\(\\mathrm{ABC}\\)",
+      "python": "",
+      "cpp": ""
+    },
+    "requires": [],
+    "render_target": "mathjax",
+    "source": {
+      "file": "knowledge_base(1).txt",
+      "section": "FONT",
+      "original_intent": "chữ La Mã"
+    },
+    "notes": ""
+  },
+  {
+    "intent": "MATHJAX_CHU_TYPEWRITER",
+    "category": "math_fonts",
+    "subcategory": "chu_typewriter",
+    "describe": "Chèn ký hiệu hoặc cấu trúc toán học MathJax: chữ typewriter.",
+    "aliases": [
+      "chữ typewriter",
+      "monospace math",
+      "mathtt"
+    ],
+    "slots": {
+      "ABC": {
+        "required": false,
+        "default": ""
+      }
+    },
+    "templates": {
+      "latex": "\\(\\mathtt{ABC}\\)",
+      "mathjax": "\\(\\mathtt{ABC}\\)",
+      "python": "",
+      "cpp": ""
+    },
+    "requires": [],
+    "render_target": "mathjax",
+    "source": {
+      "file": "knowledge_base(1).txt",
+      "section": "FONT",
+      "original_intent": "chữ typewriter"
+    },
+    "notes": ""
+  },
+  {
+    "intent": "MATHJAX_CHU_SANS_SERIF",
+    "category": "math_fonts",
+    "subcategory": "chu_sans_serif",
+    "describe": "Chèn ký hiệu hoặc cấu trúc toán học MathJax: chữ sans serif.",
+    "aliases": [
+      "chữ sans serif",
+      "sans serif math",
+      "mathsf"
+    ],
+    "slots": {
+      "ABC": {
+        "required": false,
+        "default": ""
+      }
+    },
+    "templates": {
+      "latex": "\\(\\mathsf{ABC}\\)",
+      "mathjax": "\\(\\mathsf{ABC}\\)",
+      "python": "",
+      "cpp": ""
+    },
+    "requires": [],
+    "render_target": "mathjax",
+    "source": {
+      "file": "knowledge_base(1).txt",
+      "section": "FONT",
+      "original_intent": "chữ sans serif"
+    },
+    "notes": ""
+  },
+  {
+    "intent": "MATHJAX_CHU_CALLIGRAPHIC",
+    "category": "math_fonts",
+    "subcategory": "chu_calligraphic",
+    "describe": "Chèn ký hiệu hoặc cấu trúc toán học MathJax: chữ calligraphic.",
+    "aliases": [
+      "chữ calligraphic",
+      "calligraphic math",
+      "mathcal"
+    ],
+    "slots": {
+      "ABC": {
+        "required": false,
+        "default": ""
+      }
+    },
+    "templates": {
+      "latex": "\\(\\mathcal{ABC}\\)",
+      "mathjax": "\\(\\mathcal{ABC}\\)",
+      "python": "",
+      "cpp": ""
+    },
+    "requires": [],
+    "render_target": "mathjax",
+    "source": {
+      "file": "knowledge_base(1).txt",
+      "section": "FONT",
+      "original_intent": "chữ calligraphic"
+    },
+    "notes": ""
+  },
+  {
+    "intent": "MATHJAX_CHU_SCRIPT",
+    "category": "math_fonts",
+    "subcategory": "chu_script",
+    "describe": "Chèn ký hiệu hoặc cấu trúc toán học MathJax: chữ script.",
+    "aliases": [
+      "chữ script",
+      "script math font",
+      "mathscr"
+    ],
+    "slots": {
+      "ABC": {
+        "required": false,
+        "default": ""
+      }
+    },
+    "templates": {
+      "latex": "\\(\\mathscr{ABC}\\)",
+      "mathjax": "\\(\\mathscr{ABC}\\)",
+      "python": "",
+      "cpp": ""
+    },
+    "requires": [],
+    "render_target": "mathjax",
+    "source": {
+      "file": "knowledge_base(1).txt",
+      "section": "FONT",
+      "original_intent": "chữ script"
+    },
+    "notes": ""
+  },
+  {
+    "intent": "MATHJAX_CHU_FRAKTUR",
+    "category": "math_fonts",
+    "subcategory": "chu_fraktur",
+    "describe": "Chèn ký hiệu hoặc cấu trúc toán học MathJax: chữ Fraktur.",
+    "aliases": [
+      "chữ Fraktur",
+      "fraktur math",
+      "mathfrak"
+    ],
+    "slots": {
+      "ABC": {
+        "required": false,
+        "default": ""
+      }
+    },
+    "templates": {
+      "latex": "\\(\\mathfrak{ABC}\\)",
+      "mathjax": "\\(\\mathfrak{ABC}\\)",
+      "python": "",
+      "cpp": ""
+    },
+    "requires": [],
+    "render_target": "mathjax",
+    "source": {
+      "file": "knowledge_base(1).txt",
+      "section": "FONT",
+      "original_intent": "chữ Fraktur"
+    },
+    "notes": ""
+  },
+  {
+    "intent": "MATHJAX_O",
+    "category": "math_units_color_numbering",
+    "subcategory": "o",
+    "describe": "Chèn ký hiệu hoặc cấu trúc toán học MathJax: độ.",
+    "aliases": [
+      "độ",
+      "ký hiệu độ",
+      "degree"
+    ],
+    "slots": {},
+    "templates": {
+      "latex": "\\(45^\\circ\\)",
+      "mathjax": "\\(45^\\circ\\)",
+      "python": "",
+      "cpp": ""
+    },
+    "requires": [],
+    "render_target": "mathjax",
+    "source": {
+      "file": "knowledge_base(1).txt",
+      "section": "UNITS_COLOR_NUMBERING",
+      "original_intent": "độ"
+    },
+    "notes": ""
+  },
+  {
+    "intent": "MATHJAX_MET",
+    "category": "math_units_color_numbering",
+    "subcategory": "met",
+    "describe": "Chèn ký hiệu hoặc cấu trúc toán học MathJax: mét.",
+    "aliases": [
+      "mét",
+      "đơn vị mét",
+      "meter unit"
+    ],
+    "slots": {
+      "m": {
+        "required": false,
+        "default": ""
+      }
+    },
+    "templates": {
+      "latex": "\\(\\mathrm{m}\\)",
+      "mathjax": "\\(\\mathrm{m}\\)",
+      "python": "",
+      "cpp": ""
+    },
+    "requires": [],
+    "render_target": "mathjax",
+    "source": {
+      "file": "knowledge_base(1).txt",
+      "section": "UNITS_COLOR_NUMBERING",
+      "original_intent": "mét"
+    },
+    "notes": ""
+  },
+  {
+    "intent": "MATHJAX_MET_VUONG",
+    "category": "math_units_color_numbering",
+    "subcategory": "met_vuong",
+    "describe": "Chèn ký hiệu hoặc cấu trúc toán học MathJax: mét vuông.",
+    "aliases": [
+      "mét vuông",
+      "đơn vị mét vuông",
+      "m bình phương"
+    ],
+    "slots": {
+      "m": {
+        "required": false,
+        "default": ""
+      }
+    },
+    "templates": {
+      "latex": "\\(\\mathrm{m}^2\\)",
+      "mathjax": "\\(\\mathrm{m}^2\\)",
+      "python": "",
+      "cpp": ""
+    },
+    "requires": [],
+    "render_target": "mathjax",
+    "source": {
+      "file": "knowledge_base(1).txt",
+      "section": "UNITS_COLOR_NUMBERING",
+      "original_intent": "mét vuông"
+    },
+    "notes": ""
+  },
+  {
+    "intent": "MATHJAX_MET_TREN_GIAY",
+    "category": "math_units_color_numbering",
+    "subcategory": "met_tren_giay",
+    "describe": "Chèn ký hiệu hoặc cấu trúc toán học MathJax: mét trên giây.",
+    "aliases": [
+      "mét trên giây",
+      "mỗi giây",
+      "m/s"
+    ],
+    "slots": {
+      "m": {
+        "required": false,
+        "default": ""
+      },
+      "s": {
+        "required": false,
+        "default": ""
+      }
+    },
+    "templates": {
+      "latex": "\\(\\mathrm{m}\\middle/\\mathrm{s}\\)",
+      "mathjax": "\\(\\mathrm{m}\\middle/\\mathrm{s}\\)",
+      "python": "",
+      "cpp": ""
+    },
+    "requires": [],
+    "render_target": "mathjax",
+    "source": {
+      "file": "knowledge_base(1).txt",
+      "section": "UNITS_COLOR_NUMBERING",
+      "original_intent": "mét trên giây"
+    },
+    "notes": ""
+  },
+  {
+    "intent": "MATHJAX_MET_TREN_GIAY_BINH_PHUONG",
+    "category": "math_units_color_numbering",
+    "subcategory": "met_tren_giay_binh_phuong",
+    "describe": "Chèn ký hiệu hoặc cấu trúc toán học MathJax: mét trên giây bình phương.",
+    "aliases": [
+      "mét trên giây bình phương",
+      "m trên giây bình phương",
+      "m/s2"
+    ],
+    "slots": {
+      "m": {
+        "required": false,
+        "default": ""
+      },
+      "s": {
+        "required": false,
+        "default": ""
+      }
+    },
+    "templates": {
+      "latex": "\\(\\mathrm{m}\\middle/\\mathrm{s}^2\\)",
+      "mathjax": "\\(\\mathrm{m}\\middle/\\mathrm{s}^2\\)",
+      "python": "",
+      "cpp": ""
+    },
+    "requires": [],
+    "render_target": "mathjax",
+    "source": {
+      "file": "knowledge_base(1).txt",
+      "section": "UNITS_COLOR_NUMBERING",
+      "original_intent": "mét trên giây bình phương"
+    },
+    "notes": ""
+  },
+  {
+    "intent": "MATHJAX_MOL",
+    "category": "math_units_color_numbering",
+    "subcategory": "mol",
+    "describe": "Chèn ký hiệu hoặc cấu trúc toán học MathJax: mol.",
+    "aliases": [
+      "mol",
+      "đơn vị mol"
+    ],
+    "slots": {
+      "mol": {
+        "required": false,
+        "default": ""
+      }
+    },
+    "templates": {
+      "latex": "\\(\\mathrm{mol}\\)",
+      "mathjax": "\\(\\mathrm{mol}\\)",
+      "python": "",
+      "cpp": ""
+    },
+    "requires": [],
+    "render_target": "mathjax",
+    "source": {
+      "file": "knowledge_base(1).txt",
+      "section": "UNITS_COLOR_NUMBERING",
+      "original_intent": "mol"
+    },
+    "notes": ""
+  },
+  {
+    "intent": "MATHJAX_ON_VI_NHAN",
+    "category": "math_units_color_numbering",
+    "subcategory": "on_vi_nhan",
+    "describe": "Chèn ký hiệu hoặc cấu trúc toán học MathJax: đơn vị nhân.",
+    "aliases": [
+      "đơn vị nhân",
+      "đơn vị tích",
+      "kg mét bình phương"
+    ],
+    "slots": {
+      "kg": {
+        "required": false,
+        "default": ""
+      },
+      "m": {
+        "required": false,
+        "default": ""
+      }
+    },
+    "templates": {
+      "latex": "\\(\\mathrm{kg}\\!\\cdot\\!\\mathrm{m}^2\\)",
+      "mathjax": "\\(\\mathrm{kg}\\!\\cdot\\!\\mathrm{m}^2\\)",
+      "python": "",
+      "cpp": ""
+    },
+    "requires": [],
+    "render_target": "mathjax",
+    "source": {
+      "file": "knowledge_base(1).txt",
+      "section": "UNITS_COLOR_NUMBERING",
+      "original_intent": "đơn vị nhân"
+    },
+    "notes": ""
+  },
+  {
+    "intent": "MATHJAX_ON_VI_SO_MU_AM",
+    "category": "math_units_color_numbering",
+    "subcategory": "on_vi_so_mu_am",
+    "describe": "Chèn ký hiệu hoặc cấu trúc toán học MathJax: đơn vị số mũ âm.",
+    "aliases": [
+      "đơn vị số mũ âm",
+      "đơn vị mũ âm",
+      "m s mũ trừ hai"
+    ],
+    "slots": {
+      "m": {
+        "required": false,
+        "default": ""
+      },
+      "s": {
+        "required": false,
+        "default": ""
+      }
+    },
+    "templates": {
+      "latex": "\\(\\mathrm{m}\\,\\mathrm{s}^{-2}\\)",
+      "mathjax": "\\(\\mathrm{m}\\,\\mathrm{s}^{-2}\\)",
+      "python": "",
+      "cpp": ""
+    },
+    "requires": [],
+    "render_target": "mathjax",
+    "source": {
+      "file": "knowledge_base(1).txt",
+      "section": "UNITS_COLOR_NUMBERING",
+      "original_intent": "đơn vị số mũ âm"
+    },
+    "notes": ""
+  },
+  {
+    "intent": "MATHJAX_MAU_O",
+    "category": "math_units_color_numbering",
+    "subcategory": "mau_o",
+    "describe": "Chèn ký hiệu hoặc cấu trúc toán học MathJax: màu đỏ.",
+    "aliases": [
+      "màu đỏ",
+      "tô công thức màu đỏ",
+      "red math color"
+    ],
+    "slots": {
+      "expr": {
+        "required": false,
+        "default": ""
+      },
+      "red": {
+        "required": false,
+        "default": ""
+      }
+    },
+    "templates": {
+      "latex": "\\[\n\\color{red}{{expr}}\n\\]",
+      "mathjax": "\\[\n\\color{red}{{expr}}\n\\]",
+      "python": "",
+      "cpp": ""
+    },
+    "requires": [],
+    "render_target": "mathjax",
+    "source": {
+      "file": "knowledge_base(1).txt",
+      "section": "UNITS_COLOR_NUMBERING",
+      "original_intent": "màu đỏ"
+    },
+    "notes": ""
+  },
+  {
+    "intent": "MATHJAX_MAU_XANH",
+    "category": "math_units_color_numbering",
+    "subcategory": "mau_xanh",
+    "describe": "Chèn ký hiệu hoặc cấu trúc toán học MathJax: màu xanh.",
+    "aliases": [
+      "màu xanh",
+      "tô công thức màu xanh",
+      "blue math color"
+    ],
+    "slots": {
+      "blue": {
+        "required": false,
+        "default": ""
+      },
+      "expr": {
+        "required": false,
+        "default": ""
+      }
+    },
+    "templates": {
+      "latex": "\\[\n\\color{blue}{{expr}}\n\\]",
+      "mathjax": "\\[\n\\color{blue}{{expr}}\n\\]",
+      "python": "",
+      "cpp": ""
+    },
+    "requires": [],
+    "render_target": "mathjax",
+    "source": {
+      "file": "knowledge_base(1).txt",
+      "section": "UNITS_COLOR_NUMBERING",
+      "original_intent": "màu xanh"
+    },
+    "notes": ""
+  },
+  {
+    "intent": "MATHJAX_HIGHLIGHT_CONG_THUC",
+    "category": "math_units_color_numbering",
+    "subcategory": "highlight_cong_thuc",
+    "describe": "Chèn ký hiệu hoặc cấu trúc toán học MathJax: highlight công thức.",
+    "aliases": [
+      "highlight công thức",
+      "nền vàng công thức",
+      "đánh dấu nền công thức"
+    ],
+    "slots": {
+      "expr": {
+        "required": false,
+        "default": ""
+      }
+    },
+    "templates": {
+      "latex": "\\[\n\\bbox[yellow]{{expr}}\n\\]",
+      "mathjax": "\\[\n\\bbox[yellow]{{expr}}\n\\]",
+      "python": "",
+      "cpp": ""
+    },
+    "requires": [],
+    "render_target": "mathjax",
+    "source": {
+      "file": "knowledge_base(1).txt",
+      "section": "UNITS_COLOR_NUMBERING",
+      "original_intent": "highlight công thức"
+    },
+    "notes": ""
+  },
+  {
+    "intent": "MATHJAX_PHUONG_TRINH_CO_SO",
+    "category": "math_units_color_numbering",
+    "subcategory": "phuong_trinh_co_so",
+    "describe": "Chèn ký hiệu hoặc cấu trúc toán học MathJax: phương trình có số.",
+    "aliases": [
+      "phương trình có số",
+      "equation có đánh số",
+      "đánh số phương trình"
+    ],
+    "slots": {
+      "equation": {
+        "required": false,
+        "default": ""
+      },
+      "formula": {
+        "required": false,
+        "default": ""
+      }
+    },
+    "templates": {
+      "latex": "\\begin{equation}\n{formula}\n\\end{equation}",
+      "mathjax": "\\begin{equation}\n{formula}\n\\end{equation}",
+      "python": "",
+      "cpp": ""
+    },
+    "requires": [],
+    "render_target": "mathjax",
+    "source": {
+      "file": "knowledge_base(1).txt",
+      "section": "UNITS_COLOR_NUMBERING",
+      "original_intent": "phương trình có số"
+    },
+    "notes": ""
+  },
+  {
+    "intent": "MATHJAX_GAN_NHAN_PHUONG_TRINH",
+    "category": "math_units_color_numbering",
+    "subcategory": "gan_nhan_phuong_trinh",
+    "describe": "Chèn ký hiệu hoặc cấu trúc toán học MathJax: gắn nhãn phương trình.",
+    "aliases": [
+      "gắn nhãn phương trình",
+      "tag phương trình",
+      "đặt số tùy chỉnh phương trình"
+    ],
+    "slots": {
+      "label": {
+        "required": false,
+        "default": ""
+      }
+    },
+    "templates": {
+      "latex": "\\tag{{label}}",
+      "mathjax": "\\tag{{label}}",
+      "python": "",
+      "cpp": ""
+    },
+    "requires": [],
+    "render_target": "mathjax",
+    "source": {
+      "file": "knowledge_base(1).txt",
+      "section": "UNITS_COLOR_NUMBERING",
+      "original_intent": "gắn nhãn phương trình"
+    },
+    "notes": ""
+  },
+  {
+    "intent": "MATHJAX_THAM_CHIEU_PHUONG_TRINH",
+    "category": "math_units_color_numbering",
+    "subcategory": "tham_chieu_phuong_trinh",
+    "describe": "Chèn ký hiệu hoặc cấu trúc toán học MathJax: tham chiếu phương trình.",
+    "aliases": [
+      "tham chiếu phương trình",
+      "eqref",
+      "tham chiếu số phương trình"
+    ],
+    "slots": {
+      "label": {
+        "required": false,
+        "default": ""
+      }
+    },
+    "templates": {
+      "latex": "\\eqref{{label}}",
+      "mathjax": "\\eqref{{label}}",
+      "python": "",
+      "cpp": ""
+    },
+    "requires": [],
+    "render_target": "mathjax",
+    "source": {
+      "file": "knowledge_base(1).txt",
+      "section": "UNITS_COLOR_NUMBERING",
+      "original_intent": "tham chiếu phương trình"
+    },
+    "notes": ""
+  },
+  {
+    "intent": "LATEX_TAI_LIEU_TOI_GIAN",
+    "category": "document_structure",
+    "subcategory": "tai_lieu_toi_gian",
+    "describe": "Tạo tài liệu LaTeX tối thiểu có documentclass, document body và kết thúc.",
+    "aliases": [
+      "tài liệu tối giản",
+      "tạo file tex cơ bản",
+      "khung latex tối thiểu",
+      "bắt đầu tài liệu latex",
+      "mẫu document đơn giản"
+    ],
+    "slots": {},
+    "templates": {
+      "latex": "\\documentclass{article}\n\\begin{document}\nNội dung tài liệu.\n\\end{document}",
+      "mathjax": "",
+      "python": "",
+      "cpp": ""
+    },
+    "requires": [],
+    "render_target": "latex_source",
+    "source": {
+      "file": "Learn LaTeX in 30 minutes - Overleaf.pdf",
+      "pages": [
+        4
+      ]
+    },
+    "notes": ""
+  },
+  {
+    "intent": "LATEX_LOP_TAI_LIEU_ARTICLE",
+    "category": "document_classes",
+    "subcategory": "lop_tai_lieu_article",
+    "describe": "Khai báo lớp article thường dùng cho bài báo và tài liệu ngắn.",
+    "aliases": [
+      "lớp tài liệu article",
+      "documentclass article",
+      "mẫu article",
+      "lớp bài báo",
+      "tạo article latex"
+    ],
+    "slots": {
+      "font_size": {
+        "required": false,
+        "default": "12pt"
+      },
+      "paper_size": {
+        "required": false,
+        "default": "a4paper"
+      }
+    },
+    "templates": {
+      "latex": "\\documentclass[12pt,a4paper]{article}",
+      "mathjax": "",
+      "python": "",
+      "cpp": ""
+    },
+    "requires": [],
+    "render_target": "latex_source",
+    "source": {
+      "file": "Learn LaTeX in 30 minutes - Overleaf.pdf",
+      "pages": [
+        4,
+        6
+      ]
+    },
+    "notes": ""
+  },
+  {
+    "intent": "LATEX_LOP_TAI_LIEU_BOOK",
+    "category": "document_classes",
+    "subcategory": "lop_tai_lieu_book",
+    "describe": "Khai báo lớp book phù hợp tài liệu dài có chương.",
+    "aliases": [
+      "lớp tài liệu book",
+      "documentclass book",
+      "mẫu book",
+      "lớp sách latex"
+    ],
+    "slots": {},
+    "templates": {
+      "latex": "\\documentclass[12pt,a4paper]{book}",
+      "mathjax": "",
+      "python": "",
+      "cpp": ""
+    },
+    "requires": [],
+    "render_target": "latex_source",
+    "source": {
+      "file": "Learn LaTeX in 30 minutes - Overleaf.pdf",
+      "pages": [
+        4,
+        25,
+        27
+      ]
+    },
+    "notes": ""
+  },
+  {
+    "intent": "LATEX_LOP_TAI_LIEU_REPORT",
+    "category": "document_classes",
+    "subcategory": "lop_tai_lieu_report",
+    "describe": "Khai báo lớp report cho báo cáo dài có chương.",
+    "aliases": [
+      "lớp tài liệu report",
+      "documentclass report",
+      "mẫu report",
+      "lớp báo cáo latex"
+    ],
+    "slots": {},
+    "templates": {
+      "latex": "\\documentclass[12pt,a4paper]{report}",
+      "mathjax": "",
+      "python": "",
+      "cpp": ""
+    },
+    "requires": [],
+    "render_target": "latex_source",
+    "source": {
+      "file": "Learn LaTeX in 30 minutes - Overleaf.pdf",
+      "pages": [
+        4,
+        27
+      ]
+    },
+    "notes": ""
+  },
+  {
+    "intent": "LATEX_PREAMBLE_TAI_LIEU",
+    "category": "preamble_packages",
+    "subcategory": "preamble_tai_lieu",
+    "describe": "Tạo phần khai báo trước begin document, nơi đặt lớp tài liệu, package và cấu hình.",
+    "aliases": [
+      "preamble tài liệu",
+      "phần đầu tài liệu",
+      "khai báo trước document",
+      "document setup",
+      "vùng preamble"
+    ],
+    "slots": {},
+    "templates": {
+      "latex": "\\documentclass[12pt,a4paper]{article}\n\\usepackage{graphicx}\n\\usepackage{amsmath,amssymb}",
+      "mathjax": "",
+      "python": "",
+      "cpp": ""
+    },
+    "requires": [],
+    "render_target": "latex_source",
+    "source": {
+      "file": "Learn LaTeX in 30 minutes - Overleaf.pdf",
+      "pages": [
+        5,
+        6
+      ]
+    },
+    "notes": ""
+  },
+  {
+    "intent": "LATEX_NAP_PACKAGE",
+    "category": "preamble_packages",
+    "subcategory": "nap_package",
+    "describe": "Nạp gói LaTeX trong preamble, có thể kèm tùy chọn trong ngoặc vuông.",
+    "aliases": [
+      "nạp package",
+      "thêm package",
+      "usepackage",
+      "nạp thư viện latex",
+      "thêm gói latex"
+    ],
+    "slots": {
+      "package_name": {
+        "required": true,
+        "default": "graphicx"
+      }
+    },
+    "templates": {
+      "latex": "\\usepackage{package-name}",
+      "mathjax": "",
+      "python": "",
+      "cpp": ""
+    },
+    "requires": [],
+    "render_target": "latex_source",
+    "source": {
+      "file": "Learn LaTeX in 30 minutes - Overleaf.pdf",
+      "pages": [
+        6,
+        33,
+        34
+      ]
+    },
+    "notes": ""
+  },
+  {
+    "intent": "LATEX_NAP_PACKAGE_CO_TUY_CHON",
+    "category": "preamble_packages",
+    "subcategory": "nap_package_co_tuy_chon",
+    "describe": "Nạp package với các tùy chọn phân tách bằng dấu phẩy.",
+    "aliases": [
+      "nạp package có tùy chọn",
+      "usepackage options",
+      "package có options",
+      "nạp gói với tùy chọn"
+    ],
+    "slots": {
+      "options": {
+        "required": false,
+        "default": "option1,option2"
+      },
+      "package_name": {
+        "required": true,
+        "default": "geometry"
+      }
+    },
+    "templates": {
+      "latex": "\\usepackage[options]{package-name}",
+      "mathjax": "",
+      "python": "",
+      "cpp": ""
+    },
+    "requires": [],
+    "render_target": "latex_source",
+    "source": {
+      "file": "Learn LaTeX in 30 minutes - Overleaf.pdf",
+      "pages": [
+        34
+      ]
+    },
+    "notes": ""
+  },
+  {
+    "intent": "LATEX_TIEU_E_TAC_GIA_NGAY_THANG",
+    "category": "title_author_date",
+    "subcategory": "tieu_e_tac_gia_ngay_thang",
+    "describe": "Khai báo title, author, date trong preamble và hiển thị bằng maketitle.",
+    "aliases": [
+      "tiêu đề tác giả ngày tháng",
+      "thêm tiêu đề tác giả ngày",
+      "tạo title author date",
+      "thông tin đầu trang tài liệu",
+      "maketitle"
+    ],
+    "slots": {
+      "title": {
+        "required": false,
+        "default": "Tiêu đề tài liệu"
+      },
+      "author": {
+        "required": false,
+        "default": "Tên tác giả"
+      }
+    },
+    "templates": {
+      "latex": "\\title{Tiêu đề tài liệu}\n\\author{Tên tác giả}\n\\date{\\today}\n\n\\begin{document}\n\\maketitle\n\\end{document}",
+      "mathjax": "",
+      "python": "",
+      "cpp": ""
+    },
+    "requires": [],
+    "render_target": "latex_source",
+    "source": {
+      "file": "Learn LaTeX in 30 minutes - Overleaf.pdf",
+      "pages": [
+        7,
+        8
+      ]
+    },
+    "notes": ""
+  },
+  {
+    "intent": "LATEX_LOI_CAM_ON_TAC_GIA",
+    "category": "title_author_date",
+    "subcategory": "loi_cam_on_tac_gia",
+    "describe": "Thêm ghi chú cảm ơn bằng thanks trong trường author.",
+    "aliases": [
+      "lời cảm ơn tác giả",
+      "thanks trong author",
+      "ghi công tài trợ",
+      "lời cảm ơn dưới tên tác giả"
+    ],
+    "slots": {},
+    "templates": {
+      "latex": "\\author{Tên tác giả\\thanks{Nội dung cảm ơn}}",
+      "mathjax": "",
+      "python": "",
+      "cpp": ""
+    },
+    "requires": [],
+    "render_target": "latex_source",
+    "source": {
+      "file": "Learn LaTeX in 30 minutes - Overleaf.pdf",
+      "pages": [
+        7
+      ]
+    },
+    "notes": ""
+  },
+  {
+    "intent": "LATEX_CHU_THICH_MA_LATEX",
+    "category": "comments_text_formatting",
+    "subcategory": "chu_thich_ma_latex",
+    "describe": "Tạo comment bằng dấu phần trăm; nội dung sau % trên cùng dòng không được typeset.",
+    "aliases": [
+      "chú thích mã latex",
+      "comment latex",
+      "ghi chú trong mã latex",
+      "dòng bị comment",
+      "chú thích nguồn latex"
+    ],
+    "slots": {},
+    "templates": {
+      "latex": "% Nội dung ghi chú",
+      "mathjax": "",
+      "python": "",
+      "cpp": ""
+    },
+    "requires": [],
+    "render_target": "latex_source",
+    "source": {
+      "file": "Learn LaTeX in 30 minutes - Overleaf.pdf",
+      "pages": [
+        9
+      ]
+    },
+    "notes": ""
+  },
+  {
+    "intent": "LATEX_CHU_AM",
+    "category": "comments_text_formatting",
+    "subcategory": "chu_am",
+    "describe": "In đậm văn bản bằng textbf.",
+    "aliases": [
+      "chữ đậm",
+      "in đậm latex",
+      "bold text",
+      "textbf",
+      "bôi đậm chữ"
+    ],
+    "slots": {
+      "text": {
+        "required": false,
+        "default": "Văn bản"
+      }
+    },
+    "templates": {
+      "latex": "\\textbf{Văn bản}",
+      "mathjax": "",
+      "python": "",
+      "cpp": ""
+    },
+    "requires": [],
+    "render_target": "latex_source",
+    "source": {
+      "file": "Learn LaTeX in 30 minutes - Overleaf.pdf",
+      "pages": [
+        9,
+        10
+      ]
+    },
+    "notes": ""
+  },
+  {
+    "intent": "LATEX_CHU_NGHIENG",
+    "category": "comments_text_formatting",
+    "subcategory": "chu_nghieng",
+    "describe": "In nghiêng văn bản bằng textit.",
+    "aliases": [
+      "chữ nghiêng",
+      "in nghiêng latex",
+      "italic text",
+      "textit",
+      "nghiêng chữ"
+    ],
+    "slots": {
+      "text": {
+        "required": false,
+        "default": "Văn bản"
+      }
+    },
+    "templates": {
+      "latex": "\\textit{Văn bản}",
+      "mathjax": "",
+      "python": "",
+      "cpp": ""
+    },
+    "requires": [],
+    "render_target": "latex_source",
+    "source": {
+      "file": "Learn LaTeX in 30 minutes - Overleaf.pdf",
+      "pages": [
+        9,
+        10
+      ]
+    },
+    "notes": ""
+  },
+  {
+    "intent": "LATEX_GACH_CHAN",
+    "category": "comments_text_formatting",
+    "subcategory": "gach_chan",
+    "describe": "Gạch chân văn bản bằng underline.",
+    "aliases": [
+      "gạch chân",
+      "underline latex",
+      "gạch dưới văn bản",
+      "underline text"
+    ],
+    "slots": {
+      "text": {
+        "required": false,
+        "default": "Văn bản"
+      }
+    },
+    "templates": {
+      "latex": "\\underline{Văn bản}",
+      "mathjax": "",
+      "python": "",
+      "cpp": ""
+    },
+    "requires": [],
+    "render_target": "latex_source",
+    "source": {
+      "file": "Learn LaTeX in 30 minutes - Overleaf.pdf",
+      "pages": [
+        9,
+        10
+      ]
+    },
+    "notes": ""
+  },
+  {
+    "intent": "LATEX_NHAN_MANH",
+    "category": "comments_text_formatting",
+    "subcategory": "nhan_manh",
+    "describe": "Nhấn mạnh văn bản theo ngữ cảnh bằng emph.",
+    "aliases": [
+      "nhấn mạnh",
+      "emphasis latex",
+      "emph",
+      "nhấn mạnh chữ",
+      "emphasize"
+    ],
+    "slots": {
+      "text": {
+        "required": false,
+        "default": "Văn bản"
+      }
+    },
+    "templates": {
+      "latex": "\\emph{Văn bản}",
+      "mathjax": "",
+      "python": "",
+      "cpp": ""
+    },
+    "requires": [],
+    "render_target": "latex_source",
+    "source": {
+      "file": "Learn LaTeX in 30 minutes - Overleaf.pdf",
+      "pages": [
+        10
+      ]
+    },
+    "notes": ""
+  },
+  {
+    "intent": "LATEX_CHEN_HINH_ANH",
+    "category": "graphics_figures",
+    "subcategory": "chen_hinh_anh",
+    "describe": "Chèn ảnh bằng includegraphics; cần graphicx và file ảnh trong project.",
+    "aliases": [
+      "chèn hình ảnh",
+      "thêm ảnh latex",
+      "includegraphics",
+      "chèn hình",
+      "đưa hình vào tài liệu"
+    ],
+    "slots": {
+      "filename": {
+        "required": true,
+        "default": "ten-anh"
+      },
+      "width": {
+        "required": false,
+        "default": "0.75\textwidth"
+      }
+    },
+    "templates": {
+      "latex": "\\includegraphics[width=0.75\\textwidth]{ten-anh}",
+      "mathjax": "",
+      "python": "",
+      "cpp": ""
+    },
+    "requires": [
+      "graphicx"
+    ],
+    "render_target": "latex_source",
+    "source": {
+      "file": "Learn LaTeX in 30 minutes - Overleaf.pdf",
+      "pages": [
+        11,
+        12,
+        13
+      ]
+    },
+    "notes": "Nên tránh khoảng trắng và nhiều dấu chấm trong tên file; thực hành tốt là bỏ phần mở rộng để LaTeX dò định dạng."
+  },
+  {
+    "intent": "LATEX_UONG_DAN_THU_MUC_HINH",
+    "category": "graphics_figures",
+    "subcategory": "uong_dan_thu_muc_hinh",
+    "describe": "Khai báo thư mục chứa ảnh bằng graphicspath.",
+    "aliases": [
+      "đường dẫn thư mục hình",
+      "graphicspath",
+      "thư mục ảnh",
+      "đường dẫn hình ảnh"
+    ],
+    "slots": {},
+    "templates": {
+      "latex": "\\graphicspath{{images/}}",
+      "mathjax": "",
+      "python": "",
+      "cpp": ""
+    },
+    "requires": [
+      "graphicx"
+    ],
+    "render_target": "latex_source",
+    "source": {
+      "file": "Learn LaTeX in 30 minutes - Overleaf.pdf",
+      "pages": [
+        11,
+        12
+      ]
+    },
+    "notes": ""
+  },
+  {
+    "intent": "LATEX_MOI_TRUONG_FIGURE",
+    "category": "graphics_figures",
+    "subcategory": "moi_truong_figure",
+    "describe": "Tạo figure float, căn giữa ảnh, caption, label và vị trí gợi ý.",
+    "aliases": [
+      "môi trường figure",
+      "figure latex",
+      "khung hình có chú thích",
+      "hình có caption label",
+      "môi trường hình"
+    ],
+    "slots": {
+      "filename": {
+        "required": true,
+        "default": "ten-anh"
+      },
+      "caption": {
+        "required": false,
+        "default": "Mô tả hình"
+      },
+      "label": {
+        "required": false,
+        "default": "fig:ten-hinh"
+      }
+    },
+    "templates": {
+      "latex": "\\begin{figure}[htbp]\n  \\centering\n  \\includegraphics[width=0.75\\textwidth]{ten-anh}\n  \\caption{Mô tả hình}\n  \\label{fig:ten-hinh}\n\\end{figure}",
+      "mathjax": "",
+      "python": "",
+      "cpp": ""
+    },
+    "requires": [
+      "graphicx"
+    ],
+    "render_target": "latex_source",
+    "source": {
+      "file": "Learn LaTeX in 30 minutes - Overleaf.pdf",
+      "pages": [
+        13,
+        14
+      ]
+    },
+    "notes": ""
+  },
+  {
+    "intent": "LATEX_CHU_THICH_HINH",
+    "category": "graphics_figures",
+    "subcategory": "chu_thich_hinh",
+    "describe": "Thêm caption cho hình hoặc bảng.",
+    "aliases": [
+      "chú thích hình",
+      "caption hình",
+      "caption bảng",
+      "mô tả hình",
+      "chú thích bảng"
+    ],
+    "slots": {
+      "caption": {
+        "required": false,
+        "default": "Nội dung chú thích"
+      }
+    },
+    "templates": {
+      "latex": "\\caption{Nội dung chú thích}",
+      "mathjax": "",
+      "python": "",
+      "cpp": ""
+    },
+    "requires": [],
+    "render_target": "latex_source",
+    "source": {
+      "file": "Learn LaTeX in 30 minutes - Overleaf.pdf",
+      "pages": [
+        13,
+        14,
+        30
+      ]
+    },
+    "notes": ""
+  },
+  {
+    "intent": "LATEX_THAM_CHIEU_NHAN",
+    "category": "cross_references",
+    "subcategory": "tham_chieu_nhan",
+    "describe": "Gắn nhãn bằng label và tham chiếu số bằng ref hoặc số trang bằng pageref.",
+    "aliases": [
+      "tham chiếu nhãn",
+      "label ref latex",
+      "tham chiếu hình",
+      "tham chiếu bảng",
+      "tham chiếu chéo",
+      "pageref"
+    ],
+    "slots": {
+      "label": {
+        "required": false,
+        "default": "fig:ten-nhan"
+      }
+    },
+    "templates": {
+      "latex": "\\label{fig:ten-nhan}\nXem hình \\ref{fig:ten-nhan} ở trang \\pageref{fig:ten-nhan}.",
+      "mathjax": "",
+      "python": "",
+      "cpp": ""
+    },
+    "requires": [],
+    "render_target": "latex_source",
+    "source": {
+      "file": "Learn LaTeX in 30 minutes - Overleaf.pdf",
+      "pages": [
+        13,
+        14,
+        30
+      ]
+    },
+    "notes": ""
+  },
+  {
+    "intent": "LATEX_DANH_SACH_KHONG_THU_TU",
+    "category": "lists",
+    "subcategory": "danh_sach_khong_thu_tu",
+    "describe": "Tạo danh sách dấu đầu dòng bằng itemize, mỗi mục bắt đầu bằng item.",
+    "aliases": [
+      "danh sách không thứ tự",
+      "itemize",
+      "bullet list latex",
+      "danh sách gạch đầu dòng latex",
+      "list không đánh số"
+    ],
+    "slots": {},
+    "templates": {
+      "latex": "\\begin{itemize}\n  \\item Mục thứ nhất\n  \\item Mục thứ hai\n\\end{itemize}",
+      "mathjax": "",
+      "python": "",
+      "cpp": ""
+    },
+    "requires": [],
+    "render_target": "latex_source",
+    "source": {
+      "file": "Learn LaTeX in 30 minutes - Overleaf.pdf",
+      "pages": [
+        15
+      ]
+    },
+    "notes": ""
+  },
+  {
+    "intent": "LATEX_DANH_SACH_CO_THU_TU",
+    "category": "lists",
+    "subcategory": "danh_sach_co_thu_tu",
+    "describe": "Tạo danh sách tự đánh số bằng enumerate, mỗi mục bắt đầu bằng item.",
+    "aliases": [
+      "danh sách có thứ tự",
+      "enumerate",
+      "numbered list latex",
+      "danh sách đánh số latex",
+      "liệt kê có thứ tự"
+    ],
+    "slots": {},
+    "templates": {
+      "latex": "\\begin{enumerate}\n  \\item Mục thứ nhất\n  \\item Mục thứ hai\n\\end{enumerate}",
+      "mathjax": "",
+      "python": "",
+      "cpp": ""
+    },
+    "requires": [],
+    "render_target": "latex_source",
+    "source": {
+      "file": "Learn LaTeX in 30 minutes - Overleaf.pdf",
+      "pages": [
+        16
+      ]
+    },
+    "notes": ""
+  },
+  {
+    "intent": "LATEX_TOAN_INLINE_LATEX",
+    "category": "math_modes",
+    "subcategory": "toan_inline_latex",
+    "describe": "Viết công thức toán nằm trong dòng bằng $, \\(...\\) hoặc math environment.",
+    "aliases": [
+      "toán inline latex",
+      "inline math latex",
+      "công thức trong câu",
+      "toán cùng dòng",
+      "math mode inline"
+    ],
+    "slots": {},
+    "templates": {
+      "latex": "\\(E=mc^2\\)",
+      "mathjax": "",
+      "python": "",
+      "cpp": ""
+    },
+    "requires": [],
+    "render_target": "latex_source",
+    "source": {
+      "file": "Learn LaTeX in 30 minutes - Overleaf.pdf",
+      "pages": [
+        17
+      ]
+    },
+    "notes": ""
+  },
+  {
+    "intent": "LATEX_TOAN_DISPLAY_KHONG_ANH_SO",
+    "category": "math_modes",
+    "subcategory": "toan_display_khong_anh_so",
+    "describe": "Hiển thị công thức riêng dòng không đánh số; ưu tiên \\[...\\].",
+    "aliases": [
+      "toán display không đánh số",
+      "display math latex",
+      "công thức riêng dòng",
+      "công thức không số",
+      "display equation unnumbered"
+    ],
+    "slots": {},
+    "templates": {
+      "latex": "\\[\\n  E=mc^2\\n\\]",
+      "mathjax": "",
+      "python": "",
+      "cpp": ""
+    },
+    "requires": [],
+    "render_target": "latex_source",
+    "source": {
+      "file": "Learn LaTeX in 30 minutes - Overleaf.pdf",
+      "pages": [
+        18,
+        20,
+        21
+      ]
+    },
+    "notes": "Tài liệu khuyến nghị dùng \\[...\\] thay cho $$...$$ trong LaTeX."
+  },
+  {
+    "intent": "LATEX_PHUONG_TRINH_ANH_SO",
+    "category": "math_modes",
+    "subcategory": "phuong_trinh_anh_so",
+    "describe": "Hiển thị công thức riêng dòng có số thứ tự bằng equation.",
+    "aliases": [
+      "phương trình đánh số",
+      "equation environment",
+      "công thức có số latex",
+      "đánh số công thức"
+    ],
+    "slots": {},
+    "templates": {
+      "latex": "\\begin{equation}\n  E=mc^2\n\\end{equation}",
+      "mathjax": "",
+      "python": "",
+      "cpp": ""
+    },
+    "requires": [],
+    "render_target": "latex_source",
+    "source": {
+      "file": "Learn LaTeX in 30 minutes - Overleaf.pdf",
+      "pages": [
+        18,
+        20
+      ]
+    },
+    "notes": ""
+  },
+  {
+    "intent": "LATEX_PHUONG_TRINH_KHONG_ANH_SO_AMSMATH",
+    "category": "math_modes",
+    "subcategory": "phuong_trinh_khong_anh_so_amsmath",
+    "describe": "Dùng equation* từ amsmath để tạo công thức display không đánh số.",
+    "aliases": [
+      "phương trình không đánh số amsmath",
+      "equation star",
+      "equation*",
+      "công thức equation không số"
+    ],
+    "slots": {},
+    "templates": {
+      "latex": "\\begin{equation*}\n  \\sqrt{x^2+1}\n\\end{equation*}",
+      "mathjax": "",
+      "python": "",
+      "cpp": ""
+    },
+    "requires": [
+      "amsmath"
+    ],
+    "render_target": "latex_source",
+    "source": {
+      "file": "Learn LaTeX in 30 minutes - Overleaf.pdf",
+      "pages": [
+        20,
+        21
+      ]
+    },
+    "notes": ""
+  },
+  {
+    "intent": "LATEX_MOI_TRUONG_MATH",
+    "category": "math_modes",
+    "subcategory": "moi_truong_math",
+    "describe": "Viết công thức inline bằng môi trường math.",
+    "aliases": [
+      "môi trường math",
+      "begin math",
+      "math environment",
+      "môi trường math inline"
+    ],
+    "slots": {},
+    "templates": {
+      "latex": "\\begin{math}\\n  E=mc^2\\n\\end{math}",
+      "mathjax": "",
+      "python": "",
+      "cpp": ""
+    },
+    "requires": [],
+    "render_target": "latex_source",
+    "source": {
+      "file": "Learn LaTeX in 30 minutes - Overleaf.pdf",
+      "pages": [
+        17,
+        20
+      ]
+    },
+    "notes": ""
+  },
+  {
+    "intent": "LATEX_MOI_TRUONG_DISPLAYMATH",
+    "category": "math_modes",
+    "subcategory": "moi_truong_displaymath",
+    "describe": "Viết công thức display không đánh số bằng displaymath.",
+    "aliases": [
+      "môi trường displaymath",
+      "begin displaymath",
+      "displaymath environment",
+      "môi trường display math"
+    ],
+    "slots": {},
+    "templates": {
+      "latex": "\\begin{displaymath}\\n  \\sqrt{x^2+1}\\n\\end{displaymath}",
+      "mathjax": "",
+      "python": "",
+      "cpp": ""
+    },
+    "requires": [],
+    "render_target": "latex_source",
+    "source": {
+      "file": "Learn LaTeX in 30 minutes - Overleaf.pdf",
+      "pages": [
+        18,
+        20,
+        21
+      ]
+    },
+    "notes": ""
+  },
+  {
+    "intent": "LATEX_CHI_SO_DUOI_VA_SO_MU",
+    "category": "math_expressions",
+    "subcategory": "chi_so_duoi_va_so_mu",
+    "describe": "Dùng _ tạo subscript và ^ tạo superscript; có thể kết hợp và lồng nhau.",
+    "aliases": [
+      "chỉ số dưới và số mũ",
+      "chỉ số trên dưới",
+      "mũ và chỉ số toán",
+      "số mũ và chỉ số dưới"
+    ],
+    "slots": {},
+    "templates": {
+      "latex": "T^{i_1 i_2 \\dots i_p}_{j_1 j_2 \\dots j_q}",
+      "mathjax": "",
+      "python": "",
+      "cpp": ""
+    },
+    "requires": [],
+    "render_target": "latex_source",
+    "source": {
+      "file": "Learn LaTeX in 30 minutes - Overleaf.pdf",
+      "pages": [
+        19
+      ]
+    },
+    "notes": ""
+  },
+  {
+    "intent": "LATEX_TOAN_TU_LUONG_GIAC_VA_LOG",
+    "category": "math_expressions",
+    "subcategory": "toan_tu_luong_giac_va_log",
+    "describe": "Viết các toán tử toán học như sin, cos, log bằng lệnh có dấu gạch chéo.",
+    "aliases": [
+      "toán tử lượng giác và log",
+      "sin cos log latex",
+      "toán tử hàm",
+      "hàm lượng giác latex",
+      "log trong công thức"
+    ],
+    "slots": {},
+    "templates": {
+      "latex": "\\sin(\\beta),\\quad \\cos(\\alpha),\\quad \\log(x)",
+      "mathjax": "",
+      "python": "",
+      "cpp": ""
+    },
+    "requires": [],
+    "render_target": "latex_source",
+    "source": {
+      "file": "Learn LaTeX in 30 minutes - Overleaf.pdf",
+      "pages": [
+        19
+      ]
+    },
+    "notes": ""
+  },
+  {
+    "intent": "LATEX_MOI_TRUONG_ABSTRACT",
+    "category": "document_structure",
+    "subcategory": "moi_truong_abstract",
+    "describe": "Tạo phần tóm tắt bài báo bằng abstract.",
+    "aliases": [
+      "môi trường abstract",
+      "abstract latex",
+      "tạo tóm tắt",
+      "môi trường tóm tắt",
+      "phần abstract"
+    ],
+    "slots": {},
+    "templates": {
+      "latex": "\\begin{abstract}\\n  Nội dung tóm tắt.\\n\\end{abstract}",
+      "mathjax": "",
+      "python": "",
+      "cpp": ""
+    },
+    "requires": [],
+    "render_target": "latex_source",
+    "source": {
+      "file": "Learn LaTeX in 30 minutes - Overleaf.pdf",
+      "pages": [
+        22
+      ]
+    },
+    "notes": ""
+  },
+  {
+    "intent": "LATEX_OAN_VAN_MOI",
+    "category": "paragraphs_linebreaks",
+    "subcategory": "oan_van_moi",
+    "describe": "Tạo đoạn văn mới bằng một dòng trống giữa hai đoạn.",
+    "aliases": [
+      "đoạn văn mới",
+      "đoạn văn latex",
+      "paragraph mới",
+      "xuống đoạn",
+      "tạo paragraph"
+    ],
+    "slots": {},
+    "templates": {
+      "latex": "\n\n",
+      "mathjax": "",
+      "python": "",
+      "cpp": ""
+    },
+    "requires": [],
+    "render_target": "latex_source",
+    "source": {
+      "file": "Learn LaTeX in 30 minutes - Overleaf.pdf",
+      "pages": [
+        22,
+        23,
+        24
+      ]
+    },
+    "notes": "Dùng dòng trống để tạo đoạn mới; LaTeX tự xử lý thụt đầu dòng."
+  },
+  {
+    "intent": "LATEX_NGAT_DONG_THU_CONG",
+    "category": "paragraphs_linebreaks",
+    "subcategory": "ngat_dong_thu_cong",
+    "describe": "Ngắt dòng nhưng vẫn ở cùng đoạn bằng \\\\ hoặc newline.",
+    "aliases": [
+      "ngắt dòng thủ công",
+      "xuống dòng latex",
+      "line break",
+      "newline",
+      "ngắt dòng trong đoạn"
+    ],
+    "slots": {},
+    "templates": {
+      "latex": "\\\\",
+      "mathjax": "",
+      "python": "",
+      "cpp": ""
+    },
+    "requires": [],
+    "render_target": "latex_source",
+    "source": {
+      "file": "Learn LaTeX in 30 minutes - Overleaf.pdf",
+      "pages": [
+        22,
+        23,
+        24
+      ]
+    },
+    "notes": "Không dùng nhiều lệnh ngắt dòng để giả lập khoảng cách giữa các đoạn."
+  },
+  {
+    "intent": "LATEX_LENH_NEWLINE",
+    "category": "paragraphs_linebreaks",
+    "subcategory": "lenh_newline",
+    "describe": "Bắt đầu dòng mới trong cùng đoạn bằng newline.",
+    "aliases": [
+      "lệnh newline",
+      "lệnh newline latex",
+      "xuống dòng bằng newline"
+    ],
+    "slots": {},
+    "templates": {
+      "latex": "\\newline",
+      "mathjax": "",
+      "python": "",
+      "cpp": ""
+    },
+    "requires": [],
+    "render_target": "latex_source",
+    "source": {
+      "file": "Learn LaTeX in 30 minutes - Overleaf.pdf",
+      "pages": [
+        23,
+        24
+      ]
+    },
+    "notes": ""
+  },
+  {
+    "intent": "LATEX_GIAN_CACH_OAN_PARSKIP",
+    "category": "paragraphs_linebreaks",
+    "subcategory": "gian_cach_oan_parskip",
+    "describe": "Nạp parskip để thay đổi cách trình bày khoảng cách đoạn.",
+    "aliases": [
+      "giãn cách đoạn parskip",
+      "parskip",
+      "khoảng cách giữa đoạn",
+      "giãn đoạn latex"
+    ],
+    "slots": {},
+    "templates": {
+      "latex": "\\usepackage{parskip}",
+      "mathjax": "",
+      "python": "",
+      "cpp": ""
+    },
+    "requires": [
+      "parskip"
+    ],
+    "render_target": "latex_source",
+    "source": {
+      "file": "Learn LaTeX in 30 minutes - Overleaf.pdf",
+      "pages": [
+        24
+      ]
+    },
+    "notes": ""
+  },
+  {
+    "intent": "LATEX_CHUONG_VA_MUC",
+    "category": "sectioning",
+    "subcategory": "chuong_va_muc",
+    "describe": "Tạo cấu trúc phân cấp part, chapter, section, subsection, subsubsection, paragraph và subparagraph.",
+    "aliases": [
+      "chương và mục",
+      "chapter section subsection",
+      "tạo chương mục",
+      "chia chương latex",
+      "cấu trúc heading latex"
+    ],
+    "slots": {},
+    "templates": {
+      "latex": "\\chapter{Tên chương}\\n\\section{Tên mục}\\n\\subsection{Tên mục con}\\n\\subsubsection{Tên tiểu mục}",
+      "mathjax": "",
+      "python": "",
+      "cpp": ""
+    },
+    "requires": [],
+    "render_target": "latex_source",
+    "source": {
+      "file": "Learn LaTeX in 30 minutes - Overleaf.pdf",
+      "pages": [
+        25,
+        26,
+        27
+      ]
+    },
+    "notes": "part và chapter chỉ được hỗ trợ bởi các lớp report và book; các lệnh khác tùy lớp."
+  },
+  {
+    "intent": "LATEX_MUC_KHONG_ANH_SO",
+    "category": "sectioning",
+    "subcategory": "muc_khong_anh_so",
+    "describe": "Dùng phiên bản có dấu sao như section* để tạo mục không đánh số.",
+    "aliases": [
+      "mục không đánh số",
+      "section star",
+      "mục không số",
+      "tiêu đề không đánh số",
+      "chapter không đánh số"
+    ],
+    "slots": {},
+    "templates": {
+      "latex": "\\section*{Tên mục}",
+      "mathjax": "",
+      "python": "",
+      "cpp": ""
+    },
+    "requires": [],
+    "render_target": "latex_source",
+    "source": {
+      "file": "Learn LaTeX in 30 minutes - Overleaf.pdf",
+      "pages": [
+        25,
+        26
+      ]
+    },
+    "notes": ""
+  },
+  {
+    "intent": "LATEX_MUC_LUC",
+    "category": "table_of_contents",
+    "subcategory": "muc_luc",
+    "describe": "Tạo mục lục tự động bằng tableofcontents; các mục có cấu trúc tự được thêm vào.",
+    "aliases": [
+      "mục lục",
+      "tableofcontents",
+      "tạo mục lục",
+      "mục lục tự động",
+      "danh sách chương mục"
+    ],
+    "slots": {},
+    "templates": {
+      "latex": "\\tableofcontents",
+      "mathjax": "",
+      "python": "",
+      "cpp": ""
+    },
+    "requires": [],
+    "render_target": "latex_source",
+    "source": {
+      "file": "Learn LaTeX in 30 minutes - Overleaf.pdf",
+      "pages": [
+        31,
+        32,
+        33
+      ]
+    },
+    "notes": ""
+  },
+  {
+    "intent": "LATEX_THEM_MUC_KHONG_ANH_SO_VAO_MUC_LUC",
+    "category": "table_of_contents",
+    "subcategory": "them_muc_khong_anh_so_vao_muc_luc",
+    "describe": "Thêm thủ công mục không đánh số vào mục lục bằng addcontentsline.",
+    "aliases": [
+      "thêm mục không đánh số vào mục lục",
+      "addcontentsline",
+      "thêm section star vào mục lục",
+      "mục không số trong toc"
+    ],
+    "slots": {},
+    "templates": {
+      "latex": "\\addcontentsline{toc}{section}{Tên mục}",
+      "mathjax": "",
+      "python": "",
+      "cpp": ""
+    },
+    "requires": [],
+    "render_target": "latex_source",
+    "source": {
+      "file": "Learn LaTeX in 30 minutes - Overleaf.pdf",
+      "pages": [
+        31,
+        32,
+        33
+      ]
+    },
+    "notes": ""
+  },
+  {
+    "intent": "LATEX_BANG_TABULAR_CO_BAN",
+    "category": "tables",
+    "subcategory": "bang_tabular_co_ban",
+    "describe": "Tạo bảng bằng tabular; c l r xác định căn giữa, trái, phải; & ngăn ô và \\\\ kết thúc hàng.",
+    "aliases": [
+      "bảng tabular cơ bản",
+      "tabular",
+      "tạo bảng latex",
+      "bảng hàng cột",
+      "bảng căn l c r"
+    ],
+    "slots": {},
+    "templates": {
+      "latex": "\\begin{center}\\n\\begin{tabular}{c c c}\\n  Ô 1 & Ô 2 & Ô 3 \\\\\\\\\\n  Ô 4 & Ô 5 & Ô 6 \\\\\\\\\\n\\end{tabular}\\n\\end{center}",
+      "mathjax": "",
+      "python": "",
+      "cpp": ""
+    },
+    "requires": [],
+    "render_target": "latex_source",
+    "source": {
+      "file": "Learn LaTeX in 30 minutes - Overleaf.pdf",
+      "pages": [
+        27,
+        28
+      ]
+    },
+    "notes": ""
+  },
+  {
+    "intent": "LATEX_BANG_CO_UONG_KE",
+    "category": "tables",
+    "subcategory": "bang_co_uong_ke",
+    "describe": "Tạo đường kẻ ngang bằng hline và đường kẻ dọc bằng dấu | trong khai báo cột.",
+    "aliases": [
+      "bảng có đường kẻ",
+      "hline",
+      "bảng có viền",
+      "đường kẻ bảng latex",
+      "bảng có border"
+    ],
+    "slots": {},
+    "templates": {
+      "latex": "\\begin{center}\\n\\begin{tabular}{|c|c|c|}\\n  \\hline\\n  A & B & C \\\\\\\\\\n  \\hline\\n  D & E & F \\\\\\\\\\n  \\hline\\n\\end{tabular}\\n\\end{center}",
+      "mathjax": "",
+      "python": "",
+      "cpp": ""
+    },
+    "requires": [],
+    "render_target": "latex_source",
+    "source": {
+      "file": "Learn LaTeX in 30 minutes - Overleaf.pdf",
+      "pages": [
+        28,
+        29
+      ]
+    },
+    "notes": ""
+  },
+  {
+    "intent": "LATEX_MOI_TRUONG_TABLE",
+    "category": "tables",
+    "subcategory": "moi_truong_table",
+    "describe": "Tạo bảng dạng float có căn giữa, tabular, caption và label.",
+    "aliases": [
+      "môi trường table",
+      "table environment",
+      "bảng có caption label",
+      "môi trường bảng latex",
+      "table float"
+    ],
+    "slots": {},
+    "templates": {
+      "latex": "\\begin{table}[h!]\\n  \\centering\\n  \\begin{tabular}{|c|c|}\\n    \\hline\\n    Cột 1 & Cột 2 \\\\\\\\\\n    \\hline\\n    A & B \\\\\\\\\\n    \\hline\\n  \\end{tabular}\\n  \\caption{Mô tả bảng}\\n  \\label{table:data}\\n\\end{table}",
+      "mathjax": "",
+      "python": "",
+      "cpp": ""
+    },
+    "requires": [],
+    "render_target": "latex_source",
+    "source": {
+      "file": "Learn LaTeX in 30 minutes - Overleaf.pdf",
+      "pages": [
+        30
+      ]
+    },
+    "notes": ""
+  },
+  {
+    "intent": "LATEX_CAN_GIUA_NOI_DUNG",
+    "category": "text_layout",
+    "subcategory": "can_giua_noi_dung",
+    "describe": "Căn giữa một khối nội dung bằng center.",
+    "aliases": [
+      "căn giữa nội dung",
+      "center environment",
+      "căn giữa latex",
+      "đưa nội dung vào giữa"
+    ],
+    "slots": {},
+    "templates": {
+      "latex": "\\begin{center}\\n  Nội dung căn giữa\\n\\end{center}",
+      "mathjax": "",
+      "python": "",
+      "cpp": ""
+    },
+    "requires": [],
+    "render_target": "latex_source",
+    "source": {
+      "file": "Learn LaTeX in 30 minutes - Overleaf.pdf",
+      "pages": [
+        27,
+        28
+      ]
+    },
+    "notes": ""
+  },
+  {
+    "intent": "LATEX_XUAT_TAI_LIEU_OVERLEAF",
+    "category": "overleaf_workflow",
+    "subcategory": "xuat_tai_lieu_overleaf",
+    "describe": "Tải mã nguồn dự án hoặc PDF đã biên dịch từ Overleaf.",
+    "aliases": [
+      "xuất tài liệu overleaf",
+      "download latex overleaf",
+      "tải file tex",
+      "xuất pdf overleaf",
+      "tải dự án latex"
+    ],
+    "slots": {},
+    "templates": {
+      "latex": "Thao tác trên giao diện Overleaf: Menu → Download → Source hoặc PDF.",
+      "mathjax": "",
+      "python": "",
+      "cpp": ""
+    },
+    "requires": [],
+    "render_target": "latex_source",
+    "source": {
+      "file": "Learn LaTeX in 30 minutes - Overleaf.pdf",
+      "pages": [
+        33
+      ]
+    },
+    "notes": "Đây là hướng dẫn thao tác giao diện, không phải lệnh LaTeX."
+  },
+  {
+    "intent": "LATEX_TRA_CUU_PACKAGE_CTAN",
+    "category": "packages_ecosystem",
+    "subcategory": "tra_cuu_package_ctan",
+    "describe": "Tìm package LaTeX trên CTAN theo chủ đề, tên package hoặc công cụ tìm kiếm.",
+    "aliases": [
+      "tra cứu package CTAN",
+      "tìm package latex",
+      "CTAN",
+      "tra cứu gói latex",
+      "tìm thư viện tex"
+    ],
+    "slots": {},
+    "templates": {
+      "latex": "Tra cứu package trên CTAN theo chủ đề hoặc tên package; kiểm tra mô tả, phiên bản và khả năng tương thích.",
+      "mathjax": "",
+      "python": "",
+      "cpp": ""
+    },
+    "requires": [],
+    "render_target": "latex_source",
+    "source": {
+      "file": "Learn LaTeX in 30 minutes - Overleaf.pdf",
+      "pages": [
+        35
+      ]
+    },
+    "notes": ""
+  },
+  {
+    "intent": "LATEX_HE_THONG_TEX_LIVE",
+    "category": "packages_ecosystem",
+    "subcategory": "he_thong_tex_live",
+    "describe": "TeX Live là bộ phân phối gồm nhiều package, font và công cụ liên quan đến LaTeX.",
+    "aliases": [
+      "hệ thống TeX Live",
+      "tex live",
+      "cài latex local",
+      "bộ phân phối latex",
+      "gói tex live"
+    ],
+    "slots": {},
+    "templates": {
+      "latex": "TeX Live là bộ phân phối LaTeX có tập hợp package lấy từ CTAN; bản phân phối cập nhật theo chu kỳ, vì vậy có thể không chứa phiên bản mới nhất của mọi package trên CTAN.",
+      "mathjax": "",
+      "python": "",
+      "cpp": ""
+    },
+    "requires": [],
+    "render_target": "latex_source",
+    "source": {
+      "file": "Learn LaTeX in 30 minutes - Overleaf.pdf",
+      "pages": [
+        35,
+        36
+      ]
+    },
+    "notes": ""
+  },
+  {
+    "intent": "LATEX_KIEM_TRA_PACKAGE_BI_THIEU",
+    "category": "packages_ecosystem",
+    "subcategory": "kiem_tra_package_bi_thieu",
+    "describe": "Nếu package không có file .sty tương ứng, LaTeX sẽ báo lỗi và dừng biên dịch.",
+    "aliases": [
+      "kiểm tra package bị thiếu",
+      "package not found",
+      "thiếu package",
+      "lỗi file sty",
+      "không tìm thấy package"
+    ],
+    "slots": {},
+    "templates": {
+      "latex": "Kiểm tra tên package, lệnh \\usepackage và việc package đã được cài trong TeX distribution hay chưa.",
+      "mathjax": "",
+      "python": "",
+      "cpp": ""
+    },
+    "requires": [],
+    "render_target": "latex_source",
+    "source": {
+      "file": "Learn LaTeX in 30 minutes - Overleaf.pdf",
+      "pages": [
+        34,
+        35
+      ]
+    },
+    "notes": ""
+  }
+]

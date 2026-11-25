@@ -1,0 +1,238 @@
+{
+  "target": "category",
+  "test_csv_sha256": "ef8781ba7d231aceaf9043b394acd343a23e6beac8454d168bfe4a19ad3886fd",
+  "preprocessing_fingerprint": "1901d6e0e15a187dc0f2fe116d345a70e50abd8431f3bd2e6909c71d71de6084",
+  "data_split_counts": {
+    "train": 3825,
+    "val": 967,
+    "test": 940
+  },
+  "tfidf_svm": {
+    "c_tuning_validation_history": {
+      "0.1": {
+        "accuracy": 0.9917269906928645,
+        "macro_f1": 0.9848771266540642,
+        "weighted_f1": 0.991038876497186
+      },
+      "1.0": {
+        "accuracy": 0.9979317476732161,
+        "macro_f1": 0.9966364434045043,
+        "weighted_f1": 0.9978939396093308
+      },
+      "10.0": {
+        "accuracy": 0.9979317476732161,
+        "macro_f1": 0.9966364434045043,
+        "weighted_f1": 0.9978939396093308
+      }
+    },
+    "best_c": 1.0,
+    "sublinear_tf": true,
+    "ngram_range": [
+      1,
+      2
+    ],
+    "test_metrics": {
+      "accuracy": 1.0,
+      "macro_f1": 0.9166666666666666,
+      "weighted_f1": 1.0,
+      "total_classes": 12,
+      "total_samples": 940,
+      "per_class": {
+        "math_shared": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 525.0
+        },
+        "obsidian": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 205.0
+        },
+        "tex_doc": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 30.0
+        },
+        "tex_figures": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 20.0
+        },
+        "tex_layout": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 5.0
+        },
+        "tex_lists": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 10.0
+        },
+        "tex_math": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 45.0
+        },
+        "tex_misc": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 0.0
+        },
+        "tex_refs": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 5.0
+        },
+        "tex_struct": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 40.0
+        },
+        "tex_tables": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 15.0
+        },
+        "tex_text": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 40.0
+        }
+      }
+    },
+    "test_bootstrap_ci_95": {
+      "accuracy": [
+        1.0,
+        1.0
+      ],
+      "macro_f1": [
+        0.9166666666666666,
+        0.9166666666666666
+      ],
+      "weighted_f1": [
+        1.0,
+        1.0
+      ]
+    },
+    "confusion_matrix_figure": "report/figures/baseline_category_svm.png"
+  },
+  "fuzzy_matching": {
+    "method": "rapidfuzz_token_set_ratio",
+    "test_metrics": {
+      "accuracy": 0.41914893617021276,
+      "macro_f1": 0.41398109820092,
+      "weighted_f1": 0.36170207141002975,
+      "total_classes": 12,
+      "total_samples": 940,
+      "per_class": {
+        "math_shared": {
+          "precision": 0.8846153846153846,
+          "recall": 0.13142857142857142,
+          "f1": 0.22885572139303478,
+          "support": 525.0
+        },
+        "obsidian": {
+          "precision": 0.3572679509632224,
+          "recall": 0.9951219512195122,
+          "f1": 0.5257731958762886,
+          "support": 205.0
+        },
+        "tex_doc": {
+          "precision": 0.47368421052631576,
+          "recall": 0.9,
+          "f1": 0.6206896551724138,
+          "support": 30.0
+        },
+        "tex_figures": {
+          "precision": 0.5714285714285714,
+          "recall": 0.4,
+          "f1": 0.47058823529411764,
+          "support": 20.0
+        },
+        "tex_layout": {
+          "precision": 0.8333333333333334,
+          "recall": 1.0,
+          "f1": 0.9090909090909091,
+          "support": 5.0
+        },
+        "tex_lists": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 10.0
+        },
+        "tex_math": {
+          "precision": 1.0,
+          "recall": 0.5333333333333333,
+          "f1": 0.6956521739130436,
+          "support": 45.0
+        },
+        "tex_misc": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 0.0
+        },
+        "tex_refs": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 5.0
+        },
+        "tex_struct": {
+          "precision": 0.8484848484848485,
+          "recall": 0.7,
+          "f1": 0.7671232876712328,
+          "support": 40.0
+        },
+        "tex_tables": {
+          "precision": 1.0,
+          "recall": 0.3333333333333333,
+          "f1": 0.5,
+          "support": 15.0
+        },
+        "tex_text": {
+          "precision": 0.15789473684210525,
+          "recall": 0.6,
+          "f1": 0.25,
+          "support": 40.0
+        }
+      }
+    },
+    "test_bootstrap_ci_95": {
+      "accuracy": [
+        0.3893617021276596,
+        0.45
+      ],
+      "macro_f1": [
+        0.3647490870435433,
+        0.45096192172650945
+      ],
+      "weighted_f1": [
+        0.32799593650867814,
+        0.396793771316119
+      ]
+    },
+    "confusion_matrix_figure": "report/figures/baseline_category_fuzzy.png"
+  },
+  "statistical_comparison": {
+    "mcnemar_test": {
+      "statistic": 544.0018315018315,
+      "p_value": 2.540085881127728e-120,
+      "b": 546,
+      "c": 0
+    }
+  }
+}

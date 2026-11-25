@@ -1,0 +1,104 @@
+{
+  "name": "vietnamese-knowledge-assistant",
+  "displayName": "Vietnamese Knowledge Assistant",
+  "description": "Tạo và quản lý kiến thức trong VS Code, xem trước kết quả trước khi chèn.",
+  "version": "0.1.0",
+  "publisher": "vietnamese-knowledge-assistant",
+  "engines": {
+    "vscode": "^1.95.0"
+  },
+  "categories": [
+    "Other",
+    "Programming Languages"
+  ],
+  "main": "./extension/dist/extension.js",
+  "activationEvents": [
+    "onStartupFinished",
+    "onWebviewPanel:vietnameseKnowledgeAssistant.dashboard"
+  ],
+  "contributes": {
+    "commands": [
+      {
+        "command": "vietnameseKnowledgeAssistant.openDashboard",
+        "title": "Vietnamese Knowledge Assistant: Mở bảng điều khiển"
+      },
+      {
+        "command": "vietnameseKnowledgeAssistant.runDirective",
+        "title": "Vietnamese Knowledge Assistant: Chạy chỉ thị tại con trỏ"
+      },
+      {
+        "command": "vietnameseKnowledgeAssistant.createKnowledge",
+        "title": "Vietnamese Knowledge Assistant: Tạo kiến thức"
+      },
+      {
+        "command": "vietnameseKnowledgeAssistant.checkBackend",
+        "title": "Vietnamese Knowledge Assistant: Kiểm tra dịch vụ"
+      }
+    ],
+    "configuration": {
+      "title": "Vietnamese Knowledge Assistant",
+      "properties": {
+        "vietnameseKnowledgeAssistant.pythonPath": {
+          "type": "string",
+          "default": "",
+          "description": "Đường dẫn Python có cài các thư viện trong requirements.txt. Để trống để tự tìm Python trong workspace hoặc PATH."
+        },
+        "vietnameseKnowledgeAssistant.modelRoot": {
+          "type": "string",
+          "default": "",
+          "description": "Thư mục models chứa checkpoints/phobert_classifier và hf_cache. Để trống sẽ tìm <workspace>/models, hoặc Extension globalStorage nếu không mở workspace."
+        },
+        "vietnameseKnowledgeAssistant.backendStartupTimeout": {
+          "type": "number",
+          "default": 25,
+          "minimum": 5,
+          "maximum": 120,
+          "description": "Thời gian tối đa chờ dịch vụ cục bộ khởi động (giây)."
+        }
+      }
+    },
+    "menus": {
+      "editor/context": [
+        {
+          "command": "vietnameseKnowledgeAssistant.runDirective",
+          "when": "editorTextFocus",
+          "group": "navigation@8"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "build:webview": "npm --prefix extension/webview run build",
+    "build:extension": "tsc -p extension/tsconfig.json",
+    "typecheck": "tsc --noEmit -p extension/tsconfig.json && tsc --noEmit -p extension/webview/tsconfig.json",
+    "build": "npm run typecheck && npm run build:webview && npm run build:extension",
+    "test:extension": "npm run build:webview && npm run build:extension && node --test extension/test/*.test.cjs",
+    "package": "npm run build && mkdir -p dist && vsce package --no-dependencies --out dist/vietnamese-knowledge-assistant-0.1.0.vsix"
+  },
+  "dependencies": {
+    "@base-ui/react": "^1.4.1",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "lucide-react": "^1.14.0",
+    "react": "^19.2.5",
+    "react-dom": "^19.2.5",
+    "tailwind-merge": "^3.5.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.2.4",
+    "@types/node": "^25.6.0",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "@types/vscode": "^1.95.0",
+    "@vitejs/plugin-react": "^6.0.1",
+    "@vscode/vsce": "^3.7.1",
+    "tailwindcss": "^4.2.4",
+    "typescript": "^6.0.3",
+    "vite": "^8.0.10"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Nho094/AI_Agent.git",
+    "directory": "projects/0022-vietnamese-latex-knowledge-assistant"
+  }
+}

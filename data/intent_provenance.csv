@@ -1,0 +1,189 @@
+﻿intent,category,domain,source_file,source_section_or_pages,aliases_count,template_nonempty,train_examples,val_examples,test_examples,original_intent
+LATEX_TAI_LIEU_TOI_GIAN,tex_struct,latex,Learn LaTeX in 30 minutes - Overleaf.pdf,,8,True,10,5,5,LATEX_TAI_LIEU_TOI_GIAN
+LATEX_LOP_TAI_LIEU_ARTICLE,tex_doc,latex,Learn LaTeX in 30 minutes - Overleaf.pdf,,8,True,10,5,5,LATEX_LOP_TAI_LIEU_ARTICLE
+LATEX_LOP_TAI_LIEU_BOOK,tex_doc,latex,Learn LaTeX in 30 minutes - Overleaf.pdf,,8,True,10,5,5,LATEX_LOP_TAI_LIEU_BOOK
+LATEX_LOP_TAI_LIEU_REPORT,tex_doc,latex,Learn LaTeX in 30 minutes - Overleaf.pdf,,8,True,10,5,5,LATEX_LOP_TAI_LIEU_REPORT
+LATEX_PREAMBLE_TAI_LIEU,tex_doc,latex,Learn LaTeX in 30 minutes - Overleaf.pdf,,8,True,10,5,5,LATEX_PREAMBLE_TAI_LIEU
+LATEX_NAP_PACKAGE,tex_doc,latex,Learn LaTeX in 30 minutes - Overleaf.pdf,,8,True,10,5,5,LATEX_NAP_PACKAGE
+LATEX_NAP_PACKAGE_CO_TUY_CHON,tex_doc,latex,Learn LaTeX in 30 minutes - Overleaf.pdf,,8,True,10,5,5,LATEX_NAP_PACKAGE_CO_TUY_CHON
+LATEX_TIEU_E_TAC_GIA_NGAY_THANG,tex_struct,latex,Learn LaTeX in 30 minutes - Overleaf.pdf,,8,True,10,5,5,LATEX_TIEU_E_TAC_GIA_NGAY_THANG
+LATEX_LOI_CAM_ON_TAC_GIA,tex_struct,latex,Learn LaTeX in 30 minutes - Overleaf.pdf,,8,True,10,5,5,LATEX_LOI_CAM_ON_TAC_GIA
+LATEX_CHU_THICH_MA_LATEX,tex_text,latex,Learn LaTeX in 30 minutes - Overleaf.pdf,,8,True,10,5,5,LATEX_CHU_THICH_MA_LATEX
+LATEX_CHU_AM,tex_text,latex,Learn LaTeX in 30 minutes - Overleaf.pdf,,8,True,10,5,5,LATEX_CHU_AM
+LATEX_CHU_NGHIENG,tex_text,latex,Learn LaTeX in 30 minutes - Overleaf.pdf,,8,True,10,5,5,LATEX_CHU_NGHIENG
+LATEX_GACH_CHAN,tex_text,latex,Learn LaTeX in 30 minutes - Overleaf.pdf,,8,True,10,5,5,LATEX_GACH_CHAN
+LATEX_NHAN_MANH,tex_text,latex,Learn LaTeX in 30 minutes - Overleaf.pdf,,8,True,10,5,5,LATEX_NHAN_MANH
+LATEX_CHEN_HINH_ANH,tex_figures,latex,Learn LaTeX in 30 minutes - Overleaf.pdf,,8,True,10,5,5,LATEX_CHEN_HINH_ANH
+LATEX_UONG_DAN_THU_MUC_HINH,tex_figures,latex,Learn LaTeX in 30 minutes - Overleaf.pdf,,8,True,10,5,5,LATEX_UONG_DAN_THU_MUC_HINH
+LATEX_FIGURE,tex_figures,latex,Learn LaTeX in 30 minutes - Overleaf.pdf,,8,True,10,5,5,LATEX_FIGURE
+LATEX_CHU_THICH_HINH,tex_figures,latex,Learn LaTeX in 30 minutes - Overleaf.pdf,,8,True,10,5,5,LATEX_CHU_THICH_HINH
+LATEX_THAM_CHIEU_NHAN,tex_refs,latex,Learn LaTeX in 30 minutes - Overleaf.pdf,,8,True,10,5,5,LATEX_THAM_CHIEU_NHAN
+LATEX_DANH_SACH_KHONG_THU_TU,tex_lists,latex,Learn LaTeX in 30 minutes - Overleaf.pdf,,8,True,10,5,5,LATEX_DANH_SACH_KHONG_THU_TU
+LATEX_DANH_SACH_CO_THU_TU,tex_lists,latex,Learn LaTeX in 30 minutes - Overleaf.pdf,,8,True,10,5,5,LATEX_DANH_SACH_CO_THU_TU
+LATEX_TOAN_INLINE_LATEX,tex_math,latex,Learn LaTeX in 30 minutes - Overleaf.pdf,,8,True,10,5,5,LATEX_TOAN_INLINE_LATEX
+LATEX_TOAN_DISPLAY_KHONG_ANH_SO,tex_math,latex,Learn LaTeX in 30 minutes - Overleaf.pdf,,8,True,10,5,5,LATEX_TOAN_DISPLAY_KHONG_ANH_SO
+LATEX_PHUONG_TRINH_ANH_SO,tex_math,latex,Learn LaTeX in 30 minutes - Overleaf.pdf,,8,True,10,5,5,LATEX_PHUONG_TRINH_ANH_SO
+LATEX_PHUONG_TRINH_KHONG_ANH_SO_AMSMATH,tex_math,latex,Learn LaTeX in 30 minutes - Overleaf.pdf,,8,True,10,5,5,LATEX_PHUONG_TRINH_KHONG_ANH_SO_AMSMATH
+LATEX_MOI_TRUONG_MATH,tex_math,latex,Learn LaTeX in 30 minutes - Overleaf.pdf,,8,True,10,5,5,LATEX_MOI_TRUONG_MATH
+LATEX_MOI_TRUONG_DISPLAYMATH,tex_math,latex,Learn LaTeX in 30 minutes - Overleaf.pdf,,8,True,10,5,5,LATEX_MOI_TRUONG_DISPLAYMATH
+LATEX_CHI_SO_DUOI_VA_SO_MU,tex_math,latex,Learn LaTeX in 30 minutes - Overleaf.pdf,,8,True,10,5,5,LATEX_CHI_SO_DUOI_VA_SO_MU
+LATEX_TOAN_TU_LUONG_GIAC_VA_LOG,tex_math,latex,Learn LaTeX in 30 minutes - Overleaf.pdf,,8,True,10,5,5,LATEX_TOAN_TU_LUONG_GIAC_VA_LOG
+LATEX_MOI_TRUONG_ABSTRACT,tex_struct,latex,Learn LaTeX in 30 minutes - Overleaf.pdf,,8,True,10,5,5,LATEX_MOI_TRUONG_ABSTRACT
+LATEX_NGAT_DONG_THU_CONG,tex_text,latex,Learn LaTeX in 30 minutes - Overleaf.pdf,,8,True,10,5,5,LATEX_NGAT_DONG_THU_CONG
+LATEX_LENH_NEWLINE,tex_text,latex,Learn LaTeX in 30 minutes - Overleaf.pdf,,8,True,10,5,5,LATEX_LENH_NEWLINE
+LATEX_GIAN_CACH_OAN_PARSKIP,tex_text,latex,Learn LaTeX in 30 minutes - Overleaf.pdf,,8,True,10,5,5,LATEX_GIAN_CACH_OAN_PARSKIP
+LATEX_CHUONG_VA_MUC,tex_struct,latex,Learn LaTeX in 30 minutes - Overleaf.pdf,,8,True,10,5,5,LATEX_CHUONG_VA_MUC
+LATEX_MUC_KHONG_ANH_SO,tex_struct,latex,Learn LaTeX in 30 minutes - Overleaf.pdf,,8,True,10,5,5,LATEX_MUC_KHONG_ANH_SO
+LATEX_MUC_LUC,tex_struct,latex,Learn LaTeX in 30 minutes - Overleaf.pdf,,8,True,10,5,5,LATEX_MUC_LUC
+LATEX_THEM_MUC_KHONG_ANH_SO_VAO_MUC_LUC,tex_struct,latex,Learn LaTeX in 30 minutes - Overleaf.pdf,,8,True,10,5,5,LATEX_THEM_MUC_KHONG_ANH_SO_VAO_MUC_LUC
+LATEX_BANG_TABULAR_CO_BAN,tex_tables,latex,Learn LaTeX in 30 minutes - Overleaf.pdf,,8,True,10,5,5,LATEX_BANG_TABULAR_CO_BAN
+LATEX_BANG_CO_UONG_KE,tex_tables,latex,Learn LaTeX in 30 minutes - Overleaf.pdf,,8,True,10,5,5,LATEX_BANG_CO_UONG_KE
+LATEX_MOI_TRUONG_TABLE,tex_tables,latex,Learn LaTeX in 30 minutes - Overleaf.pdf,,8,True,10,5,5,LATEX_MOI_TRUONG_TABLE
+LATEX_CAN_GIUA_NOI_DUNG,tex_layout,latex,Learn LaTeX in 30 minutes - Overleaf.pdf,,8,True,10,5,5,LATEX_CAN_GIUA_NOI_DUNG
+QUADRATIC_EQUATION,tex_math,latex,Learn LaTeX in 30 minutes - Overleaf.pdf,,6,True,10,5,5,QUADRATIC_EQUATION
+OBSIDIAN_OBSIDIAN_BASIC_TIEU_E_1,obsidian,obsidian,knowledge_base(1).txt,OBSIDIAN_BASIC,2,True,10,5,5,OBS_0001
+OBSIDIAN_OBSIDIAN_BASIC_TIEU_E_2,obsidian,obsidian,knowledge_base(1).txt,OBSIDIAN_BASIC,2,True,10,5,5,OBS_0002
+OBSIDIAN_OBSIDIAN_BASIC_TIEU_E_3,obsidian,obsidian,knowledge_base(1).txt,OBSIDIAN_BASIC,2,True,10,5,5,OBS_0003
+OBSIDIAN_OBSIDIAN_BASIC_CHU_AM,obsidian,obsidian,knowledge_base(1).txt,OBSIDIAN_BASIC,5,True,10,5,5,OBS_0004
+OBSIDIAN_OBSIDIAN_BASIC_CHU_NGHIENG,obsidian,obsidian,knowledge_base(1).txt,OBSIDIAN_BASIC,5,True,10,5,5,OBS_0005
+OBSIDIAN_OBSIDIAN_BASIC_GACH_NGANG,obsidian,obsidian,knowledge_base(1).txt,OBSIDIAN_BASIC,6,True,10,5,5,OBS_0006
+OBSIDIAN_OBSIDIAN_BASIC_HIGHLIGHT,obsidian,obsidian,knowledge_base(1).txt,OBSIDIAN_BASIC,6,True,10,5,5,OBS_0007
+OBSIDIAN_OBSIDIAN_BASIC_LINK_NOI_BO,obsidian,obsidian,knowledge_base(1).txt,OBSIDIAN_BASIC,6,True,10,5,5,OBS_0008
+OBSIDIAN_OBSIDIAN_BASIC_LINK_NOI_BO_CO_TEN,obsidian,obsidian,knowledge_base(1).txt,OBSIDIAN_BASIC,6,True,10,5,5,OBS_0009
+OBSIDIAN_OBSIDIAN_BASIC_LINK_WEB,obsidian,obsidian,knowledge_base(1).txt,OBSIDIAN_BASIC,6,True,10,5,5,OBS_0010
+OBSIDIAN_OBSIDIAN_BASIC_ANH,obsidian,obsidian,knowledge_base(1).txt,OBSIDIAN_BASIC,6,True,10,5,5,OBS_0011
+OBSIDIAN_OBSIDIAN_BASIC_TRICH_DAN,obsidian,obsidian,knowledge_base(1).txt,OBSIDIAN_BASIC,6,True,10,5,5,OBS_0012
+OBSIDIAN_OBSIDIAN_BASIC_DANH_SACH,obsidian,obsidian,knowledge_base(1).txt,OBSIDIAN_BASIC,6,True,10,5,5,OBS_0013
+OBSIDIAN_OBSIDIAN_BASIC_DANH_SACH_ANH_SO,obsidian,obsidian,knowledge_base(1).txt,OBSIDIAN_BASIC,6,True,10,5,5,OBS_0014
+OBSIDIAN_OBSIDIAN_BASIC_CHECKBOX,obsidian,obsidian,knowledge_base(1).txt,OBSIDIAN_BASIC,6,True,10,5,5,OBS_0015
+OBSIDIAN_OBSIDIAN_BASIC_CHECKBOX_HOAN_THANH,obsidian,obsidian,knowledge_base(1).txt,OBSIDIAN_BASIC,6,True,10,5,5,OBS_0016
+OBSIDIAN_OBSIDIAN_BASIC_UONG_NGANG,obsidian,obsidian,knowledge_base(1).txt,OBSIDIAN_BASIC,6,True,10,5,5,OBS_0017
+OBSIDIAN_OBSIDIAN_BASIC_CODE_INLINE,obsidian,obsidian,knowledge_base(1).txt,OBSIDIAN_BASIC,6,True,10,5,5,OBS_0018
+OBSIDIAN_OBSIDIAN_BASIC_CODE_BLOCK,obsidian,obsidian,knowledge_base(1).txt,OBSIDIAN_BASIC,6,True,10,5,5,OBS_0019
+OBSIDIAN_TABLE_BANG,obsidian,obsidian,knowledge_base(1).txt,TABLE,6,True,10,5,5,OBS_0020
+OBSIDIAN_TABLE_BANG_CAN_TRAI,obsidian,obsidian,knowledge_base(1).txt,TABLE,6,True,10,5,5,OBS_0021
+OBSIDIAN_TABLE_BANG_CAN_GIUA,obsidian,obsidian,knowledge_base(1).txt,TABLE,6,True,10,5,5,OBS_0022
+OBSIDIAN_MERMAID_SO_O_LUONG,obsidian,obsidian,knowledge_base(1).txt,MERMAID,6,True,10,5,5,OBS_0023
+MATH_MATH_BASIC_CONG_THUC_INLINE,math_shared,math_shared,knowledge_base(1).txt,MATH_BASIC,6,True,10,5,5,OBS_0024
+MATH_MATH_BASIC_CONG_THUC_LON,math_shared,math_shared,knowledge_base(1).txt,MATH_BASIC,6,True,10,5,5,OBS_0025
+MATH_MATH_BASIC_PHAN_SO,math_shared,math_shared,knowledge_base(1).txt,MATH_BASIC,6,True,10,5,5,OBS_0026
+MATH_MATH_BASIC_CAN,math_shared,math_shared,knowledge_base(1).txt,MATH_BASIC,6,True,10,5,5,OBS_0027
+MATH_MATH_BASIC_CAN_BAC_N,math_shared,math_shared,knowledge_base(1).txt,MATH_BASIC,6,True,10,5,5,OBS_0028
+MATH_MATH_BASIC_MU,math_shared,math_shared,knowledge_base(1).txt,MATH_BASIC,6,True,10,5,5,OBS_0029
+MATH_MATH_BASIC_CHI_SO,math_shared,math_shared,knowledge_base(1).txt,MATH_BASIC,6,True,10,5,5,OBS_0030
+MATH_MATH_BASIC_MU_VA_CHI_SO,math_shared,math_shared,knowledge_base(1).txt,MATH_BASIC,6,True,10,5,5,OBS_0031
+MATH_MATH_BASIC_TONG,math_shared,math_shared,knowledge_base(1).txt,MATH_BASIC,6,True,10,5,5,OBS_0032
+MATH_MATH_BASIC_TICH,math_shared,math_shared,knowledge_base(1).txt,MATH_BASIC,6,True,10,5,5,OBS_0033
+MATH_MATH_BASIC_TICH_PHAN,math_shared,math_shared,knowledge_base(1).txt,MATH_BASIC,6,True,10,5,5,OBS_0034
+MATH_MATH_BASIC_GIOI_HAN,math_shared,math_shared,knowledge_base(1).txt,MATH_BASIC,6,True,10,5,5,OBS_0035
+MATH_MATH_BASIC_AO_HAM,math_shared,math_shared,knowledge_base(1).txt,MATH_BASIC,6,True,10,5,5,OBS_0036
+MATH_MATRIX_MA_TRAN,math_shared,math_shared,knowledge_base(1).txt,MATRIX,6,True,10,5,5,OBS_0037
+MATH_MATRIX_MA_TRAN_2X2,math_shared,math_shared,knowledge_base(1).txt,MATRIX,2,True,10,5,5,OBS_0038
+MATH_MATRIX_MA_TRAN_NGOAC_TRON,math_shared,math_shared,knowledge_base(1).txt,MATRIX,6,True,10,5,5,OBS_0039
+MATH_MATRIX_MA_TRAN_NGOAC_VUONG,math_shared,math_shared,knowledge_base(1).txt,MATRIX,6,True,10,5,5,OBS_0040
+MATH_MATRIX_MA_TRAN_NGOAC_NHON,math_shared,math_shared,knowledge_base(1).txt,MATRIX,6,True,10,5,5,OBS_0041
+MATH_MATRIX_INH_THUC,math_shared,math_shared,knowledge_base(1).txt,MATRIX,6,True,10,5,5,OBS_0042
+MATH_MATRIX_CHUAN_MA_TRAN,math_shared,math_shared,knowledge_base(1).txt,MATRIX,6,True,10,5,5,OBS_0043
+MATH_CASES_SYSTEMS_HAM_TUNG_OAN,math_shared,math_shared,knowledge_base(1).txt,CASES_SYSTEMS,6,True,10,5,5,OBS_0044
+MATH_CASES_SYSTEMS_HE_PHUONG_TRINH,math_shared,math_shared,knowledge_base(1).txt,CASES_SYSTEMS,6,True,10,5,5,OBS_0045
+MATH_ALIGN_ARRAY_CAN_CHINH_PHUONG_TRINH,math_shared,math_shared,knowledge_base(1).txt,ALIGN_ARRAY,6,True,10,5,5,OBS_0046
+MATH_ALIGN_ARRAY_BANG_TOAN_HOC,math_shared,math_shared,knowledge_base(1).txt,ALIGN_ARRAY,6,True,10,5,5,OBS_0047
+MATH_ALIGN_ARRAY_BANG_TOAN_HOC_CAN_TRAI,math_shared,math_shared,knowledge_base(1).txt,ALIGN_ARRAY,6,True,10,5,5,OBS_0048
+MATH_ALIGN_ARRAY_BANG_TOAN_HOC_CAN_GIUA,math_shared,math_shared,knowledge_base(1).txt,ALIGN_ARRAY,6,True,10,5,5,OBS_0049
+MATH_SYMBOLS_ALPHA,math_shared,math_shared,knowledge_base(1).txt,SYMBOLS,6,True,10,5,5,OBS_0050
+MATH_SYMBOLS_BETA,math_shared,math_shared,knowledge_base(1).txt,SYMBOLS,6,True,10,5,5,OBS_0051
+MATH_SYMBOLS_GAMMA,math_shared,math_shared,knowledge_base(1).txt,SYMBOLS,6,True,10,5,5,OBS_0052
+MATH_SYMBOLS_DELTA,math_shared,math_shared,knowledge_base(1).txt,SYMBOLS,6,True,10,5,5,OBS_0053
+MATH_SYMBOLS_THETA,math_shared,math_shared,knowledge_base(1).txt,SYMBOLS,6,True,10,5,5,OBS_0054
+MATH_SYMBOLS_LAMBDA,math_shared,math_shared,knowledge_base(1).txt,SYMBOLS,6,True,10,5,5,OBS_0055
+MATH_SYMBOLS_PI,math_shared,math_shared,knowledge_base(1).txt,SYMBOLS,6,True,10,5,5,OBS_0056
+MATH_SYMBOLS_SIGMA,math_shared,math_shared,knowledge_base(1).txt,SYMBOLS,6,True,10,5,5,OBS_0057
+MATH_SYMBOLS_OMEGA,math_shared,math_shared,knowledge_base(1).txt,SYMBOLS,6,True,10,5,5,OBS_0058
+MATH_SYMBOLS_VO_CUNG,math_shared,math_shared,knowledge_base(1).txt,SYMBOLS,6,True,10,5,5,OBS_0059
+MATH_SYMBOLS_NABLA,math_shared,math_shared,knowledge_base(1).txt,SYMBOLS,6,True,10,5,5,OBS_0060
+MATH_SYMBOLS_PHAN_RIENG,math_shared,math_shared,knowledge_base(1).txt,SYMBOLS,6,True,10,5,5,OBS_0061
+MATH_SYMBOLS_SO_THUC,math_shared,math_shared,knowledge_base(1).txt,SYMBOLS,6,True,10,5,5,OBS_0062
+MATH_SYMBOLS_SO_TU_NHIEN,math_shared,math_shared,knowledge_base(1).txt,SYMBOLS,6,True,10,5,5,OBS_0063
+MATH_SYMBOLS_SO_NGUYEN,math_shared,math_shared,knowledge_base(1).txt,SYMBOLS,6,True,10,5,5,OBS_0064
+MATH_SYMBOLS_THUOC,math_shared,math_shared,knowledge_base(1).txt,SYMBOLS,6,True,10,5,5,OBS_0065
+MATH_SYMBOLS_KHONG_THUOC,math_shared,math_shared,knowledge_base(1).txt,SYMBOLS,6,True,10,5,5,OBS_0066
+MATH_SYMBOLS_TAP_RONG,math_shared,math_shared,knowledge_base(1).txt,SYMBOLS,6,True,10,5,5,OBS_0067
+MATH_SYMBOLS_HOP,math_shared,math_shared,knowledge_base(1).txt,SYMBOLS,6,True,10,5,5,OBS_0068
+MATH_SYMBOLS_GIAO,math_shared,math_shared,knowledge_base(1).txt,SYMBOLS,6,True,10,5,5,OBS_0069
+MATH_SYMBOLS_TAP_CON,math_shared,math_shared,knowledge_base(1).txt,SYMBOLS,6,True,10,5,5,OBS_0070
+MATH_SYMBOLS_KHAC,math_shared,math_shared,knowledge_base(1).txt,SYMBOLS,6,True,10,5,5,OBS_0071
+MATH_SYMBOLS_NHO_HON_HOAC_BANG,math_shared,math_shared,knowledge_base(1).txt,SYMBOLS,6,True,10,5,5,OBS_0072
+MATH_SYMBOLS_LON_HON_HOAC_BANG,math_shared,math_shared,knowledge_base(1).txt,SYMBOLS,6,True,10,5,5,OBS_0073
+MATH_SYMBOLS_XAP_XI,math_shared,math_shared,knowledge_base(1).txt,SYMBOLS,6,True,10,5,5,OBS_0074
+MATH_SYMBOLS_TUONG_UONG,math_shared,math_shared,knowledge_base(1).txt,SYMBOLS,6,True,10,5,5,OBS_0075
+MATH_SYMBOLS_NHAN,math_shared,math_shared,knowledge_base(1).txt,SYMBOLS,6,True,10,5,5,OBS_0076
+MATH_SYMBOLS_CHIA,math_shared,math_shared,knowledge_base(1).txt,SYMBOLS,6,True,10,5,5,OBS_0077
+MATH_SYMBOLS_CONG_TRU,math_shared,math_shared,knowledge_base(1).txt,SYMBOLS,6,True,10,5,5,OBS_0078
+MATH_SYMBOLS_KEO_THEO,math_shared,math_shared,knowledge_base(1).txt,SYMBOLS,6,True,10,5,5,OBS_0079
+MATH_SYMBOLS_KHI_VA_CHI_KHI,math_shared,math_shared,knowledge_base(1).txt,SYMBOLS,6,True,10,5,5,OBS_0080
+MATH_SYMBOLS_VOI_MOI,math_shared,math_shared,knowledge_base(1).txt,SYMBOLS,6,True,10,5,5,OBS_0081
+MATH_SYMBOLS_TON_TAI,math_shared,math_shared,knowledge_base(1).txt,SYMBOLS,6,True,10,5,5,OBS_0082
+MATH_SYMBOLS_MUI_TEN_PHAI,math_shared,math_shared,knowledge_base(1).txt,SYMBOLS,6,True,10,5,5,OBS_0083
+MATH_SETS_LOGIC_VA_LOGIC,math_shared,math_shared,knowledge_base(1).txt,SETS_LOGIC,6,True,10,5,5,OBS_0084
+MATH_SETS_LOGIC_HOAC_LOGIC,math_shared,math_shared,knowledge_base(1).txt,SETS_LOGIC,6,True,10,5,5,OBS_0085
+MATH_SETS_LOGIC_PHU_INH,math_shared,math_shared,knowledge_base(1).txt,SETS_LOGIC,6,True,10,5,5,OBS_0086
+MATH_SETS_LOGIC_CHUNG_MINH_UOC,math_shared,math_shared,knowledge_base(1).txt,SETS_LOGIC,6,True,10,5,5,OBS_0087
+MATH_SETS_LOGIC_THOA_MAN,math_shared,math_shared,knowledge_base(1).txt,SETS_LOGIC,6,True,10,5,5,OBS_0088
+MATH_ACCENTS_DECORATIONS_VECTOR,math_shared,math_shared,knowledge_base(1).txt,ACCENTS_DECORATIONS,6,True,10,5,5,OBS_0089
+MATH_ACCENTS_DECORATIONS_VECTOR_DAI,math_shared,math_shared,knowledge_base(1).txt,ACCENTS_DECORATIONS,6,True,10,5,5,OBS_0090
+MATH_ACCENTS_DECORATIONS_GACH_TREN,math_shared,math_shared,knowledge_base(1).txt,ACCENTS_DECORATIONS,6,True,10,5,5,OBS_0091
+MATH_ACCENTS_DECORATIONS_GACH_DUOI,math_shared,math_shared,knowledge_base(1).txt,ACCENTS_DECORATIONS,6,True,10,5,5,OBS_0092
+MATH_ACCENTS_DECORATIONS_DAU_NGA,math_shared,math_shared,knowledge_base(1).txt,ACCENTS_DECORATIONS,6,True,10,5,5,OBS_0093
+MATH_ACCENTS_DECORATIONS_DAU_MU,math_shared,math_shared,knowledge_base(1).txt,ACCENTS_DECORATIONS,6,True,10,5,5,OBS_0094
+MATH_ACCENTS_DECORATIONS_AO_HAM_CHAM,math_shared,math_shared,knowledge_base(1).txt,ACCENTS_DECORATIONS,6,True,10,5,5,OBS_0095
+MATH_ACCENTS_DECORATIONS_ONG_KHUNG,math_shared,math_shared,knowledge_base(1).txt,ACCENTS_DECORATIONS,6,True,10,5,5,OBS_0096
+MATH_ACCENTS_DECORATIONS_OVERBRACE,math_shared,math_shared,knowledge_base(1).txt,ACCENTS_DECORATIONS,6,True,10,5,5,OBS_0097
+MATH_ACCENTS_DECORATIONS_UNDERBRACE,math_shared,math_shared,knowledge_base(1).txt,ACCENTS_DECORATIONS,6,True,10,5,5,OBS_0098
+MATH_ACCENTS_DECORATIONS_CHU_PHIA_TREN,math_shared,math_shared,knowledge_base(1).txt,ACCENTS_DECORATIONS,6,True,10,5,5,OBS_0099
+MATH_BRACKETS_SPACING_TEXT_NGOAC_TU_CO,math_shared,math_shared,knowledge_base(1).txt,BRACKETS_SPACING_TEXT,6,True,10,5,5,OBS_0100
+MATH_BRACKETS_SPACING_TEXT_NGOAC_VUONG_TU_CO,math_shared,math_shared,knowledge_base(1).txt,BRACKETS_SPACING_TEXT,6,True,10,5,5,OBS_0101
+MATH_BRACKETS_SPACING_TEXT_NGOAC_NHON_TU_CO,math_shared,math_shared,knowledge_base(1).txt,BRACKETS_SPACING_TEXT,6,True,10,5,5,OBS_0102
+MATH_BRACKETS_SPACING_TEXT_TRI_TUYET_OI,math_shared,math_shared,knowledge_base(1).txt,BRACKETS_SPACING_TEXT,6,True,10,5,5,OBS_0103
+MATH_BRACKETS_SPACING_TEXT_CHUAN_VECTOR,math_shared,math_shared,knowledge_base(1).txt,BRACKETS_SPACING_TEXT,6,True,10,5,5,OBS_0104
+MATH_BRACKETS_SPACING_TEXT_KHOANG_CACH_NHO,math_shared,math_shared,knowledge_base(1).txt,BRACKETS_SPACING_TEXT,6,True,10,5,5,OBS_0105
+MATH_BRACKETS_SPACING_TEXT_KHOANG_CACH_VUA,math_shared,math_shared,knowledge_base(1).txt,BRACKETS_SPACING_TEXT,6,True,10,5,5,OBS_0106
+MATH_BRACKETS_SPACING_TEXT_KHOANG_CACH_LON,math_shared,math_shared,knowledge_base(1).txt,BRACKETS_SPACING_TEXT,6,True,10,5,5,OBS_0107
+MATH_BRACKETS_SPACING_TEXT_KHOANG_CACH_RAT_LON,math_shared,math_shared,knowledge_base(1).txt,BRACKETS_SPACING_TEXT,6,True,10,5,5,OBS_0108
+MATH_BRACKETS_SPACING_TEXT_KHOANG_CACH_AM,math_shared,math_shared,knowledge_base(1).txt,BRACKETS_SPACING_TEXT,6,True,10,5,5,OBS_0109
+MATH_FONT_CHU_BLACKBOARD,math_shared,math_shared,knowledge_base(1).txt,FONT,6,True,10,5,5,OBS_0110
+MATH_FONT_CHU_AM_TOAN,math_shared,math_shared,knowledge_base(1).txt,FONT,6,True,10,5,5,OBS_0111
+MATH_FONT_VECTOR_AM,math_shared,math_shared,knowledge_base(1).txt,FONT,6,True,10,5,5,OBS_0112
+MATH_FONT_CHU_LA_MA,math_shared,math_shared,knowledge_base(1).txt,FONT,6,True,10,5,5,OBS_0113
+MATH_FONT_CHU_TYPEWRITER,math_shared,math_shared,knowledge_base(1).txt,FONT,6,True,10,5,5,OBS_0114
+MATH_FONT_CHU_SANS_SERIF,math_shared,math_shared,knowledge_base(1).txt,FONT,6,True,10,5,5,OBS_0115
+MATH_FONT_CHU_CALLIGRAPHIC,math_shared,math_shared,knowledge_base(1).txt,FONT,6,True,10,5,5,OBS_0116
+MATH_FONT_CHU_SCRIPT,math_shared,math_shared,knowledge_base(1).txt,FONT,6,True,10,5,5,OBS_0117
+MATH_SPACING_DEGREE_UNITS_O,math_shared,math_shared,knowledge_base(1).txt,SPACING_DEGREE_UNITS,6,True,10,5,5,OBS_0118
+MATH_SPACING_DEGREE_UNITS_MET,math_shared,math_shared,knowledge_base(1).txt,SPACING_DEGREE_UNITS,6,True,10,5,5,OBS_0119
+MATH_SPACING_DEGREE_UNITS_MET_VUONG,math_shared,math_shared,knowledge_base(1).txt,SPACING_DEGREE_UNITS,6,True,10,5,5,OBS_0120
+MATH_SPACING_DEGREE_UNITS_MET_TREN_GIAY,math_shared,math_shared,knowledge_base(1).txt,SPACING_DEGREE_UNITS,6,True,10,5,5,OBS_0121
+MATH_SPACING_DEGREE_UNITS_MET_TREN_GIAY_BINH_PHUONG,math_shared,math_shared,knowledge_base(1).txt,SPACING_DEGREE_UNITS,6,True,10,5,5,OBS_0122
+MATH_SPACING_DEGREE_UNITS_MOL,math_shared,math_shared,knowledge_base(1).txt,SPACING_DEGREE_UNITS,6,True,10,5,5,OBS_0123
+MATH_SPACING_DEGREE_UNITS_ON_VI_NHAN,math_shared,math_shared,knowledge_base(1).txt,SPACING_DEGREE_UNITS,6,True,10,5,5,OBS_0124
+MATH_COLOR_HIGHLIGHT_MAU_O,math_shared,math_shared,knowledge_base(1).txt,COLOR_HIGHLIGHT,6,True,10,5,5,OBS_0125
+MATH_COLOR_HIGHLIGHT_MAU_XANH,math_shared,math_shared,knowledge_base(1).txt,COLOR_HIGHLIGHT,6,True,10,5,5,OBS_0126
+MATH_NUMBERING_REFERENCES_PHUONG_TRINH_CO_SO,math_shared,math_shared,knowledge_base(1).txt,NUMBERING_REFERENCES,6,True,10,5,5,OBS_0127
+MATH_NUMBERING_REFERENCES_GAN_NHAN_PHUONG_TRINH,math_shared,math_shared,knowledge_base(1).txt,NUMBERING_REFERENCES,6,True,10,5,5,OBS_0128
+OBSIDIAN_CALLOUTS_GHI_CHU,obsidian,obsidian,knowledge_base(1).txt,CALLOUTS,6,True,10,5,5,OBS_0129
+OBSIDIAN_CALLOUTS_THONG_TIN,obsidian,obsidian,knowledge_base(1).txt,CALLOUTS,6,True,10,5,5,OBS_0130
+OBSIDIAN_CALLOUTS_MEO,obsidian,obsidian,knowledge_base(1).txt,CALLOUTS,6,True,10,5,5,OBS_0131
+OBSIDIAN_CALLOUTS_CANH_BAO,obsidian,obsidian,knowledge_base(1).txt,CALLOUTS,6,True,10,5,5,OBS_0132
+OBSIDIAN_CALLOUTS_CAU_HOI,obsidian,obsidian,knowledge_base(1).txt,CALLOUTS,6,True,10,5,5,OBS_0133
+OBSIDIAN_CALLOUTS_THANH_CONG,obsidian,obsidian,knowledge_base(1).txt,CALLOUTS,6,True,10,5,5,OBS_0134
+OBSIDIAN_CALLOUTS_LOI,obsidian,obsidian,knowledge_base(1).txt,CALLOUTS,6,True,10,5,5,OBS_0135
+OBSIDIAN_CALLOUTS_NGUY_HIEM,obsidian,obsidian,knowledge_base(1).txt,CALLOUTS,6,True,10,5,5,OBS_0136
+OBSIDIAN_CALLOUTS_BUG,obsidian,obsidian,knowledge_base(1).txt,CALLOUTS,6,True,10,5,5,OBS_0137
+OBSIDIAN_CALLOUTS_CALLOUT_THU_GON,obsidian,obsidian,knowledge_base(1).txt,CALLOUTS,6,True,10,5,5,OBS_0138
+OBSIDIAN_TAGS_TAG,obsidian,obsidian,knowledge_base(1).txt,TAGS,6,True,10,5,5,OBS_0139
+OBSIDIAN_FOOTNOTES_CHU_THICH_CUOI_TRANG,obsidian,obsidian,knowledge_base(1).txt,FOOTNOTES,6,True,10,5,5,OBS_0140
+OBSIDIAN_ESCAPE_ESCAPE_DAU_SAO,obsidian,obsidian,knowledge_base(1).txt,ESCAPE,6,True,10,5,5,OBS_0141
+OBSIDIAN_ESCAPE_ESCAPE_GACH_DUOI,obsidian,obsidian,knowledge_base(1).txt,ESCAPE,6,True,10,5,5,OBS_0142
+OBSIDIAN_ESCAPE_ESCAPE_HASHTAG,obsidian,obsidian,knowledge_base(1).txt,ESCAPE,6,True,10,5,5,OBS_0143
+OBSIDIAN_ESCAPE_ESCAPE_BACKTICK,obsidian,obsidian,knowledge_base(1).txt,ESCAPE,6,True,10,5,5,OBS_0144
+OBSIDIAN_ESCAPE_ESCAPE_PIPE,obsidian,obsidian,knowledge_base(1).txt,ESCAPE,6,True,10,5,5,OBS_0145
+OBSIDIAN_ESCAPE_ESCAPE_TILDE,obsidian,obsidian,knowledge_base(1).txt,ESCAPE,6,True,10,5,5,OBS_0146

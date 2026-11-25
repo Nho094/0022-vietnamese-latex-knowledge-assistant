@@ -1,0 +1,36 @@
+{
+  "migration_version": "2.0",
+  "source_archive": "data(1).zip",
+  "status": "passed",
+  "preservation": {
+    "legacy_intent_fields_preserved": true,
+    "legacy_slots_preserved": true,
+    "legacy_templates_preserved": true,
+    "csv_files_unchanged": true,
+    "knowledge_corpus_content_unchanged": true
+  },
+  "counts": {
+    "intents": 189,
+    "intents_with_slots": 98,
+    "total_legacy_slots": 174,
+    "nonempty_jinja_templates": 188,
+    "intents_without_render_template": [
+      "OUT_OF_SCOPE"
+    ],
+    "knowledge_corpora": 4
+  },
+  "validation": {
+    "intent_definition_schema": "passed",
+    "per_intent_input_schemas": "passed",
+    "knowledge_corpus_schemas": "passed",
+    "jinja_template_compilation": "passed",
+    "jinja_variables_declared_in_slots": "passed"
+  },
+  "notes": [
+    "The legacy slots/templates fields remain unchanged for backward compatibility.",
+    "The new input_schema is generated from existing scalar slots; no unsupported array/object fields were fabricated.",
+    "A separate dynamic-table example demonstrates nested arrays for future GUI-created definitions.",
+    "NLU intent detection and natural-language extraction are not solved by JSON Schema, JSONata, or Jinja2; the runtime still needs a generic extractor/model/parser.",
+    "The transform expression '$' is an identity transformation, not a domain-specific algorithm."
+  ]
+}

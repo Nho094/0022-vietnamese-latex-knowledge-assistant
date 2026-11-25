@@ -1,0 +1,81 @@
+{
+  "intent": "CREATE_DYNAMIC_TABLE_EXAMPLE",
+  "definition_version": "2.0",
+  "input_schema": {
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "type": "object",
+    "properties": {
+      "title": {
+        "type": "string"
+      },
+      "headers": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "rows": {
+        "type": "array",
+        "items": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "required": [
+      "headers",
+      "rows"
+    ],
+    "additionalProperties": false
+  },
+  "field_policies": {
+    "title": {
+      "value_type": "string",
+      "extraction": {
+        "method": "model",
+        "multiple": false
+      },
+      "required": false,
+      "on_missing": {
+        "action": "use_default",
+        "value": "Bảng dữ liệu"
+      }
+    },
+    "headers": {
+      "value_type": "array",
+      "extraction": {
+        "method": "model",
+        "multiple": true
+      },
+      "required": true,
+      "on_missing": {
+        "action": "ask_user"
+      }
+    },
+    "rows": {
+      "value_type": "array",
+      "extraction": {
+        "method": "model",
+        "multiple": true
+      },
+      "required": true,
+      "on_missing": {
+        "action": "ask_user"
+      }
+    }
+  },
+  "transform": {
+    "engine": "jsonata",
+    "expression": "$",
+    "mode": "identity"
+  },
+  "render": {
+    "engine": "jinja2",
+    "context": "normalized_input",
+    "templates": {
+      "html": "<h2>{{ title }}</h2>\\n<table>\\n  <thead><tr>{% for h in headers %}<th>{{ h }}</th>{% endfor %}</tr></thead>\\n  <tbody>\\n  {% for row in rows %}<tr>{% for cell in row %}<td>{{ cell }}</td>{% endfor %}</tr>{% endfor %}\\n  </tbody>\\n</table>"
+    }
+  }
+}

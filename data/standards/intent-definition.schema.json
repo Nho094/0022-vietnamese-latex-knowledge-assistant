@@ -1,0 +1,175 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/knowledge-engine/intent-definition.schema.json",
+  "title": "Knowledge Engine Intent Definition v2",
+  "type": "object",
+  "required": [
+    "intent",
+    "definition_version",
+    "input_schema",
+    "field_policies",
+    "transform",
+    "render"
+  ],
+  "properties": {
+    "intent": {
+      "type": "string",
+      "minLength": 1
+    },
+    "definition_version": {
+      "const": "2.0"
+    },
+    "input_schema": {
+      "type": "object",
+      "required": [
+        "$schema",
+        "type",
+        "properties"
+      ],
+      "properties": {
+        "$schema": {
+          "type": "string"
+        },
+        "type": {
+          "const": "object"
+        },
+        "properties": {
+          "type": "object"
+        },
+        "required": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": {
+          "type": "boolean"
+        }
+      }
+    },
+    "field_policies": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "required": [
+          "value_type",
+          "extraction",
+          "required",
+          "on_missing"
+        ],
+        "properties": {
+          "description": {
+            "type": "string"
+          },
+          "value_type": {
+            "enum": [
+              "string",
+              "number",
+              "integer",
+              "boolean",
+              "object",
+              "array"
+            ]
+          },
+          "extraction": {
+            "type": "object",
+            "required": [
+              "method"
+            ],
+            "properties": {
+              "method": {
+                "enum": [
+                  "regex",
+                  "model",
+                  "parser",
+                  "path",
+                  "manual"
+                ]
+              },
+              "pattern": {
+                "type": "string"
+              },
+              "capture_group": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "multiple": {
+                "type": "boolean"
+              }
+            }
+          },
+          "required": {
+            "type": "boolean"
+          },
+          "on_missing": {
+            "type": "object",
+            "required": [
+              "action"
+            ],
+            "properties": {
+              "action": {
+                "enum": [
+                  "use_value",
+                  "use_default",
+                  "ask_user",
+                  "omit",
+                  "error"
+                ]
+              },
+              "value": {},
+              "source": {
+                "type": "string"
+              }
+            }
+          },
+          "constraints": {
+            "type": "object"
+          },
+          "examples": {
+            "type": "array"
+          }
+        }
+      }
+    },
+    "transform": {
+      "type": "object",
+      "required": [
+        "engine",
+        "expression"
+      ],
+      "properties": {
+        "engine": {
+          "const": "jsonata"
+        },
+        "expression": {
+          "type": "string"
+        },
+        "mode": {
+          "type": "string"
+        }
+      }
+    },
+    "render": {
+      "type": "object",
+      "required": [
+        "engine",
+        "templates"
+      ],
+      "properties": {
+        "engine": {
+          "const": "jinja2"
+        },
+        "context": {
+          "type": "string"
+        },
+        "templates": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  },
+  "additionalProperties": true
+}

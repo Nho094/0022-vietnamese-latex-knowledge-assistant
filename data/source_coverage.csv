@@ -1,0 +1,396 @@
+﻿record_id,domain,topic,title,source,content_chars
+LATEX_TAI_LIEU_TOI_GIAN,latex,tai_lieu_toi_gian,"Tạo tài liệu LaTeX tối thiểu có documentclass, document body và kết thúc.",Learn LaTeX in 30 minutes - Overleaf.pdf,0
+LATEX_LOP_TAI_LIEU_ARTICLE,latex,lop_tai_lieu_article,Khai báo lớp article thường dùng cho bài báo và tài liệu ngắn.,Learn LaTeX in 30 minutes - Overleaf.pdf,0
+LATEX_LOP_TAI_LIEU_BOOK,latex,lop_tai_lieu_book,Khai báo lớp book phù hợp tài liệu dài có chương.,Learn LaTeX in 30 minutes - Overleaf.pdf,0
+LATEX_LOP_TAI_LIEU_REPORT,latex,lop_tai_lieu_report,Khai báo lớp report cho báo cáo dài có chương.,Learn LaTeX in 30 minutes - Overleaf.pdf,0
+LATEX_PREAMBLE_TAI_LIEU,latex,preamble_tai_lieu,"Tạo phần khai báo trước begin document, nơi đặt lớp tài liệu, package và cấu hình.",Learn LaTeX in 30 minutes - Overleaf.pdf,0
+LATEX_NAP_PACKAGE,latex,nap_package,"Nạp gói LaTeX trong preamble, có thể kèm tùy chọn trong ngoặc vuông.",Learn LaTeX in 30 minutes - Overleaf.pdf,0
+LATEX_NAP_PACKAGE_CO_TUY_CHON,latex,nap_package_co_tuy_chon,Nạp package với các tùy chọn phân tách bằng dấu phẩy.,Learn LaTeX in 30 minutes - Overleaf.pdf,0
+LATEX_TIEU_E_TAC_GIA_NGAY_THANG,latex,tieu_e_tac_gia_ngay_thang,"Khai báo title, author, date trong preamble và hiển thị bằng maketitle.",Learn LaTeX in 30 minutes - Overleaf.pdf,0
+LATEX_LOI_CAM_ON_TAC_GIA,latex,loi_cam_on_tac_gia,Thêm ghi chú cảm ơn bằng thanks trong trường author.,Learn LaTeX in 30 minutes - Overleaf.pdf,0
+LATEX_CHU_THICH_MA_LATEX,latex,chu_thich_ma_latex,Tạo comment bằng dấu phần trăm; nội dung sau % trên cùng dòng không được typeset.,Learn LaTeX in 30 minutes - Overleaf.pdf,0
+LATEX_CHU_AM,latex,chu_am,In đậm văn bản bằng textbf.,Learn LaTeX in 30 minutes - Overleaf.pdf,0
+LATEX_CHU_NGHIENG,latex,chu_nghieng,In nghiêng văn bản bằng textit.,Learn LaTeX in 30 minutes - Overleaf.pdf,0
+LATEX_GACH_CHAN,latex,gach_chan,Gạch chân văn bản bằng underline.,Learn LaTeX in 30 minutes - Overleaf.pdf,0
+LATEX_NHAN_MANH,latex,nhan_manh,Nhấn mạnh văn bản theo ngữ cảnh bằng emph.,Learn LaTeX in 30 minutes - Overleaf.pdf,0
+LATEX_CHEN_HINH_ANH,latex,chen_hinh_anh,Chèn ảnh bằng includegraphics; cần graphicx và file ảnh trong project.,Learn LaTeX in 30 minutes - Overleaf.pdf,0
+LATEX_UONG_DAN_THU_MUC_HINH,latex,uong_dan_thu_muc_hinh,Khai báo thư mục chứa ảnh bằng graphicspath.,Learn LaTeX in 30 minutes - Overleaf.pdf,0
+LATEX_FIGURE,latex,moi_truong_figure,"Tạo figure float, căn giữa ảnh, caption, label và vị trí gợi ý.",Learn LaTeX in 30 minutes - Overleaf.pdf,0
+LATEX_CHU_THICH_HINH,latex,chu_thich_hinh,Thêm caption cho hình hoặc bảng.,Learn LaTeX in 30 minutes - Overleaf.pdf,0
+LATEX_THAM_CHIEU_NHAN,latex,tham_chieu_nhan,Gắn nhãn bằng label và tham chiếu số bằng ref hoặc số trang bằng pageref.,Learn LaTeX in 30 minutes - Overleaf.pdf,0
+LATEX_DANH_SACH_KHONG_THU_TU,latex,danh_sach_khong_thu_tu,"Tạo danh sách dấu đầu dòng bằng itemize, mỗi mục bắt đầu bằng item.",Learn LaTeX in 30 minutes - Overleaf.pdf,0
+LATEX_DANH_SACH_CO_THU_TU,latex,danh_sach_co_thu_tu,"Tạo danh sách tự đánh số bằng enumerate, mỗi mục bắt đầu bằng item.",Learn LaTeX in 30 minutes - Overleaf.pdf,0
+LATEX_TOAN_INLINE_LATEX,latex,toan_inline_latex,"Viết công thức toán nằm trong dòng bằng $, \(...\) hoặc math environment.",Learn LaTeX in 30 minutes - Overleaf.pdf,0
+LATEX_TOAN_DISPLAY_KHONG_ANH_SO,latex,toan_display_khong_anh_so,Hiển thị công thức riêng dòng không đánh số; ưu tiên \[...\].,Learn LaTeX in 30 minutes - Overleaf.pdf,0
+LATEX_PHUONG_TRINH_ANH_SO,latex,phuong_trinh_anh_so,Hiển thị công thức riêng dòng có số thứ tự bằng equation.,Learn LaTeX in 30 minutes - Overleaf.pdf,0
+LATEX_PHUONG_TRINH_KHONG_ANH_SO_AMSMATH,latex,phuong_trinh_khong_anh_so_amsmath,Dùng equation* từ amsmath để tạo công thức display không đánh số.,Learn LaTeX in 30 minutes - Overleaf.pdf,0
+LATEX_MOI_TRUONG_MATH,latex,moi_truong_math,Viết công thức inline bằng môi trường math.,Learn LaTeX in 30 minutes - Overleaf.pdf,0
+LATEX_MOI_TRUONG_DISPLAYMATH,latex,moi_truong_displaymath,Viết công thức display không đánh số bằng displaymath.,Learn LaTeX in 30 minutes - Overleaf.pdf,0
+LATEX_CHI_SO_DUOI_VA_SO_MU,latex,chi_so_duoi_va_so_mu,Dùng _ tạo subscript và ^ tạo superscript; có thể kết hợp và lồng nhau.,Learn LaTeX in 30 minutes - Overleaf.pdf,0
+LATEX_TOAN_TU_LUONG_GIAC_VA_LOG,latex,toan_tu_luong_giac_va_log,"Viết các toán tử toán học như sin, cos, log bằng lệnh có dấu gạch chéo.",Learn LaTeX in 30 minutes - Overleaf.pdf,0
+LATEX_MOI_TRUONG_ABSTRACT,latex,moi_truong_abstract,Tạo phần tóm tắt bài báo bằng abstract.,Learn LaTeX in 30 minutes - Overleaf.pdf,0
+LATEX_NGAT_DONG_THU_CONG,latex,ngat_dong_thu_cong,Ngắt dòng nhưng vẫn ở cùng đoạn bằng \\ hoặc newline.,Learn LaTeX in 30 minutes - Overleaf.pdf,0
+LATEX_LENH_NEWLINE,latex,lenh_newline,Bắt đầu dòng mới trong cùng đoạn bằng newline.,Learn LaTeX in 30 minutes - Overleaf.pdf,0
+LATEX_GIAN_CACH_OAN_PARSKIP,latex,gian_cach_oan_parskip,Nạp parskip để thay đổi cách trình bày khoảng cách đoạn.,Learn LaTeX in 30 minutes - Overleaf.pdf,0
+LATEX_CHUONG_VA_MUC,latex,chuong_va_muc,"Tạo cấu trúc phân cấp part, chapter, section, subsection, subsubsection, paragraph và subparagraph.",Learn LaTeX in 30 minutes - Overleaf.pdf,0
+LATEX_MUC_KHONG_ANH_SO,latex,muc_khong_anh_so,Dùng phiên bản có dấu sao như section* để tạo mục không đánh số.,Learn LaTeX in 30 minutes - Overleaf.pdf,0
+LATEX_MUC_LUC,latex,muc_luc,Tạo mục lục tự động bằng tableofcontents; các mục có cấu trúc tự được thêm vào.,Learn LaTeX in 30 minutes - Overleaf.pdf,0
+LATEX_THEM_MUC_KHONG_ANH_SO_VAO_MUC_LUC,latex,them_muc_khong_anh_so_vao_muc_luc,Thêm thủ công mục không đánh số vào mục lục bằng addcontentsline.,Learn LaTeX in 30 minutes - Overleaf.pdf,0
+LATEX_BANG_TABULAR_CO_BAN,latex,bang_tabular_co_ban,"Tạo bảng bằng tabular; c l r xác định căn giữa, trái, phải; & ngăn ô và \\ kết thúc hàng.",Learn LaTeX in 30 minutes - Overleaf.pdf,0
+LATEX_BANG_CO_UONG_KE,latex,bang_co_uong_ke,Tạo đường kẻ ngang bằng hline và đường kẻ dọc bằng dấu,Learn LaTeX in 30 minutes - Overleaf.pdf,0
+LATEX_MOI_TRUONG_TABLE,latex,moi_truong_table,"Tạo bảng dạng float có căn giữa, tabular, caption và label.",Learn LaTeX in 30 minutes - Overleaf.pdf,0
+LATEX_CAN_GIUA_NOI_DUNG,latex,can_giua_noi_dung,Căn giữa một khối nội dung bằng center.,Learn LaTeX in 30 minutes - Overleaf.pdf,0
+QUADRATIC_EQUATION,latex,quadratic_equation,Tạo phương trình bậc hai,Learn LaTeX in 30 minutes - Overleaf.pdf,0
+OBSIDIAN_OBSIDIAN_BASIC_TIEU_E_1,obsidian,obsidian_basic,tiêu đề 1,knowledge_base(1).txt / OBSIDIAN_BASIC,0
+OBSIDIAN_OBSIDIAN_BASIC_TIEU_E_2,obsidian,obsidian_basic,tiêu đề 2,knowledge_base(1).txt / OBSIDIAN_BASIC,0
+OBSIDIAN_OBSIDIAN_BASIC_TIEU_E_3,obsidian,obsidian_basic,tiêu đề 3,knowledge_base(1).txt / OBSIDIAN_BASIC,0
+OBSIDIAN_OBSIDIAN_BASIC_CHU_AM,obsidian,obsidian_basic,chữ đậm,knowledge_base(1).txt / OBSIDIAN_BASIC,0
+OBSIDIAN_OBSIDIAN_BASIC_CHU_NGHIENG,obsidian,obsidian_basic,chữ nghiêng,knowledge_base(1).txt / OBSIDIAN_BASIC,0
+OBSIDIAN_OBSIDIAN_BASIC_GACH_NGANG,obsidian,obsidian_basic,gạch ngang,knowledge_base(1).txt / OBSIDIAN_BASIC,0
+OBSIDIAN_OBSIDIAN_BASIC_HIGHLIGHT,obsidian,obsidian_basic,highlight,knowledge_base(1).txt / OBSIDIAN_BASIC,0
+OBSIDIAN_OBSIDIAN_BASIC_LINK_NOI_BO,obsidian,obsidian_basic,link nội bộ,knowledge_base(1).txt / OBSIDIAN_BASIC,0
+OBSIDIAN_OBSIDIAN_BASIC_LINK_NOI_BO_CO_TEN,obsidian,obsidian_basic,link nội bộ có tên,knowledge_base(1).txt / OBSIDIAN_BASIC,0
+OBSIDIAN_OBSIDIAN_BASIC_LINK_WEB,obsidian,obsidian_basic,link web,knowledge_base(1).txt / OBSIDIAN_BASIC,0
+OBSIDIAN_OBSIDIAN_BASIC_ANH,obsidian,obsidian_basic,ảnh,knowledge_base(1).txt / OBSIDIAN_BASIC,0
+OBSIDIAN_OBSIDIAN_BASIC_TRICH_DAN,obsidian,obsidian_basic,trích dẫn,knowledge_base(1).txt / OBSIDIAN_BASIC,0
+OBSIDIAN_OBSIDIAN_BASIC_DANH_SACH,obsidian,obsidian_basic,danh sách,knowledge_base(1).txt / OBSIDIAN_BASIC,0
+OBSIDIAN_OBSIDIAN_BASIC_DANH_SACH_ANH_SO,obsidian,obsidian_basic,danh sách đánh số,knowledge_base(1).txt / OBSIDIAN_BASIC,0
+OBSIDIAN_OBSIDIAN_BASIC_CHECKBOX,obsidian,obsidian_basic,checkbox,knowledge_base(1).txt / OBSIDIAN_BASIC,0
+OBSIDIAN_OBSIDIAN_BASIC_CHECKBOX_HOAN_THANH,obsidian,obsidian_basic,checkbox hoàn thành,knowledge_base(1).txt / OBSIDIAN_BASIC,0
+OBSIDIAN_OBSIDIAN_BASIC_UONG_NGANG,obsidian,obsidian_basic,đường ngang,knowledge_base(1).txt / OBSIDIAN_BASIC,0
+OBSIDIAN_OBSIDIAN_BASIC_CODE_INLINE,obsidian,obsidian_basic,code inline,knowledge_base(1).txt / OBSIDIAN_BASIC,0
+OBSIDIAN_OBSIDIAN_BASIC_CODE_BLOCK,obsidian,obsidian_basic,code block,knowledge_base(1).txt / OBSIDIAN_BASIC,0
+OBSIDIAN_TABLE_BANG,obsidian,table,bảng,knowledge_base(1).txt / TABLE,0
+OBSIDIAN_TABLE_BANG_CAN_TRAI,obsidian,table,bảng căn trái,knowledge_base(1).txt / TABLE,0
+OBSIDIAN_TABLE_BANG_CAN_GIUA,obsidian,table,bảng căn giữa,knowledge_base(1).txt / TABLE,0
+OBSIDIAN_MERMAID_SO_O_LUONG,obsidian,mermaid,sơ đồ luồng,knowledge_base(1).txt / MERMAID,0
+MATH_MATH_BASIC_CONG_THUC_INLINE,math_shared,math_basic,công thức inline,knowledge_base(1).txt / MATH_BASIC,0
+MATH_MATH_BASIC_CONG_THUC_LON,math_shared,math_basic,công thức lớn,knowledge_base(1).txt / MATH_BASIC,0
+MATH_MATH_BASIC_PHAN_SO,math_shared,math_basic,phân số,knowledge_base(1).txt / MATH_BASIC,0
+MATH_MATH_BASIC_CAN,math_shared,math_basic,căn,knowledge_base(1).txt / MATH_BASIC,0
+MATH_MATH_BASIC_CAN_BAC_N,math_shared,math_basic,căn bậc n,knowledge_base(1).txt / MATH_BASIC,0
+MATH_MATH_BASIC_MU,math_shared,math_basic,mũ,knowledge_base(1).txt / MATH_BASIC,0
+MATH_MATH_BASIC_CHI_SO,math_shared,math_basic,chỉ số,knowledge_base(1).txt / MATH_BASIC,0
+MATH_MATH_BASIC_MU_VA_CHI_SO,math_shared,math_basic,mũ và chỉ số,knowledge_base(1).txt / MATH_BASIC,0
+MATH_MATH_BASIC_TONG,math_shared,math_basic,tổng,knowledge_base(1).txt / MATH_BASIC,0
+MATH_MATH_BASIC_TICH,math_shared,math_basic,tích,knowledge_base(1).txt / MATH_BASIC,0
+MATH_MATH_BASIC_TICH_PHAN,math_shared,math_basic,tích phân,knowledge_base(1).txt / MATH_BASIC,0
+MATH_MATH_BASIC_GIOI_HAN,math_shared,math_basic,giới hạn,knowledge_base(1).txt / MATH_BASIC,0
+MATH_MATH_BASIC_AO_HAM,math_shared,math_basic,đạo hàm,knowledge_base(1).txt / MATH_BASIC,0
+MATH_MATRIX_MA_TRAN,math_shared,matrix,ma trận,knowledge_base(1).txt / MATRIX,0
+MATH_MATRIX_MA_TRAN_2X2,math_shared,matrix,ma trận 2x2,knowledge_base(1).txt / MATRIX,0
+MATH_MATRIX_MA_TRAN_NGOAC_TRON,math_shared,matrix,ma trận ngoặc tròn,knowledge_base(1).txt / MATRIX,0
+MATH_MATRIX_MA_TRAN_NGOAC_VUONG,math_shared,matrix,ma trận ngoặc vuông,knowledge_base(1).txt / MATRIX,0
+MATH_MATRIX_MA_TRAN_NGOAC_NHON,math_shared,matrix,ma trận ngoặc nhọn,knowledge_base(1).txt / MATRIX,0
+MATH_MATRIX_INH_THUC,math_shared,matrix,định thức,knowledge_base(1).txt / MATRIX,0
+MATH_MATRIX_CHUAN_MA_TRAN,math_shared,matrix,chuẩn ma trận,knowledge_base(1).txt / MATRIX,0
+MATH_CASES_SYSTEMS_HAM_TUNG_OAN,math_shared,cases_systems,hàm từng đoạn,knowledge_base(1).txt / CASES_SYSTEMS,0
+MATH_CASES_SYSTEMS_HE_PHUONG_TRINH,math_shared,cases_systems,hệ phương trình,knowledge_base(1).txt / CASES_SYSTEMS,0
+MATH_ALIGN_ARRAY_CAN_CHINH_PHUONG_TRINH,math_shared,align_array,căn chỉnh phương trình,knowledge_base(1).txt / ALIGN_ARRAY,0
+MATH_ALIGN_ARRAY_BANG_TOAN_HOC,math_shared,align_array,bảng toán học,knowledge_base(1).txt / ALIGN_ARRAY,0
+MATH_ALIGN_ARRAY_BANG_TOAN_HOC_CAN_TRAI,math_shared,align_array,bảng toán học căn trái,knowledge_base(1).txt / ALIGN_ARRAY,0
+MATH_ALIGN_ARRAY_BANG_TOAN_HOC_CAN_GIUA,math_shared,align_array,bảng toán học căn giữa,knowledge_base(1).txt / ALIGN_ARRAY,0
+MATH_SYMBOLS_ALPHA,math_shared,symbols,alpha,knowledge_base(1).txt / SYMBOLS,0
+MATH_SYMBOLS_BETA,math_shared,symbols,beta,knowledge_base(1).txt / SYMBOLS,0
+MATH_SYMBOLS_GAMMA,math_shared,symbols,gamma,knowledge_base(1).txt / SYMBOLS,0
+MATH_SYMBOLS_DELTA,math_shared,symbols,delta,knowledge_base(1).txt / SYMBOLS,0
+MATH_SYMBOLS_THETA,math_shared,symbols,theta,knowledge_base(1).txt / SYMBOLS,0
+MATH_SYMBOLS_LAMBDA,math_shared,symbols,lambda,knowledge_base(1).txt / SYMBOLS,0
+MATH_SYMBOLS_PI,math_shared,symbols,pi,knowledge_base(1).txt / SYMBOLS,0
+MATH_SYMBOLS_SIGMA,math_shared,symbols,sigma,knowledge_base(1).txt / SYMBOLS,0
+MATH_SYMBOLS_OMEGA,math_shared,symbols,omega,knowledge_base(1).txt / SYMBOLS,0
+MATH_SYMBOLS_VO_CUNG,math_shared,symbols,vô cùng,knowledge_base(1).txt / SYMBOLS,0
+MATH_SYMBOLS_NABLA,math_shared,symbols,nabla,knowledge_base(1).txt / SYMBOLS,0
+MATH_SYMBOLS_PHAN_RIENG,math_shared,symbols,phần riêng,knowledge_base(1).txt / SYMBOLS,0
+MATH_SYMBOLS_SO_THUC,math_shared,symbols,số thực,knowledge_base(1).txt / SYMBOLS,0
+MATH_SYMBOLS_SO_TU_NHIEN,math_shared,symbols,số tự nhiên,knowledge_base(1).txt / SYMBOLS,0
+MATH_SYMBOLS_SO_NGUYEN,math_shared,symbols,số nguyên,knowledge_base(1).txt / SYMBOLS,0
+MATH_SYMBOLS_THUOC,math_shared,symbols,thuộc,knowledge_base(1).txt / SYMBOLS,0
+MATH_SYMBOLS_KHONG_THUOC,math_shared,symbols,không thuộc,knowledge_base(1).txt / SYMBOLS,0
+MATH_SYMBOLS_TAP_RONG,math_shared,symbols,tập rỗng,knowledge_base(1).txt / SYMBOLS,0
+MATH_SYMBOLS_HOP,math_shared,symbols,hợp,knowledge_base(1).txt / SYMBOLS,0
+MATH_SYMBOLS_GIAO,math_shared,symbols,giao,knowledge_base(1).txt / SYMBOLS,0
+MATH_SYMBOLS_TAP_CON,math_shared,symbols,tập con,knowledge_base(1).txt / SYMBOLS,0
+MATH_SYMBOLS_KHAC,math_shared,symbols,khác,knowledge_base(1).txt / SYMBOLS,0
+MATH_SYMBOLS_NHO_HON_HOAC_BANG,math_shared,symbols,nhỏ hơn hoặc bằng,knowledge_base(1).txt / SYMBOLS,0
+MATH_SYMBOLS_LON_HON_HOAC_BANG,math_shared,symbols,lớn hơn hoặc bằng,knowledge_base(1).txt / SYMBOLS,0
+MATH_SYMBOLS_XAP_XI,math_shared,symbols,xấp xỉ,knowledge_base(1).txt / SYMBOLS,0
+MATH_SYMBOLS_TUONG_UONG,math_shared,symbols,tương đương,knowledge_base(1).txt / SYMBOLS,0
+MATH_SYMBOLS_NHAN,math_shared,symbols,nhân,knowledge_base(1).txt / SYMBOLS,0
+MATH_SYMBOLS_CHIA,math_shared,symbols,chia,knowledge_base(1).txt / SYMBOLS,0
+MATH_SYMBOLS_CONG_TRU,math_shared,symbols,cộng trừ,knowledge_base(1).txt / SYMBOLS,0
+MATH_SYMBOLS_KEO_THEO,math_shared,symbols,kéo theo,knowledge_base(1).txt / SYMBOLS,0
+MATH_SYMBOLS_KHI_VA_CHI_KHI,math_shared,symbols,khi và chỉ khi,knowledge_base(1).txt / SYMBOLS,0
+MATH_SYMBOLS_VOI_MOI,math_shared,symbols,với mọi,knowledge_base(1).txt / SYMBOLS,0
+MATH_SYMBOLS_TON_TAI,math_shared,symbols,tồn tại,knowledge_base(1).txt / SYMBOLS,0
+MATH_SYMBOLS_MUI_TEN_PHAI,math_shared,symbols,mũi tên phải,knowledge_base(1).txt / SYMBOLS,0
+MATH_SETS_LOGIC_VA_LOGIC,math_shared,sets_logic,và logic,knowledge_base(1).txt / SETS_LOGIC,0
+MATH_SETS_LOGIC_HOAC_LOGIC,math_shared,sets_logic,hoặc logic,knowledge_base(1).txt / SETS_LOGIC,0
+MATH_SETS_LOGIC_PHU_INH,math_shared,sets_logic,phủ định,knowledge_base(1).txt / SETS_LOGIC,0
+MATH_SETS_LOGIC_CHUNG_MINH_UOC,math_shared,sets_logic,chứng minh được,knowledge_base(1).txt / SETS_LOGIC,0
+MATH_SETS_LOGIC_THOA_MAN,math_shared,sets_logic,thỏa mãn,knowledge_base(1).txt / SETS_LOGIC,0
+MATH_ACCENTS_DECORATIONS_VECTOR,math_shared,accents_decorations,vector,knowledge_base(1).txt / ACCENTS_DECORATIONS,0
+MATH_ACCENTS_DECORATIONS_VECTOR_DAI,math_shared,accents_decorations,vector dài,knowledge_base(1).txt / ACCENTS_DECORATIONS,0
+MATH_ACCENTS_DECORATIONS_GACH_TREN,math_shared,accents_decorations,gạch trên,knowledge_base(1).txt / ACCENTS_DECORATIONS,0
+MATH_ACCENTS_DECORATIONS_GACH_DUOI,math_shared,accents_decorations,gạch dưới,knowledge_base(1).txt / ACCENTS_DECORATIONS,0
+MATH_ACCENTS_DECORATIONS_DAU_NGA,math_shared,accents_decorations,dấu ngã,knowledge_base(1).txt / ACCENTS_DECORATIONS,0
+MATH_ACCENTS_DECORATIONS_DAU_MU,math_shared,accents_decorations,dấu mũ,knowledge_base(1).txt / ACCENTS_DECORATIONS,0
+MATH_ACCENTS_DECORATIONS_AO_HAM_CHAM,math_shared,accents_decorations,đạo hàm chấm,knowledge_base(1).txt / ACCENTS_DECORATIONS,0
+MATH_ACCENTS_DECORATIONS_ONG_KHUNG,math_shared,accents_decorations,đóng khung,knowledge_base(1).txt / ACCENTS_DECORATIONS,0
+MATH_ACCENTS_DECORATIONS_OVERBRACE,math_shared,accents_decorations,overbrace,knowledge_base(1).txt / ACCENTS_DECORATIONS,0
+MATH_ACCENTS_DECORATIONS_UNDERBRACE,math_shared,accents_decorations,underbrace,knowledge_base(1).txt / ACCENTS_DECORATIONS,0
+MATH_ACCENTS_DECORATIONS_CHU_PHIA_TREN,math_shared,accents_decorations,chữ phía trên,knowledge_base(1).txt / ACCENTS_DECORATIONS,0
+MATH_BRACKETS_SPACING_TEXT_NGOAC_TU_CO,math_shared,brackets_spacing_text,ngoặc tự co,knowledge_base(1).txt / BRACKETS_SPACING_TEXT,0
+MATH_BRACKETS_SPACING_TEXT_NGOAC_VUONG_TU_CO,math_shared,brackets_spacing_text,ngoặc vuông tự co,knowledge_base(1).txt / BRACKETS_SPACING_TEXT,0
+MATH_BRACKETS_SPACING_TEXT_NGOAC_NHON_TU_CO,math_shared,brackets_spacing_text,ngoặc nhọn tự co,knowledge_base(1).txt / BRACKETS_SPACING_TEXT,0
+MATH_BRACKETS_SPACING_TEXT_TRI_TUYET_OI,math_shared,brackets_spacing_text,trị tuyệt đối,knowledge_base(1).txt / BRACKETS_SPACING_TEXT,0
+MATH_BRACKETS_SPACING_TEXT_CHUAN_VECTOR,math_shared,brackets_spacing_text,chuẩn vector,knowledge_base(1).txt / BRACKETS_SPACING_TEXT,0
+MATH_BRACKETS_SPACING_TEXT_KHOANG_CACH_NHO,math_shared,brackets_spacing_text,khoảng cách nhỏ,knowledge_base(1).txt / BRACKETS_SPACING_TEXT,0
+MATH_BRACKETS_SPACING_TEXT_KHOANG_CACH_VUA,math_shared,brackets_spacing_text,khoảng cách vừa,knowledge_base(1).txt / BRACKETS_SPACING_TEXT,0
+MATH_BRACKETS_SPACING_TEXT_KHOANG_CACH_LON,math_shared,brackets_spacing_text,khoảng cách lớn,knowledge_base(1).txt / BRACKETS_SPACING_TEXT,0
+MATH_BRACKETS_SPACING_TEXT_KHOANG_CACH_RAT_LON,math_shared,brackets_spacing_text,khoảng cách rất lớn,knowledge_base(1).txt / BRACKETS_SPACING_TEXT,0
+MATH_BRACKETS_SPACING_TEXT_KHOANG_CACH_AM,math_shared,brackets_spacing_text,khoảng cách âm,knowledge_base(1).txt / BRACKETS_SPACING_TEXT,0
+MATH_FONT_CHU_BLACKBOARD,math_shared,font,chữ blackboard,knowledge_base(1).txt / FONT,0
+MATH_FONT_CHU_AM_TOAN,math_shared,font,chữ đậm toán,knowledge_base(1).txt / FONT,0
+MATH_FONT_VECTOR_AM,math_shared,font,vector đậm,knowledge_base(1).txt / FONT,0
+MATH_FONT_CHU_LA_MA,math_shared,font,chữ La Mã,knowledge_base(1).txt / FONT,0
+MATH_FONT_CHU_TYPEWRITER,math_shared,font,chữ typewriter,knowledge_base(1).txt / FONT,0
+MATH_FONT_CHU_SANS_SERIF,math_shared,font,chữ sans serif,knowledge_base(1).txt / FONT,0
+MATH_FONT_CHU_CALLIGRAPHIC,math_shared,font,chữ calligraphic,knowledge_base(1).txt / FONT,0
+MATH_FONT_CHU_SCRIPT,math_shared,font,chữ script,knowledge_base(1).txt / FONT,0
+MATH_SPACING_DEGREE_UNITS_O,math_shared,spacing_degree_units,độ,knowledge_base(1).txt / SPACING_DEGREE_UNITS,0
+MATH_SPACING_DEGREE_UNITS_MET,math_shared,spacing_degree_units,mét,knowledge_base(1).txt / SPACING_DEGREE_UNITS,0
+MATH_SPACING_DEGREE_UNITS_MET_VUONG,math_shared,spacing_degree_units,mét vuông,knowledge_base(1).txt / SPACING_DEGREE_UNITS,0
+MATH_SPACING_DEGREE_UNITS_MET_TREN_GIAY,math_shared,spacing_degree_units,mét trên giây,knowledge_base(1).txt / SPACING_DEGREE_UNITS,0
+MATH_SPACING_DEGREE_UNITS_MET_TREN_GIAY_BINH_PHUONG,math_shared,spacing_degree_units,mét trên giây bình phương,knowledge_base(1).txt / SPACING_DEGREE_UNITS,0
+MATH_SPACING_DEGREE_UNITS_MOL,math_shared,spacing_degree_units,mol,knowledge_base(1).txt / SPACING_DEGREE_UNITS,0
+MATH_SPACING_DEGREE_UNITS_ON_VI_NHAN,math_shared,spacing_degree_units,đơn vị nhân,knowledge_base(1).txt / SPACING_DEGREE_UNITS,0
+MATH_COLOR_HIGHLIGHT_MAU_O,math_shared,color_highlight,màu đỏ,knowledge_base(1).txt / COLOR_HIGHLIGHT,0
+MATH_COLOR_HIGHLIGHT_MAU_XANH,math_shared,color_highlight,màu xanh,knowledge_base(1).txt / COLOR_HIGHLIGHT,0
+MATH_NUMBERING_REFERENCES_PHUONG_TRINH_CO_SO,math_shared,numbering_references,phương trình có số,knowledge_base(1).txt / NUMBERING_REFERENCES,0
+MATH_NUMBERING_REFERENCES_GAN_NHAN_PHUONG_TRINH,math_shared,numbering_references,gắn nhãn phương trình,knowledge_base(1).txt / NUMBERING_REFERENCES,0
+OBSIDIAN_CALLOUTS_GHI_CHU,obsidian,callouts,ghi chú,knowledge_base(1).txt / CALLOUTS,0
+OBSIDIAN_CALLOUTS_THONG_TIN,obsidian,callouts,thông tin,knowledge_base(1).txt / CALLOUTS,0
+OBSIDIAN_CALLOUTS_MEO,obsidian,callouts,mẹo,knowledge_base(1).txt / CALLOUTS,0
+OBSIDIAN_CALLOUTS_CANH_BAO,obsidian,callouts,cảnh báo,knowledge_base(1).txt / CALLOUTS,0
+OBSIDIAN_CALLOUTS_CAU_HOI,obsidian,callouts,câu hỏi,knowledge_base(1).txt / CALLOUTS,0
+OBSIDIAN_CALLOUTS_THANH_CONG,obsidian,callouts,thành công,knowledge_base(1).txt / CALLOUTS,0
+OBSIDIAN_CALLOUTS_LOI,obsidian,callouts,lỗi,knowledge_base(1).txt / CALLOUTS,0
+OBSIDIAN_CALLOUTS_NGUY_HIEM,obsidian,callouts,nguy hiểm,knowledge_base(1).txt / CALLOUTS,0
+OBSIDIAN_CALLOUTS_BUG,obsidian,callouts,bug,knowledge_base(1).txt / CALLOUTS,0
+OBSIDIAN_CALLOUTS_CALLOUT_THU_GON,obsidian,callouts,callout thu gọn,knowledge_base(1).txt / CALLOUTS,0
+OBSIDIAN_TAGS_TAG,obsidian,tags,tag,knowledge_base(1).txt / TAGS,0
+OBSIDIAN_FOOTNOTES_CHU_THICH_CUOI_TRANG,obsidian,footnotes,chú thích cuối trang,knowledge_base(1).txt / FOOTNOTES,0
+OBSIDIAN_ESCAPE_ESCAPE_DAU_SAO,obsidian,escape,escape dấu sao,knowledge_base(1).txt / ESCAPE,0
+OBSIDIAN_ESCAPE_ESCAPE_GACH_DUOI,obsidian,escape,escape gạch dưới,knowledge_base(1).txt / ESCAPE,0
+OBSIDIAN_ESCAPE_ESCAPE_HASHTAG,obsidian,escape,escape hashtag,knowledge_base(1).txt / ESCAPE,0
+OBSIDIAN_ESCAPE_ESCAPE_BACKTICK,obsidian,escape,escape backtick,knowledge_base(1).txt / ESCAPE,0
+OBSIDIAN_ESCAPE_ESCAPE_PIPE,obsidian,escape,escape pipe,knowledge_base(1).txt / ESCAPE,0
+OBSIDIAN_ESCAPE_ESCAPE_TILDE,obsidian,escape,escape tilde,knowledge_base(1).txt / ESCAPE,0
+LATEX_SEC_001,latex,tutorial,The preamble of a document,"{'file': 'Learn LaTeX in 30 minutes - Overleaf, Online LaTeX Editor.pdf', 'start_page': 5, 'end_page': 8}",6620
+LATEX_SEC_002,latex,tutorial,Adding comments,"{'file': 'Learn LaTeX in 30 minutes - Overleaf, Online LaTeX Editor.pdf', 'start_page': 8, 'end_page': 9}",2127
+LATEX_SEC_003,latex,tutorial,"Bold, italics and underlining","{'file': 'Learn LaTeX in 30 minutes - Overleaf, Online LaTeX Editor.pdf', 'start_page': 9, 'end_page': 10}",2272
+LATEX_SEC_004,latex,tutorial,Adding images,"{'file': 'Learn LaTeX in 30 minutes - Overleaf, Online LaTeX Editor.pdf', 'start_page': 10, 'end_page': 13}",5010
+LATEX_SEC_005,latex,tutorial,"Captions, labels and references","{'file': 'Learn LaTeX in 30 minutes - Overleaf, Online LaTeX Editor.pdf', 'start_page': 13, 'end_page': 15}",4102
+LATEX_SEC_006,latex,tutorial,Unordered lists,"{'file': 'Learn LaTeX in 30 minutes - Overleaf, Online LaTeX Editor.pdf', 'start_page': 15, 'end_page': 16}",1234
+LATEX_SEC_007,latex,tutorial,Ordered lists,"{'file': 'Learn LaTeX in 30 minutes - Overleaf, Online LaTeX Editor.pdf', 'start_page': 16, 'end_page': 17}",2221
+LATEX_SEC_008,latex,tutorial,Inline math mode,"{'file': 'Learn LaTeX in 30 minutes - Overleaf, Online LaTeX Editor.pdf', 'start_page': 17, 'end_page': 17}",1421
+LATEX_SEC_009,latex,tutorial,Display math mode,"{'file': 'Learn LaTeX in 30 minutes - Overleaf, Online LaTeX Editor.pdf', 'start_page': 17, 'end_page': 18}",1745
+LATEX_SEC_010,latex,tutorial,More complete examples,"{'file': 'Learn LaTeX in 30 minutes - Overleaf, Online LaTeX Editor.pdf', 'start_page': 18, 'end_page': 22}",5670
+LATEX_SEC_011,latex,tutorial,Basic document structure,"{'file': 'Learn LaTeX in 30 minutes - Overleaf, Online LaTeX Editor.pdf', 'start_page': 22, 'end_page': 22}",193
+LATEX_SEC_012,latex,tutorial,Abstracts,"{'file': 'Learn LaTeX in 30 minutes - Overleaf, Online LaTeX Editor.pdf', 'start_page': 22, 'end_page': 22}",912
+LATEX_SEC_013,latex,tutorial,Paragraphs and new lines,"{'file': 'Learn LaTeX in 30 minutes - Overleaf, Online LaTeX Editor.pdf', 'start_page': 22, 'end_page': 24}",3871
+LATEX_SEC_014,latex,tutorial,Chapters and sections,"{'file': 'Learn LaTeX in 30 minutes - Overleaf, Online LaTeX Editor.pdf', 'start_page': 24, 'end_page': 27}",5155
+LATEX_SEC_015,latex,tutorial,Creating tables,"{'file': 'Learn LaTeX in 30 minutes - Overleaf, Online LaTeX Editor.pdf', 'start_page': 27, 'end_page': 28}",2906
+LATEX_SEC_016,latex,tutorial,Adding borders,"{'file': 'Learn LaTeX in 30 minutes - Overleaf, Online LaTeX Editor.pdf', 'start_page': 28, 'end_page': 31}",4423
+LATEX_SEC_017,latex,tutorial,Adding a Table of Contents,"{'file': 'Learn LaTeX in 30 minutes - Overleaf, Online LaTeX Editor.pdf', 'start_page': 31, 'end_page': 33}",3071
+LATEX_SEC_018,latex,tutorial,Downloading your finished document,"{'file': 'Learn LaTeX in 30 minutes - Overleaf, Online LaTeX Editor.pdf', 'start_page': 33, 'end_page': 33}",398
+LATEX_SEC_019,latex,tutorial,Finding and using LaTeX packages,"{'file': 'Learn LaTeX in 30 minutes - Overleaf, Online LaTeX Editor.pdf', 'start_page': 33, 'end_page': 34}",1235
+LATEX_SEC_020,latex,tutorial,Loading packages,"{'file': 'Learn LaTeX in 30 minutes - Overleaf, Online LaTeX Editor.pdf', 'start_page': 34, 'end_page': 35}",2944
+LATEX_SEC_021,latex,tutorial,Finding information about packages: CTAN,"{'file': 'Learn LaTeX in 30 minutes - Overleaf, Online LaTeX Editor.pdf', 'start_page': 35, 'end_page': 40}",10106
+LATEX_PAGE_001,latex,source_page,Trang 1,"{'file': 'Learn LaTeX in 30 minutes - Overleaf, Online LaTeX Editor.pdf', 'page': 1}",2180
+LATEX_PAGE_002,latex,source_page,Trang 2,"{'file': 'Learn LaTeX in 30 minutes - Overleaf, Online LaTeX Editor.pdf', 'page': 2}",3032
+LATEX_PAGE_003,latex,source_page,Trang 3,"{'file': 'Learn LaTeX in 30 minutes - Overleaf, Online LaTeX Editor.pdf', 'page': 3}",3169
+LATEX_PAGE_004,latex,source_page,Trang 4,"{'file': 'Learn LaTeX in 30 minutes - Overleaf, Online LaTeX Editor.pdf', 'page': 4}",2585
+LATEX_PAGE_005,latex,source_page,Trang 5,"{'file': 'Learn LaTeX in 30 minutes - Overleaf, Online LaTeX Editor.pdf', 'page': 5}",1865
+LATEX_PAGE_006,latex,source_page,Trang 6,"{'file': 'Learn LaTeX in 30 minutes - Overleaf, Online LaTeX Editor.pdf', 'page': 6}",2509
+LATEX_PAGE_007,latex,source_page,Trang 7,"{'file': 'Learn LaTeX in 30 minutes - Overleaf, Online LaTeX Editor.pdf', 'page': 7}",2642
+LATEX_PAGE_008,latex,source_page,Trang 8,"{'file': 'Learn LaTeX in 30 minutes - Overleaf, Online LaTeX Editor.pdf', 'page': 8}",856
+LATEX_PAGE_009,latex,source_page,Trang 9,"{'file': 'Learn LaTeX in 30 minutes - Overleaf, Online LaTeX Editor.pdf', 'page': 9}",2556
+LATEX_PAGE_010,latex,source_page,Trang 10,"{'file': 'Learn LaTeX in 30 minutes - Overleaf, Online LaTeX Editor.pdf', 'page': 10}",1897
+LATEX_PAGE_011,latex,source_page,Trang 11,"{'file': 'Learn LaTeX in 30 minutes - Overleaf, Online LaTeX Editor.pdf', 'page': 11}",2107
+LATEX_PAGE_012,latex,source_page,Trang 12,"{'file': 'Learn LaTeX in 30 minutes - Overleaf, Online LaTeX Editor.pdf', 'page': 12}",1506
+LATEX_PAGE_013,latex,source_page,Trang 13,"{'file': 'Learn LaTeX in 30 minutes - Overleaf, Online LaTeX Editor.pdf', 'page': 13}",2239
+LATEX_PAGE_014,latex,source_page,Trang 14,"{'file': 'Learn LaTeX in 30 minutes - Overleaf, Online LaTeX Editor.pdf', 'page': 14}",2002
+LATEX_PAGE_015,latex,source_page,Trang 15,"{'file': 'Learn LaTeX in 30 minutes - Overleaf, Online LaTeX Editor.pdf', 'page': 15}",2121
+LATEX_PAGE_016,latex,source_page,Trang 16,"{'file': 'Learn LaTeX in 30 minutes - Overleaf, Online LaTeX Editor.pdf', 'page': 16}",2249
+LATEX_PAGE_017,latex,source_page,Trang 17,"{'file': 'Learn LaTeX in 30 minutes - Overleaf, Online LaTeX Editor.pdf', 'page': 17}",1740
+LATEX_PAGE_018,latex,source_page,Trang 18,"{'file': 'Learn LaTeX in 30 minutes - Overleaf, Online LaTeX Editor.pdf', 'page': 18}",1921
+LATEX_PAGE_019,latex,source_page,Trang 19,"{'file': 'Learn LaTeX in 30 minutes - Overleaf, Online LaTeX Editor.pdf', 'page': 19}",1695
+LATEX_PAGE_020,latex,source_page,Trang 20,"{'file': 'Learn LaTeX in 30 minutes - Overleaf, Online LaTeX Editor.pdf', 'page': 20}",2069
+LATEX_PAGE_021,latex,source_page,Trang 21,"{'file': 'Learn LaTeX in 30 minutes - Overleaf, Online LaTeX Editor.pdf', 'page': 21}",1443
+LATEX_PAGE_022,latex,source_page,Trang 22,"{'file': 'Learn LaTeX in 30 minutes - Overleaf, Online LaTeX Editor.pdf', 'page': 22}",2081
+LATEX_PAGE_023,latex,source_page,Trang 23,"{'file': 'Learn LaTeX in 30 minutes - Overleaf, Online LaTeX Editor.pdf', 'page': 23}",1829
+LATEX_PAGE_024,latex,source_page,Trang 24,"{'file': 'Learn LaTeX in 30 minutes - Overleaf, Online LaTeX Editor.pdf', 'page': 24}",2247
+LATEX_PAGE_025,latex,source_page,Trang 25,"{'file': 'Learn LaTeX in 30 minutes - Overleaf, Online LaTeX Editor.pdf', 'page': 25}",2149
+LATEX_PAGE_026,latex,source_page,Trang 26,"{'file': 'Learn LaTeX in 30 minutes - Overleaf, Online LaTeX Editor.pdf', 'page': 26}",1416
+LATEX_PAGE_027,latex,source_page,Trang 27,"{'file': 'Learn LaTeX in 30 minutes - Overleaf, Online LaTeX Editor.pdf', 'page': 27}",2477
+LATEX_PAGE_028,latex,source_page,Trang 28,"{'file': 'Learn LaTeX in 30 minutes - Overleaf, Online LaTeX Editor.pdf', 'page': 28}",2271
+LATEX_PAGE_029,latex,source_page,Trang 29,"{'file': 'Learn LaTeX in 30 minutes - Overleaf, Online LaTeX Editor.pdf', 'page': 29}",1590
+LATEX_PAGE_030,latex,source_page,Trang 30,"{'file': 'Learn LaTeX in 30 minutes - Overleaf, Online LaTeX Editor.pdf', 'page': 30}",1627
+LATEX_PAGE_031,latex,source_page,Trang 31,"{'file': 'Learn LaTeX in 30 minutes - Overleaf, Online LaTeX Editor.pdf', 'page': 31}",1599
+LATEX_PAGE_032,latex,source_page,Trang 32,"{'file': 'Learn LaTeX in 30 minutes - Overleaf, Online LaTeX Editor.pdf', 'page': 32}",1191
+LATEX_PAGE_033,latex,source_page,Trang 33,"{'file': 'Learn LaTeX in 30 minutes - Overleaf, Online LaTeX Editor.pdf', 'page': 33}",2003
+LATEX_PAGE_034,latex,source_page,Trang 34,"{'file': 'Learn LaTeX in 30 minutes - Overleaf, Online LaTeX Editor.pdf', 'page': 34}",2652
+LATEX_PAGE_035,latex,source_page,Trang 35,"{'file': 'Learn LaTeX in 30 minutes - Overleaf, Online LaTeX Editor.pdf', 'page': 35}",1798
+LATEX_PAGE_036,latex,source_page,Trang 36,"{'file': 'Learn LaTeX in 30 minutes - Overleaf, Online LaTeX Editor.pdf', 'page': 36}",2696
+LATEX_PAGE_037,latex,source_page,Trang 37,"{'file': 'Learn LaTeX in 30 minutes - Overleaf, Online LaTeX Editor.pdf', 'page': 37}",1811
+LATEX_PAGE_038,latex,source_page,Trang 38,"{'file': 'Learn LaTeX in 30 minutes - Overleaf, Online LaTeX Editor.pdf', 'page': 38}",1821
+LATEX_PAGE_039,latex,source_page,Trang 39,"{'file': 'Learn LaTeX in 30 minutes - Overleaf, Online LaTeX Editor.pdf', 'page': 39}",1615
+LATEX_PAGE_040,latex,source_page,Trang 40,"{'file': 'Learn LaTeX in 30 minutes - Overleaf, Online LaTeX Editor.pdf', 'page': 40}",827
+OBS_0001,obsidian_mathjax,obsidian_basic,tiêu đề 1,"{'file': 'obsidian_knowledge_base.txt', 'section': 'OBSIDIAN_BASIC', 'line': 18}",8
+OBS_0002,obsidian_mathjax,obsidian_basic,tiêu đề 2,"{'file': 'obsidian_knowledge_base.txt', 'section': 'OBSIDIAN_BASIC', 'line': 20}",9
+OBS_0003,obsidian_mathjax,obsidian_basic,tiêu đề 3,"{'file': 'obsidian_knowledge_base.txt', 'section': 'OBSIDIAN_BASIC', 'line': 22}",10
+OBS_0004,obsidian_mathjax,obsidian_basic,chữ đậm,"{'file': 'obsidian_knowledge_base.txt', 'section': 'OBSIDIAN_BASIC', 'line': 24}",10
+OBS_0005,obsidian_mathjax,obsidian_basic,chữ nghiêng,"{'file': 'obsidian_knowledge_base.txt', 'section': 'OBSIDIAN_BASIC', 'line': 26}",8
+OBS_0006,obsidian_mathjax,obsidian_basic,gạch ngang,"{'file': 'obsidian_knowledge_base.txt', 'section': 'OBSIDIAN_BASIC', 'line': 28}",10
+OBS_0007,obsidian_mathjax,obsidian_basic,highlight,"{'file': 'obsidian_knowledge_base.txt', 'section': 'OBSIDIAN_BASIC', 'line': 30}",10
+OBS_0008,obsidian_mathjax,obsidian_basic,link nội bộ,"{'file': 'obsidian_knowledge_base.txt', 'section': 'OBSIDIAN_BASIC', 'line': 32}",10
+OBS_0009,obsidian_mathjax,obsidian_basic,link nội bộ có tên,"{'file': 'obsidian_knowledge_base.txt', 'section': 'OBSIDIAN_BASIC', 'line': 34}",18
+OBS_0010,obsidian_mathjax,obsidian_basic,link web,"{'file': 'obsidian_knowledge_base.txt', 'section': 'OBSIDIAN_BASIC', 'line': 36}",16
+OBS_0011,obsidian_mathjax,obsidian_basic,ảnh,"{'file': 'obsidian_knowledge_base.txt', 'section': 'OBSIDIAN_BASIC', 'line': 38}",15
+OBS_0012,obsidian_mathjax,obsidian_basic,trích dẫn,"{'file': 'obsidian_knowledge_base.txt', 'section': 'OBSIDIAN_BASIC', 'line': 40}",8
+OBS_0013,obsidian_mathjax,obsidian_basic,danh sách,"{'file': 'obsidian_knowledge_base.txt', 'section': 'OBSIDIAN_BASIC', 'line': 42}",8
+OBS_0014,obsidian_mathjax,obsidian_basic,danh sách đánh số,"{'file': 'obsidian_knowledge_base.txt', 'section': 'OBSIDIAN_BASIC', 'line': 44}",22
+OBS_0015,obsidian_mathjax,obsidian_basic,checkbox,"{'file': 'obsidian_knowledge_base.txt', 'section': 'OBSIDIAN_BASIC', 'line': 46}",12
+OBS_0016,obsidian_mathjax,obsidian_basic,checkbox hoàn thành,"{'file': 'obsidian_knowledge_base.txt', 'section': 'OBSIDIAN_BASIC', 'line': 48}",12
+OBS_0017,obsidian_mathjax,obsidian_basic,đường ngang,"{'file': 'obsidian_knowledge_base.txt', 'section': 'OBSIDIAN_BASIC', 'line': 50}",3
+OBS_0018,obsidian_mathjax,obsidian_basic,code inline,"{'file': 'obsidian_knowledge_base.txt', 'section': 'OBSIDIAN_BASIC', 'line': 52}",8
+OBS_0019,obsidian_mathjax,obsidian_basic,code block,"{'file': 'obsidian_knowledge_base.txt', 'section': 'OBSIDIAN_BASIC', 'line': 54}",26
+OBS_0020,obsidian_mathjax,table,bảng,"{'file': 'obsidian_knowledge_base.txt', 'section': 'TABLE', 'line': 60}",47
+OBS_0021,obsidian_mathjax,table,bảng căn trái,"{'file': 'obsidian_knowledge_base.txt', 'section': 'TABLE', 'line': 62}",49
+OBS_0022,obsidian_mathjax,table,bảng căn giữa,"{'file': 'obsidian_knowledge_base.txt', 'section': 'TABLE', 'line': 64}",51
+OBS_0023,obsidian_mathjax,mermaid,sơ đồ luồng,"{'file': 'obsidian_knowledge_base.txt', 'section': 'MERMAID', 'line': 71}",36
+OBS_0024,obsidian_mathjax,math_basic,công thức inline,"{'file': 'obsidian_knowledge_base.txt', 'section': 'MATH_BASIC', 'line': 78}",11
+OBS_0025,obsidian_mathjax,math_basic,công thức lớn,"{'file': 'obsidian_knowledge_base.txt', 'section': 'MATH_BASIC', 'line': 80}",17
+OBS_0026,obsidian_mathjax,math_basic,phân số,"{'file': 'obsidian_knowledge_base.txt', 'section': 'MATH_BASIC', 'line': 82}",27
+OBS_0027,obsidian_mathjax,math_basic,căn,"{'file': 'obsidian_knowledge_base.txt', 'section': 'MATH_BASIC', 'line': 84}",19
+OBS_0028,obsidian_mathjax,math_basic,căn bậc n,"{'file': 'obsidian_knowledge_base.txt', 'section': 'MATH_BASIC', 'line': 86}",24
+OBS_0029,obsidian_mathjax,math_basic,mũ,"{'file': 'obsidian_knowledge_base.txt', 'section': 'MATH_BASIC', 'line': 88}",20
+OBS_0030,obsidian_mathjax,math_basic,chỉ số,"{'file': 'obsidian_knowledge_base.txt', 'section': 'MATH_BASIC', 'line': 90}",20
+OBS_0031,obsidian_mathjax,math_basic,mũ và chỉ số,"{'file': 'obsidian_knowledge_base.txt', 'section': 'MATH_BASIC', 'line': 92}",30
+OBS_0032,obsidian_mathjax,math_basic,tổng,"{'file': 'obsidian_knowledge_base.txt', 'section': 'MATH_BASIC', 'line': 94}",35
+OBS_0033,obsidian_mathjax,math_basic,tích,"{'file': 'obsidian_knowledge_base.txt', 'section': 'MATH_BASIC', 'line': 96}",36
+OBS_0034,obsidian_mathjax,math_basic,tích phân,"{'file': 'obsidian_knowledge_base.txt', 'section': 'MATH_BASIC', 'line': 98}",39
+OBS_0035,obsidian_mathjax,math_basic,giới hạn,"{'file': 'obsidian_knowledge_base.txt', 'section': 'MATH_BASIC', 'line': 100}",31
+OBS_0036,obsidian_mathjax,math_basic,đạo hàm,"{'file': 'obsidian_knowledge_base.txt', 'section': 'MATH_BASIC', 'line': 102}",11
+OBS_0037,obsidian_mathjax,matrix,ma trận,"{'file': 'obsidian_knowledge_base.txt', 'section': 'MATRIX', 'line': 108}",40
+OBS_0038,obsidian_mathjax,matrix,ma trận 2x2,"{'file': 'obsidian_knowledge_base.txt', 'section': 'MATRIX', 'line': 110}",59
+OBS_0039,obsidian_mathjax,matrix,ma trận ngoặc tròn,"{'file': 'obsidian_knowledge_base.txt', 'section': 'MATRIX', 'line': 112}",42
+OBS_0040,obsidian_mathjax,matrix,ma trận ngoặc vuông,"{'file': 'obsidian_knowledge_base.txt', 'section': 'MATRIX', 'line': 114}",42
+OBS_0041,obsidian_mathjax,matrix,ma trận ngoặc nhọn,"{'file': 'obsidian_knowledge_base.txt', 'section': 'MATRIX', 'line': 116}",42
+OBS_0042,obsidian_mathjax,matrix,định thức,"{'file': 'obsidian_knowledge_base.txt', 'section': 'MATRIX', 'line': 118}",42
+OBS_0043,obsidian_mathjax,matrix,chuẩn ma trận,"{'file': 'obsidian_knowledge_base.txt', 'section': 'MATRIX', 'line': 120}",42
+OBS_0044,obsidian_mathjax,cases_systems,hàm từng đoạn,"{'file': 'obsidian_knowledge_base.txt', 'section': 'CASES_SYSTEMS', 'line': 127}",88
+OBS_0045,obsidian_mathjax,cases_systems,hệ phương trình,"{'file': 'obsidian_knowledge_base.txt', 'section': 'CASES_SYSTEMS', 'line': 129}",87
+OBS_0046,obsidian_mathjax,align_array,căn chỉnh phương trình,"{'file': 'obsidian_knowledge_base.txt', 'section': 'ALIGN_ARRAY', 'line': 135}",81
+OBS_0047,obsidian_mathjax,align_array,bảng toán học,"{'file': 'obsidian_knowledge_base.txt', 'section': 'ALIGN_ARRAY', 'line': 137}",61
+OBS_0048,obsidian_mathjax,align_array,bảng toán học căn trái,"{'file': 'obsidian_knowledge_base.txt', 'section': 'ALIGN_ARRAY', 'line': 139}",42
+OBS_0049,obsidian_mathjax,align_array,bảng toán học căn giữa,"{'file': 'obsidian_knowledge_base.txt', 'section': 'ALIGN_ARRAY', 'line': 141}",42
+OBS_0050,obsidian_mathjax,symbols,alpha,"{'file': 'obsidian_knowledge_base.txt', 'section': 'SYMBOLS', 'line': 147}",8
+OBS_0051,obsidian_mathjax,symbols,beta,"{'file': 'obsidian_knowledge_base.txt', 'section': 'SYMBOLS', 'line': 149}",7
+OBS_0052,obsidian_mathjax,symbols,gamma,"{'file': 'obsidian_knowledge_base.txt', 'section': 'SYMBOLS', 'line': 151}",8
+OBS_0053,obsidian_mathjax,symbols,delta,"{'file': 'obsidian_knowledge_base.txt', 'section': 'SYMBOLS', 'line': 153}",8
+OBS_0054,obsidian_mathjax,symbols,theta,"{'file': 'obsidian_knowledge_base.txt', 'section': 'SYMBOLS', 'line': 155}",8
+OBS_0055,obsidian_mathjax,symbols,lambda,"{'file': 'obsidian_knowledge_base.txt', 'section': 'SYMBOLS', 'line': 157}",9
+OBS_0056,obsidian_mathjax,symbols,pi,"{'file': 'obsidian_knowledge_base.txt', 'section': 'SYMBOLS', 'line': 159}",5
+OBS_0057,obsidian_mathjax,symbols,sigma,"{'file': 'obsidian_knowledge_base.txt', 'section': 'SYMBOLS', 'line': 161}",8
+OBS_0058,obsidian_mathjax,symbols,omega,"{'file': 'obsidian_knowledge_base.txt', 'section': 'SYMBOLS', 'line': 163}",8
+OBS_0059,obsidian_mathjax,symbols,vô cùng,"{'file': 'obsidian_knowledge_base.txt', 'section': 'SYMBOLS', 'line': 165}",8
+OBS_0060,obsidian_mathjax,symbols,nabla,"{'file': 'obsidian_knowledge_base.txt', 'section': 'SYMBOLS', 'line': 167}",8
+OBS_0061,obsidian_mathjax,symbols,phần riêng,"{'file': 'obsidian_knowledge_base.txt', 'section': 'SYMBOLS', 'line': 169}",10
+OBS_0062,obsidian_mathjax,symbols,số thực,"{'file': 'obsidian_knowledge_base.txt', 'section': 'SYMBOLS', 'line': 171}",12
+OBS_0063,obsidian_mathjax,symbols,số tự nhiên,"{'file': 'obsidian_knowledge_base.txt', 'section': 'SYMBOLS', 'line': 173}",12
+OBS_0064,obsidian_mathjax,symbols,số nguyên,"{'file': 'obsidian_knowledge_base.txt', 'section': 'SYMBOLS', 'line': 175}",12
+OBS_0065,obsidian_mathjax,symbols,thuộc,"{'file': 'obsidian_knowledge_base.txt', 'section': 'SYMBOLS', 'line': 177}",5
+OBS_0066,obsidian_mathjax,symbols,không thuộc,"{'file': 'obsidian_knowledge_base.txt', 'section': 'SYMBOLS', 'line': 179}",8
+OBS_0067,obsidian_mathjax,symbols,tập rỗng,"{'file': 'obsidian_knowledge_base.txt', 'section': 'SYMBOLS', 'line': 181}",11
+OBS_0068,obsidian_mathjax,symbols,hợp,"{'file': 'obsidian_knowledge_base.txt', 'section': 'SYMBOLS', 'line': 183}",6
+OBS_0069,obsidian_mathjax,symbols,giao,"{'file': 'obsidian_knowledge_base.txt', 'section': 'SYMBOLS', 'line': 185}",6
+OBS_0070,obsidian_mathjax,symbols,tập con,"{'file': 'obsidian_knowledge_base.txt', 'section': 'SYMBOLS', 'line': 187}",11
+OBS_0071,obsidian_mathjax,symbols,khác,"{'file': 'obsidian_knowledge_base.txt', 'section': 'SYMBOLS', 'line': 189}",6
+OBS_0072,obsidian_mathjax,symbols,nhỏ hơn hoặc bằng,"{'file': 'obsidian_knowledge_base.txt', 'section': 'SYMBOLS', 'line': 191}",6
+OBS_0073,obsidian_mathjax,symbols,lớn hơn hoặc bằng,"{'file': 'obsidian_knowledge_base.txt', 'section': 'SYMBOLS', 'line': 193}",6
+OBS_0074,obsidian_mathjax,symbols,xấp xỉ,"{'file': 'obsidian_knowledge_base.txt', 'section': 'SYMBOLS', 'line': 195}",9
+OBS_0075,obsidian_mathjax,symbols,tương đương,"{'file': 'obsidian_knowledge_base.txt', 'section': 'SYMBOLS', 'line': 197}",8
+OBS_0076,obsidian_mathjax,symbols,nhân,"{'file': 'obsidian_knowledge_base.txt', 'section': 'SYMBOLS', 'line': 199}",8
+OBS_0077,obsidian_mathjax,symbols,chia,"{'file': 'obsidian_knowledge_base.txt', 'section': 'SYMBOLS', 'line': 201}",6
+OBS_0078,obsidian_mathjax,symbols,cộng trừ,"{'file': 'obsidian_knowledge_base.txt', 'section': 'SYMBOLS', 'line': 203}",5
+OBS_0079,obsidian_mathjax,symbols,kéo theo,"{'file': 'obsidian_knowledge_base.txt', 'section': 'SYMBOLS', 'line': 205}",10
+OBS_0080,obsidian_mathjax,symbols,khi và chỉ khi,"{'file': 'obsidian_knowledge_base.txt', 'section': 'SYMBOLS', 'line': 207}",6
+OBS_0081,obsidian_mathjax,symbols,với mọi,"{'file': 'obsidian_knowledge_base.txt', 'section': 'SYMBOLS', 'line': 209}",9
+OBS_0082,obsidian_mathjax,symbols,tồn tại,"{'file': 'obsidian_knowledge_base.txt', 'section': 'SYMBOLS', 'line': 211}",9
+OBS_0083,obsidian_mathjax,symbols,mũi tên phải,"{'file': 'obsidian_knowledge_base.txt', 'section': 'SYMBOLS', 'line': 213}",13
+OBS_0084,obsidian_mathjax,sets_logic,và logic,"{'file': 'obsidian_knowledge_base.txt', 'section': 'SETS_LOGIC', 'line': 219}",7
+OBS_0085,obsidian_mathjax,sets_logic,hoặc logic,"{'file': 'obsidian_knowledge_base.txt', 'section': 'SETS_LOGIC', 'line': 221}",6
+OBS_0086,obsidian_mathjax,sets_logic,phủ định,"{'file': 'obsidian_knowledge_base.txt', 'section': 'SETS_LOGIC', 'line': 223}",9
+OBS_0087,obsidian_mathjax,sets_logic,chứng minh được,"{'file': 'obsidian_knowledge_base.txt', 'section': 'SETS_LOGIC', 'line': 225}",8
+OBS_0088,obsidian_mathjax,sets_logic,thỏa mãn,"{'file': 'obsidian_knowledge_base.txt', 'section': 'SETS_LOGIC', 'line': 227}",8
+OBS_0089,obsidian_mathjax,accents_decorations,vector,"{'file': 'obsidian_knowledge_base.txt', 'section': 'ACCENTS_DECORATIONS', 'line': 233}",9
+OBS_0090,obsidian_mathjax,accents_decorations,vector dài,"{'file': 'obsidian_knowledge_base.txt', 'section': 'ACCENTS_DECORATIONS', 'line': 235}",21
+OBS_0091,obsidian_mathjax,accents_decorations,gạch trên,"{'file': 'obsidian_knowledge_base.txt', 'section': 'ACCENTS_DECORATIONS', 'line': 237}",9
+OBS_0092,obsidian_mathjax,accents_decorations,gạch dưới,"{'file': 'obsidian_knowledge_base.txt', 'section': 'ACCENTS_DECORATIONS', 'line': 239}",15
+OBS_0093,obsidian_mathjax,accents_decorations,dấu ngã,"{'file': 'obsidian_knowledge_base.txt', 'section': 'ACCENTS_DECORATIONS', 'line': 241}",15
+OBS_0094,obsidian_mathjax,accents_decorations,dấu mũ,"{'file': 'obsidian_knowledge_base.txt', 'section': 'ACCENTS_DECORATIONS', 'line': 243}",13
+OBS_0095,obsidian_mathjax,accents_decorations,đạo hàm chấm,"{'file': 'obsidian_knowledge_base.txt', 'section': 'ACCENTS_DECORATIONS', 'line': 245}",9
+OBS_0096,obsidian_mathjax,accents_decorations,đóng khung,"{'file': 'obsidian_knowledge_base.txt', 'section': 'ACCENTS_DECORATIONS', 'line': 247}",18
+OBS_0097,obsidian_mathjax,accents_decorations,overbrace,"{'file': 'obsidian_knowledge_base.txt', 'section': 'ACCENTS_DECORATIONS', 'line': 249}",32
+OBS_0098,obsidian_mathjax,accents_decorations,underbrace,"{'file': 'obsidian_knowledge_base.txt', 'section': 'ACCENTS_DECORATIONS', 'line': 251}",33
+OBS_0099,obsidian_mathjax,accents_decorations,chữ phía trên,"{'file': 'obsidian_knowledge_base.txt', 'section': 'ACCENTS_DECORATIONS', 'line': 253}",29
+OBS_0100,obsidian_mathjax,brackets_spacing_text,ngoặc tự co,"{'file': 'obsidian_knowledge_base.txt', 'section': 'BRACKETS_SPACING_TEXT', 'line': 259}",23
+OBS_0101,obsidian_mathjax,brackets_spacing_text,ngoặc vuông tự co,"{'file': 'obsidian_knowledge_base.txt', 'section': 'BRACKETS_SPACING_TEXT', 'line': 261}",23
+OBS_0102,obsidian_mathjax,brackets_spacing_text,ngoặc nhọn tự co,"{'file': 'obsidian_knowledge_base.txt', 'section': 'BRACKETS_SPACING_TEXT', 'line': 263}",25
+OBS_0103,obsidian_mathjax,brackets_spacing_text,trị tuyệt đối,"{'file': 'obsidian_knowledge_base.txt', 'section': 'BRACKETS_SPACING_TEXT', 'line': 265}",23
+OBS_0104,obsidian_mathjax,brackets_spacing_text,chuẩn vector,"{'file': 'obsidian_knowledge_base.txt', 'section': 'BRACKETS_SPACING_TEXT', 'line': 267}",23
+OBS_0105,obsidian_mathjax,brackets_spacing_text,khoảng cách nhỏ,"{'file': 'obsidian_knowledge_base.txt', 'section': 'BRACKETS_SPACING_TEXT', 'line': 269}",6
+OBS_0106,obsidian_mathjax,brackets_spacing_text,khoảng cách vừa,"{'file': 'obsidian_knowledge_base.txt', 'section': 'BRACKETS_SPACING_TEXT', 'line': 271}",6
+OBS_0107,obsidian_mathjax,brackets_spacing_text,khoảng cách lớn,"{'file': 'obsidian_knowledge_base.txt', 'section': 'BRACKETS_SPACING_TEXT', 'line': 273}",10
+OBS_0108,obsidian_mathjax,brackets_spacing_text,khoảng cách rất lớn,"{'file': 'obsidian_knowledge_base.txt', 'section': 'BRACKETS_SPACING_TEXT', 'line': 275}",11
+OBS_0109,obsidian_mathjax,brackets_spacing_text,khoảng cách âm,"{'file': 'obsidian_knowledge_base.txt', 'section': 'BRACKETS_SPACING_TEXT', 'line': 277}",6
+OBS_0110,obsidian_mathjax,font,chữ blackboard,"{'file': 'obsidian_knowledge_base.txt', 'section': 'FONT', 'line': 283}",12
+OBS_0111,obsidian_mathjax,font,chữ đậm toán,"{'file': 'obsidian_knowledge_base.txt', 'section': 'FONT', 'line': 285}",14
+OBS_0112,obsidian_mathjax,font,vector đậm,"{'file': 'obsidian_knowledge_base.txt', 'section': 'FONT', 'line': 287}",21
+OBS_0113,obsidian_mathjax,font,chữ La Mã,"{'file': 'obsidian_knowledge_base.txt', 'section': 'FONT', 'line': 289}",14
+OBS_0114,obsidian_mathjax,font,chữ typewriter,"{'file': 'obsidian_knowledge_base.txt', 'section': 'FONT', 'line': 291}",14
+OBS_0115,obsidian_mathjax,font,chữ sans serif,"{'file': 'obsidian_knowledge_base.txt', 'section': 'FONT', 'line': 293}",14
+OBS_0116,obsidian_mathjax,font,chữ calligraphic,"{'file': 'obsidian_knowledge_base.txt', 'section': 'FONT', 'line': 295}",15
+OBS_0117,obsidian_mathjax,font,chữ script,"{'file': 'obsidian_knowledge_base.txt', 'section': 'FONT', 'line': 297}",15
+OBS_0118,obsidian_mathjax,spacing_degree_units,độ,"{'file': 'obsidian_knowledge_base.txt', 'section': 'SPACING_DEGREE_UNITS', 'line': 303}",10
+OBS_0119,obsidian_mathjax,spacing_degree_units,mét,"{'file': 'obsidian_knowledge_base.txt', 'section': 'SPACING_DEGREE_UNITS', 'line': 305}",12
+OBS_0120,obsidian_mathjax,spacing_degree_units,mét vuông,"{'file': 'obsidian_knowledge_base.txt', 'section': 'SPACING_DEGREE_UNITS', 'line': 307}",14
+OBS_0121,obsidian_mathjax,spacing_degree_units,mét trên giây,"{'file': 'obsidian_knowledge_base.txt', 'section': 'SPACING_DEGREE_UNITS', 'line': 309}",30
+OBS_0122,obsidian_mathjax,spacing_degree_units,mét trên giây bình phương,"{'file': 'obsidian_knowledge_base.txt', 'section': 'SPACING_DEGREE_UNITS', 'line': 311}",32
+OBS_0123,obsidian_mathjax,spacing_degree_units,mol,"{'file': 'obsidian_knowledge_base.txt', 'section': 'SPACING_DEGREE_UNITS', 'line': 313}",14
+OBS_0124,obsidian_mathjax,spacing_degree_units,đơn vị nhân,"{'file': 'obsidian_knowledge_base.txt', 'section': 'SPACING_DEGREE_UNITS', 'line': 315}",34
+OBS_0125,obsidian_mathjax,color_highlight,màu đỏ,"{'file': 'obsidian_knowledge_base.txt', 'section': 'COLOR_HIGHLIGHT', 'line': 321}",23
+OBS_0126,obsidian_mathjax,color_highlight,màu xanh,"{'file': 'obsidian_knowledge_base.txt', 'section': 'COLOR_HIGHLIGHT', 'line': 323}",24
+OBS_0127,obsidian_mathjax,numbering_references,phương trình có số,"{'file': 'obsidian_knowledge_base.txt', 'section': 'NUMBERING_REFERENCES', 'line': 329}",43
+OBS_0128,obsidian_mathjax,numbering_references,gắn nhãn phương trình,"{'file': 'obsidian_knowledge_base.txt', 'section': 'NUMBERING_REFERENCES', 'line': 331}",13
+OBS_0129,obsidian_mathjax,callouts,ghi chú,"{'file': 'obsidian_knowledge_base.txt', 'section': 'CALLOUTS', 'line': 337}",19
+OBS_0130,obsidian_mathjax,callouts,thông tin,"{'file': 'obsidian_knowledge_base.txt', 'section': 'CALLOUTS', 'line': 339}",19
+OBS_0131,obsidian_mathjax,callouts,mẹo,"{'file': 'obsidian_knowledge_base.txt', 'section': 'CALLOUTS', 'line': 341}",18
+OBS_0132,obsidian_mathjax,callouts,cảnh báo,"{'file': 'obsidian_knowledge_base.txt', 'section': 'CALLOUTS', 'line': 343}",22
+OBS_0133,obsidian_mathjax,callouts,câu hỏi,"{'file': 'obsidian_knowledge_base.txt', 'section': 'CALLOUTS', 'line': 345}",23
+OBS_0134,obsidian_mathjax,callouts,thành công,"{'file': 'obsidian_knowledge_base.txt', 'section': 'CALLOUTS', 'line': 347}",22
+OBS_0135,obsidian_mathjax,callouts,lỗi,"{'file': 'obsidian_knowledge_base.txt', 'section': 'CALLOUTS', 'line': 349}",22
+OBS_0136,obsidian_mathjax,callouts,nguy hiểm,"{'file': 'obsidian_knowledge_base.txt', 'section': 'CALLOUTS', 'line': 351}",21
+OBS_0137,obsidian_mathjax,callouts,bug,"{'file': 'obsidian_knowledge_base.txt', 'section': 'CALLOUTS', 'line': 353}",18
+OBS_0138,obsidian_mathjax,callouts,callout thu gọn,"{'file': 'obsidian_knowledge_base.txt', 'section': 'CALLOUTS', 'line': 355}",27
+OBS_0139,obsidian_mathjax,tags,tag,"{'file': 'obsidian_knowledge_base.txt', 'section': 'TAGS', 'line': 361}",6
+OBS_0140,obsidian_mathjax,footnotes,chú thích cuối trang,"{'file': 'obsidian_knowledge_base.txt', 'section': 'FOOTNOTES', 'line': 368}",32
+OBS_0141,obsidian_mathjax,escape,escape dấu sao,"{'file': 'obsidian_knowledge_base.txt', 'section': 'ESCAPE', 'line': 374}",2
+OBS_0142,obsidian_mathjax,escape,escape gạch dưới,"{'file': 'obsidian_knowledge_base.txt', 'section': 'ESCAPE', 'line': 376}",2
+OBS_0143,obsidian_mathjax,escape,escape hashtag,"{'file': 'obsidian_knowledge_base.txt', 'section': 'ESCAPE', 'line': 378}",2
+OBS_0144,obsidian_mathjax,escape,escape backtick,"{'file': 'obsidian_knowledge_base.txt', 'section': 'ESCAPE', 'line': 380}",2
+OBS_0145,obsidian_mathjax,escape,escape pipe,"{'file': 'obsidian_knowledge_base.txt', 'section': 'ESCAPE', 'line': 382}",2
+OBS_0146,obsidian_mathjax,escape,escape tilde,"{'file': 'obsidian_knowledge_base.txt', 'section': 'ESCAPE', 'line': 384}",2

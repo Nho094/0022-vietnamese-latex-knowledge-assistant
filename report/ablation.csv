@@ -1,0 +1,7 @@
+mode,accuracy,macro-F1,in_scope_accuracy,OOS_rejection_rate,false_rejection_rate,automatic_answer_share,need_choice_rate,top3_hit_rate,median_latency_ms,accuracy_ci95,macro_f1_ci95,status
+tfidf_only,,,,,,,,,,,,BLOCKED: no frozen five-seed predictions/artifact
+phobert_only,,,,,,,,,,,,BLOCKED: no frozen five-seed predictions/artifact
+retrieval_only,,,,,,,,,,,,BLOCKED: no frozen five-seed predictions/artifact
+phobert_retrieval,,,,,,,,,,,,BLOCKED: no frozen five-seed predictions/artifact
+phobert_retrieval_fuzzy,,,,,,,,,,,,BLOCKED: no frozen five-seed predictions/artifact
+two_tier,,,,,,,,,,,,BLOCKED: no frozen five-seed predictions/artifact

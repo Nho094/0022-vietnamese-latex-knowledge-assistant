@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f5f7fb" />
+    <title>Knowledge Manager · Vietnamese LaTeX Assistant</title>
+    <link rel="stylesheet" href="/ui/styles.css" />
+    <link rel="stylesheet" href="/ui/management.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="/ui/" aria-label="Knowledge Manager home">
+        <span class="brand-mark">K</span>
+        <span><strong>Knowledge Manager</strong><small>Vietnamese LaTeX Assistant</small></span>
+      </a>
+      <div class="top-actions">
+        <span class="local-badge"><i></i> Local workspace</span>
+        <button class="button button-primary" id="new-definition">＋ Thêm kiến thức</button>
+      </div>
+    </header>
+
+    <main class="shell">
+      <nav class="tabs" aria-label="Main navigation">
+        <button class="tab active" data-view="dashboard">Tổng quan</button>
+        <button class="tab" data-view="builder">Definition builder</button>
+      </nav>
+
+      <section id="dashboard-view" class="view">
+        <div class="page-heading">
+          <div>
+            <p class="eyebrow">KNOWLEDGE WORKSPACE</p>
+            <h1>Kiến thức của bạn</h1>
+            <p class="muted">Tìm, xem và mở rộng definition qua Data Contract v2.0.</p>
+          </div>
+          <button class="button button-primary" id="new-definition-heading">＋ Tạo definition</button>
+        </div>
+
+        <div class="stats-grid">
+          <article class="stat-card"><span class="stat-icon violet">▦</span><div><small>Definitions</small><strong id="definition-count">—</strong></div><span class="stat-foot">Intent registry</span></article>
+          <article class="stat-card"><span class="stat-icon green">✓</span><div><small>Contract</small><strong>v2.0</strong></div><span class="stat-foot">JSON Schema · 2020-12</span></article>
+          <article class="stat-card"><span class="stat-icon blue">⌕</span><div><small>Knowledge corpora</small><strong id="corpus-count">—</strong></div><span class="stat-foot">Nguồn tham khảo riêng</span></article>
+        </div>
+
+        <section class="panel management-panel">
+          <div class="panel-heading"><div><h2>Quản lý knowledge</h2><p class="muted">Import/export, đồng bộ registry và phục hồi phiên bản.</p></div></div>
+          <div class="management-actions">
+            <button class="button button-secondary" id="export-definitions">↓ Export JSON</button>
+            <button class="button button-secondary" id="open-import">↑ Import JSON</button>
+            <button class="button button-secondary" id="reload-definitions">↻ Reload registry</button>
+            <button class="button button-danger" id="rollback-definitions">Phục hồi phiên bản trước</button>
+          </div>
+        </section>
+
+        <section class="panel execute-panel">
+          <div class="panel-heading"><div><h2>Thử assistant</h2><p class="muted">Gửi câu tiếng Việt tới pipeline đang chạy sau publish/reload.</p></div></div>
+          <div class="execute-controls"><input id="execute-query" placeholder="Ví dụ: tạo một phân số tử số 2 mẫu số 3"/><button class="button button-primary" id="execute-query-button">Chạy thử</button></div>
+          <pre id="execute-result" class="execute-result">Kết quả API sẽ hiện ở đây.</pre>
+        </section>
+
+        <section class="panel">
+          <div class="panel-heading">
+            <div><h2>Intent definitions</h2><p class="muted">Definition mô tả nhận diện, dữ liệu đầu vào và cách render.</p></div>
+            <button class="button button-quiet" id="refresh-definitions">↻ Làm mới</button>
+          </div>
+          <div class="filters">
+            <label class="search-field"><span>⌕</span><input id="search-input" type="search" placeholder="Tìm intent, mô tả hoặc alias…" /></label>
+            <select id="category-filter" aria-label="Lọc category"><option value="">Tất cả category</option></select>
+            <select id="domain-filter" aria-label="Lọc domain"><option value="">Tất cả domain</option></select>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Definition</th><th>Category / domain</th><th>Version</th><th>Validation</th><th></th></tr></thead>
+              <tbody id="definition-rows"><tr><td colspan="5" class="empty-cell">Đang tải definitions…</td></tr></tbody>
+            </table>
+          </div>
+          <div class="table-footer"><span id="visible-count">—</span><span>Đọc từ definition registry</span></div>
+        </section>
+
+        <section class="panel corpus-panel">
+          <div class="panel-heading">
+            <div><p class="eyebrow">REFERENCE LIBRARY</p><h2>Knowledge corpus</h2><p class="muted">Các corpus tài liệu được giữ riêng; không chỉnh sửa bằng Intent Builder.</p></div>
+            <span class="readonly-badge">Chỉ đọc · tách biệt</span>
+          </div>
+          <div id="corpus-list" class="corpus-grid"><div class="empty-cell">Đang tải knowledge catalog…</div></div>
+        </section>
+      </section>
+
+      <section id="builder-view" class="view hidden">
+        <div class="page-heading builder-heading">
+          <div><button id="back-dashboard" class="back-link">← Quay lại tổng quan</button><p class="eyebrow">DEFINITION WORKSHOP</p><h1 id="builder-title">Tạo kiến thức mới</h1><p class="muted">Khai báo dữ liệu và primitive; engine sẽ thực thi definition.</p></div>
+          <span class="contract-badge">Contract v2.0</span>
+        </div>
+        <div class="wizard-layout">
+          <aside class="wizard-rail" id="wizard-steps" aria-label="Các bước tạo definition"></aside>
+          <section class="wizard-panel">
+            <div class="wizard-progress"><span id="step-progress"></span></div>
+            <div id="wizard-content"></div>
+            <div class="wizard-footer">
+              <button id="previous-step" class="button button-secondary">← Trước</button>
+              <div class="wizard-footer-right"><span id="wizard-message" class="inline-message"></span><button id="next-step" class="button button-primary">Tiếp theo →</button></div>
+            </div>
+          </section>
+        </div>
+      </section>
+    </main>
+
+    <dialog id="import-dialog" class="import-dialog">
+      <form method="dialog" class="dialog-close-row"><button class="row-open" aria-label="Đóng">×</button></form>
+      <h2>Import definitions</h2><p class="muted">Dán JSON array hoặc object có key <code>definitions</code>. Batch được validate trước khi ghi.</p>
+      <textarea id="import-json" placeholder='{"definitions": [...]}'></textarea>
+      <div id="import-status" class="inline-message" aria-live="polite"></div>
+      <div class="dialog-actions"><button class="button button-secondary" id="cancel-import" type="button">Đóng</button><button class="button button-primary" id="validate-import" type="button">Validate & import</button></div>
+    </dialog>
+
+    <div id="toast-region" class="toast-region" aria-live="polite"></div>
+    <script src="/ui/app.js" defer></script>
+  </body>
+</html>

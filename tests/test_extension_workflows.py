@@ -179,6 +179,7 @@ def test_system_status_reports_missing_checkpoints_without_loading_models(
 ) -> None:
     monkeypatch.setattr(server, "DEFAULT_CHECKPOINT_DIR", tmp_path / "no-classifier")
     monkeypatch.setattr(server, "SBERT_DIR", tmp_path / "no-retrieval")
+    monkeypatch.setattr(config, "SBERT_DIR", tmp_path / "no-retrieval")
     monkeypatch.setattr(server, "INDEX_CACHE_DIR", tmp_path / "index-cache")
     monkeypatch.setattr(config, "PHOBERT_DIR", tmp_path / "no-tokenizer")
     monkeypatch.setattr(config, "HF_CACHE_DIR", tmp_path / "empty-hf-cache")

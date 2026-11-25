@@ -28,7 +28,7 @@ export function request<T>(action: string, payload: Record<string, unknown> = {}
 
 export function subscribe(listener: (message: Record<string, unknown>) => void): () => void {
   const handler = (event: MessageEvent) => {
-    if (event.source === window && event.data && typeof event.data === "object") listener(event.data as Record<string, unknown>);
+    if (event.data && typeof event.data === "object") listener(event.data as Record<string, unknown>);
   };
   window.addEventListener("message", handler);
   vscode?.postMessage({ type: "ready" });

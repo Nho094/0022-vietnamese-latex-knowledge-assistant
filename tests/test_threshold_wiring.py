@@ -59,3 +59,20 @@ def test_pipeline_ignores_thresholds_for_smoke_checkpoint(tmp_path: Path, caplog
         pipeline = Pipeline(mode="phobert_only", checkpoint_dir=checkpoint, thresholds_path=thresholds)
     assert pipeline.tau != 0.9
     assert "checkpoint thật" in caplog.text
+
+
+def test_retrieval_only_loads_calibrated_theta_without_phobert_checkpoint(tmp_path: Path) -> None:
+    thresholds = tmp_path / "thresholds.json"
+    thresholds.write_text(json.dumps({
+        "tau": 0.8,
+        "theta": 0.41,
+        "temperature": 1.0,
+        "preprocessing_fingerprint": preprocess_fingerprint(),
+    }), encoding="utf-8")
+    pipeline = Pipeline(
+        mode="retrieval_only",
+        checkpoint_dir=tmp_path / "missing-phobert",
+        thresholds_path=thresholds,
+        lazy_load=True,
+    )
+    assert pipeline.theta == 0.41

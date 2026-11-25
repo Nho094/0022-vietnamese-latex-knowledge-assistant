@@ -1,0 +1,20 @@
+{
+  "model": "/KINGSTON/Github/0022-vietnamese-latex-knowledge-assistant/models/hf_cache/vietnamese-bi-encoder",
+  "mode": "retrieval_only (finetuned vietnamese-bi-encoder top-2 layers)",
+  "test_csv_sha256": "ef8781ba7d231aceaf9043b394acd343a23e6beac8454d168bfe4a19ad3886fd",
+  "test_set_status": "ai_draft_locked",
+  "test_count": 940,
+  "test_top1": 0.776596,
+  "test_recall3": 0.875532,
+  "test_mrr_top10": 0.833662,
+  "test_coverage_at_theta_0_41": 0.9085,
+  "test_min_score": 0.2858,
+  "test_mean_score": 0.5975,
+  "test_oos": {
+    "count": 27,
+    "max_score": 0.3311,
+    "mean_score": 0.2344,
+    "rejection_rate_at_0_41": 1.0
+  },
+  "elapsed_seconds": 16.59
+}

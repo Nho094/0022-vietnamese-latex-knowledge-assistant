@@ -198,6 +198,52 @@ STANDARD_CODE_SNIPPETS: Final[list[str]] = [
     "\\documentclass{article}",
 ]
 
+# Danh sách ma trận mẫu cho slot matrix / matrix_content
+STANDARD_MATRICES: Final[list[str]] = [
+    "1 2; 3 4",
+    "a b; c d",
+    "1 0; 0 1",
+    "2 -1; 4 3",
+    "x y; z w",
+]
+
+# Danh sách biểu thức toán tiêu chuẩn cho slot kiểu math
+STANDARD_MATH_EXPRS: Final[list[str]] = [
+    "x+1",
+    "a^2+b^2",
+    "2x-3",
+    "x^2",
+    "n+1",
+    "f(x)",
+    "sin(x)",
+    "\\alpha + \\beta",
+]
+
+# Nhãn tiếng Việt tự nhiên cho từng tên slot khi ghép khung tự động
+SLOT_PROMPT_LABELS: Final[dict[str, str]] = {
+    "text": "nội dung",
+    "expr": "biểu thức",
+    "matrix_content": "nội dung ma trận",
+    "condition": "điều kiện",
+    "num": "tử số",
+    "den": "mẫu số",
+    "base": "cơ số",
+    "exp": "số mũ",
+    "sub": "chỉ số dưới",
+    "from": "cận dưới",
+    "to": "cận trên",
+    "caption": "chú thích",
+    "label": "nhãn",
+    "filename": "tệp",
+    "file": "tệp",
+    "width": "độ rộng",
+    "package_name": "gói",
+    "options": "tùy chọn",
+    "title": "tiêu đề",
+    "author": "tác giả",
+    "thanks": "lời cảm ơn",
+}
+
 # Khung mẫu được thiết kế riêng thủ công cho các ý định quan trọng chứa slot đặc thù
 # Đảm bảo mỗi intent có 8-10 câu mẫu, kết hợp giữa slot placeholders và casual number-free frames
 HANDCRAFTED_INTENT_FRAMES: Final[dict[str, list[str]]] = {
@@ -310,28 +356,92 @@ HANDCRAFTED_INTENT_FRAMES: Final[dict[str, list[str]]] = {
         "{starter} làm mẫu đặt chú thích hình",
     ],
     "MATH_MATH_BASIC_PHAN_SO": [
+        "{starter} phân số tử số là {num} mẫu là {den}",
         "{starter} phân số tử số {num} và mẫu số {den}",
         "{starter} phân số {num} trên {den} trong LaTeX",
-        "{starter} biểu diễn phân số {num} phần {den}",
+        "{starter} biểu diễn phân số {num} phần {den} với MathJax",
         "{starter} công thức phân số {num}/{den}",
-        "{starter} phân số có tử {num} mẫu {den} bằng LaTeX",
+        "{starter} phân số có tử {num} mẫu {den}",
         "{starter} phân số toán học",
         "{starter} cách tạo phân số trong LaTeX",
-        "{starter} cú pháp biểu diễn phân số",
-        "{starter} viết phân số dạng frac",
-        "{starter} công thức phân số tổng quát bằng LaTeX",
+        "{starter} cú pháp biểu diễn phân số với MathJax",
+        "{starter} công thức phân số tổng quát bằng frac",
     ],
     "MATH_MATH_BASIC_CAN_BAC_N": [
         "{starter} căn bậc {n} của biểu thức {expr}",
         "{starter} tính căn bậc {n} của {expr} trong LaTeX",
-        "{starter} biểu diễn căn bậc {n} của {expr}",
+        "{starter} biểu diễn căn bậc {n} của {expr} với MathJax",
         "{starter} công thức căn bậc {n} cho {expr}",
-        "{starter} chèn căn bậc {n} của {expr} bằng LaTeX",
+        "{starter} chèn căn bậc {n} của {expr}",
         "{starter} viết căn bậc n tổng quát trong LaTeX",
         "{starter} cách tạo căn bậc n",
-        "{starter} cú pháp căn thức bậc n trong LaTeX",
+        "{starter} cú pháp căn thức bậc n với MathJax",
         "{starter} hướng dẫn biểu diễn căn bậc n",
-        "{starter} công thức căn bậc n bằng LaTeX",
+        "{starter} công thức căn bậc n trong toán học",
+    ],
+    "MATH_MATRIX_MA_TRAN_2X2": [
+        "{starter} ma trận 2x2 gồm {a}, {b}, {c}, {d}",
+        "{starter} tạo ma trận 2 nhân 2 hàng 1 là {a} {b} hàng 2 là {c} {d}",
+        "{starter} viết ma trận vuông 2x2 với a là {a}, b là {b}, c là {c}, d là {d}",
+        "{starter} biểu diễn ma trận hai hàng hai cột gồm {a}, {b}, {c}, {d}",
+        "{starter} ma trận 2x2 a={a} b={b} c={c} d={d} với MathJax",
+        "{starter} ma trận hai hàng hai cột trong LaTeX",
+        "{starter} cú pháp viết ma trận 2x2 với MathJax",
+        "{starter} cách viết ma trận vuông bậc hai",
+        "{starter} mẫu ma trận hai nhân hai chuẩn",
+        "{starter} hướng dẫn tạo ma trận cỡ hai nhân hai",
+    ],
+    "MATH_MATRIX_CHUAN_MA_TRAN": [
+        "{starter} chuẩn ma trận {matrix_content}",
+        "{starter} tạo chuẩn ma trận Vmatrix nội dung là {matrix_content}",
+        "{starter} viết chuẩn ma trận 2x2 gồm {matrix_content}",
+        "{starter} biểu diễn chuẩn của ma trận với các hàng {matrix_content}",
+        "{starter} chuẩn ma trận với MathJax nội dung ma trận là {matrix_content}",
+        "{starter} ký hiệu chuẩn ma trận hai gạch đứng Vmatrix",
+        "{starter} cách viết chuẩn ma trận với MathJax",
+        "{starter} cú pháp môi trường Vmatrix cho chuẩn ma trận",
+        "{starter} hướng dẫn viết chuẩn ma trận trong LaTeX",
+        "{starter} tạo định mức chuẩn ma trận hai sọc đứng",
+    ],
+    "MATH_MATRIX_MA_TRAN": [
+        "{starter} ma trận nội dung là {matrix_content}",
+        "{starter} tạo ma trận trơn gồm {matrix_content} với MathJax",
+        "{starter} biểu diễn ma trận có các hàng {matrix_content} trong LaTeX",
+        "{starter} viết môi trường matrix nội dung ma trận là {matrix_content}",
+        "{starter} tạo ma trận trơn trong toán học",
+        "{starter} cú pháp môi trường matrix cơ bản",
+        "{starter} cách viết ma trận nhiều hàng với MathJax",
+        "{starter} hướng dẫn tạo ma trận không dấu ngoặc",
+    ],
+    "MATH_MATRIX_MA_TRAN_NGOAC_TRON": [
+        "{starter} ma trận ngoặc tròn nội dung là {matrix_content}",
+        "{starter} tạo ma trận pmatrix gồm {matrix_content}",
+        "{starter} viết ma trận đóng ngoặc tròn các hàng {matrix_content} với MathJax",
+        "{starter} ma trận dấu ngoặc đơn pmatrix trong LaTeX",
+        "{starter} cách viết ma trận ngoặc tròn trong toán học",
+        "{starter} cú pháp môi trường pmatrix với MathJax",
+        "{starter} hướng dẫn tạo ma trận ngoặc tròn",
+        "{starter} mẫu ma trận pmatrix chuẩn",
+    ],
+    "MATH_MATRIX_MA_TRAN_NGOAC_VUONG": [
+        "{starter} ma trận ngoặc vuông nội dung là {matrix_content}",
+        "{starter} tạo ma trận bmatrix gồm {matrix_content}",
+        "{starter} viết ma trận đóng ngoặc vuông các hàng {matrix_content} với MathJax",
+        "{starter} ma trận dấu ngoặc vuông bmatrix trong LaTeX",
+        "{starter} cách viết ma trận ngoặc vuông trong toán học",
+        "{starter} cú pháp môi trường bmatrix với MathJax",
+        "{starter} hướng dẫn tạo ma trận ngoặc vuông",
+        "{starter} mẫu ma trận bmatrix chuẩn",
+    ],
+    "MATH_MATRIX_INH_THUC_MA_TRAN": [
+        "{starter} định thức ma trận nội dung là {matrix_content}",
+        "{starter} tạo định thức ma trận vmatrix gồm {matrix_content}",
+        "{starter} viết định thức dấu trị tuyệt đối các hàng {matrix_content} với MathJax",
+        "{starter} ký hiệu định thức ma trận một gạch đứng vmatrix",
+        "{starter} cách viết định thức ma trận trong LaTeX",
+        "{starter} cú pháp môi trường vmatrix với MathJax",
+        "{starter} hướng dẫn biểu diễn định thức của ma trận",
+        "{starter} mẫu định thức ma trận det chuẩn",
     ],
     "OUT_OF_SCOPE": [
         "hôm nay thời tiết thế nào",
@@ -414,50 +524,58 @@ def build_frames_for_intent(intent_info: dict[str, Any]) -> list[str]:
         if len(frames) >= MIN_FRAMES_PER_INTENT:
             return frames
 
-    # 2. Xây dựng khung tự động dựa trên thông tin intent và slots
+    # 2. Xây dựng khung tự động dựa trên thông tin intent, domain và slots
     describe = intent_info.get("describe", "")
     aliases = intent_info.get("aliases", [])
     slots = intent_info.get("slots", {})
+    category = intent_info.get("category", "tex_misc")
     action = extract_action_name(describe, aliases)
+
+    if category == "obsidian":
+        ctx_in = "trong Obsidian"
+        ctx_with = "theo cú pháp Markdown"
+        ctx_place = "vào ghi chú Obsidian"
+    elif category == "math_shared":
+        ctx_in = "trong toán học"
+        ctx_with = "với MathJax"
+        ctx_place = "trong LaTeX"
+    else:
+        ctx_in = "trong LaTeX"
+        ctx_with = "bằng LaTeX"
+        ctx_place = "vào tài liệu LaTeX"
 
     frames: list[str] = []
 
     if slots:
         slot_names = list(slots.keys())
-        # Khung 1: Khung chứa toàn bộ placeholder của slots kèm từ khóa latex
-        slot_parts = [f"{s} là {{{s}}}" for s in slot_names]
-        frames.append(f"{{starter}} {action} với {', '.join(slot_parts)} trong LaTeX")
-
-        # Khung 2: Khung chứa slots không có từ khóa latex
+        slot_parts = [f"{SLOT_PROMPT_LABELS.get(s, s)} là {{{s}}}" for s in slot_names]
+        # Khung 1-2: chứa nhãn slot tiếng Việt tự nhiên + từ khóa đúng domain
+        frames.append(f"{{starter}} {action} với {', '.join(slot_parts)} {ctx_in}")
         frames.append(f"{{starter}} {action} có {', '.join(slot_parts)}")
 
-        # Khung 3: Khung đưa trực tiếp các placeholder vào câu
-        direct_slots = " ".join([f"{{{s}}}" for s in slot_names])
-        frames.append(f"{{starter}} {action} {direct_slots} bằng LaTeX")
+        # Khung 3-5: lồng slot hợp lý với nhãn ngắn hoặc trực tiếp
+        direct_slots = " ".join([f"{SLOT_PROMPT_LABELS.get(s, s)} {{{s}}}" for s in slot_names])
+        frames.append(f"{{starter}} {action} {direct_slots} {ctx_with}")
+        frames.append(f"{{starter}} cú pháp {action} cho {', '.join(slot_parts)}")
+        frames.append(f"{{starter}} chèn {action} với {', '.join(slot_parts)} {ctx_place}")
 
-        # Khung 4: Biến thể cú pháp với slots
-        frames.append(f"{{starter}} cú pháp {action} cho {direct_slots}")
-
-        # Khung 5: Dạng câu chỉ thị chèn
-        frames.append(f"{{starter}} chèn {action} {direct_slots} vào văn bản")
-
-        # Khung 6-10: Các khung thông dụng KHÔNG chứa số hay slot placeholder (casual number-free frames)
+        # Khung 6-10: câu tự nhiên không chứa số hay slot placeholder
         frames.append(f"{{starter}} {action}")
-        frames.append(f"{{starter}} {action} trong LaTeX")
-        frames.append(f"{{starter}} cú pháp {action}")
-        frames.append(f"{{starter}} hướng dẫn tạo {action} bằng LaTeX")
+        frames.append(f"{{starter}} {action} {ctx_in}")
+        frames.append(f"{{starter}} cú pháp {action} {ctx_with}")
+        frames.append(f"{{starter}} hướng dẫn tạo {action} {ctx_in}")
         frames.append(f"{{starter}} làm mẫu {action} chuẩn")
     else:
-        # Đối với intent không có slots: tạo 10 biến thể tự nhiên kết hợp starter và chọn lọc chèn 'latex'
+        # Đối với intent không có slots: tạo 10 biến thể đúng domain
         frames.append(f"{{starter}} {action}")
-        frames.append(f"{{starter}} {action} trong LaTeX")
+        frames.append(f"{{starter}} {action} {ctx_in}")
         frames.append(f"{{starter}} cú pháp {action}")
-        frames.append(f"{{starter}} hướng dẫn tạo {action} bằng LaTeX")
-        frames.append(f"{{starter}} cách viết {action}")
-        frames.append(f"{{starter}} biểu diễn {action} trong LaTeX")
+        frames.append(f"{{starter}} hướng dẫn tạo {action} {ctx_with}")
+        frames.append(f"{{starter}} cách viết {action} {ctx_in}")
+        frames.append(f"{{starter}} biểu diễn {action} {ctx_with}")
         frames.append(f"{{starter}} tạo nhanh {action}")
-        frames.append(f"{{starter}} làm mẫu {action} bằng LaTeX")
-        frames.append(f"{{starter}} chèn {action} vào tài liệu")
+        frames.append(f"{{starter}} làm mẫu {action} {ctx_in}")
+        frames.append(f"{{starter}} chèn {action} {ctx_place}")
         frames.append(f"{{starter}} cấu trúc {action} chuẩn")
 
     # Giới hạn số khung theo đúng ngưỡng cấu hình (8-10 mẫu)
@@ -515,8 +633,8 @@ def generate_slot_value(slot_name: str, slot_def: dict[str, Any], rng: random.Ra
     """
     slot_type = slot_def.get("type", "text")
 
-    # 1. Slot số nguyên (Integer slots: -9 đến 9, không có hệ số 0 đứng đầu)
-    if slot_type == "number" or slot_name in ("a", "b", "c", "n"):
+    # 1. Slot số nguyên / hệ số số học
+    if slot_type == "number" or slot_name in ("a", "b", "c", "d", "n"):
         if slot_name == "a":
             # Hệ số bậc hai trong phương trình bậc hai hoặc hệ số đầu không được bằng 0
             non_zero_choices = [
@@ -528,7 +646,7 @@ def generate_slot_value(slot_name: str, slot_def: dict[str, Any], rng: random.Ra
             # Bậc của căn thức (căn bậc 2 đến căn bậc 9)
             val = rng.randint(2, DEFAULT_INTEGER_MAX)
             return str(val)
-        if slot_name in ("b", "c"):
+        if slot_name in ("b", "c", "d"):
             val = rng.randint(DEFAULT_INTEGER_MIN, DEFAULT_INTEGER_MAX)
             return str(val)
         if slot_name == "width":
@@ -537,6 +655,22 @@ def generate_slot_value(slot_name: str, slot_def: dict[str, Any], rng: random.Ra
         # Số nguyên chung từ -9 đến 9 không có số 0 dẫn đầu
         choices = [i for i in range(DEFAULT_INTEGER_MIN, DEFAULT_INTEGER_MAX + 1) if i != 0]
         return str(rng.choice(choices))
+
+    # 1b. Slot ma trận
+    if slot_type == "matrix" or slot_name == "matrix_content":
+        return rng.choice(STANDARD_MATRICES)
+
+    # 1c. Slot biểu thức toán
+    if slot_type == "math":
+        if slot_name == "condition":
+            return rng.choice(["x -> 0", "n -> \\infty", "x -> 1", "x -> a"])
+        if slot_name == "from":
+            return rng.choice(["i=1", "k=0", "n=1", "k=1"])
+        if slot_name == "to":
+            return rng.choice(["n", "N", "\\infty", "10"])
+        if slot_name in ("num", "den", "exp", "sub"):
+            return rng.choice(["2", "3", "5", "x", "x+1", "n", "k"])
+        return rng.choice(STANDARD_MATH_EXPRS)
 
     # 2. Slot tệp tin (File slots: standard filenames)
     if slot_type == "filename" or slot_name in ("filename", "file"):
@@ -714,10 +848,15 @@ def generate_synthetic_sentences(
         # Nếu sau số lần thử vẫn chưa đủ câu do bộ khung quá hẹp, tạo thêm biến thể starter có seed
         if len(intent_samples) < samples_per_intent:
             action = extract_action_name(item.get("describe", ""), item.get("aliases", []))
+            fallback_ctx = (
+                "trong Obsidian"
+                if category == "obsidian"
+                else ("trong toán học" if category == "math_shared" else "trong LaTeX")
+            )
             for starter in VIETNAMESE_PROMPT_STARTERS:
                 if len(intent_samples) >= samples_per_intent:
                     break
-                fallback_candidate = f"{starter} {action} trong LaTeX để sử dụng"
+                fallback_candidate = f"{starter} {action} {fallback_ctx} để sử dụng"
                 norm_fb = normalize_sentence(fallback_candidate)
                 if norm_fb not in train_seen_normalized:
                     train_seen_normalized.add(norm_fb)

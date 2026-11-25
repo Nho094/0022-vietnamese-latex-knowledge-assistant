@@ -63,12 +63,17 @@ class KnowledgeExtension {
         context.subscriptions.push(this.output, this.statusItem);
     }
     activate() {
-        this.context.subscriptions.push(vscode.commands.registerCommand("vietnameseKnowledgeAssistant.openDashboard", () => this.openPanel("dashboard")), vscode.commands.registerCommand("vietnameseKnowledgeAssistant.createKnowledge", () => this.openPanel("builder")), vscode.commands.registerCommand("vietnameseKnowledgeAssistant.checkBackend", () => this.checkBackend()), vscode.commands.registerCommand("vietnameseKnowledgeAssistant.runDirective", (uri, line) => this.runDirective(uri, line)), vscode.languages.registerCodeActionsProvider(Object.keys(directive_1.directiveCommentPrefixes).map((language) => ({ language })), new DirectiveCodeActionProvider(), { providedCodeActionKinds: [vscode.CodeActionKind.QuickFix] }), vscode.window.registerWebviewPanelSerializer("vietnameseKnowledgeAssistant.dashboard", {
+        this.context.subscriptions.push(vscode.commands.registerCommand("vietnameseKnowledgeAssistant.openDashboard", () => this.openPanel("dashboard")), vscode.commands.registerCommand("vietnameseKnowledgeAssistant.createKnowledge", () => this.openPanel("builder")), vscode.commands.registerCommand("vietnameseKnowledgeAssistant.checkBackend", () => this.checkBackend()), vscode.commands.registerCommand("vietnameseKnowledgeAssistant.runDirective", (uri, line) => this.runDirective(uri, line)), vscode.languages.registerCodeActionsProvider([{ scheme: "file" }, { scheme: "untitled" }], new DirectiveCodeActionProvider(() => this.getCustomCommentPrefixes()), { providedCodeActionKinds: [vscode.CodeActionKind.QuickFix] }), vscode.window.registerWebviewPanelSerializer("vietnameseKnowledgeAssistant.dashboard", {
             deserializeWebviewPanel: async (panel) => {
                 this.initialPage = "dashboard";
                 panel.webview.options = this.webviewOptions();
                 this.attachPanel(panel);
             },
+        }), vscode.workspace.onDidChangeConfiguration((event) => {
+            if (event.affectsConfiguration("vietnameseKnowledgeAssistant.modelRoot")
+                || event.affectsConfiguration("vietnameseKnowledgeAssistant.pythonPath")) {
+                void this.backend.stop().then(() => this.backend.start());
+            }
         }));
         void this.backend.start();
     }
@@ -123,6 +128,7 @@ class KnowledgeExtension {
         panel.webview.html = this.webviewHtml(panel.webview);
         panel.onDidDispose(() => { this.panel = undefined; }, null, this.context.subscriptions);
         panel.webview.onDidReceiveMessage((message) => void this.handleMessage(panel, message), null, this.context.subscriptions);
+        void panel.webview.postMessage({ type: "serviceStatus", status: this.backend.currentStatus });
     }
     webviewHtml(webview) {
         const root = vscode.Uri.joinPath(this.context.extensionUri, "extension", "webview", "dist");
@@ -162,6 +168,10 @@ html,body{margin:0;min-height:100%;background:#101014;color:#f4f4f5;font:14px sy
 <script defer nonce="${nonce}" src="${scriptUri}"></script></body></html>`;
     }
     async handleMessage(panel, message) {
+        if (message.type === "ready") {
+            await panel.webview.postMessage({ type: "serviceStatus", status: this.backend.currentStatus });
+            return;
+        }
         if (!message.action || !message.id)
             return;
         try {
@@ -222,9 +232,16 @@ html,body{margin:0;min-height:100%;background:#101014;color:#f4f4f5;font:14px sy
                 }
                 const result = await this.backend.request("/knowledge/publish", {
                     method: "POST",
-                    body: { definition: payload.definition, overwrite },
+                    body: {
+                        definition: payload.definition,
+                        overwrite,
+                        auto_train_on_milestone: payload.auto_train_on_milestone !== false,
+                    },
                 });
                 this.logActivity(overwrite ? "updated" : "created", result.intent, String(payload.title ?? result.intent));
+                if (result.milestone?.training_running || result.milestone?.milestone_ready) {
+                    void vscode.window.showInformationMessage(`Đạt mốc ${result.milestone.threshold ?? 10} kiến thức mới: hệ thống đã bắt đầu sinh train/val & tối ưu Retrieval trên nền.`);
+                }
                 return result;
             }
             case "deleteDefinition": {
@@ -247,7 +264,12 @@ html,body{margin:0;min-height:100%;background:#101014;color:#f4f4f5;font:14px sy
             case "ask": {
                 const result = await this.backend.request("/ask", {
                     method: "POST",
-                    body: { text: String(payload.text ?? ""), target: String(payload.target ?? "latex") },
+                    body: {
+                        text: String(payload.text ?? ""),
+                        target: String(payload.target ?? "auto"),
+                        ...(payload.language_id ? { language_id: String(payload.language_id) } : {}),
+                        ...(payload.category ? { category: String(payload.category) } : {}),
+                    },
                 });
                 return this.filterDisabled(result);
             }
@@ -258,11 +280,34 @@ html,body{margin:0;min-height:100%;background:#101014;color:#f4f4f5;font:14px sy
                         text: String(payload.text ?? ""),
                         candidate: String(payload.candidate ?? ""),
                         values: payload.values ?? {},
-                        target: String(payload.target ?? "latex"),
+                        target: String(payload.target ?? "auto"),
+                        ...(payload.language_id ? { language_id: String(payload.language_id) } : {}),
+                        record_feedback: payload.record_feedback !== false,
                     },
                 });
                 return this.filterDisabled(result);
             }
+            case "learningStatus":
+                return this.backend.request("/knowledge/learning/status");
+            case "triggerMilestoneTraining": {
+                const result = await this.backend.request("/knowledge/learning/train", {
+                    method: "POST",
+                    body: {
+                        background: payload.background !== false,
+                        ...(typeof payload.epochs === "number" ? { epochs: payload.epochs } : {}),
+                    },
+                });
+                this.logActivity("trained", undefined, "Tối ưu Retrieval theo mốc kiến thức");
+                return result;
+            }
+            case "learnAlias":
+                return this.backend.request("/knowledge/learning/alias", {
+                    method: "POST",
+                    body: {
+                        intent: String(payload.intent ?? ""),
+                        query: String(payload.query ?? payload.alias ?? ""),
+                    },
+                });
             case "rollback": {
                 const version = String(payload.version ?? "");
                 const confirm = await vscode.window.showWarningMessage("Phục hồi sẽ thay bank kiến thức hiện tại bằng snapshot đã chọn. Extension tạo backup trước khi thay đổi.", { modal: true }, "Phục hồi");
@@ -296,6 +341,9 @@ html,body{margin:0;min-height:100%;background:#101014;color:#f4f4f5;font:14px sy
                 return { opened: true };
             case "openAdvancedSettings":
                 await vscode.commands.executeCommand("workbench.action.openSettings", "vietnameseKnowledgeAssistant.");
+                return { opened: true };
+            case "openCommentSettings":
+                await vscode.commands.executeCommand("workbench.action.openSettings", "vietnameseKnowledgeAssistant.commentSyntaxes");
                 return { opened: true };
             case "checkBackend":
                 return this.backend.start();
@@ -393,8 +441,8 @@ html,body{margin:0;min-height:100%;background:#101014;color:#f4f4f5;font:14px sy
         const document = uri && uri.toString() !== editor.document.uri.toString()
             ? await vscode.workspace.openTextDocument(uri)
             : editor.document;
-        const directive = (0, directive_1.parseKnowledgeDirective)(document.languageId, document.lineAt(line).text);
-        if (!directive) {
+        const parsed = (0, directive_1.parseScopedDirective)(document.languageId, document.lineAt(line).text, this.getCustomCommentPrefixes());
+        if (!parsed) {
             void vscode.window.showInformationMessage("Dòng hiện tại chưa có chỉ thị. Thêm comment dạng A: yêu cầu của bạn.");
             return;
         }
@@ -406,18 +454,33 @@ html,body{margin:0;min-height:100%;background:#101014;color:#f4f4f5;font:14px sy
             range: document.lineAt(line).range,
             documentVersion: document.version,
         };
-        await this.openPanel("dashboard");
+        const requestTarget = parsed.targetOverride ?? "auto";
+        const requestCategory = parsed.categoryOverride;
         let result = await this.backend.request("/ask", {
-            method: "POST", body: { text: directive, target: "latex" },
+            method: "POST",
+            body: {
+                text: parsed.query,
+                target: requestTarget,
+                language_id: document.languageId,
+                ...(requestCategory ? { category: requestCategory } : {}),
+            },
         });
         if (result.status === "need_choice") {
             result = this.filterDisabled(result);
             const candidates = (result.candidates ?? []);
-            const selected = await vscode.window.showQuickPick(candidates.map((item) => ({ label: item.describe || item.intent, description: item.intent, intent: item.intent })), { title: "Chọn kiến thức phù hợp", placeHolder: "Chọn một kết quả rồi xem trước" });
+            const selected = await vscode.window.showQuickPick(candidates.map((item) => ({ label: item.describe || item.intent, description: item.intent, intent: item.intent })), { title: "Chọn kiến thức phù hợp", placeHolder: "Chọn một kết quả rồi xuất Output" });
             if (!selected)
                 return;
             result = await this.backend.request("/ask/choose", {
-                method: "POST", body: { text: directive, candidate: selected.intent, target: "latex", values: {} },
+                method: "POST",
+                body: {
+                    text: parsed.query,
+                    candidate: selected.intent,
+                    target: requestTarget,
+                    language_id: document.languageId,
+                    values: {},
+                    record_feedback: true,
+                },
             });
         }
         const enteredValues = {};
@@ -433,18 +496,86 @@ html,body{margin:0;min-height:100%;background:#101014;color:#f4f4f5;font:14px sy
                 return;
             enteredValues[field] = value;
             result = await this.backend.request("/ask/choose", {
-                method: "POST", body: { text: directive, candidate: String(result.intent ?? ""), target: "latex", values: enteredValues },
+                method: "POST",
+                body: {
+                    text: parsed.query,
+                    candidate: String(result.intent ?? ""),
+                    target: requestTarget,
+                    language_id: document.languageId,
+                    values: enteredValues,
+                    record_feedback: false,
+                },
             });
         }
-        if (result.status !== "ok" || typeof result.latex_code !== "string") {
+        const renderedOutput = this.extractResultOutput(result, requestTarget);
+        if (result.status !== "ok" || typeof renderedOutput !== "string") {
             const message = result.message || "Chưa tìm thấy kiến thức phù hợp cho chỉ thị này.";
             const action = await vscode.window.showWarningMessage(message, "Tạo kiến thức mới");
             if (action === "Tạo kiến thức mới")
-                this.openPanel("builder");
+                await this.openPanel("builder");
             return;
         }
-        this.pendingEditorOutput = result.latex_code;
-        this.panel?.webview.postMessage({ type: "editorPreview", output: result.latex_code, directive });
+        this.formatOutputToChannel(parsed.rawQuery, document.languageId, result, renderedOutput);
+        this.pendingEditorOutput = renderedOutput;
+        this.panel?.webview.postMessage({ type: "editorPreview", output: renderedOutput, directive: parsed.query });
+        const mode = this.getDirectiveOutputMode();
+        if (mode === "replace") {
+            await this.insertEditorOutput(renderedOutput);
+        }
+        else if (mode === "outputAndPreview") {
+            await this.openPanel("dashboard");
+            this.panel?.webview.postMessage({ type: "editorPreview", output: renderedOutput, directive: parsed.query });
+        }
+        this.logActivity("generated", String(result.intent ?? ""), `Output: ${parsed.query.slice(0, 48)}`);
+    }
+    getCustomCommentPrefixes() {
+        return vscode.workspace
+            .getConfiguration("vietnameseKnowledgeAssistant")
+            .get("commentSyntaxes", {});
+    }
+    getDirectiveOutputMode() {
+        const raw = vscode.workspace
+            .getConfiguration("vietnameseKnowledgeAssistant")
+            .get("directiveOutputMode", "output");
+        if (raw === "outputAndPreview" || raw === "replace")
+            return raw;
+        return "output";
+    }
+    extractResultOutput(result, preferredTarget) {
+        const outputs = result.outputs;
+        if (outputs && typeof outputs === "object") {
+            if (preferredTarget !== "auto" && typeof outputs[preferredTarget] === "string" && outputs[preferredTarget]) {
+                return String(outputs[preferredTarget]);
+            }
+            const resolvedTarget = String(result.target ?? "");
+            if (resolvedTarget && typeof outputs[resolvedTarget] === "string" && outputs[resolvedTarget]) {
+                return String(outputs[resolvedTarget]);
+            }
+            for (const value of Object.values(outputs)) {
+                if (typeof value === "string" && value.trim())
+                    return value;
+            }
+        }
+        return typeof result.latex_code === "string" && result.latex_code.length > 0
+            ? result.latex_code
+            : undefined;
+    }
+    formatOutputToChannel(directiveText, languageId, result, renderedOutput) {
+        const outputKeys = result.outputs && typeof result.outputs === "object"
+            ? Object.keys(result.outputs)
+            : [];
+        const resolvedTarget = outputKeys[0] ?? String(result.resolved_target ?? result.target ?? "auto");
+        const intentName = String(result.intent ?? "");
+        this.output.appendLine("");
+        this.output.appendLine(`=== [Kiến thức: ${intentName} | ${languageId} -> ${resolvedTarget}] ===`);
+        this.output.appendLine(`Yêu cầu: ${directiveText}`);
+        this.output.appendLine("---");
+        this.output.appendLine(renderedOutput);
+        if (Array.isArray(result.requires) && result.requires.length > 0) {
+            this.output.appendLine(`Ghi chú / Gói phụ thuộc: ${result.requires.join(", ")}`);
+        }
+        this.output.appendLine("===");
+        this.output.show(true);
     }
     async insertEditorOutput(output) {
         const target = this.pendingEditorTarget;
@@ -465,15 +596,19 @@ html,body{margin:0;min-height:100%;background:#101014;color:#f4f4f5;font:14px sy
     }
 }
 class DirectiveCodeActionProvider {
+    getCustomPrefixes;
+    constructor(getCustomPrefixes) {
+        this.getCustomPrefixes = getCustomPrefixes;
+    }
     provideCodeActions(document, range) {
         const line = document.lineAt(range.start.line);
-        const directive = (0, directive_1.parseKnowledgeDirective)(document.languageId, line.text);
-        if (!directive)
+        const parsed = (0, directive_1.parseScopedDirective)(document.languageId, line.text, this.getCustomPrefixes());
+        if (!parsed)
             return [];
-        const action = new vscode.CodeAction("Xem trước kiến thức: " + directive, vscode.CodeActionKind.QuickFix);
+        const action = new vscode.CodeAction(`Lấy kiến thức ra Output: ${parsed.rawQuery}`, vscode.CodeActionKind.QuickFix);
         action.command = {
             command: "vietnameseKnowledgeAssistant.runDirective",
-            title: "Tạo preview",
+            title: "Chạy chỉ thị kiến thức",
             arguments: [document.uri, line.lineNumber],
         };
         return [action];

@@ -463,3 +463,11 @@ button { color: inherit; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
 }
+
+.mode-switch { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+.mode-switch button { display: grid; gap: 3px; text-align: left; padding: 10px 12px; border-radius: 10px; border: 1px solid var(--border); background: var(--surface-2, var(--surface)); color: inherit; cursor: pointer; transition: border-color .15s ease, background .15s ease; }
+.mode-switch button strong { font-size: 11px; font-weight: 600; }
+.mode-switch button small { font-size: 9.5px; color: var(--muted); line-height: 1.35; }
+.mode-switch button.active { border-color: var(--primary); background: color-mix(in srgb, var(--primary) 12%, transparent); }
+.milestone-bar { height: 6px; width: 100%; border-radius: 99px; background: var(--border); overflow: hidden; margin: 8px 0 10px; }
+.milestone-bar > span { display: block; height: 100%; background: var(--primary); border-radius: 99px; transition: width .2s ease; }

@@ -1,7 +1,7 @@
 {
   "status": "passed",
   "intent_count": 189,
-  "alias_count": 1192,
+  "alias_count": 1131,
   "aliases_unique": true,
   "slot_regex_valid": true,
   "category_schema_valid": true,
@@ -21,9 +21,9 @@
     "train_test": 0,
     "val_test": 0
   },
-  "out_of_scope_has_examples": false,
+  "out_of_scope_has_examples": true,
   "blockers": [
-    "PhoATIS chưa được cung cấp cho OUT_OF_SCOPE.",
-    "TEST do AI soạn theo yêu cầu mới; cần chủ sở hữu duyệt và không dùng đánh giá cuối cùng trước khi duyệt."
+    "TEST do AI soạn theo yêu cầu mới (SHA-256 cố định); cần chủ sở hữu duyệt/thay bằng test_owner.csv cho benchmark cuối.",
+    "Chưa có tập test của chủ sở hữu (data/test_owner.csv) và PhoBERT checkpoint cục bộ chưa tải trọng số."
   ]
 }

@@ -22,6 +22,8 @@ from core.config import (
     MODE_RETRIEVAL_ONLY,
     MODE_PHOBERT_ONLY,
     classifier_artifact_status,
+    missing_classifier_dependencies,
+    missing_retrieval_dependencies,
     retrieval_model_status,
     SUPPORTED_PIPELINE_MODES,
     SUPPORTED_TARGETS,
@@ -39,30 +41,47 @@ def _default_mode(
     classifier_available: bool | None = None,
     retrieval_available: bool | None = None,
 ) -> str:
-    """Chọn đường đi chỉ từ artifact production hợp lệ, không từ smoke config."""
+    """Chọn đường đi chỉ từ artifact và thư viện production khả dụng, không từ smoke config."""
     if classifier_available is None:
-        classifier_available = classifier_artifact_status()[0]
+        classifier_available = classifier_artifact_status()[0] and not missing_classifier_dependencies()
     if retrieval_available is None:
-        retrieval_available = retrieval_model_status()[0]
+        retrieval_available = retrieval_model_status()[0] and not missing_retrieval_dependencies()
     if classifier_available and retrieval_available:
         return MODE_PHOBERT_RETRIEVAL
-    if classifier_available:
-        return MODE_PHOBERT_ONLY
     if retrieval_available:
         return MODE_RETRIEVAL_ONLY
+    if classifier_available:
+        return MODE_PHOBERT_ONLY
     return MODE_PHOBERT_ONLY
 
 
-def create_pipeline(intents_path: Path = DEFAULT_INTENTS_PATH, mode: str | None = None,
-                    target: str = TARGET_LATEX,
-                    offline_mock: bool = False) -> Pipeline:
+def create_pipeline(
+    intents_path: Path = DEFAULT_INTENTS_PATH,
+    mode: str | None = None,
+    target: str = TARGET_LATEX,
+    offline_mock: bool = False,
+    classifier: Any = None,
+    retriever: Any = None,
+) -> Pipeline:
     intents = json.loads(intents_path.read_text(encoding="utf-8"))
-    retriever = (Retriever(model=MockSentenceTransformer(), intents=intents, use_cache=False,
-                           model_name="offline-mock", indexing_mode="alias_only")
-                 if offline_mock else None)
+    selected_retriever = retriever
+    if selected_retriever is None and offline_mock:
+        selected_retriever = Retriever(
+            model=MockSentenceTransformer(),
+            intents=intents,
+            use_cache=False,
+            model_name="offline-mock",
+            indexing_mode="alias_only",
+        )
     selected_mode = mode or _default_mode()
-    return Pipeline(mode=selected_mode, retriever=retriever, intents_path=intents_path,
-                    auto_accept_retrieval=False, target=target)
+    return Pipeline(
+        mode=selected_mode,
+        classifier=classifier,
+        retriever=selected_retriever,
+        intents_path=intents_path,
+        auto_accept_retrieval=False,
+        target=target,
+    )
 
 
 def _atomic_json(path: Path, value: Any) -> None:

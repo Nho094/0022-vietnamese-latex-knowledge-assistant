@@ -1,6 +1,6 @@
 {
   "source": "data/train.csv, data/val.csv, data/test.csv (test is ai_draft)",
-  "most_frequent_sentence": "biểu thức cần hiển thị bằng mathjax.",
+  "most_frequent_sentence": "tôi muốn chèn đúng cú pháp vào tài liệu hiện tại, không cần tạo toàn bộ tài liệu.",
   "thresholds": {
     "nearest_trigram_jaccard_warning": 0.8,
     "boilerplate_share_warning": 0.5
@@ -9,10 +9,10 @@
   "splits": {
     "train": {
       "count": 3825,
-      "mean_char_length": 72.54666666666667,
-      "most_frequent_sentence_share": 0.27450980392156865,
-      "split_most_frequent_sentence": "đầu ra cần dùng được trong latex.",
-      "split_most_frequent_sentence_share": 0.10980392156862745,
+      "mean_char_length": 59.42745098039216,
+      "most_frequent_sentence_share": 0.0,
+      "split_most_frequent_sentence": "ví dụ về tài liệu tối giản trong latex",
+      "split_most_frequent_sentence_share": 0.00026143790849673205,
       "label_coverage": 189,
       "label_count": {
         "LATEX_BANG_CO_UONG_KE": 20,
@@ -208,27 +208,27 @@
       "out_of_scope_count": 65,
       "nearest_trigram_jaccard_to": {
         "val": {
-          "min": 0.06299212598425197,
-          "median": 0.23146007747094838,
-          "mean": 0.28227268321979077,
-          "p95": 0.5555555555555556,
-          "max": 0.6582278481012658
+          "min": 0.1,
+          "median": 0.3333333333333333,
+          "mean": 0.3419368423143824,
+          "p95": 0.5645161290322581,
+          "max": 0.8333333333333334
         },
         "test": {
-          "min": 0.03529411764705882,
-          "median": 0.2581343025268259,
-          "mean": 0.27915350547352524,
-          "p95": 0.546583850931677,
-          "max": 0.6477987421383647
+          "min": 0.036458333333333336,
+          "median": 0.15,
+          "mean": 0.15639132422498922,
+          "p95": 0.25133689839572193,
+          "max": 0.3241758241758242
         }
       }
     },
     "val": {
       "count": 967,
-      "mean_char_length": 158.3836608066184,
-      "most_frequent_sentence_share": 0.5429162357807652,
-      "split_most_frequent_sentence": "cho một ví dụ ngắn để tôi có thể áp dụng vào nội dung đang soạn.",
-      "split_most_frequent_sentence_share": 0.9720785935884177,
+      "mean_char_length": 82.54498448810754,
+      "most_frequent_sentence_share": 0.0,
+      "split_most_frequent_sentence": "tôi đang cần cú pháp khởi tạo văn bản latex hoàn chỉnh trong bài báo latex",
+      "split_most_frequent_sentence_share": 0.001034126163391934,
       "label_coverage": 189,
       "label_count": {
         "LATEX_BANG_CO_UONG_KE": 5,
@@ -424,25 +424,25 @@
       "out_of_scope_count": 27,
       "nearest_trigram_jaccard_to": {
         "train": {
-          "min": 0.08333333333333333,
-          "median": 0.3898619680016731,
-          "mean": 0.39414282170529735,
-          "p95": 0.5555555555555556,
-          "max": 0.6582278481012658
+          "min": 0.09411764705882353,
+          "median": 0.37640733712839974,
+          "mean": 0.37258814724466477,
+          "p95": 0.5645161290322581,
+          "max": 0.8333333333333334
         },
         "test": {
           "min": 0.04568527918781726,
-          "median": 0.37674156637220607,
-          "mean": 0.3804212872490056,
-          "p95": 0.5044642857142857,
-          "max": 0.5877862595419847
+          "median": 0.1808574879227053,
+          "mean": 0.19371091418446626,
+          "p95": 0.31645569620253167,
+          "max": 0.4496124031007752
         }
       }
     },
     "test": {
       "count": 940,
       "mean_char_length": 193.04787234042553,
-      "most_frequent_sentence_share": 0.5585106382978723,
+      "most_frequent_sentence_share": 1.0,
       "split_most_frequent_sentence": "tôi muốn chèn đúng cú pháp vào tài liệu hiện tại, không cần tạo toàn bộ tài liệu.",
       "split_most_frequent_sentence_share": 1.0,
       "label_coverage": 188,
@@ -639,26 +639,24 @@
       "out_of_scope_count": 0,
       "nearest_trigram_jaccard_to": {
         "train": {
-          "min": 0.25311203319502074,
-          "median": 0.3798449612403101,
-          "mean": 0.3908992870933852,
-          "p95": 0.5384615384615384,
-          "max": 0.6477987421383647
+          "min": 0.14473684210526316,
+          "median": 0.22631578947368422,
+          "mean": 0.22594643440115467,
+          "p95": 0.272,
+          "max": 0.3241758241758242
         },
         "val": {
-          "min": 0.2681818181818182,
-          "median": 0.3771044298836881,
-          "mean": 0.3877730452567481,
-          "p95": 0.504,
-          "max": 0.5877862595419847
+          "min": 0.17343173431734318,
+          "median": 0.2994652406417112,
+          "mean": 0.29931350355264774,
+          "p95": 0.40145985401459855,
+          "max": 0.4496124031007752
         }
       }
     }
   },
   "warnings": [
-    "WARNING: val boilerplate share 0.5429 exceeds 0.50.",
-    "WARNING: val split-specific boilerplate share 0.9721 exceeds 0.50.",
-    "WARNING: test boilerplate share 0.5585 exceeds 0.50.",
+    "WARNING: test boilerplate share 1.0000 exceeds 0.50.",
     "WARNING: test split-specific boilerplate share 1.0000 exceeds 0.50."
   ]
 }

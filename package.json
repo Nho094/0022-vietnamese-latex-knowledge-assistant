@@ -54,6 +54,17 @@
           "minimum": 5,
           "maximum": 120,
           "description": "Thời gian tối đa chờ dịch vụ cục bộ khởi động (giây)."
+        },
+        "vietnameseKnowledgeAssistant.commentSyntaxes": {
+          "type": "object",
+          "default": {},
+          "description": "Ánh xạ languageId -> danh sách tiền tố comment tùy chỉnh cho chỉ thị `A:` (ví dụ {\"prisma\": [\"//\"], \"*\": [\"#\"]})."
+        },
+        "vietnameseKnowledgeAssistant.directiveOutputMode": {
+          "type": "string",
+          "enum": ["output", "outputAndPreview", "replace"],
+          "default": "output",
+          "description": "Cách hiển thị kết quả khi chạy chỉ thị comment: output (in vào Output Panel và focus), outputAndPreview (in Output và mở preview), replace (in Output rồi chèn trực tiếp vào editor)."
         }
       }
     },

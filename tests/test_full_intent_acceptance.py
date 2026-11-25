@@ -99,7 +99,7 @@ def test_required_slot_absence_is_reported_for_each_fixture_case() -> None:
             if result.status != "need_slots" or missing_name not in result.missing_slots:
                 exceptions.append((case["intent"], missing_name))
 
-    assert exceptions == [("LATEX_NAP_PACKAGE_CO_TUY_CHON", "package_name")]
+    assert exceptions == []
 
 
 def test_optional_defaults_are_applied_without_manual_values() -> None:

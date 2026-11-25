@@ -1,0 +1,10 @@
+{
+  "threshold": 10,
+  "pending_intents": [
+    "API_CUSTOM"
+  ],
+  "trained_intents": [],
+  "last_trained_at": null,
+  "last_report": null,
+  "feedback_count": 0
+}

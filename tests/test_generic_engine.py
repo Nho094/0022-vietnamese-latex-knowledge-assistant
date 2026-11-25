@@ -105,7 +105,7 @@ def test_v2_pipeline_supports_render_target_declared_only_in_data() -> None:
         tau=0.8,
     )
 
-    result = pipeline.predict("Nạp package amsmath")
+    result = pipeline.predict("Tạo tiêu đề 1 nội dung là Mở đầu")
 
     assert result.status == "ok"
     assert "obsidian" in result.outputs

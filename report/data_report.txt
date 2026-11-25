@@ -35,20 +35,20 @@ tex_text         | 160      | 40       | 40       | 240
 A. Độ dài theo ký tự (Character Length):
 Phân vùng  | Min    | Max    | Mean (Trung bình)  | Median   | Std Dev 
 ------------------------------------------------------------------------
-train      | 11     | 255    |            72.55   |   66.0 |   35.78
-val        | 21     | 284    |           158.38   |  154.0 |   34.71
+train      | 12     | 214    |            59.43   |   54.0 |   26.37
+val        | 21     | 180    |            82.54   |   77.0 |   28.13
 test       | 140    | 323    |           193.05   |  192.0 |   35.30
 ------------------------------------------------------------------------
-TỔNG THỂ   | 11     | 323    |           106.79   |   91.0 |   60.94
+TỔNG THỂ   | 12     | 323    |            85.24   |   64.0 |   56.16
 
 B. Độ dài theo từ (Word Count):
 Phân vùng  | Min    | Max    | Mean (Trung bình)  | Median   | Std Dev 
 ------------------------------------------------------------------------
-train      | 3      | 52     |            15.54   |   14.0 |    7.62
-val        | 5      | 62     |            35.59   |   35.0 |    7.48
+train      | 3      | 50     |            12.71   |   11.0 |    5.72
+val        | 5      | 38     |            17.61   |   16.0 |    6.06
 test       | 30     | 68     |            40.92   |   41.0 |    7.55
 ------------------------------------------------------------------------
-TỔNG THỂ   | 3      | 68     |            23.09   |   19.0 |   13.19
+TỔNG THỂ   | 3      | 68     |            18.16   |   13.0 |   11.93
 
 3. KIỂM THỰC TRÙNG LẶP TUYỆT ĐỐI XUYÊN PHÂN VÙNG (EXACT DUPLICATE VERIFICATION)
    (Quy chuẩn: Chuẩn hóa Unicode NFC, chữ thường, gom khoảng trắng thừa - Honesty Rule #4)
@@ -70,17 +70,17 @@ TỔNG THỂ   | 3      | 68     |            23.09   |   19.0 |   13.19
 - Ngưỡng cảnh báo near-duplicate     : > 0.8
 
 Phổ giá trị tương đồng cực đại (Max Similarity Distribution per test sample):
-  * Giá trị tương đồng lớn nhất (Max)    : 0.7069
-  * Giá trị tương đồng nhỏ nhất (Min)    : 0.3694
-  * Trung bình tương đồng cực đại (Mean) : 0.4793
-  * Trung vị tương đồng cực đại (Median) : 0.4610
-  * Độ lệch chuẩn tương đồng (Std Dev)   : 0.0704
+  * Giá trị tương đồng lớn nhất (Max)    : 0.3810
+  * Giá trị tương đồng nhỏ nhất (Min)    : 0.1859
+  * Trung bình tương đồng cực đại (Mean) : 0.2795
+  * Trung vị tương đồng cực đại (Median) : 0.2765
+  * Độ lệch chuẩn tương đồng (Std Dev)   : 0.0358
 
 Phân bố tần suất theo khoảng giá trị tương đồng:
-  [0.0, 0.2)   :     0 câu (  0.0%) | 
-  [0.2, 0.4)   :    79 câu (  8.4%) | ####
-  [0.4, 0.6)   :   783 câu ( 83.3%) | #########################################
-  [0.6, 0.8)   :    78 câu (  8.3%) | ####
+  [0.0, 0.2)   :    10 câu (  1.1%) | 
+  [0.2, 0.4)   :   930 câu ( 98.9%) | #################################################
+  [0.4, 0.6)   :     0 câu (  0.0%) | 
+  [0.6, 0.8)   :     0 câu (  0.0%) | 
   [0.8, 1.0]   :     0 câu (  0.0%) | 
 
 Danh sách các câu kiểm thử bị cảnh báo gần trùng lặp (Similarity > 0.8):

@@ -42,6 +42,7 @@ import os
 import re
 import sys
 import time
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 from enum import Enum
 from pathlib import Path
@@ -67,6 +68,8 @@ from core.config import (
     MODE_RETRIEVAL_ONLY,
     MODE_TFIDF_ONLY,
     OUT_OF_SCOPE_INTENT,
+    RETRIEVAL_LANGUAGE_PRIORITY_BONUS,
+    RETRIEVAL_LEXICAL_BOOST_WEIGHT,
     STATUS_NEED_CHOICE,
     STATUS_NEED_SLOTS,
     STATUS_OK,
@@ -79,6 +82,7 @@ from core.config import (
     SUPPORTED_ENGINE_VERSIONS,
     SUPPORTED_TARGETS,
     SUPPORTED_PIPELINE_MODES,
+    TARGET_AUTO,
     TARGET_CANDIDATE_OVERSAMPLE_FACTOR,
     TAU_INTENT_THRESHOLD,
     THETA_RETRIEVAL_THRESHOLD,
@@ -86,14 +90,15 @@ from core.config import (
     checkpoint_sha256,
     classifier_artifact_status,
     load_calibrated_thresholds,
-    resolve_sbert_model_dir,
+    resolve_language_routing,
+    resolve_target_for_templates,
     retrieval_model_status,
     SBERT_MODEL_NAME,
 )
 from core.latex_tools import POST_ACTIONS, escape_text, resolve_template, static_check, wrap_snippet
 from core.preprocess import canonicalize_retrieval_numbers, normalize, preprocess_fingerprint
 from core.scenario import scenario_string
-from core.slots import extract_slots, normalize_slot_value
+from core.slots import _normalize_multiline_preserves_rows, extract_slots, normalize_slot_value
 
 logger = logging.getLogger(__name__)
 
@@ -200,6 +205,7 @@ class PipelineResult:
     execution_time_ms: float = 0.0
     stages: dict[str, dict[str, Any]] = field(default_factory=dict)
     outputs: dict[str, str] = field(default_factory=dict)
+    requires: list[str] = field(default_factory=list)
 
     def to_dict(self) -> dict[str, Any]:
         """Xuất kết quả thành từ điển Python có cấu trúc chuẩn."""
@@ -220,7 +226,9 @@ class PipelineResult:
             "static_check_passed": self.static_check_passed,
             "execution_time_ms": round(float(self.execution_time_ms), 2),
         }
-        # Trường mới chỉ xuất hiện ở generic engine để giữ nguyên JSON legacy.
+        # Trường mới chỉ xuất hiện khi có dữ liệu để giữ nguyên JSON legacy khi không cần.
+        if self.requires:
+            result["requires"] = self.requires
         if self.stages:
             result["stages"] = self.stages
         if self.outputs:
@@ -281,27 +289,35 @@ def render_latex_template(
 
     merged_slots.update(slots)
 
-    rendered = str(template_str)
-
-    # Thay thế các placeholder
+    # Chuẩn bị giá trị thay thế theo từng slot và giữ thay thế một lượt (single-pass)
+    substituted_slots: dict[str, str] = {}
     for key, val in merged_slots.items():
         sub_val = str(val)
-
-        # Xác định loại slot để thực hiện thoát ký tự an toàn
         s_def = slots_def.get(key)
         s_type = "text"
         if isinstance(s_def, dict):
             s_type = str(s_def.get("type", "text"))
         elif s_def is not None:
             s_type = str(getattr(s_def, "type", "text"))
-
         if escape_text_slots and s_type == "text" and target in {"latex", "mathjax"}:
             sub_val = escape_text(sub_val)
+        substituted_slots[key] = sub_val
 
-        rendered = rendered.replace(f"<<{key}>>", sub_val)
-        if target in {"latex", "mathjax"}:
-            rendered = rendered.replace(f"{{{{{key}}}}}", sub_val)
-            rendered = rendered.replace(f"{{{key}}}", sub_val)
+    rendered = str(template_str)
+    uses_angle_placeholders = bool(re.search(r"<<[a-zA-Z0-9_]+>>", rendered))
+    if uses_angle_placeholders:
+        rendered = re.sub(
+            r"<<([a-zA-Z0-9_]+)>>",
+            lambda match: substituted_slots.get(match.group(1), match.group(0)),
+            rendered,
+        )
+    elif substituted_slots:
+        keys_alt = "|".join(re.escape(k) for k in sorted(substituted_slots, key=len, reverse=True))
+        legacy_pattern = re.compile(rf"\{{\{{({keys_alt})\}}\}}|\{{({keys_alt})\}}")
+        rendered = legacy_pattern.sub(
+            lambda match: substituted_slots[match.group(1) or match.group(2)],
+            rendered,
+        )
 
     # Đóng gói tài liệu nếu được yêu cầu
     if wrap_document:
@@ -317,6 +333,11 @@ def render_latex_template(
         rendered = action(rendered)
 
     unresolved = re.findall(r"<<[a-zA-Z][a-zA-Z0-9_]*>>", rendered)
+    if not uses_angle_placeholders and slots_def:
+        unresolved.extend(
+            name for name in slots_def
+            if isinstance(name, str) and (f"{{{name}}}" in rendered or f"{{{{{name}}}}}" in rendered)
+        )
     if unresolved:
         return rendered, False, [f"Còn placeholder chưa được điền: {sorted(set(unresolved))}."]
 
@@ -462,6 +483,47 @@ class TfidfRanker:
 # =====================================================================
 
 
+_TECHNICAL_STOPWORDS: Final[frozenset[str]] = frozenset({
+    "the", "and", "for", "with", "cách", "làm", "tạo", "viết", "cho", "tôi", "mình",
+    "giúp", "bằng", "trong", "của", "với", "như", "nào", "thế", "một", "cái", "dùng",
+})
+
+
+def _extract_distinctive_tokens(text: str) -> set[str]:
+    """Lấy các token ASCII/kỹ thuật đặc thù (ví dụ sunshine, fibonacci, tar) để boost lexical nhẹ."""
+    tokens = re.findall(r"[A-Za-z][A-Za-z0-9_.-]{1,}", str(text or "").casefold())
+    return {tok for tok in tokens if len(tok) >= 3 and tok not in _TECHNICAL_STOPWORDS}
+
+
+def _apply_lexical_keyword_boost(
+    raw_query: str,
+    candidates: list[CandidateChoice],
+    intents_bank: dict[str, dict[str, Any]],
+) -> list[CandidateChoice]:
+    """Cộng thưởng nhẹ điểm lexical cho từ khóa kỹ thuật hiếm giúp kiến thức mới (Rust, Sunshine...) lên top chuẩn hơn."""
+    query_tokens = _extract_distinctive_tokens(raw_query)
+    if not query_tokens or not candidates or RETRIEVAL_LEXICAL_BOOST_WEIGHT <= 0.0:
+        return candidates
+    boosted: list[CandidateChoice] = []
+    for cand in candidates:
+        item = intents_bank.get(cand.intent, {})
+        corpus_parts = [
+            str(item.get("display_name", "")),
+            str(item.get("describe", "")),
+            cand.describe,
+            *[str(a) for a in (item.get("aliases") or [])],
+            *[str(a) for a in (item.get("learned_aliases") or [])],
+        ]
+        item_tokens = _extract_distinctive_tokens(" ".join(corpus_parts))
+        overlap = query_tokens.intersection(item_tokens)
+        if overlap:
+            ratio = len(overlap) / len(query_tokens)
+            cand.score = min(1.0, float(cand.score) + RETRIEVAL_LEXICAL_BOOST_WEIGHT * ratio)
+        boosted.append(cand)
+    boosted.sort(key=lambda item: item.score, reverse=True)
+    return boosted
+
+
 class Pipeline:
     """
     Bộ điều phối đường ống suy luận trung tâm (Central Inference Pipeline & Routing Orchestrator).
@@ -539,7 +601,7 @@ class Pipeline:
         self.target = str(target).strip()
         if self.engine_version == ENGINE_VERSION_LEGACY:
             self.target = self.target.lower()
-        if self.engine_version == ENGINE_VERSION_LEGACY and self.target not in SUPPORTED_TARGETS:
+        if self.engine_version == ENGINE_VERSION_LEGACY and self.target != TARGET_AUTO and self.target not in SUPPORTED_TARGETS:
             raise ValueError(f"Target '{target}' không được hỗ trợ: {tuple(SUPPORTED_TARGETS)}")
         self.checkpoint_dir = Path(checkpoint_dir)
         self.thresholds_path = Path(thresholds_path)
@@ -548,6 +610,11 @@ class Pipeline:
             "theta": THETA_RETRIEVAL_THRESHOLD,
             "temperature": DEFAULT_TEMPERATURE,
         }
+        uses_phobert = self.mode in (
+            PipelineMode.PHOBERT_ONLY.value,
+            PipelineMode.PHOBERT_RETRIEVAL.value,
+            PipelineMode.PHOBERT_RETRIEVAL_FUZZY.value,
+        )
         if self.checkpoint_dir.exists() and not checkpoint_is_smoke(self.checkpoint_dir):
             try:
                 threshold_values = load_calibrated_thresholds(
@@ -557,7 +624,17 @@ class Pipeline:
                 )
             except (OSError, ValueError) as error:
                 logger.warning("Threshold calibration bị bỏ qua: %s. Dùng default.", error)
-        else:
+        elif not uses_phobert and self.thresholds_path.is_file():
+            # Chế độ retrieval-only không cần checkpoint PhoBERT nhưng vẫn dùng ngưỡng theta đã hiệu chuẩn
+            try:
+                threshold_values = load_calibrated_thresholds(
+                    self.thresholds_path,
+                    expected_checkpoint_sha256=None,
+                    expected_preprocessing_fingerprint=preprocess_fingerprint(),
+                )
+            except (OSError, ValueError) as error:
+                logger.warning("Threshold calibration retrieval bị bỏ qua: %s. Dùng default.", error)
+        elif uses_phobert:
             logger.warning("PhoBERT chưa có checkpoint thật; dùng threshold mặc định.")
         self.tau = float(tau if tau is not None else threshold_values["tau"])
         self.theta = float(theta if theta is not None else threshold_values["theta"])
@@ -581,7 +658,7 @@ class Pipeline:
                 for loaded in DefinitionLoader().load(self.intents_path)
             }
             self.generic_engine = GenericKnowledgeEngine()
-            if not any(
+            if self.target != TARGET_AUTO and not any(
                 self.target in item.get("render", {}).get("templates", {})
                 for item in self.generic_definitions.values()
             ):
@@ -703,12 +780,12 @@ class Pipeline:
         from core.retrieval import Retriever
 
         try:
-            model_dir = resolve_sbert_model_dir()
-            if model_dir is None and os.environ.get("HF_HUB_OFFLINE") == "1":
-                _, reason, _ = retrieval_model_status()
-                self.component_errors["retrieval"] = reason
-                logger.warning("Retrieval chưa khả dụng: %s", reason)
-                return
+            available, reason, model_dir = retrieval_model_status()
+            if not available or model_dir is None:
+                if os.environ.get("KA_ALLOW_HUB_DOWNLOAD") != "1":
+                    self.component_errors["retrieval"] = reason
+                    logger.warning("Retrieval chưa khả dụng: %s", reason)
+                    return
             self.retriever = Retriever(
                 model=model_dir if model_dir is not None else None,
                 model_name=SBERT_MODEL_NAME,
@@ -747,7 +824,14 @@ class Pipeline:
     # Điểm vào chính: Dự đoán và Định tuyến (Predict & Route)
     # -----------------------------------------------------------------
 
-    def predict(self, query: str) -> PipelineResult:
+    def predict(
+        self,
+        query: str,
+        *,
+        language_id: str | None = None,
+        preferred_categories: Sequence[str] | None = None,
+        restrict_category: str | None = None,
+    ) -> PipelineResult:
         """
         Thực hiện toàn bộ quy trình suy luận và định tuyến câu truy vấn theo cấu hình.
 
@@ -807,11 +891,31 @@ class Pipeline:
             result.execution_time_ms = (time.perf_counter() - start_time) * 1000.0
             return result
 
+        # Định tuyến Tầng 2 theo languageId của file đang mở nếu chưa ép category cứng
+        resolved_preferred = tuple(preferred_categories) if preferred_categories is not None else ()
+        resolved_preferred_target: str | None = None
+        if language_id:
+            resolved_preferred_target, lang_categories = resolve_language_routing(language_id)
+            if not resolved_preferred:
+                resolved_preferred = lang_categories
+
         # Xử lý theo định tuyến 2 tầng hoặc định tuyến phẳng
-        if self.two_tier:
+        if restrict_category is not None:
+            result = self._predict_flat(
+                raw_query,
+                norm_query,
+                restrict_category=restrict_category,
+                preferred_target=resolved_preferred_target,
+            )
+        elif self.two_tier:
             result = self._predict_two_tier(raw_query, norm_query)
         else:
-            result = self._predict_flat(raw_query, norm_query)
+            result = self._predict_flat(
+                raw_query,
+                norm_query,
+                preferred_categories=resolved_preferred,
+                preferred_target=resolved_preferred_target,
+            )
 
         if result.status == PipelineStatus.UNKNOWN.value and self.component_errors:
             unavailable = " ".join(self.component_errors.values())
@@ -870,17 +974,30 @@ class Pipeline:
         raw_query: str,
         norm_query: str,
         restrict_category: str | None = None,
+        preferred_categories: Sequence[str] = (),
+        preferred_target: str | None = None,
     ) -> PipelineResult:
         """
         Thực thi phân giải ý định theo các chế độ cắt bỏ (Ablation Modes).
         """
         # Chế độ 1: TF-IDF Only
         if self.mode == PipelineMode.TFIDF_ONLY.value:
-            return self._route_tfidf_only(raw_query, norm_query, restrict_category)
+            return self._route_tfidf_only(
+                raw_query,
+                norm_query,
+                restrict_category,
+                preferred_target=preferred_target,
+            )
 
         # Chế độ 2: Retrieval Only
         if self.mode == PipelineMode.RETRIEVAL_ONLY.value:
-            return self._route_retrieval_only(raw_query, norm_query, restrict_category)
+            return self._route_retrieval_only(
+                raw_query,
+                norm_query,
+                restrict_category,
+                preferred_categories=preferred_categories,
+                preferred_target=preferred_target,
+            )
 
         # Chế độ 3, 4, 5: Các chế độ dựa trên PhoBERT (phobert_only, phobert_retrieval, phobert_retrieval_fuzzy)
         clf_result = None
@@ -908,36 +1025,11 @@ class Pipeline:
                     message="Yêu cầu được xác định nằm ngoài phạm vi hỗ trợ.",
                 )
 
-            if not self._supports_target(pred_intent):
-                probabilities = getattr(clf_result, "all_probabilities", {})
-                supported_scores = [
-                    (name, float(score))
-                    for name, score in probabilities.items()
-                    if self._supports_target(str(name))
-                ]
-                if supported_scores:
-                    pred_intent, pred_conf = max(supported_scores, key=lambda pair: pair[1])
-                    pred_cat = self.category_map.get(pred_intent, "")
-                else:
-                    pred_intent = ""
-                    pred_conf = 0.0
-                    pred_cat = ""
-
-            if pred_intent == OUT_OF_SCOPE_INTENT or pred_cat == DEFAULT_OUT_OF_SCOPE_CATEGORY:
-                return PipelineResult(
-                    status=PipelineStatus.OUT_OF_SCOPE.value,
-                    query=raw_query,
-                    intent=OUT_OF_SCOPE_INTENT,
-                    category=pred_cat,
-                    confidence=pred_conf,
-                    mode=self.mode,
-                    two_tier=self.two_tier,
-                    message="Yêu cầu được xác định nằm ngoài phạm vi hỗ trợ.",
-                )
-
-            # Nếu giới hạn danh mục (two-tier), kiểm tra tính phù hợp
+            # Kiểm tra phù hợp danh mục (two-tier cứng hoặc ưu tiên theo loại file đang mở)
             category_match = True
             if restrict_category is not None and pred_cat != restrict_category:
+                category_match = False
+            elif preferred_categories and pred_cat not in preferred_categories:
                 category_match = False
 
             # if max p >= tau: intent accepted
@@ -947,6 +1039,7 @@ class Pipeline:
                     query=raw_query,
                     confidence=pred_conf,
                     category=pred_cat,
+                    preferred_target=preferred_target,
                 )
 
         # Nếu p < tau:
@@ -963,7 +1056,11 @@ class Pipeline:
             )
 
         # Fallback 1: SBERT Retrieval
-        retrieval_candidates = self._run_retrieval(norm_query, restrict_category)
+        retrieval_candidates = self._run_retrieval(
+            norm_query,
+            restrict_category,
+            preferred_categories=preferred_categories,
+        )
         if retrieval_candidates:
             top_cand = retrieval_candidates[0]
             if top_cand.score >= self.theta:
@@ -985,6 +1082,7 @@ class Pipeline:
                         query=raw_query,
                         confidence=top_cand.score,
                         category=top_cand.category,
+                        preferred_target=preferred_target,
                     )
 
                 # Theo AGENTS.md: retrieval top-3 -> ask the user to choose
@@ -1051,9 +1149,15 @@ class Pipeline:
         raw_query: str,
         norm_query: str,
         restrict_category: str | None = None,
+        preferred_categories: Sequence[str] = (),
+        preferred_target: str | None = None,
     ) -> PipelineResult:
         """Thực thi định tuyến cho chế độ cắt bỏ retrieval_only."""
-        candidates = self._run_retrieval(norm_query, restrict_category)
+        candidates = self._run_retrieval(
+            norm_query,
+            restrict_category,
+            preferred_categories=preferred_categories,
+        )
         if not candidates or candidates[0].score < self.theta:
             top_score = candidates[0].score if candidates else 0.0
             return PipelineResult(
@@ -1084,6 +1188,7 @@ class Pipeline:
                 query=raw_query,
                 confidence=top_cand.score,
                 category=top_cand.category,
+                preferred_target=preferred_target,
             )
 
         self._last_candidates = candidates
@@ -1103,6 +1208,7 @@ class Pipeline:
         raw_query: str,
         norm_query: str,
         restrict_category: str | None = None,
+        preferred_target: str | None = None,
     ) -> PipelineResult:
         """Thực thi định tuyến cho chế độ cắt bỏ tfidf_only."""
         candidates = self._run_tfidf(norm_query, restrict_category)
@@ -1136,6 +1242,7 @@ class Pipeline:
                 query=raw_query,
                 confidence=top_cand.score,
                 category=top_cand.category,
+                preferred_target=preferred_target,
             )
 
         self._last_candidates = candidates
@@ -1161,6 +1268,7 @@ class Pipeline:
         confidence: float,
         category: str,
         custom_slots: dict[str, Any] | None = None,
+        preferred_target: str | None = None,
     ) -> PipelineResult:
         """
         Xử lý khi một Intent đã được chấp nhận:
@@ -1178,10 +1286,23 @@ class Pipeline:
                 confidence=confidence,
                 category=category,
                 custom_slots=custom_slots,
+                preferred_target=preferred_target,
             )
 
         intent_data = self.intents_bank.get(intent, {})
-        if intent != OUT_OF_SCOPE_INTENT and resolve_template(intent_data, self.target) is None:
+        legacy_templates = intent_data.get("templates") if isinstance(intent_data.get("templates"), dict) else {}
+        render_templates = (
+            intent_data.get("render", {}).get("templates")
+            if isinstance(intent_data.get("render"), dict) and isinstance(intent_data.get("render", {}).get("templates"), dict)
+            else {}
+        )
+        merged_tpls = {**legacy_templates, **render_templates}
+        effective_target = (
+            resolve_target_for_templates(merged_tpls, self.target, preferred_target=preferred_target)
+            if self.target == TARGET_AUTO
+            else (self.target if resolve_template(intent_data, self.target) is not None else None)
+        )
+        if intent != OUT_OF_SCOPE_INTENT and effective_target is None:
             return PipelineResult(
                 status=PipelineStatus.UNSUPPORTED_TARGET.value,
                 query=query,
@@ -1192,6 +1313,7 @@ class Pipeline:
                 two_tier=self.two_tier,
                 message=f"Intent '{intent}' chưa có template cho target '{self.target}'.",
             )
+        target_to_render = effective_target or self.target
 
         # Trích xuất slot bằng core.slots.extract_slots
         slot_res = extract_slots(query, intent, intents_bank=self.intents_bank)
@@ -1286,19 +1408,53 @@ class Pipeline:
                 message="Giá trị slot nhập tay không hợp lệ: " + "; ".join(custom_errors),
             )
 
-        # Đã đủ tham số -> Render template LaTeX
+        intent_requires = [
+            str(pkg) for pkg in intent_data.get("requires", []) if isinstance(pkg, str) and pkg.strip()
+        ]
+        # Đã đủ tham số -> Render template theo target đã phân giải
         rendered_code, check_ok, check_errs = render_latex_template(
             intent_data=intent_data,
             slots=merged_slots,
-            target=self.target,
+            target=target_to_render,
             escape_text_slots=True,
             wrap_document=False,
         )
+        if not rendered_code.strip():
+            return PipelineResult(
+                status=PipelineStatus.UNSUPPORTED_TARGET.value,
+                query=query,
+                intent=intent,
+                category=category,
+                confidence=confidence,
+                mode=self.mode,
+                two_tier=self.two_tier,
+                slots=merged_slots,
+                missing_slots=[],
+                slot_errors=active_slot_errors,
+                latex_code=rendered_code,
+                static_check_passed=False,
+                requires=intent_requires,
+                message=f"Intent '{intent}' chưa sinh nội dung cho target '{target_to_render}'.",
+            )
+        if not check_ok:
+            return PipelineResult(
+                status=PipelineStatus.PROCESSING_ERROR.value,
+                query=query,
+                intent=intent,
+                category=category,
+                confidence=confidence,
+                mode=self.mode,
+                two_tier=self.two_tier,
+                slots=merged_slots,
+                missing_slots=[],
+                slot_errors=[*active_slot_errors, *check_errs],
+                latex_code="",
+                static_check_passed=False,
+                requires=intent_requires,
+                message="Kết xuất mẫu thất bại kiểm tra tĩnh: " + "; ".join(check_errs),
+            )
         return PipelineResult(
-            status=(
-                PipelineStatus.OK.value if rendered_code.strip()
-                else PipelineStatus.UNSUPPORTED_TARGET.value
-            ),
+            status=PipelineStatus.OK.value,
             query=query,
             intent=intent,
             category=category,
@@ -1309,12 +1465,10 @@ class Pipeline:
             missing_slots=[],
             slot_errors=active_slot_errors,
             latex_code=rendered_code,
-            static_check_passed=check_ok,
-            message=(
-                "Đã trích xuất đầy đủ tham số và kết xuất mã thành công."
-                if rendered_code.strip()
-                else f"Intent '{intent}' chưa sinh nội dung cho target '{self.target}'."
-            ),
+            static_check_passed=True,
+            outputs={target_to_render: rendered_code} if self.target == TARGET_AUTO else {},
+            requires=intent_requires,
+            message="Đã trích xuất đầy đủ tham số và kết xuất mã thành công.",
         )
 
     def _accept_generic_definition(
@@ -1324,6 +1478,7 @@ class Pipeline:
         confidence: float,
         category: str,
         custom_slots: dict[str, Any] | None = None,
+        preferred_target: str | None = None,
     ) -> PipelineResult:
         """Chuyển NLU đã chọn intent sang Contract v2 mà không đổi legacy route."""
         definition = self.generic_definitions.get(intent)
@@ -1339,7 +1494,12 @@ class Pipeline:
                 message=f"Intent '{intent}' không có trong definition registry v2.",
             )
         templates = definition.get("render", {}).get("templates", {})
-        if self.target not in templates or not templates[self.target]:
+        resolved_v2_target = resolve_target_for_templates(
+            templates,
+            self.target,
+            preferred_target=preferred_target,
+        )
+        if resolved_v2_target is None:
             return PipelineResult(
                 status=PipelineStatus.UNSUPPORTED_TARGET.value,
                 query=query,
@@ -1350,10 +1510,17 @@ class Pipeline:
                 two_tier=self.two_tier,
                 message=f"Intent '{intent}' chưa có template v2 cho target '{self.target}'.",
             )
+        has_matrix_field = any(
+            isinstance(prop, dict) and prop.get("format") == "matrix"
+            for prop in definition.get("input_schema", {}).get("properties", {}).values()
+        )
+        normalized_query = (
+            _normalize_multiline_preserves_rows(query) if has_matrix_field else normalize(query)
+        )
         result = self.generic_engine.process(
-            normalize(query),
+            normalized_query,
             definition,
-            target=self.target,
+            target=resolved_v2_target,
             manual_values=custom_slots,
         )
         stages = dict(result.stages)
@@ -1363,10 +1530,15 @@ class Pipeline:
             "confidence": confidence,
             "source": "classifier_or_retrieval",
         }
-        code = result.outputs.get(self.target, "")
+        code = result.outputs.get(resolved_v2_target, "")
+        definition_requires = [
+            str(pkg) for pkg in definition.get("requires", []) if isinstance(pkg, str) and pkg.strip()
+        ]
         slot_errors = [
             f"{error.path}: {error.message}" for error in result.errors
         ]
+        static_passed = False
+        final_status = result.status
         if result.status == PipelineStatus.NEED_SLOTS.value:
             message = "Cần bổ sung hoặc sửa các trường được báo theo JSONPath."
         elif result.status == STATUS_PROCESSING_ERROR:
@@ -1375,10 +1547,20 @@ class Pipeline:
                 if error:
                     slot_errors.append(str(error))
             message = "Generic Knowledge Engine không thể xử lý definition này."
+        elif resolved_v2_target.casefold() in {"latex", "mathjax"}:
+            check_errors = static_check(code)
+            static_passed = not check_errors
+            if check_errors:
+                final_status = STATUS_PROCESSING_ERROR
+                slot_errors.extend(check_errors)
+                code = ""
+                message = "Kết xuất v2 thất bại kiểm tra tĩnh: " + "; ".join(check_errors)
+            else:
+                message = "Đã xử lý definition v2 qua các stage tổng quát."
         else:
             message = "Đã xử lý definition v2 qua các stage tổng quát."
         return PipelineResult(
-            status=result.status,
+            status=final_status,
             query=query,
             intent=intent,
             category=category,
@@ -1390,9 +1572,10 @@ class Pipeline:
             slot_errors=slot_errors,
             latex_code=code,
             message=message,
-            static_check_passed=(self.target.casefold() == "latex" and result.status == STATUS_OK),
+            static_check_passed=static_passed,
             stages=stages,
-            outputs=result.outputs,
+            outputs=result.outputs if final_status == STATUS_OK else {},
+            requires=definition_requires,
         )
 
     # -----------------------------------------------------------------
@@ -1404,6 +1587,7 @@ class Pipeline:
         candidate: str | int,
         query: str | None = None,
         slots: dict[str, Any] | None = None,
+        language_id: str | None = None,
     ) -> PipelineResult:
         """
         Giải quyết nhập nhằng (disambiguation) khi người dùng chủ động chọn một kịch bản
@@ -1467,12 +1651,14 @@ class Pipeline:
             )
 
         category = self.category_map.get(chosen_intent, "")
+        preferred_target = resolve_language_routing(language_id)[0] if language_id else None
         result = self._accept_intent_and_extract_slots(
             intent=chosen_intent,
             query=target_query,
             confidence=1.0,
             category=category,
             custom_slots=slots,
+            preferred_target=preferred_target,
         )
         result.execution_time_ms = (time.perf_counter() - start_time) * 1000.0
         return result
@@ -1481,21 +1667,6 @@ class Pipeline:
     # Các hàm thực thi mô hình phụ trợ (Helper Dispatchers)
     # -----------------------------------------------------------------
 
-    def _supports_target(self, intent: str) -> bool:
-        """Giữ OOS để pipeline có thể phát hiện; ứng viên thường cần template đích."""
-        if (
-            self.engine_version == ENGINE_VERSION_GENERIC
-            or intent in self._dynamic_generic_intents
-        ):
-            definition = self.generic_definitions.get(intent, {})
-            templates = definition.get("render", {}).get("templates", {})
-            return intent == OUT_OF_SCOPE_INTENT or (
-                isinstance(templates, dict) and self.target in templates
-            )
-        return intent == OUT_OF_SCOPE_INTENT or resolve_template(
-            self.intents_bank.get(intent, {}), self.target
-        ) is not None
-
     def _candidate_fetch_k(self) -> int:
         return self.top_k * TARGET_CANDIDATE_OVERSAMPLE_FACTOR
 
@@ -1503,30 +1674,38 @@ class Pipeline:
         self,
         norm_query: str,
         restrict_category: str | None = None,
+        preferred_categories: Sequence[str] = (),
     ) -> list[CandidateChoice]:
-        """Thực thi truy hồi ngữ nghĩa SBERT và chuyển đổi định dạng ứng viên."""
+        """Thực thi truy hồi ngữ nghĩa SBERT và ưu tiên nhóm theo ngữ cảnh Tầng 2."""
         if self.retriever is None:
             return []
 
         try:
-            res = self.retriever.retrieve(norm_query, top_k=self._candidate_fetch_k())
-            candidates: list[CandidateChoice] = []
+            needs_oversample = restrict_category is not None or bool(preferred_categories)
+            fetch_k = self._candidate_fetch_k() if needs_oversample else self.top_k
+            res = self.retriever.retrieve(norm_query, top_k=fetch_k)
+            all_candidates: list[CandidateChoice] = []
+            preferred_set = set(preferred_categories)
             for c in res.candidates:
                 cat = c.category or self.category_map.get(c.intent, "")
-                if not self._supports_target(c.intent):
-                    continue
                 if restrict_category is not None and cat != restrict_category:
                     continue
-                candidates.append(
-                    CandidateChoice(
-                        intent=c.intent,
-                        score=c.score,
-                        describe=c.describe or self.intents_bank.get(c.intent, {}).get("describe", ""),
-                        category=cat,
-                        source="retrieval",
-                    )
+                choice = CandidateChoice(
+                    intent=c.intent,
+                    score=c.score,
+                    describe=c.describe or self.intents_bank.get(c.intent, {}).get("describe", ""),
+                    category=cat,
+                    source="retrieval",
                 )
-            return candidates[: self.top_k]
+                all_candidates.append(choice)
+            all_candidates = _apply_lexical_keyword_boost(norm_query, all_candidates, self.intents_bank)
+            if preferred_set and RETRIEVAL_LANGUAGE_PRIORITY_BONUS > 0.0:
+                # Thưởng nhẹ ngữ cảnh ngôn ngữ file đang mở mà không đè mất kết quả ngoài miền có điểm vượt trội
+                for cand in all_candidates:
+                    if cand.category in preferred_set:
+                        cand.score = min(1.0, float(cand.score) + RETRIEVAL_LANGUAGE_PRIORITY_BONUS)
+                all_candidates.sort(key=lambda item: item.score, reverse=True)
+            return all_candidates[: self.top_k]
         except Exception as e:
             logger.warning("Lỗi trong quá trình truy hồi ngữ nghĩa: %s", e)
             return []
@@ -1541,14 +1720,13 @@ class Pipeline:
             return []
 
         try:
+            fetch_k = self._candidate_fetch_k() if restrict_category is not None else self.top_k
             matches = self.matcher.match(
-                norm_query, top_k=self._candidate_fetch_k(), threshold=self.fuzzy_threshold
+                norm_query, top_k=fetch_k, threshold=self.fuzzy_threshold
             )
             candidates: list[CandidateChoice] = []
             for m in matches:
                 cat = m.category or self.category_map.get(m.intent, "")
-                if not self._supports_target(m.intent):
-                    continue
                 if restrict_category is not None and cat != restrict_category:
                     continue
                 candidates.append(
@@ -1576,11 +1754,9 @@ class Pipeline:
 
         try:
             ranked = self.tfidf_ranker.rank(
-                norm_query, top_k=self._candidate_fetch_k(), category=restrict_category
+                norm_query, top_k=self.top_k, category=restrict_category
             )
-            return [candidate for candidate in ranked if self._supports_target(candidate.intent)][
-                : self.top_k
-            ]
+            return ranked[: self.top_k]
         except Exception as e:
             logger.warning("Lỗi trong quá trình xếp hạng TF-IDF: %s", e)
             return []

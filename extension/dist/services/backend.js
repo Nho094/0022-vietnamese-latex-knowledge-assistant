@@ -35,7 +35,6 @@ var __importStar = (this && this.__importStar) || (function () {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.BackendService = void 0;
 const node_crypto_1 = require("node:crypto");
-const node_fs_1 = require("node:fs");
 const fs = __importStar(require("node:fs/promises"));
 const node_child_process_1 = require("node:child_process");
 const node_net_1 = require("node:net");
@@ -62,8 +61,12 @@ class BackendService {
         return this.status;
     }
     async start() {
-        if (this.status.state === "ready" || this.status.state === "degraded")
+        if (this.port &&
+            this.child &&
+            this.child.exitCode === null &&
+            (this.status.state === "ready" || this.status.state === "degraded" || this.status.state === "error")) {
             return this.status;
+        }
         if (this.startup)
             return this.startup;
         this.disposed = false;
@@ -92,14 +95,9 @@ class BackendService {
         const modelRoot = this.modelRoot();
         const storage = this.context.globalStorageUri.fsPath;
         const registryPath = path.join(storage, "intents.json");
+        const seedMarkerPath = path.join(storage, ".seeded-intents.sha256");
         await fs.mkdir(storage, { recursive: true });
-        try {
-            await fs.copyFile(path.join(root, "data", "intents.json"), registryPath, node_fs_1.constants.COPYFILE_EXCL);
-        }
-        catch (error) {
-            if (!(error instanceof Error && "code" in error && error.code === "EEXIST"))
-                throw error;
-        }
+        await (0, runtime_config_1.syncSeededIntentsRegistry)(path.join(root, "data", "intents.json"), registryPath, seedMarkerPath);
         const env = {
             ...process.env,
             PYTHONPATH: [root, process.env.PYTHONPATH].filter(Boolean).join(path.delimiter),
@@ -141,16 +139,21 @@ class BackendService {
             try {
                 await this.fetchJson("/healthz", false);
                 const info = await this.fetchJson("/system/status", true);
-                const state = (0, runtime_config_1.serviceStateFromCapabilities)(info.classifier_available, info.retrieval_model_available);
+                const hasDependencyError = (info.classifier_missing_dependencies?.length ?? 0) > 0 ||
+                    (info.retrieval_missing_dependencies?.length ?? 0) > 0;
+                const state = (0, runtime_config_1.serviceStateFromCapabilities)(info.classifier_available, info.retrieval_model_available, info.status, hasDependencyError);
                 const status = {
                     state,
                     message: info.message,
                     python: info.python,
+                    pipelineMode: info.pipeline_mode,
                     classifierAvailable: info.classifier_available,
+                    classifierMissingDependencies: info.classifier_missing_dependencies,
                     classifierMessage: info.classifier_message,
                     classifierCheckpointPath: info.classifier_checkpoint_path,
                     phobertBasePath: info.phobert_base_path,
                     retrievalModelAvailable: info.retrieval_model_available,
+                    retrievalMissingDependencies: info.retrieval_missing_dependencies,
                     retrievalModelMessage: info.retrieval_model_message,
                     retrievalModelPath: info.retrieval_model_path,
                     retrievalIndexAvailable: info.retrieval_index_available,
@@ -176,10 +179,11 @@ class BackendService {
         return status;
     }
     async request(route, options = {}) {
-        if (this.status.state === "stopped" || this.status.state === "missing" || this.status.state === "error") {
+        if (!this.port || !this.child || this.child.exitCode !== null || this.status.state === "stopped" || this.status.state === "missing") {
             const started = await this.start();
-            if (started.state !== "ready" && started.state !== "degraded")
+            if (!this.port || started.state === "missing" || started.state === "stopped") {
                 throw new Error(started.message);
+            }
         }
         return this.fetchJson(route, true, options);
     }
@@ -229,27 +233,36 @@ class BackendService {
     findPython() {
         const configured = vscode.workspace.getConfiguration("vietnameseKnowledgeAssistant").get("pythonPath", "").trim();
         const root = this.context.extensionPath;
-        const candidates = [
-            configured,
-            path.join(root, "AI", "bin", "python"),
-            path.join(root, ".venv", "bin", "python"),
-            "python3",
-            "python",
-        ].filter(Boolean);
+        const workspaceRoots = (vscode.workspace.workspaceFolders ?? []).map((folder) => folder.uri.fsPath);
+        const candidates = (0, runtime_config_1.pythonCandidates)(configured, workspaceRoots, root);
+        let fallbackCandidate;
         for (const candidate of candidates) {
-            const check = (0, node_child_process_1.spawnSync)(candidate, ["-c", "import fastapi, uvicorn, jsonschema, jsonata, jinja2; print('ready')"], {
-                cwd: root,
+            const check = (0, node_child_process_1.spawnSync)(candidate, [
+                "-c",
+                "import importlib.util; " +
+                    "req = ('fastapi', 'uvicorn', 'jsonschema', 'jsonata', 'jinja2'); " +
+                    "ok = all(importlib.util.find_spec(m) is not None for m in req); " +
+                    "ml = any(importlib.util.find_spec(m) is not None for m in ('torch', 'sentence_transformers')); " +
+                    "print(('ready_ml' if ml else 'ready_base') if ok else 'missing_deps')",
+            ], {
+                cwd: workspaceRoots[0] ?? root,
                 encoding: "utf8",
-                timeout: 8000,
+                timeout: 15_000,
                 windowsHide: true,
             });
-            if (check.status === 0 && check.stdout.includes("ready"))
+            if (check.status === 0 && check.stdout.includes("ready_ml")) {
+                this.output.appendLine(`[Python] Sử dụng môi trường có ML: ${candidate}`);
                 return candidate;
-            if (configured && candidate === configured && check.error) {
-                this.output.appendLine(`Không dùng được Python đã cấu hình: ${check.error.message}`);
             }
+            if (check.status === 0 && check.stdout.includes("ready_base") && !fallbackCandidate) {
+                this.output.appendLine(`[Python] Tìm thấy môi trường cơ bản (thiếu ML): ${candidate}`);
+                fallbackCandidate = candidate;
+                continue;
+            }
+            const detail = check.error?.message ?? (check.stderr || check.stdout || `mã ${check.status}`).trim();
+            this.output.appendLine(`[Python] Bỏ qua '${candidate}': ${detail}`);
         }
-        return undefined;
+        return fallbackCandidate;
     }
     modelRoot() {
         const configured = vscode.workspace.getConfiguration("vietnameseKnowledgeAssistant").get("modelRoot", "").trim();

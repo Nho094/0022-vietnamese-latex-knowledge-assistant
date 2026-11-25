@@ -20,6 +20,7 @@ from core.config import (
     DATA_CONTRACT_MANIFEST_PATH,
     DEFAULT_INTENTS_PATH,
     INTENT_DEFINITION_SCHEMA_PATH,
+    SUPPORTED_TARGETS,
 )
 
 try:
@@ -123,14 +124,31 @@ def _is_v2(definition: Mapping[str, Any]) -> bool:
 
 def _legacy_template(template: str, field_names: Sequence[str]) -> str:
     """Chuyển placeholder slot cũ, giữ nguyên lệnh và ngoặc LaTeX tĩnh."""
-    result = re.sub(
-        r"\{<<\s*([A-Za-z_][A-Za-z0-9_]*)\s*>>\}",
-        r"{ {{ \1 }} }",
-        template,
-    )
+    field_set = set(field_names)
+    # Bảo toàn cặp {{...}} tĩnh như \graphicspath{{images/}} khỏi cú pháp Jinja2
+    protected_raw: list[str] = []
+
+    def _protect_raw(match: re.Match[str]) -> str:
+        inner = match.group(1).strip()
+        if inner in field_set or "<<" in inner or ">>" in inner:
+            return match.group(0)
+        token = f"__KA_RAW_{len(protected_raw)}__"
+        protected_raw.append(match.group(0))
+        return token
+
+    result = re.sub(r"\{\{([^{}]+)\}\}", _protect_raw, template)
+    result = re.sub(r"\{<<\s*([A-Za-z_][A-Za-z0-9_]*)\s*>>", r"{ <<\1>>", result)
+    result = re.sub(r"<<\s*([A-Za-z_][A-Za-z0-9_]*)\s*>>\}", r"<<\1>> }", result)
     result = re.sub(r"<<\s*([A-Za-z_][A-Za-z0-9_]*)\s*>>", r"{{ \1 }}", result)
     for name in sorted(field_names, key=len, reverse=True):
         result = result.replace("{" + name + "}", "{{ " + name + " }}")
+    # Tránh chuỗi `{{{` / `}}}` khiến Jinja2 hiểu nhầm là dict literal
+    while "{{{" in result:
+        result = result.replace("{{{", "{ {{")
+    while "}}}" in result:
+        result = result.replace("}}}", "}} }")
+    for idx, original in enumerate(protected_raw):
+        result = result.replace(f"__KA_RAW_{idx}__", f"{{% raw %}}{original}{{% endraw %}}")
     return result
 
 
@@ -157,6 +175,8 @@ def adapt_legacy_definition(legacy: Mapping[str, Any]) -> dict[str, Any]:
         legacy_type = str(slot.get("type", "text")).lower()
         value_type = _LEGACY_TYPE_MAP.get(legacy_type, "string")
         field_schema: dict[str, Any] = {"type": value_type}
+        if legacy_type == "matrix":
+            field_schema["format"] = "matrix"
         if isinstance(slot.get("desc"), str):
             field_schema["description"] = slot["desc"]
         # Legacy default null biểu thị chưa có mặc định; các giá trị falsy được giữ.
@@ -167,9 +187,14 @@ def adapt_legacy_definition(legacy: Mapping[str, Any]) -> dict[str, Any]:
         is_required = bool(slot.get("required", False))
         if is_required:
             required.append(name)
-        extraction: dict[str, Any] = {"method": "regex"}
-        if isinstance(slot.get("regex"), str):
-            extraction.update({"pattern": slot["regex"], "capture_group": 1})
+        if legacy_type == "matrix":
+            extraction: dict[str, Any] = {"method": "parser", "parser": "matrix_content"}
+            if isinstance(slot.get("regex"), str):
+                extraction["pattern"] = slot["regex"]
+        else:
+            extraction = {"method": "regex"}
+            if isinstance(slot.get("regex"), str):
+                extraction.update({"pattern": slot["regex"], "capture_group": 1})
         policy: dict[str, Any] = {
             "value_type": value_type,
             "extraction": extraction,
@@ -206,7 +231,7 @@ def adapt_legacy_definition(legacy: Mapping[str, Any]) -> dict[str, Any]:
     render_templates = {
         target: _legacy_template(template, list(slots))
         for target, template in templates.items()
-        if target == "latex" and isinstance(template, str) and template
+        if target in SUPPORTED_TARGETS and isinstance(template, str) and template.strip()
     }
     result.update(
         {

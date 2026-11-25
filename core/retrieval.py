@@ -625,12 +625,18 @@ class Retriever:
             intent_name = str(intent_item.get("intent", "")).strip()
             describe = str(intent_item.get("describe", "")).strip()
             category = str(intent_item.get("category", "")).strip()
-            raw_aliases = intent_item.get("aliases", [])
+            raw_aliases = list(intent_item.get("aliases", []) or [])
+            learned_aliases = intent_item.get("learned_aliases", [])
+            if isinstance(learned_aliases, (list, tuple, set)):
+                raw_aliases.extend(learned_aliases)
         else:
             intent_name = str(getattr(intent_item, "intent", "")).strip()
             describe = str(getattr(intent_item, "describe", "")).strip()
             category = str(getattr(intent_item, "category", "")).strip()
-            raw_aliases = getattr(intent_item, "aliases", [])
+            raw_aliases = list(getattr(intent_item, "aliases", []) or [])
+            learned_aliases = getattr(intent_item, "learned_aliases", [])
+            if isinstance(learned_aliases, (list, tuple, set)):
+                raw_aliases.extend(learned_aliases)
 
         if not intent_name:
             raise ValueError(f"Kịch bản thiếu trường định danh 'intent': {intent_item}")

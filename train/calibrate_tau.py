@@ -1244,7 +1244,11 @@ def run_calibration_pipeline(
     train_samples = load_dataset_samples(train_csv_path) if Path(train_csv_path).exists() else None
 
     if smoke_mode:
-        val_samples = val_samples[:30]
+        # Đảm bảo tập smoke 30 mẫu luôn bao gồm cả mẫu in-scope lẫn OUT_OF_SCOPE (nếu có)
+        in_rows = [s for s in val_samples if s["label"] != OUT_OF_SCOPE_INTENT]
+        oos_rows = [s for s in val_samples if s["label"] == OUT_OF_SCOPE_INTENT]
+        picked_oos = oos_rows[: min(5, len(oos_rows))]
+        val_samples = in_rows[: 30 - len(picked_oos)] + picked_oos
 
     val_total = len(val_samples)
     val_oos_count = sum(1 for s in val_samples if s["label"] == OUT_OF_SCOPE_INTENT)

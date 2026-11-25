@@ -2,7 +2,7 @@
   {
     "intent": "LATEX_TAI_LIEU_TOI_GIAN",
     "expected_intent": "LATEX_TAI_LIEU_TOI_GIAN",
-    "utterance": "tạo tai lieu toi gian trong LaTeX",
+    "utterance": "tài liệu tối giản",
     "source": "data/intents.json aliases[7]",
     "review_needed": false,
     "expected_target": "latex",
@@ -24,7 +24,7 @@
   {
     "intent": "LATEX_LOP_TAI_LIEU_ARTICLE",
     "expected_intent": "LATEX_LOP_TAI_LIEU_ARTICLE",
-    "utterance": "tạo lop tai lieu article trong LaTeX",
+    "utterance": "lớp tài liệu article",
     "source": "data/intents.json aliases[7]",
     "review_needed": false,
     "expected_target": "latex",
@@ -46,7 +46,7 @@
   {
     "intent": "LATEX_LOP_TAI_LIEU_BOOK",
     "expected_intent": "LATEX_LOP_TAI_LIEU_BOOK",
-    "utterance": "chèn lop tai lieu book vào tài liệu",
+    "utterance": "lớp tài liệu book",
     "source": "data/intents.json aliases[7]",
     "review_needed": false,
     "expected_target": "latex",
@@ -68,7 +68,7 @@
   {
     "intent": "LATEX_LOP_TAI_LIEU_REPORT",
     "expected_intent": "LATEX_LOP_TAI_LIEU_REPORT",
-    "utterance": "chèn lop tai lieu report vào tài liệu",
+    "utterance": "lớp tài liệu report",
     "source": "data/intents.json aliases[7]",
     "review_needed": false,
     "expected_target": "latex",
@@ -90,7 +90,7 @@
   {
     "intent": "LATEX_PREAMBLE_TAI_LIEU",
     "expected_intent": "LATEX_PREAMBLE_TAI_LIEU",
-    "utterance": "tạo preamble tai lieu trong LaTeX",
+    "utterance": "preamble tài liệu",
     "source": "data/intents.json aliases[7]",
     "review_needed": false,
     "expected_target": "latex",
@@ -112,7 +112,7 @@
   {
     "intent": "LATEX_NAP_PACKAGE",
     "expected_intent": "LATEX_NAP_PACKAGE",
-    "utterance": "thêm package",
+    "utterance": "nạp package",
     "source": "data/intents.json aliases[1]",
     "review_needed": false,
     "expected_target": "latex",
@@ -122,7 +122,7 @@
     "optional_slots": [],
     "defaults": {},
     "slot_inputs": {
-      "package_name": "noi dung thu nghiem"
+      "package_name": "amsmath"
     },
     "missing_slot_cases": [
       "package_name"
@@ -142,7 +142,7 @@
   {
     "intent": "LATEX_NAP_PACKAGE_CO_TUY_CHON",
     "expected_intent": "LATEX_NAP_PACKAGE_CO_TUY_CHON",
-    "utterance": "chèn nap package co tuy chon vào tài liệu",
+    "utterance": "nạp package có tùy chọn",
     "source": "data/intents.json aliases[7]",
     "review_needed": false,
     "expected_target": "latex",
@@ -156,8 +156,8 @@
       "options": "dvips"
     },
     "slot_inputs": {
-      "options": "dvips",
-      "package_name": "noi dung thu nghiem"
+      "options": "utf8",
+      "package_name": "amsmath"
     },
     "missing_slot_cases": [
       "package_name"
@@ -178,7 +178,7 @@
   {
     "intent": "LATEX_TIEU_E_TAC_GIA_NGAY_THANG",
     "expected_intent": "LATEX_TIEU_E_TAC_GIA_NGAY_THANG",
-    "utterance": "tạo tieu e tac gia ngay thang trong LaTeX",
+    "utterance": "tiêu đề tác giả ngày tháng",
     "source": "data/intents.json aliases[7]",
     "review_needed": false,
     "expected_target": "latex",
@@ -192,8 +192,8 @@
       "author": "Tên tác giả"
     },
     "slot_inputs": {
-      "title": "Tiêu đề tài liệu",
-      "author": "Tên tác giả"
+      "title": "Báo cáo nghiên cứu",
+      "author": "Nguyễn An"
     },
     "missing_slot_cases": [],
     "slot_utterance": "viết giúp tôi Khai báo title, author, date trong preamble và hiển thị bằng maketitle., title là Lưu ý quan trọng, author là nội dung mẫu Đầu ra cần dùng được trong LaTeX.",
@@ -212,7 +212,7 @@
   {
     "intent": "LATEX_LOI_CAM_ON_TAC_GIA",
     "expected_intent": "LATEX_LOI_CAM_ON_TAC_GIA",
-    "utterance": "chèn loi cam on tac gia vào tài liệu",
+    "utterance": "lời cảm ơn tác giả",
     "source": "data/intents.json aliases[7]",
     "review_needed": false,
     "expected_target": "latex",
@@ -226,8 +226,8 @@
       "thanks": "Nội dung cảm ơn"
     },
     "slot_inputs": {
-      "author": "Tên tác giả",
-      "thanks": "Nội dung cảm ơn"
+      "author": "Nguyễn An",
+      "thanks": "Cảm ơn sự hỗ trợ"
     },
     "missing_slot_cases": [],
     "slot_utterance": "viết giúp tôi Thêm ghi chú cảm ơn bằng thanks trong trường author., author là nội dung mẫu, thanks là nội dung mẫu Đầu ra cần dùng được trong LaTeX.",
@@ -246,7 +246,7 @@
   {
     "intent": "LATEX_CHU_THICH_MA_LATEX",
     "expected_intent": "LATEX_CHU_THICH_MA_LATEX",
-    "utterance": "tạo chu thich ma latex trong LaTeX",
+    "utterance": "chú thích mã latex",
     "source": "data/intents.json aliases[7]",
     "review_needed": false,
     "expected_target": "latex",
@@ -268,7 +268,7 @@
   {
     "intent": "LATEX_CHU_AM",
     "expected_intent": "LATEX_CHU_AM",
-    "utterance": "tạo chu am trong LaTeX",
+    "utterance": "chữ đậm",
     "source": "data/intents.json aliases[7]",
     "review_needed": false,
     "expected_target": "latex",
@@ -280,7 +280,7 @@
       "text": "Văn bản"
     },
     "slot_inputs": {
-      "text": "Văn bản"
+      "text": "Nội dung văn bản"
     },
     "missing_slot_cases": [],
     "slot_utterance": "viết giúp tôi In đậm văn bản bằng textbf., text là nội dung mẫu Đầu ra cần dùng được trong LaTeX.",
@@ -298,7 +298,7 @@
   {
     "intent": "LATEX_CHU_NGHIENG",
     "expected_intent": "LATEX_CHU_NGHIENG",
-    "utterance": "tạo chu nghieng trong LaTeX",
+    "utterance": "chữ nghiêng",
     "source": "data/intents.json aliases[7]",
     "review_needed": false,
     "expected_target": "latex",
@@ -310,7 +310,7 @@
       "text": "Văn bản"
     },
     "slot_inputs": {
-      "text": "Văn bản"
+      "text": "Nội dung văn bản"
     },
     "missing_slot_cases": [],
     "slot_utterance": "viết giúp tôi In nghiêng văn bản bằng textit., text là nội dung mẫu Đầu ra cần dùng được trong LaTeX.",
@@ -328,7 +328,7 @@
   {
     "intent": "LATEX_GACH_CHAN",
     "expected_intent": "LATEX_GACH_CHAN",
-    "utterance": "chèn gach chan vào tài liệu",
+    "utterance": "gạch chân",
     "source": "data/intents.json aliases[7]",
     "review_needed": false,
     "expected_target": "latex",
@@ -340,7 +340,7 @@
       "text": "Văn bản"
     },
     "slot_inputs": {
-      "text": "Văn bản"
+      "text": "Nội dung văn bản"
     },
     "missing_slot_cases": [],
     "slot_utterance": "viết giúp tôi Gạch chân văn bản bằng underline., text là nội dung mẫu Đầu ra cần dùng được trong LaTeX.",
@@ -358,7 +358,7 @@
   {
     "intent": "LATEX_NHAN_MANH",
     "expected_intent": "LATEX_NHAN_MANH",
-    "utterance": "tạo nhan manh trong LaTeX",
+    "utterance": "nhấn mạnh",
     "source": "data/intents.json aliases[7]",
     "review_needed": false,
     "expected_target": "latex",
@@ -370,7 +370,7 @@
       "text": "Văn bản"
     },
     "slot_inputs": {
-      "text": "Văn bản"
+      "text": "Nội dung văn bản"
     },
     "missing_slot_cases": [],
     "slot_utterance": "viết giúp tôi Nhấn mạnh văn bản theo ngữ cảnh bằng emph., text là nội dung mẫu Đầu ra cần dùng được trong LaTeX.",
@@ -388,7 +388,7 @@
   {
     "intent": "LATEX_CHEN_HINH_ANH",
     "expected_intent": "LATEX_CHEN_HINH_ANH",
-    "utterance": "tạo chen hinh anh trong LaTeX",
+    "utterance": "chèn hình ảnh",
     "source": "data/intents.json aliases[7]",
     "review_needed": false,
     "expected_target": "latex",
@@ -402,7 +402,7 @@
       "width": "0.75"
     },
     "slot_inputs": {
-      "filename": "hinh.png",
+      "filename": "hinh1.png",
       "width": "0.75"
     },
     "missing_slot_cases": [
@@ -424,7 +424,7 @@
   {
     "intent": "LATEX_UONG_DAN_THU_MUC_HINH",
     "expected_intent": "LATEX_UONG_DAN_THU_MUC_HINH",
-    "utterance": "chèn uong dan thu muc hinh vào tài liệu",
+    "utterance": "đường dẫn thư mục hình",
     "source": "data/intents.json aliases[7]",
     "review_needed": false,
     "expected_target": "latex",
@@ -446,7 +446,7 @@
   {
     "intent": "LATEX_FIGURE",
     "expected_intent": "LATEX_FIGURE",
-    "utterance": "tạo moi truong figure trong LaTeX",
+    "utterance": "môi trường figure",
     "source": "data/intents.json aliases[7]",
     "review_needed": false,
     "expected_target": "latex",
@@ -464,9 +464,9 @@
       "width": "0.8"
     },
     "slot_inputs": {
-      "file": "hinh.png",
-      "caption": "Hình minh họa",
-      "label": "fig-hinh",
+      "file": "figure.png",
+      "caption": "Biểu đồ kết quả",
+      "label": "fig:hinh",
       "width": "0.8"
     },
     "missing_slot_cases": [
@@ -490,7 +490,7 @@
   {
     "intent": "LATEX_CHU_THICH_HINH",
     "expected_intent": "LATEX_CHU_THICH_HINH",
-    "utterance": "tạo chu thich hinh trong LaTeX",
+    "utterance": "chú thích hình",
     "source": "data/intents.json aliases[7]",
     "review_needed": false,
     "expected_target": "latex",
@@ -502,7 +502,7 @@
       "caption": "Nội dung chú thích"
     },
     "slot_inputs": {
-      "caption": "Nội dung chú thích"
+      "caption": "Biểu đồ kết quả"
     },
     "missing_slot_cases": [],
     "slot_utterance": "viết giúp tôi Thêm caption cho hình hoặc bảng., caption là nội dung mẫu Đầu ra cần dùng được trong LaTeX.",
@@ -532,7 +532,7 @@
       "label": "fig:ten-nhan"
     },
     "slot_inputs": {
-      "label": "fig-ten-nhan"
+      "label": "fig:ten-nhan"
     },
     "missing_slot_cases": [],
     "slot_utterance": "viết giúp tôi Gắn nhãn bằng label và tham chiếu số bằng ref hoặc số trang bằng pageref., label là Tài liệu tham khảo Đầu ra cần dùng được trong LaTeX.",
@@ -550,7 +550,7 @@
   {
     "intent": "LATEX_DANH_SACH_KHONG_THU_TU",
     "expected_intent": "LATEX_DANH_SACH_KHONG_THU_TU",
-    "utterance": "tạo danh sach khong thu tu trong LaTeX",
+    "utterance": "danh sách không thứ tự",
     "source": "data/intents.json aliases[7]",
     "review_needed": false,
     "expected_target": "latex",
@@ -572,7 +572,7 @@
   {
     "intent": "LATEX_DANH_SACH_CO_THU_TU",
     "expected_intent": "LATEX_DANH_SACH_CO_THU_TU",
-    "utterance": "tạo danh sach co thu tu trong LaTeX",
+    "utterance": "danh sách có thứ tự",
     "source": "data/intents.json aliases[7]",
     "review_needed": false,
     "expected_target": "latex",
@@ -594,7 +594,7 @@
   {
     "intent": "LATEX_TOAN_INLINE_LATEX",
     "expected_intent": "LATEX_TOAN_INLINE_LATEX",
-    "utterance": "tạo toan inline latex trong LaTeX",
+    "utterance": "toán inline latex",
     "source": "data/intents.json aliases[7]",
     "review_needed": false,
     "expected_target": "latex",
@@ -616,7 +616,7 @@
   {
     "intent": "LATEX_TOAN_DISPLAY_KHONG_ANH_SO",
     "expected_intent": "LATEX_TOAN_DISPLAY_KHONG_ANH_SO",
-    "utterance": "tạo toan display khong anh so trong LaTeX",
+    "utterance": "toán display không đánh số",
     "source": "data/intents.json aliases[7]",
     "review_needed": false,
     "expected_target": "latex",
@@ -638,7 +638,7 @@
   {
     "intent": "LATEX_PHUONG_TRINH_ANH_SO",
     "expected_intent": "LATEX_PHUONG_TRINH_ANH_SO",
-    "utterance": "chèn phuong trinh anh so vào tài liệu",
+    "utterance": "phương trình đánh số",
     "source": "data/intents.json aliases[7]",
     "review_needed": false,
     "expected_target": "latex",
@@ -660,7 +660,7 @@
   {
     "intent": "LATEX_PHUONG_TRINH_KHONG_ANH_SO_AMSMATH",
     "expected_intent": "LATEX_PHUONG_TRINH_KHONG_ANH_SO_AMSMATH",
-    "utterance": "chèn phuong trinh khong anh so amsmath vào tài liệu",
+    "utterance": "phương trình không đánh số",
     "source": "data/intents.json aliases[7]",
     "review_needed": false,
     "expected_target": "latex",
@@ -682,7 +682,7 @@
   {
     "intent": "LATEX_MOI_TRUONG_MATH",
     "expected_intent": "LATEX_MOI_TRUONG_MATH",
-    "utterance": "chèn moi truong math vào tài liệu",
+    "utterance": "môi trường math",
     "source": "data/intents.json aliases[7]",
     "review_needed": false,
     "expected_target": "latex",
@@ -704,7 +704,7 @@
   {
     "intent": "LATEX_MOI_TRUONG_DISPLAYMATH",
     "expected_intent": "LATEX_MOI_TRUONG_DISPLAYMATH",
-    "utterance": "chèn moi truong displaymath vào tài liệu",
+    "utterance": "môi trường displaymath",
     "source": "data/intents.json aliases[7]",
     "review_needed": false,
     "expected_target": "latex",
@@ -726,7 +726,7 @@
   {
     "intent": "LATEX_CHI_SO_DUOI_VA_SO_MU",
     "expected_intent": "LATEX_CHI_SO_DUOI_VA_SO_MU",
-    "utterance": "chèn chi so duoi va so mu vào tài liệu",
+    "utterance": "chỉ số dưới và số mũ",
     "source": "data/intents.json aliases[7]",
     "review_needed": false,
     "expected_target": "latex",
@@ -748,7 +748,7 @@
   {
     "intent": "LATEX_TOAN_TU_LUONG_GIAC_VA_LOG",
     "expected_intent": "LATEX_TOAN_TU_LUONG_GIAC_VA_LOG",
-    "utterance": "tạo toan tu luong giac va log trong LaTeX",
+    "utterance": "toán tử lượng giác và log",
     "source": "data/intents.json aliases[7]",
     "review_needed": false,
     "expected_target": "latex",
@@ -770,7 +770,7 @@
   {
     "intent": "LATEX_MOI_TRUONG_ABSTRACT",
     "expected_intent": "LATEX_MOI_TRUONG_ABSTRACT",
-    "utterance": "tạo moi truong abstract trong LaTeX",
+    "utterance": "môi trường abstract",
     "source": "data/intents.json aliases[7]",
     "review_needed": false,
     "expected_target": "latex",
@@ -792,7 +792,7 @@
   {
     "intent": "LATEX_NGAT_DONG_THU_CONG",
     "expected_intent": "LATEX_NGAT_DONG_THU_CONG",
-    "utterance": "tạo ngat dong thu cong trong LaTeX",
+    "utterance": "ngắt dòng thủ công",
     "source": "data/intents.json aliases[7]",
     "review_needed": false,
     "expected_target": "latex",
@@ -814,7 +814,7 @@
   {
     "intent": "LATEX_LENH_NEWLINE",
     "expected_intent": "LATEX_LENH_NEWLINE",
-    "utterance": "chèn lenh newline vào tài liệu",
+    "utterance": "lệnh newline",
     "source": "data/intents.json aliases[6]",
     "review_needed": false,
     "expected_target": "latex",
@@ -836,7 +836,7 @@
   {
     "intent": "LATEX_GIAN_CACH_OAN_PARSKIP",
     "expected_intent": "LATEX_GIAN_CACH_OAN_PARSKIP",
-    "utterance": "chèn gian cach oan parskip vào tài liệu",
+    "utterance": "giãn cách đoạn parskip",
     "source": "data/intents.json aliases[7]",
     "review_needed": false,
     "expected_target": "latex",
@@ -858,7 +858,7 @@
   {
     "intent": "LATEX_CHUONG_VA_MUC",
     "expected_intent": "LATEX_CHUONG_VA_MUC",
-    "utterance": "tạo chuong va muc trong LaTeX",
+    "utterance": "chương và mục",
     "source": "data/intents.json aliases[7]",
     "review_needed": false,
     "expected_target": "latex",
@@ -880,7 +880,7 @@
   {
     "intent": "LATEX_MUC_KHONG_ANH_SO",
     "expected_intent": "LATEX_MUC_KHONG_ANH_SO",
-    "utterance": "tạo muc khong anh so trong LaTeX",
+    "utterance": "mục không đánh số",
     "source": "data/intents.json aliases[7]",
     "review_needed": false,
     "expected_target": "latex",
@@ -902,7 +902,7 @@
   {
     "intent": "LATEX_MUC_LUC",
     "expected_intent": "LATEX_MUC_LUC",
-    "utterance": "tạo muc luc trong LaTeX",
+    "utterance": "mục lục",
     "source": "data/intents.json aliases[7]",
     "review_needed": false,
     "expected_target": "latex",
@@ -924,7 +924,7 @@
   {
     "intent": "LATEX_THEM_MUC_KHONG_ANH_SO_VAO_MUC_LUC",
     "expected_intent": "LATEX_THEM_MUC_KHONG_ANH_SO_VAO_MUC_LUC",
-    "utterance": "chèn them muc khong anh so vao muc luc vào tài liệu",
+    "utterance": "thêm mục không đánh số vào mục lục",
     "source": "data/intents.json aliases[7]",
     "review_needed": false,
     "expected_target": "latex",
@@ -946,7 +946,7 @@
   {
     "intent": "LATEX_BANG_TABULAR_CO_BAN",
     "expected_intent": "LATEX_BANG_TABULAR_CO_BAN",
-    "utterance": "tạo bang tabular co ban trong LaTeX",
+    "utterance": "bảng tabular cơ bản",
     "source": "data/intents.json aliases[7]",
     "review_needed": false,
     "expected_target": "latex",
@@ -968,7 +968,7 @@
   {
     "intent": "LATEX_BANG_CO_UONG_KE",
     "expected_intent": "LATEX_BANG_CO_UONG_KE",
-    "utterance": "tạo bang co uong ke trong LaTeX",
+    "utterance": "bảng có đường kẻ",
     "source": "data/intents.json aliases[7]",
     "review_needed": false,
     "expected_target": "latex",
@@ -990,7 +990,7 @@
   {
     "intent": "LATEX_MOI_TRUONG_TABLE",
     "expected_intent": "LATEX_MOI_TRUONG_TABLE",
-    "utterance": "tạo moi truong table trong LaTeX",
+    "utterance": "môi trường table",
     "source": "data/intents.json aliases[7]",
     "review_needed": false,
     "expected_target": "latex",
@@ -1012,7 +1012,7 @@
   {
     "intent": "LATEX_CAN_GIUA_NOI_DUNG",
     "expected_intent": "LATEX_CAN_GIUA_NOI_DUNG",
-    "utterance": "chèn can giua noi dung vào tài liệu",
+    "utterance": "căn giữa nội dung",
     "source": "data/intents.json aliases[7]",
     "review_needed": false,
     "expected_target": "latex",
@@ -1034,7 +1034,7 @@
   {
     "intent": "QUADRATIC_EQUATION",
     "expected_intent": "QUADRATIC_EQUATION",
-    "utterance": "viết phương trình bậc hai",
+    "utterance": "phương trình bậc hai",
     "source": "data/intents.json aliases[1]",
     "review_needed": false,
     "expected_target": "latex",
@@ -1046,8 +1046,8 @@
     "optional_slots": [],
     "defaults": {},
     "slot_inputs": {
-      "a": "2",
-      "b": "2",
+      "a": "1",
+      "b": "-3",
       "c": "2"
     },
     "missing_slot_cases": [
@@ -1094,9 +1094,9 @@
   {
     "intent": "OBSIDIAN_OBSIDIAN_BASIC_TIEU_E_1",
     "expected_intent": "OBSIDIAN_OBSIDIAN_BASIC_TIEU_E_1",
-    "utterance": "chèn tiêu đề cấp một vào ghi chú",
+    "utterance": "tiêu đề cấp một markdown",
     "source": "data/intents.json aliases[3]",
-    "review_needed": true,
+    "review_needed": false,
     "expected_target": "obsidian",
     "required_slots": [
       "text"
@@ -1104,7 +1104,7 @@
     "optional_slots": [],
     "defaults": {},
     "slot_inputs": {
-      "text": "noi dung mau"
+      "text": "Giới thiệu tổng quan"
     },
     "missing_slot_cases": [
       "text"
@@ -1126,9 +1126,9 @@
   {
     "intent": "OBSIDIAN_OBSIDIAN_BASIC_TIEU_E_2",
     "expected_intent": "OBSIDIAN_OBSIDIAN_BASIC_TIEU_E_2",
-    "utterance": "chèn tiêu đề cấp hai vào ghi chú",
+    "utterance": "tiêu đề cấp hai markdown",
     "source": "data/intents.json aliases[3]",
-    "review_needed": true,
+    "review_needed": false,
     "expected_target": "obsidian",
     "required_slots": [
       "text"
@@ -1136,7 +1136,7 @@
     "optional_slots": [],
     "defaults": {},
     "slot_inputs": {
-      "text": "noi dung mau"
+      "text": "Phương pháp nghiên cứu"
     },
     "missing_slot_cases": [
       "text"
@@ -1158,9 +1158,9 @@
   {
     "intent": "OBSIDIAN_OBSIDIAN_BASIC_TIEU_E_3",
     "expected_intent": "OBSIDIAN_OBSIDIAN_BASIC_TIEU_E_3",
-    "utterance": "chèn tiêu đề cấp ba vào ghi chú",
+    "utterance": "tiêu đề cấp ba markdown",
     "source": "data/intents.json aliases[3]",
-    "review_needed": true,
+    "review_needed": false,
     "expected_target": "obsidian",
     "required_slots": [
       "text"
@@ -1168,7 +1168,7 @@
     "optional_slots": [],
     "defaults": {},
     "slot_inputs": {
-      "text": "noi dung mau"
+      "text": "Chi tiết thực nghiệm"
     },
     "missing_slot_cases": [
       "text"
@@ -1190,7 +1190,7 @@
   {
     "intent": "OBSIDIAN_OBSIDIAN_BASIC_CHU_AM",
     "expected_intent": "OBSIDIAN_OBSIDIAN_BASIC_CHU_AM",
-    "utterance": "dung chữ đậm trong obsidian",
+    "utterance": "chữ đậm markdown",
     "source": "data/intents.json aliases[4]",
     "review_needed": false,
     "expected_target": "obsidian",
@@ -1200,7 +1200,7 @@
     "optional_slots": [],
     "defaults": {},
     "slot_inputs": {
-      "text": "noi dung mau"
+      "text": "điểm nhấn quan trọng"
     },
     "missing_slot_cases": [
       "text"
@@ -1220,7 +1220,7 @@
   {
     "intent": "OBSIDIAN_OBSIDIAN_BASIC_CHU_NGHIENG",
     "expected_intent": "OBSIDIAN_OBSIDIAN_BASIC_CHU_NGHIENG",
-    "utterance": "dung chữ nghiêng trong obsidian",
+    "utterance": "chữ nghiêng markdown",
     "source": "data/intents.json aliases[2]",
     "review_needed": false,
     "expected_target": "obsidian",
@@ -1230,7 +1230,7 @@
     "optional_slots": [],
     "defaults": {},
     "slot_inputs": {
-      "text": "noi dung mau"
+      "text": "thuật ngữ chuyên ngành"
     },
     "missing_slot_cases": [
       "text"
@@ -1250,7 +1250,7 @@
   {
     "intent": "OBSIDIAN_OBSIDIAN_BASIC_GACH_NGANG",
     "expected_intent": "OBSIDIAN_OBSIDIAN_BASIC_GACH_NGANG",
-    "utterance": "dung gạch ngang trong obsidian",
+    "utterance": "gạch ngang chữ markdown",
     "source": "data/intents.json aliases[5]",
     "review_needed": false,
     "expected_target": "obsidian",
@@ -1260,7 +1260,7 @@
     "optional_slots": [],
     "defaults": {},
     "slot_inputs": {
-      "text": "noi dung mau"
+      "text": "nội dung đã bỏ"
     },
     "missing_slot_cases": [
       "text"
@@ -1280,7 +1280,7 @@
   {
     "intent": "OBSIDIAN_OBSIDIAN_BASIC_HIGHLIGHT",
     "expected_intent": "OBSIDIAN_OBSIDIAN_BASIC_HIGHLIGHT",
-    "utterance": "dung highlight trong obsidian",
+    "utterance": "tô sáng văn bản markdown",
     "source": "data/intents.json aliases[5]",
     "review_needed": false,
     "expected_target": "obsidian",
@@ -1290,7 +1290,7 @@
     "optional_slots": [],
     "defaults": {},
     "slot_inputs": {
-      "text": "noi dung mau"
+      "text": "ý chính cần nhớ"
     },
     "missing_slot_cases": [
       "text"
@@ -1310,7 +1310,7 @@
   {
     "intent": "OBSIDIAN_OBSIDIAN_BASIC_LINK_NOI_BO",
     "expected_intent": "OBSIDIAN_OBSIDIAN_BASIC_LINK_NOI_BO",
-    "utterance": "dung link nội bộ trong obsidian",
+    "utterance": "liên kết nội bộ markdown",
     "source": "data/intents.json aliases[5]",
     "review_needed": false,
     "expected_target": "obsidian",
@@ -1320,7 +1320,7 @@
     "optional_slots": [],
     "defaults": {},
     "slot_inputs": {
-      "note": "noi dung mau"
+      "note": "Ghi chú Toán học"
     },
     "missing_slot_cases": [
       "note"
@@ -1340,7 +1340,7 @@
   {
     "intent": "OBSIDIAN_OBSIDIAN_BASIC_LINK_NOI_BO_CO_TEN",
     "expected_intent": "OBSIDIAN_OBSIDIAN_BASIC_LINK_NOI_BO_CO_TEN",
-    "utterance": "dung link nội bộ có tên trong obsidian",
+    "utterance": "liên kết nội bộ có tên hiển thị markdown",
     "source": "data/intents.json aliases[5]",
     "review_needed": false,
     "expected_target": "obsidian",
@@ -1351,8 +1351,8 @@
     "optional_slots": [],
     "defaults": {},
     "slot_inputs": {
-      "note": "noi dung mau",
-      "label": "noi dung mau"
+      "note": "Ghi chú Đại số",
+      "label": "Xem bài Đại số"
     },
     "missing_slot_cases": [
       "note",
@@ -1374,7 +1374,7 @@
   {
     "intent": "OBSIDIAN_OBSIDIAN_BASIC_LINK_WEB",
     "expected_intent": "OBSIDIAN_OBSIDIAN_BASIC_LINK_WEB",
-    "utterance": "dung link web trong obsidian",
+    "utterance": "liên kết trang web markdown",
     "source": "data/intents.json aliases[5]",
     "review_needed": false,
     "expected_target": "obsidian",
@@ -1385,8 +1385,8 @@
     "optional_slots": [],
     "defaults": {},
     "slot_inputs": {
-      "label": "noi dung mau",
-      "url": "noi dung mau"
+      "label": "Tài liệu LaTeX",
+      "url": "https://overleaf.com"
     },
     "missing_slot_cases": [
       "label",
@@ -1408,7 +1408,7 @@
   {
     "intent": "OBSIDIAN_OBSIDIAN_BASIC_ANH",
     "expected_intent": "OBSIDIAN_OBSIDIAN_BASIC_ANH",
-    "utterance": "dung ảnh trong obsidian",
+    "utterance": "chèn ảnh markdown",
     "source": "data/intents.json aliases[5]",
     "review_needed": false,
     "expected_target": "obsidian",
@@ -1419,8 +1419,8 @@
     "optional_slots": [],
     "defaults": {},
     "slot_inputs": {
-      "alt": "noi dung mau",
-      "url": "noi dung mau"
+      "alt": "Hình minh họa",
+      "url": "https://example.com/hinh.png"
     },
     "missing_slot_cases": [
       "alt",
@@ -1442,7 +1442,7 @@
   {
     "intent": "OBSIDIAN_OBSIDIAN_BASIC_TRICH_DAN",
     "expected_intent": "OBSIDIAN_OBSIDIAN_BASIC_TRICH_DAN",
-    "utterance": "dung trích dẫn trong obsidian",
+    "utterance": "khối trích dẫn markdown",
     "source": "data/intents.json aliases[5]",
     "review_needed": false,
     "expected_target": "obsidian",
@@ -1452,7 +1452,7 @@
     "optional_slots": [],
     "defaults": {},
     "slot_inputs": {
-      "text": "noi dung mau"
+      "text": "Kiến thức là sức mạnh."
     },
     "missing_slot_cases": [
       "text"
@@ -1472,7 +1472,7 @@
   {
     "intent": "OBSIDIAN_OBSIDIAN_BASIC_DANH_SACH",
     "expected_intent": "OBSIDIAN_OBSIDIAN_BASIC_DANH_SACH",
-    "utterance": "dung danh sách trong obsidian",
+    "utterance": "danh sách gạch đầu dòng markdown",
     "source": "data/intents.json aliases[5]",
     "review_needed": false,
     "expected_target": "obsidian",
@@ -1482,7 +1482,7 @@
     "optional_slots": [],
     "defaults": {},
     "slot_inputs": {
-      "item": "noi dung mau"
+      "item": "Bước đầu tiên"
     },
     "missing_slot_cases": [
       "item"
@@ -1502,7 +1502,7 @@
   {
     "intent": "OBSIDIAN_OBSIDIAN_BASIC_DANH_SACH_ANH_SO",
     "expected_intent": "OBSIDIAN_OBSIDIAN_BASIC_DANH_SACH_ANH_SO",
-    "utterance": "dung danh sách đánh số trong obsidian",
+    "utterance": "danh sách đánh số markdown",
     "source": "data/intents.json aliases[5]",
     "review_needed": false,
     "expected_target": "obsidian",
@@ -1513,8 +1513,8 @@
     "optional_slots": [],
     "defaults": {},
     "slot_inputs": {
-      "item1": "noi dung mau",
-      "item2": "noi dung mau"
+      "item1": "Chuẩn bị dữ liệu",
+      "item2": "Huấn luyện mô hình"
     },
     "missing_slot_cases": [
       "item1",
@@ -1536,7 +1536,7 @@
   {
     "intent": "OBSIDIAN_OBSIDIAN_BASIC_CHECKBOX",
     "expected_intent": "OBSIDIAN_OBSIDIAN_BASIC_CHECKBOX",
-    "utterance": "dung checkbox trong obsidian",
+    "utterance": "hộp kiểm công việc markdown",
     "source": "data/intents.json aliases[5]",
     "review_needed": false,
     "expected_target": "obsidian",
@@ -1546,7 +1546,7 @@
     "optional_slots": [],
     "defaults": {},
     "slot_inputs": {
-      "task": "noi dung mau"
+      "task": "Hoàn thiện báo cáo"
     },
     "missing_slot_cases": [
       "task"
@@ -1566,7 +1566,7 @@
   {
     "intent": "OBSIDIAN_OBSIDIAN_BASIC_CHECKBOX_HOAN_THANH",
     "expected_intent": "OBSIDIAN_OBSIDIAN_BASIC_CHECKBOX_HOAN_THANH",
-    "utterance": "dung checkbox hoàn thành trong obsidian",
+    "utterance": "hộp kiểm đã hoàn thành markdown",
     "source": "data/intents.json aliases[5]",
     "review_needed": false,
     "expected_target": "obsidian",
@@ -1576,7 +1576,7 @@
     "optional_slots": [],
     "defaults": {},
     "slot_inputs": {
-      "task": "noi dung mau"
+      "task": "Đã kiểm tra dữ liệu"
     },
     "missing_slot_cases": [
       "task"
@@ -1596,7 +1596,7 @@
   {
     "intent": "OBSIDIAN_OBSIDIAN_BASIC_UONG_NGANG",
     "expected_intent": "OBSIDIAN_OBSIDIAN_BASIC_UONG_NGANG",
-    "utterance": "dung đường ngang trong obsidian",
+    "utterance": "đường kẻ ngang phân tách markdown",
     "source": "data/intents.json aliases[5]",
     "review_needed": false,
     "expected_target": "obsidian",
@@ -1618,7 +1618,7 @@
   {
     "intent": "OBSIDIAN_OBSIDIAN_BASIC_CODE_INLINE",
     "expected_intent": "OBSIDIAN_OBSIDIAN_BASIC_CODE_INLINE",
-    "utterance": "dung code inline trong obsidian",
+    "utterance": "đoạn mã cùng dòng markdown",
     "source": "data/intents.json aliases[5]",
     "review_needed": false,
     "expected_target": "obsidian",
@@ -1628,7 +1628,7 @@
     "optional_slots": [],
     "defaults": {},
     "slot_inputs": {
-      "code": "noi dung mau"
+      "code": "print(1)"
     },
     "missing_slot_cases": [
       "code"
@@ -1648,7 +1648,7 @@
   {
     "intent": "OBSIDIAN_OBSIDIAN_BASIC_CODE_BLOCK",
     "expected_intent": "OBSIDIAN_OBSIDIAN_BASIC_CODE_BLOCK",
-    "utterance": "dung code block trong obsidian",
+    "utterance": "khối mã nguồn markdown",
     "source": "data/intents.json aliases[5]",
     "review_needed": false,
     "expected_target": "obsidian",
@@ -1659,8 +1659,8 @@
     "optional_slots": [],
     "defaults": {},
     "slot_inputs": {
-      "language": "noi dung mau",
-      "code": "noi dung mau"
+      "language": "python",
+      "code": "print('hello')"
     },
     "missing_slot_cases": [
       "language",
@@ -1682,7 +1682,7 @@
   {
     "intent": "OBSIDIAN_TABLE_BANG",
     "expected_intent": "OBSIDIAN_TABLE_BANG",
-    "utterance": "dung bảng trong obsidian",
+    "utterance": "bảng markdown cơ bản",
     "source": "data/intents.json aliases[5]",
     "review_needed": false,
     "expected_target": "obsidian",
@@ -1695,10 +1695,10 @@
     "optional_slots": [],
     "defaults": {},
     "slot_inputs": {
-      "c1": "noi dung mau",
-      "c2": "noi dung mau",
-      "v1": "noi dung mau",
-      "v2": "noi dung mau"
+      "c1": "Cột A",
+      "c2": "Cột B",
+      "v1": "Giá trị 1",
+      "v2": "Giá trị 2"
     },
     "missing_slot_cases": [
       "c1",
@@ -1724,7 +1724,7 @@
   {
     "intent": "OBSIDIAN_TABLE_BANG_CAN_TRAI",
     "expected_intent": "OBSIDIAN_TABLE_BANG_CAN_TRAI",
-    "utterance": "dung bảng căn trái trong obsidian",
+    "utterance": "bảng markdown căn trái",
     "source": "data/intents.json aliases[5]",
     "review_needed": false,
     "expected_target": "obsidian",
@@ -1737,10 +1737,10 @@
     "optional_slots": [],
     "defaults": {},
     "slot_inputs": {
-      "c1": "noi dung mau",
-      "c2": "noi dung mau",
-      "v1": "noi dung mau",
-      "v2": "noi dung mau"
+      "c1": "Cột A",
+      "c2": "Cột B",
+      "v1": "Giá trị 1",
+      "v2": "Giá trị 2"
     },
     "missing_slot_cases": [
       "c1",
@@ -1766,7 +1766,7 @@
   {
     "intent": "OBSIDIAN_TABLE_BANG_CAN_GIUA",
     "expected_intent": "OBSIDIAN_TABLE_BANG_CAN_GIUA",
-    "utterance": "dung bảng căn giữa trong obsidian",
+    "utterance": "bảng markdown căn giữa",
     "source": "data/intents.json aliases[5]",
     "review_needed": false,
     "expected_target": "obsidian",
@@ -1779,10 +1779,10 @@
     "optional_slots": [],
     "defaults": {},
     "slot_inputs": {
-      "c1": "noi dung mau",
-      "c2": "noi dung mau",
-      "v1": "noi dung mau",
-      "v2": "noi dung mau"
+      "c1": "Cột A",
+      "c2": "Cột B",
+      "v1": "Giá trị 1",
+      "v2": "Giá trị 2"
     },
     "missing_slot_cases": [
       "c1",
@@ -1808,7 +1808,7 @@
   {
     "intent": "OBSIDIAN_MERMAID_SO_O_LUONG",
     "expected_intent": "OBSIDIAN_MERMAID_SO_O_LUONG",
-    "utterance": "dung sơ đồ luồng trong obsidian",
+    "utterance": "sơ đồ luồng mermaid",
     "source": "data/intents.json aliases[5]",
     "review_needed": false,
     "expected_target": "obsidian",
@@ -1818,7 +1818,7 @@
     "optional_slots": [],
     "defaults": {},
     "slot_inputs": {
-      "diagram": "noi dung mau"
+      "diagram": "A --> B"
     },
     "missing_slot_cases": [
       "diagram"
@@ -1838,7 +1838,7 @@
   {
     "intent": "MATH_MATH_BASIC_CONG_THUC_INLINE",
     "expected_intent": "MATH_MATH_BASIC_CONG_THUC_INLINE",
-    "utterance": "dung công thức inline trong obsidian",
+    "utterance": "công thức toán cùng dòng",
     "source": "data/intents.json aliases[5]",
     "review_needed": false,
     "expected_target": "mathjax",
@@ -1848,7 +1848,7 @@
     "optional_slots": [],
     "defaults": {},
     "slot_inputs": {
-      "formula": "noi dung mau"
+      "formula": "E=mc^2"
     },
     "missing_slot_cases": [
       "formula"
@@ -1868,7 +1868,7 @@
   {
     "intent": "MATH_MATH_BASIC_CONG_THUC_LON",
     "expected_intent": "MATH_MATH_BASIC_CONG_THUC_LON",
-    "utterance": "dung công thức lớn trong obsidian",
+    "utterance": "công thức toán hiển thị riêng dòng",
     "source": "data/intents.json aliases[5]",
     "review_needed": false,
     "expected_target": "mathjax",
@@ -1878,7 +1878,7 @@
     "optional_slots": [],
     "defaults": {},
     "slot_inputs": {
-      "formula": "noi dung mau"
+      "formula": "a^2+b^2=c^2"
     },
     "missing_slot_cases": [
       "formula"
@@ -1898,7 +1898,7 @@
   {
     "intent": "MATH_MATH_BASIC_PHAN_SO",
     "expected_intent": "MATH_MATH_BASIC_PHAN_SO",
-    "utterance": "dung phân số trong obsidian",
+    "utterance": "phân số toán học",
     "source": "data/intents.json aliases[5]",
     "review_needed": false,
     "expected_target": "mathjax",
@@ -1909,8 +1909,8 @@
     "optional_slots": [],
     "defaults": {},
     "slot_inputs": {
-      "num": "noidungmau",
-      "den": "noidungmau"
+      "num": "2",
+      "den": "5"
     },
     "missing_slot_cases": [
       "num",
@@ -1937,7 +1937,7 @@
   {
     "intent": "MATH_MATH_BASIC_CAN",
     "expected_intent": "MATH_MATH_BASIC_CAN",
-    "utterance": "dung căn trong obsidian",
+    "utterance": "căn bậc hai",
     "source": "data/intents.json aliases[5]",
     "review_needed": false,
     "expected_target": "mathjax",
@@ -1947,7 +1947,7 @@
     "optional_slots": [],
     "defaults": {},
     "slot_inputs": {
-      "expr": "noidungmau"
+      "expr": "x+1"
     },
     "missing_slot_cases": [
       "expr"
@@ -1967,7 +1967,7 @@
   {
     "intent": "MATH_MATH_BASIC_CAN_BAC_N",
     "expected_intent": "MATH_MATH_BASIC_CAN_BAC_N",
-    "utterance": "dung căn bậc n trong obsidian",
+    "utterance": "căn bậc n",
     "source": "data/intents.json aliases[5]",
     "review_needed": false,
     "expected_target": "mathjax",
@@ -1978,8 +1978,8 @@
     "optional_slots": [],
     "defaults": {},
     "slot_inputs": {
-      "n": "noi dung mau",
-      "expr": "noi dung mau"
+      "n": "3",
+      "expr": "x+1"
     },
     "missing_slot_cases": [
       "n",
@@ -2001,7 +2001,7 @@
   {
     "intent": "MATH_MATH_BASIC_MU",
     "expected_intent": "MATH_MATH_BASIC_MU",
-    "utterance": "dung mũ trong obsidian",
+    "utterance": "lũy thừa và số mũ",
     "source": "data/intents.json aliases[5]",
     "review_needed": false,
     "expected_target": "mathjax",
@@ -2012,8 +2012,8 @@
     "optional_slots": [],
     "defaults": {},
     "slot_inputs": {
-      "base": "noi dung mau",
-      "exp": "noi dung mau"
+      "base": "x",
+      "exp": "2"
     },
     "missing_slot_cases": [
       "base",
@@ -2035,7 +2035,7 @@
   {
     "intent": "MATH_MATH_BASIC_CHI_SO",
     "expected_intent": "MATH_MATH_BASIC_CHI_SO",
-    "utterance": "dung chỉ số trong obsidian",
+    "utterance": "chỉ số dưới",
     "source": "data/intents.json aliases[5]",
     "review_needed": false,
     "expected_target": "mathjax",
@@ -2046,8 +2046,8 @@
     "optional_slots": [],
     "defaults": {},
     "slot_inputs": {
-      "base": "noi dung mau",
-      "sub": "noi dung mau"
+      "base": "x",
+      "sub": "i"
     },
     "missing_slot_cases": [
       "base",
@@ -2069,7 +2069,7 @@
   {
     "intent": "MATH_MATH_BASIC_MU_VA_CHI_SO",
     "expected_intent": "MATH_MATH_BASIC_MU_VA_CHI_SO",
-    "utterance": "dung mũ và chỉ số trong obsidian",
+    "utterance": "số mũ kết hợp chỉ số dưới",
     "source": "data/intents.json aliases[5]",
     "review_needed": false,
     "expected_target": "mathjax",
@@ -2081,9 +2081,9 @@
     "optional_slots": [],
     "defaults": {},
     "slot_inputs": {
-      "base": "noi dung mau",
-      "sub": "noi dung mau",
-      "exp": "noi dung mau"
+      "base": "x",
+      "sub": "i",
+      "exp": "2"
     },
     "missing_slot_cases": [
       "base",
@@ -2107,7 +2107,7 @@
   {
     "intent": "MATH_MATH_BASIC_TONG",
     "expected_intent": "MATH_MATH_BASIC_TONG",
-    "utterance": "dung tổng trong obsidian",
+    "utterance": "tổng xích ma",
     "source": "data/intents.json aliases[5]",
     "review_needed": false,
     "expected_target": "mathjax",
@@ -2119,9 +2119,9 @@
     "optional_slots": [],
     "defaults": {},
     "slot_inputs": {
-      "from": "noidungmau",
-      "to": "noidungmau",
-      "expr": "noidungmau"
+      "from": "i=1",
+      "to": "n",
+      "expr": "x+1"
     },
     "missing_slot_cases": [
       "from",
@@ -2149,7 +2149,7 @@
   {
     "intent": "MATH_MATH_BASIC_TICH",
     "expected_intent": "MATH_MATH_BASIC_TICH",
-    "utterance": "dung tích trong obsidian",
+    "utterance": "tích hữu hạn",
     "source": "data/intents.json aliases[5]",
     "review_needed": false,
     "expected_target": "mathjax",
@@ -2161,9 +2161,9 @@
     "optional_slots": [],
     "defaults": {},
     "slot_inputs": {
-      "from": "noi dung mau",
-      "to": "noi dung mau",
-      "expr": "noi dung mau"
+      "from": "i=1",
+      "to": "n",
+      "expr": "x+1"
     },
     "missing_slot_cases": [
       "from",
@@ -2187,7 +2187,7 @@
   {
     "intent": "MATH_MATH_BASIC_TICH_PHAN",
     "expected_intent": "MATH_MATH_BASIC_TICH_PHAN",
-    "utterance": "dung tích phân trong obsidian",
+    "utterance": "tích phân xác định",
     "source": "data/intents.json aliases[5]",
     "review_needed": false,
     "expected_target": "mathjax",
@@ -2199,9 +2199,9 @@
     "optional_slots": [],
     "defaults": {},
     "slot_inputs": {
-      "from": "noidungmau",
-      "to": "noidungmau",
-      "expr": "noidungmau"
+      "from": "i=1",
+      "to": "n",
+      "expr": "x+1"
     },
     "missing_slot_cases": [
       "from",
@@ -2225,7 +2225,7 @@
   {
     "intent": "MATH_MATH_BASIC_GIOI_HAN",
     "expected_intent": "MATH_MATH_BASIC_GIOI_HAN",
-    "utterance": "dung giới hạn trong obsidian",
+    "utterance": "giới hạn hàm số",
     "source": "data/intents.json aliases[5]",
     "review_needed": false,
     "expected_target": "mathjax",
@@ -2236,8 +2236,8 @@
     "optional_slots": [],
     "defaults": {},
     "slot_inputs": {
-      "condition": "noidungmau",
-      "expr": "noidungmau"
+      "condition": "x \\to 0",
+      "expr": "x+1"
     },
     "missing_slot_cases": [
       "condition",
@@ -2263,7 +2263,7 @@
   {
     "intent": "MATH_MATH_BASIC_AO_HAM",
     "expected_intent": "MATH_MATH_BASIC_AO_HAM",
-    "utterance": "dung đạo hàm trong obsidian",
+    "utterance": "đạo hàm hàm một biến",
     "source": "data/intents.json aliases[5]",
     "review_needed": false,
     "expected_target": "mathjax",
@@ -2293,23 +2293,20 @@
   {
     "intent": "MATH_MATRIX_MA_TRAN",
     "expected_intent": "MATH_MATRIX_MA_TRAN",
-    "utterance": "dung ma trận trong obsidian",
+    "utterance": "ma trận thông thường",
     "source": "data/intents.json aliases[5]",
     "review_needed": false,
     "expected_target": "mathjax",
     "required_slots": [
-      "matrix",
-      "rows"
+      "matrix_content"
     ],
     "optional_slots": [],
     "defaults": {},
     "slot_inputs": {
-      "matrix": "noi dung mau",
-      "rows": "noi dung mau"
+      "matrix_content": "1 2; 3 4"
     },
     "missing_slot_cases": [
-      "matrix",
-      "rows"
+      "matrix_content"
     ],
     "slot_utterance": "viết giúp tôi ma trận, matrix là nội dung mẫu, rows là nội dung mẫu Biểu thức cần hiển thị bằng MathJax.",
     "slot_extraction_observed": {
@@ -2327,9 +2324,9 @@
   {
     "intent": "MATH_MATRIX_MA_TRAN_2X2",
     "expected_intent": "MATH_MATRIX_MA_TRAN_2X2",
-    "utterance": "tạo ma trận hai hàng hai cột",
+    "utterance": "ma trận hai hàng hai cột",
     "source": "data/intents.json aliases[5]",
-    "review_needed": true,
+    "review_needed": false,
     "expected_target": "mathjax",
     "required_slots": [
       "a",
@@ -2340,10 +2337,10 @@
     "optional_slots": [],
     "defaults": {},
     "slot_inputs": {
-      "a": "noidungmau",
-      "b": "noidungmau",
-      "c": "noidungmau",
-      "d": "noidungmau"
+      "a": "1",
+      "b": "-3",
+      "c": "2",
+      "d": "4"
     },
     "missing_slot_cases": [
       "a",
@@ -2371,23 +2368,20 @@
   {
     "intent": "MATH_MATRIX_MA_TRAN_NGOAC_TRON",
     "expected_intent": "MATH_MATRIX_MA_TRAN_NGOAC_TRON",
-    "utterance": "dung ma trận ngoặc tròn trong obsidian",
+    "utterance": "ma trận ngoặc tròn",
     "source": "data/intents.json aliases[5]",
     "review_needed": false,
     "expected_target": "mathjax",
     "required_slots": [
-      "pmatrix",
-      "rows"
+      "matrix_content"
     ],
     "optional_slots": [],
     "defaults": {},
     "slot_inputs": {
-      "pmatrix": "noi dung mau",
-      "rows": "noi dung mau"
+      "matrix_content": "1 2; 3 4"
     },
     "missing_slot_cases": [
-      "pmatrix",
-      "rows"
+      "matrix_content"
     ],
     "slot_utterance": "viết giúp tôi ma trận ngoặc tròn, pmatrix là nội dung mẫu, rows là nội dung mẫu Biểu thức cần hiển thị bằng MathJax.",
     "slot_extraction_observed": {
@@ -2405,23 +2399,20 @@
   {
     "intent": "MATH_MATRIX_MA_TRAN_NGOAC_VUONG",
     "expected_intent": "MATH_MATRIX_MA_TRAN_NGOAC_VUONG",
-    "utterance": "dung ma trận ngoặc vuông trong obsidian",
+    "utterance": "ma trận ngoặc vuông",
     "source": "data/intents.json aliases[5]",
     "review_needed": false,
     "expected_target": "mathjax",
     "required_slots": [
-      "bmatrix",
-      "rows"
+      "matrix_content"
     ],
     "optional_slots": [],
     "defaults": {},
     "slot_inputs": {
-      "bmatrix": "noi dung mau",
-      "rows": "noi dung mau"
+      "matrix_content": "1 2; 3 4"
     },
     "missing_slot_cases": [
-      "bmatrix",
-      "rows"
+      "matrix_content"
     ],
     "slot_utterance": "viết giúp tôi ma trận ngoặc vuông, bmatrix là nội dung mẫu, rows là nội dung mẫu Biểu thức cần hiển thị bằng MathJax.",
     "slot_extraction_observed": {
@@ -2439,20 +2430,20 @@
   {
     "intent": "MATH_MATRIX_MA_TRAN_NGOAC_NHON",
     "expected_intent": "MATH_MATRIX_MA_TRAN_NGOAC_NHON",
-    "utterance": "dung ma trận ngoặc nhọn trong obsidian",
+    "utterance": "ma trận ngoặc nhọn",
     "source": "data/intents.json aliases[5]",
     "review_needed": false,
     "expected_target": "mathjax",
     "required_slots": [
-      "rows"
+      "matrix_content"
     ],
     "optional_slots": [],
     "defaults": {},
     "slot_inputs": {
-      "rows": "noi dung mau"
+      "matrix_content": "1 2; 3 4"
     },
     "missing_slot_cases": [
-      "rows"
+      "matrix_content"
     ],
     "slot_utterance": "viết giúp tôi ma trận ngoặc nhọn, Bmatrix là nội dung mẫu, rows là nội dung mẫu Biểu thức cần hiển thị bằng MathJax.",
     "slot_extraction_observed": {
@@ -2469,23 +2460,20 @@
   {
     "intent": "MATH_MATRIX_INH_THUC",
     "expected_intent": "MATH_MATRIX_INH_THUC",
-    "utterance": "dung định thức trong obsidian",
+    "utterance": "định thức ma trận",
     "source": "data/intents.json aliases[5]",
     "review_needed": false,
     "expected_target": "mathjax",
     "required_slots": [
-      "vmatrix",
-      "rows"
+      "matrix_content"
     ],
     "optional_slots": [],
     "defaults": {},
     "slot_inputs": {
-      "vmatrix": "noi dung mau",
-      "rows": "noi dung mau"
+      "matrix_content": "1 2; 3 4"
     },
     "missing_slot_cases": [
-      "vmatrix",
-      "rows"
+      "matrix_content"
     ],
     "slot_utterance": "viết giúp tôi định thức, vmatrix là nội dung mẫu, rows là nội dung mẫu Biểu thức cần hiển thị bằng MathJax.",
     "slot_extraction_observed": {
@@ -2503,20 +2491,20 @@
   {
     "intent": "MATH_MATRIX_CHUAN_MA_TRAN",
     "expected_intent": "MATH_MATRIX_CHUAN_MA_TRAN",
-    "utterance": "dung chuẩn ma trận trong obsidian",
+    "utterance": "chuẩn ma trận",
     "source": "data/intents.json aliases[5]",
     "review_needed": false,
     "expected_target": "mathjax",
     "required_slots": [
-      "rows"
+      "matrix_content"
     ],
     "optional_slots": [],
     "defaults": {},
     "slot_inputs": {
-      "rows": "noi dung mau"
+      "matrix_content": "1 2; 3 4"
     },
     "missing_slot_cases": [
-      "rows"
+      "matrix_content"
     ],
     "slot_utterance": "viết giúp tôi chuẩn ma trận, Vmatrix là nội dung mẫu, rows là nội dung mẫu Biểu thức cần hiển thị bằng MathJax.",
     "slot_extraction_observed": {
@@ -2533,12 +2521,11 @@
   {
     "intent": "MATH_CASES_SYSTEMS_HAM_TUNG_OAN",
     "expected_intent": "MATH_CASES_SYSTEMS_HAM_TUNG_OAN",
-    "utterance": "dung hàm từng đoạn trong obsidian",
+    "utterance": "hàm số từng đoạn",
     "source": "data/intents.json aliases[5]",
     "review_needed": false,
     "expected_target": "mathjax",
     "required_slots": [
-      "cases",
       "expr1",
       "condition1",
       "expr2",
@@ -2547,14 +2534,12 @@
     "optional_slots": [],
     "defaults": {},
     "slot_inputs": {
-      "cases": "noi dung mau",
-      "expr1": "noi dung mau",
-      "condition1": "noi dung mau",
-      "expr2": "noi dung mau",
-      "condition2": "noi dung mau"
+      "expr1": "x^2",
+      "condition1": "x >= 0",
+      "expr2": "-x",
+      "condition2": "x < 0"
     },
     "missing_slot_cases": [
-      "cases",
       "expr1",
       "condition1",
       "expr2",
@@ -2579,12 +2564,11 @@
   {
     "intent": "MATH_CASES_SYSTEMS_HE_PHUONG_TRINH",
     "expected_intent": "MATH_CASES_SYSTEMS_HE_PHUONG_TRINH",
-    "utterance": "dung hệ phương trình trong obsidian",
+    "utterance": "hệ phương trình đại số",
     "source": "data/intents.json aliases[5]",
     "review_needed": false,
     "expected_target": "mathjax",
     "required_slots": [
-      "aligned",
       "eq1",
       "rhs1",
       "eq2",
@@ -2593,14 +2577,12 @@
     "optional_slots": [],
     "defaults": {},
     "slot_inputs": {
-      "aligned": "noi dung mau",
-      "eq1": "noi dung mau",
-      "rhs1": "noi dung mau",
-      "eq2": "noi dung mau",
-      "rhs2": "noi dung mau"
+      "eq1": "x+y",
+      "rhs1": "5",
+      "eq2": "2x-y",
+      "rhs2": "1"
     },
     "missing_slot_cases": [
-      "aligned",
       "eq1",
       "rhs1",
       "eq2",
@@ -2625,12 +2607,11 @@
   {
     "intent": "MATH_ALIGN_ARRAY_CAN_CHINH_PHUONG_TRINH",
     "expected_intent": "MATH_ALIGN_ARRAY_CAN_CHINH_PHUONG_TRINH",
-    "utterance": "dung căn chỉnh phương trình trong obsidian",
+    "utterance": "căn chỉnh nhiều dòng phương trình",
     "source": "data/intents.json aliases[5]",
     "review_needed": false,
     "expected_target": "mathjax",
     "required_slots": [
-      "aligned",
       "left1",
       "right1",
       "left2",
@@ -2639,14 +2620,12 @@
     "optional_slots": [],
     "defaults": {},
     "slot_inputs": {
-      "aligned": "noi dung mau",
-      "left1": "noi dung mau",
-      "right1": "noi dung mau",
-      "left2": "noi dung mau",
-      "right2": "noi dung mau"
+      "left1": "a+b",
+      "right1": "c",
+      "left2": "a",
+      "right2": "c-b"
     },
     "missing_slot_cases": [
-      "aligned",
       "left1",
       "right1",
       "left2",
@@ -2671,13 +2650,11 @@
   {
     "intent": "MATH_ALIGN_ARRAY_BANG_TOAN_HOC",
     "expected_intent": "MATH_ALIGN_ARRAY_BANG_TOAN_HOC",
-    "utterance": "dung bảng toán học trong obsidian",
+    "utterance": "bảng toán học hai cột",
     "source": "data/intents.json aliases[5]",
     "review_needed": false,
     "expected_target": "mathjax",
     "required_slots": [
-      "array",
-      "cc",
       "a",
       "b",
       "c",
@@ -2686,16 +2663,12 @@
     "optional_slots": [],
     "defaults": {},
     "slot_inputs": {
-      "array": "noi dung mau",
-      "cc": "noi dung mau",
-      "a": "noi dung mau",
-      "b": "noi dung mau",
-      "c": "noi dung mau",
-      "d": "noi dung mau"
+      "a": "1",
+      "b": "2",
+      "c": "3",
+      "d": "4"
     },
     "missing_slot_cases": [
-      "array",
-      "cc",
       "a",
       "b",
       "c",
@@ -2721,25 +2694,19 @@
   {
     "intent": "MATH_ALIGN_ARRAY_BANG_TOAN_HOC_CAN_TRAI",
     "expected_intent": "MATH_ALIGN_ARRAY_BANG_TOAN_HOC_CAN_TRAI",
-    "utterance": "dung bảng toán học căn trái trong obsidian",
+    "utterance": "mảng toán học căn lề trái",
     "source": "data/intents.json aliases[5]",
     "review_needed": false,
     "expected_target": "mathjax",
     "required_slots": [
-      "array",
-      "l",
       "items"
     ],
     "optional_slots": [],
     "defaults": {},
     "slot_inputs": {
-      "array": "noi dung mau",
-      "l": "noi dung mau",
-      "items": "noi dung mau"
+      "items": "x+1 \\\\ y-2"
     },
     "missing_slot_cases": [
-      "array",
-      "l",
       "items"
     ],
     "slot_utterance": "viết giúp tôi bảng toán học căn trái, array là nội dung mẫu, l là nội dung mẫu, items là nội dung mẫu Biểu thức cần hiển thị bằng MathJax.",
@@ -2759,25 +2726,19 @@
   {
     "intent": "MATH_ALIGN_ARRAY_BANG_TOAN_HOC_CAN_GIUA",
     "expected_intent": "MATH_ALIGN_ARRAY_BANG_TOAN_HOC_CAN_GIUA",
-    "utterance": "dung bảng toán học căn giữa trong obsidian",
+    "utterance": "mảng toán học căn lề giữa",
     "source": "data/intents.json aliases[5]",
     "review_needed": false,
     "expected_target": "mathjax",
     "required_slots": [
-      "array",
-      "c",
       "items"
     ],
     "optional_slots": [],
     "defaults": {},
     "slot_inputs": {
-      "array": "noi dung mau",
-      "c": "noi dung mau",
-      "items": "noi dung mau"
+      "items": "a+b \\\\ c+d"
     },
     "missing_slot_cases": [
-      "array",
-      "c",
       "items"
     ],
     "slot_utterance": "viết giúp tôi bảng toán học căn giữa, array là nội dung mẫu, c là nội dung mẫu, items là nội dung mẫu Biểu thức cần hiển thị bằng MathJax.",
@@ -2797,7 +2758,7 @@
   {
     "intent": "MATH_SYMBOLS_ALPHA",
     "expected_intent": "MATH_SYMBOLS_ALPHA",
-    "utterance": "dung alpha trong obsidian",
+    "utterance": "alpha",
     "source": "data/intents.json aliases[5]",
     "review_needed": false,
     "expected_target": "mathjax",
@@ -2819,7 +2780,7 @@
   {
     "intent": "MATH_SYMBOLS_BETA",
     "expected_intent": "MATH_SYMBOLS_BETA",
-    "utterance": "dung beta trong obsidian",
+    "utterance": "beta",
     "source": "data/intents.json aliases[5]",
     "review_needed": false,
     "expected_target": "mathjax",
@@ -2841,7 +2802,7 @@
   {
     "intent": "MATH_SYMBOLS_GAMMA",
     "expected_intent": "MATH_SYMBOLS_GAMMA",
-    "utterance": "dung gamma trong obsidian",
+    "utterance": "gamma",
     "source": "data/intents.json aliases[5]",
     "review_needed": false,
     "expected_target": "mathjax",
@@ -2863,7 +2824,7 @@
   {
     "intent": "MATH_SYMBOLS_DELTA",
     "expected_intent": "MATH_SYMBOLS_DELTA",
-    "utterance": "dung delta trong obsidian",
+    "utterance": "delta",
     "source": "data/intents.json aliases[5]",
     "review_needed": false,
     "expected_target": "mathjax",
@@ -2885,7 +2846,7 @@
   {
     "intent": "MATH_SYMBOLS_THETA",
     "expected_intent": "MATH_SYMBOLS_THETA",
-    "utterance": "dung theta trong obsidian",
+    "utterance": "theta",
     "source": "data/intents.json aliases[5]",
     "review_needed": false,
     "expected_target": "mathjax",
@@ -2907,7 +2868,7 @@
   {
     "intent": "MATH_SYMBOLS_LAMBDA",
     "expected_intent": "MATH_SYMBOLS_LAMBDA",
-    "utterance": "dung lambda trong obsidian",
+    "utterance": "lambda",
     "source": "data/intents.json aliases[5]",
     "review_needed": false,
     "expected_target": "mathjax",
@@ -2929,7 +2890,7 @@
   {
     "intent": "MATH_SYMBOLS_PI",
     "expected_intent": "MATH_SYMBOLS_PI",
-    "utterance": "dung pi trong obsidian",
+    "utterance": "pi",
     "source": "data/intents.json aliases[5]",
     "review_needed": false,
     "expected_target": "mathjax",
@@ -2951,7 +2912,7 @@
   {
     "intent": "MATH_SYMBOLS_SIGMA",
     "expected_intent": "MATH_SYMBOLS_SIGMA",
-    "utterance": "dung sigma trong obsidian",
+    "utterance": "sigma",
     "source": "data/intents.json aliases[5]",
     "review_needed": false,
     "expected_target": "mathjax",
@@ -2973,7 +2934,7 @@
   {
     "intent": "MATH_SYMBOLS_OMEGA",
     "expected_intent": "MATH_SYMBOLS_OMEGA",
-    "utterance": "dung omega trong obsidian",
+    "utterance": "omega",
     "source": "data/intents.json aliases[5]",
     "review_needed": false,
     "expected_target": "mathjax",
@@ -2995,7 +2956,7 @@
   {
     "intent": "MATH_SYMBOLS_VO_CUNG",
     "expected_intent": "MATH_SYMBOLS_VO_CUNG",
-    "utterance": "dung vô cùng trong obsidian",
+    "utterance": "vô cùng",
     "source": "data/intents.json aliases[5]",
     "review_needed": false,
     "expected_target": "mathjax",
@@ -3017,7 +2978,7 @@
   {
     "intent": "MATH_SYMBOLS_NABLA",
     "expected_intent": "MATH_SYMBOLS_NABLA",
-    "utterance": "dung nabla trong obsidian",
+    "utterance": "nabla",
     "source": "data/intents.json aliases[5]",
     "review_needed": false,
     "expected_target": "mathjax",
@@ -3039,7 +3000,7 @@
   {
     "intent": "MATH_SYMBOLS_PHAN_RIENG",
     "expected_intent": "MATH_SYMBOLS_PHAN_RIENG",
-    "utterance": "dung phần riêng trong obsidian",
+    "utterance": "phần riêng",
     "source": "data/intents.json aliases[5]",
     "review_needed": false,
     "expected_target": "mathjax",
@@ -3061,7 +3022,7 @@
   {
     "intent": "MATH_SYMBOLS_SO_THUC",
     "expected_intent": "MATH_SYMBOLS_SO_THUC",
-    "utterance": "dung số thực trong obsidian",
+    "utterance": "số thực",
     "source": "data/intents.json aliases[5]",
     "review_needed": false,
     "expected_target": "mathjax",
@@ -3083,7 +3044,7 @@
   {
     "intent": "MATH_SYMBOLS_SO_TU_NHIEN",
     "expected_intent": "MATH_SYMBOLS_SO_TU_NHIEN",
-    "utterance": "dung số tự nhiên trong obsidian",
+    "utterance": "số tự nhiên",
     "source": "data/intents.json aliases[5]",
     "review_needed": false,
     "expected_target": "mathjax",
@@ -3105,7 +3066,7 @@
   {
     "intent": "MATH_SYMBOLS_SO_NGUYEN",
     "expected_intent": "MATH_SYMBOLS_SO_NGUYEN",
-    "utterance": "dung số nguyên trong obsidian",
+    "utterance": "số nguyên",
     "source": "data/intents.json aliases[5]",
     "review_needed": false,
     "expected_target": "mathjax",
@@ -3127,7 +3088,7 @@
   {
     "intent": "MATH_SYMBOLS_THUOC",
     "expected_intent": "MATH_SYMBOLS_THUOC",
-    "utterance": "dung thuộc trong obsidian",
+    "utterance": "thuộc",
     "source": "data/intents.json aliases[5]",
     "review_needed": false,
     "expected_target": "mathjax",
@@ -3149,7 +3110,7 @@
   {
     "intent": "MATH_SYMBOLS_KHONG_THUOC",
     "expected_intent": "MATH_SYMBOLS_KHONG_THUOC",
-    "utterance": "dung không thuộc trong obsidian",
+    "utterance": "không thuộc",
     "source": "data/intents.json aliases[5]",
     "review_needed": false,
     "expected_target": "mathjax",
@@ -3171,7 +3132,7 @@
   {
     "intent": "MATH_SYMBOLS_TAP_RONG",
     "expected_intent": "MATH_SYMBOLS_TAP_RONG",
-    "utterance": "dung tập rỗng trong obsidian",
+    "utterance": "tập rỗng",
     "source": "data/intents.json aliases[5]",
     "review_needed": false,
     "expected_target": "mathjax",
@@ -3193,7 +3154,7 @@
   {
     "intent": "MATH_SYMBOLS_HOP",
     "expected_intent": "MATH_SYMBOLS_HOP",
-    "utterance": "dung hợp trong obsidian",
+    "utterance": "hợp",
     "source": "data/intents.json aliases[5]",
     "review_needed": false,
     "expected_target": "mathjax",
@@ -3215,7 +3176,7 @@
   {
     "intent": "MATH_SYMBOLS_GIAO",
     "expected_intent": "MATH_SYMBOLS_GIAO",
-    "utterance": "dung giao trong obsidian",
+    "utterance": "giao",
     "source": "data/intents.json aliases[5]",
     "review_needed": false,
     "expected_target": "mathjax",
@@ -3237,7 +3198,7 @@
   {
     "intent": "MATH_SYMBOLS_TAP_CON",
     "expected_intent": "MATH_SYMBOLS_TAP_CON",
-    "utterance": "dung tập con trong obsidian",
+    "utterance": "tập con",
     "source": "data/intents.json aliases[5]",
     "review_needed": false,
     "expected_target": "mathjax",
@@ -3259,7 +3220,7 @@
   {
     "intent": "MATH_SYMBOLS_KHAC",
     "expected_intent": "MATH_SYMBOLS_KHAC",
-    "utterance": "dung khác trong obsidian",
+    "utterance": "khác",
     "source": "data/intents.json aliases[5]",
     "review_needed": false,
     "expected_target": "mathjax",
@@ -3281,7 +3242,7 @@
   {
     "intent": "MATH_SYMBOLS_NHO_HON_HOAC_BANG",
     "expected_intent": "MATH_SYMBOLS_NHO_HON_HOAC_BANG",
-    "utterance": "dung nhỏ hơn hoặc bằng trong obsidian",
+    "utterance": "nhỏ hơn hoặc bằng",
     "source": "data/intents.json aliases[5]",
     "review_needed": false,
     "expected_target": "mathjax",
@@ -3303,7 +3264,7 @@
   {
     "intent": "MATH_SYMBOLS_LON_HON_HOAC_BANG",
     "expected_intent": "MATH_SYMBOLS_LON_HON_HOAC_BANG",
-    "utterance": "dung lớn hơn hoặc bằng trong obsidian",
+    "utterance": "lớn hơn hoặc bằng",
     "source": "data/intents.json aliases[5]",
     "review_needed": false,
     "expected_target": "mathjax",
@@ -3325,7 +3286,7 @@
   {
     "intent": "MATH_SYMBOLS_XAP_XI",
     "expected_intent": "MATH_SYMBOLS_XAP_XI",
-    "utterance": "dung xấp xỉ trong obsidian",
+    "utterance": "xấp xỉ",
     "source": "data/intents.json aliases[5]",
     "review_needed": false,
     "expected_target": "mathjax",
@@ -3347,7 +3308,7 @@
   {
     "intent": "MATH_SYMBOLS_TUONG_UONG",
     "expected_intent": "MATH_SYMBOLS_TUONG_UONG",
-    "utterance": "dung tương đương trong obsidian",
+    "utterance": "tương đương",
     "source": "data/intents.json aliases[5]",
     "review_needed": false,
     "expected_target": "mathjax",
@@ -3369,7 +3330,7 @@
   {
     "intent": "MATH_SYMBOLS_NHAN",
     "expected_intent": "MATH_SYMBOLS_NHAN",
-    "utterance": "dung nhân trong obsidian",
+    "utterance": "nhân",
     "source": "data/intents.json aliases[5]",
     "review_needed": false,
     "expected_target": "mathjax",
@@ -3391,7 +3352,7 @@
   {
     "intent": "MATH_SYMBOLS_CHIA",
     "expected_intent": "MATH_SYMBOLS_CHIA",
-    "utterance": "dung chia trong obsidian",
+    "utterance": "chia",
     "source": "data/intents.json aliases[5]",
     "review_needed": false,
     "expected_target": "mathjax",
@@ -3413,7 +3374,7 @@
   {
     "intent": "MATH_SYMBOLS_CONG_TRU",
     "expected_intent": "MATH_SYMBOLS_CONG_TRU",
-    "utterance": "dung cộng trừ trong obsidian",
+    "utterance": "cộng trừ",
     "source": "data/intents.json aliases[5]",
     "review_needed": false,
     "expected_target": "mathjax",
@@ -3435,7 +3396,7 @@
   {
     "intent": "MATH_SYMBOLS_KEO_THEO",
     "expected_intent": "MATH_SYMBOLS_KEO_THEO",
-    "utterance": "dung kéo theo trong obsidian",
+    "utterance": "kéo theo",
     "source": "data/intents.json aliases[5]",
     "review_needed": false,
     "expected_target": "mathjax",
@@ -3457,7 +3418,7 @@
   {
     "intent": "MATH_SYMBOLS_KHI_VA_CHI_KHI",
     "expected_intent": "MATH_SYMBOLS_KHI_VA_CHI_KHI",
-    "utterance": "dung khi và chỉ khi trong obsidian",
+    "utterance": "khi và chỉ khi",
     "source": "data/intents.json aliases[5]",
     "review_needed": false,
     "expected_target": "mathjax",
@@ -3479,7 +3440,7 @@
   {
     "intent": "MATH_SYMBOLS_VOI_MOI",
     "expected_intent": "MATH_SYMBOLS_VOI_MOI",
-    "utterance": "dung với mọi trong obsidian",
+    "utterance": "với mọi",
     "source": "data/intents.json aliases[5]",
     "review_needed": false,
     "expected_target": "mathjax",
@@ -3501,7 +3462,7 @@
   {
     "intent": "MATH_SYMBOLS_TON_TAI",
     "expected_intent": "MATH_SYMBOLS_TON_TAI",
-    "utterance": "dung tồn tại trong obsidian",
+    "utterance": "tồn tại",
     "source": "data/intents.json aliases[5]",
     "review_needed": false,
     "expected_target": "mathjax",
@@ -3523,7 +3484,7 @@
   {
     "intent": "MATH_SYMBOLS_MUI_TEN_PHAI",
     "expected_intent": "MATH_SYMBOLS_MUI_TEN_PHAI",
-    "utterance": "dung mũi tên phải trong obsidian",
+    "utterance": "mũi tên phải",
     "source": "data/intents.json aliases[5]",
     "review_needed": false,
     "expected_target": "mathjax",
@@ -3545,7 +3506,7 @@
   {
     "intent": "MATH_SETS_LOGIC_VA_LOGIC",
     "expected_intent": "MATH_SETS_LOGIC_VA_LOGIC",
-    "utterance": "dung và logic trong obsidian",
+    "utterance": "và logic",
     "source": "data/intents.json aliases[5]",
     "review_needed": false,
     "expected_target": "mathjax",
@@ -3567,7 +3528,7 @@
   {
     "intent": "MATH_SETS_LOGIC_HOAC_LOGIC",
     "expected_intent": "MATH_SETS_LOGIC_HOAC_LOGIC",
-    "utterance": "dung hoặc logic trong obsidian",
+    "utterance": "hoặc logic",
     "source": "data/intents.json aliases[5]",
     "review_needed": false,
     "expected_target": "mathjax",
@@ -3589,7 +3550,7 @@
   {
     "intent": "MATH_SETS_LOGIC_PHU_INH",
     "expected_intent": "MATH_SETS_LOGIC_PHU_INH",
-    "utterance": "dung phủ định trong obsidian",
+    "utterance": "phủ định",
     "source": "data/intents.json aliases[5]",
     "review_needed": false,
     "expected_target": "mathjax",
@@ -3611,7 +3572,7 @@
   {
     "intent": "MATH_SETS_LOGIC_CHUNG_MINH_UOC",
     "expected_intent": "MATH_SETS_LOGIC_CHUNG_MINH_UOC",
-    "utterance": "dung chứng minh được trong obsidian",
+    "utterance": "chứng minh được",
     "source": "data/intents.json aliases[5]",
     "review_needed": false,
     "expected_target": "mathjax",
@@ -3633,7 +3594,7 @@
   {
     "intent": "MATH_SETS_LOGIC_THOA_MAN",
     "expected_intent": "MATH_SETS_LOGIC_THOA_MAN",
-    "utterance": "dung thỏa mãn trong obsidian",
+    "utterance": "thỏa mãn",
     "source": "data/intents.json aliases[5]",
     "review_needed": false,
     "expected_target": "mathjax",
@@ -3655,7 +3616,7 @@
   {
     "intent": "MATH_ACCENTS_DECORATIONS_VECTOR",
     "expected_intent": "MATH_ACCENTS_DECORATIONS_VECTOR",
-    "utterance": "dung vector trong obsidian",
+    "utterance": "ký hiệu mũi tên vector trên biến",
     "source": "data/intents.json aliases[5]",
     "review_needed": false,
     "expected_target": "mathjax",
@@ -3665,7 +3626,7 @@
     "optional_slots": [],
     "defaults": {},
     "slot_inputs": {
-      "x": "noi dung mau"
+      "x": "x"
     },
     "missing_slot_cases": [
       "x"
@@ -3685,7 +3646,7 @@
   {
     "intent": "MATH_ACCENTS_DECORATIONS_VECTOR_DAI",
     "expected_intent": "MATH_ACCENTS_DECORATIONS_VECTOR_DAI",
-    "utterance": "dung vector dài trong obsidian",
+    "utterance": "ký hiệu vector nối hai điểm",
     "source": "data/intents.json aliases[5]",
     "review_needed": false,
     "expected_target": "mathjax",
@@ -3707,7 +3668,7 @@
   {
     "intent": "MATH_ACCENTS_DECORATIONS_GACH_TREN",
     "expected_intent": "MATH_ACCENTS_DECORATIONS_GACH_TREN",
-    "utterance": "dung gạch trên trong obsidian",
+    "utterance": "gạch ngang phía trên biến",
     "source": "data/intents.json aliases[5]",
     "review_needed": false,
     "expected_target": "mathjax",
@@ -3717,7 +3678,7 @@
     "optional_slots": [],
     "defaults": {},
     "slot_inputs": {
-      "x": "noi dung mau"
+      "x": "x"
     },
     "missing_slot_cases": [
       "x"
@@ -3737,7 +3698,7 @@
   {
     "intent": "MATH_ACCENTS_DECORATIONS_GACH_DUOI",
     "expected_intent": "MATH_ACCENTS_DECORATIONS_GACH_DUOI",
-    "utterance": "dung gạch dưới trong obsidian",
+    "utterance": "gạch ngang phía dưới biến",
     "source": "data/intents.json aliases[5]",
     "review_needed": false,
     "expected_target": "mathjax",
@@ -3747,7 +3708,7 @@
     "optional_slots": [],
     "defaults": {},
     "slot_inputs": {
-      "x": "noi dung mau"
+      "x": "x"
     },
     "missing_slot_cases": [
       "x"
@@ -3767,7 +3728,7 @@
   {
     "intent": "MATH_ACCENTS_DECORATIONS_DAU_NGA",
     "expected_intent": "MATH_ACCENTS_DECORATIONS_DAU_NGA",
-    "utterance": "dung dấu ngã trong obsidian",
+    "utterance": "dấu ngã trên ký hiệu",
     "source": "data/intents.json aliases[5]",
     "review_needed": false,
     "expected_target": "mathjax",
@@ -3777,7 +3738,7 @@
     "optional_slots": [],
     "defaults": {},
     "slot_inputs": {
-      "x": "noi dung mau"
+      "x": "x"
     },
     "missing_slot_cases": [
       "x"
@@ -3797,7 +3758,7 @@
   {
     "intent": "MATH_ACCENTS_DECORATIONS_DAU_MU",
     "expected_intent": "MATH_ACCENTS_DECORATIONS_DAU_MU",
-    "utterance": "dung dấu mũ trong obsidian",
+    "utterance": "dấu mũ trên ký hiệu",
     "source": "data/intents.json aliases[5]",
     "review_needed": false,
     "expected_target": "mathjax",
@@ -3807,7 +3768,7 @@
     "optional_slots": [],
     "defaults": {},
     "slot_inputs": {
-      "x": "noi dung mau"
+      "x": "x"
     },
     "missing_slot_cases": [
       "x"
@@ -3827,7 +3788,7 @@
   {
     "intent": "MATH_ACCENTS_DECORATIONS_AO_HAM_CHAM",
     "expected_intent": "MATH_ACCENTS_DECORATIONS_AO_HAM_CHAM",
-    "utterance": "dung đạo hàm chấm trong obsidian",
+    "utterance": "ký hiệu đạo hàm dấu chấm trên đầu",
     "source": "data/intents.json aliases[5]",
     "review_needed": false,
     "expected_target": "mathjax",
@@ -3837,7 +3798,7 @@
     "optional_slots": [],
     "defaults": {},
     "slot_inputs": {
-      "x": "noi dung mau"
+      "x": "x"
     },
     "missing_slot_cases": [
       "x"
@@ -3857,7 +3818,7 @@
   {
     "intent": "MATH_ACCENTS_DECORATIONS_ONG_KHUNG",
     "expected_intent": "MATH_ACCENTS_DECORATIONS_ONG_KHUNG",
-    "utterance": "dung đóng khung trong obsidian",
+    "utterance": "đóng khung công thức toán",
     "source": "data/intents.json aliases[5]",
     "review_needed": false,
     "expected_target": "mathjax",
@@ -3867,7 +3828,7 @@
     "optional_slots": [],
     "defaults": {},
     "slot_inputs": {
-      "expr": "noi dung mau"
+      "expr": "x+1"
     },
     "missing_slot_cases": [
       "expr"
@@ -3887,7 +3848,7 @@
   {
     "intent": "MATH_ACCENTS_DECORATIONS_OVERBRACE",
     "expected_intent": "MATH_ACCENTS_DECORATIONS_OVERBRACE",
-    "utterance": "dung overbrace trong obsidian",
+    "utterance": "ngoặc nhọn chú thích phía trên",
     "source": "data/intents.json aliases[5]",
     "review_needed": false,
     "expected_target": "mathjax",
@@ -3898,8 +3859,8 @@
     "optional_slots": [],
     "defaults": {},
     "slot_inputs": {
-      "expr": "noi dung mau",
-      "label": "noi dung mau"
+      "expr": "a+b+c",
+      "label": "3 số hạng"
     },
     "missing_slot_cases": [
       "expr",
@@ -3921,7 +3882,7 @@
   {
     "intent": "MATH_ACCENTS_DECORATIONS_UNDERBRACE",
     "expected_intent": "MATH_ACCENTS_DECORATIONS_UNDERBRACE",
-    "utterance": "dung underbrace trong obsidian",
+    "utterance": "ngoặc nhọn chú thích phía dưới",
     "source": "data/intents.json aliases[5]",
     "review_needed": false,
     "expected_target": "mathjax",
@@ -3932,8 +3893,8 @@
     "optional_slots": [],
     "defaults": {},
     "slot_inputs": {
-      "expr": "noi dung mau",
-      "label": "noi dung mau"
+      "expr": "x_1+x_2",
+      "label": "tổng"
     },
     "missing_slot_cases": [
       "expr",
@@ -3955,7 +3916,7 @@
   {
     "intent": "MATH_ACCENTS_DECORATIONS_CHU_PHIA_TREN",
     "expected_intent": "MATH_ACCENTS_DECORATIONS_CHU_PHIA_TREN",
-    "utterance": "dung chữ phía trên trong obsidian",
+    "utterance": "đặt chữ chú thích phía trên ký hiệu",
     "source": "data/intents.json aliases[5]",
     "review_needed": false,
     "expected_target": "mathjax",
@@ -3966,8 +3927,8 @@
     "optional_slots": [],
     "defaults": {},
     "slot_inputs": {
-      "label": "noi dung mau",
-      "expr": "noi dung mau"
+      "label": "def",
+      "expr": "="
     },
     "missing_slot_cases": [
       "label",
@@ -3989,7 +3950,7 @@
   {
     "intent": "MATH_BRACKETS_SPACING_TEXT_NGOAC_TU_CO",
     "expected_intent": "MATH_BRACKETS_SPACING_TEXT_NGOAC_TU_CO",
-    "utterance": "dung ngoặc tự co trong obsidian",
+    "utterance": "cặp ngoặc tròn tự giãn kích thước",
     "source": "data/intents.json aliases[5]",
     "review_needed": false,
     "expected_target": "mathjax",
@@ -3999,7 +3960,7 @@
     "optional_slots": [],
     "defaults": {},
     "slot_inputs": {
-      "expr": "noi dung mau"
+      "expr": "x+1"
     },
     "missing_slot_cases": [
       "expr"
@@ -4019,7 +3980,7 @@
   {
     "intent": "MATH_BRACKETS_SPACING_TEXT_NGOAC_VUONG_TU_CO",
     "expected_intent": "MATH_BRACKETS_SPACING_TEXT_NGOAC_VUONG_TU_CO",
-    "utterance": "dung ngoặc vuông tự co trong obsidian",
+    "utterance": "cặp ngoặc vuông tự giãn kích thước",
     "source": "data/intents.json aliases[5]",
     "review_needed": false,
     "expected_target": "mathjax",
@@ -4029,7 +3990,7 @@
     "optional_slots": [],
     "defaults": {},
     "slot_inputs": {
-      "expr": "noi dung mau"
+      "expr": "x+1"
     },
     "missing_slot_cases": [
       "expr"
@@ -4049,7 +4010,7 @@
   {
     "intent": "MATH_BRACKETS_SPACING_TEXT_NGOAC_NHON_TU_CO",
     "expected_intent": "MATH_BRACKETS_SPACING_TEXT_NGOAC_NHON_TU_CO",
-    "utterance": "dung ngoặc nhọn tự co trong obsidian",
+    "utterance": "cặp ngoặc nhọn tự giãn kích thước",
     "source": "data/intents.json aliases[5]",
     "review_needed": false,
     "expected_target": "mathjax",
@@ -4059,7 +4020,7 @@
     "optional_slots": [],
     "defaults": {},
     "slot_inputs": {
-      "expr": "noi dung mau"
+      "expr": "x+1"
     },
     "missing_slot_cases": [
       "expr"
@@ -4079,7 +4040,7 @@
   {
     "intent": "MATH_BRACKETS_SPACING_TEXT_TRI_TUYET_OI",
     "expected_intent": "MATH_BRACKETS_SPACING_TEXT_TRI_TUYET_OI",
-    "utterance": "dung trị tuyệt đối trong obsidian",
+    "utterance": "giá trị tuyệt đối",
     "source": "data/intents.json aliases[5]",
     "review_needed": false,
     "expected_target": "mathjax",
@@ -4089,7 +4050,7 @@
     "optional_slots": [],
     "defaults": {},
     "slot_inputs": {
-      "expr": "noi dung mau"
+      "expr": "x+1"
     },
     "missing_slot_cases": [
       "expr"
@@ -4109,7 +4070,7 @@
   {
     "intent": "MATH_BRACKETS_SPACING_TEXT_CHUAN_VECTOR",
     "expected_intent": "MATH_BRACKETS_SPACING_TEXT_CHUAN_VECTOR",
-    "utterance": "dung chuẩn vector trong obsidian",
+    "utterance": "chuẩn của vector",
     "source": "data/intents.json aliases[5]",
     "review_needed": false,
     "expected_target": "mathjax",
@@ -4119,7 +4080,7 @@
     "optional_slots": [],
     "defaults": {},
     "slot_inputs": {
-      "expr": "noi dung mau"
+      "expr": "x+1"
     },
     "missing_slot_cases": [
       "expr"
@@ -4139,7 +4100,7 @@
   {
     "intent": "MATH_BRACKETS_SPACING_TEXT_KHOANG_CACH_NHO",
     "expected_intent": "MATH_BRACKETS_SPACING_TEXT_KHOANG_CACH_NHO",
-    "utterance": "dung khoảng cách nhỏ trong obsidian",
+    "utterance": "khoảng cách nhỏ",
     "source": "data/intents.json aliases[5]",
     "review_needed": false,
     "expected_target": "mathjax",
@@ -4161,7 +4122,7 @@
   {
     "intent": "MATH_BRACKETS_SPACING_TEXT_KHOANG_CACH_VUA",
     "expected_intent": "MATH_BRACKETS_SPACING_TEXT_KHOANG_CACH_VUA",
-    "utterance": "dung khoảng cách vừa trong obsidian",
+    "utterance": "khoảng cách vừa",
     "source": "data/intents.json aliases[5]",
     "review_needed": false,
     "expected_target": "mathjax",
@@ -4183,7 +4144,7 @@
   {
     "intent": "MATH_BRACKETS_SPACING_TEXT_KHOANG_CACH_LON",
     "expected_intent": "MATH_BRACKETS_SPACING_TEXT_KHOANG_CACH_LON",
-    "utterance": "dung khoảng cách lớn trong obsidian",
+    "utterance": "khoảng cách lớn",
     "source": "data/intents.json aliases[5]",
     "review_needed": false,
     "expected_target": "mathjax",
@@ -4205,7 +4166,7 @@
   {
     "intent": "MATH_BRACKETS_SPACING_TEXT_KHOANG_CACH_RAT_LON",
     "expected_intent": "MATH_BRACKETS_SPACING_TEXT_KHOANG_CACH_RAT_LON",
-    "utterance": "dung khoảng cách rất lớn trong obsidian",
+    "utterance": "khoảng cách rất lớn",
     "source": "data/intents.json aliases[5]",
     "review_needed": false,
     "expected_target": "mathjax",
@@ -4227,7 +4188,7 @@
   {
     "intent": "MATH_BRACKETS_SPACING_TEXT_KHOANG_CACH_AM",
     "expected_intent": "MATH_BRACKETS_SPACING_TEXT_KHOANG_CACH_AM",
-    "utterance": "dung khoảng cách âm trong obsidian",
+    "utterance": "khoảng cách âm",
     "source": "data/intents.json aliases[5]",
     "review_needed": false,
     "expected_target": "mathjax",
@@ -4249,7 +4210,7 @@
   {
     "intent": "MATH_FONT_CHU_BLACKBOARD",
     "expected_intent": "MATH_FONT_CHU_BLACKBOARD",
-    "utterance": "dung chữ blackboard trong obsidian",
+    "utterance": "chữ blackboard",
     "source": "data/intents.json aliases[5]",
     "review_needed": false,
     "expected_target": "mathjax",
@@ -4271,7 +4232,7 @@
   {
     "intent": "MATH_FONT_CHU_AM_TOAN",
     "expected_intent": "MATH_FONT_CHU_AM_TOAN",
-    "utterance": "dung chữ đậm toán trong obsidian",
+    "utterance": "chữ đậm toán",
     "source": "data/intents.json aliases[5]",
     "review_needed": false,
     "expected_target": "mathjax",
@@ -4293,7 +4254,7 @@
   {
     "intent": "MATH_FONT_VECTOR_AM",
     "expected_intent": "MATH_FONT_VECTOR_AM",
-    "utterance": "dung vector đậm trong obsidian",
+    "utterance": "vector đậm",
     "source": "data/intents.json aliases[5]",
     "review_needed": false,
     "expected_target": "mathjax",
@@ -4315,7 +4276,7 @@
   {
     "intent": "MATH_FONT_CHU_LA_MA",
     "expected_intent": "MATH_FONT_CHU_LA_MA",
-    "utterance": "dung chữ La Mã trong obsidian",
+    "utterance": "chữ La Mã",
     "source": "data/intents.json aliases[5]",
     "review_needed": false,
     "expected_target": "mathjax",
@@ -4337,7 +4298,7 @@
   {
     "intent": "MATH_FONT_CHU_TYPEWRITER",
     "expected_intent": "MATH_FONT_CHU_TYPEWRITER",
-    "utterance": "dung chữ typewriter trong obsidian",
+    "utterance": "chữ typewriter",
     "source": "data/intents.json aliases[5]",
     "review_needed": false,
     "expected_target": "mathjax",
@@ -4359,7 +4320,7 @@
   {
     "intent": "MATH_FONT_CHU_SANS_SERIF",
     "expected_intent": "MATH_FONT_CHU_SANS_SERIF",
-    "utterance": "dung chữ sans serif trong obsidian",
+    "utterance": "chữ sans serif",
     "source": "data/intents.json aliases[5]",
     "review_needed": false,
     "expected_target": "mathjax",
@@ -4381,7 +4342,7 @@
   {
     "intent": "MATH_FONT_CHU_CALLIGRAPHIC",
     "expected_intent": "MATH_FONT_CHU_CALLIGRAPHIC",
-    "utterance": "dung chữ calligraphic trong obsidian",
+    "utterance": "chữ calligraphic",
     "source": "data/intents.json aliases[5]",
     "review_needed": false,
     "expected_target": "mathjax",
@@ -4403,7 +4364,7 @@
   {
     "intent": "MATH_FONT_CHU_SCRIPT",
     "expected_intent": "MATH_FONT_CHU_SCRIPT",
-    "utterance": "dung chữ script trong obsidian",
+    "utterance": "chữ script",
     "source": "data/intents.json aliases[5]",
     "review_needed": false,
     "expected_target": "mathjax",
@@ -4425,7 +4386,7 @@
   {
     "intent": "MATH_SPACING_DEGREE_UNITS_O",
     "expected_intent": "MATH_SPACING_DEGREE_UNITS_O",
-    "utterance": "dung độ trong obsidian",
+    "utterance": "ký hiệu độ góc hình học",
     "source": "data/intents.json aliases[5]",
     "review_needed": false,
     "expected_target": "mathjax",
@@ -4447,21 +4408,15 @@
   {
     "intent": "MATH_SPACING_DEGREE_UNITS_MET",
     "expected_intent": "MATH_SPACING_DEGREE_UNITS_MET",
-    "utterance": "dung mét trong obsidian",
+    "utterance": "đơn vị mét",
     "source": "data/intents.json aliases[5]",
     "review_needed": false,
     "expected_target": "mathjax",
-    "required_slots": [
-      "m"
-    ],
+    "required_slots": [],
     "optional_slots": [],
     "defaults": {},
-    "slot_inputs": {
-      "m": "noi dung mau"
-    },
-    "missing_slot_cases": [
-      "m"
-    ],
+    "slot_inputs": {},
+    "missing_slot_cases": [],
     "slot_utterance": "viết giúp tôi mét, m là nội dung mẫu Biểu thức cần hiển thị bằng MathJax.",
     "slot_extraction_observed": {
       "slots": {},
@@ -4477,21 +4432,15 @@
   {
     "intent": "MATH_SPACING_DEGREE_UNITS_MET_VUONG",
     "expected_intent": "MATH_SPACING_DEGREE_UNITS_MET_VUONG",
-    "utterance": "dung mét vuông trong obsidian",
+    "utterance": "đơn vị mét vuông",
     "source": "data/intents.json aliases[5]",
     "review_needed": false,
     "expected_target": "mathjax",
-    "required_slots": [
-      "m"
-    ],
+    "required_slots": [],
     "optional_slots": [],
     "defaults": {},
-    "slot_inputs": {
-      "m": "noi dung mau"
-    },
-    "missing_slot_cases": [
-      "m"
-    ],
+    "slot_inputs": {},
+    "missing_slot_cases": [],
     "slot_utterance": "viết giúp tôi mét vuông, m là nội dung mẫu Biểu thức cần hiển thị bằng MathJax.",
     "slot_extraction_observed": {
       "slots": {},
@@ -4507,24 +4456,15 @@
   {
     "intent": "MATH_SPACING_DEGREE_UNITS_MET_TREN_GIAY",
     "expected_intent": "MATH_SPACING_DEGREE_UNITS_MET_TREN_GIAY",
-    "utterance": "dung mét trên giây trong obsidian",
+    "utterance": "đơn vị mét trên giây",
     "source": "data/intents.json aliases[5]",
     "review_needed": false,
     "expected_target": "mathjax",
-    "required_slots": [
-      "m",
-      "s"
-    ],
+    "required_slots": [],
     "optional_slots": [],
     "defaults": {},
-    "slot_inputs": {
-      "m": "noi dung mau",
-      "s": "noi dung mau"
-    },
-    "missing_slot_cases": [
-      "m",
-      "s"
-    ],
+    "slot_inputs": {},
+    "missing_slot_cases": [],
     "slot_utterance": "viết giúp tôi mét trên giây, m là nội dung mẫu, s là nội dung mẫu Biểu thức cần hiển thị bằng MathJax.",
     "slot_extraction_observed": {
       "slots": {},
@@ -4541,24 +4481,15 @@
   {
     "intent": "MATH_SPACING_DEGREE_UNITS_MET_TREN_GIAY_BINH_PHUONG",
     "expected_intent": "MATH_SPACING_DEGREE_UNITS_MET_TREN_GIAY_BINH_PHUONG",
-    "utterance": "dung mét trên giây bình phương trong obsidian",
+    "utterance": "đơn vị mét trên giây bình phương",
     "source": "data/intents.json aliases[5]",
     "review_needed": false,
     "expected_target": "mathjax",
-    "required_slots": [
-      "m",
-      "s"
-    ],
+    "required_slots": [],
     "optional_slots": [],
     "defaults": {},
-    "slot_inputs": {
-      "m": "noi dung mau",
-      "s": "noi dung mau"
-    },
-    "missing_slot_cases": [
-      "m",
-      "s"
-    ],
+    "slot_inputs": {},
+    "missing_slot_cases": [],
     "slot_utterance": "viết giúp tôi mét trên giây bình phương, m là nội dung mẫu, s là nội dung mẫu Biểu thức cần hiển thị bằng MathJax.",
     "slot_extraction_observed": {
       "slots": {},
@@ -4575,21 +4506,15 @@
   {
     "intent": "MATH_SPACING_DEGREE_UNITS_MOL",
     "expected_intent": "MATH_SPACING_DEGREE_UNITS_MOL",
-    "utterance": "dung mol trong obsidian",
+    "utterance": "đơn vị hóa học mol",
     "source": "data/intents.json aliases[5]",
     "review_needed": false,
     "expected_target": "mathjax",
-    "required_slots": [
-      "mol"
-    ],
+    "required_slots": [],
     "optional_slots": [],
     "defaults": {},
-    "slot_inputs": {
-      "mol": "noi dung mau"
-    },
-    "missing_slot_cases": [
-      "mol"
-    ],
+    "slot_inputs": {},
+    "missing_slot_cases": [],
     "slot_utterance": "viết giúp tôi mol, mol là nội dung mẫu Biểu thức cần hiển thị bằng MathJax.",
     "slot_extraction_observed": {
       "slots": {},
@@ -4605,24 +4530,15 @@
   {
     "intent": "MATH_SPACING_DEGREE_UNITS_ON_VI_NHAN",
     "expected_intent": "MATH_SPACING_DEGREE_UNITS_ON_VI_NHAN",
-    "utterance": "dung đơn vị nhân trong obsidian",
+    "utterance": "đơn vị tích kilôgam mét bình phương",
     "source": "data/intents.json aliases[5]",
     "review_needed": false,
     "expected_target": "mathjax",
-    "required_slots": [
-      "kg",
-      "m"
-    ],
+    "required_slots": [],
     "optional_slots": [],
     "defaults": {},
-    "slot_inputs": {
-      "kg": "noi dung mau",
-      "m": "noi dung mau"
-    },
-    "missing_slot_cases": [
-      "kg",
-      "m"
-    ],
+    "slot_inputs": {},
+    "missing_slot_cases": [],
     "slot_utterance": "viết giúp tôi đơn vị nhân, kg là nội dung mẫu, m là nội dung mẫu Biểu thức cần hiển thị bằng MathJax.",
     "slot_extraction_observed": {
       "slots": {},
@@ -4639,22 +4555,19 @@
   {
     "intent": "MATH_COLOR_HIGHLIGHT_MAU_O",
     "expected_intent": "MATH_COLOR_HIGHLIGHT_MAU_O",
-    "utterance": "dung màu đỏ trong obsidian",
+    "utterance": "tô màu đỏ cho biểu thức toán",
     "source": "data/intents.json aliases[5]",
     "review_needed": false,
     "expected_target": "mathjax",
     "required_slots": [
-      "red",
       "expr"
     ],
     "optional_slots": [],
     "defaults": {},
     "slot_inputs": {
-      "red": "noi dung mau",
-      "expr": "noi dung mau"
+      "expr": "x^2+1"
     },
     "missing_slot_cases": [
-      "red",
       "expr"
     ],
     "slot_utterance": "viết giúp tôi màu đỏ, red là nội dung mẫu, expr là x+1 Biểu thức cần hiển thị bằng MathJax.",
@@ -4673,22 +4586,19 @@
   {
     "intent": "MATH_COLOR_HIGHLIGHT_MAU_XANH",
     "expected_intent": "MATH_COLOR_HIGHLIGHT_MAU_XANH",
-    "utterance": "dung màu xanh trong obsidian",
+    "utterance": "tô màu xanh cho biểu thức toán",
     "source": "data/intents.json aliases[5]",
     "review_needed": false,
     "expected_target": "mathjax",
     "required_slots": [
-      "blue",
       "expr"
     ],
     "optional_slots": [],
     "defaults": {},
     "slot_inputs": {
-      "blue": "noi dung mau",
-      "expr": "noi dung mau"
+      "expr": "x^2+1"
     },
     "missing_slot_cases": [
-      "blue",
       "expr"
     ],
     "slot_utterance": "viết giúp tôi màu xanh, blue là nội dung mẫu, expr là x+1 Biểu thức cần hiển thị bằng MathJax.",
@@ -4707,22 +4617,19 @@
   {
     "intent": "MATH_NUMBERING_REFERENCES_PHUONG_TRINH_CO_SO",
     "expected_intent": "MATH_NUMBERING_REFERENCES_PHUONG_TRINH_CO_SO",
-    "utterance": "dung phương trình có số trong obsidian",
+    "utterance": "phương trình toán có đánh số",
     "source": "data/intents.json aliases[5]",
     "review_needed": false,
     "expected_target": "mathjax",
     "required_slots": [
-      "equation",
       "formula"
     ],
     "optional_slots": [],
     "defaults": {},
     "slot_inputs": {
-      "equation": "noi dung mau",
-      "formula": "noi dung mau"
+      "formula": "E=mc^2"
     },
     "missing_slot_cases": [
-      "equation",
       "formula"
     ],
     "slot_utterance": "viết giúp tôi phương trình có số, equation là nội dung mẫu, formula là x^2 + y^2 = z^2 Biểu thức cần hiển thị bằng MathJax.",
@@ -4741,7 +4648,7 @@
   {
     "intent": "MATH_NUMBERING_REFERENCES_GAN_NHAN_PHUONG_TRINH",
     "expected_intent": "MATH_NUMBERING_REFERENCES_GAN_NHAN_PHUONG_TRINH",
-    "utterance": "dung gắn nhãn phương trình trong obsidian",
+    "utterance": "gắn nhãn số tùy chọn cho phương trình",
     "source": "data/intents.json aliases[5]",
     "review_needed": false,
     "expected_target": "mathjax",
@@ -4751,7 +4658,7 @@
     "optional_slots": [],
     "defaults": {},
     "slot_inputs": {
-      "label": "noi dung mau"
+      "label": "eq1"
     },
     "missing_slot_cases": [
       "label"
@@ -4771,7 +4678,7 @@
   {
     "intent": "OBSIDIAN_CALLOUTS_GHI_CHU",
     "expected_intent": "OBSIDIAN_CALLOUTS_GHI_CHU",
-    "utterance": "dung ghi chú trong obsidian",
+    "utterance": "khối callout ghi chú",
     "source": "data/intents.json aliases[5]",
     "review_needed": false,
     "expected_target": "obsidian",
@@ -4781,7 +4688,7 @@
     "optional_slots": [],
     "defaults": {},
     "slot_inputs": {
-      "text": "noi dung mau"
+      "text": "Kiểm tra lại điều kiện biên"
     },
     "missing_slot_cases": [
       "text"
@@ -4801,7 +4708,7 @@
   {
     "intent": "OBSIDIAN_CALLOUTS_THONG_TIN",
     "expected_intent": "OBSIDIAN_CALLOUTS_THONG_TIN",
-    "utterance": "dung thông tin trong obsidian",
+    "utterance": "khối callout thông tin",
     "source": "data/intents.json aliases[5]",
     "review_needed": false,
     "expected_target": "obsidian",
@@ -4811,7 +4718,7 @@
     "optional_slots": [],
     "defaults": {},
     "slot_inputs": {
-      "text": "noi dung mau"
+      "text": "Kiểm tra lại điều kiện biên"
     },
     "missing_slot_cases": [
       "text"
@@ -4831,7 +4738,7 @@
   {
     "intent": "OBSIDIAN_CALLOUTS_MEO",
     "expected_intent": "OBSIDIAN_CALLOUTS_MEO",
-    "utterance": "dung mẹo trong obsidian",
+    "utterance": "khối callout mẹo hay",
     "source": "data/intents.json aliases[5]",
     "review_needed": false,
     "expected_target": "obsidian",
@@ -4841,7 +4748,7 @@
     "optional_slots": [],
     "defaults": {},
     "slot_inputs": {
-      "text": "noi dung mau"
+      "text": "Kiểm tra lại điều kiện biên"
     },
     "missing_slot_cases": [
       "text"
@@ -4861,7 +4768,7 @@
   {
     "intent": "OBSIDIAN_CALLOUTS_CANH_BAO",
     "expected_intent": "OBSIDIAN_CALLOUTS_CANH_BAO",
-    "utterance": "dung cảnh báo trong obsidian",
+    "utterance": "khối callout cảnh báo",
     "source": "data/intents.json aliases[5]",
     "review_needed": false,
     "expected_target": "obsidian",
@@ -4871,7 +4778,7 @@
     "optional_slots": [],
     "defaults": {},
     "slot_inputs": {
-      "text": "noi dung mau"
+      "text": "Kiểm tra lại điều kiện biên"
     },
     "missing_slot_cases": [
       "text"
@@ -4891,7 +4798,7 @@
   {
     "intent": "OBSIDIAN_CALLOUTS_CAU_HOI",
     "expected_intent": "OBSIDIAN_CALLOUTS_CAU_HOI",
-    "utterance": "dung câu hỏi trong obsidian",
+    "utterance": "khối callout câu hỏi",
     "source": "data/intents.json aliases[5]",
     "review_needed": false,
     "expected_target": "obsidian",
@@ -4901,7 +4808,7 @@
     "optional_slots": [],
     "defaults": {},
     "slot_inputs": {
-      "text": "noi dung mau"
+      "text": "Kiểm tra lại điều kiện biên"
     },
     "missing_slot_cases": [
       "text"
@@ -4921,7 +4828,7 @@
   {
     "intent": "OBSIDIAN_CALLOUTS_THANH_CONG",
     "expected_intent": "OBSIDIAN_CALLOUTS_THANH_CONG",
-    "utterance": "dung thành công trong obsidian",
+    "utterance": "khối callout thành công",
     "source": "data/intents.json aliases[5]",
     "review_needed": false,
     "expected_target": "obsidian",
@@ -4931,7 +4838,7 @@
     "optional_slots": [],
     "defaults": {},
     "slot_inputs": {
-      "text": "noi dung mau"
+      "text": "Kiểm tra lại điều kiện biên"
     },
     "missing_slot_cases": [
       "text"
@@ -4951,7 +4858,7 @@
   {
     "intent": "OBSIDIAN_CALLOUTS_LOI",
     "expected_intent": "OBSIDIAN_CALLOUTS_LOI",
-    "utterance": "dung lỗi trong obsidian",
+    "utterance": "khối callout báo lỗi",
     "source": "data/intents.json aliases[5]",
     "review_needed": false,
     "expected_target": "obsidian",
@@ -4961,7 +4868,7 @@
     "optional_slots": [],
     "defaults": {},
     "slot_inputs": {
-      "text": "noi dung mau"
+      "text": "Kiểm tra lại điều kiện biên"
     },
     "missing_slot_cases": [
       "text"
@@ -4981,7 +4888,7 @@
   {
     "intent": "OBSIDIAN_CALLOUTS_NGUY_HIEM",
     "expected_intent": "OBSIDIAN_CALLOUTS_NGUY_HIEM",
-    "utterance": "dung nguy hiểm trong obsidian",
+    "utterance": "khối callout nguy hiểm",
     "source": "data/intents.json aliases[5]",
     "review_needed": false,
     "expected_target": "obsidian",
@@ -4991,7 +4898,7 @@
     "optional_slots": [],
     "defaults": {},
     "slot_inputs": {
-      "text": "noi dung mau"
+      "text": "Kiểm tra lại điều kiện biên"
     },
     "missing_slot_cases": [
       "text"
@@ -5011,7 +4918,7 @@
   {
     "intent": "OBSIDIAN_CALLOUTS_BUG",
     "expected_intent": "OBSIDIAN_CALLOUTS_BUG",
-    "utterance": "dung bug trong obsidian",
+    "utterance": "khối callout lỗi phần mềm",
     "source": "data/intents.json aliases[5]",
     "review_needed": false,
     "expected_target": "obsidian",
@@ -5021,7 +4928,7 @@
     "optional_slots": [],
     "defaults": {},
     "slot_inputs": {
-      "text": "noi dung mau"
+      "text": "Kiểm tra lại điều kiện biên"
     },
     "missing_slot_cases": [
       "text"
@@ -5041,7 +4948,7 @@
   {
     "intent": "OBSIDIAN_CALLOUTS_CALLOUT_THU_GON",
     "expected_intent": "OBSIDIAN_CALLOUTS_CALLOUT_THU_GON",
-    "utterance": "dung callout thu gọn trong obsidian",
+    "utterance": "khối callout thu gọn",
     "source": "data/intents.json aliases[5]",
     "review_needed": false,
     "expected_target": "obsidian",
@@ -5052,8 +4959,8 @@
     "optional_slots": [],
     "defaults": {},
     "slot_inputs": {
-      "title": "noi dung mau",
-      "text": "noi dung mau"
+      "title": "Lưu ý thêm",
+      "text": "Chi tiết ghi chú"
     },
     "missing_slot_cases": [
       "title",
@@ -5075,7 +4982,7 @@
   {
     "intent": "OBSIDIAN_TAGS_TAG",
     "expected_intent": "OBSIDIAN_TAGS_TAG",
-    "utterance": "dung tag trong obsidian",
+    "utterance": "gắn thẻ từ khóa markdown",
     "source": "data/intents.json aliases[5]",
     "review_needed": false,
     "expected_target": "obsidian",
@@ -5085,7 +4992,7 @@
     "optional_slots": [],
     "defaults": {},
     "slot_inputs": {
-      "tag": "noi dung mau"
+      "tag": "toan-hoc"
     },
     "missing_slot_cases": [
       "tag"
@@ -5105,7 +5012,7 @@
   {
     "intent": "OBSIDIAN_FOOTNOTES_CHU_THICH_CUOI_TRANG",
     "expected_intent": "OBSIDIAN_FOOTNOTES_CHU_THICH_CUOI_TRANG",
-    "utterance": "dung chú thích cuối trang trong obsidian",
+    "utterance": "chú thích cuối trang markdown",
     "source": "data/intents.json aliases[5]",
     "review_needed": false,
     "expected_target": "obsidian",
@@ -5117,9 +5024,9 @@
     "optional_slots": [],
     "defaults": {},
     "slot_inputs": {
-      "text": "noi dung mau",
-      "id": "noi dung mau",
-      "note": "noi dung mau"
+      "text": "Khái niệm cơ bản",
+      "id": "1",
+      "note": "Nguồn tham khảo"
     },
     "missing_slot_cases": [
       "text",
@@ -5143,7 +5050,7 @@
   {
     "intent": "OBSIDIAN_ESCAPE_ESCAPE_DAU_SAO",
     "expected_intent": "OBSIDIAN_ESCAPE_ESCAPE_DAU_SAO",
-    "utterance": "dung escape dấu sao trong obsidian",
+    "utterance": "thoát ký tự dấu sao markdown",
     "source": "data/intents.json aliases[5]",
     "review_needed": false,
     "expected_target": "obsidian",
@@ -5165,7 +5072,7 @@
   {
     "intent": "OBSIDIAN_ESCAPE_ESCAPE_GACH_DUOI",
     "expected_intent": "OBSIDIAN_ESCAPE_ESCAPE_GACH_DUOI",
-    "utterance": "dung escape gạch dưới trong obsidian",
+    "utterance": "thoát ký tự gạch dưới markdown",
     "source": "data/intents.json aliases[5]",
     "review_needed": false,
     "expected_target": "obsidian",
@@ -5187,7 +5094,7 @@
   {
     "intent": "OBSIDIAN_ESCAPE_ESCAPE_HASHTAG",
     "expected_intent": "OBSIDIAN_ESCAPE_ESCAPE_HASHTAG",
-    "utterance": "dung escape hashtag trong obsidian",
+    "utterance": "thoát ký tự thăng markdown",
     "source": "data/intents.json aliases[5]",
     "review_needed": false,
     "expected_target": "obsidian",
@@ -5209,7 +5116,7 @@
   {
     "intent": "OBSIDIAN_ESCAPE_ESCAPE_BACKTICK",
     "expected_intent": "OBSIDIAN_ESCAPE_ESCAPE_BACKTICK",
-    "utterance": "dung escape backtick trong obsidian",
+    "utterance": "thoát ký tự dấu nháy ngược markdown",
     "source": "data/intents.json aliases[5]",
     "review_needed": false,
     "expected_target": "obsidian",
@@ -5231,7 +5138,7 @@
   {
     "intent": "OBSIDIAN_ESCAPE_ESCAPE_PIPE",
     "expected_intent": "OBSIDIAN_ESCAPE_ESCAPE_PIPE",
-    "utterance": "dung escape pipe trong obsidian",
+    "utterance": "thoát ký tự gạch đứng markdown",
     "source": "data/intents.json aliases[5]",
     "review_needed": false,
     "expected_target": "obsidian",
@@ -5253,7 +5160,7 @@
   {
     "intent": "OBSIDIAN_ESCAPE_ESCAPE_TILDE",
     "expected_intent": "OBSIDIAN_ESCAPE_ESCAPE_TILDE",
-    "utterance": "dung escape tilde trong obsidian",
+    "utterance": "thoát ký tự dấu ngã markdown",
     "source": "data/intents.json aliases[5]",
     "review_needed": false,
     "expected_target": "obsidian",

@@ -26,6 +26,7 @@ import json
 import re
 import sys
 import unicodedata
+from collections import Counter
 from collections.abc import Collection, Sequence
 from pathlib import Path
 from typing import Any, Final
@@ -54,6 +55,7 @@ CATEGORY_WHITELIST: Final[frozenset[str]] = frozenset({
 ALLOWED_SLOT_TYPES: Final[frozenset[str]] = frozenset({
     "number",
     "math",
+    "matrix",
     "text",
     "label",
     "filename",
@@ -326,7 +328,7 @@ def validate_intent(
                         f"Trường 'constraint_error' của slot '{slot_name}' phải là chuỗi."
                     )
 
-    # 6. Kiểm tra template placeholders (<<slot>>)
+    # 6. Kiểm tra template placeholders (<<slot>>), escaping, và cân bằng môi trường
     templates = intent_data.get("templates")
     if not isinstance(templates, dict):
         errors.append("Trường 'templates' bắt buộc phải là từ điển (dict).")
@@ -334,44 +336,110 @@ def validate_intent(
         errors.append("Trường 'templates' bắt buộc phải chứa khóa 'latex'.")
     else:
         for target_name, target_template in templates.items():
-            if isinstance(target_template, str) and re.search(r"\\n(?![A-Za-z])", target_template):
+            if not isinstance(target_template, str):
+                errors.append(f"Khóa '{target_name}' trong 'templates' phải là chuỗi ký tự.")
+                continue
+            if re.search(r"\\n(?![A-Za-z])", target_template):
                 errors.append(
                     f"Template target '{target_name}' chứa literal \\n; dùng ký tự xuống dòng thật."
                 )
-        domain = intent_data.get("domain") or intent_data.get("category", "latex")
-        template_key = "obsidian" if domain == "obsidian" else (
-            "mathjax" if domain == "math_shared" and not templates.get("latex")
-            and templates.get("mathjax") else "latex"
-        )
-        latex_template = templates.get(template_key, "")
-        if not isinstance(latex_template, str):
-            errors.append("Khóa 'latex' trong 'templates' phải là chuỗi ký tự.")
-        else:
-            # Tìm tất cả placeholder dạng <<placeholder>>
-            placeholders_in_template = set(PLACEHOLDER_REGEX.findall(latex_template))
-            if template_key != "latex":
+            if "\\\\" * 2 in target_template:
+                errors.append(
+                    f"Template target '{target_name}' chứa chuỗi 4 backslash liên tiếp; dùng đúng \\\\ để xuống dòng."
+                )
+            if not target_template.strip():
+                continue
+            if target_name in {"latex", "mathjax"}:
+                begins = Counter(re.findall(r"\\begin\{([^{}]+)\}", target_template))
+                ends = Counter(re.findall(r"\\end\{([^{}]+)\}", target_template))
+                if begins != ends:
+                    errors.append(
+                        f"Template target '{target_name}' mất cân bằng \\begin/\\end: "
+                        f"begin={dict(begins)}, end={dict(ends)}."
+                    )
+            placeholders_in_template = set(PLACEHOLDER_REGEX.findall(target_template))
+            if target_name != "latex" and not placeholders_in_template:
                 placeholders_in_template.update(
                     slot_name for slot_name in declared_slots
-                    if f"{{{slot_name}}}" in latex_template
+                    if f"{{{slot_name}}}" in target_template
                 )
-
-            # Placeholder xuất hiện trong template nhưng không được khai báo trong slots
             undeclared = placeholders_in_template - declared_slots
             if undeclared:
                 errors.append(
-                    f"Placeholder trong LaTeX template chưa được khai báo trong 'slots': "
+                    f"Placeholder trong template '{target_name}' chưa được khai báo trong 'slots': "
                     f"{sorted(undeclared)}."
                 )
-
-            # Slot được khai báo nhưng không có placeholder tương ứng trong template
-            # (Ngoại trừ intent không sinh mã hoặc mẫu rỗng đặc biệt như OUT_OF_SCOPE)
             if intent_name != "OUT_OF_SCOPE":
                 unused = declared_slots - placeholders_in_template
                 if unused:
                     errors.append(
-                        f"Slot được khai báo trong 'slots' nhưng không xuất hiện dưới dạng <<slot>> "
-                        f"trong LaTeX template: {sorted(unused)}."
+                        f"Slot được khai báo trong 'slots' nhưng không xuất hiện trong template "
+                        f"'{target_name}': {sorted(unused)}."
                     )
+
+        domain = intent_data.get("domain") or intent_data.get("category", "latex")
+        primary_key = "obsidian" if domain == "obsidian" else "latex"
+        primary_template = templates.get(primary_key, "")
+        if intent_name != "OUT_OF_SCOPE" and isinstance(primary_template, str):
+            primary_placeholders = set(PLACEHOLDER_REGEX.findall(primary_template))
+            if primary_key != "latex" and not primary_placeholders:
+                primary_placeholders.update(
+                    slot_name for slot_name in declared_slots
+                    if f"{{{slot_name}}}" in primary_template
+                )
+            if not primary_template.strip() and templates.get("mathjax"):
+                # Giữ kiểm tra tối thiểu nếu thư mục/fixture cũ chỉ có mathjax
+                fallback_tpl = templates["mathjax"]
+                fb_placeholders = set(PLACEHOLDER_REGEX.findall(fallback_tpl)) or {
+                    slot_name for slot_name in declared_slots if f"{{{slot_name}}}" in fallback_tpl
+                }
+                if intent_name != "OUT_OF_SCOPE":
+                    unused = declared_slots - fb_placeholders
+                    if unused:
+                        errors.append(
+                            f"Slot được khai báo trong 'slots' nhưng không xuất hiện dưới dạng <<slot>> "
+                            f"trong LaTeX template: {sorted(unused)}."
+                        )
+            elif primary_template.strip():
+                unused_primary = declared_slots - primary_placeholders
+                if unused_primary:
+                    errors.append(
+                        f"Slot được khai báo trong 'slots' nhưng không xuất hiện dưới dạng <<slot>> "
+                        f"trong LaTeX template: {sorted(unused_primary)}."
+                    )
+
+    render_spec = intent_data.get("render")
+    if isinstance(render_spec, dict) and isinstance(render_spec.get("templates"), dict):
+        for target_name, target_template in render_spec["templates"].items():
+            if not isinstance(target_template, str) or not target_template.strip():
+                continue
+            if re.search(r"\\n(?![A-Za-z])", target_template):
+                errors.append(
+                    f"render.templates.{target_name} chứa literal \\n; dùng ký tự xuống dòng thật."
+                )
+            if "\\\\" * 2 in target_template:
+                errors.append(
+                    f"render.templates.{target_name} chứa chuỗi 4 backslash liên tiếp."
+                )
+            if re.search(r"\\[A-Za-z]+\{\{\s*[a-zA-Z0-9_]+\s*\}\}", target_template):
+                errors.append(
+                    f"render.templates.{target_name} thiếu ngoặc nhọn LaTeX bọc ngoài biến Jinja."
+                )
+            if target_name in {"latex", "mathjax"}:
+                begins = Counter(re.findall(r"\\begin\{([^{}]+)\}", target_template))
+                ends = Counter(re.findall(r"\\end\{([^{}]+)\}", target_template))
+                if begins != ends:
+                    errors.append(
+                        f"render.templates.{target_name} mất cân bằng \\begin/\\end: "
+                        f"begin={dict(begins)}, end={dict(ends)}."
+                    )
+            render_vars = set(re.findall(r"\{\{\s*([a-zA-Z0-9_]+)\s*\}\}", target_template))
+            undeclared_render = render_vars - declared_slots
+            if undeclared_render:
+                errors.append(
+                    f"Biến trong render.templates.{target_name} chưa được khai báo trong 'slots': "
+                    f"{sorted(undeclared_render)}."
+                )
 
     # 7. Kiểm tra kind, requires, và post attributes
     kind = intent_data.get("kind")

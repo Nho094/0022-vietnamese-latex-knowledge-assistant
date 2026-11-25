@@ -52,6 +52,11 @@ _SPOKEN_MATH_CUE_REGEX: Final[re.Pattern[str]] = re.compile(
     r"\b(?:cộng|trừ|chia|âm|dương|bình\s+phương|mũ|bằng)\b|"
     r"[A-Za-z]\s*\^\s*\d|\d\s*[A-Za-z]", re.IGNORECASE
 )
+_MATRIX_DIMENSION_REGEX: Final[re.Pattern[str]] = re.compile(r"\b(\d+)\s*[x×]\s*(\d+)\b", re.IGNORECASE)
+_BARE_MATRIX_DIM_REGEX: Final[re.Pattern[str]] = re.compile(
+    r"^\s*(?:ma\s*trận|chuẩn|matrix|cấp|vuông|kích\s*thước|\d+\s*[x×]\s*\d+|\d+)\s*$",
+    re.IGNORECASE,
+)
 _KEYWORD_TOKEN_REGEX: Final[re.Pattern[str]] = re.compile(r"[^\W\d_]+", re.UNICODE)
 
 # Bộ nhớ đệm ngân hàng kịch bản trong tiến trình để tối ưu hiệu năng
@@ -243,12 +248,144 @@ def normalize_math(val: Any) -> str:
     if not expression:
         raise ValueError("Biểu thức toán không được để trống.")
     if len(expression) > MAX_TEXT_SLOT_LENGTH or not re.fullmatch(
-        r"[A-Za-z0-9+*/=().,{}^\\\- ]+", expression
+        r"[A-Za-z0-9_+*/=().,{}^\\\- ]+", expression
     ):
         raise ValueError("Biểu thức toán chứa ký tự không được hỗ trợ.")
     for index, text_macro in enumerate(preserved_text):
         expression = expression.replace(f"LATEXTEXTTOKEN{index}", text_macro)
     return expression
+
+
+def extract_matrix_dimensions(text: str) -> tuple[int, int] | None:
+    """Trích gợi ý kích thước ma trận dạng NxM nếu người dùng nêu rõ."""
+    match = _MATRIX_DIMENSION_REGEX.search(text or "")
+    if not match:
+        return None
+    rows, cols = int(match.group(1)), int(match.group(2))
+    if 1 <= rows <= 20 and 1 <= cols <= 20:
+        return rows, cols
+    return None
+
+
+def _split_matrix_row_cells(row_text: str) -> list[str]:
+    cleaned = row_text.strip().strip("[]()")
+    if not cleaned:
+        return []
+    if "&" in cleaned:
+        raw_cells = [part.strip() for part in cleaned.split("&")]
+    elif "," in cleaned:
+        raw_cells = [part.strip() for part in cleaned.split(",")]
+    else:
+        raw_cells = [part.strip() for part in re.split(r"\s+", cleaned) if part.strip()]
+    if any(not cell for cell in raw_cells):
+        raise ValueError("Hàng ma trận có ô trống không hợp lệ.")
+    return [normalize_math(cell) for cell in raw_cells]
+
+
+def _parse_nested_bracket_matrix(raw: str) -> list[list[str]] | None:
+    stripped = raw.strip()
+    if not (stripped.startswith("[[") and stripped.endswith("]]")):
+        return None
+    try:
+        parsed = json.loads(stripped)
+        if isinstance(parsed, list) and parsed and all(isinstance(r, list) and r for r in parsed):
+            return [[normalize_math(str(c)) for c in row] for row in parsed]
+    except ValueError:
+        pass
+    inner = stripped[1:-1].strip()
+    row_blocks = re.findall(r"\[([^\[\]]+)\]", inner)
+    if not row_blocks:
+        return None
+    return [_split_matrix_row_cells(block) for block in row_blocks]
+
+
+def normalize_matrix(
+    val: Any,
+    rows_hint: int | None = None,
+    cols_hint: int | None = None,
+) -> str:
+    """Chuẩn hóa nội dung ma trận thành dạng `c1 & c2 \\\\ c3 & c4` an toàn cho LaTeX."""
+    if val is None:
+        raise ValueError("Nội dung ma trận không được để trống.")
+    if isinstance(val, list):
+        if not val or not all(isinstance(row, list) and row for row in val):
+            raise ValueError("Ma trận dạng mảng 2 chiều không hợp lệ.")
+        parsed_rows = [[normalize_math(str(cell)) for cell in row] for row in val]
+    else:
+        raw = unicodedata.normalize("NFC", str(val)).strip()
+        if not raw:
+            raise ValueError("Nội dung ma trận không được để trống.")
+        forbidden = r"\\(?:" + "|".join(map(re.escape, FORBIDDEN_LATEX_CONTROL_WORDS)) + r")(?![A-Za-z])"
+        if re.search(forbidden, raw, flags=re.IGNORECASE):
+            raise ValueError("Nội dung ma trận chứa lệnh LaTeX không an toàn.")
+        # Bỏ phần mô tả kích thước đứng đầu như '2x2 gồm ...' hoặc từ khóa dẫn nhập
+        lead_dim = extract_matrix_dimensions(raw)
+        if rows_hint is None and cols_hint is None and lead_dim is not None:
+            if re.match(r"^\s*\d+\s*[x×]\s*\d+\b", raw):
+                rows_hint, cols_hint = lead_dim
+        raw_clean = re.sub(
+            r"^\s*(?:\d+\s*[x×]\s*\d+\s*)?(?:gồm|có|là|chứa|với|nội dung|:|=)\s*",
+            "",
+            raw,
+            flags=re.IGNORECASE,
+        ).strip()
+        if not raw_clean or _BARE_MATRIX_DIM_REGEX.match(raw_clean):
+            raise ValueError("Thiếu các phần tử của ma trận (chỉ mới có tên hoặc kích thước).")
+
+        parsed_rows = _parse_nested_bracket_matrix(raw_clean) or []
+        if not parsed_rows:
+            row_label_matches = list(
+                re.finditer(r"(?:hàng|dòng|row)\s*\d+\s*(?:là|:|=)?\s*", raw_clean, flags=re.IGNORECASE)
+            )
+            if row_label_matches:
+                row_chunks: list[str] = []
+                for idx, m in enumerate(row_label_matches):
+                    end = row_label_matches[idx + 1].start() if idx + 1 < len(row_label_matches) else len(raw_clean)
+                    chunk = raw_clean[m.end():end].strip().rstrip(";").strip()
+                    if chunk:
+                        row_chunks.append(chunk)
+                parsed_rows = [_split_matrix_row_cells(chunk) for chunk in row_chunks if chunk]
+            elif "\\\\" in raw_clean or "\n" in raw_clean or ";" in raw_clean or "|" in raw_clean:
+                normalized_lines = re.sub(r"\\{2,}", "\n", raw_clean)
+                row_chunks = [
+                    chunk.strip()
+                    for chunk in re.split(r"[\n;|]+", normalized_lines)
+                    if chunk.strip()
+                ]
+                parsed_rows = [_split_matrix_row_cells(chunk) for chunk in row_chunks if chunk]
+            else:
+                flat_cells = _split_matrix_row_cells(raw_clean)
+                if not flat_cells:
+                    raise ValueError("Thiếu nội dung ma trận.")
+                if rows_hint is not None and cols_hint is not None:
+                    expected_count = rows_hint * cols_hint
+                    if len(flat_cells) != expected_count:
+                        raise ValueError(
+                            f"Ma trận {rows_hint}x{cols_hint} cần đúng {expected_count} phần tử "
+                            f"(nhận được {len(flat_cells)})."
+                        )
+                    parsed_rows = [
+                        flat_cells[i * cols_hint:(i + 1) * cols_hint]
+                        for i in range(rows_hint)
+                    ]
+                elif len(flat_cells) == 1 and re.fullmatch(r"\d+", flat_cells[0]):
+                    raise ValueError("Thiếu cấu trúc hàng/cột của ma trận.")
+                else:
+                    parsed_rows = [flat_cells]
+
+    if not parsed_rows:
+        raise ValueError("Không thể phân tích nội dung ma trận.")
+    col_widths = {len(row) for row in parsed_rows}
+    if len(col_widths) > 1 or 0 in col_widths:
+        raise ValueError("Số cột ở các hàng của ma trận phải đồng nhất.")
+    if rows_hint is not None and len(parsed_rows) != rows_hint:
+        raise ValueError(f"Số hàng của ma trận ({len(parsed_rows)}) không khớp {rows_hint}.")
+    if cols_hint is not None and len(parsed_rows[0]) != cols_hint:
+        raise ValueError(f"Số cột của ma trận ({len(parsed_rows[0])}) không khớp {cols_hint}.")
+    rendered = " \\\\\n".join(" & ".join(row) for row in parsed_rows)
+    if len(rendered) > MAX_TEXT_SLOT_LENGTH:
+        raise ValueError("Nội dung ma trận vượt quá giới hạn độ dài cho phép.")
+    return rendered
 
 
 def normalize_label(val: Any) -> str:
@@ -340,13 +477,19 @@ def normalize_filename(val: Any) -> str:
     return cleaned
 
 
-def normalize_slot_value(val: Any, slot_type: str) -> str:
+def normalize_slot_value(
+    val: Any,
+    slot_type: str,
+    *,
+    rows_hint: int | None = None,
+    cols_hint: int | None = None,
+) -> str:
     """
     Điều phối chuẩn hóa giá trị tham số slot theo kiểu dữ liệu tương ứng.
 
     Tham số:
         val: Giá trị tham số thô cần chuẩn hóa.
-        slot_type: Kiểu dữ liệu tham số ('number', 'text', 'label', 'filename').
+        slot_type: Kiểu dữ liệu tham số ('number', 'math', 'matrix', 'text', 'label', 'filename').
 
     Trả về:
         Chuỗi giá trị đã được chuẩn hóa.
@@ -356,6 +499,8 @@ def normalize_slot_value(val: Any, slot_type: str) -> str:
         return normalize_number(val)
     elif normalized_type == "math":
         return normalize_math(val)
+    elif normalized_type == "matrix":
+        return normalize_matrix(val, rows_hint=rows_hint, cols_hint=cols_hint)
     elif normalized_type == "text":
         return normalize_text(val)
     elif normalized_type == "label":
@@ -458,6 +603,68 @@ def _math_context(text: str) -> bool:
     )
 
 
+def _normalize_multiline_preserves_rows(text: str) -> str:
+    """Chuẩn hóa từng dòng (NFC, look-alikes) nhưng giữ nguyên xuống dòng cho ma trận."""
+    lines = text.replace("\r\n", "\n").replace("\r", "\n").split("\n")
+    return "\n".join(normalize(line) for line in lines).strip()
+
+
+def extract_matrix_raw(
+    raw_text: str,
+    pattern: str | None = None,
+) -> tuple[str | None, int | None, int | None]:
+    """Bóc tách nội dung thô của ma trận (hỗ trợ nhiều dòng, ';', '[[...]]', và gợi ý NxM)."""
+    multiline_text = _normalize_multiline_preserves_rows(raw_text)
+    dims = extract_matrix_dimensions(multiline_text)
+    rows_hint, cols_hint = dims if dims is not None else (None, None)
+
+    matched_raw: str | None = None
+    if pattern and str(pattern).strip() not in {"(.+)", "(.*)", "(.+?)"}:
+        try:
+            m = re.search(pattern, multiline_text, flags=re.IGNORECASE | re.UNICODE)
+            if m and m.group(1) is not None and m.group(1).strip():
+                matched_raw = m.group(1).strip()
+        except re.error:
+            matched_raw = None
+
+    if matched_raw is None:
+        bracket_match = re.search(r"(\[\[[\s\S]+\]\])", multiline_text)
+        if bracket_match:
+            matched_raw = bracket_match.group(1).strip()
+        elif re.search(r"(?:hàng|dòng|row)\s*1\b", multiline_text, flags=re.IGNORECASE):
+            row_start = re.search(r"(?:hàng|dòng|row)\s*1\b", multiline_text, flags=re.IGNORECASE)
+            assert row_start is not None
+            matched_raw = multiline_text[row_start.start():].strip()
+        elif "\n" in multiline_text:
+            lines = [ln.strip() for ln in multiline_text.split("\n") if ln.strip()]
+            if len(lines) >= 2:
+                # Bỏ dòng tiêu đề nếu dòng đầu chứa từ khóa tiếng Việt không phải phần tử toán
+                if re.search(r"[àáạảãâầấậẩẫăằắặẳẵèéẹẻẽêềếệểễìíịỉĩòóọỏõôồốộổỗơờớợởỡùúụủũưừứựửữỳýỵỷỹđ]", lines[0], re.I):
+                    matched_raw = "\n".join(lines[1:])
+                else:
+                    matched_raw = "\n".join(lines)
+        elif ";" in multiline_text:
+            prefix_removed = re.sub(
+                r"^.*?(?:gồm|với|là|chứa|ma\s*trận|chuẩn|:|=)\s*",
+                "",
+                multiline_text,
+                flags=re.IGNORECASE,
+            ).strip()
+            if ";" in prefix_removed:
+                matched_raw = prefix_removed
+        elif "\\\\" in multiline_text or "&" in multiline_text:
+            prefix_removed = re.sub(
+                r"^.*?(?:gồm|với|là|chứa|ma\s*trận|chuẩn|:|=)\s*",
+                "",
+                multiline_text,
+                flags=re.IGNORECASE,
+            ).strip()
+            if prefix_removed:
+                matched_raw = prefix_removed
+
+    return matched_raw, rows_hint, cols_hint
+
+
 def extract_slots(
     text: str,
     intent: str | dict[str, Any] | Any,
@@ -470,7 +677,7 @@ def extract_slots(
     - Tiền xử lý văn bản: Chuẩn hóa Unicode NFC, chuẩn hóa ký hiệu toán học (² -> ^2), thu gọn khoảng trắng,
       giữ nguyên văn bản không tách từ vựng (normalized non-segmented text).
     - Khớp regex đơn giản hóa theo từng slot (simplified regex matching per slot).
-    - Chuẩn hóa kiểu dữ liệu nghiêm ngặt theo từng loại slot (number, text, label, filename).
+    - Chuẩn hóa kiểu dữ liệu nghiêm ngặt theo từng loại slot (number, math, matrix, text, label, filename).
     - Thực thi các móc kiểm thực (validation hooks) sau khi trích xuất (ví dụ: a != 0 cho phương trình bậc hai).
     - Báo cáo chính xác các slot bắt buộc còn thiếu hoặc vi phạm ràng buộc.
 
@@ -517,67 +724,66 @@ def extract_slots(
             default = getattr(s_def, "default", None)
             absent_means = getattr(s_def, "absent_means", None)
 
-        slot_text = (
-            spoken_math_text if slot_type in {"number", "math"} else normalized_text
-        )
-
+        rows_hint: int | None = None
+        cols_hint: int | None = None
         matched_raw_val: str | None = None
 
-        if pattern:
-            try:
-                # A bare catch-all cannot prove which part of a sentence is the slot value.
-                catch_all_value = str(pattern).strip() in {"(.+)", "(.*)", "(.+?)"}
-                if catch_all_value:
+        if slot_type == "matrix":
+            matched_raw_val, rows_hint, cols_hint = extract_matrix_raw(text, str(pattern) if pattern else None)
+        else:
+            slot_text = (
+                spoken_math_text if slot_type in {"number", "math"} else normalized_text
+            )
+            if pattern:
+                try:
+                    catch_all_value = str(pattern).strip() in {"(.+)", "(.*)", "(.+?)"}
+                    if catch_all_value:
+                        pattern = None
+                except (TypeError, AttributeError):
                     pattern = None
-            except (TypeError, AttributeError):
-                pattern = None
 
-        if pattern:
-            try:
-                # 1. Thử khớp trực tiếp mẫu regex gốc
-                match = re.search(pattern, slot_text, flags=re.IGNORECASE | re.UNICODE)
-                if match:
-                    raw_group = match.group(1)
-                    if raw_group is not None:
-                        capture_start, capture_end = match.span(1)
-                        cut_at = capture_end
-                        for other_name, other_spec in slots_items:
-                            if other_name == slot_name:
-                                continue
-                            other_pattern = (
-                                other_spec.get("regex") or other_spec.get("pattern")
-                                if isinstance(other_spec, dict)
-                                else getattr(other_spec, "regex", None)
-                            )
-                            for anchor in _leading_anchor_keywords(other_pattern):
-                                anchor_pattern = re.escape(anchor).replace(r"\ ", r"\s+")
-                                anchor_match = re.search(
-                                    rf"(?<!\w){anchor_pattern}(?!\w)",
-                                    slot_text[capture_start:cut_at],
-                                    flags=re.IGNORECASE | re.UNICODE,
+            if pattern:
+                try:
+                    match = re.search(pattern, slot_text, flags=re.IGNORECASE | re.UNICODE)
+                    if match:
+                        raw_group = match.group(1)
+                        if raw_group is not None:
+                            capture_start, capture_end = match.span(1)
+                            cut_at = capture_end
+                            for other_name, other_spec in slots_items:
+                                if other_name == slot_name:
+                                    continue
+                                other_pattern = (
+                                    other_spec.get("regex") or other_spec.get("pattern")
+                                    if isinstance(other_spec, dict)
+                                    else getattr(other_spec, "regex", None)
                                 )
-                                if anchor_match:
-                                    cut_at = min(cut_at, capture_start + anchor_match.start())
-                        matched_raw_val = slot_text[capture_start:cut_at].strip()
+                                for anchor in _leading_anchor_keywords(other_pattern):
+                                    anchor_pattern = re.escape(anchor).replace(r"\ ", r"\s+")
+                                    anchor_match = re.search(
+                                        rf"(?<!\w){anchor_pattern}(?!\w)",
+                                        slot_text[capture_start:cut_at],
+                                        flags=re.IGNORECASE | re.UNICODE,
+                                    )
+                                    if anchor_match:
+                                        cut_at = min(cut_at, capture_start + anchor_match.start())
+                            matched_raw_val = slot_text[capture_start:cut_at].strip()
 
-                # 2. Nếu là kiểu số (number) và chưa khớp do hệ số đơn vị ngầm định (ví dụ: x^2, -x^2, +x):
-                # Thử áp dụng mẫu linh hoạt cho phép chuỗi số rỗng hoặc dấu đơn (+, -)
-                if (
-                    matched_raw_val is None
-                    and slot_type == "number"
-                    and r"\s*x" in str(pattern).lower()
-                ):
-                    flex_pattern = re.sub(r"\\d\+", r"\\d*", str(pattern))
-                    flex_pattern = flex_pattern.replace(r"\.", r"[.,]")
-                    flex_match = re.search(flex_pattern, slot_text, flags=re.IGNORECASE | re.UNICODE)
-                    if flex_match:
-                        flex_group = flex_match.group(1)
-                        if flex_group is not None:
-                            matched_raw_val = flex_group.strip()
+                    if (
+                        matched_raw_val is None
+                        and slot_type == "number"
+                        and r"\s*x" in str(pattern).lower()
+                    ):
+                        flex_pattern = re.sub(r"\\d\+", r"\\d*", str(pattern))
+                        flex_pattern = flex_pattern.replace(r"\.", r"[.,]")
+                        flex_match = re.search(flex_pattern, slot_text, flags=re.IGNORECASE | re.UNICODE)
+                        if flex_match:
+                            flex_group = flex_match.group(1)
+                            if flex_group is not None:
+                                matched_raw_val = flex_group.strip()
 
-            except re.error:
-                # Bỏ qua lỗi cú pháp regex không mong muốn một cách an toàn
-                pass
+                except re.error:
+                    pass
 
         # Chỉ suy số 0 cho term vắng mặt khi slot khai báo rõ và câu là phương trình = 0.
         if matched_raw_val is None and absent_means is not None and slot_type == "number" and has_zero_equation:
@@ -586,7 +792,12 @@ def extract_slots(
         # Bước 3: Chuẩn hóa giá trị trích xuất được hoặc áp dụng giá trị mặc định
         if matched_raw_val is not None:
             try:
-                normalized_val = normalize_slot_value(matched_raw_val, slot_type)
+                normalized_val = normalize_slot_value(
+                    matched_raw_val,
+                    slot_type,
+                    rows_hint=rows_hint,
+                    cols_hint=cols_hint,
+                )
                 extracted_slots[slot_name] = normalized_val
                 not_equal = (
                     s_def.get("not_equal")

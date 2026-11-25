@@ -17,6 +17,8 @@ from typing import Any
 from jsonschema import Draft202012Validator
 from jsonschema.exceptions import SchemaError
 
+from core.slots import normalize_matrix
+
 
 @dataclass(frozen=True)
 class SchemaIssue:
@@ -116,6 +118,11 @@ class ValueNormalizer:
             return self._integer(value, path)
         if expected == "boolean":
             return self._boolean(value, path)
+        if expected == "string" and schema.get("format") == "matrix":
+            try:
+                return normalize_matrix(value)
+            except ValueError as exc:
+                raise NormalizationError(SchemaIssue(path, str(exc), "format")) from None
         if expected == "object" and isinstance(value, dict):
             result = copy.deepcopy(value)
             properties = schema.get("properties", {})

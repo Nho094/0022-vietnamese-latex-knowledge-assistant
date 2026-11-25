@@ -9,17 +9,19 @@ import { Button } from "./components/ui/Button";
 import { Card, CardHeader, CardTitle } from "./components/ui/Card";
 import { FormField, Input, Select, Textarea } from "./components/ui/Field";
 import { Table, TableCell, TableHead } from "./components/ui/Table";
-import { Builder, categories, definitionToDraft } from "./pages/Builder";
-import type { Activity, Definition, ServiceStatus } from "./types";
+import { Builder, categories, definitionToDraft, universalTargets } from "./pages/Builder";
+import type { Activity, CategoryOption, Definition, MilestoneStatus, ServiceStatus } from "./types";
 
 type Page = "dashboard" | "knowledge" | "builder" | "detail" | "history" | "settings";
 type Candidate = { intent: string; describe?: string; score?: number; category?: string };
 type AskResult = {
   status: string;
   intent?: string | null;
+  target?: string | null;
   message?: string;
   latex_code?: string | null;
   outputs?: Record<string, string>;
+  requires?: string[];
   missing_slots?: string[];
   slots?: Record<string, unknown>;
   slot_errors?: string[];
@@ -28,9 +30,30 @@ type AskResult = {
 type Bootstrap = {
   definitions: Definition[];
   categories: string[];
+  universal_categories?: CategoryOption[];
   corpus?: { corpora?: Array<Record<string, unknown>>; items?: Array<Record<string, unknown>> };
   history?: { active_version?: string; versions?: Array<{ version: string; created_at: string; active: boolean; valid_hash: boolean }> };
-  system?: { status?: string; message?: string; python?: string; classifier_available?: boolean; classifier_message?: string; classifier_checkpoint_path?: string; phobert_base_path?: string; classifier_missing_dependencies?: string[]; retrieval_model_available?: boolean; retrieval_model_message?: string; retrieval_model_path?: string; retrieval_index_available?: boolean; retrieval_index_message?: string; retrieval_index_path?: string; retrieval_missing_dependencies?: string[]; model_root?: string; retrieval_cache_available?: boolean };
+  system?: {
+    status?: string;
+    message?: string;
+    python?: string;
+    pipeline_mode?: string;
+    classifier_available?: boolean;
+    classifier_message?: string;
+    classifier_checkpoint_path?: string;
+    phobert_base_path?: string;
+    classifier_missing_dependencies?: string[];
+    retrieval_model_available?: boolean;
+    retrieval_model_message?: string;
+    retrieval_model_path?: string;
+    retrieval_index_available?: boolean;
+    retrieval_index_message?: string;
+    retrieval_index_path?: string;
+    retrieval_missing_dependencies?: string[];
+    model_root?: string;
+    retrieval_cache_available?: boolean;
+    milestone?: MilestoneStatus;
+  };
   builder?: { suggestions_available?: boolean; manual_builder_available?: boolean; message?: string };
   activity: Activity[];
   theme: string;
@@ -52,6 +75,7 @@ const actionLabels: Record<string, string> = {
   updated: "Đã cập nhật kiến thức",
   paused: "Đã tạm dừng", activated: "Đã kích hoạt", restored: "Đã phục hồi",
   deleted: "Đã xóa kiến thức", inserted: "Đã chèn vào Editor", reloaded: "Đã đồng bộ kiến thức",
+  generated: "Đã xuất ra Output Panel", trained: "Đã tối ưu Retrieval theo mốc",
 };
 
 function displayName(item: Definition): string {
@@ -144,7 +168,7 @@ export default function App() {
   };
 
   const serviceState = service?.state ?? "starting";
-  const serviceLabel = serviceState === "ready" ? "Đang hoạt động" : serviceState === "degraded" ? "Chế độ hạn chế" : serviceState === "starting" ? "Đang khởi động" : serviceState === "missing" ? "Thiếu Python" : serviceState === "error" ? "Không kết nối" : "Đang kiểm tra";
+  const serviceLabel = serviceState === "ready" ? "Đang hoạt động" : serviceState === "degraded" ? "Chế độ hạn chế" : serviceState === "starting" ? "Đang khởi động" : serviceState === "missing" ? "Thiếu Python" : serviceState === "error" ? "Lỗi dịch vụ / thư viện" : "Đang kiểm tra";
 
   return <div className="app-shell">
     <aside className="sidebar">
@@ -176,7 +200,7 @@ export default function App() {
       <div className="content-area">
         {loading && !data && <div className="full-state"><LoaderCircle className="spin" size={24} /><strong>Đang kết nối dịch vụ</strong><span>Đọc danh sách kiến thức và trạng thái cục bộ…</span></div>}
         {error && !data && <div className="full-state error-state"><CircleAlert size={24} /><strong>Chưa tải được dữ liệu</strong><span>{error}</span><Button variant="secondary" onClick={() => void refresh()}>Thử lại</Button><Button variant="ghost" onClick={() => void request("openPythonSettings")}>Mở cài đặt Python</Button></div>}
-        {data && page === "dashboard" && <Dashboard data={data} onNavigate={navigate} onCreate={() => navigate("builder")} onInsert={async (output) => {
+        {data && page === "dashboard" && <Dashboard data={data} service={service} onNavigate={navigate} onCreate={() => navigate("builder")} onToast={setToast} onInsert={async (output) => {
           try {
             const result = await request<{ inserted: boolean }>("insertEditorOutput", { output });
             if (result.inserted) { setEditorPreview(""); setToast("Đã chèn kết quả vào Editor."); }
@@ -184,7 +208,7 @@ export default function App() {
         }} editorPreview={editorPreview} onDismissEditor={() => { setEditorPreview(""); void request("dismissEditorPreview"); }} />}
         {data && page === "knowledge" && <KnowledgeExplorer data={data} onOpen={(item) => { setSelected(item); setPage("detail"); }} onCreate={() => navigate("builder")} onEdit={startEdit} onChanged={() => void refresh(false)} onToast={setToast} />}
         {data && page === "detail" && selected && <KnowledgeDetail item={selected} onBack={() => navigate("knowledge")} onEdit={() => void startEdit(selected)} onChanged={() => void refresh(false)} onToast={setToast} />}
-        {data && page === "builder" && <Builder initialDefinition={editDefinition} onBack={() => navigate("knowledge")} onPublished={(intent) => void handlePublished(intent)} />}
+        {data && page === "builder" && <Builder initialDefinition={editDefinition} categoryOptions={data.universal_categories} onBack={() => navigate("knowledge")} onPublished={(intent) => void handlePublished(intent)} />}
         {data && page === "history" && <HistoryPage data={data} onChanged={() => void refresh(false)} onToast={setToast} />}
         {data && page === "settings" && <SettingsPage data={data} service={service} onRefresh={() => void refresh()} onToast={setToast} />}
       </div>
@@ -193,10 +217,12 @@ export default function App() {
   </div>;
 }
 
-function Dashboard({ data, onNavigate, onCreate, onInsert, editorPreview, onDismissEditor }: {
+function Dashboard({ data, service, onNavigate, onCreate, onToast, onInsert, editorPreview, onDismissEditor }: {
   data: Bootstrap;
+  service?: ServiceStatus;
   onNavigate: (page: Page) => void;
   onCreate: () => void;
+  onToast: (message: string) => void;
   onInsert: (output: string) => void;
   editorPreview: string;
   onDismissEditor: () => void;
@@ -212,13 +238,17 @@ function Dashboard({ data, onNavigate, onCreate, onInsert, editorPreview, onDism
     recentIntents.add(event.intent);
     return [{ definition, event }];
   }).slice(0, 4);
-  const classifierReady = data.service?.classifierAvailable ?? data.system?.classifier_available ?? false;
-  const retrievalReady = data.service?.retrievalModelAvailable ?? data.system?.retrieval_model_available ?? false;
+  const liveService = service ?? data.service;
+  const classifierReady = liveService?.classifierAvailable ?? data.system?.classifier_available ?? false;
+  const retrievalReady = liveService?.retrievalModelAvailable ?? data.system?.retrieval_model_available ?? false;
+  const liveState = liveService?.state ?? "starting";
+  const showRuntimeNotice = liveState === "degraded" || liveState === "error" || (liveState === "starting" && (data.system?.status === "degraded" || data.system?.status === "error"));
+  const runtimeNoticeMessage = liveService?.message || data.system?.message || "Dịch vụ đang chạy ở chế độ hạn chế.";
   return <div className="page dashboard-page">
     <div className="dashboard-hero"><div><div className="eyebrow">KHÔNG GIAN KIẾN THỨC CỤC BỘ</div><h1>Chào bạn</h1><p>Tạo, kiểm tra và dùng kiến thức ngay trong VS Code.</p></div><Button onClick={() => onNavigate("builder")}><FilePlus2 size={15} /> Tạo kiến thức</Button></div>
-    {data.system?.status === "degraded" && <div className="notice warning"><CircleAlert size={17} /><span>{data.system.message || "Dịch vụ đang chạy ở chế độ hạn chế."}</span><button onClick={() => onNavigate("settings")}>Xem trạng thái</button></div>}
+    {showRuntimeNotice && <div className="notice warning"><CircleAlert size={17} /><span>{runtimeNoticeMessage}</span><button onClick={() => onNavigate("settings")}>Xem trạng thái</button></div>}
     <div className="runtime-overview" aria-label="Trạng thái mô hình">
-      <RuntimeSummary label="Backend" value={data.service?.state === "ready" ? "Sẵn sàng" : data.service?.state === "degraded" ? "Chế độ hạn chế" : data.service?.state === "starting" ? "Đang khởi động" : "Cần kiểm tra"} state={data.service?.state ?? "starting"} />
+      <RuntimeSummary label="Backend" value={liveState === "ready" ? "Sẵn sàng" : liveState === "degraded" ? "Chế độ hạn chế" : liveState === "error" ? "Lỗi thư viện / dịch vụ" : liveState === "starting" ? "Đang khởi động" : "Cần kiểm tra"} state={liveState} />
       <RuntimeSummary label="PhoBERT" value={classifierReady ? "Checkpoint đã có" : "Chưa có checkpoint"} state={classifierReady ? "ready" : "missing"} />
       <RuntimeSummary label="Retrieval model" value={retrievalReady ? "Model đã có" : "Chưa có model"} state={retrievalReady ? "ready" : "missing"} />
     </div>
@@ -227,7 +257,7 @@ function Dashboard({ data, onNavigate, onCreate, onInsert, editorPreview, onDism
       <StatCard label="Đang hoạt động" value={active} detail="Có thể dùng trong yêu cầu mới" icon={<Check size={17} />} tone="green" />
       <StatCard label="Cần xem lại" value={review} detail="Đang chờ kiểm tra nội dung" icon={<CircleAlert size={17} />} tone="amber" />
     </div>
-    <Card className="workspace-card"><CardHeader><div><div className="workspace-kicker"><Sparkles size={13} /> AI WORKSPACE</div><CardTitle>Hỏi bằng ngôn ngữ tự nhiên</CardTitle><p className="workspace-description">Nhập yêu cầu, chọn định dạng và kiểm tra kết quả trước khi dùng.</p></div><span className="workspace-local-tag"><span className={`service-dot ${data.service?.state ?? "starting"}`} />Xử lý cục bộ</span></CardHeader><QuickAsk definitions={data.definitions} onCreate={onCreate} /></Card>
+    <Card className="workspace-card"><CardHeader><div><div className="workspace-kicker"><Sparkles size={13} /> AI WORKSPACE</div><CardTitle>Hỏi bằng ngôn ngữ tự nhiên</CardTitle><p className="workspace-description">Nhập yêu cầu, chọn định dạng (hoặc để Tự động) và kiểm tra kết quả trước khi dùng.</p></div><span className="workspace-local-tag"><span className={`service-dot ${liveState}`} />Xử lý cục bộ</span></CardHeader><QuickAsk definitions={data.definitions} onCreate={onCreate} onToast={onToast} /></Card>
     <div className="dashboard-grid">
       <Card><CardHeader><div><div className="eyebrow">HOẠT ĐỘNG</div><CardTitle>Gần đây</CardTitle></div><Button variant="ghost" size="sm" onClick={() => onNavigate("history")}>Xem lịch sử <ArrowRight size={13} /></Button></CardHeader>
         {recent.length ? <div className="activity-list">{recent.map((event) => <ActivityRow key={event.id} item={event} />)}</div> : <div className="empty-state"><ActivityIcon size={19} /><strong>Chưa có hoạt động</strong><span>Các thao tác của bạn sẽ được ghi lại tại đây.</span></div>}
@@ -252,9 +282,9 @@ function RuntimeSummary({ label, value, state }: { label: string; value: string;
   return <div className="runtime-summary"><span className={`runtime-dot ${state}`} /><span className="runtime-summary-copy"><small>{label}</small><strong>{value}</strong></span></div>;
 }
 
-function QuickAsk({ definitions, onCreate }: { definitions: Definition[]; onCreate: () => void }) {
+function QuickAsk({ definitions, onCreate, onToast }: { definitions: Definition[]; onCreate: () => void; onToast?: (message: string) => void }) {
   const [text, setText] = useState("");
-  const [target, setTarget] = useState("latex");
+  const [target, setTarget] = useState("auto");
   const [result, setResult] = useState<AskResult | null>(null);
   const [values, setValues] = useState<Record<string, unknown>>({});
   const [busy, setBusy] = useState(false);
@@ -277,7 +307,7 @@ function QuickAsk({ definitions, onCreate }: { definitions: Definition[]; onCrea
   const choose = async (candidate: Candidate) => {
     setBusy(true); setError("");
     try {
-      setResult(await request<AskResult>("choose", { text, target, candidate: candidate.intent, values: {} }));
+      setResult(await request<AskResult>("choose", { text, target, candidate: candidate.intent, values: {}, record_feedback: true }));
     } catch (reason) { setError(reason instanceof Error ? reason.message : "Không chọn được kiến thức."); }
     finally { setBusy(false); }
   };
@@ -285,16 +315,43 @@ function QuickAsk({ definitions, onCreate }: { definitions: Definition[]; onCrea
     event.preventDefault();
     if (!result?.intent) return;
     setBusy(true); setError("");
-    try { setResult(await request<AskResult>("choose", { text, target, candidate: result.intent, values })); }
+    try { setResult(await request<AskResult>("choose", { text, target, candidate: result.intent, values, record_feedback: false })); }
     catch (reason) { setError(reason instanceof Error ? reason.message : "Không tiếp tục được yêu cầu."); }
     finally { setBusy(false); }
   };
-  const output = result?.outputs?.[target] ?? (target === "latex" ? result?.latex_code : undefined);
+  const outputKeys = result?.outputs ? Object.keys(result.outputs) : [];
+  const resolvedTarget = (target !== "auto" && result?.outputs?.[target] ? target : undefined)
+    ?? result?.target
+    ?? outputKeys[0]
+    ?? "";
+  const firstOutput = result?.outputs
+    ? Object.values(result.outputs).find((value) => typeof value === "string" && value.length > 0)
+    : undefined;
+  const output = (target !== "auto" ? result?.outputs?.[target] : undefined)
+    ?? (resolvedTarget ? result?.outputs?.[resolvedTarget] : undefined)
+    ?? firstOutput
+    ?? result?.latex_code
+    ?? undefined;
+  const effectiveTarget = resolvedTarget || (target !== "auto" ? target : "");
+  const requiredPackages = Array.isArray(result?.requires) && result.requires.length > 0
+    ? result.requires
+    : Array.isArray(activeIntent?.requires)
+      ? (activeIntent.requires as string[])
+      : [];
+  const rememberAlias = async () => {
+    if (!result?.intent || !text.trim()) return;
+    try {
+      await request("learnAlias", { intent: result.intent, query: text.trim() });
+      onToast?.("Đã ghi nhớ cách hỏi này vào Retrieval.");
+    } catch (reason) {
+      setError(reason instanceof Error ? reason.message : "Không lưu được alias.");
+    }
+  };
   return <div className="quick-ask">
     <form onSubmit={(event) => void submit(event)} className="quick-ask-form">
       <label className="ask-input-label" htmlFor="quick-ask-input">YÊU CẦU CỦA BẠN</label>
-      <Textarea id="quick-ask-input" rows={4} value={text} onChange={(event) => { setText(event.target.value); setResult(null); }} placeholder="Ví dụ: Tạo phân số có tử số là 2 và mẫu số là 5" aria-label="Mô tả điều bạn cần" />
-      <div className="quick-ask-footer"><div className="target-picker"><span>Định dạng</span><Select aria-label="Kiểu kết quả" value={target} onChange={(event) => setTarget(event.target.value)}><option value="latex">LaTeX</option><option value="mathjax">MathJax</option><option value="obsidian">Markdown</option></Select></div><Button type="submit" size="md" disabled={busy || !text.trim()}>{busy ? <><LoaderCircle className="spin" size={14} /> Đang xử lý</> : <><Sparkles size={14} /> Tạo kết quả</>}</Button></div>
+      <Textarea id="quick-ask-input" rows={4} value={text} onChange={(event) => { setText(event.target.value); setResult(null); }} placeholder="Ví dụ: Setup Sunshine trên Linux, Viết hàm Fibonacci Python, hoặc Tạo phân số 2/5" aria-label="Mô tả điều bạn cần" />
+      <div className="quick-ask-footer"><div className="target-picker"><span>Định dạng</span><Select aria-label="Kiểu kết quả" value={target} onChange={(event) => { setTarget(event.target.value); setResult(null); setInserted(false); }}><option value="auto">Tự động (theo kiến thức)</option>{universalTargets.map(([value, label]) => <option key={value} value={value}>{label}</option>)}</Select></div><Button type="submit" size="md" disabled={busy || !text.trim()}>{busy ? <><LoaderCircle className="spin" size={14} /> Đang xử lý</> : <><Sparkles size={14} /> Tạo kết quả</>}</Button></div>
     </form>
     <div className="quick-ask-response" aria-live="polite">
       {error && <div className="inline-error" role="alert">{error}</div>}
@@ -303,7 +360,7 @@ function QuickAsk({ definitions, onCreate }: { definitions: Definition[]; onCrea
       {!busy && result?.status === "need_choice" && <div className="choice-list"><strong>Chọn kiến thức phù hợp</strong>{(result.candidates ?? []).map((candidate) => <button key={candidate.intent} onClick={() => void choose(candidate)} disabled={busy}><span><b>{candidate.describe || displayName({ intent: candidate.intent })}</b><small>{candidate.intent}</small></span><ChevronRight size={14} /></button>)}<Button size="sm" variant="ghost" onClick={onCreate}>Không đúng? Thêm kiến thức mới</Button></div>}
       {!busy && result?.status === "need_slots" && missing.length > 0 && <form className="missing-fields" onSubmit={(event) => void continueWithValues(event)}><strong>Bổ sung thông tin còn thiếu</strong>{extractedSlots.length > 0 && <span className="slot-summary">Đã nhận: {extractedSlots.map(([key, value]) => `${key} = ${String(value)}`).join(" · ")}. Hãy nhập các giá trị còn thiếu bên dưới.</span>}{missing.map((key) => { const field = fields[key]; const numeric = field?.type === "number" || field?.type === "integer"; return <FormField key={key} label={field?.title ? `${field.title} (${key})` : field?.description ? `${key} — ${field.description}` : key}><Input type={numeric ? "number" : "text"} step={numeric ? "any" : undefined} value={String(values[key] ?? "")} onChange={(event) => setValues((current) => ({ ...current, [key]: event.target.value }))} placeholder={`Nhập ${field?.title ?? key}`} /></FormField>; })}<Button type="submit" size="sm" disabled={busy}>Tiếp tục</Button></form>}
       {!busy && result?.status === "need_slots" && missing.length === 0 && <div className="empty-result"><CircleAlert size={14} /><span>{result.message || "Chưa xác định được trường cần bổ sung."} {result.slot_errors?.join(" ")}</span></div>}
-      {!busy && result?.status === "ok" && typeof output === "string" && <div className="ask-result"><div className="result-heading"><span><Check size={14} /> Kết quả xem trước</span><button onClick={() => { void navigator.clipboard?.writeText(output); setInserted(false); }}>Sao chép</button></div>{result.intent && <div className="ask-context"><small>KIẾN THỨC ĐƯỢC CHỌN</small><strong>{activeIntent ? displayName(activeIntent) : result.intent}</strong>{result.slots && Object.keys(result.slots).length > 0 && <span>{Object.entries(result.slots).map(([key, value]) => `${key}: ${String(value)}`).join(" · ")}</span>}</div>}<pre>{output}</pre><small>Chưa chèn vào tài liệu. Chỉ thị trong Editor chỉ được chèn sau khi bạn xác nhận.</small></div>}
+      {!busy && result?.status === "ok" && typeof output === "string" && <div className="ask-result"><div className="result-heading"><span><Check size={14} /> Kết quả ({targetLabel(effectiveTarget || "text")})</span><div className="row-actions"><button type="button" onClick={() => void rememberAlias()}>Lưu câu hỏi</button><button type="button" onClick={() => { void navigator.clipboard?.writeText(output); setInserted(false); }}>Sao chép</button></div></div>{result.intent && <div className="ask-context"><small>KIẾN THỨC ĐƯỢC CHỌN</small><strong>{activeIntent ? displayName(activeIntent) : result.intent}</strong>{result.slots && Object.keys(result.slots).length > 0 && <span>{Object.entries(result.slots).map(([key, value]) => `${key}: ${String(value)}`).join(" · ")}</span>}</div>}<pre>{output}</pre>{effectiveTarget === "latex" && requiredPackages.length > 0 && <small className="field-hint">Gói LaTeX cần khai báo: {requiredPackages.map((pkg) => `\\usepackage{${pkg}}`).join(", ")}</small>}<small>Khi chạy chỉ thị `# A:` trong Editor, kết quả sẽ in thẳng ra bảng Output của VS Code.</small></div>}
       {!busy && result && !["ok", "need_choice", "need_slots"].includes(result.status) && <div className="empty-result"><CircleAlert size={14} />{result.message || "Chưa tìm được kiến thức phù hợp."}<Button size="sm" variant="ghost" onClick={onCreate}>Tạo kiến thức</Button></div>}
       {inserted && <span className="field-hint">Đã chèn.</span>}
     </div>
@@ -390,7 +447,7 @@ function KnowledgeDetail({ item, onBack, onEdit, onChanged, onToast }: {
     <div className="detail-grid"><div className="detail-main">
       <Card><CardHeader><div><div className="eyebrow">CÁCH NGƯỜI DÙNG CÓ THỂ HỎI</div><CardTitle>Câu ví dụ</CardTitle></div></CardHeader><ul className="example-list">{aliases.map((alias, index) => <li key={`${alias}-${index}`}><span className="example-dot" />{alias}</li>)}</ul></Card>
       <Card><CardHeader><div><div className="eyebrow">THÔNG TIN ĐẦU VÀO</div><CardTitle>{Object.keys(properties).length ? `${Object.keys(properties).length} trường` : "Không cần thông tin thêm"}</CardTitle></div></CardHeader>{Object.keys(properties).length ? <div className="detail-fields">{Object.entries(properties).map(([key, property]) => <div className="detail-field" key={key}><div><strong>{property.title ?? item.field_policies?.[key]?.description ?? key}</strong><span>{property.description ?? item.field_policies?.[key]?.description ?? ""}</span></div><div className="detail-field-meta"><span>{typeLabel(property.type)}</span><span>{required.has(key) ? "Cần hỏi" : Object.hasOwn(property, "default") ? `Mặc định: ${String(property.default)}` : "Có thể bỏ qua"}</span></div></div>)}</div> : <div className="empty-state compact"><Check size={17} /><span>Kiến thức này tạo kết quả từ câu yêu cầu.</span></div>}</Card>
-    </div><aside className="detail-aside"><Card><CardHeader><div className="eyebrow">THÔNG TIN</div></CardHeader><InfoRow label="Nhóm" value={categoryLabel(item.category)} /><InfoRow label="Trạng thái" value={item.assistant_status === "paused" ? "Tạm dừng" : "Đang hoạt động"} /><InfoRow label="Kiểu kết quả" value={Object.keys(item.render?.templates ?? {}).map(targetLabel).join(", ") || "—"} /><InfoRow label="Phiên bản" value={item.definition_version ?? "Tương thích dữ liệu cũ"} /></Card>
+    </div><aside className="detail-aside"><Card><CardHeader><div className="eyebrow">THÔNG TIN</div></CardHeader><InfoRow label="Nhóm" value={categoryLabel(item.category)} /><InfoRow label="Trạng thái" value={item.assistant_status === "paused" ? "Tạm dừng" : "Đang hoạt động"} /><InfoRow label="Kiểu kết quả" value={Object.keys(item.render?.templates ?? {}).map(targetLabel).join(", ") || "—"} />{Array.isArray(item.requires) && item.requires.length > 0 && <InfoRow label="Gói LaTeX" value={(item.requires as string[]).join(", ")} />}<InfoRow label="Phiên bản" value={item.definition_version ?? "Tương thích dữ liệu cũ"} /></Card>
       <Card><CardHeader><div className="eyebrow">MẪU KẾT QUẢ</div></CardHeader>{Object.entries(item.render?.templates ?? {}).map(([target, template]) => <div className="detail-template" key={target}><span>{targetLabel(target)}</span><pre>{template}</pre></div>)}</Card></aside></div>
   </div>;
 }
@@ -415,6 +472,8 @@ function SettingsPage({ data, service, onRefresh, onToast }: { data: Bootstrap; 
   const theme = document.documentElement.dataset.theme ?? "dark";
   const classifierReady = service?.classifierAvailable ?? data.system?.classifier_available ?? false;
   const retrievalReady = service?.retrievalModelAvailable ?? data.system?.retrieval_model_available ?? false;
+  const pipelineMode = service?.pipelineMode ?? data.system?.pipeline_mode ?? "unavailable";
+  const modeLabel = pipelineMode === "phobert_retrieval" ? "PhoBERT + Retrieval" : pipelineMode === "retrieval_only" ? "Chỉ Retrieval" : pipelineMode === "phobert_only" ? "Chỉ PhoBERT" : "Chưa có mô hình NLP";
   const classifierMessage = service?.classifierMessage ?? data.system?.classifier_message ?? "Chưa nhận được trạng thái PhoBERT.";
   const retrievalMessage = service?.retrievalModelMessage ?? data.system?.retrieval_model_message ?? "Chưa nhận được trạng thái retrieval.";
   const indexMessage = service?.retrievalIndexMessage ?? data.system?.retrieval_index_message ?? "Index sẽ được tạo khi có model retrieval.";
@@ -438,7 +497,7 @@ function SettingsPage({ data, service, onRefresh, onToast }: { data: Bootstrap; 
   };
   return <div className="page settings-page"><div className="page-heading"><div><div className="eyebrow">TÙY CHỈNH</div><h1>Cài đặt</h1><p>Quản lý cách hiển thị và trạng thái dịch vụ cục bộ.</p></div></div>
     <div className="settings-grid"><Card><CardHeader><div><div className="eyebrow">GIAO DIỆN</div><CardTitle>Giao diện ứng dụng</CardTitle></div></CardHeader><div className="theme-picker"><button className={theme === "dark" ? "selected" : ""} onClick={() => void updateTheme("dark")}><span className="theme-swatch dark-swatch"><Moon size={16} /></span><strong>Tối</strong><small>Mặc định</small></button><button className={theme === "light" ? "selected" : ""} onClick={() => void updateTheme("light")}><span className="theme-swatch light-swatch"><Sun size={16} /></span><strong>Sáng</strong><small>Dễ đọc ban ngày</small></button></div></Card>
-      <Card><CardHeader><div><div className="eyebrow">PYTHON ENVIRONMENT · BACKEND</div><CardTitle>Dịch vụ cục bộ</CardTitle></div><span className={`status-pill ${service?.state === "ready" ? "active" : service?.state === "degraded" ? "paused" : "paused"}`}><span />{service?.state === "ready" ? "Sẵn sàng" : service?.state === "degraded" ? "Hạn chế" : service?.state === "starting" ? "Đang khởi động" : "Cần kiểm tra"}</span></CardHeader><p className="settings-message">{service?.message || data.system?.message || "Đang kiểm tra dịch vụ."}</p><div className="system-facts"><InfoRow label="Python" value={service?.python ?? "Chưa kết nối"} /><InfoRow label="Địa chỉ dịch vụ" value="Loopback · chỉ trên máy này" /></div><div className="settings-actions"><Button variant="secondary" onClick={() => void request("openPythonSettings")}>Chọn Python</Button><Button variant="secondary" onClick={async () => { try { await request("checkBackend"); onRefresh(); onToast("Đã kiểm tra dịch vụ."); } catch (reason) { onToast(reason instanceof Error ? reason.message : "Không kết nối được dịch vụ."); } }}>Kiểm tra lại</Button><Button onClick={async () => { try { await request("restartBackend"); onRefresh(); onToast("Đã khởi động lại dịch vụ."); } catch (reason) { onToast(reason instanceof Error ? reason.message : "Không khởi động lại được."); } }}>Khởi động lại</Button></div></Card>
+      <Card><CardHeader><div><div className="eyebrow">PYTHON ENVIRONMENT · BACKEND</div><CardTitle>Dịch vụ cục bộ</CardTitle></div><span className={`status-pill ${service?.state === "ready" ? "active" : "paused"}`}><span />{service?.state === "ready" ? "Sẵn sàng" : service?.state === "degraded" ? "Hạn chế" : service?.state === "error" ? "Lỗi thư viện / dịch vụ" : service?.state === "starting" ? "Đang khởi động" : "Cần kiểm tra"}</span></CardHeader><p className="settings-message">{service?.message || data.system?.message || "Đang kiểm tra dịch vụ."}</p><div className="system-facts"><InfoRow label="Python" value={service?.python ?? "Chưa kết nối"} /><InfoRow label="Chế độ pipeline" value={modeLabel} /><InfoRow label="Địa chỉ dịch vụ" value="Loopback · chỉ trên máy này" /></div><div className="settings-actions"><Button variant="secondary" onClick={() => void request("openPythonSettings")}>Chọn Python</Button><Button variant="secondary" onClick={async () => { try { await request("checkBackend"); onRefresh(); onToast("Đã kiểm tra dịch vụ."); } catch (reason) { onToast(reason instanceof Error ? reason.message : "Không kết nối được dịch vụ."); } }}>Kiểm tra lại</Button><Button onClick={async () => { try { await request("restartBackend"); onRefresh(); onToast("Đã khởi động lại dịch vụ."); } catch (reason) { onToast(reason instanceof Error ? reason.message : "Không khởi động lại được."); } }}>Khởi động lại</Button></div></Card>
       <Card><CardHeader><div><div className="eyebrow">NLP MODELS</div><CardTitle>Mô hình và bộ nhớ chỉ mục</CardTitle></div></CardHeader><div className="model-status-list">
         <ModelStatus name="PhoBERT" detail={service?.classifierCheckpointPath ?? data.system?.classifier_checkpoint_path ?? "checkpoints/phobert_classifier"} ready={classifierReady} message={classifierMessage} readyText="Checkpoint hợp lệ" missingText="Chưa khả dụng" />
         <ModelStatus name="Retrieval model" detail={service?.retrievalModelPath ?? data.system?.retrieval_model_path ?? "hf_cache/vietnamese-bi-encoder"} ready={retrievalReady} message={retrievalMessage} readyText="Model hợp lệ" missingText="Chưa khả dụng" />
@@ -446,7 +505,47 @@ function SettingsPage({ data, service, onRefresh, onToast }: { data: Bootstrap; 
       </div><p className="settings-message">Model root hiện tại: <code>{modelRoot}</code>. Cấu trúc mặc định: <code>checkpoints/phobert_classifier</code>, <code>hf_cache/phobert-base-v2</code> và <code>hf_cache/vietnamese-bi-encoder</code>. Index chưa có sẽ được tạo khi truy hồi lần đầu.</p><div className="settings-actions"><Button variant="secondary" onClick={() => void request("openModelSettings")}>Cấu hình modelRoot</Button></div></Card>
       <Card><CardHeader><div><div className="eyebrow">SAO LƯU VÀ CHIA SẺ</div><CardTitle>Nhập hoặc xuất kiến thức</CardTitle></div></CardHeader><p className="settings-message">Tệp được kiểm tra trước khi nhập. Khi trùng tên, bạn sẽ được hỏi xác nhận và hệ thống tạo bản sao trước khi thay đổi.</p><div className="settings-actions"><Button variant="secondary" onClick={() => void chooseImport()}><Upload size={14} /> Nhập tệp</Button><Button variant="secondary" onClick={() => void chooseExport()}><ArrowDownToLine size={14} /> Xuất tệp</Button></div></Card>
       <Card><CardHeader><div><div className="eyebrow">GỢI Ý KIẾN THỨC</div><CardTitle>Tạo từ mô tả</CardTitle></div><Sparkles size={16} /></CardHeader><p className="settings-message">{data.builder?.message || "Chưa có mô hình tạo đề xuất cục bộ. Biểu mẫu tạo kiến thức thủ công vẫn hoạt động."}</p><span className="capability-pill">{data.builder?.suggestions_available ? "Có thể gợi ý" : "Biểu mẫu thủ công"}</span></Card>
-      <Card><CardHeader><div><div className="eyebrow">ADVANCED SETTINGS</div><CardTitle>Cấu hình nâng cao</CardTitle></div><Settings2 size={16} /></CardHeader><p className="settings-message">Mở thiết lập Extension trong VS Code để điều chỉnh thời gian khởi động hoặc môi trường Python.</p><Button variant="secondary" onClick={() => void request("openAdvancedSettings")}>Mở thiết lập Extension</Button></Card>
+      <Card><CardHeader><div><div className="eyebrow">TỐI ƯU RETRIEVAL THEO MỐC</div><CardTitle>Sinh Train/Val & Tự học (Mốc 10)</CardTitle></div><Sparkles size={16} /></CardHeader>
+        {(() => {
+          const milestone = data.system?.milestone;
+          const pending = milestone?.pending_count ?? 0;
+          const threshold = milestone?.threshold ?? 10;
+          const pct = Math.min(100, Math.round((pending / Math.max(1, threshold)) * 100));
+          const last = milestone?.last_report;
+          const beforeTop1 = last?.before_val?.val_top1;
+          const afterTop1 = last?.after_val?.val_top1;
+          const learnedAliasCount = data.definitions.reduce((acc, item) => (
+            acc + (Array.isArray(item.learned_aliases) ? item.learned_aliases.length : 0)
+          ), 0);
+          return <>
+            <p className="settings-message">Kiến thức mới chạy tức thì nhờ Retrieval. Khi tích lũy đủ {threshold} kiến thức mới, hệ thống có thể sinh tập train/val tách biệt (không chạm test.csv) để tinh chỉnh Retrieval.</p>
+            <div className="milestone-bar" aria-label={`Tiến độ mốc: ${pending}/${threshold}`}><span style={{ width: `${pct}%` }} /></div>
+            <div className="system-facts">
+              <InfoRow label="Chờ huấn luyện" value={milestone?.training_running ? `${pending} / ${threshold} (đang tối ưu…)` : `${pending} / ${threshold} kiến thức mới`} />
+              <InfoRow label="Phản hồi đã chọn · Alias" value={`${milestone?.feedback_count ?? 0} lượt · ${learnedAliasCount} alias`} />
+              {last && typeof beforeTop1 === "number" && (
+                <InfoRow
+                  label="Lần tối ưu gần nhất"
+                  value={`Val Top-1: ${(beforeTop1 * 100).toFixed(1)}% → ${((afterTop1 ?? beforeTop1) * 100).toFixed(1)}% (${last.device ?? "cpu"}${last.deployed ? " · đã nạp" : " · giữ cũ"})`}
+                />
+              )}
+              {milestone?.last_error && <InfoRow label="Lỗi gần nhất" value={milestone.last_error} />}
+            </div>
+            <div className="settings-actions">
+              <Button disabled={milestone?.training_running === true} onClick={async () => {
+                try {
+                  await request("triggerMilestoneTraining", { force: true });
+                  onToast("Đã khởi chạy sinh train/val & tối ưu Retrieval.");
+                  onRefresh();
+                } catch (reason) {
+                  onToast(reason instanceof Error ? reason.message : "Không thể chạy tối ưu Retrieval.");
+                }
+              }}>{milestone?.training_running ? "Đang tối ưu…" : "Sinh Train/Val & Tối ưu ngay"}</Button>
+            </div>
+          </>;
+        })()}
+      </Card>
+      <Card><CardHeader><div><div className="eyebrow">ADVANCED SETTINGS</div><CardTitle>Cấu hình nâng cao & Comment</CardTitle></div><Settings2 size={16} /></CardHeader><p className="settings-message">Tùy chỉnh tiền tố comment cho từng ngôn ngữ (ví dụ Python `#`, Rust `//`, SQL `--`), chế độ Output Panel và Python venv.</p><div className="settings-actions"><Button variant="secondary" onClick={() => void request("openCommentSettings")}>Cấu hình comment ngôn ngữ</Button><Button variant="secondary" onClick={() => void request("openAdvancedSettings")}>Mở tất cả cài đặt</Button></div></Card>
     </div>
   </div>;
 }
@@ -457,6 +556,10 @@ function ModelStatus({ name, detail, ready, message, readyText, missingText }: {
 
 function ActivityRow({ item }: { item: Activity }) { return <div className="activity-row"><span className="activity-mark"><Check size={13} /></span><div><strong>{actionLabels[item.action] ?? item.action}</strong><span>{item.title}</span></div><small>{formatDate(item.at)}</small></div>; }
 function categoryLabel(category?: string): string { return categories.find(([key]) => key === category)?.[1] ?? category ?? "Chưa phân nhóm"; }
-function targetLabel(target: string): string { return target === "latex" ? "LaTeX" : target === "mathjax" ? "Công thức toán" : target === "obsidian" ? "Markdown" : target; }
+function targetLabel(target: string): string {
+  if (target === "auto") return "Tự động theo ngữ cảnh";
+  return universalTargets.find(([key]) => key === target)?.[1]
+    ?? (target === "latex" ? "LaTeX" : target === "mathjax" ? "Công thức toán" : target === "obsidian" ? "Markdown" : target);
+}
 function typeLabel(type?: string): string { return type === "number" ? "Số" : type === "integer" ? "Số nguyên" : type === "boolean" ? "Có / Không" : type === "object" ? "Nhóm thông tin" : type === "array" ? "Danh sách" : "Văn bản"; }
 

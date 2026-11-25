@@ -66,6 +66,12 @@ class ModelProvider(Protocol):
         """Trả một JSON value cho prompt schema-driven."""
 
 
+from core.slots import extract_matrix_raw, normalize_matrix
+
+
+_ABSENT = object()
+
+
 class RegexExtractor:
     """Trích group cấu hình, hỗ trợ match đơn hoặc danh sách động."""
 
@@ -112,11 +118,24 @@ class RegexExtractor:
 ParserFunction = Callable[[str, Mapping[str, Any], Mapping[str, Any]], Any]
 
 
+def _default_matrix_parser(text: str, policy: Mapping[str, Any], _context: Mapping[str, Any]) -> Any:
+    """Parser dựng sẵn cho nội dung ma trận nhiều dòng/nhiều phần tử."""
+    raw_pattern = policy.get("pattern")
+    matched_raw, rows_hint, cols_hint = extract_matrix_raw(
+        text, str(raw_pattern) if isinstance(raw_pattern, str) else None
+    )
+    if matched_raw is None:
+        return _ABSENT
+    return normalize_matrix(matched_raw, rows_hint=rows_hint, cols_hint=cols_hint)
+
+
 class ParserRegistry:
     """Registry parser explicit; không import module tùy ý từ JSON."""
 
-    def __init__(self) -> None:
+    def __init__(self, *, register_builtins: bool = True) -> None:
         self._parsers: dict[str, ParserFunction] = {}
+        if register_builtins:
+            self.register("matrix_content", _default_matrix_parser)
 
     def register(self, name: str, parser: ParserFunction) -> None:
         """Đăng ký parser từ code extension tin cậy của ứng dụng."""
@@ -136,9 +155,10 @@ class ParserRegistry:
                 ),
             )
         try:
-            return ExtractionOutcome(
-                True, parser(request.text, request.policy, request.context)
-            )
+            parsed = parser(request.text, request.policy, request.context)
+            if parsed is _ABSENT:
+                return ExtractionOutcome(False)
+            return ExtractionOutcome(True, parsed)
         except Exception as exc:  # extension boundary: convert provider exceptions to structured errors
             return ExtractionOutcome(
                 False,

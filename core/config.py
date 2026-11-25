@@ -13,6 +13,7 @@ Tuân thủ quy tắc kiến trúc AGENTS.md:
 from __future__ import annotations
 
 import hashlib
+import importlib.util
 import json
 import logging
 import math
@@ -20,9 +21,9 @@ import os
 import random
 import urllib.error
 import urllib.request
-from collections.abc import Sequence
+from collections.abc import Callable, Sequence
 from pathlib import Path
-from typing import Final, NamedTuple
+from typing import Any, Final, NamedTuple
 
 # Đường dẫn thư mục gốc dự án (sử dụng pathlib.Path theo quy chuẩn)
 BASE_DIR: Final[Path] = Path(__file__).resolve().parent.parent
@@ -361,9 +362,116 @@ SMOKE_RUN_BIENCODER_MAX_SAMPLES: Final[int] = 16
 SMOKE_RUN_BIENCODER_EPOCHS: Final[int] = 1
 SMOKE_RUN_BIENCODER_BATCH_SIZE: Final[int] = 4
 
-# Các ngôn ngữ/nền tảng sinh mã đích được hỗ trợ
-SUPPORTED_TARGETS: Final[Sequence[str]] = ("latex", "python", "cpp", "mathjax", "obsidian")
-TEMPLATE_TARGET_FALLBACKS: Final[dict[str, tuple[str, ...]]] = {"latex": ("mathjax",)}
+# Các ngôn ngữ/nền tảng sinh mã đích được hỗ trợ (không âm thầm rơi từ latex sang mathjax)
+SUPPORTED_TARGETS: Final[Sequence[str]] = (
+    "latex",
+    "python",
+    "cpp",
+    "mathjax",
+    "obsidian",
+    "text",
+    "markdown",
+    "shell",
+    "rust",
+    "java",
+    "javascript",
+    "typescript",
+    "css",
+    "html",
+    "sql",
+    "lua",
+)
+TARGET_AUTO: Final[str] = "auto"
+UNIVERSAL_TARGET_PRIORITY: Final[Sequence[str]] = (
+    "text",
+    "markdown",
+    "obsidian",
+    "shell",
+    "python",
+    "rust",
+    "cpp",
+    "java",
+    "javascript",
+    "typescript",
+    "css",
+    "html",
+    "sql",
+    "lua",
+    "latex",
+    "mathjax",
+)
+DEFAULT_UNIVERSAL_CATEGORIES: Final[tuple[tuple[str, str], ...]] = (
+    ("general", "Phổ thông / Text"),
+    ("python", "Python"),
+    ("shell", "Shell / Linux"),
+    ("rust", "Rust"),
+    ("cpp", "C / C++"),
+    ("java", "Java"),
+    ("javascript", "JavaScript / TypeScript"),
+    ("css", "CSS / HTML"),
+    ("sysadmin", "Cài đặt / Hệ thống"),
+    ("office", "Văn phòng / Phím tắt"),
+    ("tex_doc", "LaTeX: Tài liệu"),
+    ("tex_struct", "LaTeX: Cấu trúc"),
+    ("tex_text", "LaTeX: Văn bản"),
+    ("tex_lists", "LaTeX: Danh sách"),
+    ("tex_tables", "LaTeX: Bảng"),
+    ("tex_figures", "LaTeX: Hình ảnh"),
+    ("tex_math", "LaTeX: Toán học"),
+    ("math_shared", "Ký hiệu toán"),
+    ("obsidian", "Markdown / Obsidian"),
+    ("tex_misc", "Khác"),
+)
+# Mốc số kiến thức mới/tùy biến để kích hoạt sinh tập train/val & tối ưu Retrieval theo đợt
+MILESTONE_TRAIN_THRESHOLD: Final[int] = 10
+RETRIEVAL_LEXICAL_BOOST_WEIGHT: Final[float] = 0.08
+RETRIEVAL_LANGUAGE_PRIORITY_BONUS: Final[float] = 0.03
+# Ánh xạ Tầng 2 theo languageId của VS Code -> ưu tiên nhóm kiến thức & định dạng đích phù hợp file đang mở
+LANGUAGE_ROUTING_MAP: Final[dict[str, dict[str, Any]]] = {
+    "latex": {
+        "target": "latex",
+        "categories": (
+            "latex", "tex_doc", "tex_struct", "tex_text", "tex_lists",
+            "tex_tables", "tex_figures", "tex_math", "tex_refs", "tex_layout", "math_shared",
+        ),
+    },
+    "tex": {
+        "target": "latex",
+        "categories": (
+            "latex", "tex_doc", "tex_struct", "tex_text", "tex_lists",
+            "tex_tables", "tex_figures", "tex_math", "tex_refs", "tex_layout", "math_shared",
+        ),
+    },
+    "plaintex": {
+        "target": "latex",
+        "categories": (
+            "latex", "tex_doc", "tex_struct", "tex_text", "tex_lists",
+            "tex_tables", "tex_figures", "tex_math", "tex_refs", "tex_layout", "math_shared",
+        ),
+    },
+    "markdown": {"target": "obsidian", "categories": ("obsidian", "markdown", "math_shared", "general")},
+    "mdx": {"target": "obsidian", "categories": ("obsidian", "markdown", "math_shared", "general")},
+    "python": {"target": "python", "categories": ("python",)},
+    "rust": {"target": "rust", "categories": ("rust",)},
+    "cpp": {"target": "cpp", "categories": ("cpp", "c")},
+    "c": {"target": "cpp", "categories": ("c", "cpp")},
+    "java": {"target": "java", "categories": ("java",)},
+    "javascript": {"target": "javascript", "categories": ("javascript",)},
+    "javascriptreact": {"target": "javascript", "categories": ("javascript",)},
+    "typescript": {"target": "typescript", "categories": ("typescript", "javascript")},
+    "typescriptreact": {"target": "typescript", "categories": ("typescript", "javascript")},
+    "css": {"target": "css", "categories": ("css",)},
+    "scss": {"target": "css", "categories": ("css",)},
+    "shellscript": {"target": "shell", "categories": ("shell", "sysadmin")},
+    "bash": {"target": "shell", "categories": ("shell", "sysadmin")},
+    "zsh": {"target": "shell", "categories": ("shell", "sysadmin")},
+    "powershell": {"target": "shell", "categories": ("shell", "sysadmin")},
+    "lua": {"target": "lua", "categories": ("lua",)},
+    "sql": {"target": "sql", "categories": ("sql",)},
+    "html": {"target": "html", "categories": ("html", "css")},
+    "plaintext": {"target": "auto", "categories": ()},
+}
+TEMPLATE_TARGET_FALLBACKS: Final[dict[str, tuple[str, ...]]] = {}
 TARGET_CANDIDATE_OVERSAMPLE_FACTOR: Final[int] = 8
 REQUIRED_TEMPLATE_KEYS: Final[Sequence[str]] = ("latex", "python", "cpp")
 TARGET_LATEX: Final[str] = "latex"
@@ -621,7 +729,8 @@ def checkpoint_is_smoke(checkpoint_dir: Path | str) -> bool:
 
 def resolve_hf_snapshot(model_name: str, cache_root: Path | str | None = None) -> Path | None:
     """Tìm snapshot Hub ở modelRoot và các cache mặc định của Hugging Face."""
-    cache_roots = [Path(cache_root or HF_CACHE_DIR).expanduser() / "hub"]
+    primary_root = Path(cache_root or HF_CACHE_DIR).expanduser()
+    cache_roots = [primary_root / "hub", primary_root]
     if cache_root is None:
         hub_cache = os.environ.get("HF_HUB_CACHE")
         hf_home = os.environ.get("HF_HOME")
@@ -630,6 +739,7 @@ def resolve_hf_snapshot(model_name: str, cache_root: Path | str | None = None) -
             for root in (
                 hub_cache,
                 str(Path(hf_home).expanduser() / "hub") if hf_home else None,
+                hf_home,
                 str(Path.home() / ".cache" / "huggingface" / "hub"),
             )
             if root
@@ -655,18 +765,43 @@ def resolve_hf_snapshot(model_name: str, cache_root: Path | str | None = None) -
     return None
 
 
+def _is_nonempty_file(path: Path) -> bool:
+    """Kiểm tra file tồn tại và không rỗng để tránh false positive do file 0 byte."""
+    try:
+        return path.is_file() and path.stat().st_size > 0
+    except OSError:
+        return False
+
+
+def _is_valid_json_dict(path: Path) -> bool:
+    if not _is_nonempty_file(path):
+        return False
+    try:
+        data = json.loads(path.read_text(encoding="utf-8"))
+        return isinstance(data, dict)
+    except (OSError, ValueError):
+        return False
+
+
+def _has_phobert_tokenizer_files(path: Path | None) -> bool:
+    return path is not None and _is_nonempty_file(path / "vocab.txt") and _is_nonempty_file(
+        path / "bpe.codes"
+    )
+
+
 def resolve_phobert_tokenizer_dir() -> Path | None:
     """Trả thư mục tokenizer PhoBERT local đã có vocab và mã BPE."""
     candidates = (PHOBERT_DIR, resolve_hf_snapshot(PHOBERT_MODEL_NAME))
-    return next((path for path in candidates if path is not None and
-                 (path / "vocab.txt").is_file() and (path / "bpe.codes").is_file()), None)
+    return next((path for path in candidates if _has_phobert_tokenizer_files(path)), None)
 
 
 def _has_transformer_weights(path: Path) -> bool:
     direct_names = ("pytorch_model.bin", "model.safetensors")
-    if any((path / name).is_file() for name in direct_names):
+    if any(_is_nonempty_file(path / name) for name in direct_names):
         return True
-    return any(path.rglob("pytorch_model*.bin")) or any(path.rglob("*.safetensors"))
+    return any(_is_nonempty_file(item) for item in path.rglob("pytorch_model*.bin")) or any(
+        _is_nonempty_file(item) for item in path.rglob("*.safetensors")
+    )
 
 
 def classifier_artifact_status(
@@ -684,11 +819,13 @@ def classifier_artifact_status(
         config = json.loads(config_path.read_text(encoding="utf-8"))
     except (OSError, json.JSONDecodeError):
         return False, f"Checkpoint có config.json không đọc được: {checkpoint}"
+    if not isinstance(config, dict):
+        return False, f"Checkpoint có config.json không hợp lệ: {checkpoint}"
     if config.get("smoke_mode") is True:
         return False, f"Checkpoint chỉ dùng smoke test, không phải model runtime: {checkpoint}"
     if not config.get("model_type"):
         return False, f"Checkpoint thiếu model_type trong config.json: {checkpoint}"
-    if not any((checkpoint / name).is_file() for name in ("pytorch_model.bin", "model.safetensors")):
+    if not any(_is_nonempty_file(checkpoint / name) for name in ("pytorch_model.bin", "model.safetensors")):
         return False, f"Checkpoint thiếu trọng số model.safetensors hoặc pytorch_model.bin: {checkpoint}"
     label_files = (checkpoint / "id2label.json", checkpoint / "label2id.json")
     label_mapping: dict[str, object] | None = None
@@ -722,13 +859,13 @@ def classifier_artifact_status(
             return False, "Fingerprint preprocessing của checkpoint không khớp môi trường hiện tại."
     except (ImportError, RuntimeError) as error:
         return False, f"Không kiểm tra được fingerprint preprocessing: {error}"
-    checkpoint_tokenizer = checkpoint if (checkpoint / "vocab.txt").is_file() and (checkpoint / "bpe.codes").is_file() else None
+    checkpoint_tokenizer = checkpoint if _has_phobert_tokenizer_files(checkpoint) else None
     tokenizer = (
         checkpoint_tokenizer
         or (Path(tokenizer_dir).expanduser() if tokenizer_dir is not None else None)
         or resolve_phobert_tokenizer_dir()
     )
-    if tokenizer is None or not (tokenizer / "vocab.txt").is_file() or not (tokenizer / "bpe.codes").is_file():
+    if not _has_phobert_tokenizer_files(tokenizer):
         return False, "Thiếu tokenizer PhoBERT (cần vocab.txt và bpe.codes) trong checkpoint hoặc HF cache."
     return True, f"Checkpoint PhoBERT và tokenizer hợp lệ tại {checkpoint}"
 
@@ -748,25 +885,52 @@ def _is_sentence_transformer_dir(candidate: Path) -> bool:
     try:
         modules_path = candidate / "modules.json"
         has_modules = False
+        module_dirs: list[Path] = [candidate]
         if modules_path.is_file():
             modules = json.loads(modules_path.read_text(encoding="utf-8"))
-            has_modules = (
-                isinstance(modules, list)
-                and bool(modules)
-                and all(
-                    isinstance(item, dict)
-                    and isinstance(item.get("path"), str)
-                    and (candidate / item["path"]).is_dir()
-                    for item in modules
-                )
-            )
-        has_config = (candidate / "config.json").is_file()
-        has_weights = _has_transformer_weights(candidate)
+            if not isinstance(modules, list) or not modules:
+                return False
+            resolved_dirs: list[Path] = []
+            for item in modules:
+                if not isinstance(item, dict) or not isinstance(item.get("path"), str):
+                    return False
+                sub_dir = (candidate / item["path"]).resolve()
+                if not sub_dir.is_dir():
+                    return False
+                resolved_dirs.append(sub_dir)
+            has_modules = True
+            module_dirs = resolved_dirs + [candidate]
+        has_config = any(_is_valid_json_dict(directory / "config.json") for directory in module_dirs)
+        if not (has_modules and has_config) and not _is_valid_json_dict(candidate / "config.json"):
+            return False
+        if not _has_transformer_weights(candidate):
+            return False
         has_tokenizer = any(
-            next(candidate.rglob(name), None) is not None
-            for name in ("tokenizer.json", "vocab.txt", "spiece.model")
+            _is_nonempty_file(found)
+            for name in ("tokenizer.json", "spiece.model", "sentencepiece.bpe.model")
+            for found in candidate.rglob(name)
         )
-        return (has_modules or has_config) and has_weights and has_tokenizer
+        if not has_tokenizer:
+            # PhoBERT/Roberta-based SentenceTransformer dùng vocab.txt + bpe.codes khi thiếu tokenizer.json
+            vocab_files = [p for p in candidate.rglob("vocab.txt") if _is_nonempty_file(p)]
+            has_tokenizer = any(
+                (
+                    _is_nonempty_file(vf.parent / "bpe.codes")
+                    or not (vf.parent / "merges.txt").exists()
+                    and _is_valid_json_dict(vf.parent / "config.json")
+                )
+                for vf in vocab_files
+            )
+            # Kiểm tra riêng nếu config.json khai báo roberta/phobert mà thiếu bpe.codes
+            if vocab_files and any(
+                _is_valid_json_dict(vf.parent / "config.json")
+                and json.loads((vf.parent / "config.json").read_text(encoding="utf-8")).get("model_type")
+                in {"roberta", "phobert"}
+                and not _is_nonempty_file(vf.parent / "bpe.codes")
+                for vf in vocab_files
+            ):
+                has_tokenizer = False
+        return has_config and has_tokenizer
     except (OSError, ValueError):
         return False
 
@@ -777,4 +941,80 @@ def retrieval_model_status(model_dir: Path | str | None = None) -> tuple[bool, s
     if resolved is None or not _is_sentence_transformer_dir(resolved):
         return False, f"Không tìm thấy model retrieval hợp lệ. Cần đặt {SBERT_DIR} hoặc Hugging Face cache.", None
     return True, f"Model retrieval có sẵn tại {resolved}", resolved
+
+
+def missing_classifier_dependencies(
+    checkpoint_dir: Path | str = DEFAULT_CHECKPOINT_DIR,
+    find_spec: Callable[[str], object | None] = importlib.util.find_spec,
+) -> list[str]:
+    """Liệt kê thư viện Python cần thiết nhưng còn thiếu cho IntentClassifier."""
+    missing = [
+        dependency
+        for dependency in ("torch", "transformers", "pyvi")
+        if find_spec(dependency) is None
+    ]
+    checkpoint = Path(checkpoint_dir).expanduser()
+    if (
+        (checkpoint / "model.safetensors").is_file()
+        and not (checkpoint / "pytorch_model.bin").is_file()
+        and find_spec("safetensors") is None
+    ):
+        missing.append("safetensors")
+    return missing
+
+
+def missing_retrieval_dependencies(
+    find_spec: Callable[[str], object | None] = importlib.util.find_spec,
+) -> list[str]:
+    """Liệt kê thư viện Python cần thiết nhưng còn thiếu cho SentenceTransformer retriever."""
+    return ["sentence-transformers"] if find_spec("sentence_transformers") is None else []
+
+
+def resolve_runtime_mode(classifier_available: bool, retrieval_available: bool) -> str:
+    """Chọn pipeline mode tương ứng chính xác với model thực sự khả dụng."""
+    if classifier_available and retrieval_available:
+        return MODE_PHOBERT_RETRIEVAL
+    if retrieval_available:
+        return MODE_RETRIEVAL_ONLY
+    if classifier_available:
+        return MODE_PHOBERT_ONLY
+    return "unavailable"
+
+
+def resolve_language_routing(language_id: str | None) -> tuple[str, tuple[str, ...]]:
+    """Ánh xạ Tầng 2 từ `languageId` của Editor sang `(target_mặc_định, nhóm_ưu_tiên)`."""
+    if not language_id:
+        return TARGET_AUTO, ()
+    normalized = str(language_id).strip().lower()
+    entry = LANGUAGE_ROUTING_MAP.get(normalized)
+    if not entry:
+        return TARGET_AUTO, ()
+    return str(entry.get("target", TARGET_AUTO)), tuple(entry.get("categories", ()))
+
+
+def resolve_target_for_templates(
+    templates: dict[str, Any] | None,
+    requested_target: str | None,
+    preferred_target: str | None = None,
+) -> str | None:
+    """Chọn target thực tế cho template; chỉ tự tìm khi `requested_target == 'auto'`."""
+    if not isinstance(templates, dict) or not templates:
+        return None
+    req = str(requested_target or TARGET_AUTO).strip().lower()
+    if req != TARGET_AUTO:
+        val = templates.get(req)
+        return req if isinstance(val, str) and val.strip() else None
+    pref = str(preferred_target or "").strip().lower()
+    if pref and pref != TARGET_AUTO:
+        val = templates.get(pref)
+        if isinstance(val, str) and val.strip():
+            return pref
+    for cand in UNIVERSAL_TARGET_PRIORITY:
+        val = templates.get(cand)
+        if isinstance(val, str) and val.strip():
+            return cand
+    for key, val in templates.items():
+        if isinstance(val, str) and val.strip():
+            return str(key)
+    return None
 

@@ -39,7 +39,7 @@ def test_every_latex_template_renders_safely_or_is_explicitly_unsupported() -> N
     for item in _bank():
         code, valid, errors = render_latex_template(item, _dummy_slots(item), target="latex")
         templates = item.get("templates", {})
-        supported = bool(templates.get("latex") or templates.get("mathjax"))
+        supported = bool(templates.get("latex"))
         if item["intent"] == "OUT_OF_SCOPE":
             continue
         if supported:
@@ -49,6 +49,7 @@ def test_every_latex_template_renders_safely_or_is_explicitly_unsupported() -> N
         else:
             result = Pipeline(mode="retrieval_only", lazy_load=True).choose(item["intent"], query="test")
             assert result.status == PipelineStatus.UNSUPPORTED_TARGET.value
+            assert result.intent == item["intent"]
             assert not result.latex_code
 
 
@@ -151,19 +152,19 @@ def test_caption_stops_at_other_slot_anchor_and_optional_package_regexes_work() 
 
 
 @pytest.mark.parametrize("method", ["retrieval", "fuzzy", "tfidf"])
-def test_candidate_sources_filter_unsupported_targets(method: str) -> None:
+def test_candidate_sources_preserve_unsupported_target_without_swapping_intent(method: str) -> None:
     bank = _bank()
     unsupported = next(
         item for item in bank
         if item["intent"] != "OUT_OF_SCOPE"
-        and not (item.get("templates", {}).get("latex") or item.get("templates", {}).get("mathjax"))
+        and not item.get("templates", {}).get("latex")
     )
     supported = next(item for item in bank if item.get("templates", {}).get("latex"))
     candidates = [
         SimpleNamespace(intent=unsupported["intent"], score=0.99, describe="", category=unsupported["category"]),
         SimpleNamespace(intent=supported["intent"], score=0.8, describe="", category=supported["category"]),
     ]
-    pipeline = Pipeline(mode="retrieval_only", top_k=1, lazy_load=True)
+    pipeline = Pipeline(mode="retrieval_only", top_k=2, lazy_load=True)
     if method == "retrieval":
         pipeline.retriever = SimpleNamespace(
             retrieve=lambda _query, top_k: SimpleNamespace(candidates=candidates[:top_k])
@@ -180,7 +181,10 @@ def test_candidate_sources_filter_unsupported_targets(method: str) -> None:
         )
         results = pipeline._run_tfidf("query")
     assert results
-    assert all(candidate.intent != unsupported["intent"] for candidate in results)
+    assert results[0].intent == unsupported["intent"]
+    outcome = pipeline.choose(unsupported["intent"], query="query")
+    assert outcome.status == PipelineStatus.UNSUPPORTED_TARGET.value
+    assert outcome.intent == unsupported["intent"]
 
 
 def test_python_target_uses_data_template_without_latex_escaping(tmp_path) -> None:

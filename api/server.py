@@ -4,10 +4,12 @@ from __future__ import annotations
 import hashlib
 import hmac
 import importlib.util
-import sys
+import inspect
 import json
 import os
 import re
+import sys
+import threading
 from pathlib import Path
 from typing import Any, Literal
 from datetime import UTC, datetime
@@ -25,6 +27,7 @@ from cli.ka import create_pipeline
 from core.config import (
     DEFAULT_INTENTS_PATH,
     DEFAULT_CHECKPOINT_DIR,
+    DEFAULT_UNIVERSAL_CATEGORIES,
     GUI_MOUNT_PATH,
     GUI_STATIC_DIR,
     KNOWLEDGE_CATALOG_PATH,
@@ -36,9 +39,13 @@ from core.config import (
     DEFINITION_BACKUP_SUFFIX,
     TARGET_LATEX,
     classifier_artifact_status,
+    missing_classifier_dependencies,
+    missing_retrieval_dependencies,
     resolve_phobert_tokenizer_dir,
+    resolve_runtime_mode,
     retrieval_model_status,
 )
+from core.learning import KnowledgeLearningManager
 from core.retrieval import inspect_index_cache
 from core.definitions import DefinitionLoader, DefinitionRegistry, DefinitionRegistryError
 from core.engine import GenericKnowledgeEngine
@@ -63,12 +70,15 @@ if GUI_STATIC_DIR.is_dir():
 
 RUNTIME_INTENTS_PATH = Path(os.environ.get("KA_INTENTS_PATH", str(DEFAULT_INTENTS_PATH)))
 pipeline = create_pipeline(intents_path=RUNTIME_INTENTS_PATH)
+_TARGET_PIPELINES: dict[str, Any] = {}
 definition_registry: DefinitionRegistry | None = None
 
 
 class AskRequest(BaseModel):
     text: str
     target: str = TARGET_LATEX
+    language_id: str | None = None
+    category: str | None = None
 
 
 class DefinitionRequest(BaseModel):
@@ -82,6 +92,7 @@ class DefinitionImportRequest(BaseModel):
 class DefinitionPublishRequest(BaseModel):
     definition: dict[str, Any]
     overwrite: bool = False
+    auto_train_on_milestone: bool = False
 
 
 class DefinitionPreviewRequest(BaseModel):
@@ -115,7 +126,7 @@ class BuilderCompileRequest(BaseModel):
     examples: list[str] = Field(default_factory=list)
     fields: list[BuilderField] = Field(default_factory=list)
     segments: list[BuilderSegment] = Field(default_factory=list)
-    target: Literal["latex", "mathjax", "obsidian"] = "latex"
+    target: str = TARGET_LATEX
     intent: str | None = None
     base_definition: dict[str, Any] | None = None
 
@@ -139,12 +150,67 @@ def _get_definition_registry() -> DefinitionRegistry:
     return definition_registry
 
 
+_LEARNING_MANAGERS: dict[str, KnowledgeLearningManager] = {}
+
+
+def _get_learning_manager() -> KnowledgeLearningManager:
+    key = str(RUNTIME_INTENTS_PATH)
+    mgr = _LEARNING_MANAGERS.get(key)
+    if mgr is None:
+        mgr = KnowledgeLearningManager(RUNTIME_INTENTS_PATH, model_dir=SBERT_DIR)
+        _LEARNING_MANAGERS[key] = mgr
+    return mgr
+
+
+def _reload_trained_retriever_after_milestone(model_dir: Path) -> None:
+    """Nạp lại Retriever dùng trọng số mới sau khi huấn luyện mốc 10 thành công."""
+    try:
+        from core.retrieval import Retriever
+
+        new_ret = Retriever(
+            model=str(model_dir),
+            model_name=SBERT_MODEL_NAME,
+            intents=RUNTIME_INTENTS_PATH,
+            cache_dir=INDEX_CACHE_DIR,
+        )
+        pipeline.retriever = new_ret
+        for tp in _TARGET_PIPELINES.values():
+            tp.retriever = new_ret
+        registry = _get_definition_registry()
+        registry.attach_retriever(new_ret, synchronize=False)
+    except Exception:
+        pass
+
+
+def _launch_milestone_training(epochs: int = 2) -> dict[str, Any]:
+    """Khởi chạy huấn luyện + đánh giá mốc 10 trên luồng nền để không treo API."""
+    mgr = _get_learning_manager()
+    registry = _get_definition_registry()
+    snapshot = registry.snapshot()
+    if mgr.status()["training_running"]:
+        return {"started": False, "reason": "Tiến trình tối ưu mốc 10 đang chạy.", "status": mgr.status()}
+
+    def _worker() -> None:
+        try:
+            mgr.run_milestone_training(
+                snapshot,
+                on_model_ready=_reload_trained_retriever_after_milestone,
+                epochs=epochs,
+            )
+        except Exception:
+            pass
+
+    threading.Thread(target=_worker, name="ka-milestone-trainer", daemon=True).start()
+    return {"started": True, "status": mgr.status()}
+
+
 def _sync_pipeline_registry(
     before: dict[str, dict[str, Any]],
     after: dict[str, dict[str, Any]],
 ) -> None:
     """Expose changed definitions to the pipeline without updating PhoBERT."""
     if not hasattr(pipeline, "sync_definition_snapshot"):
+        _TARGET_PIPELINES.clear()
         return
     previous_dynamic = set(getattr(pipeline, "_dynamic_generic_intents", set()))
     changed = {
@@ -154,6 +220,34 @@ def _sync_pipeline_registry(
     }
     dynamic_intents = (previous_dynamic & after.keys()) | changed
     pipeline.sync_definition_snapshot(after, dynamic_intents)
+    for target_pipeline in _TARGET_PIPELINES.values():
+        if hasattr(target_pipeline, "sync_definition_snapshot"):
+            target_pipeline.sync_definition_snapshot(after, dynamic_intents)
+
+
+def _get_pipeline_for_target(target: str) -> Any:
+    """Tái sử dụng model/index và definition snapshot đã nạp khi đổi target."""
+    if target == pipeline.target:
+        return pipeline
+    cached = _TARGET_PIPELINES.get(target)
+    if cached is not None and getattr(cached, "mode", None) == pipeline.mode:
+        return cached
+    created = create_pipeline(
+        intents_path=RUNTIME_INTENTS_PATH,
+        mode=pipeline.mode,
+        target=target,
+        classifier=getattr(pipeline, "classifier", None),
+        retriever=getattr(pipeline, "retriever", None),
+    )
+    if hasattr(created, "sync_definition_snapshot") and getattr(pipeline, "_dynamic_generic_intents", None):
+        created.sync_definition_snapshot(
+            dict(getattr(pipeline, "intents_bank", {})),
+            set(getattr(pipeline, "_dynamic_generic_intents", ())),
+        )
+    # Chỉ cache instance Pipeline thật; giữ nguyên monkeypatch FakePipeline trong unit test.
+    if hasattr(created, "sync_definition_snapshot"):
+        _TARGET_PIPELINES[target] = created
+    return created
 
 
 def _ensure_registry_retriever(registry: DefinitionRegistry) -> None:
@@ -205,29 +299,19 @@ def healthz() -> dict[str, str]:
 def system_status() -> dict[str, Any]:
     """Trả trạng thái môi trường cho Extension mà không nạp hoặc tải model."""
     classifier_checkpoint, classifier_message = classifier_artifact_status(DEFAULT_CHECKPOINT_DIR)
-    classifier_dependencies = ("torch", "transformers", "pyvi")
-    missing_classifier_dependencies = [
-        dependency for dependency in classifier_dependencies
-        if importlib.util.find_spec(dependency) is None
-    ]
-    if (DEFAULT_CHECKPOINT_DIR / "model.safetensors").is_file() and not (
-        DEFAULT_CHECKPOINT_DIR / "pytorch_model.bin"
-    ).is_file() and importlib.util.find_spec("safetensors") is None:
-        missing_classifier_dependencies.append("safetensors")
-    classifier_dependencies_available = not missing_classifier_dependencies
-    if classifier_checkpoint and missing_classifier_dependencies:
+    missing_classifier_deps = missing_classifier_dependencies(
+        DEFAULT_CHECKPOINT_DIR, find_spec=importlib.util.find_spec
+    )
+    classifier_dependencies_available = not missing_classifier_deps
+    if classifier_checkpoint and missing_classifier_deps:
         classifier_checkpoint = False
-    if missing_classifier_dependencies:
-        classifier_message = "Thiếu thư viện PhoBERT: " + ", ".join(missing_classifier_dependencies)
+    if missing_classifier_deps:
+        classifier_message = "Thiếu thư viện PhoBERT: " + ", ".join(missing_classifier_deps)
 
     retrieval_model, retrieval_message, retrieval_path = retrieval_model_status()
-    missing_retrieval_dependencies = (
-        ["sentence-transformers"]
-        if importlib.util.find_spec("sentence_transformers") is None
-        else []
-    )
-    retrieval_dependencies_available = not missing_retrieval_dependencies
-    if missing_retrieval_dependencies:
+    missing_retrieval_deps = missing_retrieval_dependencies(find_spec=importlib.util.find_spec)
+    retrieval_dependencies_available = not missing_retrieval_deps
+    if missing_retrieval_deps:
         retrieval_model = False
         retrieval_message = "Thiếu thư viện Python sentence-transformers."
     retrieval_index = False
@@ -242,31 +326,46 @@ def system_status() -> dict[str, Any]:
         except (OSError, ValueError, TypeError) as error:
             retrieval_index_message = f"Chưa kiểm tra được index cache: {error}"
 
+    has_dependency_error = bool(missing_classifier_deps or missing_retrieval_deps)
     both_ready = classifier_checkpoint and retrieval_model
+    pipeline_mode = resolve_runtime_mode(classifier_checkpoint, retrieval_model)
     model_details = [classifier_message, retrieval_message, retrieval_index_message]
-    if both_ready:
+    if has_dependency_error:
+        status_state = "error"
+        missing_all = [*missing_classifier_deps, *missing_retrieval_deps]
+        message = (
+            "Lỗi thiếu thư viện Python: "
+            + ", ".join(dict.fromkeys(missing_all))
+            + f". ({classifier_message}; {retrieval_message})"
+        )
+    elif both_ready:
+        status_state = "ready"
         message = "PhoBERT và retrieval model sẵn sàng. " + retrieval_index_message
     elif classifier_checkpoint:
+        status_state = "degraded"
         message = f"PhoBERT sẵn sàng; đang dùng classifier-only. Retrieval: {retrieval_message}"
     elif retrieval_model:
+        status_state = "degraded"
         message = f"Retrieval model sẵn sàng; đang dùng retrieval-only. PhoBERT: {classifier_message}"
     else:
+        status_state = "degraded"
         message = (
             "Backend và Knowledge Manager hoạt động; chưa có model NLP khả dụng. "
             + " ".join(model_details[:2])
         )
     return {
-        "status": "ready" if both_ready else "degraded",
+        "status": status_state,
         "python": sys.version.split()[0],
+        "pipeline_mode": pipeline_mode,
         "classifier_available": classifier_checkpoint,
         "classifier_dependencies_available": classifier_dependencies_available,
-        "classifier_missing_dependencies": missing_classifier_dependencies,
+        "classifier_missing_dependencies": missing_classifier_deps,
         "classifier_message": classifier_message,
         "classifier_checkpoint_path": str(DEFAULT_CHECKPOINT_DIR),
         "phobert_base_path": str(resolve_phobert_tokenizer_dir() or PHOBERT_DIR),
         "retrieval_model_available": retrieval_model,
         "retrieval_dependencies_available": retrieval_dependencies_available,
-        "retrieval_missing_dependencies": missing_retrieval_dependencies,
+        "retrieval_missing_dependencies": missing_retrieval_deps,
         "retrieval_model_message": retrieval_message,
         "retrieval_model_path": str(retrieval_path or SBERT_DIR),
         "retrieval_index_available": retrieval_index,
@@ -275,17 +374,35 @@ def system_status() -> dict[str, Any]:
         "retrieval_index_path": str(cache_path) if cache_path is not None else str(INDEX_CACHE_DIR),
         "model_root": str(MODEL_ROOT),
         "builder_model_available": False,
+        "milestone": _get_learning_manager().status(),
         "message": message,
     }
 
 
+def _resolve_ask_target(target: str, language_id: str | None) -> str:
+    """Giữ `auto` ở chế độ tự chọn template (kể cả khi kiến thức là `text` trong file `.py`); `language_id` chỉ đóng vai trò ưu tiên."""
+    _ = language_id
+    return target
+
+
 @app.post("/ask")
 def ask_endpoint(request: AskRequest) -> dict[str, object]:
-    selected_pipeline = pipeline if request.target == pipeline.target else create_pipeline(
-        mode=pipeline.mode, target=request.target
-    )
-    result = selected_pipeline.predict(request.text)
-    return result.to_dict()
+    effective_target = _resolve_ask_target(request.target, request.language_id)
+    selected_pipeline = _get_pipeline_for_target(effective_target)
+    predict_sig = inspect.signature(selected_pipeline.predict)
+    if "language_id" in predict_sig.parameters:
+        result = selected_pipeline.predict(
+            request.text,
+            language_id=request.language_id,
+            restrict_category=request.category,
+        )
+    else:
+        result = selected_pipeline.predict(request.text)
+    payload = result.to_dict()
+    outputs = payload.get("outputs")
+    inferred_target = next(iter(outputs.keys()), effective_target) if isinstance(outputs, dict) and outputs else effective_target
+    payload.setdefault("resolved_target", inferred_target)
+    return payload
 
 
 class ChooseRequest(BaseModel):
@@ -293,20 +410,36 @@ class ChooseRequest(BaseModel):
     candidate: str
     values: dict[str, Any] = Field(default_factory=dict)
     target: str = TARGET_LATEX
+    language_id: str | None = None
+    record_feedback: bool = True
 
 
 @app.post("/ask/choose")
 def choose_endpoint(request: ChooseRequest) -> dict[str, object]:
-    """Tiếp tục một yêu cầu sau khi Extension nhận lựa chọn và giá trị còn thiếu."""
-    selected_pipeline = pipeline if request.target == pipeline.target else create_pipeline(
-        mode=pipeline.mode, target=request.target
-    )
-    result = selected_pipeline.choose(
-        request.candidate,
-        query=request.text,
-        slots=request.values,
-    )
-    return result.to_dict()
+    """Tiếp tục một yêu cầu sau khi Extension nhận lựa chọn và giá trị còn thiếu; tự ghi feedback thực tế."""
+    effective_target = _resolve_ask_target(request.target, request.language_id)
+    selected_pipeline = _get_pipeline_for_target(effective_target)
+    choose_sig = inspect.signature(selected_pipeline.choose)
+    choose_kwargs: dict[str, Any] = {
+        "query": request.text,
+        "slots": request.values,
+    }
+    if "language_id" in choose_sig.parameters:
+        choose_kwargs["language_id"] = request.language_id
+    result = selected_pipeline.choose(request.candidate, **choose_kwargs)
+    payload = result.to_dict()
+    outputs = payload.get("outputs")
+    inferred_target = next(iter(outputs.keys()), effective_target) if isinstance(outputs, dict) and outputs else effective_target
+    payload.setdefault("resolved_target", inferred_target)
+    if request.record_feedback and payload.get("status") == "ok" and request.text.strip():
+        chosen_id = str(payload.get("intent") or request.candidate)
+        _get_learning_manager().record_feedback(
+            query=request.text,
+            intent=chosen_id,
+            target=str(inferred_target),
+            accepted=True,
+        )
+    return payload
 
 
 @app.get("/knowledge/definitions")
@@ -327,10 +460,13 @@ def list_definitions(
         and (category is None or item.get("category") == category)
         and (domain is None or item.get("domain") == domain)
     ]
+    existing_cats = {str(item.get("category", "")) for item in items if item.get("category")}
+    universal_cats = {slug for slug, _ in DEFAULT_UNIVERSAL_CATEGORIES}
     return {
         "count": len(filtered),
         "definitions": filtered,
-        "categories": sorted({str(item.get("category", "")) for item in items if item.get("category")}),
+        "categories": sorted(existing_cats | universal_cats),
+        "universal_categories": [{"value": slug, "label": label} for slug, label in DEFAULT_UNIVERSAL_CATEGORIES],
         "domains": sorted({str(item.get("domain", "")) for item in items if item.get("domain")}),
     }
 
@@ -394,8 +530,10 @@ def import_definitions(request: DefinitionImportPublishRequest) -> dict[str, Any
     try:
         before = registry.snapshot()
         version, intents = registry.publish_many(request.definitions, overwrite=request.overwrite)
-        _sync_pipeline_registry(before, registry.snapshot())
-        return {"imported": True, "count": len(intents), "intents": intents, "version": version}
+        after = registry.snapshot()
+        _sync_pipeline_registry(before, after)
+        milestone = _get_learning_manager().mark_published(after, intents)
+        return {"imported": True, "count": len(intents), "intents": intents, "version": version, "milestone": milestone}
     except DefinitionRegistryError as exc:
         raise HTTPException(status_code=422, detail=str(exc)) from exc
 
@@ -551,12 +689,17 @@ def publish_definition(request: DefinitionPublishRequest) -> dict[str, Any]:
     try:
         before = registry.snapshot()
         version = registry.publish(request.definition, overwrite=request.overwrite)
-        _sync_pipeline_registry(before, registry.snapshot())
+        after = registry.snapshot()
+        _sync_pipeline_registry(before, after)
+        milestone = _get_learning_manager().mark_published(after, [request.definition["intent"]])
+        if request.auto_train_on_milestone and milestone.get("milestone_ready"):
+            _launch_milestone_training()
+            milestone = _get_learning_manager().status()
     except DefinitionRegistryError as exc:
         message = str(exc)
         status = 409 if "overwrite=True" in message else 422
         raise HTTPException(status_code=status, detail=message) from exc
-    return {"published": True, "intent": request.definition["intent"], "version": version}
+    return {"published": True, "intent": request.definition["intent"], "version": version, "milestone": milestone}
 
 
 @app.post("/knowledge/reload")
@@ -623,6 +766,61 @@ def definition_history() -> dict[str, Any]:
             "valid_hash": digest == version,
         })
     return {"active_version": registry.version, "versions": versions}
+
+
+class MilestoneTrainRequest(BaseModel):
+    background: bool = True
+    epochs: int = 2
+
+
+class LearnAliasRequest(BaseModel):
+    intent: str
+    query: str
+
+
+@app.get("/knowledge/learning/status")
+def learning_status() -> dict[str, Any]:
+    """Trả tiến độ mốc 10 kiến thức mới và kết quả huấn luyện/đánh giá gần nhất."""
+    return _get_learning_manager().status()
+
+
+@app.post("/knowledge/learning/train")
+def trigger_milestone_training(request: MilestoneTrainRequest) -> dict[str, Any]:
+    """Sinh train/val cho kho kiến thức người dùng, đánh giá và fine-tune Retrieval."""
+    if request.background:
+        return _launch_milestone_training(epochs=max(1, min(4, request.epochs)))
+    mgr = _get_learning_manager()
+    registry = _get_definition_registry()
+    report = mgr.run_milestone_training(
+        registry.snapshot(),
+        on_model_ready=_reload_trained_retriever_after_milestone,
+        epochs=max(1, min(4, request.epochs)),
+    )
+    return {"started": False, "completed": True, "report": report, "status": mgr.status()}
+
+
+@app.post("/knowledge/learning/alias")
+def learn_alias_endpoint(request: LearnAliasRequest) -> dict[str, Any]:
+    """Lưu câu hỏi thực tế người dùng vừa chọn đúng vào learned_aliases và cập nhật vector index ngay."""
+    query = " ".join(request.query.split()).strip()
+    if not query:
+        raise HTTPException(status_code=422, detail="Câu truy vấn không được để trống.")
+    registry = _get_definition_registry()
+    current = registry.get(request.intent)
+    if current is None:
+        raise HTTPException(status_code=404, detail=f"Không tìm thấy kiến thức '{request.intent}'.")
+    learned = [str(item) for item in current.get("learned_aliases", [])]
+    aliases = [str(item) for item in current.get("aliases", [])]
+    if query.casefold() in {x.casefold() for x in aliases + learned}:
+        return {"learned": False, "intent": request.intent, "reason": "Câu hỏi đã có trong danh sách."}
+    _ensure_registry_retriever(registry)
+    updated = dict(current)
+    updated["learned_aliases"] = [*learned, query]
+    before = registry.snapshot()
+    version = registry.publish(updated, overwrite=True)
+    _sync_pipeline_registry(before, registry.snapshot())
+    _get_learning_manager().record_feedback(query=query, intent=request.intent, target="learned_alias", accepted=True)
+    return {"learned": True, "intent": request.intent, "version": version}
 
 
 if __name__ == "__main__":

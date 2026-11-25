@@ -1,7 +1,6 @@
-# Versions from the working AI/ environment; install nothing as part of FIX-ALL.
-# Bản CPU của PyTorch được phát hành trên kho wheel chính thức riêng.
---find-links https://download.pytorch.org/whl/cpu/torch/
-torch==2.15.0+cpu
+# Phiên bản đã cài thành công trong môi trường AI/ (PyTorch PyPI hỗ trợ CUDA và tự rơi về CPU nếu không có GPU).
+# Nếu chỉ muốn bản CPU dung lượng nhỏ, có thể cài riêng với: --find-links https://download.pytorch.org/whl/cpu/torch/
+torch==2.15.0
 transformers==5.24.0
 pyvi==0.1.1
 sentence-transformers==6.3.0

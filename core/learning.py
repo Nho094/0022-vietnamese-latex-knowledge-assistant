@@ -441,7 +441,14 @@ class KnowledgeLearningManager:
             )
             st_model.save(str(staging_dir))
 
+            # Giải phóng VRAM trước khi nạp lại SentenceTransformer đánh giá trên GPU (GTX 1660S 6GB)
+            del model, optimizer, scheduler, st_model
+            if str(device).startswith("cuda") and torch.cuda.is_available():
+                torch.cuda.empty_cache()
+
             after_metrics = _eval_retriever(staging_dir)
+            if str(device).startswith("cuda") and torch.cuda.is_available():
+                torch.cuda.empty_cache()
             deployed = after_metrics["val_top1"] >= before_metrics["val_top1"]
             if deployed:
                 if self.model_dir.exists():
